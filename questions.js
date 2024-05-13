@@ -1,4 +1,4 @@
-const QUESTIONS = {
+export const QUESTIONS = {
   1192: {
     question: (
       <div class="elfjS" data-track-load="description_content">
@@ -82,5 +82,3 @@ const QUESTIONS = {
     ),
   },
 };
-
-export default QUESTIONS;
