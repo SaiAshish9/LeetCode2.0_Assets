@@ -1,6 +1,7 @@
 {
   "critical_connections_in_a_network": {
     "qno": 1192,
+    "title": "Critical Connections in a Network",
     "tags": [
       "Depth First Search",
       "Graph",
