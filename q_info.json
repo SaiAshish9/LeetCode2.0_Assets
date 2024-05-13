@@ -6,9 +6,7 @@
       "Graph",
       "Biconnected Component"
     ],
-    "default": [
-      "Biconnected Component"
-    ],
+    "default": "Biconnected Component",
     "difficulty": "Hard",
     "language": "Java",
     "acceptance": 55.7
