@@ -1,0 +1,16 @@
+{
+  "critical_connections_in_a_network": {
+    "qno": 1192,
+    "tags": [
+      "Depth First Search",
+      "Graph",
+      "Biconnected Component"
+    ],
+    "default": [
+      "Biconnected Component"
+    ],
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 55.7
+  }
+}
