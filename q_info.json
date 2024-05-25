@@ -11,5 +11,33 @@
     "difficulty": "Hard",
     "language": "Java",
     "acceptance": 55.7
+  },
+  "implement_rand10()_using_rand7()": {
+    "qno": 470,
+    "title": "Implement Rand10() Using Rand7()",
+    "tags": [
+      "Math",
+      "Rejection Sampling",
+      "Randomized",
+      "Probability and Statistics"
+    ],
+    "default": "Rejection Sampling",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 45.9
+  },
+  "generate_random_point_in_a_circle": {
+    "qno": 478,
+    "title": "Generate Random Point in a Circle",
+    "tags": [
+      "Math",
+      "Geometry",
+      "Rejection Sampling",
+      "Randomized"
+    ],
+    "default": "Rejection Sampling",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 39.8
   }
 }
