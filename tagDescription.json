@@ -17,7 +17,7 @@
     "LeetCode Problem: Implement Rand10() Using Rand7() (LeetCode 470)",
     "Problem Statement:",
     "You have a function rand7() that generates a random integer from 1 to 7. You need to write a function rand10() that generates a random integer from 1 to 10 uniformly using rand7().",
-    "Rejection Sampling Approach",
+    "Rejection Sampling Approach:",
     "The key idea behind using rejection sampling for this problem is to transform the output of rand7() to achieve a uniform distribution over a different range (1 to 10) by generating a larger set of candidate numbers and then rejecting those that do not fit the desired criteria.",
     "Here's a step-by-step explanation of how rejection sampling can be applied to this problem:",
     "Generate a Candidate from rand7():",
