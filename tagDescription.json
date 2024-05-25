@@ -13,7 +13,7 @@
     "Once you've identified the critical connections, you can return them as a list of edges."
   ],
   "rejection_sampling": [
-    "Rejection Sampling typically involves generating random samples that meet specific criteria or fit a desired distribution. This concept can be illustrated through a few representative problems on LeetCode. Below, I'll explain the concept using one of the common LeetCode problems that involve rejection sampling.",
+    "Rejection Sampling typically involves generating random samples that meet specific criteria or fit a desired distribution.",
     "LeetCode Problem: Implement Rand10() Using Rand7() (LeetCode 470)",
     "Problem Statement:",
     "You have a function rand7() that generates a random integer from 1 to 7. You need to write a function rand10() that generates a random integer from 1 to 10 uniformly using rand7().",
