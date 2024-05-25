@@ -13,7 +13,6 @@
     "Once you've identified the critical connections, you can return them as a list of edges."
   ],
   "rejection_sampling": [
-    [
       "Rejection Sampling typically involves generating random samples that meet specific criteria or fit a desired distribution. This concept can be illustrated through a few representative problems on LeetCode. Below, I'll explain the concept using one of the common LeetCode problems that involve rejection sampling.",
       "LeetCode Problem: Implement Rand10() Using Rand7() (LeetCode 470)",
       "Problem Statement:",
@@ -35,6 +34,5 @@
       "Mapping: 1 + (num - 1) % 10 converts the accepted number to the desired range 1 to 10.",
       "By only accepting numbers from 1 to 40, we ensure that each number from 1 to 10 can be mapped equally using modulo operation. Numbers 41 to 49 are rejected to avoid bias.",
       "This example illustrates how rejection sampling can be used to transform a random number generator into a uniform random generator over a different range. The key steps are generating a candidate, checking if it falls within the acceptable range, and rejecting or accepting it based on that criterion. This ensures that the resulting distribution is uniform and meets the problem requirements."
-    ]
   ]
 }
