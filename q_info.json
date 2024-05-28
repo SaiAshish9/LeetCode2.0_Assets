@@ -39,5 +39,38 @@
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 39.8
+  },
+  "maximum_gap": {
+    "qno": 164,
+    "title": "Maximum Gap",
+    "tags": [
+      
+    ],
+    "default": "Radix Sort",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 46.1
+  },
+  "sort_an_array": {
+    "qno": 912,
+    "title": "Sort an Array",
+    "tags": [
+      
+    ],
+    "default": "Radix Sort",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 46.1
+  },
+  "query_kth_smallest_trimmed_number": {
+    "qno": 2343,
+    "title": "Query Kth Smallest Trimmed Number",
+    "tags": [
+      
+    ],
+    "default": "Radix Sort",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 46.1
   }
 }
