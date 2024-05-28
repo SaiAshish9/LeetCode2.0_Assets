@@ -44,6 +44,9 @@
     "qno": 164,
     "title": "Maximum Gap",
     "tags": [
+      "Array",
+      "Sorting",
+      "Bucket Sort",
       "Radix Sort"
     ],
     "default": "Radix Sort",
@@ -55,7 +58,14 @@
     "qno": 912,
     "title": "Sort an Array",
     "tags": [
-      "Radix Sort"
+      "Array",
+      "Divide and Conquer",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Merge Sort",
+      "Bucket Sort",
+      "Radix Sort",
+      "Counting Sort"
     ],
     "default": "Radix Sort",
     "difficulty": "Medium",
@@ -66,7 +76,13 @@
     "qno": 2343,
     "title": "Query Kth Smallest Trimmed Number",
     "tags": [
-      "Radix Sort"
+      "Array",
+      "String",
+      "Divide and Conquer",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Radix Sort",
+      "Quickselect"
     ],
     "default": "Radix Sort",
     "difficulty": "Medium",
