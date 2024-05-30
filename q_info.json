@@ -3,7 +3,7 @@
     "qno": 1192,
     "title": "Critical Connections in a Network",
     "tags": [
-      "Depth First Search",
+      "Depth-First Search",
       "Graph",
       "Biconnected Component"
     ],
@@ -88,5 +88,44 @@
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 46.1
+  },
+  "reconstruct_itinerary": {
+    "qno": 332,
+    "title": "Reconstruct Itinerary",
+    "tags": [
+      "Depth-First Search",
+      "Graph",
+      "Eulerian Circuit"
+    ],
+    "default": "Eulerian Circuit",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 43.2
+  },
+  "cracking_the_safe": {
+    "qno": 753,
+    "title": "Cracking the Safe",
+    "tags": [
+      "Depth-First Search",
+      "Graph",
+      "Eulerian Circuit"
+    ],
+    "default": "Eulerian Circuit",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 56.9
+  },
+  "valid_arrangement_of_pairs": {
+    "qno": 2097,
+    "title": "Valid Arrangement of Pairs",
+    "tags": [
+      "Depth-First Search",
+      "Graph",
+      "Eulerian Circuit"
+    ],
+    "default": "Eulerian Circuit",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 43.2
   }
 }
