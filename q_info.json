@@ -127,5 +127,38 @@
     "difficulty": "Hard",
     "language": "Java",
     "acceptance": 43.2
+  },
+  "find_critical_and_pseudo-critical_edges_in_minimum_spanning_tree": {
+    "qno": 1489,
+    "title": "Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree",
+    "tags": [
+      "Strongly Connected Component"
+    ],
+    "default": "Strongly Connected Component",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 67.8
+  },
+  "minimum_number_of_days_to_disconnect_island": {
+    "qno": 1568,
+    "title": "Minimum Number of Days to Disconnect Island",
+    "tags": [
+      "Strongly Connected Component"
+    ],
+    "default": "Strongly Connected Component",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 45.0
+  },
+  "minimum_edge_weight_equilibrium_queries_in_a_tree": {
+    "qno": 2846,
+    "title": "Minimum Edge Weight Equilibrium Queries in a Tree",
+    "tags": [
+      "Strongly Connected Component"
+    ],
+    "default": "Strongly Connected Component",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 43.8
   }
 }
