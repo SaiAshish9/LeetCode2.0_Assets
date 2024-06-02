@@ -132,6 +132,10 @@
     "qno": 1489,
     "title": "Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree",
     "tags": [
+      "Union Find",
+      "Graph",
+      "Sorting",
+      "Minimum Spanning Tree",
       "Strongly Connected Component"
     ],
     "default": "Strongly Connected Component",
@@ -143,6 +147,10 @@
     "qno": 1568,
     "title": "Minimum Number of Days to Disconnect Island",
     "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Matrix",
       "Strongly Connected Component"
     ],
     "default": "Strongly Connected Component",
@@ -154,6 +162,9 @@
     "qno": 2846,
     "title": "Minimum Edge Weight Equilibrium Queries in a Tree",
     "tags": [
+      "Array",
+      "Tree",
+      "Graph",
       "Strongly Connected Component"
     ],
     "default": "Strongly Connected Component",
