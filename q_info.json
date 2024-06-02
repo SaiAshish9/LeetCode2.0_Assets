@@ -171,5 +171,64 @@
     "difficulty": "Hard",
     "language": "Java",
     "acceptance": 43.8
+  },
+  "linked_list_random_node": {
+    "qno": 382,
+    "title": "Linked List Random Node",
+    "tags": [
+      "Linked List",
+      "Math",
+      "Reservoir Sampling",
+      "Randomized"
+    ],
+    "default": "Reservoir Sampling",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 63.2
+  },
+  "random_pick_index": {
+    "qno": 398,
+    "title": "Random Pick Index",
+    "tags": [
+      "Hash Table",
+      "Math",
+      "Reservoir Sampling",
+      "Randomized"
+    ],
+    "default": "Reservoir Sampling",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 63.4
+  },
+  "random_flip_matrix": {
+    "qno": 519,
+    "title": "Random Flip Matrix",
+    "tags": [
+      "Hash Table",
+      "Math",
+      "Reservoir Sampling",
+      "Randomized"
+    ],
+    "default": "Reservoir Sampling",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 41.9
+  },
+  "random_point_in_non-overlapping_rectangles": {
+    "qno": 497,
+    "title": "Random Point in Non-overlapping Rectangles",
+    "tags": [
+      "Array",
+      "Math",
+      "Binary Search",
+      "Reservoir Sampling",
+      "Prefix Sum",
+      "Ordered Set",
+      "Randomized"
+    ],
+    "default": "Reservoir Sampling",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 40.0
   }
 }
