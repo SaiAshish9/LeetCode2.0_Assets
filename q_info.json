@@ -230,5 +230,63 @@
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 40.0
+  },
+  "the_skyline_problem": {
+    "qno": 218,
+    "title": "The Skyline Problem",
+    "tags": [
+      "Array",
+      "Divide and Conquer",
+      "Binary Indexed Tree",
+      "Segment Tree",
+      "Line Sweep",
+      "Heap (Priority Queue)",
+      "Ordered Set"
+    ],
+    "default": "Line Sweep",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 42.7
+  },
+  "perfect_rectangle": {
+    "qno": 391,
+    "title": "Perfect Rectangle",
+    "tags": [
+      "Array",
+      "Line Sweep"
+    ],
+    "default": "Line Sweep",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 33.8
+  },
+  "rectangle_area_ii": {
+    "qno": 850,
+    "title": "Rectangle Area II",
+    "tags": [
+      "Array",
+      "Segment Tree",
+      "Line Sweep"
+    ],
+    "default": "Line Sweep",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 54.2
+  },
+  "minimum_interval_to_include_each_query": {
+    "qno": 1851,
+    "title": "Minimum Interval to Include Each Query",
+    "tags": [
+      "Ordered Set",
+      "Array",
+      "Binary Search",
+      "Line Sweep",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Line Sweep",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 49.6
   }
 }
