@@ -288,5 +288,49 @@
     "difficulty": "Hard",
     "language": "Java",
     "acceptance": 49.6
+  },
+  "word_frequency": {
+    "qno": 192,
+    "title": "Word Frequency",
+    "tags": [
+      "Shell"
+    ],
+    "default": "Shell",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 25.8
+  },
+  "valid_phone_numbers": {
+    "qno": 193,
+    "title": "Valid Phone Numbers",
+    "tags": [
+      "Shell"
+    ],
+    "default": "Shell",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 26.1
+  },
+  "transpose_file": {
+    "qno": 194,
+    "title": "Transpose File",
+    "tags": [
+      "Shell"
+    ],
+    "default": "Shell",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 26.4
+  },
+  "tenth_line": {
+    "qno": 195,
+    "title": "Tenth Line",
+    "tags": [
+      "Shell"
+    ],
+    "default": "Shell",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 33.8
   }
 }
