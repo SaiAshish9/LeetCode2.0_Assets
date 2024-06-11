@@ -114,7 +114,7 @@
   },
   "194": {
     "java": {
-      "shell":""
+      "shell":"#!/bin/bash\nawk '\n{\n    for (i = 1; i <= NF; i++) {\n        if (NR == 1) {\n            res[i] = $i;\n        } else {\n            res[i] = res[i] ' ' $i;\n        }\n    }\n}\nEND {\n    for (i = 1; i <= NF; i++) {\n        print res[i];\n    }\n}' file.txt\n"
     }
   },
   "195": {
