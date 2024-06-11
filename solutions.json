@@ -101,5 +101,25 @@
     "java": {
       "strongly-connected-component": "class Solution {\n  public int[] minOperationsQueries(int n, int[][] edges, int[][] queries) {\n    final int kMax = 26;\n    final int m = (int) (Math.log(n) / Math.log(2)) + 1;\n    int[] ans = new int[queries.length];\n    List<Pair<Integer, Integer>>[] graph = new List[n];\n    int[][] jump = new int[n][m];\n    int[][] count = new int[n][];\n    int[] depth = new int[n];\n\n    for (int i = 0; i < n; ++i)\n      graph[i] = new ArrayList<>();\n\n    for (int[] edge : edges) {\n      final int u = edge[0];\n      final int v = edge[1];\n      final int w = edge[2];\n      graph[u].add(new Pair<>(v, w));\n      graph[v].add(new Pair<>(u, w));\n    }\n\n    count[0] = new int[kMax + 1];\n    dfs(graph, 0, -1, 0, jump, count, depth);\n\n    for (int j = 1; j < m; ++j)\n      for (int i = 0; i < n; ++i)\n        jump[i][j] = jump[jump[i][j - 1]][j - 1];\n\n    for (int i = 0; i < queries.length; ++i) {\n      final int u = queries[i][0];\n      final int v = queries[i][1];\n      final int lca = getLCA(u, v, jump, depth);\n      final int numEdges = depth[u] + depth[v] - 2 * depth[lca];\n      int maxFreq = 0;\n      for (int j = 1; j <= kMax; ++j)\n        maxFreq = Math.max(maxFreq, count[u][j] + count[v][j] - 2 * count[lca][j]);\n      ans[i] = numEdges - maxFreq;\n    }\n\n    return ans;\n  }\n\n  private void dfs(List<Pair<Integer, Integer>>[] graph, int u, int prev, int d, int[][] jump,\n                   int[][] count, int[] depth) {\n    if (prev != -1)\n      jump[u][0] = prev;\n    depth[u] = d;\n    for (Pair<Integer, Integer> pair : graph[u]) {\n      final int v = pair.getKey();\n      final int w = pair.getValue();\n      if (v == prev)\n        continue;\n      count[v] = count[u].clone();\n      ++count[v][w];\n      dfs(graph, v, u, d + 1, jump, count, depth);\n    }\n  }\n\n  private int getLCA(int u, int v, int[][] jump, int[] depth) {\n    if (depth[u] > depth[v])\n      return getLCA(v, u, jump, depth);\n    for (int j = 0; j < jump[0].length; ++j)\n      if ((depth[v] - depth[u] >> j & 1) == 1)\n        v = jump[v][j];\n    if (u == v)\n      return u;\n    for (int j = jump[0].length - 1; j >= 0; --j)\n      if (jump[u][j] != jump[v][j]) {\n        u = jump[u][j];\n        v = jump[v][j];\n      }\n    return jump[v][0];\n  }\n}\n"
     }
+  },
+  "192": {
+    "java": {
+      "shell":"#!/bin/bash\ntr -s ' ' '\n' < words.txt | sort | uniq -c | awk '{print $2, $1}' | sort -nr -k2\n"
+    }
+  },
+  "193": {
+    "java": {
+      "shell":""
+    }
+  },
+  "194": {
+    "java": {
+      "shell":""
+    }
+  },
+  "195": {
+    "java": {
+      "shell":""
+    }
   }
 }
