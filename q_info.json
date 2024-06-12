@@ -770,9 +770,9 @@
       "Hash Table",
       "Linked List",
       "Design",
-      "Doubly Linked List"
+      "Doubly-Linked List"
     ],
-    "default": "Doubly Linked List",
+    "default": "Doubly-Linked List",
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 42.7
@@ -784,9 +784,9 @@
       "Hash Table",
       "Linked List",
       "Design",
-      "Doubly Linked List"
+      "Doubly-Linked List"
     ],
-    "default": "Doubly Linked List",
+    "default": "Doubly-Linked List",
     "difficulty": "Hard",
     "language": "Java",
     "acceptance": 36.8
@@ -798,9 +798,9 @@
       "Hash Table",
       "Linked List",
       "Design",
-      "Doubly Linked List"
+      "Doubly-Linked List"
     ],
-    "default": "Doubly Linked List",
+    "default": "Doubly-Linked List",
     "difficulty": "Hard",
     "language": "Java",
     "acceptance": 44.3
@@ -812,10 +812,10 @@
       "Linked List",
       "Stack",
       "Design",
-      "Doubly Linked List",
+      "Doubly-Linked List",
       "Ordered Set"
     ],
-    "default": "Doubly Linked List",
+    "default": "Doubly-Linked List",
     "difficulty": "Hard",
     "language": "Java",
     "acceptance": 45.1
@@ -830,9 +830,9 @@
       "Depth-First Search",
       "Binary Search Tree",
       "Binary Tree",
-      "Doubly Linked List"
+      "Doubly-Linked List"
     ],
-    "default": "Doubly Linked List",
+    "default": "Doubly-Linked List",
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 64.8
@@ -843,9 +843,9 @@
     "tags": [
       "Linked List",
       "Depth-First Search",
-      "Doubly Linked List"
+      "Doubly-Linked List"
     ],
-    "default": "Doubly Linked List",
+    "default": "Doubly-Linked List",
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 60.1
@@ -858,10 +858,10 @@
       "Linked List",
       "Stack",
       "Design",
-      "Doubly Linked List",
+      "Doubly-Linked List",
       "Data Stream"
     ],
-    "default": "Doubly Linked List",
+    "default": "Doubly-Linked List",
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 77.6
@@ -875,9 +875,9 @@
       "Stack",
       "Design",
       "Simulation",
-      "Doubly Linked List"
+      "Doubly-Linked List"
     ],
-    "default": "Doubly Linked List",
+    "default": "Doubly-Linked List",
     "difficulty": "Hard",
     "language": "Java",
     "acceptance": 44.6
