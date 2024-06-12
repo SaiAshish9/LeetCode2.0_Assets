@@ -349,7 +349,7 @@
     "default": "Counting Sort",
     "difficulty": "Easy",
     "language": "Java",
-    "acceptance": 39.0
+    "acceptance": 78.9
   },
   "height_checker": {
     "qno": 1051,
@@ -358,7 +358,7 @@
     "default": "Counting Sort",
     "difficulty": "Medium",
     "language": "Java",
-    "acceptance": 39.0
+    "acceptance": 80.6
   },
   "relative_sort_array": {
     "qno": 1122,
@@ -367,6 +367,6 @@
     "default": "Counting Sort",
     "difficulty": "Easy",
     "language": "Java",
-    "acceptance": 39.0
+    "acceptance": 74.6
   }
 }
