@@ -52,7 +52,7 @@
     "default": "Radix Sort",
     "difficulty": "Medium",
     "language": "Java",
-    "acceptance": 46.1
+    "acceptance": 46.3
   },
   "sort_an_array": {
     "qno": 912,
@@ -70,7 +70,7 @@
     "default": "Radix Sort",
     "difficulty": "Medium",
     "language": "Java",
-    "acceptance": 46.1
+    "acceptance": 56.3
   },
   "query_kth_smallest_trimmed_number": {
     "qno": 2343,
@@ -530,6 +530,22 @@
     ],
     "default": "Suffix Array",
     "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 39.9
+  },
+  "": {
+    "qno": 2223,
+    "title": "",
+    "tags": [
+      "String",
+      "Binary Search",
+      "Rolling Hash",
+      "Suffix Array",
+      "String Matching",
+      "Hash Function"
+    ],
+    "default": "Bucket Sort",
+    "difficulty": "Medium",
     "language": "Java",
     "acceptance": 39.9
   }
