@@ -333,15 +333,15 @@
     "language": "Java",
     "acceptance": 33.8
   },
-  "transpose_file": {
-    "qno": 194,
-    "title": "Transpose File",
+  "h-index": {
+    "qno": 274,
+    "title": "H-Index",
     "tags": [
       "Shell"
     ],
     "default": "Shell",
     "difficulty": "Medium",
     "language": "Java",
-    "acceptance": 26.4
-  },
+    "acceptance": 39.0
+  }
 }
