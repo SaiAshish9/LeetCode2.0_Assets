@@ -376,7 +376,7 @@
     "default": "Minimum Spanning Tree",
     "difficulty": "Medium",
     "language": "Java",
-    "acceptance": 80.6
+    "acceptance": 62.0
   },
   "optimize_water_distribution_in_a_village": {
     "qno": 1168,
@@ -385,7 +385,7 @@
     "default": "Minimum Spanning Tree",
     "difficulty": "Hard",
     "language": "Java",
-    "acceptance": 80.6
+    "acceptance": 64.8
   },
   "min_cost_to_connect_all_points": {
     "qno": 1584,
@@ -394,7 +394,7 @@
     "default": "Minimum Spanning Tree",
     "difficulty": "Medium",
     "language": "Java",
-    "acceptance": 80.6
+    "acceptance": 67.0
   },
   "checking_existence_of_edge_length_limited_paths_ii": {
     "qno": 1724,
@@ -403,6 +403,6 @@
     "default": "Minimum Spanning Tree",
     "difficulty": "Hard",
     "language": "Java",
-    "acceptance": 80.6
+    "acceptance": 51.6
   }
 }
