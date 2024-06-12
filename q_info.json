@@ -336,11 +336,36 @@
   "h-index": {
     "qno": 274,
     "title": "H-Index",
-    "tags": [
-      "Shell"
-    ],
-    "default": "Shell",
+    "tags": ["Array", "Sorting", "Counting Sort"],
+    "default": "Counting Sort",
     "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 39.0
+  },
+  "array_partition": {
+    "qno": 561,
+    "title": "Array Partition",
+    "tags": ["Array", "Greedy", "Sorting", "Counting Sort"],
+    "default": "Counting Sort",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 39.0
+  },
+  "height_checker": {
+    "qno": 1051,
+    "title": "Height Checker",
+    "tags": ["Array", "Divide and Conquer", "Sorting", "Heap (Priority Queue)", "Merge Sort", "Bucket Sort", "Radix Sort", "Counting Sort"],
+    "default": "Counting Sort",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 39.0
+  },
+  "relative_sort_array": {
+    "qno": 1122,
+    "title": "Relative Sort Array",
+    "tags": ["Array", "Hash Table", "Sorting", "Counting Sort"],
+    "default": "Counting Sort",
+    "difficulty": "Easy",
     "language": "Java",
     "acceptance": 39.0
   }
