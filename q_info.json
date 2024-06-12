@@ -682,10 +682,55 @@
   "soup_servings": {
     "qno": 808,
     "title": "Soup Servings",
-    "tags": ["Math", "Dynamic Programming", "Probability And Statistics", "Math", "Dynamic Programming", "Sliding Window", "Probability And Statistics", "Math", "Rejection Sampling", "Randomized", "Probability And Statistics", "Array", "Math", "Dynamic Programming", "Probability And Statistics", "Array", "Math", "Probability And Statistics", "Math", "Dynamic Programming", "Brainteaser", "Probability And Statistics", "Array", "Math", "Dynamic Programming", "Backtracking", "Combinatorics", "Probability And Statistics"],
+    "tags": ["Math", "Dynamic Programming", "Probability And Statistics"], 
     "default": "Probability And Statistics",
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 54.0
+  },
+  "new_21_game": {
+    "qno": 837,
+    "title": "New 21 Game",
+    "tags": ["Math", "Dynamic Programming", "Sliding Window", "Probability And Statistics"],
+    "default": "Probability And Statistics",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 45.0
+  },
+  "toss_strange_coins": {
+    "qno": 1230,
+    "title": "Toss Strange Coins",
+    "tags": ["Array", "Math", "Dynamic Programming", "Probability And Statistics"],
+    "default": "Probability And Statistics",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 56.3
+  },
+  "statistics_from_a_large_sample": {
+    "qno": 1093,
+    "title": "Statistics from a Large Sample",
+    "tags": ["Array", "Math", "Probability And Statistics"],
+    "default": "Probability And Statistics",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 42.0
+  },
+  "airplane_seat_assignment_probability": {
+    "qno": 1227,
+    "title": "Airplane Seat Assignment Probability",
+    "tags": ["Math", "Dynamic Programming", "Brainteaser", "Probability And Statistics"],
+    "default": "Probability And Statistics",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 66.4
+  },
+  "probability_of_a_two_boxes_having_the_same_number_of_distinct_balls": {
+    "qno": 1467,
+    "title": "Probability of a Two Boxes Having The Same Number of Distinct Balls",
+    "tags": ["Array", "Math", "Dynamic Programming", "Backtracking", "Combinatorics", "Probability And Statistics"],
+    "default": "Probability And Statistics",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 60.4
   }
 }
