@@ -881,5 +881,106 @@
     "difficulty": "Hard",
     "language": "Java",
     "acceptance": 44.6
+  },
+  "building_h2o": {
+    "qno": "1117",
+    "title": "Building H2O",
+    "tags": [
+      "Concurrency"
+    ],
+    "default": "Concurrency",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 56.2
+  },
+  "print_foobar_alternately": {
+    "qno": "1115",
+    "title": "Print FooBar Alternately",
+    "tags": [
+      "Concurrency"
+    ],
+    "default": "Concurrency",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 66
+  },
+  "print_in_order": {
+    "qno": "1114",
+    "title": "Print in Order",
+    "tags": [
+      "Concurrency"
+    ],
+    "default": "Concurrency",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 69.4
+  },
+  "design_bounded_blocking_queue": {
+    "qno": "1188",
+    "title": "Design Bounded Blocking Queue",
+    "tags": [
+      "Concurrency"
+    ],
+    "default": "Concurrency",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 72.4
+  },
+  "print_zero_even_odd": {
+    "qno": "1116",
+    "title": "Print Zero Even Odd",
+    "tags": [
+      "Concurrency"
+    ],
+    "default": "Concurrency",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 61
+  },
+  "fizz_buzz_multithreaded": {
+    "qno": "1195",
+    "title": "Fizz Buzz Multithreaded",
+    "tags": [
+      "Concurrency"
+    ],
+    "default": "Concurrency",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 72.4
+  },
+  "the_dining_philosophers": {
+    "qno": "1226",
+    "title": "The Dining Philosophers",
+    "tags": [
+      "Concurrency"
+    ],
+    "default": "Concurrency",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 53.6
+  },
+  "web_crawler_multithreaded": {
+    "qno": "1242",
+    "title": "Web Crawler Multithreaded",
+    "tags": [
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Concurrency"
+    ],
+    "default": "Concurrency",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.1
+  },
+  "traffic_light_controlled_intersection": {
+    "qno": "1279",
+    "title": "Traffic Light Controlled Intersection",
+    "tags": [
+      "Concurrency"
+    ],
+    "default": "Concurrency",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 73
   }
 }
