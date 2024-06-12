@@ -368,5 +368,41 @@
     "difficulty": "Easy",
     "language": "Java",
     "acceptance": 74.6
+  },
+  "connecting_cities_with_minimum_cost": {
+    "qno": 1135,
+    "title": "Connecting Cities With Minimum Cost",
+    "tags": ["Union Find", "Graph", "Heap (Priority Queue)", "Minimum Spanning Tree"],
+    "default": "Minimum Spanning Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 80.6
+  },
+  "optimize_water_distribution_in_a_village": {
+    "qno": 1168,
+    "title": "Optimize Water Distribution in a Village",
+    "tags": ["Union Find", "Graph", "Heap (Priority Queue)", "Minimum Spanning Tree"],
+    "default": "Minimum Spanning Tree",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 80.6
+  },
+  "min_cost_to_connect_all_points": {
+    "qno": 1584,
+    "title": "Min Cost to Connect All Points",
+    "tags": ["Array", "Union Find", "Graph", "Minimum Spanning Tree"],
+    "default": "Minimum Spanning Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 80.6
+  },
+  "checking_existence_of_edge_length_limited_paths_ii": {
+    "qno": 1724,
+    "title": "Checking Existence of Edge Length Limited Paths II",
+    "tags": ["Union Find", "Graph", "Minimum Spanning Tree"],
+    "default": "Minimum Spanning Tree",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 80.6
   }
 }
