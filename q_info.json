@@ -982,5 +982,86 @@
     "difficulty": "Easy",
     "language": "Java",
     "acceptance": 73
+  },
+  "binary_search_tree_iterator": {
+    "qno": "173",
+    "title": "Binary Search Tree Iterator",
+    "tags": [],
+    "default": "Iterator",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 72.3
+  },
+  "flatten_2d_vector": {
+    "qno": "251",
+    "title": "Flatten 2D Vector",
+    "tags": [],
+    "default": "Iterator",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.6
+  },
+  "zigzag_iterator": {
+    "qno": "281",
+    "title": "Zigzag Iterator",
+    "tags": [],
+    "default": "Iterator",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 64
+  },
+  "peeking_iterator": {
+    "qno": "284",
+    "title": "Peeking Iterator",
+    "tags": [],
+    "default": "Iterator",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 59.6
+  },
+  "flatten_nested_list_iterator": {
+    "qno": "341",
+    "title": "Flatten Nested List Iterator",
+    "tags": [],
+    "default": "Iterator",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 64.5
+  },
+  "design_compressed_string_iterator": {
+    "qno": "604",
+    "title": "Design Compressed String Iterator",
+    "tags": [],
+    "default": "Iterator",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 39.8
+  },
+  "rle_iterator": {
+    "qno": "900",
+    "title": "RLE Iterator",
+    "tags": [],
+    "default": "Iterator",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 59.5
+  },
+  "iterator_for_combination": {
+    "qno": "1286",
+    "title": "Iterator for Combination",
+    "tags": [],
+    "default": "Iterator",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 73.3
+  },
+  "binary_search_tree_iterator_ii": {
+    "qno": "1586",
+    "title": "Binary Search Tree Iterator II",
+    "tags": [],
+    "default": "Iterator",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 65.4
   }
 }
