@@ -986,7 +986,14 @@
   "binary_search_tree_iterator": {
     "qno": "173",
     "title": "Binary Search Tree Iterator",
-    "tags": [],
+    "tags": [
+      "Stack",
+      "Tree",
+      "Design",
+      "Binary Search Tree",
+      "Binary Tree",
+      "Iterator"
+    ],
     "default": "Iterator",
     "difficulty": "Medium",
     "language": "Java",
@@ -995,7 +1002,12 @@
   "flatten_2d_vector": {
     "qno": "251",
     "title": "Flatten 2D Vector",
-    "tags": [],
+    "tags": [
+      "Array",
+      "Two Pointers",
+      "Design",
+      "Iterator"
+    ],
     "default": "Iterator",
     "difficulty": "Medium",
     "language": "Java",
@@ -1004,7 +1016,12 @@
   "zigzag_iterator": {
     "qno": "281",
     "title": "Zigzag Iterator",
-    "tags": [],
+    "tags": [
+      "Array",
+      "Design",
+      "Queue",
+      "Iterator"
+    ],
     "default": "Iterator",
     "difficulty": "Medium",
     "language": "Java",
@@ -1013,7 +1030,11 @@
   "peeking_iterator": {
     "qno": "284",
     "title": "Peeking Iterator",
-    "tags": [],
+    "tags": [
+      "Array",
+      "Design",
+      "Iterator"
+    ],
     "default": "Iterator",
     "difficulty": "Medium",
     "language": "Java",
@@ -1022,7 +1043,14 @@
   "flatten_nested_list_iterator": {
     "qno": "341",
     "title": "Flatten Nested List Iterator",
-    "tags": [],
+    "tags": [
+      "Stack",
+      "Tree",
+      "Depth-First Search",
+      "Design",
+      "Queue",
+      "Iterator"
+    ],
     "default": "Iterator",
     "difficulty": "Medium",
     "language": "Java",
@@ -1031,7 +1059,12 @@
   "design_compressed_string_iterator": {
     "qno": "604",
     "title": "Design Compressed String Iterator",
-    "tags": [],
+    "tags": [
+      "Array",
+      "String",
+      "Design",
+      "Iterator"
+    ],
     "default": "Iterator",
     "difficulty": "Easy",
     "language": "Java",
@@ -1040,7 +1073,12 @@
   "rle_iterator": {
     "qno": "900",
     "title": "RLE Iterator",
-    "tags": [],
+    "tags": [
+      "Array",
+      "Design",
+      "Counting",
+      "Iterator"
+    ],
     "default": "Iterator",
     "difficulty": "Medium",
     "language": "Java",
@@ -1049,7 +1087,12 @@
   "iterator_for_combination": {
     "qno": "1286",
     "title": "Iterator for Combination",
-    "tags": [],
+    "tags": [
+      "String",
+      "Backtracking",
+      "Design",
+      "Iterator"
+    ],
     "default": "Iterator",
     "difficulty": "Medium",
     "language": "Java",
@@ -1058,7 +1101,14 @@
   "binary_search_tree_iterator_ii": {
     "qno": "1586",
     "title": "Binary Search Tree Iterator II",
-    "tags": [],
+    "tags": [
+      "Stack",
+      "Tree",
+      "Design",
+      "Binary Search Tree",
+      "Binary Tree",
+      "Iterator"
+    ],
     "default": "Iterator",
     "difficulty": "Medium",
     "language": "Java",
