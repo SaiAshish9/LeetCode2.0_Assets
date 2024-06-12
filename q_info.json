@@ -141,7 +141,7 @@
     "default": "Strongly Connected Component",
     "difficulty": "Hard",
     "language": "Java",
-    "acceptance": 67.8
+    "acceptance": 67.7
   },
   "minimum_number_of_days_to_disconnect_island": {
     "qno": 1568,
