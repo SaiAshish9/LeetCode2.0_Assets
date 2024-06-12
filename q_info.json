@@ -506,7 +506,7 @@
   },
   "number_of_ways_to_separate_numbers": {
     "qno": 1977,
-    "title": "number_of_ways_to_separate_numbers",
+    "title": "Number of Ways to Separate Numbers",
     "tags": [
       "String",
       "Dynamic Programming",
