@@ -336,7 +336,11 @@
   "h-index": {
     "qno": 274,
     "title": "H-Index",
-    "tags": ["Array", "Sorting", "Counting Sort"],
+    "tags": [
+      "Array",
+      "Sorting",
+      "Counting Sort"
+    ],
     "default": "Counting Sort",
     "difficulty": "Medium",
     "language": "Java",
@@ -345,7 +349,12 @@
   "array_partition": {
     "qno": 561,
     "title": "Array Partition",
-    "tags": ["Array", "Greedy", "Sorting", "Counting Sort"],
+    "tags": [
+      "Array",
+      "Greedy",
+      "Sorting",
+      "Counting Sort"
+    ],
     "default": "Counting Sort",
     "difficulty": "Easy",
     "language": "Java",
@@ -354,7 +363,16 @@
   "height_checker": {
     "qno": 1051,
     "title": "Height Checker",
-    "tags": ["Array", "Divide and Conquer", "Sorting", "Heap (Priority Queue)", "Merge Sort", "Bucket Sort", "Radix Sort", "Counting Sort"],
+    "tags": [
+      "Array",
+      "Divide and Conquer",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Merge Sort",
+      "Bucket Sort",
+      "Radix Sort",
+      "Counting Sort"
+    ],
     "default": "Counting Sort",
     "difficulty": "Medium",
     "language": "Java",
@@ -363,7 +381,12 @@
   "relative_sort_array": {
     "qno": 1122,
     "title": "Relative Sort Array",
-    "tags": ["Array", "Hash Table", "Sorting", "Counting Sort"],
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sorting",
+      "Counting Sort"
+    ],
     "default": "Counting Sort",
     "difficulty": "Easy",
     "language": "Java",
@@ -372,7 +395,12 @@
   "connecting_cities_with_minimum_cost": {
     "qno": 1135,
     "title": "Connecting Cities With Minimum Cost",
-    "tags": ["Union Find", "Graph", "Heap (Priority Queue)", "Minimum Spanning Tree"],
+    "tags": [
+      "Union Find",
+      "Graph",
+      "Heap (Priority Queue)",
+      "Minimum Spanning Tree"
+    ],
     "default": "Minimum Spanning Tree",
     "difficulty": "Medium",
     "language": "Java",
@@ -381,7 +409,12 @@
   "optimize_water_distribution_in_a_village": {
     "qno": 1168,
     "title": "Optimize Water Distribution in a Village",
-    "tags": ["Union Find", "Graph", "Heap (Priority Queue)", "Minimum Spanning Tree"],
+    "tags": [
+      "Union Find",
+      "Graph",
+      "Heap (Priority Queue)",
+      "Minimum Spanning Tree"
+    ],
     "default": "Minimum Spanning Tree",
     "difficulty": "Hard",
     "language": "Java",
@@ -390,7 +423,12 @@
   "min_cost_to_connect_all_points": {
     "qno": 1584,
     "title": "Min Cost to Connect All Points",
-    "tags": ["Array", "Union Find", "Graph", "Minimum Spanning Tree"],
+    "tags": [
+      "Array",
+      "Union Find",
+      "Graph",
+      "Minimum Spanning Tree"
+    ],
     "default": "Minimum Spanning Tree",
     "difficulty": "Medium",
     "language": "Java",
@@ -399,10 +437,105 @@
   "checking_existence_of_edge_length_limited_paths_ii": {
     "qno": 1724,
     "title": "Checking Existence of Edge Length Limited Paths II",
-    "tags": ["Union Find", "Graph", "Minimum Spanning Tree"],
+    "tags": [
+      "Union Find",
+      "Graph",
+      "Minimum Spanning Tree"
+    ],
     "default": "Minimum Spanning Tree",
     "difficulty": "Hard",
     "language": "Java",
     "acceptance": 51.6
+  },
+  "longest_repeating_substring": {
+    "qno": 1062,
+    "title": "Longest Repeating Substring",
+    "tags": [
+      "String",
+      "Binary Search",
+      "Dynamic Programming",
+      "Rolling Hash",
+      "Suffix Array",
+      "Hash Function"
+    ],
+    "default": "Suffix Array",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 60.8
+  },
+  "longest_duplicate_substring": {
+    "qno": 1044,
+    "title": "Longest Duplicate Substring",
+    "tags": [
+      "String",
+      "Binary Search",
+      "Sliding Window",
+      "Rolling Hash",
+      "Suffix Array",
+      "Hash Function"
+    ],
+    "default": "Suffix Array",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 30.6
+  },
+  "number_of_distinct_substrings_in_a_string": {
+    "qno": 1698,
+    "title": "Number of Distinct Substrings in a String",
+    "tags": [
+      "String",
+      "Trie",
+      "Rolling Hash",
+      "Suffix Array",
+      "Hash Function"
+    ],
+    "default": "Suffix Array",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 64.0
+  },
+  "longest_common_subpath": {
+    "qno": 1923,
+    "title": "Longest Common Subpath",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Rolling Hash",
+      "Suffix Array",
+      "Hash Function"
+    ],
+    "default": "Suffix Array",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 28.2
+  },
+  "number_of_ways_to_separate_numbers": {
+    "qno": 1977,
+    "title": "number_of_ways_to_separate_numbers",
+    "tags": [
+      "String",
+      "Dynamic Programming",
+      "Suffix Array"
+    ],
+    "default": "Suffix Array",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 20.8
+  },
+  "sum_of_scores_of_built_strings": {
+    "qno": 2223,
+    "title": "Sum of Scores of Built Strings",
+    "tags": [
+      "String",
+      "Binary Search",
+      "Rolling Hash",
+      "Suffix Array",
+      "String Matching",
+      "Hash Function"
+    ],
+    "default": "Suffix Array",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 39.9
   }
 }
