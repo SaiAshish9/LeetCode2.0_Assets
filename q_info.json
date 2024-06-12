@@ -597,5 +597,86 @@
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 58.1
+  },
+  "kth_largest_element_in_an_array": {
+    "qno": 215,
+    "title": "Kth Largest Element in an Array",
+    "tags": [
+      "Array",
+      "Divide and Conquer",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Quickselect"
+    ],
+    "default": "Quickselect",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 66.8
+  },
+  "wiggle_sort_ii": {
+    "qno": 324,
+    "title": "Wiggle Sort II",
+    "tags": [
+      "Array",
+      "Divide and Conquer",
+      "Greedy",
+      "Sorting",
+      "Quickselect"
+    ],
+    "default": "Quickselect",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 34.4
+  },
+  "k_closest_points_to_origin": {
+    "qno": 973,
+    "title": "k_closest_points_to_origin",
+    "tags": [
+      "Array",
+      "Math",
+      "Divide and Conquer",
+      "Geometry",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Quickselect"
+    ],
+    "default": "Quickselect",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 66.5
+  },
+  "find_kth_largest_xor_coordinate_value": {
+    "qno": 215,
+    "title": "",
+    "tags": [
+      "Array",
+      "Divide and Conquer",
+      "Bit Manipulation",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Matrix",
+      "Prefix Sum",
+      "Quickselect"
+    ],
+    "default": "Quickselect",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 61.8
+  },
+  "find_the_kth_largest_integer_in_the_array": {
+    "qno": 1985,
+    "title": "Find the Kth Largest Integer in the Array",
+    "tags": [
+      "Array",
+      "String",
+      "Divide and Conquer",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Quickselect"
+    ],
+    "default": "Quickselect",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 43.9
   }
 }
