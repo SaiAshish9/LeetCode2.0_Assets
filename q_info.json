@@ -630,7 +630,7 @@
   },
   "k_closest_points_to_origin": {
     "qno": 973,
-    "title": "k_closest_points_to_origin",
+    "title": "K Closest Points to Origin",
     "tags": [
       "Array",
       "Math",
