@@ -678,5 +678,14 @@
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 43.9
+  },
+  "soup_servings": {
+    "qno": 808,
+    "title": "Soup Servings",
+    "tags": ["Math", "Dynamic Programming", "Probability and Statistics", "Math", "Dynamic Programming", "Sliding Window", "Probability and Statistics", "Math", "Rejection Sampling", "Randomized", "Probability and Statistics", "Array", "Math", "Dynamic Programming", "Probability and Statistics", "Array", "Math", "Probability and Statistics", "Math", "Dynamic Programming", "Brainteaser", "Probability and Statistics", "Array", "Math", "Dynamic Programming", "Backtracking", "Combinatorics", "Probability and Statistics"],
+    "default": "Quickselect",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 54.0
   }
 }
