@@ -207,9 +207,44 @@
       "concurrency": "import java.util.concurrent.Semaphore;\n\nclass FooBar {\n    private int n;\n    private Semaphore fooSemaphore;\n    private Semaphore barSemaphore;\n\n    public FooBar(int n) {\n        this.n = n;\n        this.fooSemaphore = new Semaphore(1); // Initially fooSemaphore is available\n        this.barSemaphore = new Semaphore(0); // Initially barSemaphore is not available\n    }\n\n    public void foo(Runnable printFoo) throws InterruptedException {\n        for (int i = 0; i < n; i++) {\n            fooSemaphore.acquire();\n            printFoo.run();\n            barSemaphore.release();\n        }\n    }\n\n    public void bar(Runnable printBar) throws InterruptedException {\n        for (int i = 0; i < n; i++) {\n            barSemaphore.acquire();\n            printBar.run();\n            fooSemaphore.release();\n        }\n    }\n\n    public static void main(String[] args) {\n        FooBar fooBar = new FooBar(5);\n\n        Runnable printFoo = () -> System.out.print(\"foo\");\n        Runnable printBar = () -> System.out.print(\"bar\");\n\n        Thread threadFoo = new Thread(() -> {\n            try {\n                fooBar.foo(printFoo);\n            } catch (InterruptedException e) {\n                e.printStackTrace();\n            }\n        });\n\n        Thread threadBar = new Thread(() -> {\n            try {\n                fooBar.bar(printBar);\n            } catch (InterruptedException e) {\n                e.printStackTrace();\n            }\n        });\n\n        threadFoo.start();\n        threadBar.start();\n    }\n\n}\n"
     }
   },
+  "1116": {
+    "java": {
+      "concurrency": ""
+    }
+  },
+  "1117": {
+    "java": {
+      "concurrency": ""
+    }
+  },
   "1122": {
     "java": {
       "counting-sort": "class Solution {\n    public int[] relativeSortArray(int[] arr1, int[] arr2) {\n        int maxNum = 1000; // assuming the values in arr1 are between 0 and 1000\n        int[] count = new int[maxNum + 1];\n        \n        for (int num : arr1) {\n            count[num]++;\n        }\n        \n        int[] result = new int[arr1.length];\n        int index = 0;\n        \n        for (int num : arr2) {\n            while (count[num] > 0) {\n                result[index++] = num;\n                count[num]--;\n            }\n        }\n        \n        for (int i = 0; i <= maxNum; i++) {\n            while (count[i] > 0) {\n                result[index++] = i;\n                count[i]--;\n            }\n        }\n        \n        return result;\n    }\n}\n"
+    }
+  },
+  "1188": {
+    "java": {
+      "concurrency": ""
+    }
+  },
+  "1195": {
+    "java": {
+      "concurrency": ""
+    }
+  },
+  "1226": {
+    "java": {
+      "concurrency": ""
+    }
+  },
+  "1242": {
+    "java": {
+      "concurrency": ""
+    }
+  },
+  "1279": {
+    "java": {
+      "concurrency": ""
     }
   },
   "1135": {
