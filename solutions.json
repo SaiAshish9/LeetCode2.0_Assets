@@ -195,7 +195,7 @@
   },
   "1230": {
     "java": {
-      "probability-and-statistics": "class Solution {\n    public double probabilityOfHeads(double[] prob, int target) {\n        int n = prob.length;\n        double[][] f = new double[n + 1][target + 1];\n        f[0][0] = 1;\n        for (int i = 1; i <= n; ++i) {\n            for (int j = 0; j <= Math.min(i, target); ++j) {\n                f[i][j] = (1 - prob[i - 1]) * f[i - 1][j];\n                if (j > 0) {\n                    f[i][j] += prob[i - 1] * f[i - 1][j - 1];\n                }\n            }\n        }\n        return f[n][target];\n    }\n}"
+      "probability-and-statistics": "class Solution {\n    public double probabilityOfHeads(double[] prob, int target) {\n        int n = prob.length;\n        double[][] f = new double[n + 1][target + 1];\n        dp[0][0] = 1;\n        for (int i = 1; i <= n; ++i) {\n            for (int j = 0; j <= Math.min(i, target); ++j) {\n                dp[i][j] = (1 - prob[i - 1]) * dp[i - 1][j];\n                if (j > 0) {\n                    dp[i][j] += prob[i - 1] * dp[i - 1][j - 1];\n                }\n            }\n        }\n        return dp[n][target];\n    }\n}"
     }
   },
   "1467": {
