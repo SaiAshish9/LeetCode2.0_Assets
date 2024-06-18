@@ -9,6 +9,11 @@
       "doubly-linked-list": "class LRUCache {\n    class Node {\n        int key;\n        int value;\n        Node prev;\n        Node next;\n        \n        public Node(int key, int value) {\n            this.key = key;\n            this.value = value;\n        }\n    }\n    \n    private int capacity;\n    private Map<Integer, Node> map;\n    private Node head;\n    private Node tail;\n    \n    public LRUCache(int capacity) {\n        this.capacity = capacity;\n        map = new HashMap<>();\n        head = new Node(-1, -1);\n        tail = new Node(-1, -1);\n        head.next = tail;\n        tail.prev = head;\n    }\n    \n    public int get(int key) {\n        if (!map.containsKey(key)) {\n            return -1;\n        }\n        \n        Node node = map.get(key);\n        moveToHead(node);\n        \n        return node.value;\n    }\n    \n    public void put(int key, int value) {\n        if (map.containsKey(key)) {\n            Node node = map.get(key);\n            node.value = value;\n            moveToHead(node);\n        } else {\n            Node newNode = new Node(key, value);\n            map.put(key, newNode);\n            addToHead(newNode);\n            \n            if (map.size() > capacity) {\n                Node removed = removeTail();\n                map.remove(removed.key);\n            }\n        }\n    }\n    \n    private void moveToHead(Node node) {\n        removeNode(node);\n        addToHead(node);\n    }\n    \n    private void removeNode(Node node) {\n        node.prev.next = node.next;\n        node.next.prev = node.prev;\n    }\n    \n    private void addToHead(Node node) {\n        node.next = head.next;\n        node.next.prev = node;\n        head.next = node;\n        node.prev = head;\n    }\n    \n    private Node removeTail() {\n        Node nodeToRemove = tail.prev;\n        removeNode(nodeToRemove);\n        return nodeToRemove;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        LRUCache cache = new LRUCache(2); // Capacity is 2\n        cache.put(1, 1);\n        cache.put(2, 2);\n        System.out.println(cache.get(1)); // Output: 1\n        cache.put(3, 3);\n        System.out.println(cache.get(2)); // Output: -1 (not found)\n        cache.put(4, 4);\n        System.out.println(cache.get(1)); // Output: -1 (not found)\n        System.out.println(cache.get(3)); // Output: 3\n        System.out.println(cache.get(4)); // Output: 4\n    }\n}\n"
     }
   },
+  "148": {
+    "java": {
+      "merge-sort": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode sortList(ListNode head) {\n        if (head == null || head.next == null) {\n            return head;\n        }\n\n        ListNode mid = getMid(head);\n        ListNode left = head;\n        ListNode right = mid.next;\n        mid.next = null; \n        left = sortList(left);\n        right = sortList(right);\n\n        return merge(left, right);\n    }\n\n    private ListNode getMid(ListNode head) {\n        ListNode slow = head;\n        ListNode fast = head.next;\n        while (fast != null && fast.next != null) {\n            slow = slow.next;\n            fast = fast.next.next;\n        }\n\n        return slow;\n    }\n\n    private ListNode merge(ListNode l1, ListNode l2) {\n        ListNode dummy = new ListNode(0);\n        ListNode current = dummy;\n\n        while (l1 != null && l2 != null) {\n            if (l1.val < l2.val) {\n                current.next = l1;\n                l1 = l1.next;\n            } else {\n                current.next = l2;\n                l2 = l2.next;\n            }\n            current = current.next;\n        }\n\n        if (l1 != null) {\n            current.next = l1;\n        } else {\n            current.next = l2;\n        }\n\n        return dummy.next;\n    }\n}\n"
+    }
+  },
   "164": {
     "java": {
       "radix-sort": "class Solution {\n    public int maximumGap(int[] nums) {\n        if (nums == null || nums.length < 2) {\n            return 0;\n        }\n        \n        radixSort(nums);\n        \n        int maxGap = 0;\n        for (int i = 1; i < nums.length; i++) {\n            maxGap = Math.max(maxGap, nums[i] - nums[i - 1]);\n        }\n        return maxGap;\n    }\n\n    private void radixSort(int[] nums) {\n        int max = Arrays.stream(nums).max().getAsInt();\n        int exp = 1;\n        while (max / exp > 0) {\n            countingSort(nums, exp);\n            exp *= 10;\n        }\n    }\n\n    private void countingSort(int[] nums, int exp) {\n        int n = nums.length;\n        int[] output = new int[n];\n        int[] count = new int[10];\n\n        for (int i = 0; i < n; i++) {\n            int index = (nums[i] / exp) % 10;\n            count[index]++;\n        }\n\n        for (int i = 1; i < 10; i++) {\n            count[i] += count[i - 1];\n        }\n\n        for (int i = n - 1; i >= 0; i--) {\n            int index = (nums[i] / exp) % 10;\n            output[count[index] - 1] = nums[i];\n            count[index]--;\n        }\n\n        System.arraycopy(output, 0, nums, 0, n);\n    }\n}\n",
@@ -76,9 +81,19 @@
       "iterator": "import java.util.*;\n\nclass PeekingIterator implements Iterator<Integer> {\n    private Iterator<Integer> iterator;\n    private Integer nextElement;\n    private boolean hasNext;\n\n    public PeekingIterator(Iterator<Integer> iterator) {\n        this.iterator = iterator;\n        if (iterator.hasNext()) {\n            nextElement = iterator.next();\n            hasNext = true;\n        } else {\n            hasNext = false;\n        }\n    }\n\n    public Integer peek() {\n        return nextElement;\n    }\n    \n    @Override\n    public Integer next() {\n        if (!hasNext) {\n            throw new NoSuchElementException();\n        }\n        Integer result = nextElement;\n        if (iterator.hasNext()) {\n            nextElement = iterator.next();\n        } else {\n            hasNext = false;\n        }\n        return result;\n    }\n    \n    @Override\n    public boolean hasNext() {\n        return hasNext;\n    }\n}\n"
     }
   },
+  "315": {
+    "java": {
+      "merge-sort": ""
+    }
+  },
   "324": {
     "java": {
       "quickselect": "import java.util.Arrays;\n\npublic class Solution {\n    public void wiggleSort(int[] nums) {\n        int n = nums.length;\n        \n        int median = quickselect(nums, 0, n - 1, n / 2);\n        \n        // Three-way partitioning: Elements less than median go to the left,\n        // Elements equal to median go to the middle, Elements greater than median go to the right\n        int left = 0, right = n - 1, i = 0;\n        while (i <= right) {\n            if (nums[newIndex(i, n)] > median) {\n                swap(nums, newIndex(left++, n), newIndex(i++, n));\n            } else if (nums[newIndex(i, n)] < median) {\n                swap(nums, newIndex(right--, n), newIndex(i, n));\n            } else {\n                i++;\n            }\n        }\n    }\n    \n    // Quickselect to find the k-th smallest element\n    private int quickselect(int[] nums, int left, int right, int k) {\n        while (left < right) {\n            int pivot = partition(nums, left, right);\n            if (pivot == k) {\n                return nums[k];\n            } else if (pivot < k) {\n                left = pivot + 1;\n            } else {\n                right = pivot - 1;\n            }\n        }\n        return nums[left];\n    }\n    \n    private int partition(int[] nums, int left, int right) {\n        int pivot = nums[right];\n        int i = left;\n        for (int j = left; j < right; j++) {\n            if (nums[j] < pivot) {\n                swap(nums, i++, j);\n            }\n        }\n        swap(nums, i, right);\n        return i;\n    }\n    \n    private int newIndex(int index, int n) {\n        return (1 + 2 * index) % (n | 1);\n    }\n    \n    private void swap(int[] nums, int i, int j) {\n        int temp = nums[i];\n        nums[i] = nums[j];\n        nums[j] = temp;\n    }\n}\n"
+    }
+  },
+  "327": {
+    "java": {
+      "merge-sort": ""
     }
   },
   "332": {
@@ -147,6 +162,11 @@
   "478": {
     "java": {
       "rejection-sampling": "import java.util.Random;\n\nclass Solution {\n    private double radius;\n    private double x_center;\n    private double y_center;\n    private Random random;\n\n    public Solution(double radius, double x_center, double y_center) {\n        this.radius = radius;\n        this.x_center = x_center;\n        this.y_center = y_center;\n        this.random = new Random();\n    }\n\n    public double[] randPoint() {\n        double x = x_center - radius + 2 * radius * random.nextDouble();\n        double y = y_center - radius + 2 * radius * random.nextDouble();\n\n        while (!isInCircle(x, y)) {\n            x = x_center - radius + 2 * radius * random.nextDouble();\n            y = y_center - radius + 2 * radius * random.nextDouble();\n        }\n\n        return new double[]{x, y};\n    }\n\n    private boolean isInCircle(double x, double y) {\n        return Math.pow(x - x_center, 2) + Math.pow(y - y_center, 2) <= Math.pow(radius, 2);\n    }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution obj = new Solution(radius, x_center, y_center);\n * double[] param_1 = obj.randPoint();\n */"
+    }
+  },
+  "493": {
+    "java": {
+      "merge-sort": ""
     }
   },
   "497": {
@@ -349,6 +369,11 @@
       "iterator": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass BSTIterator {\n    private List<Integer> nums = new ArrayList<>();\n    private int i = -1;\n\n    public BSTIterator(TreeNode root) {\n        dfs(root);\n    }\n\n    public boolean hasNext() {\n        return i < nums.size() - 1;\n    }\n\n    public int next() {\n        return nums.get(++i);\n    }\n\n    public boolean hasPrev() {\n        return i > 0;\n    }\n\n    public int prev() {\n        return nums.get(--i);\n    }\n\n    private void dfs(TreeNode root) {\n        if (root == null) {\n            return;\n        }\n        dfs(root.left);\n        nums.add(root.val);\n        dfs(root.right);\n    }\n}\n\n/**\n * Your BSTIterator object will be instantiated and called as such:\n * BSTIterator obj = new BSTIterator(root);\n * boolean param_1 = obj.hasNext();\n * int param_2 = obj.next();\n * boolean param_3 = obj.hasPrev();\n * int param_4 = obj.prev();\n */"
     }
   },
+  "1649": {
+    "java": {
+      "merge-sort": ""
+    }
+  },
   "1698": {
     "java": {
       "suffix-array": "import java.util.Arrays;\n\npublic class Solution {\n\n    public int countDistinct(String s) {\n        int n = s.length();\n        int[] suffixArray = buildSuffixArray(s);\n        int[] lcpArray = buildLCPArray(s, suffixArray);\n\n        int count = 0;\n        for (int i = 0; i < n; i++) {\n            int suffixLength = n - suffixArray[i];\n            count += suffixLength - (i > 0 ? lcpArray[i] : 0);\n        }\n\n        return count;\n    }\n\n    private int[] buildSuffixArray(String s) {\n        int n = s.length();\n        Suffix[] suffixes = new Suffix[n];\n\n        for (int i = 0; i < n; i++) {\n            suffixes[i] = new Suffix(i, s.substring(i));\n        }\n\n        Arrays.sort(suffixes);\n\n        int[] suffixArray = new int[n];\n        for (int i = 0; i < n; i++) {\n            suffixArray[i] = suffixes[i].index;\n        }\n\n        return suffixArray;\n    }\n\n    private int[] buildLCPArray(String s, int[] suffixArray) {\n        int n = s.length();\n        int[] rank = new int[n];\n        int[] lcpArray = new int[n];\n\n        for (int i = 0; i < n; i++) {\n            rank[suffixArray[i]] = i;\n        }\n\n        int h = 0;\n        for (int i = 0; i < n; i++) {\n            if (rank[i] > 0) {\n                int j = suffixArray[rank[i] - 1];\n                while (i + h < n && j + h < n && s.charAt(i + h) == s.charAt(j + h)) {\n                    h++;\n                }\n                lcpArray[rank[i]] = h;\n                if (h > 0) {\n                    h--;\n                }\n            }\n        }\n\n        return lcpArray;\n    }\n\n    class Suffix implements Comparable<Suffix> {\n        int index;\n        String suffix;\n\n        Suffix(int index, String suffix) {\n            this.index = index;\n            this.suffix = suffix;\n        }\n\n        @Override\n        public int compareTo(Suffix other) {\n            return this.suffix.compareTo(other.suffix);\n        }\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        String s = \"aabbaba\";\n        int distinctSubstrings = solution.countDistinct(s);\n        System.out.println(\"Number of distinct substrings: \" + distinctSubstrings); // Output: 21\n    }\n}\n"
@@ -385,6 +410,16 @@
       "heap-(priority-queue)": "class Solution {\n\n  public String kthLargestNumber(String[] nums, int k) {\n    Queue<String> minHeap = new PriorityQueue<>(\n        (a, b) -> a.length() == b.length() ? a.compareTo(b) : a.length() - b.length());\n\n    for (final String num : nums) {\n      minHeap.offer(num);\n      if (minHeap.size() > k)\n        minHeap.poll();\n    }\n\n    return minHeap.poll();\n  }\n}"
     }
   },
+  "2031": {
+    "java": {
+      "merge-sort": ""
+    }
+  },
+  "2179": {
+    "java": {
+      "merge-sort": ""
+    }
+  },
   "2223": {
     "2097": {
       "java": {
@@ -409,6 +444,21 @@
   "2296": {
     "java": {
       "doubly-linked-list": "class TextEditor {\n    private class Node {\n        char c;\n        Node prev, next;\n\n        Node(char c) {\n            this.c = c;\n        }\n    }\n\n    private Node head, tail, cursor;\n\n    public TextEditor() {\n        head = new Node('0');\n        tail = new Node('0');\n        head.next = tail;\n        tail.prev = head;\n        cursor = tail;\n    }\n\n    public void addText(String text) {\n        for (char c : text.toCharArray()) {\n            Node newNode = new Node(c);\n            Node prev = cursor.prev;\n            prev.next = newNode;\n            newNode.prev = prev;\n            newNode.next = cursor;\n            cursor.prev = newNode;\n        }\n    }\n\n    public int deleteText(int k) {\n        int deleted = 0;\n        while (k > 0 && cursor.prev != head) {\n            Node prev = cursor.prev;\n            prev.prev.next = cursor;\n            cursor.prev = prev.prev;\n            k--;\n            deleted++;\n        }\n        return deleted;\n    }\n\n    public String cursorLeft(int k) {\n        while (k > 0 && cursor.prev != head) {\n            cursor = cursor.prev;\n            k--;\n        }\n        return getText();\n    }\n\n    public String cursorRight(int k) {\n        while (k > 0 && cursor != tail) {\n            cursor = cursor.next;\n            k--;\n        }\n        return getText();\n    }\n\n    private String getText() {\n        StringBuilder sb = new StringBuilder();\n        Node temp = cursor.prev;\n        for (int i = 0; i < 10 && temp != head; i++) {\n            sb.append(temp.c);\n            temp = temp.prev;\n        }\n        return sb.reverse().toString();\n    }\n}\n"
+    }
+  },
+  "2426": {
+    "java": {
+      "merge-sort": ""
+    }
+  },
+  "2519": {
+    "java": {
+      "merge-sort": ""
+    }
+  },
+  "3109": {
+    "java": {
+      "merge-sort": ""
     }
   }
 }
