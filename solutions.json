@@ -51,9 +51,24 @@
       "bucket-sort": "import java.util.*;\n\npublic class Solution {\n    public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {\n        if (k <= 0 || t < 0) {\n            return false;\n        }\n\n        Map<Long, Long> bucketMap = new HashMap<>();\n        long bucketSize = (long) t + 1;\n\n        for (int i = 0; i < nums.length; i++) {\n            long num = (long) nums[i];\n            long bucket = getBucket(num, bucketSize);\n\n            if (bucketMap.containsKey(bucket)) {\n                return true;\n            }\n\n            if (bucketMap.containsKey(bucket - 1) && Math.abs(num - bucketMap.get(bucket - 1)) < bucketSize) {\n                return true;\n            }\n            if (bucketMap.containsKey(bucket + 1) && Math.abs(num - bucketMap.get(bucket + 1)) < bucketSize) {\n                return true;\n            }\n\n            bucketMap.put(bucket, num);\n            if (i >= k) {\n                bucketMap.remove(getBucket((long) nums[i - k], bucketSize));\n            }\n        }\n\n        return false;\n    }\n\n    private long getBucket(long num, long bucketSize) {\n        return num < 0 ? (num + 1) / bucketSize - 1 : num / bucketSize;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums1 = { 1, 2, 3, 1 };\n        int k1 = 3, t1 = 0;\n        System.out.println(solution.containsNearbyAlmostDuplicate(nums1, k1, t1)); // Output: true\n\n        int[] nums2 = { 1, 0, 1, 1 };\n        int k2 = 1, t2 = 2;\n        System.out.println(solution.containsNearbyAlmostDuplicate(nums2, k2, t2)); // Output: true\n\n        int[] nums3 = { 1, 5, 9, 1, 5, 9 };\n        int k3 = 2, t3 = 3;\n        System.out.println(solution.containsNearbyAlmostDuplicate(nums3, k3, t3)); // Output: false\n    }\n}\n"
     }
   },
+  "251": {
+    "java": {
+      "iterator": ""
+    }
+  },
   "274": {
     "java": {
       "counting-sort": "class Solution {\n    public int hIndex(int[] citations) {\n        int n = citations.length;\n        int[] count = new int[n + 1];\n        \n        for (int c : citations) {\n            if (c >= n) {\n                count[n]++;\n            } else {\n                count[c]++;\n            }\n        }\n        \n        // Calculate the H-Index\n        int total = 0;\n        for (int i = n; i >= 0; i--) {\n            total += count[i];\n            if (total >= i) {\n                return i;\n            }\n        }\n        \n        return 0;\n    }\n}\n"
+    }
+  },
+  "281": {
+    "java": {
+      "iterator": ""
+    }
+  },
+  "284": {
+    "java": {
+      "iterator": "import java.util.*;\n\nclass PeekingIterator implements Iterator<Integer> {\n    private Iterator<Integer> iterator;\n    private Integer nextElement;\n    private boolean hasNext;\n\n    public PeekingIterator(Iterator<Integer> iterator) {\n        this.iterator = iterator;\n        if (iterator.hasNext()) {\n            nextElement = iterator.next();\n            hasNext = true;\n        } else {\n            hasNext = false;\n        }\n    }\n\n    public Integer peek() {\n        return nextElement;\n    }\n    \n    @Override\n    public Integer next() {\n        if (!hasNext) {\n            throw new NoSuchElementException();\n        }\n        Integer result = nextElement;\n        if (iterator.hasNext()) {\n            nextElement = iterator.next();\n        } else {\n            hasNext = false;\n        }\n        return result;\n    }\n    \n    @Override\n    public boolean hasNext() {\n        return hasNext;\n    }\n}\n"
     }
   },
   "324": {
@@ -64,6 +79,11 @@
   "332": {
     "java": {
       "eulerian-circuit": "import java.util.*;\n\npublic class Solution {\n\n    public List<String> findItinerary(List<List<String>> tickets) {\n              Map<String, PriorityQueue<String>> graph = new HashMap<>();\n              for (List<String> ticket : tickets) {\n                  graph.computeIfAbsent(ticket.get(0), k -> new PriorityQueue<>()).add(ticket.get(1));\n              }\n      \n              LinkedList<String> itinerary = new LinkedList<>();\n              // dfs('JFK', graph, itinerary); or else use stack\n      \n              Stack<String> stack = new Stack<>();\n              stack.push('JFK');\n      \n              while (!stack.isEmpty()) {\n                  String currentAirport = stack.peek();\n                  PriorityQueue<String> nextAirports = graph.get(currentAirport);\n      \n                  // If the current airport has any destinations left to visit\n                  if (nextAirports != null && !nextAirports.isEmpty()) {\n                      stack.push(nextAirports.poll());\n                  } else {\n                      // If no destinations left, add to itinerary and backtrack\n                      itinerary.addFirst(stack.pop());\n                  }\n              }\n      \n              return itinerary;\n          }\n\n    private void dfs(String airport, Map<String, PriorityQueue<String>> graph, LinkedList<String> itinerary) {\n        PriorityQueue<String> nextAirports = graph.get(airport);\n        while (nextAirports != null && !nextAirports.isEmpty()) {\n            dfs(nextAirports.poll(), graph, itinerary);\n        }\n        itinerary.addFirst(airport);\n    }\n\n    public static void main(String[] args) {\n              Solution solution = new Solution();\n              List<List<String>> tickets = Arrays.asList(\n                      Arrays.asList('MUC', 'LHR'),\n                      Arrays.asList('JFK', 'MUC'),\n                      Arrays.asList('SFO', 'SJC'),\n                      Arrays.asList('LHR', 'SFO'));\n              List<String> itinerary = solution.findItinerary(tickets);\n              System.out.println(itinerary); // Output: [JFK, MUC, LHR, SFO, SJC]\n          }\n}\n"
+    }
+  },
+  "341": {
+    "java": {
+      "iterator": ""
     }
   },
   "347": {
@@ -139,6 +159,11 @@
       "counting-sort": "class Solution {\n    public int arrayPairSum(int[] nums) {\n        int maxNum = 10000;\n        int[] count = new int[2 * maxNum + 1];\n\n        for (int num : nums) {\n            count[num + maxNum]++;\n        }\n\n        int sum = 0;\n        boolean add = true;\n        for (int i = 0; i < count.length; i++) {\n            while (count[i] > 0) {\n                if (add) {\n                    sum += i - maxNum;\n                }\n                add = !add;\n                count[i]--;\n            }\n        }\n\n        return sum;\n    }\n}\n"
     }
   },
+  "604": {
+    "java": {
+      "iterator": ""
+    }
+  },
   "692": {
     "java": {
       "bucket-sort": "import java.util.*;\n\nclass Solution {\n    public List<String> topKFrequent(String[] words, int k) {\n        Map<String, Integer> frequencyMap = new HashMap<>();\n        for (String word : words) {\n            frequencyMap.put(word, frequencyMap.getOrDefault(word, 0) + 1);\n        }\n\n        List<String>[] buckets = new List[words.length + 1];\n        for (String word : frequencyMap.keySet()) {\n            int frequency = frequencyMap.get(word);\n            if (buckets[frequency] == null) {\n                buckets[frequency] = new ArrayList<>();\n            }\n            buckets[frequency].add(word);\n        }\n\n        List<String> result = new ArrayList<>();\n        for (int i = buckets.length - 1; i >= 0 && result.size() < k; i--) {\n            if (buckets[i] != null) {\n                Collections.sort(buckets[i]);\n                result.addAll(buckets[i]);\n            }\n        }\n\n        return result.subList(0, k);\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        System.out.println(solution.topKFrequent(new String[]{\"i\", \"love\", \"leetcode\", \"i\", \"love\", \"coding\"}, 2)); // Output: [\"i\", \"love\"]\n    }\n}\n"
@@ -167,6 +192,11 @@
   "850": {
     "java": {
       "line-sweep": "class Event {\n  public int x;\n  public int y1;\n  public int y2;\n  public char type;\n  public Event(int x, int y1, int y2, char type) {\n    this.x = x;\n    this.y1 = y1;\n    this.y2 = y2;\n    this.type = type;\n  }\n}\n\nclass Solution {\n  public int rectangleArea(int[][] rectangles) {\n    final int kMod = 1_000_000_007;\n    List<Event> events = new ArrayList<>();\n\n    for (int[] r : rectangles) {\n      events.add(new Event(r[0], r[1], r[3], 's'));\n      events.add(new Event(r[2], r[1], r[3], 'e'));\n    }\n\n    Collections.sort(events, (a, b) -> a.x - b.x);\n\n    long ans = 0;\n    int prevX = 0;\n    List<Pair<Integer, Integer>> yPairs = new ArrayList<>();\n\n    for (Event e : events) {\n      if (e.x > prevX) {\n        final int width = e.x - prevX;\n        ans = (ans + width * getHeight(yPairs)) % kMod;\n        prevX = e.x;\n      }\n      if (e.type == 's') {\n        yPairs.add(new Pair<>(e.y1, e.y2));\n        Collections.sort(yPairs, Comparator.comparing(Pair::getKey));\n      } else { // type == 'e'\n        yPairs.remove(new Pair<>(e.y1, e.y2));\n      }\n    }\n\n    return (int) (ans % kMod);\n  }\n\n  private long getHeight(List<Pair<Integer, Integer>> yPairs) {\n    int height = 0;\n    int prevY = 0;\n\n    for (Pair<Integer, Integer> pair : yPairs) {\n      final int y1 = pair.getKey();\n      final int y2 = pair.getValue();\n      prevY = Math.max(prevY, y1);\n      if (y2 > prevY) {\n        height += y2 - prevY;\n        prevY = y2;\n      }\n    }\n\n    return height;\n  }\n}"
+    }
+  },
+  "900": {
+    "java": {
+      "iterator": ""
     }
   },
   "912": {
@@ -279,6 +309,11 @@
       "concurrency": "class TrafficLight {\n  private int road = 1;\n\n  public TrafficLight() {\n  }\n\n  public synchronized void carArrived(\n      int carId, \n      int roadId,\n      int direction, \n      Runnable turnGreen, \n      Runnable crossCar \n  ) {\n      if (roadId != road) {\n          turnGreen.run();\n          road = roadId;\n      }\n      crossCar.run();\n  }\n}"
     }
   },
+  "1286": {
+    "java": {
+      "iterator": ""
+    }
+  },
   "1467": {
     "java": {
       "probability-and-statistics": "enum BoxCase {\n    kEqualBalls, kEqualDistantBalls\n}\n\nclass Solution {\n    public double getProbability(int[] balls) {\n        final int n = Arrays.stream(balls).sum() / 2;\n        return cases(balls, 0, 0, 0, 0, 0, n, BoxCase.kEqualDistantBalls) /\n                cases(balls, 0, 0, 0, 0, 0, n, BoxCase.kEqualBalls);\n    }\n\n    private int[] fact = { 1, 1, 2, 6, 24, 120, 720 };\n\n    double cases(int[] balls, int i, int ballsCountA, int ballsCountB, int colorsCountA,\n            int colorsCountB, int n, BoxCase boxCase) {\n        if (ballsCountA > n || ballsCountB > n)\n            return 0;\n        if (i == balls.length)\n            return boxCase == BoxCase.kEqualBalls ? 1 : (colorsCountA == colorsCountB ? 1 : 0);\n\n        double ans = 0;\n\n        for (int ballsTakenA = 0; ballsTakenA <= balls[i]; ++ballsTakenA) {\n            final int ballsTakenB = balls[i] - ballsTakenA;\n            final int newcolorsCountA = colorsCountA + (ballsTakenA > 0 ? 1 : 0);\n            final int newcolorsCountB = colorsCountB + (ballsTakenB > 0 ? 1 : 0);\n            ans += cases(balls, i + 1, ballsCountA + ballsTakenA, ballsCountB + ballsTakenB,\n                    newcolorsCountA, newcolorsCountB, n, boxCase) /\n                    (fact[ballsTakenA] * fact[ballsTakenB]);\n        }\n\n        return ans;\n    }\n}"
@@ -302,6 +337,11 @@
   "1584": {
     "java": {
       "minimum-spanning-tree": "import java.util.*;\n\nclass Solution {\n    class Edge {\n        int u, v, cost;\n        Edge(int u, int v, int cost) {\n            this.u = u;\n            this.v = v;\n            this.cost = cost;\n        }\n    }\n\n    class UnionFind {\n        int[] parent, rank;\n\n        UnionFind(int n) {\n            parent = new int[n];\n            rank = new int[n];\n            for (int i = 0; i < n; i++) {\n                parent[i] = i;\n                rank[i] = 0;\n            }\n        }\n\n        int find(int x) {\n            if (parent[x] != x) {\n                parent[x] = find(parent[x]);\n            }\n            return parent[x];\n        }\n\n        boolean union(int x, int y) {\n            int rootX = find(x);\n            int rootY = find(y);\n            if (rootX != rootY) {\n                if (rank[rootX] > rank[rootY]) {\n                    parent[rootY] = rootX;\n                } else if (rank[rootX] < rank[rootY]) {\n                    parent[rootX] = rootY;\n                } else {\n                    parent[rootY] = rootX;\n                    rank[rootX]++;\n                }\n                return true;\n            }\n            return false;\n        }\n    }\n\n    public int minCostConnectPoints(int[][] points) {\n        int n = points.length;\n        List<Edge> edges = new ArrayList<>();\n\n        // Create all possible edges with their costs\n        for (int i = 0; i < n; i++) {\n            for (int j = i + 1; j < n; j++) {\n                int cost = Math.abs(points[i][0] - points[j][0]) + Math.abs(points[i][1] - points[j][1]);\n                edges.add(new Edge(i, j, cost));\n            }\n        }\n\n        // Sort edges by cost\n        edges.sort(Comparator.comparingInt(e -> e.cost));\n\n        // Kruskal's algorithm to find the MST\n        UnionFind uf = new UnionFind(n);\n        int minCost = 0, edgesUsed = 0;\n\n        for (Edge edge : edges) {\n            if (uf.union(edge.u, edge.v)) {\n                minCost += edge.cost;\n                edgesUsed++;\n                if (edgesUsed == n - 1) {\n                    break;\n                }\n            }\n        }\n\n        return minCost;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[][] points = { {0, 0}, {2, 2}, {3, 10}, {5, 2}, {7, 0} };\n        System.out.println(\"Minimum cost to connect all points: \" + solution.minCostConnectPoints(points));\n    }\n}\n"
+    }
+  },
+  "1586": {
+    "java": {
+      "iterator": ""
     }
   },
   "1698": {
