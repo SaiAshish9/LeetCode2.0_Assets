@@ -311,7 +311,7 @@
   },
   "1286": {
     "java": {
-      "iterator": ""
+      "iterator": "class CombinationIterator {\n    private List<String> combinations;\n    private int currentIndex;\n\n    public CombinationIterator(String characters, int combinationLength) {\n        combinations = new ArrayList<>();\n        generateCombinations(characters, combinationLength, 0, new StringBuilder());\n        currentIndex = 0;\n    }\n\n    private void generateCombinations(String characters, int length, int start, StringBuilder sb) {\n        if (sb.length() == length) {\n            combinations.add(sb.toString());\n            return;\n        }\n\n        for (int i = start; i < characters.length(); i++) {\n            sb.append(characters.charAt(i));\n            generateCombinations(characters, length, i + 1, sb);\n            sb.deleteCharAt(sb.length() - 1);\n        }\n    }\n\n    public String next() {\n        return combinations.get(currentIndex++);\n    }\n\n    public boolean hasNext() {\n        return currentIndex < combinations.size();\n    }\n}\n\n/**\n * Your CombinationIterator object will be instantiated and called as such:\n * CombinationIterator obj = new CombinationIterator(characters,\n * combinationLength);\n * String param_1 = obj.next();\n * boolean param_2 = obj.hasNext();\n */"
     }
   },
   "1467": {
