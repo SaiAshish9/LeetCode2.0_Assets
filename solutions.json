@@ -83,7 +83,7 @@
   },
   "341": {
     "java": {
-      "iterator": ""
+      "iterator": "public class NestedIterator implements Iterator<Integer> {\n    private Stack<NestedInteger> stack = new Stack<>();\n\n    public NestedIterator(List<NestedInteger> nestedList) {\n        addInteger(nestedList);\n    }\n\n    @Override\n    public Integer next() {\n        return stack.pop().getInteger();\n    }\n\n    @Override\n    public boolean hasNext() {\n        while (!stack.isEmpty() && !stack.peek().isInteger()) {\n            final NestedInteger ni = stack.pop();\n            addInteger(ni.getList());\n        }\n        return !stack.isEmpty();\n    }\n\n    private void addInteger(final List<NestedInteger> nestedList) {\n        for (int i = nestedList.size() - 1; i >= 0; --i)\n            stack.push(nestedList.get(i));\n    }\n}\n"
     }
   },
   "347": {
