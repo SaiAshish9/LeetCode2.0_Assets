@@ -196,7 +196,7 @@
   },
   "900": {
     "java": {
-      "iterator": ""
+      "iterator": "class RLEIterator {\n    private int[] encoding;\n    private int index;\n\n    public RLEIterator(int[] encoding) {\n        this.encoding = encoding;\n        this.index = 0;\n    }\n\n    public int next(int n) {\n        while (index < encoding.length) {\n            if (n <= encoding[index]) {\n                encoding[index] -= n;\n                return encoding[index + 1];\n            } else {\n                n -= encoding[index];\n                index += 2;\n            }\n        }\n        return -1; \n    }\n}\n\n/**\n * Your RLEIterator object will be instantiated and called as such:\n * RLEIterator obj = new RLEIterator(encoding);\n * int param_1 = obj.next(n);\n */"
     }
   },
   "912": {
