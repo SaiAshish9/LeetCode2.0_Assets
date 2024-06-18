@@ -166,7 +166,7 @@
   },
   "493": {
     "java": {
-      "merge-sort": ""
+      "merge-sort": "class Solution {\n    public int reversePairs(int[] nums) {\n        return mergeSortAndCount(nums, 0, nums.length - 1);\n    }\n    \n    private int mergeSortAndCount(int[] nums, int left, int right) {\n        if (left >= right) return 0;\n        \n        int mid = left + (right - left) / 2;\n        int count = mergeSortAndCount(nums, left, mid) + mergeSortAndCount(nums, mid + 1, right);\n        count += mergeAndCount(nums, left, mid, right);\n        \n        return count;\n    }\n    \n    private int mergeAndCount(int[] nums, int left, int mid, int right) {\n        int count = 0;\n        int[] merged = new int[right - left + 1];\n        int i = left, j = mid + 1, k = 0;\n        \n        while (i <= mid && j <= right) {\n            if ((long) nums[i] > 2 * (long) nums[j]) {\n                count += (mid - i + 1);\n                j++;\n            } else {\n                i++;\n            }\n        }\n        \n        i = left; j = mid + 1;\n        while (i <= mid && j <= right) {\n            if (nums[i] <= nums[j]) {\n                merged[k++] = nums[i++];\n            } else {\n                merged[k++] = nums[j++];\n            }\n        }\n        \n        while (i <= mid) {\n            merged[k++] = nums[i++];\n        }\n        \n        while (j <= right) {\n            merged[k++] = nums[j++];\n        }\n        \n        System.arraycopy(merged, 0, nums, left, merged.length);\n        \n        return count;\n    }\n}\n"
     }
   },
   "497": {
