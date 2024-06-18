@@ -449,7 +449,7 @@
   },
   "2426": {
     "java": {
-      "merge-sort": ""
+      "merge-sort": "import java.util.*;\n\nclass Solution {\n    public long numberOfPairs(int[] nums1, int[] nums2, int diff) {\n        int n = nums1.length;\n        int[] A = new int[n];\n        \n        for (int i = 0; i < n; ++i) {\n            A[i] = nums1[i] - nums2[i];\n        }\n        \n        long[] ans = {0}; \n        mergeSort(A, 0, n - 1, diff, ans);\n        \n        return ans[0];\n    }\n\n    private void mergeSort(int[] A, int l, int r, int diff, long[] ans) {\n        if (l >= r) {\n            return;\n        }\n        \n        int m = (l + r) / 2;\n        mergeSort(A, l, m, diff, ans);\n        mergeSort(A, m + 1, r, diff, ans);\n        merge(A, l, m, r, diff, ans);\n    }\n\n    private void merge(int[] A, int l, int m, int r, int diff, long[] ans) {\n        int lo = m + 1;\n        int hi = m + 1; \n        for (int i = l; i <= m; ++i) {\n            while (hi <= r && A[i] > A[hi] + diff) {\n                ++hi;\n            }\n            ans[0] += r - hi + 1;\n        }\n        \n        int[] sorted = new int[r - l + 1];\n        int k = 0; // Index for sorted array\n        int i = l; // Index for left subarray\n        int j = m + 1; // Index for right subarray\n        \n        while (i <= m && j <= r) {\n            if (A[i] <= A[j]) {\n                sorted[k++] = A[i++];\n            } else {\n                sorted[k++] = A[j++];\n            }\n        }\n        \n        while (i <= m) {\n            sorted[k++] = A[i++];\n        }\n        \n        while (j <= r) {\n            sorted[k++] = A[j++];\n        }\n        \n        System.arraycopy(sorted, 0, A, l, sorted.length);\n    }\n}\n"
     }
   },
   "2519": {
