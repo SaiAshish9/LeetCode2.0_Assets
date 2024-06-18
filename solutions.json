@@ -372,7 +372,7 @@
   },
   "1649": {
     "java": {
-      "merge-sort": ""
+      "merge-sort": "class Solution {\n    private static final int MOD = 1000000007;\n\n    public int createSortedArray(int[] instructions) {\n        FenwickTree tree = new FenwickTree(100001);\n        long cost = 0;\n\n        for (int i = 0; i < instructions.length; i++) {\n            int num = instructions[i];\n            int countSmaller = tree.query(num - 1); // Number of elements less than num\n            int countGreater = i - tree.query(num); // Number of elements greater than num\n            cost = (cost + Math.min(countSmaller, countGreater)) % MOD;\n            tree.update(num, 1);\n        }\n\n        return (int) cost;\n    }\n}\n\nclass FenwickTree {\n    private int[] tree;\n\n    public FenwickTree(int size) {\n        this.tree = new int[size + 1];\n    }\n\n    public void update(int index, int delta) {\n        while (index < tree.length) {\n            tree[index] += delta;\n            index += index & -index;\n        }\n    }\n\n    public int query(int index) {\n        int sum = 0;\n        while (index > 0) {\n            sum += tree[index];\n            index -= index & -index;\n        }\n        return sum;\n    }\n}\n"
     }
   },
   "1698": {
