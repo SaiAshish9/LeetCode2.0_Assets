@@ -251,7 +251,7 @@
   },
   "1226": {
     "java": {
-      "concurrency": ""
+      "concurrency": "import java.util.concurrent.TimeUnit;\nimport java.util.concurrent.locks.Lock;\nimport java.util.concurrent.locks.ReentrantLock;\n\npublic class DiningPhilosophers {\n\n    private Lock leftForkLock = new ReentrantLock();\n    private Lock rightForkLock = new ReentrantLock();\n\n    public DiningPhilosophers() {\n\n    }\n\n    // call the run() method of any runnable to execute its code\n    public void wantsToEat(int philosopher,\n            Runnable pickLeftFork,\n            Runnable pickRightFork,\n            Runnable eat,\n            Runnable putLeftFork,\n            Runnable putRightFork) throws InterruptedException {\n\n        while (true) {\n            if (leftForkLock.tryLock(100, TimeUnit.MILLISECONDS)) {\n                try {\n                    pickLeftFork.run();\n                    if (rightForkLock.tryLock(100, TimeUnit.MILLISECONDS)) {\n                        try {\n                            pickRightFork.run();\n                            eat.run();\n                            putRightFork.run();\n                            return;\n                        } finally {\n                            rightForkLock.unlock();\n                        }\n                    }\n\n                } finally {\n                    putLeftFork.run();\n                    leftForkLock.unlock();\n                }\n            }\n        }\n    }\n}"
     }
   },
   "1227": {
