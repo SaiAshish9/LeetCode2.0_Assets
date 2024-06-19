@@ -9,6 +9,36 @@
       "doubly-linked-list": "class LRUCache {\n    class Node {\n        int key;\n        int value;\n        Node prev;\n        Node next;\n        \n        public Node(int key, int value) {\n            this.key = key;\n            this.value = value;\n        }\n    }\n    \n    private int capacity;\n    private Map<Integer, Node> map;\n    private Node head;\n    private Node tail;\n    \n    public LRUCache(int capacity) {\n        this.capacity = capacity;\n        map = new HashMap<>();\n        head = new Node(-1, -1);\n        tail = new Node(-1, -1);\n        head.next = tail;\n        tail.prev = head;\n    }\n    \n    public int get(int key) {\n        if (!map.containsKey(key)) {\n            return -1;\n        }\n        \n        Node node = map.get(key);\n        moveToHead(node);\n        \n        return node.value;\n    }\n    \n    public void put(int key, int value) {\n        if (map.containsKey(key)) {\n            Node node = map.get(key);\n            node.value = value;\n            moveToHead(node);\n        } else {\n            Node newNode = new Node(key, value);\n            map.put(key, newNode);\n            addToHead(newNode);\n            \n            if (map.size() > capacity) {\n                Node removed = removeTail();\n                map.remove(removed.key);\n            }\n        }\n    }\n    \n    private void moveToHead(Node node) {\n        removeNode(node);\n        addToHead(node);\n    }\n    \n    private void removeNode(Node node) {\n        node.prev.next = node.next;\n        node.next.prev = node.prev;\n    }\n    \n    private void addToHead(Node node) {\n        node.next = head.next;\n        node.next.prev = node;\n        head.next = node;\n        node.prev = head;\n    }\n    \n    private Node removeTail() {\n        Node nodeToRemove = tail.prev;\n        removeNode(nodeToRemove);\n        return nodeToRemove;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        LRUCache cache = new LRUCache(2); // Capacity is 2\n        cache.put(1, 1);\n        cache.put(2, 2);\n        System.out.println(cache.get(1)); // Output: 1\n        cache.put(3, 3);\n        System.out.println(cache.get(2)); // Output: -1 (not found)\n        cache.put(4, 4);\n        System.out.println(cache.get(1)); // Output: -1 (not found)\n        System.out.println(cache.get(3)); // Output: 3\n        System.out.println(cache.get(4)); // Output: 4\n    }\n}\n"
     }
   },
+  "380": {
+    "java": {
+      "randomized": ""
+    }
+  },
+  "381": {
+    "java": {
+      "randomized": ""
+    }
+  },
+  "384": {
+    "java": {
+      "randomized": ""
+    }
+  },
+  "528": {
+    "java": {
+      "randomized": ""
+    }
+  },
+  "710": {
+    "java": {
+      "randomized": ""
+    }
+  },
+  "1515": {
+    "java": {
+      "randomized": ""
+    }
+  },
   "148": {
     "java": {
       "merge-sort": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode sortList(ListNode head) {\n        if (head == null || head.next == null) {\n            return head;\n        }\n\n        ListNode mid = getMid(head);\n        ListNode left = head;\n        ListNode right = mid.next;\n        mid.next = null; \n        left = sortList(left);\n        right = sortList(right);\n\n        return merge(left, right);\n    }\n\n    private ListNode getMid(ListNode head) {\n        ListNode slow = head;\n        ListNode fast = head.next;\n        while (fast != null && fast.next != null) {\n            slow = slow.next;\n            fast = fast.next.next;\n        }\n\n        return slow;\n    }\n\n    private ListNode merge(ListNode l1, ListNode l2) {\n        ListNode dummy = new ListNode(0);\n        ListNode current = dummy;\n\n        while (l1 != null && l2 != null) {\n            if (l1.val < l2.val) {\n                current.next = l1;\n                l1 = l1.next;\n            } else {\n                current.next = l2;\n                l2 = l2.next;\n            }\n            current = current.next;\n        }\n\n        if (l1 != null) {\n            current.next = l1;\n        } else {\n            current.next = l2;\n        }\n\n        return dummy.next;\n    }\n}\n"
@@ -114,7 +144,8 @@
   },
   "382": {
     "java": {
-      "reservoir-sampling": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nimport java.util.Random;\n\npublic class Solution {\n    private ListNode head;\n    private Random rand;\n\n    public Solution(ListNode head) {\n        this.head = head;\n        this.rand = new Random();\n    }\n\n    /** Returns a random node's value. */\n    public int getRandom() {\n        ListNode current = head;\n        int reservoir = -1; \n        int count = 0;\n\n        while (current != null) {\n            count++;\n            // With probability 1/count, select the current node's value\n            if (rand.nextInt(count) == 0) {\n                reservoir = current.val;\n            }\n            current = current.next;\n        }\n\n        return reservoir;\n    }\n}\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution obj = new Solution(head);\n * int param_1 = obj.getRandom();\n */"
+      "reservoir-sampling": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nimport java.util.Random;\n\npublic class Solution {\n    private ListNode head;\n    private Random rand;\n\n    public Solution(ListNode head) {\n        this.head = head;\n        this.rand = new Random();\n    }\n\n    /** Returns a random node's value. */\n    public int getRandom() {\n        ListNode current = head;\n        int reservoir = -1; \n        int count = 0;\n\n        while (current != null) {\n            count++;\n            // With probability 1/count, select the current node's value\n            if (rand.nextInt(count) == 0) {\n                reservoir = current.val;\n            }\n            current = current.next;\n        }\n\n        return reservoir;\n    }\n}\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution obj = new Solution(head);\n * int param_1 = obj.getRandom();\n */",
+      "randomized": ""
     }
   },
   "391": {
@@ -124,7 +155,8 @@
   },
   "398": {
     "java": {
-      "reservoir-sampling": "public class Solution {\n    private int[] nums;\n    private Random rand;\n\n    public Solution(int[] nums) {\n        this.nums = nums;\n        this.rand = new Random();\n    }\n\n    public int pick(int target) {\n        int count = 0;\n        int result = -1; // Variable to store the chosen index\n\n        for (int i = 0; i < nums.length; i++) {\n            if (nums[i] == target) {\n                count++;\n                // With probability 1/count, select the current index\n                if (rand.nextInt(count) == 0) {\n                    result = i;\n                }\n            }\n        }\n\n        return result;\n    }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution obj = new Solution(nums);\n * int param_1 = obj.pick(target);\n */"
+      "reservoir-sampling": "public class Solution {\n    private int[] nums;\n    private Random rand;\n\n    public Solution(int[] nums) {\n        this.nums = nums;\n        this.rand = new Random();\n    }\n\n    public int pick(int target) {\n        int count = 0;\n        int result = -1; // Variable to store the chosen index\n\n        for (int i = 0; i < nums.length; i++) {\n            if (nums[i] == target) {\n                count++;\n                // With probability 1/count, select the current index\n                if (rand.nextInt(count) == 0) {\n                    result = i;\n                }\n            }\n        }\n\n        return result;\n    }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution obj = new Solution(nums);\n * int param_1 = obj.pick(target);\n */",
+      "randomized": ""
     }
   },
   "426": {
@@ -156,12 +188,14 @@
   "470": {
     "java": {
       "rejection-sampling": "/**\n * The rand7() API is already defined in the parent class SolBase.\n * public int rand7();\n * @return a random integer in the range 1 to 7\n */\nclass Solution extends SolBase {\n    public int rand10() {\n        while (true) {\n            int num = (rand7() - 1) * 7 + rand7(); // Generate a number from 1 to 49\n            if (num <= 40) { // Accept only if the number is in the range 1 to 40\n                return 1 + (num - 1) % 10; // Map to the range 1 to 10\n            }\n        }\n    }\n}",
-      "math": ""
+      "math": "",
+      "randomized": ""
     }
   },
   "478": {
     "java": {
-      "rejection-sampling": "import java.util.Random;\n\nclass Solution {\n    private double radius;\n    private double x_center;\n    private double y_center;\n    private Random random;\n\n    public Solution(double radius, double x_center, double y_center) {\n        this.radius = radius;\n        this.x_center = x_center;\n        this.y_center = y_center;\n        this.random = new Random();\n    }\n\n    public double[] randPoint() {\n        double x = x_center - radius + 2 * radius * random.nextDouble();\n        double y = y_center - radius + 2 * radius * random.nextDouble();\n\n        while (!isInCircle(x, y)) {\n            x = x_center - radius + 2 * radius * random.nextDouble();\n            y = y_center - radius + 2 * radius * random.nextDouble();\n        }\n\n        return new double[]{x, y};\n    }\n\n    private boolean isInCircle(double x, double y) {\n        return Math.pow(x - x_center, 2) + Math.pow(y - y_center, 2) <= Math.pow(radius, 2);\n    }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution obj = new Solution(radius, x_center, y_center);\n * double[] param_1 = obj.randPoint();\n */"
+      "rejection-sampling": "import java.util.Random;\n\nclass Solution {\n    private double radius;\n    private double x_center;\n    private double y_center;\n    private Random random;\n\n    public Solution(double radius, double x_center, double y_center) {\n        this.radius = radius;\n        this.x_center = x_center;\n        this.y_center = y_center;\n        this.random = new Random();\n    }\n\n    public double[] randPoint() {\n        double x = x_center - radius + 2 * radius * random.nextDouble();\n        double y = y_center - radius + 2 * radius * random.nextDouble();\n\n        while (!isInCircle(x, y)) {\n            x = x_center - radius + 2 * radius * random.nextDouble();\n            y = y_center - radius + 2 * radius * random.nextDouble();\n        }\n\n        return new double[]{x, y};\n    }\n\n    private boolean isInCircle(double x, double y) {\n        return Math.pow(x - x_center, 2) + Math.pow(y - y_center, 2) <= Math.pow(radius, 2);\n    }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution obj = new Solution(radius, x_center, y_center);\n * double[] param_1 = obj.randPoint();\n */",
+      "randomized": ""
     }
   },
   "493": {
@@ -171,12 +205,14 @@
   },
   "497": {
     "java": {
-      "reservoir-sampling": "import java.util.Random;\nimport java.util.TreeMap;\n\npublic class Solution {\n    private int[][] rects;\n    private Random rand;\n    private TreeMap<Integer, Integer> areaMap;\n    private int totalPoints;\n\n    public Solution(int[][] rects) {\n        this.rects = rects;\n        this.rand = new Random();\n        this.areaMap = new TreeMap<>();\n        this.totalPoints = 0;\n\n        // Calculate the cumulative number of points for each rectangle\n        for (int i = 0; i < rects.length; i++) {\n            int[] rect = rects[i];\n            int area = (rect[2] - rect[0] + 1) * (rect[3] - rect[1] + 1);\n            totalPoints += area;\n            areaMap.put(totalPoints, i);\n        }\n    }\n\n    public int[] pick() {\n        int randomPoint = rand.nextInt(totalPoints) + 1;\n        int rectIndex = areaMap.ceilingEntry(randomPoint).getValue();\n        int[] rect = rects[rectIndex];\n\n        int x = rect[0] + rand.nextInt(rect[2] - rect[0] + 1);\n        int y = rect[1] + rand.nextInt(rect[3] - rect[1] + 1);\n\n        return new int[] { x, y };\n    }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution obj = new Solution(rects);\n * int[] param_1 = obj.pick();\n */"
+      "reservoir-sampling": "import java.util.Random;\nimport java.util.TreeMap;\n\npublic class Solution {\n    private int[][] rects;\n    private Random rand;\n    private TreeMap<Integer, Integer> areaMap;\n    private int totalPoints;\n\n    public Solution(int[][] rects) {\n        this.rects = rects;\n        this.rand = new Random();\n        this.areaMap = new TreeMap<>();\n        this.totalPoints = 0;\n\n        // Calculate the cumulative number of points for each rectangle\n        for (int i = 0; i < rects.length; i++) {\n            int[] rect = rects[i];\n            int area = (rect[2] - rect[0] + 1) * (rect[3] - rect[1] + 1);\n            totalPoints += area;\n            areaMap.put(totalPoints, i);\n        }\n    }\n\n    public int[] pick() {\n        int randomPoint = rand.nextInt(totalPoints) + 1;\n        int rectIndex = areaMap.ceilingEntry(randomPoint).getValue();\n        int[] rect = rects[rectIndex];\n\n        int x = rect[0] + rand.nextInt(rect[2] - rect[0] + 1);\n        int y = rect[1] + rand.nextInt(rect[3] - rect[1] + 1);\n\n        return new int[] { x, y };\n    }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution obj = new Solution(rects);\n * int[] param_1 = obj.pick();\n */",
+      "randomized": ""
     }
   },
   "519": {
     "java": {
-      "reservoir-sampling": "import java.util.HashMap;\nimport java.util.Map;\nimport java.util.Random;\n\npublic class Solution {\n    private int m, n, totalCells;\n    private Map<Integer, Integer> map;\n    private Random rand;\n\n    public Solution(int m, int n) {\n        this.m = m;\n        this.n = n;\n        this.totalCells = m * n;\n        this.map = new HashMap<>();\n        this.rand = new Random();\n    }\n\n    public int[] flip() {\n        int randomCell = rand.nextInt(totalCells);\n        totalCells--;\n\n        // Use map to get the actual position or the random position\n        int position = map.getOrDefault(randomCell, randomCell);\n\n        // Map the selected position to the last available cell position\n        map.put(randomCell, map.getOrDefault(totalCells, totalCells));\n\n        return new int[]{position / n, position % n};\n    }\n\n    public void reset() {\n        map.clear();\n        totalCells = m * n;\n    }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution obj = new Solution(m, n);\n * int[] param_1 = obj.flip();\n * obj.reset();\n */"
+      "reservoir-sampling": "import java.util.HashMap;\nimport java.util.Map;\nimport java.util.Random;\n\npublic class Solution {\n    private int m, n, totalCells;\n    private Map<Integer, Integer> map;\n    private Random rand;\n\n    public Solution(int m, int n) {\n        this.m = m;\n        this.n = n;\n        this.totalCells = m * n;\n        this.map = new HashMap<>();\n        this.rand = new Random();\n    }\n\n    public int[] flip() {\n        int randomCell = rand.nextInt(totalCells);\n        totalCells--;\n\n        // Use map to get the actual position or the random position\n        int position = map.getOrDefault(randomCell, randomCell);\n\n        // Map the selected position to the last available cell position\n        map.put(randomCell, map.getOrDefault(totalCells, totalCells));\n\n        return new int[]{position / n, position % n};\n    }\n\n    public void reset() {\n        map.clear();\n        totalCells = m * n;\n    }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution obj = new Solution(m, n);\n * int[] param_1 = obj.flip();\n * obj.reset();\n */",
+      "randomized": ""
     }
   },
   "561": {
