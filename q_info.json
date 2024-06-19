@@ -1299,7 +1299,13 @@
   "insert_delete_getrandom_o(1)": {
     "qno": "380",
     "title": "Insert Delete GetRandom O(1)",
-    "tags": [],
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Math",
+      "Design",
+      "Randomized"
+    ],
     "default": "Randomized",
     "difficulty": "Medium",
     "language": "Java",
@@ -1308,7 +1314,13 @@
   "insert_delete_getrandom_o(1)_-_duplicates_allowed": {
     "qno": "381",
     "title": "Insert Delete GetRandom O(1) - Duplicates allowed",
-    "tags": [],
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Math",
+      "Design",
+      "Randomized"
+    ],
     "default": "Randomized",
     "difficulty": "Hard",
     "language": "Java",
@@ -1317,7 +1329,11 @@
   "shuffle_an_array": {
     "qno": "384",
     "title": "Shuffle an Array",
-    "tags": [],
+    "tags": [
+      "Array",
+      "Math",
+      "Randomized"
+    ],
     "default": "Randomized",
     "difficulty": "Medium",
     "language": "Java",
@@ -1326,7 +1342,14 @@
   "random_pick_with_blacklist": {
     "qno": "710",
     "title": "Random Pick with Blacklist",
-    "tags": [],
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Math",
+      "Binary Search",
+      "Sorting",
+      "Randomized"
+    ],
     "default": "Randomized",
     "difficulty": "Hard",
     "language": "Java",
@@ -1335,7 +1358,13 @@
   "random_pick_with_weight": {
     "qno": "528",
     "title": "Random Pick with Weight",
-    "tags": [],
+    "tags": [
+      "Array",
+      "Math",
+      "Binary Search",
+      "Prefix Sum",
+      "Randomized"
+    ],
     "default": "Randomized",
     "difficulty": "Medium",
     "language": "Java",
@@ -1344,7 +1373,11 @@
   "best_position_for_a_service_centre": {
     "qno": "1515",
     "title": "Best Position for a Service Centre",
-    "tags": [],
+    "tags": [
+      "Math",
+      "Geometry",
+      "Randomized"
+    ],
     "default": "Randomized",
     "difficulty": "Hard",
     "language": "Java",
