@@ -9,36 +9,6 @@
       "doubly-linked-list": "class LRUCache {\n    class Node {\n        int key;\n        int value;\n        Node prev;\n        Node next;\n        \n        public Node(int key, int value) {\n            this.key = key;\n            this.value = value;\n        }\n    }\n    \n    private int capacity;\n    private Map<Integer, Node> map;\n    private Node head;\n    private Node tail;\n    \n    public LRUCache(int capacity) {\n        this.capacity = capacity;\n        map = new HashMap<>();\n        head = new Node(-1, -1);\n        tail = new Node(-1, -1);\n        head.next = tail;\n        tail.prev = head;\n    }\n    \n    public int get(int key) {\n        if (!map.containsKey(key)) {\n            return -1;\n        }\n        \n        Node node = map.get(key);\n        moveToHead(node);\n        \n        return node.value;\n    }\n    \n    public void put(int key, int value) {\n        if (map.containsKey(key)) {\n            Node node = map.get(key);\n            node.value = value;\n            moveToHead(node);\n        } else {\n            Node newNode = new Node(key, value);\n            map.put(key, newNode);\n            addToHead(newNode);\n            \n            if (map.size() > capacity) {\n                Node removed = removeTail();\n                map.remove(removed.key);\n            }\n        }\n    }\n    \n    private void moveToHead(Node node) {\n        removeNode(node);\n        addToHead(node);\n    }\n    \n    private void removeNode(Node node) {\n        node.prev.next = node.next;\n        node.next.prev = node.prev;\n    }\n    \n    private void addToHead(Node node) {\n        node.next = head.next;\n        node.next.prev = node;\n        head.next = node;\n        node.prev = head;\n    }\n    \n    private Node removeTail() {\n        Node nodeToRemove = tail.prev;\n        removeNode(nodeToRemove);\n        return nodeToRemove;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        LRUCache cache = new LRUCache(2); // Capacity is 2\n        cache.put(1, 1);\n        cache.put(2, 2);\n        System.out.println(cache.get(1)); // Output: 1\n        cache.put(3, 3);\n        System.out.println(cache.get(2)); // Output: -1 (not found)\n        cache.put(4, 4);\n        System.out.println(cache.get(1)); // Output: -1 (not found)\n        System.out.println(cache.get(3)); // Output: 3\n        System.out.println(cache.get(4)); // Output: 4\n    }\n}\n"
     }
   },
-  "380": {
-    "java": {
-      "randomized": ""
-    }
-  },
-  "381": {
-    "java": {
-      "randomized": ""
-    }
-  },
-  "384": {
-    "java": {
-      "randomized": ""
-    }
-  },
-  "528": {
-    "java": {
-      "randomized": ""
-    }
-  },
-  "710": {
-    "java": {
-      "randomized": ""
-    }
-  },
-  "1515": {
-    "java": {
-      "randomized": ""
-    }
-  },
   "148": {
     "java": {
       "merge-sort": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode sortList(ListNode head) {\n        if (head == null || head.next == null) {\n            return head;\n        }\n\n        ListNode mid = getMid(head);\n        ListNode left = head;\n        ListNode right = mid.next;\n        mid.next = null; \n        left = sortList(left);\n        right = sortList(right);\n\n        return merge(left, right);\n    }\n\n    private ListNode getMid(ListNode head) {\n        ListNode slow = head;\n        ListNode fast = head.next;\n        while (fast != null && fast.next != null) {\n            slow = slow.next;\n            fast = fast.next.next;\n        }\n\n        return slow;\n    }\n\n    private ListNode merge(ListNode l1, ListNode l2) {\n        ListNode dummy = new ListNode(0);\n        ListNode current = dummy;\n\n        while (l1 != null && l2 != null) {\n            if (l1.val < l2.val) {\n                current.next = l1;\n                l1 = l1.next;\n            } else {\n                current.next = l2;\n                l2 = l2.next;\n            }\n            current = current.next;\n        }\n\n        if (l1 != null) {\n            current.next = l1;\n        } else {\n            current.next = l2;\n        }\n\n        return dummy.next;\n    }\n}\n"
@@ -142,9 +112,24 @@
       "quickselect": "import java.util.*;\n\npublic class Solution {\n    public int[] topKFrequent(int[] nums, int k) {\n        Map<Integer, Integer> frequencyMap = new HashMap<>();\n        for (int num : nums) {\n            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);\n        }\n        \n        List<Integer> uniqueNums = new ArrayList<>(frequencyMap.keySet());\n        int[] result = new int[k];\n        int left = 0, right = uniqueNums.size() - 1;\n        \n        while (left <= right) {\n            int pivotIndex = partition(uniqueNums, frequencyMap, left, right);\n            if (pivotIndex == k - 1) {\n                for (int i = 0; i < k; i++) {\n                    result[i] = uniqueNums.get(i);\n                }\n                break;\n            } else if (pivotIndex < k - 1) {\n                left = pivotIndex + 1;\n            } else {\n                right = pivotIndex - 1;\n            }\n        }\n        \n        return result;\n    }\n    \n    private int partition(List<Integer> nums, Map<Integer, Integer> frequencyMap, int left, int right) {\n        int pivotFreq = frequencyMap.get(nums.get(right));\n        int i = left;\n        for (int j = left; j < right; j++) {\n            if (frequencyMap.get(nums.get(j)) >= pivotFreq) {\n                Collections.swap(nums, i, j);\n                i++;\n            }\n        }\n        Collections.swap(nums, i, right);\n        return i;\n    }\n}\n"
     }
   },
+  "380": {
+    "java": {
+      "randomized": "import java.util.*;\n\nclass RandomizedSet {\n    private List<Integer> nums;\n    private Map<Integer, Integer> pos;\n    private Random rand;\n\n    public RandomizedSet() {\n        nums = new ArrayList<>();\n        pos = new HashMap<>();\n        rand = new Random();\n    }\n\n    public boolean insert(int val) {\n        if (pos.containsKey(val)) {\n            return false;\n        }\n        pos.put(val, nums.size());\n        nums.add(val);\n        return true;\n    }\n\n    public boolean remove(int val) {\n        if (!pos.containsKey(val)) {\n            return false;\n        }\n        int idx = pos.get(val);\n        int lastElement = nums.get(nums.size() - 1);\n        nums.set(idx, lastElement);\n        pos.put(lastElement, idx);\n        nums.remove(nums.size() - 1);\n        pos.remove(val);\n        return true;\n    }\n\n    public int getRandom() {\n        return nums.get(rand.nextInt(nums.size()));\n    }\n}\n/**\n * Your RandomizedSet object will be instantiated and called as such:\n * RandomizedSet obj = new RandomizedSet();\n * boolean param_1 = obj.insert(val);\n * boolean param_2 = obj.remove(val);\n * int param_3 = obj.getRandom();\n */"
+    }
+  },
+  "381": {
+    "java": {
+      "randomized": ""
+    }
+  },
   "382": {
     "java": {
       "reservoir-sampling": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nimport java.util.Random;\n\npublic class Solution {\n    private ListNode head;\n    private Random rand;\n\n    public Solution(ListNode head) {\n        this.head = head;\n        this.rand = new Random();\n    }\n\n    /** Returns a random node's value. */\n    public int getRandom() {\n        ListNode current = head;\n        int reservoir = -1; \n        int count = 0;\n\n        while (current != null) {\n            count++;\n            // With probability 1/count, select the current node's value\n            if (rand.nextInt(count) == 0) {\n                reservoir = current.val;\n            }\n            current = current.next;\n        }\n\n        return reservoir;\n    }\n}\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution obj = new Solution(head);\n * int param_1 = obj.getRandom();\n */",
+      "randomized": ""
+    }
+  },
+  "384": {
+    "java": {
       "randomized": ""
     }
   },
@@ -215,6 +200,11 @@
       "randomized": ""
     }
   },
+  "528": {
+    "java": {
+      "randomized": ""
+    }
+  },
   "561": {
     "java": {
       "counting-sort": "class Solution {\n    public int arrayPairSum(int[] nums) {\n        int maxNum = 10000;\n        int[] count = new int[2 * maxNum + 1];\n\n        for (int num : nums) {\n            count[num + maxNum]++;\n        }\n\n        int sum = 0;\n        boolean add = true;\n        for (int i = 0; i < count.length; i++) {\n            while (count[i] > 0) {\n                if (add) {\n                    sum += i - maxNum;\n                }\n                add = !add;\n                count[i]--;\n            }\n        }\n\n        return sum;\n    }\n}\n"
@@ -228,6 +218,11 @@
   "692": {
     "java": {
       "bucket-sort": "import java.util.*;\n\nclass Solution {\n    public List<String> topKFrequent(String[] words, int k) {\n        Map<String, Integer> frequencyMap = new HashMap<>();\n        for (String word : words) {\n            frequencyMap.put(word, frequencyMap.getOrDefault(word, 0) + 1);\n        }\n\n        List<String>[] buckets = new List[words.length + 1];\n        for (String word : frequencyMap.keySet()) {\n            int frequency = frequencyMap.get(word);\n            if (buckets[frequency] == null) {\n                buckets[frequency] = new ArrayList<>();\n            }\n            buckets[frequency].add(word);\n        }\n\n        List<String> result = new ArrayList<>();\n        for (int i = buckets.length - 1; i >= 0 && result.size() < k; i--) {\n            if (buckets[i] != null) {\n                Collections.sort(buckets[i]);\n                result.addAll(buckets[i]);\n            }\n        }\n\n        return result.subList(0, k);\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        System.out.println(solution.topKFrequent(new String[]{\"i\", \"love\", \"leetcode\", \"i\", \"love\", \"coding\"}, 2)); // Output: [\"i\", \"love\"]\n    }\n}\n"
+    }
+  },
+  "710": {
+    "java": {
+      "randomized": ""
     }
   },
   "716": {
@@ -389,6 +384,11 @@
   "1489": {
     "java": {
       "strongly-connected-component": "import java.util.*;\n\nclass UnionFind {\n    private int[] id;\n    private int[] rank;\n\n    public UnionFind(int n) {\n        id = new int[n];\n        rank = new int[n];\n        for (int i = 0; i < n; ++i)\n            id[i] = i;\n    }\n\n    public void unionByRank(int u, int v) {\n        int i = find(u);\n        int j = find(v);\n        if (i == j)\n            return;\n        if (rank[i] < rank[j]) {\n            id[i] = j;\n        } else if (rank[i] > rank[j]) {\n            id[j] = i;\n        } else {\n            id[i] = j;\n            ++rank[j];\n        }\n    }\n\n    public int find(int u) {\n        return id[u] == u ? u : (id[u] = find(id[u]));\n    }\n}\n\nclass Solution {\n    public List<List<Integer>> findCriticalAndPseudoCriticalEdges(int n, int[][] edges) {\n        List<Integer> criticalEdges = new ArrayList<>();\n        List<Integer> pseudoCriticalEdges = new ArrayList<>();\n\n        for (int i = 0; i < edges.length; ++i)\n            edges[i] = new int[] {edges[i][0], edges[i][1], edges[i][2], i};\n\n        Arrays.sort(edges, (a, b) -> a[2] - b[2]);\n\n        final int mstWeight = getMSTWeight(n, edges, new int[] {}, -1);\n\n        for (int[] edge : edges) {\n            final int index = edge[3];\n            // Deleting the `edge` increases the MST's weight or makes the MST invalid.\n            if (getMSTWeight(n, edges, new int[] {}, index) > mstWeight)\n                criticalEdges.add(index);\n            // If an edge can be in any MST, we can always add `edge` to the edge set.\n            else if (getMSTWeight(n, edges, edge, -1) == mstWeight)\n                pseudoCriticalEdges.add(index);\n        }\n\n        return new ArrayList<>(Arrays.asList(criticalEdges, pseudoCriticalEdges));\n    }\n\n    private int getMSTWeight(int n, int[][] edges, int[] firstEdge, int deletedEdgeIndex) {\n        int mstWeight = 0;\n        UnionFind uf = new UnionFind(n);\n\n        if (firstEdge.length == 4) {\n            uf.unionByRank(firstEdge[0], firstEdge[1]);\n            mstWeight += firstEdge[2];\n        }\n\n        for (int[] edge : edges) {\n            final int u = edge[0];\n            final int v = edge[1];\n            final int weight = edge[2];\n            final int index = edge[3];\n            if (index == deletedEdgeIndex)\n                continue;\n            if (uf.find(u) == uf.find(v))\n                continue;\n            uf.unionByRank(u, v);\n            mstWeight += weight;\n        }\n\n        final int root = uf.find(0);\n        for (int i = 0; i < n; ++i)\n            if (uf.find(i) != root)\n                return Integer.MAX_VALUE;\n\n        return mstWeight;\n    }\n\n    public static void main(String[] args) {\n        Solution sol = new Solution();\n        int n = 14;\n        int[][] edges = {\n            {0, 1, 13}, {0, 2, 6}, {2, 3, 13}, {3, 4, 4}, {0, 5, 11}, {4, 6, 14}, {4, 7, 8}, \n            {2, 8, 6}, {4, 9, 6}, {7, 10, 4}, {5, 11, 3}, {6, 12, 7}, {12, 13, 9}, {7, 13, 2}, \n            {5, 13, 10}, {0, 6, 4}, {2, 7, 3}, {0, 7, 8}, {1, 12, 9}, {10, 12, 11}, {1, 2, 7}, \n            {1, 3, 10}, {3, 10, 6}, {6, 10, 4}, {4, 8, 5}, {1, 13, 4}, {11, 13, 8}, {2, 12, 10}, \n            {5, 8, 1}, {3, 7, 6}, {7, 12, 12}, {1, 7, 9}, {5, 9, 1}, {2, 13, 10}, {10, 11, 4}, \n            {3, 5, 10}, {6, 11, 14}, {5, 12, 3}, {0, 8, 13}, {8, 9, 1}, {3, 6, 8}, {0, 3, 4}, \n            {2, 9, 6}, {0, 11, 4}, {2, 5, 14}, {4, 11, 2}, {7, 11, 11}, {1, 11, 6}, {2, 10, 12}, \n            {0, 13, 4}, {3, 9, 9}, {4, 12, 3}, {6, 7, 10}, {6, 8, 13}, {9, 11, 3}, {1, 6, 2}, \n            {2, 4, 12}, {0, 10, 3}, {3, 12, 1}, {3, 8, 12}, {1, 8, 6}, {8, 13, 2}, {10, 13, 12}, \n            {9, 13, 11}, {2, 11, 14}, {5, 10, 9}, {5, 6, 10}, {2, 6, 9}, {8, 11, 3}\n        };\n        List<List<Integer>> result = sol.findCriticalAndPseudoCriticalEdges(n, edges);\n        System.out.println(result); \n    }\n}\n"
+    }
+  },
+  "1515": {
+    "java": {
+      "randomized": ""
     }
   },
   "1568": {
