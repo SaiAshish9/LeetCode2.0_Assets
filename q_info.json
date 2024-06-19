@@ -1382,5 +1382,241 @@
     "difficulty": "Hard",
     "language": "Java",
     "acceptance": 35.5
+  },
+  "sliding_window_maximum": {
+    "qno": "239",
+    "title": "Sliding Window Maximum",
+    "tags": [
+      "Array",
+      "Queue",
+      "Sliding Window",
+      "Heap (Priority Queue)",
+      "Monotonic Queue"
+    ],
+    "default": "Monotonic Queue",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 46.6
+  },
+  "shortest_subarray_with_sum_at_least_k": {
+    "qno": "862",
+    "title": "Shortest Subarray with Sum at Least K",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Queue",
+      "Sliding Window",
+      "Heap (Priority Queue)",
+      "Prefix Sum",
+      "Monotonic Queue"
+    ],
+    "default": "Monotonic Queue",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 26
+  },
+  "maximum_sum_circular_subarray": {
+    "qno": "918",
+    "title": "Maximum Sum Circular Subarray",
+    "tags": [
+      "Array",
+      "Divide and Conquer",
+      "Dynamic Programming",
+      "Queue",
+      "Monotonic Queue"
+    ],
+    "default": "Monotonic Queue",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 45
+  },
+  "constrained_subsequence_sum": {
+    "qno": "1425",
+    "title": "Constrained Subsequence Sum",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Queue",
+      "Sliding Window",
+      "Heap (Priority Queue)",
+      "Monotonic Queue"
+    ],
+    "default": "Monotonic Queue",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 56.7
+  },
+  "longest_continuous_subarray_with_absolute_diff_less_than_or_equal_to_limit": {
+    "qno": "1438",
+    "title": "Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit",
+    "tags": [
+      "Array",
+      "Queue",
+      "Sliding Window",
+      "Heap (Priority Queue)",
+      "Ordered Set",
+      "Monotonic Queue"
+    ],
+    "default": "Monotonic Queue",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.6
+  },
+  "max_value_of_equation": {
+    "qno": "1499",
+    "title": "Max Value of Equation",
+    "tags": [
+      "Array",
+      "Queue",
+      "Sliding Window",
+      "Heap (Priority Queue)",
+      "Monotonic Queue"
+    ],
+    "default": "Monotonic Queue",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 44.1
+  },
+  "delivering_boxes_from_storage_to_ports": {
+    "qno": "1687",
+    "title": "Delivering Boxes from Storage to Ports",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Segment Tree",
+      "Queue",
+      "Heap (Priority Queue)",
+      "Prefix Sum",
+      "Monotonic Queue"
+    ],
+    "default": "Monotonic Queue",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 38.9
+  },
+  "jump_game_vi": {
+    "qno": "1696",
+    "title": "Jump Game VI",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Queue",
+      "Heap (Priority Queue)",
+      "Monotonic Queue"
+    ],
+    "default": "Monotonic Queue",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 45.7
+  },
+  "maximum_number_of_tasks_you_can_assign": {
+    "qno": "2071",
+    "title": "Maximum Number of Tasks You Can Assign",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Greedy",
+      "Queue",
+      "Sorting",
+      "Monotonic Queue"
+    ],
+    "default": "Monotonic Queue",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 33.6
+  },
+  "longest_increasing_subsequence_ii": {
+    "qno": "2407",
+    "title": "Longest Increasing Subsequence II",
+    "tags": [
+      "Array",
+      "Divide and Conquer",
+      "Dynamic Programming",
+      "Binary Indexed Tree",
+      "Segment Tree",
+      "Queue",
+      "Monotonic Queue"
+    ],
+    "default": "Monotonic Queue",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 23.7
+  },
+  "count_subarrays_with_fixed_bounds": {
+    "qno": "2444",
+    "title": "Count Subarrays With Fixed Bounds",
+    "tags": [
+      "Array",
+      "Queue",
+      "Sliding Window",
+      "Monotonic Queue"
+    ],
+    "default": "Monotonic Queue",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 68
+  },
+  "continuous_subarrays": {
+    "qno": "2762",
+    "title": "Continuous Subarrays",
+    "tags": [
+      "Array",
+      "Queue",
+      "Sliding Window",
+      "Heap (Priority Queue)",
+      "Ordered Set",
+      "Monotonic Queue"
+    ],
+    "default": "Monotonic Queue",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 40.9
+  },
+  "minimum_number_of_coins_for_fruits": {
+    "qno": "2944",
+    "title": "Minimum Number of Coins for Fruits",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Queue",
+      "Heap (Priority Queue)",
+      "Monotonic Queue"
+    ],
+    "default": "Monotonic Queue",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 44.8
+  },
+  "find_maximum_non-decreasing_array_length": {
+    "qno": "2945",
+    "title": "Find Maximum Non-decreasing Array Length",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Dynamic Programming",
+      "Stack",
+      "Queue",
+      "Monotonic Stack",
+      "Monotonic Queue"
+    ],
+    "default": "Monotonic Queue",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 15.8
+  },
+  "minimum_number_of_coins_for_fruits_ii": {
+    "qno": "2969",
+    "title": "Minimum Number of Coins for Fruits II",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Queue",
+      "Heap (Priority Queue)",
+      "Monotonic Queue"
+    ],
+    "default": "Monotonic Queue",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 55.7
   }
 }
