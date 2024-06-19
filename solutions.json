@@ -61,6 +61,11 @@
       "bucket-sort": "import java.util.*;\n\npublic class Solution {\n    public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {\n        if (k <= 0 || t < 0) {\n            return false;\n        }\n\n        Map<Long, Long> bucketMap = new HashMap<>();\n        long bucketSize = (long) t + 1;\n\n        for (int i = 0; i < nums.length; i++) {\n            long num = (long) nums[i];\n            long bucket = getBucket(num, bucketSize);\n\n            if (bucketMap.containsKey(bucket)) {\n                return true;\n            }\n\n            if (bucketMap.containsKey(bucket - 1) && Math.abs(num - bucketMap.get(bucket - 1)) < bucketSize) {\n                return true;\n            }\n            if (bucketMap.containsKey(bucket + 1) && Math.abs(num - bucketMap.get(bucket + 1)) < bucketSize) {\n                return true;\n            }\n\n            bucketMap.put(bucket, num);\n            if (i >= k) {\n                bucketMap.remove(getBucket((long) nums[i - k], bucketSize));\n            }\n        }\n\n        return false;\n    }\n\n    private long getBucket(long num, long bucketSize) {\n        return num < 0 ? (num + 1) / bucketSize - 1 : num / bucketSize;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums1 = { 1, 2, 3, 1 };\n        int k1 = 3, t1 = 0;\n        System.out.println(solution.containsNearbyAlmostDuplicate(nums1, k1, t1)); // Output: true\n\n        int[] nums2 = { 1, 0, 1, 1 };\n        int k2 = 1, t2 = 2;\n        System.out.println(solution.containsNearbyAlmostDuplicate(nums2, k2, t2)); // Output: true\n\n        int[] nums3 = { 1, 5, 9, 1, 5, 9 };\n        int k3 = 2, t3 = 3;\n        System.out.println(solution.containsNearbyAlmostDuplicate(nums3, k3, t3)); // Output: false\n    }\n}\n"
     }
   },
+  "239": {
+    "java": {
+      "monotonic_queue": "import java.util.*;\n\nclass Solution {\n    public int[] maxSlidingWindow(int[] nums, int k) {\n        int n = nums.length;\n        if (n * k == 0) return new int[0]; \n        if (k == 1) return nums; \n        Deque<Integer> deque = new LinkedList<>();\n        int[] result = new int[n - k + 1]; \n        for (int i = 0; i < n; i++) {\n            while (!deque.isEmpty() && deque.peek() < i - k + 1) {\n                deque.poll();\n            }\n            while (!deque.isEmpty() && nums[deque.peekLast()] <= nums[i]) {\n                deque.pollLast();\n            }\n            deque.offer(i); \n            if (i - k + 1 >= 0) {\n                result[i - k + 1] = nums[deque.peek()];\n            }\n        }\n        return result;\n    }\n}\n"
+    }
+  },
   "251": {
     "java": {
       "iterator": "class Vector2D {\n    private int i;\n    private int j;\n    private int[][] vec;\n\n    public Vector2D(int[][] vec) {\n        this.vec = vec;\n    }\n\n    public int next() {\n        forward();\n        return vec[i][j++];\n    }\n\n    public boolean hasNext() {\n        forward();\n        return i < vec.length;\n    }\n\n    private void forward() {\n        while (i < vec.length && j >= vec[i].length) {\n            ++i;\n            j = 0;\n        }\n    }\n}\n\n/**\n * Your Vector2D object will be instantiated and called as such:\n * Vector2D obj = new Vector2D(vec);\n * int param_1 = obj.next();\n * boolean param_2 = obj.hasNext();\n */"
@@ -243,6 +248,11 @@
       "line-sweep": "class Event {\n  public int x;\n  public int y1;\n  public int y2;\n  public char type;\n  public Event(int x, int y1, int y2, char type) {\n    this.x = x;\n    this.y1 = y1;\n    this.y2 = y2;\n    this.type = type;\n  }\n}\n\nclass Solution {\n  public int rectangleArea(int[][] rectangles) {\n    final int kMod = 1_000_000_007;\n    List<Event> events = new ArrayList<>();\n\n    for (int[] r : rectangles) {\n      events.add(new Event(r[0], r[1], r[3], 's'));\n      events.add(new Event(r[2], r[1], r[3], 'e'));\n    }\n\n    Collections.sort(events, (a, b) -> a.x - b.x);\n\n    long ans = 0;\n    int prevX = 0;\n    List<Pair<Integer, Integer>> yPairs = new ArrayList<>();\n\n    for (Event e : events) {\n      if (e.x > prevX) {\n        final int width = e.x - prevX;\n        ans = (ans + width * getHeight(yPairs)) % kMod;\n        prevX = e.x;\n      }\n      if (e.type == 's') {\n        yPairs.add(new Pair<>(e.y1, e.y2));\n        Collections.sort(yPairs, Comparator.comparing(Pair::getKey));\n      } else { // type == 'e'\n        yPairs.remove(new Pair<>(e.y1, e.y2));\n      }\n    }\n\n    return (int) (ans % kMod);\n  }\n\n  private long getHeight(List<Pair<Integer, Integer>> yPairs) {\n    int height = 0;\n    int prevY = 0;\n\n    for (Pair<Integer, Integer> pair : yPairs) {\n      final int y1 = pair.getKey();\n      final int y2 = pair.getValue();\n      prevY = Math.max(prevY, y1);\n      if (y2 > prevY) {\n        height += y2 - prevY;\n        prevY = y2;\n      }\n    }\n\n    return height;\n  }\n}"
     }
   },
+  "862": {
+    "java": {
+      "monotonic_queue": ""
+    }
+  },
   "900": {
     "java": {
       "iterator": "class RLEIterator {\n    private int[] encoding;\n    private int index;\n\n    public RLEIterator(int[] encoding) {\n        this.encoding = encoding;\n        this.index = 0;\n    }\n\n    public int next(int n) {\n        while (index < encoding.length) {\n            if (n <= encoding[index]) {\n                encoding[index] -= n;\n                return encoding[index + 1];\n            } else {\n                n -= encoding[index];\n                index += 2;\n            }\n        }\n        return -1; \n    }\n}\n\n/**\n * Your RLEIterator object will be instantiated and called as such:\n * RLEIterator obj = new RLEIterator(encoding);\n * int param_1 = obj.next(n);\n */"
@@ -253,6 +263,11 @@
       "radix-sort": "import java.util.Arrays;\n\nclass Solution {\n    public int[] sortArray(int[] nums) {\n        if (nums == null || nums.length < 2) {\n            return nums;\n        }\n\n        // Find the maximum absolute value to handle negative numbers\n        int max = Arrays.stream(nums).map(Math::abs).max().getAsInt();\n        int exp = 1;\n\n        while (max / exp > 0) {\n            countingSort(nums, exp);\n            exp *= 10;\n        }\n\n        return nums;\n    }\n\n    private void countingSort(int[] nums, int exp) {\n        int n = nums.length;\n        int[] output = new int[n];\n        int[] count = new int[19]; // 19 because the range of values is [-9, 9]\n\n        for (int num : nums) {\n            int index = (num / exp) % 10 + 9; // Shifting by 9 to handle negative numbers\n            count[index]++;\n        }\n\n        for (int i = 1; i < 19; i++) {\n            count[i] += count[i - 1];\n        }\n\n        for (int i = n - 1; i >= 0; i--) {\n            int index = (nums[i] / exp) % 10 + 9;\n            output[count[index] - 1] = nums[i];\n            count[index]--;\n        }\n\n        System.arraycopy(output, 0, nums, 0, n);\n    }\n}\n",
       "bucket-sort": "import java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\nclass Solution {\n    public int[] sortArray(int[] nums) {\n        if (nums == null || nums.length == 0) return nums;\n\n        int n = nums.length;\n        int minValue = nums[0];\n        int maxValue = nums[0];\n\n        for (int num : nums) {\n            if (num < minValue) {\n                minValue = num;\n            } else if (num > maxValue) {\n                maxValue = num;\n            }\n        }\n\n        int bucketCount = (maxValue - minValue) / n + 1;\n        List<Integer>[] buckets = new List[bucketCount];\n        for (int i = 0; i < bucketCount; i++) {\n            buckets[i] = new ArrayList<>();\n        }\n\n        for (int num : nums) {\n            int bucketIndex = (num - minValue) / n;\n            buckets[bucketIndex].add(num);\n        }\n\n        int index = 0;\n        for (List<Integer> bucket : buckets) {\n            Collections.sort(bucket);\n            for (int num : bucket) {\n                nums[index++] = num;\n            }\n        }\n\n        return nums;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums = {5, 2, 9, 1, 5, 6};\n        int[] sorted = solution.sortArray(nums);\n        for (int num : sorted) {\n            System.out.print(num + \" \");\n        }\n        // Output: 1 2 5 5 6 9\n    }\n}\n",
       "merge-sort": "class Solution {\n    public int[] sortArray(int[] nums) {\n        mergeSort(nums, 0, nums.length - 1);\n        return nums;\n    }\n    \n    private void mergeSort(int[] nums, int left, int right) {\n        if (left < right) {\n            int mid = left + (right - left) / 2;\n            mergeSort(nums, left, mid);\n            mergeSort(nums, mid + 1, right);\n            merge(nums, left, mid, right);\n        }\n    }\n    \n    private void merge(int[] nums, int left, int mid, int right) {\n        int n1 = mid - left + 1;\n        int n2 = right - mid;\n        \n        int[] leftArr = new int[n1];\n        int[] rightArr = new int[n2];\n        \n        for (int i = 0; i < n1; i++) {\n            leftArr[i] = nums[left + i];\n        }\n        \n        for (int j = 0; j < n2; j++) {\n            rightArr[j] = nums[mid + 1 + j];\n        }\n        \n        int i = 0, j = 0, k = left;\n        \n        while (i < n1 && j < n2) {\n            if (leftArr[i] <= rightArr[j]) {\n                nums[k++] = leftArr[i++];\n            } else {\n                nums[k++] = rightArr[j++];\n            }\n        }\n        \n        while (i < n1) {\n            nums[k++] = leftArr[i++];\n        }\n        \n        while (j < n2) {\n            nums[k++] = rightArr[j++];\n        }\n    }\n}\n"
+    }
+  },
+  "918": {
+    "java": {
+      "monotonic_queue": ""
     }
   },
   "973": {
@@ -364,6 +379,16 @@
       "iterator": "class CombinationIterator {\n    private List<String> combinations;\n    private int currentIndex;\n\n    public CombinationIterator(String characters, int combinationLength) {\n        combinations = new ArrayList<>();\n        generateCombinations(characters, combinationLength, 0, new StringBuilder());\n        currentIndex = 0;\n    }\n\n    private void generateCombinations(String characters, int length, int start, StringBuilder sb) {\n        if (sb.length() == length) {\n            combinations.add(sb.toString());\n            return;\n        }\n\n        for (int i = start; i < characters.length(); i++) {\n            sb.append(characters.charAt(i));\n            generateCombinations(characters, length, i + 1, sb);\n            sb.deleteCharAt(sb.length() - 1);\n        }\n    }\n\n    public String next() {\n        return combinations.get(currentIndex++);\n    }\n\n    public boolean hasNext() {\n        return currentIndex < combinations.size();\n    }\n}\n\n/**\n * Your CombinationIterator object will be instantiated and called as such:\n * CombinationIterator obj = new CombinationIterator(characters,\n * combinationLength);\n * String param_1 = obj.next();\n * boolean param_2 = obj.hasNext();\n */"
     }
   },
+  "1425": {
+    "java": {
+      "monotonic_queue": ""
+    }
+  },
+  "1438": {
+    "java": {
+      "monotonic_queue": ""
+    }
+  },
   "1467": {
     "java": {
       "probability-and-statistics": "enum BoxCase {\n    kEqualBalls, kEqualDistantBalls\n}\n\nclass Solution {\n    public double getProbability(int[] balls) {\n        final int n = Arrays.stream(balls).sum() / 2;\n        return cases(balls, 0, 0, 0, 0, 0, n, BoxCase.kEqualDistantBalls) /\n                cases(balls, 0, 0, 0, 0, 0, n, BoxCase.kEqualBalls);\n    }\n\n    private int[] fact = { 1, 1, 2, 6, 24, 120, 720 };\n\n    double cases(int[] balls, int i, int ballsCountA, int ballsCountB, int colorsCountA,\n            int colorsCountB, int n, BoxCase boxCase) {\n        if (ballsCountA > n || ballsCountB > n)\n            return 0;\n        if (i == balls.length)\n            return boxCase == BoxCase.kEqualBalls ? 1 : (colorsCountA == colorsCountB ? 1 : 0);\n\n        double ans = 0;\n\n        for (int ballsTakenA = 0; ballsTakenA <= balls[i]; ++ballsTakenA) {\n            final int ballsTakenB = balls[i] - ballsTakenA;\n            final int newcolorsCountA = colorsCountA + (ballsTakenA > 0 ? 1 : 0);\n            final int newcolorsCountB = colorsCountB + (ballsTakenB > 0 ? 1 : 0);\n            ans += cases(balls, i + 1, ballsCountA + ballsTakenA, ballsCountB + ballsTakenB,\n                    newcolorsCountA, newcolorsCountB, n, boxCase) /\n                    (fact[ballsTakenA] * fact[ballsTakenB]);\n        }\n\n        return ans;\n    }\n}"
@@ -377,6 +402,11 @@
   "1489": {
     "java": {
       "strongly-connected-component": "import java.util.*;\n\nclass UnionFind {\n    private int[] id;\n    private int[] rank;\n\n    public UnionFind(int n) {\n        id = new int[n];\n        rank = new int[n];\n        for (int i = 0; i < n; ++i)\n            id[i] = i;\n    }\n\n    public void unionByRank(int u, int v) {\n        int i = find(u);\n        int j = find(v);\n        if (i == j)\n            return;\n        if (rank[i] < rank[j]) {\n            id[i] = j;\n        } else if (rank[i] > rank[j]) {\n            id[j] = i;\n        } else {\n            id[i] = j;\n            ++rank[j];\n        }\n    }\n\n    public int find(int u) {\n        return id[u] == u ? u : (id[u] = find(id[u]));\n    }\n}\n\nclass Solution {\n    public List<List<Integer>> findCriticalAndPseudoCriticalEdges(int n, int[][] edges) {\n        List<Integer> criticalEdges = new ArrayList<>();\n        List<Integer> pseudoCriticalEdges = new ArrayList<>();\n\n        for (int i = 0; i < edges.length; ++i)\n            edges[i] = new int[] {edges[i][0], edges[i][1], edges[i][2], i};\n\n        Arrays.sort(edges, (a, b) -> a[2] - b[2]);\n\n        final int mstWeight = getMSTWeight(n, edges, new int[] {}, -1);\n\n        for (int[] edge : edges) {\n            final int index = edge[3];\n            // Deleting the `edge` increases the MST's weight or makes the MST invalid.\n            if (getMSTWeight(n, edges, new int[] {}, index) > mstWeight)\n                criticalEdges.add(index);\n            // If an edge can be in any MST, we can always add `edge` to the edge set.\n            else if (getMSTWeight(n, edges, edge, -1) == mstWeight)\n                pseudoCriticalEdges.add(index);\n        }\n\n        return new ArrayList<>(Arrays.asList(criticalEdges, pseudoCriticalEdges));\n    }\n\n    private int getMSTWeight(int n, int[][] edges, int[] firstEdge, int deletedEdgeIndex) {\n        int mstWeight = 0;\n        UnionFind uf = new UnionFind(n);\n\n        if (firstEdge.length == 4) {\n            uf.unionByRank(firstEdge[0], firstEdge[1]);\n            mstWeight += firstEdge[2];\n        }\n\n        for (int[] edge : edges) {\n            final int u = edge[0];\n            final int v = edge[1];\n            final int weight = edge[2];\n            final int index = edge[3];\n            if (index == deletedEdgeIndex)\n                continue;\n            if (uf.find(u) == uf.find(v))\n                continue;\n            uf.unionByRank(u, v);\n            mstWeight += weight;\n        }\n\n        final int root = uf.find(0);\n        for (int i = 0; i < n; ++i)\n            if (uf.find(i) != root)\n                return Integer.MAX_VALUE;\n\n        return mstWeight;\n    }\n\n    public static void main(String[] args) {\n        Solution sol = new Solution();\n        int n = 14;\n        int[][] edges = {\n            {0, 1, 13}, {0, 2, 6}, {2, 3, 13}, {3, 4, 4}, {0, 5, 11}, {4, 6, 14}, {4, 7, 8}, \n            {2, 8, 6}, {4, 9, 6}, {7, 10, 4}, {5, 11, 3}, {6, 12, 7}, {12, 13, 9}, {7, 13, 2}, \n            {5, 13, 10}, {0, 6, 4}, {2, 7, 3}, {0, 7, 8}, {1, 12, 9}, {10, 12, 11}, {1, 2, 7}, \n            {1, 3, 10}, {3, 10, 6}, {6, 10, 4}, {4, 8, 5}, {1, 13, 4}, {11, 13, 8}, {2, 12, 10}, \n            {5, 8, 1}, {3, 7, 6}, {7, 12, 12}, {1, 7, 9}, {5, 9, 1}, {2, 13, 10}, {10, 11, 4}, \n            {3, 5, 10}, {6, 11, 14}, {5, 12, 3}, {0, 8, 13}, {8, 9, 1}, {3, 6, 8}, {0, 3, 4}, \n            {2, 9, 6}, {0, 11, 4}, {2, 5, 14}, {4, 11, 2}, {7, 11, 11}, {1, 11, 6}, {2, 10, 12}, \n            {0, 13, 4}, {3, 9, 9}, {4, 12, 3}, {6, 7, 10}, {6, 8, 13}, {9, 11, 3}, {1, 6, 2}, \n            {2, 4, 12}, {0, 10, 3}, {3, 12, 1}, {3, 8, 12}, {1, 8, 6}, {8, 13, 2}, {10, 13, 12}, \n            {9, 13, 11}, {2, 11, 14}, {5, 10, 9}, {5, 6, 10}, {2, 6, 9}, {8, 11, 3}\n        };\n        List<List<Integer>> result = sol.findCriticalAndPseudoCriticalEdges(n, edges);\n        System.out.println(result); \n    }\n}\n"
+    }
+  },
+  "1499": {
+    "java": {
+      "monotonic_queue": ""
     }
   },
   "1515": {
@@ -402,6 +432,16 @@
   "1649": {
     "java": {
       "merge-sort": "class Solution {\n    private static final int MOD = 1000000007;\n\n    public int createSortedArray(int[] instructions) {\n        FenwickTree tree = new FenwickTree(100001);\n        long cost = 0;\n\n        for (int i = 0; i < instructions.length; i++) {\n            int num = instructions[i];\n            int countSmaller = tree.query(num - 1); // Number of elements less than num\n            int countGreater = i - tree.query(num); // Number of elements greater than num\n            cost = (cost + Math.min(countSmaller, countGreater)) % MOD;\n            tree.update(num, 1);\n        }\n\n        return (int) cost;\n    }\n}\n\nclass FenwickTree {\n    private int[] tree;\n\n    public FenwickTree(int size) {\n        this.tree = new int[size + 1];\n    }\n\n    public void update(int index, int delta) {\n        while (index < tree.length) {\n            tree[index] += delta;\n            index += index & -index;\n        }\n    }\n\n    public int query(int index) {\n        int sum = 0;\n        while (index > 0) {\n            sum += tree[index];\n            index -= index & -index;\n        }\n        return sum;\n    }\n}\n"
+    }
+  },
+  "1687": {
+    "java": {
+      "monotonic_queue": ""
+    }
+  },
+  "1696": {
+    "java": {
+      "monotonic_queue": ""
     }
   },
   "1698": {
@@ -445,6 +485,11 @@
       "merge-sort": "class FenwickTree {\n  public FenwickTree(int n) {\n    sums = new int[n + 1];\n  }\n\n  public void add(int i, int delta) {\n    while (i < sums.length) {\n      sums[i] += delta;\n      i += lowbit(i);\n    }\n  }\n\n  public int get(int i) {\n    int sum = 0;\n    while (i > 0) {\n      sum += sums[i];\n      i -= lowbit(i);\n    }\n    return sum;\n  }\n\n  private int[] sums;\n\n  private static int lowbit(int i) {\n    return i & -i;\n  }\n}\n\nclass Solution {\n  public int subarraysWithMoreZerosThanOnes(int[] nums) {\n    final int kMod = 1_000_000_007;\n    final int n = nums.length;\n    int ans = 0;\n    int prefix = 0;\n    FenwickTree tree = new FenwickTree(2 * n + 1);\n    tree.add(remap(0, n), 1);\n\n    for (final int num : nums) {\n      prefix += num == 0 ? -1 : 1;\n      ans += tree.get(remap(prefix - 1, n));\n      ans %= kMod;\n      tree.add(remap(prefix, n), 1);\n    }\n\n    return ans;\n  }\n\n  private int remap(int i, int n) {\n    return i + n + 1;\n  }\n}"
     }
   },
+  "2071": {
+    "java": {
+      "monotonic_queue": ""
+    }
+  },
   "2179": {
     "java": {
       "merge-sort": "class FenwickTree {\n  public FenwickTree(int n) {\n    sums = new int[n + 1];\n  }\n\n  public void add(int i, int delta) {\n    while (i < sums.length) {\n      sums[i] += delta;\n      i += lowbit(i);\n    }\n  }\n\n  public int get(int i) {\n    int sum = 0;\n    while (i > 0) {\n      sum += sums[i];\n      i -= lowbit(i);\n    }\n    return sum;\n  }\n\n  private int[] sums;\n\n  private static int lowbit(int i) {\n    return i & -i;\n  }\n}\n\nclass Solution {\n  public long goodTriplets(int[] nums1, int[] nums2) {\n    final int n = nums1.length;\n    long ans = 0;\n    Map<Integer, Integer> numToIndex = new HashMap<>();\n    int[] nums = new int[n];\n    int[] leftSmaller = new int[n];\n    int[] rightLarger = new int[n];\n    FenwickTree tree1 = new FenwickTree(n);\n    FenwickTree tree2 = new FenwickTree(n);\n\n    for (int i = 0; i < n; ++i)\n      numToIndex.put(nums1[i], i);\n    for (int i = 0; i < n; ++i)\n      nums[i] = numToIndex.get(nums2[i]);\n\n    for (int i = 0; i < n; ++i) {\n      leftSmaller[i] = tree1.get(nums[i]);\n      tree1.add(nums[i] + 1, 1);\n    }\n\n    for (int i = n - 1; i >= 0; --i) {\n      rightLarger[i] = tree2.get(n) - tree2.get(nums[i]);\n      tree2.add(nums[i] + 1, 1);\n    }\n\n    for (int i = 0; i < n; ++i)\n      ans += (long) leftSmaller[i] * rightLarger[i];\n\n    return ans;\n  }\n}"
@@ -476,74 +521,24 @@
       "doubly-linked-list": "class TextEditor {\n    private class Node {\n        char c;\n        Node prev, next;\n\n        Node(char c) {\n            this.c = c;\n        }\n    }\n\n    private Node head, tail, cursor;\n\n    public TextEditor() {\n        head = new Node('0');\n        tail = new Node('0');\n        head.next = tail;\n        tail.prev = head;\n        cursor = tail;\n    }\n\n    public void addText(String text) {\n        for (char c : text.toCharArray()) {\n            Node newNode = new Node(c);\n            Node prev = cursor.prev;\n            prev.next = newNode;\n            newNode.prev = prev;\n            newNode.next = cursor;\n            cursor.prev = newNode;\n        }\n    }\n\n    public int deleteText(int k) {\n        int deleted = 0;\n        while (k > 0 && cursor.prev != head) {\n            Node prev = cursor.prev;\n            prev.prev.next = cursor;\n            cursor.prev = prev.prev;\n            k--;\n            deleted++;\n        }\n        return deleted;\n    }\n\n    public String cursorLeft(int k) {\n        while (k > 0 && cursor.prev != head) {\n            cursor = cursor.prev;\n            k--;\n        }\n        return getText();\n    }\n\n    public String cursorRight(int k) {\n        while (k > 0 && cursor != tail) {\n            cursor = cursor.next;\n            k--;\n        }\n        return getText();\n    }\n\n    private String getText() {\n        StringBuilder sb = new StringBuilder();\n        Node temp = cursor.prev;\n        for (int i = 0; i < 10 && temp != head; i++) {\n            sb.append(temp.c);\n            temp = temp.prev;\n        }\n        return sb.reverse().toString();\n    }\n}\n"
     }
   },
-  "2426": {
-    "java": {
-      "merge-sort": "import java.util.*;\n\nclass Solution {\n    public long numberOfPairs(int[] nums1, int[] nums2, int diff) {\n        int n = nums1.length;\n        int[] A = new int[n];\n        \n        for (int i = 0; i < n; ++i) {\n            A[i] = nums1[i] - nums2[i];\n        }\n        \n        long[] ans = {0}; \n        mergeSort(A, 0, n - 1, diff, ans);\n        \n        return ans[0];\n    }\n\n    private void mergeSort(int[] A, int l, int r, int diff, long[] ans) {\n        if (l >= r) {\n            return;\n        }\n        \n        int m = (l + r) / 2;\n        mergeSort(A, l, m, diff, ans);\n        mergeSort(A, m + 1, r, diff, ans);\n        merge(A, l, m, r, diff, ans);\n    }\n\n    private void merge(int[] A, int l, int m, int r, int diff, long[] ans) {\n        int lo = m + 1;\n        int hi = m + 1; \n        for (int i = l; i <= m; ++i) {\n            while (hi <= r && A[i] > A[hi] + diff) {\n                ++hi;\n            }\n            ans[0] += r - hi + 1;\n        }\n        \n        int[] sorted = new int[r - l + 1];\n        int k = 0; // Index for sorted array\n        int i = l; // Index for left subarray\n        int j = m + 1; // Index for right subarray\n        \n        while (i <= m && j <= r) {\n            if (A[i] <= A[j]) {\n                sorted[k++] = A[i++];\n            } else {\n                sorted[k++] = A[j++];\n            }\n        }\n        \n        while (i <= m) {\n            sorted[k++] = A[i++];\n        }\n        \n        while (j <= r) {\n            sorted[k++] = A[j++];\n        }\n        \n        System.arraycopy(sorted, 0, A, l, sorted.length);\n    }\n}\n"
-    }
-  },
-  "2519": {
-    "java": {
-      "merge-sort": "class FenwickTree {\n  public FenwickTree(int n) {\n    sums = new int[n + 1];\n  }\n\n  public void add(int i, int delta) {\n    while (i < sums.length) {\n      sums[i] += delta;\n      i += lowbit(i);\n    }\n  }\n\n  public int get(int i) {\n    int sum = 0;\n    while (i > 0) {\n      sum += sums[i];\n      i -= lowbit(i);\n    }\n    return sum;\n  }\n\n  private int[] sums;\n\n  private static int lowbit(int i) {\n    return i & -i;\n  }\n}\n\nclass Solution {\n  public int kBigIndices(int[] nums, int k) {\n    final int n = nums.length;\n    int ans = 0;\n    FenwickTree leftTree = new FenwickTree(n);\n    FenwickTree rightTree = new FenwickTree(n);\n    int[] left = new int[n];\n    int[] right = new int[n];\n\n    for (int i = 0; i < n; ++i) {\n      left[i] = leftTree.get(nums[i] - 1);\n      leftTree.add(nums[i], 1);\n    }\n\n    for (int i = n - 1; i >= 0; --i) {\n      right[i] = rightTree.get(nums[i] - 1);\n      rightTree.add(nums[i], 1);\n    }\n\n    for (int i = 0; i < n; ++i)\n      if (left[i] >= k && right[i] >= k)\n        ++ans;\n\n    return ans;\n  }\n}"
-    }
-  },
-  "3109": {
-    "java": {
-      "merge-sort": "class FenwickTree {\n  public FenwickTree(int n) {\n    sums = new int[n + 1];\n  }\n\n  public void add(int i, int delta) {\n    while (i < sums.length) {\n      sums[i] += delta;\n      i += lowbit(i);\n    }\n  }\n\n  public int get(int i) {\n    int sum = 0;\n    while (i > 0) {\n      sum += sums[i];\n      i -= lowbit(i);\n    }\n    return sum;\n  }\n\n  private int[] sums;\n\n  private static int lowbit(int i) {\n    return i & -i;\n  }\n}\n\nclass Solution {\n  public int getPermutationIndex(int[] perm) {\n    final int kMod = 1_000_000_007;\n    final int n = perm.length;\n    int ans = 0;\n    FenwickTree tree = new FenwickTree(n);\n    int[] fact = new int[n + 1]; \n    Arrays.fill(fact, 1);\n\n    for (int i = 2; i <= n; ++i)\n      fact[i] = (int) ((fact[i - 1] * (long) i) % kMod);\n\n    for (int i = 0; i < n; ++i) {\n      final int num = perm[i];\n      final int unusedNums = num - 1 - tree.get(num - 1);\n      final int suffixLength = fact[n - 1 - i];\n      ans = (int) ((ans + unusedNums * (long) suffixLength) % kMod);\n      tree.add(num, 1);\n    }\n\n    return ans;\n  }\n}"
-    }
-  },
-  "239": {
-    "java": {
-      "monotonic_queue": ""
-    }
-  },
-  "862": {
-    "java": {
-      "monotonic_queue": ""
-    }
-  },
-  "918": {
-    "java": {
-      "monotonic_queue": ""
-    }
-  },
-  "1425": {
-    "java": {
-      "monotonic_queue": ""
-    }
-  },
-  "1438": {
-    "java": {
-      "monotonic_queue": ""
-    }
-  },
-  "1499": {
-    "java": {
-      "monotonic_queue": ""
-    }
-  },
-  "1687": {
-    "java": {
-      "monotonic_queue": ""
-    }
-  },
-  "1696": {
-    "java": {
-      "monotonic_queue": ""
-    }
-  },
-  "2071": {
-    "java": {
-      "monotonic_queue": ""
-    }
-  },
   "2407": {
     "java": {
       "monotonic_queue": ""
     }
   },
+  "2426": {
+    "java": {
+      "merge-sort": "import java.util.*;\n\nclass Solution {\n    public long numberOfPairs(int[] nums1, int[] nums2, int diff) {\n        int n = nums1.length;\n        int[] A = new int[n];\n        \n        for (int i = 0; i < n; ++i) {\n            A[i] = nums1[i] - nums2[i];\n        }\n        \n        long[] ans = {0}; \n        mergeSort(A, 0, n - 1, diff, ans);\n        \n        return ans[0];\n    }\n\n    private void mergeSort(int[] A, int l, int r, int diff, long[] ans) {\n        if (l >= r) {\n            return;\n        }\n        \n        int m = (l + r) / 2;\n        mergeSort(A, l, m, diff, ans);\n        mergeSort(A, m + 1, r, diff, ans);\n        merge(A, l, m, r, diff, ans);\n    }\n\n    private void merge(int[] A, int l, int m, int r, int diff, long[] ans) {\n        int lo = m + 1;\n        int hi = m + 1; \n        for (int i = l; i <= m; ++i) {\n            while (hi <= r && A[i] > A[hi] + diff) {\n                ++hi;\n            }\n            ans[0] += r - hi + 1;\n        }\n        \n        int[] sorted = new int[r - l + 1];\n        int k = 0; // Index for sorted array\n        int i = l; // Index for left subarray\n        int j = m + 1; // Index for right subarray\n        \n        while (i <= m && j <= r) {\n            if (A[i] <= A[j]) {\n                sorted[k++] = A[i++];\n            } else {\n                sorted[k++] = A[j++];\n            }\n        }\n        \n        while (i <= m) {\n            sorted[k++] = A[i++];\n        }\n        \n        while (j <= r) {\n            sorted[k++] = A[j++];\n        }\n        \n        System.arraycopy(sorted, 0, A, l, sorted.length);\n    }\n}\n"
+    }
+  },
   "2444": {
     "java": {
       "monotonic_queue": ""
+    }
+  },
+  "2519": {
+    "java": {
+      "merge-sort": "class FenwickTree {\n  public FenwickTree(int n) {\n    sums = new int[n + 1];\n  }\n\n  public void add(int i, int delta) {\n    while (i < sums.length) {\n      sums[i] += delta;\n      i += lowbit(i);\n    }\n  }\n\n  public int get(int i) {\n    int sum = 0;\n    while (i > 0) {\n      sum += sums[i];\n      i -= lowbit(i);\n    }\n    return sum;\n  }\n\n  private int[] sums;\n\n  private static int lowbit(int i) {\n    return i & -i;\n  }\n}\n\nclass Solution {\n  public int kBigIndices(int[] nums, int k) {\n    final int n = nums.length;\n    int ans = 0;\n    FenwickTree leftTree = new FenwickTree(n);\n    FenwickTree rightTree = new FenwickTree(n);\n    int[] left = new int[n];\n    int[] right = new int[n];\n\n    for (int i = 0; i < n; ++i) {\n      left[i] = leftTree.get(nums[i] - 1);\n      leftTree.add(nums[i], 1);\n    }\n\n    for (int i = n - 1; i >= 0; --i) {\n      right[i] = rightTree.get(nums[i] - 1);\n      rightTree.add(nums[i], 1);\n    }\n\n    for (int i = 0; i < n; ++i)\n      if (left[i] >= k && right[i] >= k)\n        ++ans;\n\n    return ans;\n  }\n}"
     }
   },
   "2762": {
@@ -564,6 +559,11 @@
   "2969": {
     "java": {
       "monotonic_queue": ""
+    }
+  },
+  "3109": {
+    "java": {
+      "merge-sort": "class FenwickTree {\n  public FenwickTree(int n) {\n    sums = new int[n + 1];\n  }\n\n  public void add(int i, int delta) {\n    while (i < sums.length) {\n      sums[i] += delta;\n      i += lowbit(i);\n    }\n  }\n\n  public int get(int i) {\n    int sum = 0;\n    while (i > 0) {\n      sum += sums[i];\n      i -= lowbit(i);\n    }\n    return sum;\n  }\n\n  private int[] sums;\n\n  private static int lowbit(int i) {\n    return i & -i;\n  }\n}\n\nclass Solution {\n  public int getPermutationIndex(int[] perm) {\n    final int kMod = 1_000_000_007;\n    final int n = perm.length;\n    int ans = 0;\n    FenwickTree tree = new FenwickTree(n);\n    int[] fact = new int[n + 1]; \n    Arrays.fill(fact, 1);\n\n    for (int i = 2; i <= n; ++i)\n      fact[i] = (int) ((fact[i - 1] * (long) i) % kMod);\n\n    for (int i = 0; i < n; ++i) {\n      final int num = perm[i];\n      final int unusedNums = num - 1 - tree.get(num - 1);\n      final int suffixLength = fact[n - 1 - i];\n      ans = (int) ((ans + unusedNums * (long) suffixLength) % kMod);\n      tree.add(num, 1);\n    }\n\n    return ans;\n  }\n}"
     }
   }
 }
