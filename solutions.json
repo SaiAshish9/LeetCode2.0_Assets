@@ -119,7 +119,7 @@
   },
   "381": {
     "java": {
-      "randomized": ""
+      "randomized": "import java.util.*;\n\nclass RandomizedCollection {\n    private List<Integer> nums;\n    private Map<Integer, Set<Integer>> pos;\n    private Random rand;\n\n    public RandomizedCollection() {\n        nums = new ArrayList<>();\n        pos = new HashMap<>();\n        rand = new Random();\n    }\n\n    public boolean insert(int val) {\n        if (!pos.containsKey(val)) {\n            pos.put(val, new HashSet<>());\n        }\n        pos.get(val).add(nums.size());\n        nums.add(val);\n        return pos.get(val).size() == 1;\n    }\n\n    public boolean remove(int val) {\n        if (!pos.containsKey(val) || pos.get(val).isEmpty()) {\n            return false;\n        }\n        int idxToRemove = pos.get(val).iterator().next();\n        pos.get(val).remove(idxToRemove);\n        int lastElement = nums.get(nums.size() - 1);\n        nums.set(idxToRemove, lastElement);\n        if (pos.get(lastElement) != null) {\n            pos.get(lastElement).add(idxToRemove);\n            pos.get(lastElement).remove(nums.size() - 1);\n        }\n        nums.remove(nums.size() - 1);\n        if (pos.get(val).isEmpty()) {\n            pos.remove(val);\n        }\n        return true;\n    }\n\n    public int getRandom() {\n        return nums.get(rand.nextInt(nums.size()));\n    }\n}\n"
     }
   },
   "382": {
