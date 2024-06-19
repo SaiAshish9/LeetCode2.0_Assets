@@ -490,5 +490,80 @@
     "java": {
       "merge-sort": "class FenwickTree {\n  public FenwickTree(int n) {\n    sums = new int[n + 1];\n  }\n\n  public void add(int i, int delta) {\n    while (i < sums.length) {\n      sums[i] += delta;\n      i += lowbit(i);\n    }\n  }\n\n  public int get(int i) {\n    int sum = 0;\n    while (i > 0) {\n      sum += sums[i];\n      i -= lowbit(i);\n    }\n    return sum;\n  }\n\n  private int[] sums;\n\n  private static int lowbit(int i) {\n    return i & -i;\n  }\n}\n\nclass Solution {\n  public int getPermutationIndex(int[] perm) {\n    final int kMod = 1_000_000_007;\n    final int n = perm.length;\n    int ans = 0;\n    FenwickTree tree = new FenwickTree(n);\n    int[] fact = new int[n + 1]; \n    Arrays.fill(fact, 1);\n\n    for (int i = 2; i <= n; ++i)\n      fact[i] = (int) ((fact[i - 1] * (long) i) % kMod);\n\n    for (int i = 0; i < n; ++i) {\n      final int num = perm[i];\n      final int unusedNums = num - 1 - tree.get(num - 1);\n      final int suffixLength = fact[n - 1 - i];\n      ans = (int) ((ans + unusedNums * (long) suffixLength) % kMod);\n      tree.add(num, 1);\n    }\n\n    return ans;\n  }\n}"
     }
+  },
+  "239": {
+    "java": {
+      "monotonic_queue": ""
+    }
+  },
+  "862": {
+    "java": {
+      "monotonic_queue": ""
+    }
+  },
+  "918": {
+    "java": {
+      "monotonic_queue": ""
+    }
+  },
+  "1425": {
+    "java": {
+      "monotonic_queue": ""
+    }
+  },
+  "1438": {
+    "java": {
+      "monotonic_queue": ""
+    }
+  },
+  "1499": {
+    "java": {
+      "monotonic_queue": ""
+    }
+  },
+  "1687": {
+    "java": {
+      "monotonic_queue": ""
+    }
+  },
+  "1696": {
+    "java": {
+      "monotonic_queue": ""
+    }
+  },
+  "2071": {
+    "java": {
+      "monotonic_queue": ""
+    }
+  },
+  "2407": {
+    "java": {
+      "monotonic_queue": ""
+    }
+  },
+  "2444": {
+    "java": {
+      "monotonic_queue": ""
+    }
+  },
+  "2762": {
+    "java": {
+      "monotonic_queue": ""
+    }
+  },
+  "2944": {
+    "java": {
+      "monotonic_queue": ""
+    }
+  },
+  "2945": {
+    "java": {
+      "monotonic_queue": ""
+    }
+  },
+  "2969": {
+    "java": {
+      "monotonic_queue": ""
+    }
   }
 }
