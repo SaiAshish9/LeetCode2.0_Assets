@@ -195,7 +195,7 @@
   },
   "528": {
     "java": {
-      "randomized": ""
+      "randomized": "import java.util.Random;\nimport java.util.TreeMap;\n\nclass Solution {\n    private int[] prefixSums;\n    private int totalSum;\n    private Random rand;\n\n    public Solution(int[] w) {\n        prefixSums = new int[w.length];\n        prefixSums[0] = w[0];\n        for (int i = 1; i < w.length; i++) {\n            prefixSums[i] = prefixSums[i - 1] + w[i];\n        }\n        totalSum = prefixSums[prefixSums.length - 1];\n        rand = new Random();\n    }\n\n    public int pickIndex() {\n        int target = rand.nextInt(totalSum) + 1;\n        int low = 0, high = prefixSums.length - 1;\n        while (low < high) {\n            int mid = low + (high - low) / 2;\n            if (prefixSums[mid] < target) {\n                low = mid + 1;\n            } else {\n                high = mid;\n            }\n        }\n        return low;\n    }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution obj = new Solution(w);\n * int param_1 = obj.pickIndex();\n */"
     }
   },
   "561": {
@@ -381,7 +381,7 @@
   },
   "1515": {
     "java": {
-      "randomized": ""
+      "randomized": "class Solution {\n    public double getMinDistSum(int[][] positions) {\n        int n = positions.length;\n        double x = 0, y = 0;\n        for (int[] p : positions) {\n            x += p[0];\n            y += p[1];\n        }\n        x /= n;\n        y /= n;\n        double decay = 0.999;\n        double eps = 1e-6;\n        double alpha = 0.5;\n        while (true) {\n            double gradX = 0, gradY = 0;\n            double dist = 0;\n            for (int[] p : positions) {\n                double a = x - p[0], b = y - p[1];\n                double c = Math.sqrt(a * a + b * b);\n                gradX += a / (c + 1e-8);\n                gradY += b / (c + 1e-8);\n                dist += c;\n            }\n            double dx = gradX * alpha, dy = gradY * alpha;\n            if (Math.abs(dx) <= eps && Math.abs(dy) <= eps) {\n                return dist;\n            }\n            x -= dx;\n            y -= dy;\n            alpha *= decay;\n        }\n    }\n}"
     }
   },
   "1568": {
