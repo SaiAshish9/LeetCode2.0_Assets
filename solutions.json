@@ -129,7 +129,7 @@
   },
   "384": {
     "java": {
-      "randomized": ""
+      "randomized": "import java.util.Random;\n\nclass Solution {\n    private int[] original;\n    private int[] array;\n    private Random rand;\n\n    public Solution(int[] nums) {\n        original = nums.clone();\n        array = nums.clone();\n        rand = new Random();\n    }\n\n    public int[] reset() {\n        array = original.clone();\n        return array;\n    }\n\n    public int[] shuffle() {\n        for (int i = 0; i < array.length; i++) {\n            int swapIdx = i + rand.nextInt(array.length - i);\n            int temp = array[i];\n            array[i] = array[swapIdx];\n            array[swapIdx] = temp;\n        }\n        return array;\n    }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution obj = new Solution(nums);\n * int[] param_1 = obj.reset();\n * int[] param_2 = obj.shuffle();\n */"
     }
   },
   "391": {
