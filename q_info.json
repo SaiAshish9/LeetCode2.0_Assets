@@ -1295,5 +1295,59 @@
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 42.1
+  },
+  "insert_delete_getrandom_o(1)": {
+    "qno": "380",
+    "title": "Insert Delete GetRandom O(1)",
+    "tags": [],
+    "default": "Randomized",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 54.5
+  },
+  "insert_delete_getrandom_o(1)_-_duplicates_allowed": {
+    "qno": "381",
+    "title": "Insert Delete GetRandom O(1) - Duplicates allowed",
+    "tags": [],
+    "default": "Randomized",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 35.5
+  },
+  "shuffle_an_array": {
+    "qno": "384",
+    "title": "Shuffle an Array",
+    "tags": [],
+    "default": "Randomized",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 58.4
+  },
+  "random_pick_with_blacklist": {
+    "qno": "710",
+    "title": "Random Pick with Blacklist",
+    "tags": [],
+    "default": "Randomized",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 33.4
+  },
+  "random_pick_with_weight": {
+    "qno": "528",
+    "title": "Random Pick with Weight",
+    "tags": [],
+    "default": "Randomized",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 46.9
+  },
+  "best_position_for_a_service_centre": {
+    "qno": "1515",
+    "title": "Best Position for a Service Centre",
+    "tags": [],
+    "default": "Randomized",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 35.5
   }
 }
