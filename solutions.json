@@ -250,7 +250,7 @@
   },
   "862": {
     "java": {
-      "monotonic-queue": ""
+      "monotonic-queue": "import java.util.Deque;\nimport java.util.LinkedList;\n\npublic class Solution {\n\n    public int shortestSubarray(int[] nums, int K) {\n        int n = nums.length;\n        long[] prefixSum = new long[n + 1];        \n        for (int i = 0; i < n; i++) {\n            prefixSum[i + 1] = prefixSum[i] + nums[i];\n        }\n        \n        Deque<Integer> deque = new LinkedList<>();\n        int minLength = Integer.MAX_VALUE;\n        \n        for (int i = 0; i <= n; i++) {\n            while (!deque.isEmpty() && prefixSum[i] - prefixSum[deque.peekFirst()] >= K) {\n                minLength = Math.min(minLength, i - deque.pollFirst());\n            }            \n            while (!deque.isEmpty() && prefixSum[i] <= prefixSum[deque.peekLast()]) {\n                deque.pollLast();\n            }\n            \n            deque.addLast(i);\n        }\n        \n        return minLength == Integer.MAX_VALUE ? -1 : minLength;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums = {2, -1, 2};\n        int K = 3;\n        System.out.println(solution.shortestSubarray(nums, K)); \n    }\n}\n"
     }
   },
   "900": {
