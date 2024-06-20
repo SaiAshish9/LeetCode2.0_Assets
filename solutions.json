@@ -63,7 +63,7 @@
   },
   "239": {
     "java": {
-      "monotonic_queue": "import java.util.*;\n\nclass Solution {\n    public int[] maxSlidingWindow(int[] nums, int k) {\n        int n = nums.length;\n        if (n * k == 0) return new int[0]; \n        if (k == 1) return nums; \n        Deque<Integer> deque = new LinkedList<>();\n        int[] result = new int[n - k + 1]; \n        for (int i = 0; i < n; i++) {\n            while (!deque.isEmpty() && deque.peek() < i - k + 1) {\n                deque.poll();\n            }\n            while (!deque.isEmpty() && nums[deque.peekLast()] <= nums[i]) {\n                deque.pollLast();\n            }\n            deque.offer(i); \n            if (i - k + 1 >= 0) {\n                result[i - k + 1] = nums[deque.peek()];\n            }\n        }\n        return result;\n    }\n}\n"
+      "monotonic-queue": "import java.util.*;\n\nclass Solution {\n    public int[] maxSlidingWindow(int[] nums, int k) {\n        int n = nums.length;\n        if (n * k == 0) return new int[0]; \n        if (k == 1) return nums; \n        Deque<Integer> deque = new LinkedList<>();\n        int[] result = new int[n - k + 1]; \n        for (int i = 0; i < n; i++) {\n            while (!deque.isEmpty() && deque.peek() < i - k + 1) {\n                deque.poll();\n            }\n            while (!deque.isEmpty() && nums[deque.peekLast()] <= nums[i]) {\n                deque.pollLast();\n            }\n            deque.offer(i); \n            if (i - k + 1 >= 0) {\n                result[i - k + 1] = nums[deque.peek()];\n            }\n        }\n        return result;\n    }\n}\n"
     }
   },
   "251": {
