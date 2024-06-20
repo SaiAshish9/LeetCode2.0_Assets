@@ -406,7 +406,7 @@
   },
   "1499": {
     "java": {
-      "monotonic-queue": ""
+      "monotonic-queue": "import java.util.Deque;\nimport java.util.LinkedList;\n\npublic class Solution {\n    public int findMaxValueOfEquation(int[][] points, int k) {\n        Deque<int[]> deque = new LinkedList<>();\n        int maxValue = Integer.MIN_VALUE;\n\n        for (int[] point : points) {\n            int xj = point[0];\n            int yj = point[1];\n\n            while (!deque.isEmpty() && xj - deque.peekFirst()[0] > k) {\n                deque.pollFirst();\n            }\n\n            if (!deque.isEmpty()) {\n                maxValue = Math.max(maxValue, yj + xj + deque.peekFirst()[1]);\n            }\n\n            while (!deque.isEmpty() && yj - xj >= deque.peekLast()[1]) {\n                deque.pollLast();\n            }\n\n            deque.offerLast(new int[]{xj, yj - xj});\n        }\n\n        return maxValue;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[][] points = {{1, 3}, {2, 0}, {3, 10}, {4, 10}, {5, 1}};\n        int k = 1;\n        System.out.println(solution.findMaxValueOfEquation(points, k));  // Output: 14\n    }\n}\n"
     }
   },
   "1515": {
