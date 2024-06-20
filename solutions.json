@@ -250,7 +250,7 @@
   },
   "862": {
     "java": {
-      "monotonic_queue": ""
+      "monotonic-queue": ""
     }
   },
   "900": {
@@ -267,7 +267,7 @@
   },
   "918": {
     "java": {
-      "monotonic_queue": ""
+      "monotonic-queue": ""
     }
   },
   "973": {
@@ -381,12 +381,12 @@
   },
   "1425": {
     "java": {
-      "monotonic_queue": ""
+      "monotonic-queue": ""
     }
   },
   "1438": {
     "java": {
-      "monotonic_queue": ""
+      "monotonic-queue": ""
     }
   },
   "1467": {
@@ -406,7 +406,7 @@
   },
   "1499": {
     "java": {
-      "monotonic_queue": ""
+      "monotonic-queue": ""
     }
   },
   "1515": {
@@ -436,12 +436,12 @@
   },
   "1687": {
     "java": {
-      "monotonic_queue": ""
+      "monotonic-queue": ""
     }
   },
   "1696": {
     "java": {
-      "monotonic_queue": ""
+      "monotonic-queue": ""
     }
   },
   "1698": {
@@ -487,7 +487,7 @@
   },
   "2071": {
     "java": {
-      "monotonic_queue": ""
+      "monotonic-queue": ""
     }
   },
   "2179": {
@@ -523,7 +523,7 @@
   },
   "2407": {
     "java": {
-      "monotonic_queue": ""
+      "monotonic-queue": ""
     }
   },
   "2426": {
@@ -533,7 +533,7 @@
   },
   "2444": {
     "java": {
-      "monotonic_queue": ""
+      "monotonic-queue": ""
     }
   },
   "2519": {
@@ -543,22 +543,22 @@
   },
   "2762": {
     "java": {
-      "monotonic_queue": ""
+      "monotonic-queue": ""
     }
   },
   "2944": {
     "java": {
-      "monotonic_queue": ""
+      "monotonic-queue": ""
     }
   },
   "2945": {
     "java": {
-      "monotonic_queue": ""
+      "monotonic-queue": ""
     }
   },
   "2969": {
     "java": {
-      "monotonic_queue": ""
+      "monotonic-queue": ""
     }
   },
   "3109": {
