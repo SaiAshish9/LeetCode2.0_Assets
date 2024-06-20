@@ -267,7 +267,7 @@
   },
   "918": {
     "java": {
-      "monotonic-queue": ""
+      "monotonic-queue": "import java.util.Deque;\nimport java.util.LinkedList;\n\npublic class Solution {\n    public int maxSubarraySumCircular(int[] nums) {\n        int n = nums.length;\n        int[] extendedNums = new int[2 * n];        \n        System.arraycopy(nums, 0, extendedNums, 0, n);\n        System.arraycopy(nums, 0, extendedNums, n, n);        \n        long[] prefixSum = new long[2 * n + 1];\n        for (int i = 0; i < 2 * n; i++) {\n            prefixSum[i + 1] = prefixSum[i] + extendedNums[i];\n        }\n        \n        Deque<Integer> deque = new LinkedList<>();\n        deque.add(0);\n        int maxSum = Integer.MIN_VALUE;\n        \n        for (int i = 1; i <= 2 * n; i++) {\n            if (deque.peekFirst() < i - n) {\n                deque.pollFirst();\n            }            \n            maxSum = Math.max(maxSum, (int)(prefixSum[i] - prefixSum[deque.peekFirst()]));\n            \n            // Maintain the deque's monotonic property\n            while (!deque.isEmpty() && prefixSum[i] <= prefixSum[deque.peekLast()]) {\n                deque.pollLast();\n            }\n            \n            deque.addLast(i);\n        }\n        \n        return maxSum;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums = {1, -2, 3, -2};\n        System.out.println(solution.maxSubarraySumCircular(nums));  // Output: 3\n    }\n}\n"
     }
   },
   "973": {
