@@ -81,7 +81,7 @@
   },
   "86": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\n\nclass Solution {\n    public ListNode partition(ListNode head, int x) {\n        ListNode dummy1 = new ListNode(0);\n        ListNode dummy2 = new ListNode(0); \n        ListNode lessPtr = dummy1; \n        ListNode greaterOrEqualPtr = dummy2; \n        \n        while (head != null) {\n            if (head.val < x) {\n                lessPtr.next = head;\n                lessPtr = lessPtr.next;\n            } else {\n                greaterOrEqualPtr.next = head;\n                greaterOrEqualPtr = greaterOrEqualPtr.next;\n            }\n            head = head.next;\n        }\n        \n        lessPtr.next = dummy2.next;\n        greaterOrEqualPtr.next = null; \n        return dummy1.next; \n    }\n}\n"
     }
   },
   "88": {
