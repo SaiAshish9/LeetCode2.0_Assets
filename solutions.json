@@ -61,7 +61,7 @@
   },
   "61": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode rotateRight(ListNode head, int k) {\n        if (head == null || head.next == null || k == 0) {\n            return head;\n        }\n        ListNode oldTail = head;\n        int length = 1;\n        while (oldTail.next != null) {\n            oldTail = oldTail.next;\n            length++;\n        }\n        oldTail.next = head;        \n        int newTailPosition = length - k % length - 1;        \n        ListNode newTail = head;\n        for (int i = 0; i < newTailPosition; i++) {\n            newTail = newTail.next;\n        }        \n        ListNode newHead = newTail.next;        \n        newTail.next = null;\n        return newHead;\n    }\n}\n"
     }
   },
   "75": {
