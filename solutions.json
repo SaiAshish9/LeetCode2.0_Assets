@@ -538,7 +538,7 @@
   },
   "2762": {
     "java": {
-      "monotonic-queue": ""
+      "monotonic-queue": "import java.util.Deque;\nimport java.util.LinkedList;\n\nclass Solution {\n    public long continuousSubarrays(int[] nums) {\n        long count = 0;\n        int left = 0;\n        Deque<Integer> maxDeque = new LinkedList<>();\n        Deque<Integer> minDeque = new LinkedList<>();\n\n        for (int right = 0; right < nums.length; right++) {\n            while (!maxDeque.isEmpty() && nums[maxDeque.peekLast()] <= nums[right]) {\n                maxDeque.pollLast();\n            }\n            maxDeque.offerLast(right);\n\n            while (!minDeque.isEmpty() && nums[minDeque.peekLast()] >= nums[right]) {\n                minDeque.pollLast();\n            }\n            minDeque.offerLast(right);\n\n            while (nums[maxDeque.peekFirst()] - nums[minDeque.peekFirst()] > 2) {\n                left++;\n                if (maxDeque.peekFirst() < left) {\n                    maxDeque.pollFirst();\n                }\n                if (minDeque.peekFirst() < left) {\n                    minDeque.pollFirst();\n                }\n            }\n\n            count += right - left + 1;\n        }\n\n        return count;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums1 = {5, 4, 2, 4};\n        System.out.println(solution.continuousSubarrays(nums1)); \n\n        int[] nums2 = {1, 2, 3};\n        System.out.println(solution.continuousSubarrays(nums2));\n    }\n}\n"
     }
   },
   "2846": {
