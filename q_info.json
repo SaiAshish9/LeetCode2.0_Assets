@@ -4341,5 +4341,1625 @@
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 24.9
+  },
+  "longest_substring_without_repeating_characters": {
+    "qno": "3",
+    "title": "Longest Substring Without Repeating Characters",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 35
+  },
+  "substring_with_concatenation_of_all_words": {
+    "qno": "30",
+    "title": "Substring with Concatenation of All Words",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 32.6
+  },
+  "minimum_window_substring": {
+    "qno": "76",
+    "title": "Minimum Window Substring",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 43.2
+  },
+  "longest_substring_with_at_most_two_distinct_characters": {
+    "qno": "159",
+    "title": "Longest Substring with At Most Two Distinct Characters",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 55.5
+  },
+  "repeated_dna_sequences": {
+    "qno": "187",
+    "title": "Repeated DNA Sequences",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Bit Manipulation",
+      "Sliding Window",
+      "Rolling Hash",
+      "Hash Function"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.1
+  },
+  "minimum_size_subarray_sum": {
+    "qno": "209",
+    "title": "Minimum Size Subarray Sum",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Sliding Window",
+      "Prefix Sum"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 47.3
+  },
+  "contains_duplicate_ii": {
+    "qno": "219",
+    "title": "Contains Duplicate II",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 45.5
+  },
+  "contains_duplicate_iii": {
+    "qno": "220",
+    "title": "Contains Duplicate III",
+    "tags": [
+      "Array",
+      "Sliding Window",
+      "Sorting",
+      "Bucket Sort",
+      "Ordered Set"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 22.8
+  },
+  "sliding_window_maximum": {
+    "qno": "239",
+    "title": "Sliding Window Maximum",
+    "tags": [
+      "Array",
+      "Queue",
+      "Sliding Window",
+      "Heap (Priority Queue)",
+      "Monotonic Queue"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 46.6
+  },
+  "longest_substring_with_at_most_k_distinct_characters": {
+    "qno": "340",
+    "title": "Longest Substring with At Most K Distinct Characters",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 48.9
+  },
+  "longest_substring_with_at_least_k_repeating_characters": {
+    "qno": "395",
+    "title": "Longest Substring with At Least K Repeating Characters",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Divide and Conquer",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 45
+  },
+  "longest_repeating_character_replacement": {
+    "qno": "424",
+    "title": "Longest Repeating Character Replacement",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 54.3
+  },
+  "find_all_anagrams_in_a_string": {
+    "qno": "438",
+    "title": "Find All Anagrams in a String",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 51
+  },
+  "sliding_window_median": {
+    "qno": "480",
+    "title": "Sliding Window Median",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 39.1
+  },
+  "max_consecutive_ones_ii": {
+    "qno": "487",
+    "title": "Max Consecutive Ones II",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 50.4
+  },
+  "permutation_in_string": {
+    "qno": "567",
+    "title": "Permutation in String",
+    "tags": [
+      "Hash Table",
+      "Two Pointers",
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 44.5
+  },
+  "longest_harmonious_subsequence": {
+    "qno": "594",
+    "title": "Longest Harmonious Subsequence",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window",
+      "Sorting",
+      "Counting"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 54.8
+  },
+  "smallest_range_covering_elements_from_k_lists": {
+    "qno": "632",
+    "title": "Smallest Range Covering Elements from K Lists",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Greedy",
+      "Sliding Window",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 62.7
+  },
+  "maximum_average_subarray_i": {
+    "qno": "643",
+    "title": "Maximum Average Subarray I",
+    "tags": [
+      "Array",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 43.5
+  },
+  "find_k_closest_elements": {
+    "qno": "658",
+    "title": "Find K Closest Elements",
+    "tags": [
+      "Array",
+      "Two Pointers",
+      "Binary Search",
+      "Sliding Window",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 47.5
+  },
+  "k_empty_slots": {
+    "qno": "683",
+    "title": "K Empty Slots",
+    "tags": [
+      "Array",
+      "Binary Indexed Tree",
+      "Sliding Window",
+      "Ordered Set"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 37.1
+  },
+  "subarray_product_less_than_k": {
+    "qno": "713",
+    "title": "Subarray Product Less Than K",
+    "tags": [
+      "Array",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 51.5
+  },
+  "maximum_length_of_repeated_subarray": {
+    "qno": "718",
+    "title": "Maximum Length of Repeated Subarray",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Dynamic Programming",
+      "Sliding Window",
+      "Rolling Hash",
+      "Hash Function"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 50.9
+  },
+  "minimum_window_subsequence": {
+    "qno": "727",
+    "title": "Minimum Window Subsequence",
+    "tags": [
+      "String",
+      "Dynamic Programming",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 43.5
+  },
+  "new_21_game": {
+    "qno": "837",
+    "title": "New 21 Game",
+    "tags": [
+      "Math",
+      "Dynamic Programming",
+      "Sliding Window",
+      "Probability and Statistics"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 45
+  },
+  "shortest_subarray_with_sum_at_least_k": {
+    "qno": "862",
+    "title": "Shortest Subarray with Sum at Least K",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Queue",
+      "Sliding Window",
+      "Heap (Priority Queue)",
+      "Prefix Sum",
+      "Monotonic Queue"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 26
+  },
+  "fruit_into_baskets": {
+    "qno": "904",
+    "title": "Fruit Into Baskets",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 44.4
+  },
+  "binary_subarrays_with_sum": {
+    "qno": "930",
+    "title": "Binary Subarrays With Sum",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window",
+      "Prefix Sum"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 62.7
+  },
+  "longest_turbulent_subarray": {
+    "qno": "978",
+    "title": "Longest Turbulent Subarray",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 47.5
+  },
+  "subarrays_with_k_different_integers": {
+    "qno": "992",
+    "title": "Subarrays with K Different Integers",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window",
+      "Counting"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 63.4
+  },
+  "minimum_number_of_k_consecutive_bit_flips": {
+    "qno": "995",
+    "title": "Minimum Number of K Consecutive Bit Flips",
+    "tags": [
+      "Array",
+      "Bit Manipulation",
+      "Queue",
+      "Sliding Window",
+      "Prefix Sum"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 51.7
+  },
+  "max_consecutive_ones_iii": {
+    "qno": "1004",
+    "title": "Max Consecutive Ones III",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Sliding Window",
+      "Prefix Sum"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 63.3
+  },
+  "find_k-length_substrings_with_no_repeated_characters": {
+    "qno": "1100",
+    "title": "Find K-Length Substrings With No Repeated Characters",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 74.7
+  },
+  "maximum_sum_of_two_non-overlapping_subarrays": {
+    "qno": "1031",
+    "title": "Maximum Sum of Two Non-Overlapping Subarrays",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 59.8
+  },
+  "minimum_swaps_to_group_all_1's_together": {
+    "qno": "1151",
+    "title": "Minimum Swaps to Group All 1's Together",
+    "tags": [
+      "Array",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 60.2
+  },
+  "longest_duplicate_substring": {
+    "qno": "1044",
+    "title": "Longest Duplicate Substring",
+    "tags": [
+      "String",
+      "Binary Search",
+      "Sliding Window",
+      "Rolling Hash",
+      "Suffix Array",
+      "Hash Function"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 30.6
+  },
+  "grumpy_bookstore_owner": {
+    "qno": "1052",
+    "title": "Grumpy Bookstore Owner",
+    "tags": [
+      "Array",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 64.1
+  },
+  "swap_for_longest_repeated_character_substring": {
+    "qno": "1156",
+    "title": "Swap For Longest Repeated Character Substring",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 44.1
+  },
+  "diet_plan_performance": {
+    "qno": "1176",
+    "title": "Diet Plan Performance",
+    "tags": [
+      "Array",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 53.4
+  },
+  "constrained_subsequence_sum": {
+    "qno": "1425",
+    "title": "Constrained Subsequence Sum",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Queue",
+      "Sliding Window",
+      "Heap (Priority Queue)",
+      "Monotonic Queue"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 56.7
+  },
+  "get_equal_substrings_within_budget": {
+    "qno": "1208",
+    "title": "Get Equal Substrings Within Budget",
+    "tags": [
+      "String",
+      "Binary Search",
+      "Sliding Window",
+      "Prefix Sum"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 58.3
+  },
+  "replace_the_substring_for_balanced_string": {
+    "qno": "1234",
+    "title": "Replace the Substring for Balanced String",
+    "tags": [
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 38.4
+  },
+  "count_number_of_nice_subarrays": {
+    "qno": "1248",
+    "title": "Count Number of Nice Subarrays",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Math",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 66.4
+  },
+  "maximum_number_of_occurrences_of_a_substring": {
+    "qno": "1297",
+    "title": "Maximum Number of Occurrences of a Substring",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 52
+  },
+  "find_the_k-beauty_of_a_number": {
+    "qno": "2269",
+    "title": "Find the K-Beauty of a Number",
+    "tags": [
+      "Math",
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 59.9
+  },
+  "number_of_sub-arrays_of_size_k_and_average_greater_than_or_equal_to_threshold": {
+    "qno": "1343",
+    "title": "Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold",
+    "tags": [
+      "Array",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 68.5
+  },
+  "number_of_substrings_containing_all_three_characters": {
+    "qno": "1358",
+    "title": "Number of Substrings Containing All Three Characters",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 67
+  },
+  "maximum_points_you_can_obtain_from_cards": {
+    "qno": "1423",
+    "title": "Maximum Points You Can Obtain from Cards",
+    "tags": [
+      "Array",
+      "Sliding Window",
+      "Prefix Sum"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 53
+  },
+  "longest_continuous_subarray_with_absolute_diff_less_than_or_equal_to_limit": {
+    "qno": "1438",
+    "title": "Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit",
+    "tags": [
+      "Array",
+      "Queue",
+      "Sliding Window",
+      "Heap (Priority Queue)",
+      "Ordered Set",
+      "Monotonic Queue"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.6
+  },
+  "maximum_number_of_vowels_in_a_substring_of_given_length": {
+    "qno": "1456",
+    "title": "Maximum Number of Vowels in a Substring of Given Length",
+    "tags": [
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 58.6
+  },
+  "find_two_non-overlapping_sub-arrays_each_with_target_sum": {
+    "qno": "1477",
+    "title": "Find Two Non-overlapping Sub-arrays Each With Target Sum",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Binary Search",
+      "Dynamic Programming",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 36.5
+  },
+  "longest_subarray_of_1's_after_deleting_one_element": {
+    "qno": "1493",
+    "title": "Longest Subarray of 1's After Deleting One Element",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 67.5
+  },
+  "max_value_of_equation": {
+    "qno": "1499",
+    "title": "Max Value of Equation",
+    "tags": [
+      "Array",
+      "Queue",
+      "Sliding Window",
+      "Heap (Priority Queue)",
+      "Monotonic Queue"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 44.1
+  },
+  "maximum_number_of_visible_points": {
+    "qno": "1610",
+    "title": "Maximum Number of Visible Points",
+    "tags": [
+      "Array",
+      "Math",
+      "Geometry",
+      "Sliding Window",
+      "Sorting"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 37.4
+  },
+  "defuse_the_bomb": {
+    "qno": "1652",
+    "title": "Defuse the Bomb",
+    "tags": [
+      "Array",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 65.6
+  },
+  "minimum_operations_to_reduce_x_to_zero": {
+    "qno": "1658",
+    "title": "Minimum Operations to Reduce X to Zero",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Binary Search",
+      "Sliding Window",
+      "Prefix Sum"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 39.7
+  },
+  "minimum_adjacent_swaps_for_k_consecutive_ones": {
+    "qno": "1703",
+    "title": "Minimum Adjacent Swaps for K Consecutive Ones",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Sliding Window",
+      "Prefix Sum"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 42.9
+  },
+  "maximum_erasure_value": {
+    "qno": "1695",
+    "title": "Maximum Erasure Value",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 58.3
+  },
+  "longest_nice_substring": {
+    "qno": "1763",
+    "title": "Longest Nice Substring",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Divide and Conquer",
+      "Bit Manipulation",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 60.6
+  },
+  "frequency_of_the_most_frequent_element": {
+    "qno": "1838",
+    "title": "Frequency of the Most Frequent Element",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Greedy",
+      "Sliding Window",
+      "Sorting",
+      "Prefix Sum"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 44.7
+  },
+  "longest_substring_of_all_vowels_in_order": {
+    "qno": "1839",
+    "title": "Longest Substring Of All Vowels in Order",
+    "tags": [
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.3
+  },
+  "substrings_of_size_three_with_distinct_characters": {
+    "qno": "1876",
+    "title": "Substrings of Size Three with Distinct Characters",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window",
+      "Counting"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 73.5
+  },
+  "jump_game_vii": {
+    "qno": "1871",
+    "title": "Jump Game VII",
+    "tags": [
+      "String",
+      "Dynamic Programming",
+      "Sliding Window",
+      "Prefix Sum"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 24.9
+  },
+  "distinct_numbers_in_each_subarray": {
+    "qno": "1852",
+    "title": "Distinct Numbers in Each Subarray",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 71.3
+  },
+  "minimum_number_of_flips_to_make_the_binary_string_alternating": {
+    "qno": "1888",
+    "title": "Minimum Number of Flips to Make the Binary String Alternating",
+    "tags": [
+      "String",
+      "Dynamic Programming",
+      "Greedy",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 39.9
+  },
+  "kth_smallest_subarray_sum": {
+    "qno": "1918",
+    "title": "Kth Smallest Subarray Sum",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 52.8
+  },
+  "minimum_difference_between_highest_and_lowest_of_k_scores": {
+    "qno": "1984",
+    "title": "Minimum Difference Between Highest and Lowest of K Scores",
+    "tags": [
+      "Array",
+      "Sliding Window",
+      "Sorting"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 56.8
+  },
+  "minimum_number_of_operations_to_make_array_continuous": {
+    "qno": "2009",
+    "title": "Minimum Number of Operations to Make Array Continuous",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 52.8
+  },
+  "maximize_the_confusion_of_an_exam": {
+    "qno": "2024",
+    "title": "Maximize the Confusion of an Exam",
+    "tags": [
+      "String",
+      "Binary Search",
+      "Sliding Window",
+      "Prefix Sum"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 67.2
+  },
+  "k_radius_subarray_averages": {
+    "qno": "2090",
+    "title": "K Radius Subarray Averages",
+    "tags": [
+      "Array",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 46.2
+  },
+  "maximum_fruits_harvested_after_at_most_k_steps": {
+    "qno": "2106",
+    "title": "Maximum Fruits Harvested After at Most K Steps",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Sliding Window",
+      "Prefix Sum"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 36.2
+  },
+  "number_of_unique_flavors_after_sharing_k_candies": {
+    "qno": "2107",
+    "title": "Number of Unique Flavors After Sharing K Candies",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 55.5
+  },
+  "minimum_swaps_to_group_all_1's_together_ii": {
+    "qno": "2134",
+    "title": "Minimum Swaps to Group All 1's Together II",
+    "tags": [
+      "Array",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 52.5
+  },
+  "find_substring_with_given_hash_value": {
+    "qno": "2156",
+    "title": "Find Substring With Given Hash Value",
+    "tags": [
+      "String",
+      "Sliding Window",
+      "Rolling Hash",
+      "Hash Function"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 23.5
+  },
+  "minimum_consecutive_cards_to_pick_up": {
+    "qno": "2260",
+    "title": "Minimum Consecutive Cards to Pick Up",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 51.3
+  },
+  "count_subarrays_with_score_less_than_k": {
+    "qno": "2302",
+    "title": "Count Subarrays With Score Less Than K",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Sliding Window",
+      "Prefix Sum"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 54.6
+  },
+  "maximum_number_of_robots_within_budget": {
+    "qno": "2398",
+    "title": "Maximum Number of Robots Within Budget",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Queue",
+      "Sliding Window",
+      "Heap (Priority Queue)",
+      "Prefix Sum"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 34.4
+  },
+  "minimum_recolors_to_get_k_consecutive_black_blocks": {
+    "qno": "2379",
+    "title": "Minimum Recolors to Get K Consecutive Black Blocks",
+    "tags": [
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 58.8
+  },
+  "longest_nice_subarray": {
+    "qno": "2401",
+    "title": "Longest Nice Subarray",
+    "tags": [
+      "Array",
+      "Bit Manipulation",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 51.4
+  },
+  "smallest_subarrays_with_maximum_bitwise_or": {
+    "qno": "2411",
+    "title": "Smallest Subarrays With Maximum Bitwise OR",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Bit Manipulation",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 44.1
+  },
+  "count_subarrays_with_fixed_bounds": {
+    "qno": "2444",
+    "title": "Count Subarrays With Fixed Bounds",
+    "tags": [
+      "Array",
+      "Queue",
+      "Sliding Window",
+      "Monotonic Queue"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 68
+  },
+  "maximum_sum_of_distinct_subarrays_with_length_k": {
+    "qno": "2461",
+    "title": "Maximum Sum of Distinct Subarrays With Length K",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 34
+  },
+  "take_k_of_each_character_from_left_and_right": {
+    "qno": "2516",
+    "title": "Take K of Each Character From Left and Right",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 34.4
+  },
+  "maximize_the_minimum_powered_city": {
+    "qno": "2528",
+    "title": "Maximize the Minimum Powered City",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Greedy",
+      "Queue",
+      "Sliding Window",
+      "Prefix Sum"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 32.2
+  },
+  "count_the_number_of_good_subarrays": {
+    "qno": "2537",
+    "title": "Count the Number of Good Subarrays",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 50.5
+  },
+  "maximum_frequency_score_of_a_subarray": {
+    "qno": "2524",
+    "title": "Maximum Frequency Score of a Subarray",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Math",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 40.3
+  },
+  "maximize_win_from_two_segments": {
+    "qno": "2555",
+    "title": "Maximize Win From Two Segments",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 33
+  },
+  "sliding_subarray_beauty": {
+    "qno": "2653",
+    "title": "Sliding Subarray Beauty",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 33
+  },
+  "find_the_longest_semi-repetitive_substring": {
+    "qno": "2730",
+    "title": "Find the Longest Semi-Repetitive Substring",
+    "tags": [
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 36.5
+  },
+  "find_the_longest_equal_subarray": {
+    "qno": "2831",
+    "title": "Find the Longest Equal Subarray",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 35.6
+  },
+  "count_zero_request_servers": {
+    "qno": "2747",
+    "title": "Count Zero Request Servers",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window",
+      "Sorting"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 32.5
+  },
+  "count_complete_subarrays_in_an_array": {
+    "qno": "2799",
+    "title": "Count Complete Subarrays in an Array",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 64.8
+  },
+  "longest_even_odd_subarray_with_threshold": {
+    "qno": "2760",
+    "title": "Longest Even Odd Subarray With Threshold",
+    "tags": [
+      "Array",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 29.5
+  },
+  "continuous_subarrays": {
+    "qno": "2762",
+    "title": "Continuous Subarrays",
+    "tags": [
+      "Array",
+      "Queue",
+      "Sliding Window",
+      "Heap (Priority Queue)",
+      "Ordered Set",
+      "Monotonic Queue"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 40.9
+  },
+  "length_of_the_longest_valid_substring": {
+    "qno": "2781",
+    "title": "Length of the Longest Valid Substring",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 37.4
+  },
+  "count_substrings_without_repeating_character": {
+    "qno": "2743",
+    "title": "Count Substrings Without Repeating Character",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 70.7
+  },
+  "maximum_beauty_of_an_array_after_applying_operation": {
+    "qno": "2779",
+    "title": "Maximum Beauty of an Array After Applying Operation",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Sliding Window",
+      "Sorting"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 38
+  },
+  "maximum_sum_of_almost_unique_subarray": {
+    "qno": "2841",
+    "title": "Maximum Sum of Almost Unique Subarray",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 37.9
+  },
+  "count_of_sub-multisets_with_bounded_sum": {
+    "qno": "2902",
+    "title": "Count of Sub-Multisets With Bounded Sum",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Dynamic Programming",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 20.7
+  },
+  "minimum_size_subarray_in_infinite_array": {
+    "qno": "2875",
+    "title": "Minimum Size Subarray in Infinite Array",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window",
+      "Prefix Sum"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 30.8
+  },
+  "shortest_and_lexicographically_smallest_beautiful_string": {
+    "qno": "2904",
+    "title": "Shortest and Lexicographically Smallest Beautiful String",
+    "tags": [
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 38.8
+  },
+  "maximum_strong_pair_xor_i": {
+    "qno": "2932",
+    "title": "Maximum Strong Pair XOR I",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Bit Manipulation",
+      "Trie",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 76
+  },
+  "apply_operations_to_maximize_frequency_score": {
+    "qno": "2968",
+    "title": "Apply Operations to Maximize Frequency Score",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Sliding Window",
+      "Sorting",
+      "Prefix Sum"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 39.1
+  },
+  "maximum_strong_pair_xor_ii": {
+    "qno": "2935",
+    "title": "Maximum Strong Pair XOR II",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Bit Manipulation",
+      "Trie",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 30.1
+  },
+  "count_subarrays_where_max_element_appears_at_least_k_times": {
+    "qno": "2962",
+    "title": "Count Subarrays Where Max Element Appears at Least K Times",
+    "tags": [
+      "Array",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 59.1
+  },
+  "count_complete_substrings": {
+    "qno": "2953",
+    "title": "Count Complete Substrings",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 26.8
+  },
+  "length_of_longest_subarray_with_at_most_k_frequency": {
+    "qno": "2958",
+    "title": "Length of Longest Subarray With at Most K Frequency",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 55.8
+  },
+  "divide_an_array_into_subarrays_with_minimum_cost_ii": {
+    "qno": "3013",
+    "title": "Divide an Array Into Subarrays With Minimum Cost II",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 31.8
+  },
+  "find_longest_special_substring_that_occurs_thrice_ii": {
+    "qno": "2982",
+    "title": "Find Longest Special Substring That Occurs Thrice II",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Binary Search",
+      "Sliding Window",
+      "Counting"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 33.9
+  },
+  "find_longest_special_substring_that_occurs_thrice_i": {
+    "qno": "2981",
+    "title": "Find Longest Special Substring That Occurs Thrice I",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Binary Search",
+      "Sliding Window",
+      "Counting"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 42.7
+  },
+  "minimum_moves_to_pick_k_ones": {
+    "qno": "3086",
+    "title": "Minimum Moves to Pick K Ones",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Sliding Window",
+      "Prefix Sum"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 23.8
+  },
+  "find_pattern_in_infinite_stream_i": {
+    "qno": "3023",
+    "title": "Find Pattern in Infinite Stream I",
+    "tags": [
+      "Array",
+      "Sliding Window",
+      "Rolling Hash",
+      "String Matching",
+      "Hash Function"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 59.8
+  },
+  "maximum_length_substring_with_two_occurrences": {
+    "qno": "3090",
+    "title": "Maximum Length Substring With Two Occurrences",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 63.9
+  },
+  "find_pattern_in_infinite_stream_ii": {
+    "qno": "3037",
+    "title": "Find Pattern in Infinite Stream II",
+    "tags": [
+      "Array",
+      "Sliding Window",
+      "Rolling Hash",
+      "String Matching",
+      "Hash Function"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 70.2
+  },
+  "find_the_median_of_the_uniqueness_array": {
+    "qno": "3134",
+    "title": "Find the Median of the Uniqueness Array",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 29
+  },
+  "shortest_subarray_with_or_at_least_k_ii": {
+    "qno": "3097",
+    "title": "Shortest Subarray With OR at Least K II",
+    "tags": [
+      "Array",
+      "Bit Manipulation",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 29.9
+  },
+  "shortest_subarray_with_or_at_least_k_i": {
+    "qno": "3095",
+    "title": "Shortest Subarray With OR at Least K I",
+    "tags": [
+      "Array",
+      "Bit Manipulation",
+      "Sliding Window"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 41
+  },
+  "equalize_strings_by_adding_or_removing_characters_at_ends": {
+    "qno": "3135",
+    "title": "Equalize Strings by Adding or Removing Characters at Ends",
+    "tags": [
+      "String",
+      "Binary Search",
+      "Dynamic Programming",
+      "Sliding Window",
+      "Hash Function"
+    ],
+    "default": "Sliding Window",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 57.5
   }
 }
