@@ -101,7 +101,7 @@
   },
   "142": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "public class Solution {\n    public ListNode detectCycle(ListNode head) {\n        ListNode slow = head;\n        ListNode fast = head;\n\n        while (fast != null && fast.next != null) {\n            slow = slow.next;\n            fast = fast.next.next;\n            if (slow == fast) {\n                slow = head;\n                while (slow != fast) {\n                    slow = slow.next;\n                    fast = fast.next;\n                }\n                return slow; \n            }\n        }\n\n        return null; \n    }\n}\n"
     }
   },
   "143": {
