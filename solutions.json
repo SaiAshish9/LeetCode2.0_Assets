@@ -6,33 +6,7 @@
   },
   "11": {
     "java": {
-      "two-pointers": "public class Solution {
-    public int maxArea(int[] height) {
-        int max = 0;
-        int left = 0;
-        int right = height.length - 1;
-
-        while (left < right) {
-            int currentArea = Math.min(height[left], height[right]) * (right - left);
-            max = Math.max(max, currentArea);
-
-            if (height[left] < height[right]) {
-                left++;
-            } else {
-                right--;
-            }
-        }
-
-        return max;
-    }
-
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        int[] heights = {1, 2, 1};
-        System.out.println(solution.maxArea(heights)); // Output: 2
-    }
-}
-"
+      "two-pointers": "public class Solution {\n    public int maxArea(int[] height) {\n        int max = 0;\n        int left = 0;\n        int right = height.length - 1;\n\n        while (left < right) {\n            int currentArea = Math.min(height[left], height[right]) * (right - left);\n            max = Math.max(max, currentArea);\n\n            if (height[left] < height[right]) {\n                left++;\n            } else {\n                right--;\n            }\n        }\n\n        return max;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] heights = {1, 2, 1};\n        System.out.println(solution.maxArea(heights)); // Output: 2\n    }\n}\n"
     }
   },
   "15": {
