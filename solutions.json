@@ -36,7 +36,7 @@
   },
   "26": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "class Solution {\n    public int removeDuplicates(int[] nums) {\n        if (nums.length == 0) return 0;\n\n        int slow = 1;  // slow pointer\n        for (int fast = 1; fast < nums.length; fast++) {  // fast pointer\n            if (nums[fast] != nums[fast - 1]) {\n                nums[slow] = nums[fast];\n                slow++;\n            }\n        }\n        return slow;\n    }\n}\n"
     }
   },
   "27": {
