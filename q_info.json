@@ -1886,21 +1886,6 @@
     "language": "Java",
     "acceptance": 59.1
   },
-  "sort_list": {
-    "qno": "148",
-    "title": "Sort List",
-    "tags": [
-      "Linked List",
-      "Two Pointers",
-      "Divide and Conquer",
-      "Sorting",
-      "Merge Sort"
-    ],
-    "default": "Two Pointers",
-    "difficulty": "Medium",
-    "language": "Java",
-    "acceptance": 58.4
-  },
   "reverse_words_in_a_string": {
     "qno": "151",
     "title": "Reverse Words in a String",
@@ -2057,20 +2042,6 @@
     "difficulty": "Easy",
     "language": "Java",
     "acceptance": 47.7
-  },
-  "flatten_2d_vector": {
-    "qno": "251",
-    "title": "Flatten 2D Vector",
-    "tags": [
-      "Array",
-      "Two Pointers",
-      "Design",
-      "Iterator"
-    ],
-    "default": "Two Pointers",
-    "difficulty": "Medium",
-    "language": "Java",
-    "acceptance": 49.6
   },
   "meeting_rooms_ii": {
     "qno": "253",
