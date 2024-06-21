@@ -4437,36 +4437,6 @@
     "language": "Java",
     "acceptance": 45.5
   },
-  "contains_duplicate_iii": {
-    "qno": "220",
-    "title": "Contains Duplicate III",
-    "tags": [
-      "Array",
-      "Sliding Window",
-      "Sorting",
-      "Bucket Sort",
-      "Ordered Set"
-    ],
-    "default": "Sliding Window",
-    "difficulty": "Hard",
-    "language": "Java",
-    "acceptance": 22.8
-  },
-  "sliding_window_maximum": {
-    "qno": "239",
-    "title": "Sliding Window Maximum",
-    "tags": [
-      "Array",
-      "Queue",
-      "Sliding Window",
-      "Heap (Priority Queue)",
-      "Monotonic Queue"
-    ],
-    "default": "Sliding Window",
-    "difficulty": "Hard",
-    "language": "Java",
-    "acceptance": 46.6
-  },
   "longest_substring_with_at_most_k_distinct_characters": {
     "qno": "340",
     "title": "Longest Substring with At Most K Distinct Characters",
@@ -4547,20 +4517,6 @@
     "language": "Java",
     "acceptance": 50.4
   },
-  "permutation_in_string": {
-    "qno": "567",
-    "title": "Permutation in String",
-    "tags": [
-      "Hash Table",
-      "Two Pointers",
-      "String",
-      "Sliding Window"
-    ],
-    "default": "Sliding Window",
-    "difficulty": "Medium",
-    "language": "Java",
-    "acceptance": 44.5
-  },
   "longest_harmonious_subsequence": {
     "qno": "594",
     "title": "Longest Harmonious Subsequence",
@@ -4603,22 +4559,6 @@
     "difficulty": "Easy",
     "language": "Java",
     "acceptance": 43.5
-  },
-  "find_k_closest_elements": {
-    "qno": "658",
-    "title": "Find K Closest Elements",
-    "tags": [
-      "Array",
-      "Two Pointers",
-      "Binary Search",
-      "Sliding Window",
-      "Sorting",
-      "Heap (Priority Queue)"
-    ],
-    "default": "Sliding Window",
-    "difficulty": "Medium",
-    "language": "Java",
-    "acceptance": 47.5
   },
   "k_empty_slots": {
     "qno": "683",
@@ -4674,37 +4614,6 @@
     "difficulty": "Hard",
     "language": "Java",
     "acceptance": 43.5
-  },
-  "new_21_game": {
-    "qno": "837",
-    "title": "New 21 Game",
-    "tags": [
-      "Math",
-      "Dynamic Programming",
-      "Sliding Window",
-      "Probability and Statistics"
-    ],
-    "default": "Sliding Window",
-    "difficulty": "Medium",
-    "language": "Java",
-    "acceptance": 45
-  },
-  "shortest_subarray_with_sum_at_least_k": {
-    "qno": "862",
-    "title": "Shortest Subarray with Sum at Least K",
-    "tags": [
-      "Array",
-      "Binary Search",
-      "Queue",
-      "Sliding Window",
-      "Heap (Priority Queue)",
-      "Prefix Sum",
-      "Monotonic Queue"
-    ],
-    "default": "Sliding Window",
-    "difficulty": "Hard",
-    "language": "Java",
-    "acceptance": 26
   },
   "fruit_into_baskets": {
     "qno": "904",
@@ -4827,22 +4736,6 @@
     "language": "Java",
     "acceptance": 60.2
   },
-  "longest_duplicate_substring": {
-    "qno": "1044",
-    "title": "Longest Duplicate Substring",
-    "tags": [
-      "String",
-      "Binary Search",
-      "Sliding Window",
-      "Rolling Hash",
-      "Suffix Array",
-      "Hash Function"
-    ],
-    "default": "Sliding Window",
-    "difficulty": "Hard",
-    "language": "Java",
-    "acceptance": 30.6
-  },
   "grumpy_bookstore_owner": {
     "qno": "1052",
     "title": "Grumpy Bookstore Owner",
@@ -4879,22 +4772,6 @@
     "difficulty": "Easy",
     "language": "Java",
     "acceptance": 53.4
-  },
-  "constrained_subsequence_sum": {
-    "qno": "1425",
-    "title": "Constrained Subsequence Sum",
-    "tags": [
-      "Array",
-      "Dynamic Programming",
-      "Queue",
-      "Sliding Window",
-      "Heap (Priority Queue)",
-      "Monotonic Queue"
-    ],
-    "default": "Sliding Window",
-    "difficulty": "Hard",
-    "language": "Java",
-    "acceptance": 56.7
   },
   "get_equal_substrings_within_budget": {
     "qno": "1208",
@@ -5000,22 +4877,6 @@
     "language": "Java",
     "acceptance": 53
   },
-  "longest_continuous_subarray_with_absolute_diff_less_than_or_equal_to_limit": {
-    "qno": "1438",
-    "title": "Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit",
-    "tags": [
-      "Array",
-      "Queue",
-      "Sliding Window",
-      "Heap (Priority Queue)",
-      "Ordered Set",
-      "Monotonic Queue"
-    ],
-    "default": "Sliding Window",
-    "difficulty": "Medium",
-    "language": "Java",
-    "acceptance": 49.6
-  },
   "maximum_number_of_vowels_in_a_substring_of_given_length": {
     "qno": "1456",
     "title": "Maximum Number of Vowels in a Substring of Given Length",
@@ -5055,21 +4916,6 @@
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 67.5
-  },
-  "max_value_of_equation": {
-    "qno": "1499",
-    "title": "Max Value of Equation",
-    "tags": [
-      "Array",
-      "Queue",
-      "Sliding Window",
-      "Heap (Priority Queue)",
-      "Monotonic Queue"
-    ],
-    "default": "Sliding Window",
-    "difficulty": "Hard",
-    "language": "Java",
-    "acceptance": 44.1
   },
   "maximum_number_of_visible_points": {
     "qno": "1610",
@@ -5439,20 +5285,6 @@
     "language": "Java",
     "acceptance": 44.1
   },
-  "count_subarrays_with_fixed_bounds": {
-    "qno": "2444",
-    "title": "Count Subarrays With Fixed Bounds",
-    "tags": [
-      "Array",
-      "Queue",
-      "Sliding Window",
-      "Monotonic Queue"
-    ],
-    "default": "Sliding Window",
-    "difficulty": "Hard",
-    "language": "Java",
-    "acceptance": 68
-  },
   "maximum_sum_of_distinct_subarrays_with_length_k": {
     "qno": "2461",
     "title": "Maximum Sum of Distinct Subarrays With Length K",
@@ -5612,22 +5444,6 @@
     "difficulty": "Easy",
     "language": "Java",
     "acceptance": 29.5
-  },
-  "continuous_subarrays": {
-    "qno": "2762",
-    "title": "Continuous Subarrays",
-    "tags": [
-      "Array",
-      "Queue",
-      "Sliding Window",
-      "Heap (Priority Queue)",
-      "Ordered Set",
-      "Monotonic Queue"
-    ],
-    "default": "Sliding Window",
-    "difficulty": "Medium",
-    "language": "Java",
-    "acceptance": 40.9
   },
   "length_of_the_longest_valid_substring": {
     "qno": "2781",
