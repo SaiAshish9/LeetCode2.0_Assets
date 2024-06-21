@@ -66,7 +66,7 @@
   },
   "75": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "class Solution {\n    public void sortColors(int[] nums) {\n        int low = 0;\n        int mid = 0;\n        int high = nums.length - 1;\n\n        while (mid <= high) {\n            if (nums[mid] == 0) {\n                swap(nums, low, mid);\n                low++;\n                mid++;\n            } else if (nums[mid] == 1) {\n                mid++;\n            } else {  // nums[mid] == 2\n                swap(nums, mid, high);\n                high--;\n            }\n        }\n    }\n\n    private void swap(int[] nums, int i, int j) {\n        int temp = nums[i];\n        nums[i] = nums[j];\n        nums[j] = temp;\n    }\n\n    public static void main(String[] args) {\n        Solution sol = new Solution();\n        int[] nums = {2, 0, 2, 1, 1, 0};\n        sol.sortColors(nums);        \n        for (int num : nums) {\n            System.out.print(num + \" \");\n        }\n    }\n}\n"
     }
   },
   "80": {
