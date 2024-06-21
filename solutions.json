@@ -558,7 +558,7 @@
   },
   "2969": {
     "java": {
-      "monotonic-queue": ""
+      "monotonic-queue": "class Solution {\n    public int minimumCoins(int[] prices) {\n        int n = prices.length;\n        Deque<Integer> q = new ArrayDeque<>();\n        for (int i = n; i > 0; --i) {\n            while (!q.isEmpty() && q.peek() > i * 2 + 1) {\n                q.poll();\n            }\n            if (i <= (n - 1) / 2) {\n                prices[i - 1] += prices[q.peek() - 1];\n            }\n            while (!q.isEmpty() && prices[q.peekLast() - 1] >= prices[i - 1]) {\n                q.pollLast();\n            }\n            q.offer(i);\n        }\n        return prices[0];\n    }\n}"
     }
   },
   "3109": {
