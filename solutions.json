@@ -26,7 +26,7 @@
   },
   "19": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode removeNthFromEnd(ListNode head, int n) {\n        ListNode dummy = new ListNode(0);\n        dummy.next = head;\n        ListNode slow = dummy;\n        ListNode fast = dummy;\n        for (int i = 1; i <= n + 1; i++) {\n            fast = fast.next;\n        }\n\n        while (fast != null) {\n            fast = fast.next;\n            slow = slow.next;\n        }\n        slow.next = slow.next.next;\n\n        return dummy.next;\n    }\n}\n"
     }
   },
   "23": {
