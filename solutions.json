@@ -16,7 +16,7 @@
   },
   "16": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "import java.util.*;\n\npublic class Solution {\n    public int threeSumClosest(int[] nums, int target) {\n        Arrays.sort(nums);\n        int closestSum = nums[0] + nums[1] + nums[2];\n\n        for (int i = 0; i < nums.length - 2; i++) {\n            int left = i + 1, right = nums.length - 1;\n            while (left < right) {\n                int currentSum = nums[i] + nums[left] + nums[right];\n                if (Math.abs(currentSum - target) < Math.abs(closestSum - target)) {\n                    closestSum = currentSum;\n                }\n                if (currentSum < target) {\n                    left++;\n                } else if (currentSum > target) {\n                    right--;\n                } else {\n                    return target; // Early exit if we find an exact match\n                }\n            }\n        }\n\n        return closestSum;\n    }\n}"
     }
   },
   "18": {
