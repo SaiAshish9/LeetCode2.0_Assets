@@ -41,7 +41,7 @@
   },
   "27": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "class Solution {\n    public int removeElement(int[] nums, int val) {\n        int left = 0;  \n        for (int right = 0; right < nums.length; right++) { \n            if (nums[right] != val) {\n                nums[left] = nums[right];\n                left++;\n            }\n        }\n        return left;\n    }\n}"
     }
   },
   "28": {
