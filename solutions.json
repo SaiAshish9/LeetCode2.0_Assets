@@ -187,7 +187,7 @@
   },
   "187": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "import java.util.List;\nimport java.util.Map;\n\nclass Solution {\n    public List<String> findRepeatedDnaSequences(String s) {\n        List<String> result = new ArrayList<>();\n        if (s.length() <= 10) return result;\n\n        Map<String, Integer> sequenceCount = new HashMap<>();\n        for (int i = 0; i <= s.length() - 10; i++) {\n            String sequence = s.substring(i, i + 10);\n            sequenceCount.put(sequence, sequenceCount.getOrDefault(sequence, 0) + 1);\n            if (sequenceCount.get(sequence) == 2) {\n                result.add(sequence);\n            }\n        }\n\n        return result;\n    }\n}"
     }
   },
   "189": {
