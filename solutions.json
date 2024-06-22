@@ -141,7 +141,7 @@
   },
   "159": {
     "java": {
-      "sliding-window": "class Solution {\n    public int lengthOfLongestSubstringTwoDistinct(String s) {\n        Map<Character, Integer> 9nt = new HashMap<>();\n        int n = s.length();\n        int ans = 0;\n        for (int i = 0, j = 0; i < n; ++i) {\n            char c = s.charAt(i);\n            count.put(c, count.getOrDefault(c, 0) + 1);\n            while (count.size() > 2) {\n                char t = s.charAt(j++);\n                count.put(t, count.get(t) - 1);\n                if (count.get(t) == 0) {\n                    count.remove(t);\n                }\n            }\n            ans = Math.max(ans, i - j + 1);\n        }\n        return ans;\n    }\n}"
+      "sliding-window": "class Solution {\n    public int lengthOfLongestSubstringTwoDistinct(String s) {\n        Map<Character, Integer> count = new HashMap<>();\n        int n = s.length();\n        int ans = 0;\n        for (int i = 0, j = 0; i < n; ++i) {\n            char c = s.charAt(i);\n            count.put(c, count.getOrDefault(c, 0) + 1);\n            while (count.size() > 2) {\n                char t = s.charAt(j++);\n                count.put(t, count.get(t) - 1);\n                if (count.get(t) == 0) {\n                    count.remove(t);\n                }\n            }\n            ans = Math.max(ans, i - j + 1);\n        }\n        return ans;\n    }\n}"
     }
   },
   "160": {
