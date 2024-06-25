@@ -1173,7 +1173,7 @@
   },
   "1493": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int longestSubarray(int[] nums) {\n        int left = 0;\n        int zeroCount = 0;\n        int maxLength = 0;\n\n        for (int right = 0; right < nums.length; right++) {\n            if (nums[right] == 0) {\n                zeroCount++;\n            }\n\n            while (zeroCount > 1) {\n                if (nums[left] == 0) {\n                    zeroCount--;\n                }\n                left++;\n            }\n\n            maxLength = Math.max(maxLength, right - left);\n        }\n\n        return maxLength;\n    }\n}\n"
     }
   },
   "1498": {
