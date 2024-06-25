@@ -501,7 +501,7 @@
   },
   "480": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "import java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Solution {\n    public double[] medianSlidingWindow(int[] nums, int k) {\n        List<Double> resList = new ArrayList<>();\n        int n = nums.length;\n        int i = 0;\n        int j = k - 1;\n        List<Integer> temp = new ArrayList<>();\n        for (int x = 0; x < k - 1; x++) {\n            temp.add(nums[x]);\n        }\n        Collections.sort(temp);\n        while (j < n) {\n            int num = nums[j];\n            int insertIdx = Collections.binarySearch(temp, num);\n            if (insertIdx < 0) {\n                insertIdx = -insertIdx - 1;\n            }\n            temp.add(insertIdx, num);\n\n            if (k % 2 == 1) {\n                double median = (double) temp.get(k / 2);\n                resList.add(median);\n            } else {\n                int idx = k / 2;\n                double median1 = (double) temp.get(idx);\n                double median2 = (double) temp.get(idx - 1);\n                resList.add((median1 + median2) / 2);\n            }\n\n            int removeIdx = Collections.binarySearch(temp, nums[i]);\n            if (removeIdx < 0) {\n                removeIdx = -removeIdx - 1;\n            }\n            temp.remove(removeIdx);\n\n            i++;\n            j++;\n        }\n\n        double[] resArray = new double[resList.size()];\n        for (int x = 0; x < resList.size(); x++) {\n            resArray[x] = resList.get(x);\n        }\n\n        return resArray;\n    }\n}"
     }
   },
   "481": {
