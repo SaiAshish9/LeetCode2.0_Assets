@@ -435,7 +435,7 @@
   },
   "424": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "public class Solution {\n    public int characterReplacement(String s, int k) {\n        int[] count = new int[26];\n        int maxCount = 0, left = 0, maxLength = 0;\n\n        for (int right = 0; right < s.length(); right++) {\n            char rightChar = s.charAt(right);\n            count[rightChar - 'A']++;\n            maxCount = Math.max(maxCount, count[rightChar - 'A']);\n\n            while (right - left + 1 - maxCount > k) {\n                char leftChar = s.charAt(left);\n                count[leftChar - 'A']--;\n                left++;\n            }\n\n            maxLength = Math.max(maxLength, right - left + 1);\n        }\n\n        return maxLength;\n    }\n}\n"
     }
   },
   "426": {
