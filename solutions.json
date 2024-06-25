@@ -1123,7 +1123,7 @@
   },
   "1423": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int maxScore(int[] cardPoints, int k) {\n        int n = cardPoints.length;\n        int totalPoints = 0;\n        for (int i = 0; i < k; i++) {\n            totalPoints += cardPoints[i];\n        }\n\n        int maxPoints = totalPoints;\n\n        for (int i = 0; i < k; i++) {\n            totalPoints = totalPoints - cardPoints[k - 1 - i] + cardPoints[n - 1 - i];\n            maxPoints = Math.max(maxPoints, totalPoints);\n        }\n\n        return maxPoints;\n    }\n}"
     }
   },
   "1425": {
