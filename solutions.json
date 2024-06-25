@@ -571,7 +571,8 @@
   },
   "567": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "",
+      "sliding-window": "import java.util.Arrays;\n\npublic class Solution {\n    public boolean checkInclusion(String s1, String s2) {\n        if (s1.length() > s2.length()) {\n            return false;\n        }\n        \n        int[] countS1 = new int[26];\n        int[] countWindow = new int[26];        \n        for (char c : s1.toCharArray()) {\n            countS1[c - 'a']++;\n        }        \n        for (int i = 0; i < s1.length(); i++) {\n            countWindow[s2.charAt(i) - 'a']++;\n        }        \n        for (int i = 0; i <= s2.length() - s1.length(); i++) {\n            if (Arrays.equals(countS1, countWindow)) {\n                return true;\n            }            \n            if (i + s1.length() < s2.length()) {\n                countWindow[s2.charAt(i) - 'a']--;\n                countWindow[s2.charAt(i + s1.length()) - 'a']++;\n            }\n        }\n        \n        return false;\n    }\n}\n"
     }
   },
   "581": {
