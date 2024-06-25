@@ -870,7 +870,7 @@
   },
   "992": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int subarraysWithKDistinct(int[] nums, int k) {\n        return atMostKDistinct(nums, k) - atMostKDistinct(nums, k - 1);\n    }\n    \n    private int atMostKDistinct(int[] nums, int k) {\n        int n = nums.length;\n        int left = 0;\n        int count = 0;\n        Map<Integer, Integer> frequency = new HashMap<>();\n        int distinctCount = 0;\n        \n        for (int right = 0; right < n; right++) {\n            int num = nums[right];\n            if (frequency.getOrDefault(num, 0) == 0) {\n                distinctCount++;\n            }\n            frequency.put(num, frequency.getOrDefault(num, 0) + 1);\n            \n            while (distinctCount > k) {\n                int leftNum = nums[left++];\n                frequency.put(leftNum, frequency.get(leftNum) - 1);\n                if (frequency.get(leftNum) == 0) {\n                    distinctCount--;\n                }\n            }\n            \n            count += right - left + 1;\n        }\n        \n        return count;\n    }\n}\n"
     }
   },
   "995": {
