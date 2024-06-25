@@ -597,7 +597,7 @@
   },
   "632": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "import java.util.Comparator;\nimport java.util.PriorityQueue;\n\nclass Solution {\n    public int[] smallestRange(List<List<Integer>> nums) {\n        PriorityQueue<int[]> minHeap = new PriorityQueue<>(Comparator.comparingInt(o -> nums.get(o[0]).get(o[1])));\n        int maxElement = Integer.MIN_VALUE;\n        int start = 0, end = Integer.MAX_VALUE;\n        \n        for (int i = 0; i < nums.size(); i++) {\n            minHeap.offer(new int[]{i, 0});\n            maxElement = Math.max(maxElement, nums.get(i).get(0));\n        }\n        \n        while (true) {\n            int[] current = minHeap.poll();\n            int listIdx = current[0];\n            int elementIdx = current[1];            \n            int currentRange = maxElement - nums.get(listIdx).get(elementIdx);            \n            if (currentRange < end - start) {\n                start = nums.get(listIdx).get(elementIdx);\n                end = maxElement;\n            }            \n            elementIdx++;\n            if (elementIdx == nums.get(listIdx).size()) {\n                break;\n            }            \n            minHeap.offer(new int[]{listIdx, elementIdx});\n            maxElement = Math.max(maxElement, nums.get(listIdx).get(elementIdx));\n        }\n        \n        return new int[]{start, end};\n    }\n}\n"
     }
   },
   "633": {
