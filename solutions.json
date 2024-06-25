@@ -1258,7 +1258,7 @@
   },
   "1652": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int[] decrypt(int[] code, int k) {\n        int n = code.length;\n        int[] result = new int[n];\n        \n        if (k == 0) {\n            return result;\n        }\n        \n        for (int i = 0; i < n; i++) {\n            if (k > 0) {\n                for (int j = 1; j <= k; j++) {\n                    result[i] += code[(i + j) % n];\n                }\n            } else {\n                for (int j = -1; j >= k; j--) {\n                    result[i] += code[(i + j + n) % n];\n                }\n            }\n        }\n        \n        return result;\n    }\n}\n"
     }
   },
   "1658": {
