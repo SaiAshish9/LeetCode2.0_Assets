@@ -829,7 +829,7 @@
   },
   "930": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int numSubarraysWithSum(int[] nums, int goal) {\n        Map<Integer, Integer> prefixSumCount = new HashMap<>();\n        prefixSumCount.put(0, 1);\n        int prefixSum = 0;\n        int count = 0;\n\n        for (int num : nums) {\n            prefixSum += num;\n            int currentSum = prefixSum - goal;\n            if (prefixSumCount.containsKey(currentSum)) {\n                count += prefixSumCount.get(currentSum);\n            }\n            prefixSumCount.put(prefixSum, prefixSumCount.getOrDefault(prefixSum, 0) + 1);\n        }\n\n        return count;\n    }\n}\n"
     }
   },
   "942": {
