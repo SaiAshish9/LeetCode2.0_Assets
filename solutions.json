@@ -1093,7 +1093,7 @@
   },
   "1297": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "import java.util.HashMap;\nimport java.util.Map;\n\nclass Solution {\n    public int maxFreq(String s, int maxLetters, int minSize, int maxSize) {\n        int n = s.length();\n        int maxCount = 0;\n        Map<String, Integer> substringCount = new HashMap<>();\n        \n        for (int i = 0; i <= n - minSize; ++i) {\n            String sub = s.substring(i, i + minSize);\n            if (isValid(sub, maxLetters)) {\n                substringCount.put(sub, substringCount.getOrDefault(sub, 0) + 1);\n                maxCount = Math.max(maxCount, substringCount.get(sub));\n            }\n        }\n        \n        return maxCount;\n    }\n    \n    private boolean isValid(String sub, int maxLetters) {\n        int[] count = new int[26];\n        int uniqueLetters = 0;\n        for (char c : sub.toCharArray()) {\n            if (count[c - 'a'] == 0) {\n                uniqueLetters++;\n            }\n            count[c - 'a']++;\n        }\n        return uniqueLetters <= maxLetters;\n    }\n}\n"
     }
   },
   "1332": {
