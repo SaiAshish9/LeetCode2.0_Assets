@@ -652,7 +652,7 @@
   },
   "713": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int numSubarrayProductLessThanK(int[] nums, int k) {\n        if (k <= 1) return 0; /\n        int left = 0;\n        int product = 1;\n        int count = 0;\n        \n        for (int right = 0; right < nums.length; right++) {\n            product *= nums[right];\n            \n            while (product >= k) {\n                product /= nums[left];\n                left++;\n            }\n            \n            count += right - left + 1;\n        }\n        \n        return count;\n    }\n}"
     }
   },
   "716": {
