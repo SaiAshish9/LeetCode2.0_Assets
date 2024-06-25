@@ -677,7 +677,7 @@
   },
   "727": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n  public String minWindow(String s1, String s2) {\n    final int m = s2.length();\n    final int n = s1.length();\n    int[][] dp = new int[m + 1][n + 1];\n\n    for (int j = 0; j <= n; ++j)\n      dp[0][j] = j + 1;\n\n    for (int i = 1; i <= m; ++i)\n      for (int j = 1; j <= n; ++j)\n        if (s2.charAt(i - 1) == s1.charAt(j - 1))\n          dp[i][j] = dp[i - 1][j - 1];\n        else\n          dp[i][j] = dp[i][j - 1];\n\n    int bestLeft = 0;\n    int minLength = Integer.MAX_VALUE;\n\n    for (int j = 1; j <= n; ++j)\n      if (dp[m][j] > 0 && j - dp[m][j] + 1 < minLength) {\n        bestLeft = dp[m][j] - 1;\n        minLength = j - dp[m][j] + 1;\n      }\n\n    return minLength == Integer.MAX_VALUE ? \"\" : s1.substring(bestLeft, bestLeft + minLength);\n  }\n}"
     }
   },
   "753": {
