@@ -456,7 +456,7 @@
   },
   "438": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Solution {\n    public List<Integer> findAnagrams(String s, String p) {\n        List<Integer> result = new ArrayList<>();\n        if (s == null || p == null || s.length() < p.length()) {\n            return result;\n        }\n\n        int[] pCount = new int[26];\n        int[] sCount = new int[26];\n\n        for (char c : p.toCharArray()) {\n            pCount[c - 'a']++;\n        }\n\n        int windowLength = p.length();\n        for (int i = 0; i < windowLength; i++) {\n            sCount[s.charAt(i) - 'a']++;\n        }\n\n        for (int i = windowLength; i < s.length(); i++) {\n            if (areArraysEqual(pCount, sCount)) {\n                result.add(i - windowLength);\n            }\n\n            sCount[s.charAt(i - windowLength) - 'a']--;\n            sCount[s.charAt(i) - 'a']++;\n        }\n\n        if (areArraysEqual(pCount, sCount)) {\n            result.add(s.length() - windowLength);\n        }\n\n        return result;\n    }\n\n    private boolean areArraysEqual(int[] arr1, int[] arr2) {\n        for (int i = 0; i < 26; i++) {\n            if (arr1[i] != arr2[i]) {\n                return false;\n            }\n        }\n        return true;\n    }\n}\n"
     }
   },
   "443": {
