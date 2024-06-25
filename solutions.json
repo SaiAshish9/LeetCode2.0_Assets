@@ -607,7 +607,7 @@
   },
   "643": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "public class Solution {\n    public double findMaxAverage(int[] nums, int k) {\n        int sum = 0;\n        for (int i = 0; i < k; ++i) {\n            sum += nums[i];\n        }\n        \n        double res = sum;\n        \n        for (int i = k; i < nums.length; ++i) {\n            sum += nums[i] - nums[i - k];\n            res = Math.max(res, sum);\n        }\n        \n        return res / k;\n    }\n}\n"
     }
   },
   "647": {
