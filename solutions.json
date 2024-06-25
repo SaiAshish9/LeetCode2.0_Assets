@@ -632,7 +632,7 @@
   },
   "683": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int kEmptySlots(int[] bulbs, int k) {\n        final int n = bulbs.length;\n        int ans = Integer.MAX_VALUE;\n        int[] day = new int[n]; // day[i] will store the day when bulb at position (i+1) is turned on\n\n        for (int i = 0; i < n; ++i)\n            day[bulbs[i] - 1] = i + 1;\n\n        int l = 0;\n        int r = l + k + 1;\n        \n        for (int i = 1; r < n; ++i) {\n            if (i == r) {\n                ans = Math.min(ans, Math.max(day[l], day[r]));\n                l = i;\n                r = i + k + 1;\n            } else if (day[i] < Math.max(day[l], day[r])) {\n                l = i;\n                r = i + k + 1;\n            }\n        }\n\n        return ans == Integer.MAX_VALUE ? -1 : ans;\n    }\n}\n"
     }
   },
   "692": {
