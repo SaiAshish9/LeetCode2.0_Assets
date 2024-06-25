@@ -1073,7 +1073,7 @@
   },
   "1248": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int numberOfSubarrays(int[] nums, int k) {\n        return atMost(nums, k) - atMost(nums, k - 1);\n    }\n    \n    private int atMost(int[] nums, int k) {\n        int res = 0;\n        int left = 0;\n        int count = 0;\n        \n        for (int right = 0; right < nums.length; ++right) {\n            if (nums[right] % 2 == 1) {\n                --k;\n            }\n            \n            while (k < 0) {\n                if (nums[left] % 2 == 1) {\n                    ++k;\n                }\n                ++left;\n            }\n            \n            res += right - left + 1;\n        }\n        \n        return res;\n    }\n}"
     }
   },
   "1265": {
