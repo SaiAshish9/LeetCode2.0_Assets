@@ -991,7 +991,7 @@
   },
   "1156": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "public class Solution {\n    public int maxRepOpt1(String text) {\n        int[] count = new int[26];\n        for (char c : text.toCharArray()) {\n            count[c - 'a']++;\n        }\n        int maxLen = 0;\n        for (int i = 0; i < text.length(); ) {\n            char currentChar = text.charAt(i);\n            int start = i;            \n            while (i < text.length() && text.charAt(i) == currentChar) {\n                i++;\n            }\n            int blockLen = i - start;            \n            int nextBlockStart = i + 1;\n            while (nextBlockStart < text.length() && text.charAt(nextBlockStart) == currentChar) {\n                nextBlockStart++;\n            }\n            int totalLen = blockLen + (nextBlockStart - i - 1);            \n            maxLen = Math.max(maxLen, Math.min(totalLen + 1, count[currentChar - 'a']));            \n            i = start + blockLen;\n        }\n\n        return maxLen;\n    }\n}\n"
     }
   },
   "1163": {
