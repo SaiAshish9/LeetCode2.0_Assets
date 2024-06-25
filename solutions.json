@@ -1418,22 +1418,7 @@
   },
   "1871": {
     "java": {
-      "sliding-window": "class Solution {
-  public boolean canReach(String s, int minJump, int maxJump) {
-    int count = 0;
-    boolean dp[] = new boolean[s.length()];
-    dp[0] = true;
-
-    for (int i = minJump; i < s.length(); ++i) {
-      count += dp[i - minJump] ? 1 : 0;
-      if (i - maxJump > 0)
-        count -= dp[i - maxJump - 1] ? 1 : 0;
-      dp[i] = count > 0 && s.charAt(i) == '0';
-    }
-
-    return dp[dp.length - 1];
-  }
-}"
+      "sliding-window": "class Solution {\n  public boolean canReach(String s, int minJump, int maxJump) {\n    int count = 0;\n    boolean dp[] = new boolean[s.length()];\n    dp[0] = true;\n\n    for (int i = minJump; i < s.length(); ++i) {\n      count += dp[i - minJump] ? 1 : 0;\n      if (i - maxJump > 0)\n        count -= dp[i - maxJump - 1] ? 1 : 0;\n      dp[i] = count > 0 && s.charAt(i) == '0';\n    }\n\n    return dp[dp.length - 1];\n  }\n}"
     }
   },
   "1876": {
