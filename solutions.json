@@ -1163,7 +1163,7 @@
   },
   "1477": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int minSumOfLengths(int[] arr, int target) {\n        int n = arr.length;\n        int[] minLength = new int[n];\n        Arrays.fill(minLength, Integer.MAX_VALUE);\n        \n        int left = 0, currSum = 0, minLen = Integer.MAX_VALUE, result = Integer.MAX_VALUE;\n\n        for (int right = 0; right < n; ++right) {\n            currSum += arr[right];\n\n            while (currSum > target) {\n                currSum -= arr[left++];\n            }\n\n            if (currSum == target) {\n                int currLen = right - left + 1;\n                if (left > 0 && minLength[left - 1] != Integer.MAX_VALUE) {\n                    result = Math.min(result, currLen + minLength[left - 1]);\n                }\n                minLen = Math.min(minLen, currLen);\n            }\n\n            minLength[right] = minLen;\n        }\n\n        return result == Integer.MAX_VALUE ? -1 : result;\n    }\n}\n"
     }
   },
   "1489": {
