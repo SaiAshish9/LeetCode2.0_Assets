@@ -787,7 +787,7 @@
   },
   "904": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int totalFruit(int[] tree) {\n        int maxFruits = 0;\n        int start = 0;\n        Map<Integer, Integer> fruitCount = new HashMap<>();\n        \n        for (int end = 0; end < tree.length; end++) {\n            fruitCount.put(tree[end], fruitCount.getOrDefault(tree[end], 0) + 1);\n            \n            while (fruitCount.size() > 2) {\n                fruitCount.put(tree[start], fruitCount.get(tree[start]) - 1);\n                if (fruitCount.get(tree[start]) == 0) {\n                    fruitCount.remove(tree[start]);\n                }\n                start++;\n            }\n            \n            maxFruits = Math.max(maxFruits, end - start + 1);\n        }\n        \n        return maxFruits;\n    }\n}\n"
     }
   },
   "905": {
