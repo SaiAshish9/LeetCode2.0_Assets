@@ -946,7 +946,7 @@
   },
   "1100": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "public class Solution {\n    public int numKLenSubstrNoRepeats(String S, int K) {\n        int n = S.length();\n        if (n < K) return 0;\n\n        HashSet<Character> set = new HashSet<>();\n        int count = 0;\n\n        for (int i = 0; i <= n - K; i++) {\n            set.clear();\n            boolean isValid = true;\n            for (int j = i; j < i + K; j++) {\n                char ch = S.charAt(j);\n                if (set.contains(ch)) {\n                    isValid = false;\n                    break;\n                }\n                set.add(ch);\n            }\n            if (isValid) {\n                count++;\n            }\n        }\n        return count;\n    }\n}"
     }
   },
   "1114": {
