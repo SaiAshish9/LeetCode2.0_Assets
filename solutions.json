@@ -662,7 +662,7 @@
   },
   "718": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int findLength(int[] A, int[] B) {\n        int m = A.length;\n        int n = B.length;\n        int[][] dp = new int[m + 1][n + 1];\n        int maxLen = 0;\n\n        for (int i = 1; i <= m; i++) {\n            for (int j = 1; j <= n; j++) {\n                if (A[i - 1] == B[j - 1]) {\n                    dp[i][j] = dp[i - 1][j - 1] + 1;\n                    maxLen = Math.max(maxLen, dp[i][j]);\n                } else {\n                    dp[i][j] = 0;\n                }\n            }\n        }\n\n        return maxLen;\n    }\n}\n"
     }
   },
   "719": {
