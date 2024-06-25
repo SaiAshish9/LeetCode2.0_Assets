@@ -1263,7 +1263,7 @@
   },
   "1658": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int minOperations(int[] nums, int x) {\n        x = -x;\n        for (int v : nums) {\n            x += v;\n        }\n        Map<Integer, Integer> vis = new HashMap<>();\n        vis.put(0, -1);\n        int n = nums.length;\n        int ans = 1 << 30;\n        for (int i = 0, s = 0; i < n; ++i) {\n            s += nums[i];\n            vis.putIfAbsent(s, i);\n            if (vis.containsKey(s - x)) {\n                int j = vis.get(s - x);\n                ans = Math.min(ans, n - (i - j));\n            }\n        }\n        return ans == 1 << 30 ? -1 : ans;\n    }\n}"
     }
   },
   "1679": {
@@ -1278,7 +1278,7 @@
   },
   "1695": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "import java.util.*;\n\nclass Solution {\n    public int maximumUniqueSubarray(int[] nums) {\n        int n = nums.length;\n        Set<Integer> set = new HashSet<>();\n        int left = 0, right = 0;\n        int maxSum = 0, currentSum = 0;\n        \n        while (right < n) {\n            if (!set.contains(nums[right])) {\n                set.add(nums[right]);\n                currentSum += nums[right];\n                maxSum = Math.max(maxSum, currentSum);\n                right++;\n            } else {\n                set.remove(nums[left]);\n                currentSum -= nums[left];\n                left++;\n            }\n        }\n        \n        return maxSum;\n    }\n}\n"
     }
   },
   "1696": {
