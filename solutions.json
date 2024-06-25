@@ -511,7 +511,7 @@
   },
   "487": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int findMaxConsecutiveOnes(int[] nums) {\n        int l = 0, r = 0;\n        int k = 1;\n        while (r < nums.length) {\n            if (nums[r++] == 0) {\n                --k;\n            }\n            if (k < 0 && nums[l++] == 0) {\n                ++k;\n            }\n        }\n        return r - l;\n    }\n}"
     }
   },
   "493": {
