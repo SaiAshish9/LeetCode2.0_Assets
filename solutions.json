@@ -875,7 +875,7 @@
   },
   "995": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "public class Solution {\n    public int minKBitFlips(int[] nums, int k) {\n        int ans = 0;\n        int flippedTime = 0;\n        int left = 0;\n        for (int right = 0; right < nums.length; ++right) {\n            if (right >= k && nums[right - k] == 2)\n                --flippedTime;\n\n            if (flippedTime % 2 == nums[right]) {\n                if (right + k > nums.length)\n                    return -1;\n                ++ans;\n                ++flippedTime;\n                nums[right] = 2;\n            }\n        }\n\n        return ans;\n    }\n}\n"
     }
   },
   "1004": {
