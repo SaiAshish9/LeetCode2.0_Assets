@@ -1103,7 +1103,7 @@
   },
   "1343": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int numOfSubarrays(int[] arr, int k, int threshold) {\n        int count = 0;\n        int windowSum = 0;\n        int n = arr.length;\n        int targetSum = k * threshold;\n\n        for (int i = 0; i < k; i++) {\n            windowSum += arr[i];\n        }\n\n        if (windowSum >= targetSum) {\n            count++;\n        }\n\n        for (int i = k; i < n; i++) {\n            windowSum += arr[i] - arr[i - k];\n            if (windowSum >= targetSum) {\n                count++;\n            }\n        }\n\n        return count;\n    }\n}\n"
     }
   },
   "1346": {
