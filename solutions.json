@@ -1113,7 +1113,7 @@
   },
   "1358": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int numberOfSubstrings(String s) {\n        int[] count = new int[3]; \n        int left = 0;\n        int result = 0;\n        \n        for (int right = 0; right < s.length(); right++) {\n            count[s.charAt(right) - 'a']++;\n            \n            while (count[0] > 0 && count[1] > 0 && count[2] > 0) {\n                result += s.length() - right; \n                count[s.charAt(left) - 'a']--;\n                left++;\n            }\n        }\n        \n        return result;\n    }\n}\n"
     }
   },
   "1385": {
