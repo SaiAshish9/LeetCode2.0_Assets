@@ -860,7 +860,7 @@
   },
   "978": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int maxTurbulenceSize(int[] arr) {\n        int ans = 1;\n        int increasing = 1;\n        int decreasing = 1;\n\n        for (int i = 1; i < arr.length; ++i) {\n            if (arr[i] > arr[i - 1]) {\n                increasing = decreasing + 1;\n                decreasing = 1;\n            } else if (arr[i] < arr[i - 1]) {\n                decreasing = increasing + 1;\n                increasing = 1;\n            } else {\n                increasing = 1;\n                decreasing = 1;\n            }\n            ans = Math.max(ans, Math.max(increasing, decreasing));\n        }\n\n        return ans;\n    }\n}\n"
     }
   },
   "986": {
