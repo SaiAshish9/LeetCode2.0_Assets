@@ -543,7 +543,7 @@
       "Bucket Sort",
       "Ordered Set"
     ],
-    "default": "Bucket Sort",
+    "default": "Sliding Window",
     "difficulty": "Hard",
     "language": "Java",
     "acceptance": 22.8
