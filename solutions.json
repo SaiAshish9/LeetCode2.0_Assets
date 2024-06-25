@@ -1373,12 +1373,12 @@
   },
   "1838": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "import java.util.Arrays;\n\npublic class Solution {\n    public int maxFrequency(int[] nums, int k) {\n        Arrays.sort(nums); \n        int left = 0;\n        long sum = 0; \n        int maxFreq = 0; \n        \n        for (int right = 0; right < nums.length; right++) {\n            sum += nums[right];\n            while ((right - left + 1) * (long) nums[right] - sum > k) {\n                sum -= nums[left]; \n                left++;\n            }            \n            int windowSize = right - left + 1;\n            maxFreq = Math.max(maxFreq, windowSize);\n        }\n        \n        return maxFreq;\n    }\n    \n    public static void main(String[] args) {\n        Solution solution = new Solution();        \n        int[] nums = {1, 2, 4};\n        int k = 5;\n        System.out.println(solution.maxFrequency(nums, k)); // Output: 3\n    }\n}\n"
     }
   },
   "1839": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n  public int longestBeautifulSubstring(String word) {\n    int ans = 0;\n    int count = 1;\n\n    for (int l = 0, r = 1; r < word.length(); ++r) {\n      final char curr = word.charAt(r);\n      final char prev = word.charAt(r - 1);\n      if (curr >= prev) {\n        if (curr > prev)\n          ++count;\n        if (count == 5)\n          ans = Math.max(ans, r - l + 1);\n      } else {\n        count = 1;\n        l = r;\n      }\n    }\n\n    return ans;\n  }\n}"
     }
   },
   "1842": {
