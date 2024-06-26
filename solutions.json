@@ -1870,7 +1870,7 @@
   },
   "2779": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int maximumBeauty(int[] nums, int k) {\n        int ans = 0;\n\n        Arrays.sort(nums);\n\n        for (int left = 0, right = 0; right < nums.length; ++right) {\n            while (nums[right] - nums[left] > 2 * k)\n                ++left;\n            ans = Math.max(ans, right - left + 1);\n        }\n\n        return ans;\n    }\n}"
     }
   },
   "2781": {
