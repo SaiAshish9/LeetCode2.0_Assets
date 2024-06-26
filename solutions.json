@@ -1519,7 +1519,7 @@
   },
   "2090": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int[] getAverages(int[] nums, int k) {\n        int n = nums.length;\n        int[] result = new int[n];\n        Arrays.fill(result, -1);\n\n        if (2 * k + 1 > n) return result;  \n        long windowSum = 0;\n        int windowSize = 2 * k + 1;\n        for (int i = 0; i < windowSize; i++) {\n            windowSum += nums[i];\n        }\n        result[k] = (int)(windowSum / windowSize);\n        for (int i = k + 1; i < n - k; i++) {\n            windowSum = windowSum - nums[i - k - 1] + nums[i + k];\n            result[i] = (int)(windowSum / windowSize);\n        }\n\n        return result;\n    }\n}\n"
     }
   },
   "2095": {
