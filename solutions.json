@@ -1790,7 +1790,7 @@
   },
   "2555": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int maximizeWin(int[] prizePositions, int k) {\n        int ans = 0;\n        int[] dp = new int[prizePositions.length + 1];\n\n        for (int i = 0, j = 0; i < prizePositions.length; ++i) {\n            while (prizePositions[i] - prizePositions[j] > k)\n                ++j;\n            final int covered = i - j + 1;\n            dp[i + 1] = Math.max(dp[i], covered);\n            ans = Math.max(ans, dp[j] + covered);\n        }\n\n        return ans;\n    }\n}"
     }
   },
   "2562": {
