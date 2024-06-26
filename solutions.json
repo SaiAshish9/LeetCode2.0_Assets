@@ -1539,7 +1539,7 @@
   },
   "2106": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int maxTotalFruits(int[][] fruits, int startPos, int k) {\n        final int maxRight = Math.max(startPos, fruits[fruits.length - 1][0]);\n        int ans = 0;\n        int[] amounts = new int[1 + maxRight];\n        int[] prefix = new int[2 + maxRight];\n\n        for (int[] f : fruits)\n            amounts[f[0]] = f[1];\n\n        for (int i = 0; i + 1 < prefix.length; ++i)\n            prefix[i + 1] = prefix[i] + amounts[i];\n\n        final int maxRightSteps = Math.min(maxRight - startPos, k);\n        for (int rightSteps = 0; rightSteps <= maxRightSteps; ++rightSteps) {\n            final int leftSteps = Math.max(0, k - 2 * rightSteps);\n            ans = Math.max(ans, getFruits(startPos, maxRight, leftSteps, rightSteps, prefix));\n        }\n\n        final int maxLeftSteps = Math.min(startPos, k);\n        for (int leftSteps = 0; leftSteps <= maxLeftSteps; ++leftSteps) {\n            final int rightSteps = Math.max(0, k - 2 * leftSteps);\n            ans = Math.max(ans, getFruits(startPos, maxRight, leftSteps, rightSteps, prefix));\n        }\n\n        return ans;\n    }\n\n    private int getFruits(int startPos, int maxRight, int leftSteps, int rightSteps, int[] prefix) {\n        final int l = Math.max(0, startPos - leftSteps);\n        final int r = Math.min(maxRight, startPos + rightSteps);\n        return prefix[r + 1] - prefix[l];\n    }\n}"
     }
   },
   "2107": {
