@@ -1448,7 +1448,7 @@
   },
   "1918": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int kthSmallestSubarraySum(int[] nums, int k) {\n        int min = Integer.MAX_VALUE, sum = 0;\n        for (int num : nums) {\n            min = Math.min(min, num);\n            sum += num;\n        }\n        int low = min, high = sum;\n        while (low < high) {\n            int mid = (high - low) / 2 + low;\n            int count = countSubarrays(nums, mid);\n            if (count < k)\n                low = mid + 1;\n            else\n                high = mid;\n        }\n        return low;\n    }\n\n    public int countSubarrays(int[] nums, int threshold) {\n        int count = 0;\n        int sum = 0;\n        int length = nums.length;\n        int left = 0, right = 0;\n        while (right < length) {\n            sum += nums[right];\n            while (sum > threshold) {\n                sum -= nums[left];\n                left++;\n            }\n            count += right - left + 1;\n            right++;\n        }\n        return count;\n    }\n}"
     }
   },
   "1923": {
