@@ -1564,7 +1564,7 @@
   },
   "2134": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int minSwaps(int[] nums) {\n        final int n = nums.length;\n        final int k = (int) Arrays.stream(nums).filter(a -> a == 1).count();\n        int ones = 0;\n        int maxOnes = 0;\n\n        for (int i = 0; i < n * 2; ++i) {\n            if (i >= k && nums[(i - k) % n] == 1)\n                --ones;\n            if (nums[i % n] == 1)\n                ++ones;\n            maxOnes = Math.max(maxOnes, ones);\n        }\n\n        return k - maxOnes;\n    }\n}"
     }
   },
   "2149": {
