@@ -1494,7 +1494,7 @@
   },
   "2024": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int maxConsecutiveAnswers(String answerKey, int k) {\n        return Math.max(maxConsecutiveChar(answerKey, k, 'T'), maxConsecutiveChar(answerKey, k, 'F'));\n    }\n\n    private int maxConsecutiveChar(String answerKey, int k, char ch) {\n        int maxLen = 0;\n        int left = 0, right = 0;\n        int flipCount = 0;\n\n        while (right < answerKey.length()) {\n            if (answerKey.charAt(right) != ch) {\n                flipCount++;\n            }\n\n            while (flipCount > k) {\n                if (answerKey.charAt(left) != ch) {\n                    flipCount--;\n                }\n                left++;\n            }\n\n            maxLen = Math.max(maxLen, right - left + 1);\n            right++;\n        }\n\n        return maxLen;\n    }\n}\n"
     }
   },
   "2031": {
