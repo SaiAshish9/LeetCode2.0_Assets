@@ -1670,7 +1670,7 @@
   },
   "2398": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int maximumRobots(int[] times, int[] costs, long budget) {\n        long sum = 0;\n        int i = 0, n = times.length;\n        Deque<Integer> deque = new LinkedList<Integer>();\n        for (int j = 0; j < n; ++j) {\n            sum += costs[j];\n            while (!deque.isEmpty() && times[deque.peekLast()] <= times[j])\n                deque.pollLast();\n            deque.addLast(j);\n            if (times[deque.getFirst()] + (j - i + 1) * sum > budget) {\n                if (deque.getFirst() == i)\n                    deque.pollFirst();\n                sum -= costs[i++];\n            }\n        }\n        return n - i;\n    }\n}\n"
     }
   },
   "2401": {
