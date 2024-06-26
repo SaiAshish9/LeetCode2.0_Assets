@@ -1675,8 +1675,7 @@
   },
   "2401": {
     "java": {
-      "sliding-window": "class Solution {\n    public int longestNiceSubarray(String s) {\n        int n = s.length();\n        int left = 0, right = 0;\n        int maxLen = 0;\n        \n        while (right < n) {\n            Set<Character> set = new HashSet<>();\n            while (right < n && isNice(s.charAt(right), set)) {\n                set.add(s.charAt(right));\n                right++;\n            }            \n            maxLen = Math.max(maxLen, right - left);            \n            while (left < right && !isNice(s.charAt(left), set)) {\n                set.remove(s.charAt(left));\n                left++;\n            }            \n            right++;\n        }\n        \n        return maxLen;\n    }\n    \n    private boolean isNice(char c, Set<Character> set) {\n        if (Character.isUpperCase(c)) {\n            return set.contains(Character.toLowerCase(c));\n        } else {\n            return set.contains(Character.toUpperCase(c));\n        }\n    }\n}\n"
-    }
+      "sliding-window": "class Solution {\n  public int longestNiceSubarray(int[] nums) {\n    int ans = 0;\n    int used = 0;\n\n    for (int left = 0, right = 0; right < nums.length; ++right) {\n      while ((used & nums[right]) > 0)\n        used ^= nums[left++];\n      used |= nums[right];\n      ans = Math.max(ans, right - left + 1);\n    }\n\n    return ans;\n  }\n}"    }
   },
   "2406": {
     "java": {
