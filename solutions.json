@@ -1544,7 +1544,7 @@
   },
   "2107": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int shareCandies(int[] candies, int k) {\n        Map<Integer, Integer> count = new HashMap<>();\n        int n = candies.length;\n        for (int i = k; i < n; ++i) {\n            count.merge(candies[i], 1, Integer::sum);\n        }\n        int ans = count.size();\n        for (int i = k; i < candies.length; ++i) {\n            if (count.merge(candies[i], -1, Integer::sum) == 0) {\n                count.remove(candies[i]);\n            }\n            count.merge(candies[i - k], 1, Integer::sum);\n            ans = Math.max(ans, count.size());\n        }\n        return ans;\n    }\n}"
     }
   },
   "2108": {
