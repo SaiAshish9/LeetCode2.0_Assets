@@ -299,7 +299,7 @@
   },
   "281": {
     "java": {
-      "iterator": "public class ZigzagIterator {\n    private int cur;\n    private int size;\n    private List<Integer> indexes = new ArrayList<>();\n    private List<List<Integer>> vectors = new ArrayList<>();\n\n    public ZigzagIterator(List<Integer> v1, List<Integer> v2) {\n        cur = 0;\n        size = 2;\n        indexes.add(0);\n        indexes.add(0);\n        vectors.add(v1);\n        vectors.add(v2);\n    }\n\n    public int next() {\n        List<Integer> vector = vectors.get(cur);\n        int index = indexes.get(cur);\n        int res = vector.get(index);\n        indexes.set(cur, index + 1);\n        cur = (cur + 1) % size;\n        return res;\n    }\n\n    public boolean hasNext() {\n        int start = cur;\n        while (indexes.get(cur) == vectors.get(cur).size()) {\n            cur = (cur + 1) % size;\n            if (start == cur) {\n                return false;\n            }\n        }\n        return true;\n    }\n}\n\n/**\n * Your ZigzagIterator object will be instantiated and called as such:\n * ZigzagIterator i = new ZigzagIterator(v1, v2);\n * while (i.hasNext()) v[f()] = i.next();\n */"
+      "iterator": "public class ZigzagIterator {\n    private int curr;\n    private int size;\n    private List<Integer> indexes = new ArrayList<>();\n    private List<List<Integer>> vectors = new ArrayList<>();\n\n    public ZigzagIterator(List<Integer> v1, List<Integer> v2) {\n        curr = 0;\n        size = 2;\n        indexes.add(0);\n        indexes.add(0);\n        vectors.add(v1);\n        vectors.add(v2);\n    }\n\n    public int next() {\n        List<Integer> vector = vectors.get(curr);\n        int index = indexes.get(curr);\n        int res = vector.get(index);\n        indexes.set(curr, index + 1);\n        curr = (curr + 1) % size;\n        return res;\n    }\n\n    public boolean hasNext() {\n        int start = curr;\n        while (indexes.get(curr) == vectors.get(curr).size()) {\n            curr = (curr + 1) % size;\n            if (start == curr) {\n                return false;\n            }\n        }\n        return true;\n    }\n}\n\n/**\n * Your ZigzagIterator object will be instantiated and called as such:\n * ZigzagIterator i = new ZigzagIterator(v1, v2);\n * while (i.hasNext()) v[f()] = i.next();\n */"
     }
   },
   "283": {
@@ -1675,7 +1675,8 @@
   },
   "2401": {
     "java": {
-      "sliding-window": "class Solution {\n  public int longestNiceSubarray(int[] nums) {\n    int ans = 0;\n    int used = 0;\n\n    for (int left = 0, right = 0; right < nums.length; ++right) {\n      while ((used & nums[right]) > 0)\n        used ^= nums[left++];\n      used |= nums[right];\n      ans = Math.max(ans, right - left + 1);\n    }\n\n    return ans;\n  }\n}"    }
+      "sliding-window": "class Solution {\n  public int longestNiceSubarray(int[] nums) {\n    int ans = 0;\n    int used = 0;\n\n    for (int left = 0, right = 0; right < nums.length; ++right) {\n      while ((used & nums[right]) > 0)\n        used ^= nums[left++];\n      used |= nums[right];\n      ans = Math.max(ans, right - left + 1);\n    }\n\n    return ans;\n  }\n}"
+    }
   },
   "2406": {
     "java": {
@@ -1769,7 +1770,7 @@
   },
   "2524": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int maxFrequencyScore(int[] nums, int k) {\n        final int mod = (int) 1e9 + 7;\n        Map<Integer, Integer> count = new HashMap<>();\n        for (int i = 0; i < k; ++i) {\n            count.put(nums[i], count.getOrDefault(nums[i], 0) + 1);\n        }\n        long curr = 0;\n        for (var e : count.entrySet()) {\n            curr = (curr + qmi(e.getKey(), e.getValue(), mod)) % mod;\n        }\n        long ans = curr;\n        for (int i = k; i < nums.length; ++i) {\n            int a = nums[i - k];\n            int b = nums[i];\n            if (a != b) {\n                if (count.getOrDefault(b, 0) > 0) {\n                    curr += (b - 1) * qmi(b, count.get(b), mod) % mod;\n                } else {\n                    curr += b;\n                }\n                if (count.getOrDefault(a, 0) > 1) {\n                    curr -= (a - 1) * qmi(a, count.get(a) - 1, mod) % mod;\n                } else {\n                    curr -= a;\n                }\n                curr = (curr + mod) % mod;\n                count.put(b, count.getOrDefault(b, 0) + 1);\n                count.put(a, count.getOrDefault(a, 0) - 1);\n                ans = Math.max(ans, curr);\n            }\n        }\n        return (int) ans;\n    }\n\n    long qmi(long a, long k, long p) {\n        long res = 1;\n        while (k != 0) {\n            if ((k & 1) == 1) {\n                res = res * a % p;\n            }\n            k >>= 1;\n            a = a * a % p;\n        }\n        return res;\n    }\n}"
     }
   },
   "2528": {
