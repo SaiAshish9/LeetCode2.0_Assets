@@ -1775,7 +1775,7 @@
   },
   "2528": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n  public long maxPower(int[] stations, int r, int k) {\n    long left = Arrays.stream(stations).min().getAsInt();\n    long right = Arrays.stream(stations).asLongStream().sum() + k + 1;\n\n    while (left < right) {\n      final long mid = (left + right) / 2;\n      if (check(stations.clone(), r, k, mid))\n        left = mid + 1;\n      else\n        right = mid;\n    }\n\n    return left - 1;\n  }\n\n  boolean check(int[] stations, int r, int additionalStations, long minPower) {\n    final int n = stations.length;\n    long power = 0;\n\n    for (int i = 0; i < r; ++i)\n      power += stations[i];\n\n    for (int i = 0; i < n; ++i) {\n      if (i + r < n)\n        power += stations[i + r]; \n      if (power < minPower) {\n        final long requiredPower = minPower - power;\n        if (requiredPower > additionalStations)\n          return false;\n        stations[Math.min(n - 1, i + r)] += requiredPower;\n        additionalStations -= requiredPower;\n        power += requiredPower;\n      }\n      if (i - r >= 0)\n        power -= stations[i - r];\n    }\n\n    return true;\n  }\n}"
     }
   },
   "2537": {
