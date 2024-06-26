@@ -1850,7 +1850,7 @@
   },
   "2743": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int numberOfSpecialSubstrings(String s) {\n        int n = s.length();\n        int ans = 0;\n        int[] count = new int[26];\n        for (int i = 0, j = 0; i < n; ++i) {\n            int k = s.charAt(i) - 'a';\n            ++count[k];\n            while (count[k] > 1) {\n                --count[s.charAt(j++) - 'a'];\n            }\n            ans += i - j + 1;\n        }\n        return ans;\n    }\n}"
     }
   },
   "2747": {
