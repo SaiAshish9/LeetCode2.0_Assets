@@ -1423,7 +1423,7 @@
   },
   "1876": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int countGoodSubstrings(String s) {\n        int count = 0;\n        int n = s.length();\n        \n        for (int i = 0; i <= n - 3; i++) {\n            if (s.charAt(i) != s.charAt(i + 1) && \n                s.charAt(i) != s.charAt(i + 2) &&\n                s.charAt(i + 1) != s.charAt(i + 2)) {\n                count++;\n            }\n        }\n        \n        return count;\n    }\n}\n"
     }
   },
   "1877": {
@@ -1438,7 +1438,7 @@
   },
   "1888": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n  public int minFlips(String s) {\n    final int n = s.length();\n    int[][] count = new int[2][2];\n\n    for (int i = 0; i < n; ++i)\n      ++count[s.charAt(i) - '0'][i % 2];\n\n    int ans = Math.min(count[1][0] + count[0][1], count[0][0] + count[1][1]);\n\n    for (int i = 0; i < n; ++i) {\n      --count[s.charAt(i) - '0'][i % 2];\n      ++count[s.charAt(i) - '0'][(n + i) % 2];\n      ans = Math.min(ans, Math.min(count[1][0] + count[0][1], count[0][0] + count[1][1]));\n    }\n\n    return ans;\n  }\n}"
     }
   },
   "1898": {
