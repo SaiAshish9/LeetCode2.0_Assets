@@ -1845,7 +1845,7 @@
   },
   "2730": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n  public int longestSemiRepetitiveSubstring(String s) {\n    int ans = 1;\n    int prevStart = 0;\n    int start = 0;\n\n    for (int i = 1; i < s.length(); ++i) {\n      if (s.charAt(i) == s.charAt(i - 1)) {\n        if (prevStart > 0)\n          start = prevStart;\n        prevStart = i;\n      }\n      ans = Math.max(ans, i - start + 1);\n    }\n\n    return ans;\n  }\n}"
     }
   },
   "2743": {
