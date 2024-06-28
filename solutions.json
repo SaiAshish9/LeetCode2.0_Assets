@@ -1995,7 +1995,7 @@
   },
   "2968": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int maxFrequencyScore(int[] nums, long k) {\n        int ans = 0;\n        long cost = 0;\n\n        Arrays.sort(nums);\n\n        for (int left = 0, right = 0; right < nums.length; ++right) {\n            cost += nums[right] - nums[(left + right) / 2];\n            while (cost > k)\n                cost -= nums[(left + right + 1) / 2] - nums[left++];\n            ans = Math.max(ans, right - left + 1);\n        }\n\n        return ans;\n    }\n}"
     }
   },
   "2969": {
@@ -2015,7 +2015,7 @@
   },
   "2981": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int maximumLength(String s) {\n        int n = s.length();\n        int ans = -1;\n        int runningLen = 0;\n        char prevLetter = '@';\n        int[][] counts = new int[26][n + 1];\n\n        for (final char c : s.toCharArray())\n            if (c == prevLetter) {\n                ++counts[c - 'a'][++runningLen];\n            } else {\n                runningLen = 1;\n                ++counts[c - 'a'][runningLen];\n                prevLetter = c;\n            }\n\n        for (int[] count : counts) {\n            ans = Math.max(ans, getMaxFreq(count, n));\n        }\n\n        return ans;\n    }\n\n    private int getMaxFreq(int[] count, int maxFreq) {\n        int times = 0;\n        for (int freq = maxFreq; freq >= 1; --freq) {\n            times += count[freq];\n            if (times >= 3)\n                return freq;\n        }\n        return -1;\n    }\n}"
     }
   },
   "2982": {
