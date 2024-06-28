@@ -2045,7 +2045,7 @@
   },
   "3037": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "/**\n * Definition for an infinite stream.\n * class InfiniteStream {\n *   public InfiniteStream(int[] bits);\n *   public int next();\n * }\n */\n\nclass Solution {\n  public int findPattern(InfiniteStream stream, int[] pattern) {\n    int[] lps = getLPS(pattern);\n    int i = 0;  \n    int j = 0;   \n    int bit = 0;\n    boolean readNext = false;\n    while (true) {\n      if (!readNext) {\n        bit = stream.next();\n        readNext = true;\n      }\n      if (bit == pattern[j]) {\n        ++i;\n        readNext = false;\n        ++j;\n        if (j == pattern.length)\n          return i - j;\n      }\n      else if (j > 0) {\n        j = lps[j - 1];\n      } else {\n        ++i;\n        readNext = false;\n      }\n    }\n  }\n\n\n  private int[] getLPS(int[] pattern) {\n    int[] lps = new int[pattern.length];\n    int j = 0;\n    for (int i = 1; i < pattern.length; ++i) {\n      while (j > 0 && pattern[j] != pattern[i])\n        j = lps[j - 1];\n      if (pattern[i] == pattern[j])\n        lps[i] = ++j;\n    }\n    return lps;\n  }\n}"
     }
   },
   "3086": {
