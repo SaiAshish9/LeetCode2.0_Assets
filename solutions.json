@@ -1930,7 +1930,7 @@
   },
   "2902": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int countSubMultisets(List<Integer> nums, int l, int r) {\n        int kMod = 1_000_000_007;\n        // dp[i] := the number of submultisets of `nums` with sum i\n        long[] dp = new long[r + 1];\n        dp[0] = 1;\n        Map<Integer, Integer> count = new HashMap<>();\n\n        for (int num : nums)\n            count.merge(num, 1, Integer::sum);\n\n        int zeros = count.containsKey(0) ? count.remove(0) : 0;\n\n        for (Map.Entry<Integer, Integer> entry : count.entrySet()) {\n            int num = entry.getKey();\n            int freq = entry.getValue();\n            long[] stride = dp.clone();\n            for (int i = num; i <= r; ++i)\n                stride[i] += stride[i - num];\n            for (int i = r; i > 0; --i)\n                if (i >= num * (freq + 1))\n                    dp[i] = (stride[i] - stride[i - num * (freq + 1)]) % kMod;\n                else\n                    dp[i] = stride[i] % kMod;\n        }\n\n        long ans = 0;\n        for (int i = l; i <= r; ++i)\n            ans = (ans + dp[i]) % kMod;\n        return (int) (((zeros + 1) * ans) % kMod);\n    }\n}"
     }
   },
   "2903": {
