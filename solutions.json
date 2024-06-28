@@ -1775,7 +1775,7 @@
   },
   "2528": {
     "java": {
-      "sliding-window": "class Solution {\n  public long maxPower(int[] stations, int r, int k) {\n    long left = Arrays.stream(stations).min().getAsInt();\n    long right = Arrays.stream(stations).asLongStream().sum() + k + 1;\n\n    while (left < right) {\n      final long mid = (left + right) / 2;\n      if (check(stations.clone(), r, k, mid))\n        left = mid + 1;\n      else\n        right = mid;\n    }\n\n    return left - 1;\n  }\n\n  boolean check(int[] stations, int r, int additionalStations, long minPower) {\n    final int n = stations.length;\n    long power = 0;\n\n    for (int i = 0; i < r; ++i)\n      power += stations[i];\n\n    for (int i = 0; i < n; ++i) {\n      if (i + r < n)\n        power += stations[i + r]; \n      if (power < minPower) {\n        final long requiredPower = minPower - power;\n        if (requiredPower > additionalStations)\n          return false;\n        stations[Math.min(n - 1, i + r)] += requiredPower;\n        additionalStations -= requiredPower;\n        power += requiredPower;\n      }\n      if (i - r >= 0)\n        power -= stations[i - r];\n    }\n\n    return true;\n  }\n}"
+      "sliding-window": "class Solution {\n  public long maxPower(int[] stations, int right, int k) {\n    long left = Arrays.stream(stations).min().getAsInt();\n    long right = Arrays.stream(stations).asLongStream().sum() + k + 1;\n\n    while (left < right) {\n      final long mid = (left + right) / 2;\n      if (check(stations.clone(), right, k, mid))\n        left = mid + 1;\n      else\n        right = mid;\n    }\n\n    return left - 1;\n  }\n\n  boolean check(int[] stations, int right, int additionalStations, long minPower) {\n    final int n = stations.length;\n    long power = 0;\n\n    for (int i = 0; i < right; ++i)\n      power += stations[i];\n\n    for (int i = 0; i < n; ++i) {\n      if (i + right < n)\n        power += stations[i + right]; \n      if (power < minPower) {\n        final long requiredPower = minPower - power;\n        if (requiredPower > additionalStations)\n          return false;\n        stations[Math.min(n - 1, i + right)] += requiredPower;\n        additionalStations -= requiredPower;\n        power += requiredPower;\n      }\n      if (i - right >= 0)\n        power -= stations[i - right];\n    }\n\n    return true;\n  }\n}"
     }
   },
   "2537": {
@@ -1930,7 +1930,7 @@
   },
   "2902": {
     "java": {
-      "sliding-window": "class Solution {\n    public int countSubMultisets(List<Integer> nums, int l, int r) {\n        int kMod = 1_000_000_007;\n        // dp[i] := the number of submultisets of `nums` with sum i\n        long[] dp = new long[r + 1];\n        dp[0] = 1;\n        Map<Integer, Integer> count = new HashMap<>();\n\n        for (int num : nums)\n            count.merge(num, 1, Integer::sum);\n\n        int zeros = count.containsKey(0) ? count.remove(0) : 0;\n\n        for (Map.Entry<Integer, Integer> entry : count.entrySet()) {\n            int num = entry.getKey();\n            int freq = entry.getValue();\n            long[] stride = dp.clone();\n            for (int i = num; i <= r; ++i)\n                stride[i] += stride[i - num];\n            for (int i = r; i > 0; --i)\n                if (i >= num * (freq + 1))\n                    dp[i] = (stride[i] - stride[i - num * (freq + 1)]) % kMod;\n                else\n                    dp[i] = stride[i] % kMod;\n        }\n\n        long ans = 0;\n        for (int i = l; i <= r; ++i)\n            ans = (ans + dp[i]) % kMod;\n        return (int) (((zeros + 1) * ans) % kMod);\n    }\n}"
+      "sliding-window": "class Solution {\n    public int countSubMultisets(List<Integer> nums, int left, int right) {\n        int kMod = 1_000_000_007;\n        // dp[i] := the number of submultisets of `nums` with sum i\n        long[] dp = new long[right + 1];\n        dp[0] = 1;\n        Map<Integer, Integer> count = new HashMap<>();\n\n        for (int num : nums)\n            count.merge(num, 1, Integer::sum);\n\n        int zeros = count.containsKey(0) ? count.remove(0) : 0;\n\n        for (Map.Entry<Integer, Integer> entry : count.entrySet()) {\n            int num = entry.getKey();\n            int freq = entry.getValue();\n            long[] stride = dp.clone();\n            for (int i = num; i <= right; ++i)\n                stride[i] += stride[i - num];\n            for (int i = right; i > 0; --i)\n                if (i >= num * (freq + 1))\n                    dp[i] = (stride[i] - stride[i - num * (freq + 1)]) % kMod;\n                else\n                    dp[i] = stride[i] % kMod;\n        }\n\n        long ans = 0;\n        for (int i = left; i <= right; ++i)\n            ans = (ans + dp[i]) % kMod;\n        return (int) (((zeros + 1) * ans) % kMod);\n    }\n}"
     }
   },
   "2903": {
@@ -2050,7 +2050,7 @@
   },
   "3086": {
     "java": {
-      "sliding-window": "class Solution {\n  public long minimumMoves(int[] nums, int k, int maxChanges) {\n    int kNumOfIndicesWithinOneDistance = 3;\n    long ans = Long.MAX_VALUE;\n    List<Integer> oneIndices = new ArrayList<>(); \n    List<Long> prefix = new ArrayList<>();       \n    prefix.add(0L);\n\n    for (int i = 0; i < nums.length; ++i)\n      if (nums[i] == 1)\n        oneIndices.add(i);\n\n    for (int oneIndex : oneIndices)\n      prefix.add(prefix.get(prefix.size() - 1) + oneIndex);\n\n    int minOnesByTwo = Math.max(0, k - maxChanges);\n    int maxOnesByTwo =\n        Math.min(k, Math.min(minOnesByTwo + kNumOfIndicesWithinOneDistance, oneIndices.size()));\n\n    for (int onesByTwo = minOnesByTwo; onesByTwo <= maxOnesByTwo; ++onesByTwo)\n      for (int l = 0; l + onesByTwo < prefix.size(); ++l) {\n        int r = l + onesByTwo;\n        long cost1 = (k - onesByTwo) * 2;\n        long cost2 = (prefix.get(r) - prefix.get((l + r) / 2)) -\n                           (prefix.get((l + r + 1) / 2) - prefix.get(l));\n        ans = Math.min(ans, cost1 + cost2);\n      }\n\n    return ans;\n  }\n}"    }
+      "sliding-window": "class Solution {\n  public long minimumMoves(int[] nums, int k, int maxChanges) {\n    int kNumOfIndicesWithinOneDistance = 3;\n    long ans = Long.MAX_VALUE;\n    List<Integer> oneIndices = new ArrayList<>(); \n    List<Long> prefix = new ArrayList<>();       \n    prefix.add(0L);\n\n    for (int i = 0; i < nums.length; ++i)\n      if (nums[i] == 1)\n        oneIndices.add(i);\n\n    for (int oneIndex : oneIndices)\n      prefix.add(prefix.get(prefix.size() - 1) + oneIndex);\n\n    int minOnesByTwo = Math.max(0, k - maxChanges);\n    int maxOnesByTwo =\n        Math.min(k, Math.min(minOnesByTwo + kNumOfIndicesWithinOneDistance, oneIndices.size()));\n\n    for (int onesByTwo = minOnesByTwo; onesByTwo <= maxOnesByTwo; ++onesByTwo)\n      for (int left = 0; left + onesByTwo < prefix.size(); ++left) {\n        int right = left + onesByTwo;\n        long cost1 = (k - onesByTwo) * 2;\n        long cost2 = (prefix.get(right) - prefix.get((left + right) / 2)) -\n                           (prefix.get((left + right + 1) / 2) - prefix.get(left));\n        ans = Math.min(ans, cost1 + cost2);\n      }\n\n    return ans;\n  }\n}"    }
   },
   "3090": {
     "java": {
@@ -2059,12 +2059,82 @@
   },
   "3095": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {
+    public int minimumSubarrayLength(int[] nums, int k) {
+        int kMax = 50;
+        int n = nums.length;
+        int ans = n + 1;
+        int ors = 0;
+        int[] count = new int[kMax + 1];
+
+        for (int left = 0, right = 0; right < n; ++right) {
+            ors = orNum(ors, nums[right], count);
+            while (ors >= k && left <= right) {
+                ans = Math.min(ans, right - left + 1);
+                ors = undoOrNum(ors, nums[left], count);
+                ++left;
+            }
+        }
+
+        return (ans == n + 1) ? -1 : ans;
+    }
+
+    private static final int kMaxBit = 30;
+
+    private int orNum(int ors, int num, int[] count) {
+        for (int i = 0; i < kMaxBit; ++i)
+            if ((num >> i & 1) == 1 && ++count[i] == 1)
+                ors += 1 << i;
+        return ors;
+    }
+
+    private int undoOrNum(int ors, int num, int[] count) {
+        for (int i = 0; i < kMaxBit; ++i)
+            if ((num >> i & 1) == 1 && --count[i] == 0)
+                ors -= 1 << i;
+        return ors;
+    }
+}"
     }
   },
   "3097": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {
+    public int minimumSubarrayLength(int[] nums, int k) {
+        int kMax = 50;
+        int n = nums.length;
+        int ans = n + 1;
+        int ors = 0;
+        int[] count = new int[kMax + 1];
+
+        for (int left = 0, right = 0; right < n; ++right) {
+            ors = orNum(ors, nums[right], count);
+            while (ors >= k && left <= right) {
+                ans = Math.min(ans, right - left + 1);
+                ors = undoOrNum(ors, nums[left], count);
+                ++left;
+            }
+        }
+
+        return (ans == n + 1) ? -1 : ans;
+    }
+
+    private static final int kMaxBit = 30;
+
+    private int orNum(int ors, int num, int[] count) {
+        for (int i = 0; i < kMaxBit; ++i)
+            if ((num >> i & 1) == 1 && ++count[i] == 1)
+                ors += 1 << i;
+        return ors;
+    }
+
+    private int undoOrNum(int ors, int num, int[] count) {
+        for (int i = 0; i < kMaxBit; ++i)
+            if ((num >> i & 1) == 1 && --count[i] == 0)
+                ors -= 1 << i;
+        return ors;
+    }
+}"
     }
   },
   "3109": {

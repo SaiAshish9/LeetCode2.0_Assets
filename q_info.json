@@ -5748,5 +5748,508 @@
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 57.5
+  },
+  "unique_binary_search_trees_ii": {
+    "qno": "95",
+    "title": "Unique Binary Search Trees II",
+    "tags": [
+      "Dynamic Programming",
+      "Backtracking",
+      "Tree",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 58.1
+  },
+  "unique_binary_search_trees": {
+    "qno": "96",
+    "title": "Unique Binary Search Trees",
+    "tags": [
+      "Math",
+      "Dynamic Programming",
+      "Tree",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 61.2
+  },
+  "validate_binary_search_tree": {
+    "qno": "98",
+    "title": "Validate Binary Search Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 33.1
+  },
+  "recover_binary_search_tree": {
+    "qno": "99",
+    "title": "Recover Binary Search Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 53.5
+  },
+  "convert_sorted_array_to_binary_search_tree": {
+    "qno": "108",
+    "title": "Convert Sorted Array to Binary Search Tree",
+    "tags": [
+      "Array",
+      "Divide and Conquer",
+      "Tree",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 72
+  },
+  "convert_sorted_list_to_binary_search_tree": {
+    "qno": "109",
+    "title": "Convert Sorted List to Binary Search Tree",
+    "tags": [
+      "Linked List",
+      "Divide and Conquer",
+      "Tree",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 62.2
+  },
+  "kth_smallest_element_in_a_bst": {
+    "qno": "230",
+    "title": "Kth Smallest Element in a BST",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 72.9
+  },
+  "lowest_common_ancestor_of_a_binary_search_tree": {
+    "qno": "235",
+    "title": "Lowest Common Ancestor of a Binary Search Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 65.2
+  },
+  "verify_preorder_sequence_in_binary_search_tree": {
+    "qno": "255",
+    "title": "Verify Preorder Sequence in Binary Search Tree",
+    "tags": [
+      "Array",
+      "Stack",
+      "Tree",
+      "Binary Search Tree",
+      "Recursion",
+      "Monotonic Stack",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 50
+  },
+  "closest_binary_search_tree_value": {
+    "qno": "270",
+    "title": "Closest Binary Search Tree Value",
+    "tags": [
+      "Binary Search",
+      "Tree",
+      "Depth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 51.4
+  },
+  "inorder_successor_in_bst": {
+    "qno": "285",
+    "title": "Inorder Successor in BST",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.9
+  },
+  "largest_bst_subtree": {
+    "qno": "333",
+    "title": "Largest BST Subtree",
+    "tags": [
+      "Dynamic Programming",
+      "Tree",
+      "Depth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 44
+  },
+  "serialize_and_deserialize_bst": {
+    "qno": "449",
+    "title": "Serialize and Deserialize BST",
+    "tags": [
+      "String",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Design",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 57.8
+  },
+  "delete_node_in_a_bst": {
+    "qno": "450",
+    "title": "Delete Node in a BST",
+    "tags": [
+      "Tree",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 51.5
+  },
+  "find_mode_in_binary_search_tree": {
+    "qno": "501",
+    "title": "Find Mode in Binary Search Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 56.3
+  },
+  "inorder_successor_in_bst_ii": {
+    "qno": "510",
+    "title": "Inorder Successor in BST II",
+    "tags": [
+      "Tree",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 60.9
+  },
+  "minimum_absolute_difference_in_bst": {
+    "qno": "530",
+    "title": "Minimum Absolute Difference in BST",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 58.4
+  },
+  "convert_bst_to_greater_tree": {
+    "qno": "538",
+    "title": "Convert BST to Greater Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 69.5
+  },
+  "trim_a_binary_search_tree": {
+    "qno": "669",
+    "title": "Trim a Binary Search Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 66.3
+  },
+  "search_in_a_binary_search_tree": {
+    "qno": "700",
+    "title": "Search in a Binary Search Tree",
+    "tags": [
+      "Tree",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 80
+  },
+  "insert_into_a_binary_search_tree": {
+    "qno": "701",
+    "title": "Insert into a Binary Search Tree",
+    "tags": [
+      "Tree",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 73.8
+  },
+  "kth_largest_element_in_a_stream": {
+    "qno": "703",
+    "title": "Kth Largest Element in a Stream",
+    "tags": [
+      "Tree",
+      "Design",
+      "Binary Search Tree",
+      "Heap (Priority Queue)",
+      "Binary Tree",
+      "Data Stream"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 56.9
+  },
+  "split_bst": {
+    "qno": "776",
+    "title": "Split BST",
+    "tags": [
+      "Tree",
+      "Binary Search Tree",
+      "Recursion",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 82.7
+  },
+  "minimum_distance_between_bst_nodes": {
+    "qno": "783",
+    "title": "Minimum Distance Between BST Nodes",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 59.6
+  },
+  "increasing_order_search_tree": {
+    "qno": "897",
+    "title": "Increasing Order Search Tree",
+    "tags": [
+      "Stack",
+      "Tree",
+      "Depth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 78.3
+  },
+  "range_sum_of_bst": {
+    "qno": "938",
+    "title": "Range Sum of BST",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 86.9
+  },
+  "construct_binary_search_tree_from_preorder_traversal": {
+    "qno": "1008",
+    "title": "Construct Binary Search Tree from Preorder Traversal",
+    "tags": [
+      "Array",
+      "Stack",
+      "Tree",
+      "Binary Search Tree",
+      "Monotonic Stack",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 82.1
+  },
+  "binary_search_tree_to_greater_sum_tree": {
+    "qno": "1038",
+    "title": "Binary Search Tree to Greater Sum Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 88.2
+  },
+  "all_elements_in_two_binary_search_trees": {
+    "qno": "1305",
+    "title": "All Elements in Two Binary Search Trees",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Search Tree",
+      "Sorting",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 79.8
+  },
+  "maximum_sum_bst_in_binary_tree": {
+    "qno": "1373",
+    "title": "Maximum Sum BST in Binary Tree",
+    "tags": [
+      "Dynamic Programming",
+      "Tree",
+      "Depth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 41.3
+  },
+  "balance_a_binary_search_tree": {
+    "qno": "1382",
+    "title": "Balance a Binary Search Tree",
+    "tags": [
+      "Divide and Conquer",
+      "Greedy",
+      "Tree",
+      "Depth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 84.6
+  },
+  "number_of_ways_to_reorder_array_to_get_same_bst": {
+    "qno": "1569",
+    "title": "Number of Ways to Reorder Array to Get Same BST",
+    "tags": [
+      "Array",
+      "Math",
+      "Divide and Conquer",
+      "Dynamic Programming",
+      "Tree",
+      "Union Find",
+      "Binary Search Tree",
+      "Memoization",
+      "Combinatorics",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 53.5
+  },
+  "depth_of_bst_given_insertion_order": {
+    "qno": "1902",
+    "title": "Depth of BST Given Insertion Order",
+    "tags": [
+      "Tree",
+      "Binary Search Tree",
+      "Binary Tree",
+      "Ordered Set"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 44.4
+  },
+  "closest_nodes_queries_in_a_binary_search_tree": {
+    "qno": "2476",
+    "title": "Closest Nodes Queries in a Binary Search Tree",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Tree",
+      "Depth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Search Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 41.5
   }
 }
