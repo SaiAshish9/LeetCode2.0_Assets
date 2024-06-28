@@ -2050,7 +2050,8 @@
   },
   "3086": {
     "java": {
-      "sliding-window": "class Solution {\n  public long minimumMoves(int[] nums, int k, int maxChanges) {\n    int kNumOfIndicesWithinOneDistance = 3;\n    long ans = Long.MAX_VALUE;\n    List<Integer> oneIndices = new ArrayList<>(); \n    List<Long> prefix = new ArrayList<>();       \n    prefix.add(0L);\n\n    for (int i = 0; i < nums.length; ++i)\n      if (nums[i] == 1)\n        oneIndices.add(i);\n\n    for (int oneIndex : oneIndices)\n      prefix.add(prefix.get(prefix.size() - 1) + oneIndex);\n\n    int minOnesByTwo = Math.max(0, k - maxChanges);\n    int maxOnesByTwo =\n        Math.min(k, Math.min(minOnesByTwo + kNumOfIndicesWithinOneDistance, oneIndices.size()));\n\n    for (int onesByTwo = minOnesByTwo; onesByTwo <= maxOnesByTwo; ++onesByTwo)\n      for (int left = 0; left + onesByTwo < prefix.size(); ++left) {\n        int right = left + onesByTwo;\n        long cost1 = (k - onesByTwo) * 2;\n        long cost2 = (prefix.get(right) - prefix.get((left + right) / 2)) -\n                           (prefix.get((left + right + 1) / 2) - prefix.get(left));\n        ans = Math.min(ans, cost1 + cost2);\n      }\n\n    return ans;\n  }\n}"    }
+      "sliding-window": "class Solution {\n  public long minimumMoves(int[] nums, int k, int maxChanges) {\n    int kNumOfIndicesWithinOneDistance = 3;\n    long ans = Long.MAX_VALUE;\n    List<Integer> oneIndices = new ArrayList<>(); \n    List<Long> prefix = new ArrayList<>();       \n    prefix.add(0L);\n\n    for (int i = 0; i < nums.length; ++i)\n      if (nums[i] == 1)\n        oneIndices.add(i);\n\n    for (int oneIndex : oneIndices)\n      prefix.add(prefix.get(prefix.size() - 1) + oneIndex);\n\n    int minOnesByTwo = Math.max(0, k - maxChanges);\n    int maxOnesByTwo =\n        Math.min(k, Math.min(minOnesByTwo + kNumOfIndicesWithinOneDistance, oneIndices.size()));\n\n    for (int onesByTwo = minOnesByTwo; onesByTwo <= maxOnesByTwo; ++onesByTwo)\n      for (int left = 0; left + onesByTwo < prefix.size(); ++left) {\n        int right = left + onesByTwo;\n        long cost1 = (k - onesByTwo) * 2;\n        long cost2 = (prefix.get(right) - prefix.get((left + right) / 2)) -\n                           (prefix.get((left + right + 1) / 2) - prefix.get(left));\n        ans = Math.min(ans, cost1 + cost2);\n      }\n\n    return ans;\n  }\n}"
+    }
   },
   "3090": {
     "java": {
@@ -2059,82 +2060,12 @@
   },
   "3095": {
     "java": {
-      "sliding-window": "class Solution {
-    public int minimumSubarrayLength(int[] nums, int k) {
-        int kMax = 50;
-        int n = nums.length;
-        int ans = n + 1;
-        int ors = 0;
-        int[] count = new int[kMax + 1];
-
-        for (int left = 0, right = 0; right < n; ++right) {
-            ors = orNum(ors, nums[right], count);
-            while (ors >= k && left <= right) {
-                ans = Math.min(ans, right - left + 1);
-                ors = undoOrNum(ors, nums[left], count);
-                ++left;
-            }
-        }
-
-        return (ans == n + 1) ? -1 : ans;
-    }
-
-    private static final int kMaxBit = 30;
-
-    private int orNum(int ors, int num, int[] count) {
-        for (int i = 0; i < kMaxBit; ++i)
-            if ((num >> i & 1) == 1 && ++count[i] == 1)
-                ors += 1 << i;
-        return ors;
-    }
-
-    private int undoOrNum(int ors, int num, int[] count) {
-        for (int i = 0; i < kMaxBit; ++i)
-            if ((num >> i & 1) == 1 && --count[i] == 0)
-                ors -= 1 << i;
-        return ors;
-    }
-}"
+      "sliding-window": "class Solution {\n    public int minimumSubarrayLength(int[] nums, int k) {\n        int kMax = 50;\n        int n = nums.length;\n        int ans = n + 1;\n        int ors = 0;\n        int[] count = new int[kMax + 1];\n\n        for (int left = 0, right = 0; right < n; ++right) {\n            ors = orNum(ors, nums[right], count);\n            while (ors >= k && left <= right) {\n                ans = Math.min(ans, right - left + 1);\n                ors = undoOrNum(ors, nums[left], count);\n                ++left;\n            }\n        }\n\n        return (ans == n + 1) ? -1 : ans;\n    }\n\n    private static final int kMaxBit = 30;\n\n    private int orNum(int ors, int num, int[] count) {\n        for (int i = 0; i < kMaxBit; ++i)\n            if ((num >> i & 1) == 1 && ++count[i] == 1)\n                ors += 1 << i;\n        return ors;\n    }\n\n    private int undoOrNum(int ors, int num, int[] count) {\n        for (int i = 0; i < kMaxBit; ++i)\n            if ((num >> i & 1) == 1 && --count[i] == 0)\n                ors -= 1 << i;\n        return ors;\n    }\n}"
     }
   },
   "3097": {
     "java": {
-      "sliding-window": "class Solution {
-    public int minimumSubarrayLength(int[] nums, int k) {
-        int kMax = 50;
-        int n = nums.length;
-        int ans = n + 1;
-        int ors = 0;
-        int[] count = new int[kMax + 1];
-
-        for (int left = 0, right = 0; right < n; ++right) {
-            ors = orNum(ors, nums[right], count);
-            while (ors >= k && left <= right) {
-                ans = Math.min(ans, right - left + 1);
-                ors = undoOrNum(ors, nums[left], count);
-                ++left;
-            }
-        }
-
-        return (ans == n + 1) ? -1 : ans;
-    }
-
-    private static final int kMaxBit = 30;
-
-    private int orNum(int ors, int num, int[] count) {
-        for (int i = 0; i < kMaxBit; ++i)
-            if ((num >> i & 1) == 1 && ++count[i] == 1)
-                ors += 1 << i;
-        return ors;
-    }
-
-    private int undoOrNum(int ors, int num, int[] count) {
-        for (int i = 0; i < kMaxBit; ++i)
-            if ((num >> i & 1) == 1 && --count[i] == 0)
-                ors -= 1 << i;
-        return ors;
-    }
-}"
+      "sliding-window": "class Solution {\n    public int minimumSubarrayLength(int[] nums, int k) {\n        int kMax = 50;\n        int n = nums.length;\n        int ans = n + 1;\n        int ors = 0;\n        int[] count = new int[kMax + 1];\n\n        for (int left = 0, right = 0; right < n; ++right) {\n            ors = orNum(ors, nums[right], count);\n            while (ors >= k && left <= right) {\n                ans = Math.min(ans, right - left + 1);\n                ors = undoOrNum(ors, nums[left], count);\n                ++left;\n            }\n        }\n\n        return (ans == n + 1) ? -1 : ans;\n    }\n\n    private static final int kMaxBit = 30;\n\n    private int orNum(int ors, int num, int[] count) {\n        for (int i = 0; i < kMaxBit; ++i)\n            if ((num >> i & 1) == 1 && ++count[i] == 1)\n                ors += 1 << i;\n        return ors;\n    }\n\n    private int undoOrNum(int ors, int num, int[] count) {\n        for (int i = 0; i < kMaxBit; ++i)\n            if ((num >> i & 1) == 1 && --count[i] == 0)\n                ors -= 1 << i;\n        return ors;\n    }\n}"
     }
   },
   "3109": {
