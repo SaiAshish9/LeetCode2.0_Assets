@@ -1985,12 +1985,12 @@
   },
   "2958": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int maxSubarrayLength(int[] nums, int k) {\n        int ans = 0;\n        Map<Integer, Integer> count = new HashMap<>();\n\n        for (int left = 0, right = 0; right < nums.length; ++right) {\n            count.merge(nums[right], 1, Integer::sum);\n            while (count.get(nums[right]) == k + 1)\n                count.merge(nums[left++], -1, Integer::sum);\n            ans = Math.max(ans, right - left + 1);\n        }\n\n        return ans;\n    }\n}"
     }
   },
   "2962": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public long countSubarrays(int[] nums, int k) {\n        final int maxNum = Arrays.stream(nums).max().getAsInt();\n        long ans = 0;\n        int count = 0;\n\n        for (int left = 0, right = 0; right < nums.length; ++right) {\n            if (nums[right] == maxNum)\n                ++count;\n            while (count == k)\n                if (nums[left++] == maxNum)\n                    --count;\n            ans += left;\n        }\n\n        return ans;\n    }\n}"
     }
   },
   "2968": {
