@@ -1980,7 +1980,7 @@
   },
   "2953": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public int countCompleteSubstrings(String word, int k) {\n        final int uniqueLetters = word.chars().boxed().collect(Collectors.toSet()).size();\n        int ans = 0;\n\n        for (int windowSize = k; windowSize <= k * uniqueLetters && windowSize <= word.length(); windowSize += k) {\n            ans += countCompleteStrings(word, k, windowSize);\n        }\n\n        return ans;\n    }\n\n    private int countCompleteStrings(final String word, int k, int windowSize) {\n        int res = 0;\n        int countLetters = 0;\n        int[] count = new int[26];\n\n        for (int i = 0; i < word.length(); ++i) {\n            ++count[word.charAt(i) - 'a'];\n            ++countLetters;\n            if (i > 0 && Math.abs(word.charAt(i) - word.charAt(i - 1)) > 2) {\n                count = new int[26];\n                ++count[word.charAt(i) - 'a'];\n                countLetters = 1;\n            }\n            if (countLetters == windowSize + 1) {\n                --count[word.charAt(i - windowSize) - 'a'];\n                --countLetters;\n            }\n            if (countLetters == windowSize)\n                res += Arrays.stream(count).allMatch(freq -> freq == 0 || freq == k) ? 1 : 0;\n        }\n\n        return res;\n    }\n}"
     }
   },
   "2958": {
