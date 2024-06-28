@@ -1940,7 +1940,7 @@
   },
   "2904": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n    public String shortestBeautifulSubstring(String s, int k) {\n        int bestLeft = -1;\n        int minLength = s.length() + 1;\n        int ones = 0;\n\n        for (int left = 0, right = 0; right < s.length(); ++right) {\n            if (s.charAt(right) == '1')\n                ++ones;\n            while (ones == k) {\n                if (right - left + 1 < minLength) {\n                    bestLeft = left;\n                    minLength = right - left + 1;\n                } else if (right - left + 1 == minLength &&\n                        s.substring(left, left + minLength)\n                                .compareTo(s.substring(bestLeft, bestLeft + minLength)) < 0) {\n                    bestLeft = left;\n                }\n                if (s.charAt(left++) == '1')\n                    --ones;\n            }\n        }\n\n        return bestLeft == -1 ? \"\" : s.substring(bestLeft, bestLeft + minLength);\n    }\n}"
     }
   },
   "2905": {
