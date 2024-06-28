@@ -1895,7 +1895,7 @@
   },
   "2831": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n  public int longestEqualSubarray(List<Integer> nums, int k) {\n    int ans = 0;\n    Map<Integer, Integer> count = new HashMap<>();\n\n    for (int left = 0, right = 0; right < nums.size(); ++right) {\n      ans = Math.max(ans, count.merge(nums.get(right), 1, Integer::sum));\n      while (right - left + 1 - k > ans)\n        count.merge(nums.get(left++), -1, Integer::sum);\n    }\n\n    return ans;\n  }\n}"
     }
   },
   "2838": {
