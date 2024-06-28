@@ -1880,7 +1880,7 @@
   },
   "2799": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "import java.util.HashSet;\nimport java.util.HashMap;\nimport java.util.Set;\n\nclass Solution {\n    public int countCompleteSubarrays(int[] nums) {\n        Set<Integer> uniqueElements = new HashSet<>();\n        for (int num : nums) {\n            uniqueElements.add(num);\n        }\n        int uniqueCount = uniqueElements.size();\n        int result = 0;\n        HashMap<Integer, Integer> windowCounts = new HashMap<>();\n        int left = 0;\n        \n        for (int right = 0; right < nums.length; right++) {\n            windowCounts.put(nums[right], windowCounts.getOrDefault(nums[right], 0) + 1);\n            \n            while (windowCounts.size() == uniqueCount) {\n                result += nums.length - right;\n                int leftNum = nums[left];\n                windowCounts.put(leftNum, windowCounts.get(leftNum) - 1);\n                if (windowCounts.get(leftNum) == 0) {\n                    windowCounts.remove(leftNum);\n                }\n                left++;\n            }\n        }\n        \n        return result;\n    }\n}\n"
     }
   },
   "2824": {
