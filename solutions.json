@@ -2050,7 +2050,7 @@
   },
   "3086": {
     "java": {
-      "sliding-window": ""
+      "sliding-window": "class Solution {\n  public long minimumMoves(int[] nums, int k, int maxChanges) {\n    int kNumOfIndicesWithinOneDistance = 3;\n    long ans = Long.MAX_VALUE;\n    List<Integer> oneIndices = new ArrayList<>(); \n    List<Long> prefix = new ArrayList<>();       \n    prefix.add(0L);\n\n    for (int i = 0; i < nums.length; ++i)\n      if (nums[i] == 1)\n        oneIndices.add(i);\n\n    for (int oneIndex : oneIndices)\n      prefix.add(prefix.get(prefix.size() - 1) + oneIndex);\n\n    int minOnesByTwo = Math.max(0, k - maxChanges);\n    int maxOnesByTwo =\n        Math.min(k, Math.min(minOnesByTwo + kNumOfIndicesWithinOneDistance, oneIndices.size()));\n\n    for (int onesByTwo = minOnesByTwo; onesByTwo <= maxOnesByTwo; ++onesByTwo)\n      for (int l = 0; l + onesByTwo < prefix.size(); ++l) {\n        int r = l + onesByTwo; /\n        long cost1 = (k - onesByTwo) * 2;\n        long cost2 = (prefix.get(r) - prefix.get((l + r) / 2)) -\n                           (prefix.get((l + r + 1) / 2) - prefix.get(l));\n        ans = Math.min(ans, cost1 + cost2);\n      }\n\n    return ans;\n  }\n}"
     }
   },
   "3090": {
