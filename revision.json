@@ -96,7 +96,9 @@
     "Counting Sort": [],
     "Shell": [],
     "Line Sweep": [],
-    "Reservoir Sampling": [],
+    "Reservoir Sampling": [
+        497
+    ],
     "Strongly Connected Component": [],
     "Eulerian Circuit": [
         332,
