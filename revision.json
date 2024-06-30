@@ -11,9 +11,11 @@
         159,
         209,
         219,
-        220,
         239,
         643
+    ],
+    "Ordered Set": [
+        220
     ],
     "Monotonic Queue": [
         862,
@@ -52,7 +54,6 @@
     "Enumeration": [],
     "Union Find": [],
     "Linked List": [],
-    "Ordered Set": [],
     "Monotonic Stack": [],
     "Number Theory": [],
     "Trie": [],
