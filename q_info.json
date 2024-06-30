@@ -6216,7 +6216,7 @@
       "Hash Table",
       "Matrix"
     ],
-    "default": "Matrix",
+    "default": "Backtracking",
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 60
@@ -6230,7 +6230,7 @@
       "Backtracking",
       "Matrix"
     ],
-    "default": "Matrix",
+    "default": "Backtracking",
     "difficulty": "Hard",
     "language": "Java",
     "acceptance": 61.8
