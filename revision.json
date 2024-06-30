@@ -11,7 +11,9 @@
         159,
         209,
         219,
-        220,
+        220
+    ],
+    "Monotonic Queue": [
         239
     ],
     "Hash Table": [],
@@ -61,7 +63,6 @@
     "Interactive": [],
     "Data Stream": [],
     "Brainteaser": [],
-    "Monotonic Queue": [],
     "Randomized": [],
     "Merge Sort": [],
     "Iterator": [],
