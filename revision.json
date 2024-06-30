@@ -76,12 +76,18 @@
     "Interactive": [],
     "Data Stream": [],
     "Brainteaser": [],
-    "Randomized": [],
+    "Randomized": [
+        382,
+        384,
+        398
+    ],
     "Merge Sort": [],
     "Iterator": [],
     "Concurrency": [],
     "Doubly-Linked List": [],
-    "Probability and Statistics": [],
+    "Probability and Statistics": [
+        1227
+    ],
     "Quickselect": [],
     "Bucket Sort": [],
     "Suffix Array": [],
