@@ -98,7 +98,9 @@
     "Line Sweep": [],
     "Reservoir Sampling": [],
     "Strongly Connected Component": [],
-    "Eulerian Circuit": [],
+    "Eulerian Circuit": [
+        332
+    ],
     "Radix Sort": [],
     "Rejection Sampling": [
         470,
