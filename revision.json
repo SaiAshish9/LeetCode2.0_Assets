@@ -95,7 +95,9 @@
     "Minimum Spanning Tree": [],
     "Counting Sort": [],
     "Shell": [],
-    "Line Sweep": [],
+    "Line Sweep": [
+        391
+    ],
     "Reservoir Sampling": [
         497
     ],
