@@ -143,21 +143,6 @@
     "language": "Java",
     "acceptance": 67.7
   },
-  "minimum_number_of_days_to_disconnect_island": {
-    "qno": 1568,
-    "title": "Minimum Number of Days to Disconnect Island",
-    "tags": [
-      "Array",
-      "Depth-First Search",
-      "Breadth-First Search",
-      "Matrix",
-      "Strongly Connected Component"
-    ],
-    "default": "Strongly Connected Component",
-    "difficulty": "Hard",
-    "language": "Java",
-    "acceptance": 45.0
-  },
   "minimum_edge_weight_equilibrium_queries_in_a_tree": {
     "qno": 2846,
     "title": "Minimum Edge Weight Equilibrium Queries in a Tree",
@@ -2553,20 +2538,6 @@
     "language": "Java",
     "acceptance": 38.2
   },
-  "candy_crush": {
-    "qno": "723",
-    "title": "Candy Crush",
-    "tags": [
-      "Array",
-      "Two Pointers",
-      "Matrix",
-      "Simulation"
-    ],
-    "default": "Two Pointers",
-    "difficulty": "Medium",
-    "language": "Java",
-    "acceptance": 76.9
-  },
   "partition_labels": {
     "qno": "763",
     "title": "Partition Labels",
@@ -2674,21 +2645,6 @@
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 55.9
-  },
-  "flipping_an_image": {
-    "qno": "832",
-    "title": "Flipping an Image",
-    "tags": [
-      "Array",
-      "Two Pointers",
-      "Bit Manipulation",
-      "Matrix",
-      "Simulation"
-    ],
-    "default": "Two Pointers",
-    "difficulty": "Easy",
-    "language": "Java",
-    "acceptance": 82
   },
   "push_dominoes": {
     "qno": "838",
@@ -6251,5 +6207,3080 @@
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 41.5
+  },
+  "valid_sudoku": {
+    "qno": "36",
+    "title": "Valid Sudoku",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 60
+  },
+  "sudoku_solver": {
+    "qno": "37",
+    "title": "Sudoku Solver",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Backtracking",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 61.8
+  },
+  "rotate_image": {
+    "qno": "48",
+    "title": "Rotate Image",
+    "tags": [
+      "Array",
+      "Math",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 74.9
+  },
+  "spiral_matrix": {
+    "qno": "54",
+    "title": "Spiral Matrix",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 50.1
+  },
+  "spiral_matrix_ii": {
+    "qno": "59",
+    "title": "Spiral Matrix II",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 71.4
+  },
+  "unique_paths_ii": {
+    "qno": "63",
+    "title": "Unique Paths II",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 41.8
+  },
+  "minimum_path_sum": {
+    "qno": "64",
+    "title": "Minimum Path Sum",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 64.3
+  },
+  "set_matrix_zeroes": {
+    "qno": "73",
+    "title": "Set Matrix Zeroes",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 56.3
+  },
+  "search_a_2d_matrix": {
+    "qno": "74",
+    "title": "Search a 2D Matrix",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 50.5
+  },
+  "word_search": {
+    "qno": "79",
+    "title": "Word Search",
+    "tags": [
+      "Array",
+      "String",
+      "Backtracking",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 43.1
+  },
+  "maximal_rectangle": {
+    "qno": "85",
+    "title": "Maximal Rectangle",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Stack",
+      "Matrix",
+      "Monotonic Stack"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 50.9
+  },
+  "surrounded_regions": {
+    "qno": "130",
+    "title": "Surrounded Regions",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 39.9
+  },
+  "dungeon_game": {
+    "qno": "174",
+    "title": "Dungeon Game",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 38.2
+  },
+  "number_of_islands": {
+    "qno": "200",
+    "title": "Number of Islands",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 59.8
+  },
+  "word_search_ii": {
+    "qno": "212",
+    "title": "Word Search II",
+    "tags": [
+      "Array",
+      "String",
+      "Backtracking",
+      "Trie",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 36.4
+  },
+  "maximal_square": {
+    "qno": "221",
+    "title": "Maximal Square",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 46.8
+  },
+  "search_a_2d_matrix_ii": {
+    "qno": "240",
+    "title": "Search a 2D Matrix II",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Divide and Conquer",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 53
+  },
+  "walls_and_gates": {
+    "qno": "286",
+    "title": "Walls and Gates",
+    "tags": [
+      "Array",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 61.6
+  },
+  "game_of_life": {
+    "qno": "289",
+    "title": "Game of Life",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 69.5
+  },
+  "best_meeting_point": {
+    "qno": "296",
+    "title": "Best Meeting Point",
+    "tags": [
+      "Array",
+      "Math",
+      "Sorting",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 60.9
+  },
+  "smallest_rectangle_enclosing_black_pixels": {
+    "qno": "302",
+    "title": "Smallest Rectangle Enclosing Black Pixels",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 59
+  },
+  "range_sum_query_2d_-_immutable": {
+    "qno": "304",
+    "title": "Range Sum Query 2D - Immutable",
+    "tags": [
+      "Array",
+      "Design",
+      "Matrix",
+      "Prefix Sum"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 54.9
+  },
+  "range_sum_query_2d_-_mutable": {
+    "qno": "308",
+    "title": "Range Sum Query 2D - Mutable",
+    "tags": [
+      "Array",
+      "Design",
+      "Binary Indexed Tree",
+      "Segment Tree",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 44.2
+  },
+  "sparse_matrix_multiplication": {
+    "qno": "311",
+    "title": "Sparse Matrix Multiplication",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 68.1
+  },
+  "shortest_distance_from_all_buildings": {
+    "qno": "317",
+    "title": "Shortest Distance from All Buildings",
+    "tags": [
+      "Array",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 43.3
+  },
+  "longest_increasing_path_in_a_matrix": {
+    "qno": "329",
+    "title": "Longest Increasing Path in a Matrix",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Graph",
+      "Topological Sort",
+      "Memoization",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 53.8
+  },
+  "design_tic-tac-toe": {
+    "qno": "348",
+    "title": "Design Tic-Tac-Toe",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Design",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 58.1
+  },
+  "bomb_enemy": {
+    "qno": "361",
+    "title": "Bomb Enemy",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 51.8
+  },
+  "max_sum_of_rectangle_no_larger_than_k": {
+    "qno": "363",
+    "title": "Max Sum of Rectangle No Larger Than K",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Matrix",
+      "Prefix Sum",
+      "Ordered Set"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 44.2
+  },
+  "kth_smallest_element_in_a_sorted_matrix": {
+    "qno": "378",
+    "title": "Kth Smallest Element in a Sorted Matrix",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 62.6
+  },
+  "trapping_rain_water_ii": {
+    "qno": "407",
+    "title": "Trapping Rain Water II",
+    "tags": [
+      "Array",
+      "Breadth-First Search",
+      "Heap (Priority Queue)",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 48
+  },
+  "pacific_atlantic_water_flow": {
+    "qno": "417",
+    "title": "Pacific Atlantic Water Flow",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 55.5
+  },
+  "battleships_in_a_board": {
+    "qno": "419",
+    "title": "Battleships in a Board",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 75.5
+  },
+  "valid_word_square": {
+    "qno": "422",
+    "title": "Valid Word Square",
+    "tags": [
+      "Array",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 41.2
+  },
+  "island_perimeter": {
+    "qno": "463",
+    "title": "Island Perimeter",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 72.9
+  },
+  "the_maze": {
+    "qno": "490",
+    "title": "The Maze",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 58.1
+  },
+  "diagonal_traverse": {
+    "qno": "498",
+    "title": "Diagonal Traverse",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 60.5
+  },
+  "the_maze_iii": {
+    "qno": "499",
+    "title": "The Maze III",
+    "tags": [
+      "Array",
+      "String",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Graph",
+      "Heap (Priority Queue)",
+      "Matrix",
+      "Shortest Path"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 48.9
+  },
+  "the_maze_ii": {
+    "qno": "505",
+    "title": "The Maze II",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Graph",
+      "Heap (Priority Queue)",
+      "Matrix",
+      "Shortest Path"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 53.5
+  },
+  "minesweeper": {
+    "qno": "529",
+    "title": "Minesweeper",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 66.8
+  },
+  "lonely_pixel_i": {
+    "qno": "531",
+    "title": "Lonely Pixel I",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 62.3
+  },
+  "lonely_pixel_ii": {
+    "qno": "533",
+    "title": "Lonely Pixel II",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 48.6
+  },
+  "01_matrix": {
+    "qno": "542",
+    "title": "01 Matrix",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 48.8
+  },
+  "shortest_path_to_get_food": {
+    "qno": "1730",
+    "title": "Shortest Path to Get Food",
+    "tags": [
+      "Array",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 54.9
+  },
+  "longest_line_of_consecutive_one_in_matrix": {
+    "qno": "562",
+    "title": "Longest Line of Consecutive One in Matrix",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 50.4
+  },
+  "reshape_the_matrix": {
+    "qno": "566",
+    "title": "Reshape the Matrix",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 63.1
+  },
+  "maximum_vacation_days": {
+    "qno": "568",
+    "title": "Maximum Vacation Days",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 45.8
+  },
+  "design_excel_sum_formula": {
+    "qno": "631",
+    "title": "Design Excel Sum Formula",
+    "tags": [
+      "Array",
+      "Graph",
+      "Design",
+      "Topological Sort",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 43.8
+  },
+  "image_smoother": {
+    "qno": "661",
+    "title": "Image Smoother",
+    "tags": [
+      "Array",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 67.4
+  },
+  "cut_off_trees_for_golf_event": {
+    "qno": "675",
+    "title": "Cut Off Trees for Golf Event",
+    "tags": [
+      "Array",
+      "Breadth-First Search",
+      "Heap (Priority Queue)",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 34.4
+  },
+  "max_area_of_island": {
+    "qno": "695",
+    "title": "Max Area of Island",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 72.3
+  },
+  "candy_crush": {
+    "qno": "723",
+    "title": "Candy Crush",
+    "tags": [
+      "Array",
+      "Two Pointers",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 76.9
+  },
+  "flood_fill": {
+    "qno": "733",
+    "title": "Flood Fill",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 64.2
+  },
+  "cherry_pickup": {
+    "qno": "741",
+    "title": "Cherry Pickup",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 37
+  },
+  "contain_virus": {
+    "qno": "749",
+    "title": "Contain Virus",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 51
+  },
+  "number_of_corner_rectangles": {
+    "qno": "750",
+    "title": "Number Of Corner Rectangles",
+    "tags": [
+      "Array",
+      "Math",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 67.7
+  },
+  "construct_quad_tree": {
+    "qno": "427",
+    "title": "Construct Quad Tree",
+    "tags": [
+      "Array",
+      "Divide and Conquer",
+      "Tree",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 75.6
+  },
+  "toeplitz_matrix": {
+    "qno": "766",
+    "title": "Toeplitz Matrix",
+    "tags": [
+      "Array",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 69.1
+  },
+  "sliding_puzzle": {
+    "qno": "773",
+    "title": "Sliding Puzzle",
+    "tags": [
+      "Array",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 64.9
+  },
+  "swim_in_rising_water": {
+    "qno": "778",
+    "title": "Swim in Rising Water",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Heap (Priority Queue)",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 61
+  },
+  "transform_to_chessboard": {
+    "qno": "782",
+    "title": "Transform to Chessboard",
+    "tags": [
+      "Array",
+      "Math",
+      "Bit Manipulation",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 50.9
+  },
+  "valid_tic-tac-toe_state": {
+    "qno": "794",
+    "title": "Valid Tic-Tac-Toe State",
+    "tags": [
+      "Array",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 34.7
+  },
+  "bricks_falling_when_hit": {
+    "qno": "803",
+    "title": "Bricks Falling When Hit",
+    "tags": [
+      "Array",
+      "Union Find",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 34.8
+  },
+  "max_increase_to_keep_city_skyline": {
+    "qno": "807",
+    "title": "Max Increase to Keep City Skyline",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 86.1
+  },
+  "making_a_large_island": {
+    "qno": "827",
+    "title": "Making A Large Island",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 47.7
+  },
+  "flipping_an_image": {
+    "qno": "832",
+    "title": "Flipping an Image",
+    "tags": [
+      "Array",
+      "Two Pointers",
+      "Bit Manipulation",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 82.1
+  },
+  "image_overlap": {
+    "qno": "835",
+    "title": "Image Overlap",
+    "tags": [
+      "Array",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 63.7
+  },
+  "magic_squares_in_grid": {
+    "qno": "840",
+    "title": "Magic Squares In Grid",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Math",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 39
+  },
+  "score_after_flipping_matrix": {
+    "qno": "861",
+    "title": "Score After Flipping Matrix",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Bit Manipulation",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 80.4
+  },
+  "shortest_path_to_get_all_keys": {
+    "qno": "864",
+    "title": "Shortest Path to Get All Keys",
+    "tags": [
+      "Array",
+      "Bit Manipulation",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 53.6
+  },
+  "transpose_matrix": {
+    "qno": "867",
+    "title": "Transpose Matrix",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 71.9
+  },
+  "projection_area_of_3d_shapes": {
+    "qno": "883",
+    "title": "Projection Area of 3D Shapes",
+    "tags": [
+      "Array",
+      "Math",
+      "Geometry",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 72.8
+  },
+  "spiral_matrix_iii": {
+    "qno": "885",
+    "title": "Spiral Matrix III",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 74.6
+  },
+  "surface_area_of_3d_shapes": {
+    "qno": "892",
+    "title": "Surface Area of 3D Shapes",
+    "tags": [
+      "Array",
+      "Math",
+      "Geometry",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 66.1
+  },
+  "snakes_and_ladders": {
+    "qno": "909",
+    "title": "Snakes and Ladders",
+    "tags": [
+      "Array",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 43.8
+  },
+  "minimum_falling_path_sum": {
+    "qno": "931",
+    "title": "Minimum Falling Path Sum",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 63.7
+  },
+  "shortest_bridge": {
+    "qno": "934",
+    "title": "Shortest Bridge",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 57.8
+  },
+  "regions_cut_by_slashes": {
+    "qno": "959",
+    "title": "Regions Cut By Slashes",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 69.4
+  },
+  "unique_paths_iii": {
+    "qno": "980",
+    "title": "Unique Paths III",
+    "tags": [
+      "Array",
+      "Backtracking",
+      "Bit Manipulation",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 81.8
+  },
+  "rotting_oranges": {
+    "qno": "994",
+    "title": "Rotting Oranges",
+    "tags": [
+      "Array",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 54.4
+  },
+  "available_captures_for_rook": {
+    "qno": "999",
+    "title": "Available Captures for Rook",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 69.1
+  },
+  "number_of_enclaves": {
+    "qno": "1020",
+    "title": "Number of Enclaves",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 69
+  },
+  "matrix_cells_in_distance_order": {
+    "qno": "1030",
+    "title": "Matrix Cells in Distance Order",
+    "tags": [
+      "Array",
+      "Math",
+      "Geometry",
+      "Sorting",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 71.3
+  },
+  "path_with_maximum_minimum_value": {
+    "qno": "1102",
+    "title": "Path With Maximum Minimum Value",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Heap (Priority Queue)",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 53.7
+  },
+  "coloring_a_border": {
+    "qno": "1034",
+    "title": "Coloring A Border",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49
+  },
+  "as_far_from_land_as_possible": {
+    "qno": "1162",
+    "title": "As Far from Land as Possible",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 51.6
+  },
+  "find_smallest_common_element_in_all_rows": {
+    "qno": "1198",
+    "title": "Find Smallest Common Element in All Rows",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Binary Search",
+      "Matrix",
+      "Counting"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 76.5
+  },
+  "number_of_submatrices_that_sum_to_target": {
+    "qno": "1074",
+    "title": "Number of Submatrices That Sum to Target",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Matrix",
+      "Prefix Sum"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 74.4
+  },
+  "flip_columns_for_maximum_number_of_equal_rows": {
+    "qno": "1072",
+    "title": "Flip Columns For Maximum Number of Equal Rows",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 64
+  },
+  "shortest_path_in_binary_matrix": {
+    "qno": "1091",
+    "title": "Shortest Path in Binary Matrix",
+    "tags": [
+      "Array",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 47.6
+  },
+  "minimum_falling_path_sum_ii": {
+    "qno": "1289",
+    "title": "Minimum Falling Path Sum II",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 64.4
+  },
+  "number_of_paths_with_max_score": {
+    "qno": "1301",
+    "title": "Number of Paths with Max Score",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 39.5
+  },
+  "largest_1-bordered_square": {
+    "qno": "1139",
+    "title": "Largest 1-Bordered Square",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 50.3
+  },
+  "matrix_block_sum": {
+    "qno": "1314",
+    "title": "Matrix Block Sum",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Prefix Sum"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 75.5
+  },
+  "sort_the_matrix_diagonally": {
+    "qno": "1329",
+    "title": "Sort the Matrix Diagonally",
+    "tags": [
+      "Array",
+      "Sorting",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 82.9
+  },
+  "rank_transform_of_a_matrix": {
+    "qno": "1632",
+    "title": "Rank Transform of a Matrix",
+    "tags": [
+      "Array",
+      "Union Find",
+      "Graph",
+      "Topological Sort",
+      "Sorting",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 40.9
+  },
+  "largest_magic_square": {
+    "qno": "1895",
+    "title": "Largest Magic Square",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Prefix Sum"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 52.4
+  },
+  "minimum_moves_to_reach_target_with_rotations": {
+    "qno": "1210",
+    "title": "Minimum Moves to Reach Target with Rotations",
+    "tags": [
+      "Array",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 49.7
+  },
+  "where_will_the_ball_fall": {
+    "qno": "1706",
+    "title": "Where Will the Ball Fall",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 71.8
+  },
+  "path_with_maximum_gold": {
+    "qno": "1219",
+    "title": "Path with Maximum Gold",
+    "tags": [
+      "Array",
+      "Backtracking",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 68
+  },
+  "queens_that_can_attack_the_king": {
+    "qno": "1222",
+    "title": "Queens That Can Attack the King",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 71.9
+  },
+  "leftmost_column_with_at_least_a_one": {
+    "qno": "1428",
+    "title": "Leftmost Column with at Least a One",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Matrix",
+      "Interactive"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 54.5
+  },
+  "reconstruct_a_2-row_binary_matrix": {
+    "qno": "1253",
+    "title": "Reconstruct a 2-Row Binary Matrix",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 46
+  },
+  "number_of_closed_islands": {
+    "qno": "1254",
+    "title": "Number of Closed Islands",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 66.4
+  },
+  "shift_2d_grid": {
+    "qno": "1260",
+    "title": "Shift 2D Grid",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 67.4
+  },
+  "minimum_moves_to_move_a_box_to_their_target_location": {
+    "qno": "1263",
+    "title": "Minimum Moves to Move a Box to Their Target Location",
+    "tags": [
+      "Array",
+      "Breadth-First Search",
+      "Heap (Priority Queue)",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 49
+  },
+  "minimum_path_cost_in_a_grid": {
+    "qno": "2304",
+    "title": "Minimum Path Cost in a Grid",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 66.7
+  },
+  "count_servers_that_communicate": {
+    "qno": "1267",
+    "title": "Count Servers that Communicate",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Matrix",
+      "Counting"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 60.5
+  },
+  "find_winner_on_a_tic_tac_toe_game": {
+    "qno": "1275",
+    "title": "Find Winner on a Tic Tac Toe Game",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 53.9
+  },
+  "count_square_submatrices_with_all_ones": {
+    "qno": "1277",
+    "title": "Count Square Submatrices with All Ones",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 75.2
+  },
+  "minimum_number_of_flips_to_convert_binary_matrix_to_zero_matrix": {
+    "qno": "1284",
+    "title": "Minimum Number of Flips to Convert Binary Matrix to Zero Matrix",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Bit Manipulation",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 72.1
+  },
+  "maximum_side_length_of_a_square_with_sum_less_than_or_equal_to_threshold": {
+    "qno": "1292",
+    "title": "Maximum Side Length of a Square with Sum Less than or Equal to Threshold",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Matrix",
+      "Prefix Sum"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 53.5
+  },
+  "shortest_path_in_a_grid_with_obstacles_elimination": {
+    "qno": "1293",
+    "title": "Shortest Path in a Grid with Obstacles Elimination",
+    "tags": [
+      "Array",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 45.2
+  },
+  "the_k_weakest_rows_in_a_matrix": {
+    "qno": "1337",
+    "title": "The K Weakest Rows in a Matrix",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 73.5
+  },
+  "maximum_students_taking_exam": {
+    "qno": "1349",
+    "title": "Maximum Students Taking Exam",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Bit Manipulation",
+      "Matrix",
+      "Bitmask"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 50.5
+  },
+  "count_negative_numbers_in_a_sorted_matrix": {
+    "qno": "1351",
+    "title": "Count Negative Numbers in a Sorted Matrix",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 77.4
+  },
+  "minimum_cost_to_make_at_least_one_valid_path_in_a_grid": {
+    "qno": "1368",
+    "title": "Minimum Cost to Make at Least One Valid Path in a Grid",
+    "tags": [
+      "Array",
+      "Breadth-First Search",
+      "Graph",
+      "Heap (Priority Queue)",
+      "Matrix",
+      "Shortest Path"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 62.1
+  },
+  "lucky_numbers_in_a_matrix": {
+    "qno": "1380",
+    "title": "Lucky Numbers in a Matrix",
+    "tags": [
+      "Array",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 71.5
+  },
+  "check_if_there_is_a_valid_path_in_a_grid": {
+    "qno": "1391",
+    "title": "Check if There is a Valid Path in a Grid",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 47.9
+  },
+  "find_the_kth_smallest_sum_of_a_matrix_with_sorted_rows": {
+    "qno": "1439",
+    "title": "Find the Kth Smallest Sum of a Matrix With Sorted Rows",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Heap (Priority Queue)",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 61.7
+  },
+  "number_of_ways_of_cutting_a_pizza": {
+    "qno": "1444",
+    "title": "Number of Ways of Cutting a Pizza",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Memoization",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 62.1
+  },
+  "cherry_pickup_ii": {
+    "qno": "1463",
+    "title": "Cherry Pickup II",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 71.9
+  },
+  "subrectangle_queries": {
+    "qno": "1476",
+    "title": "Subrectangle Queries",
+    "tags": [
+      "Array",
+      "Design",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 88.2
+  },
+  "count_submatrices_with_all_ones": {
+    "qno": "1504",
+    "title": "Count Submatrices With All Ones",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Stack",
+      "Matrix",
+      "Monotonic Stack"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 57.2
+  },
+  "minimum_swaps_to_arrange_a_binary_grid": {
+    "qno": "1536",
+    "title": "Minimum Swaps to Arrange a Binary Grid",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 47.6
+  },
+  "detect_cycles_in_2d_grid": {
+    "qno": "1559",
+    "title": "Detect Cycles in 2D Grid",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 48.7
+  },
+  "matrix_diagonal_sum": {
+    "qno": "1572",
+    "title": "Matrix Diagonal Sum",
+    "tags": [
+      "Array",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 83
+  },
+  "minimum_number_of_days_to_disconnect_island": {
+    "qno": "1568",
+    "title": "Minimum Number of Days to Disconnect Island",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Matrix",
+      "Strongly Connected Component"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 44.8
+  },
+  "strange_printer_ii": {
+    "qno": "1591",
+    "title": "Strange Printer II",
+    "tags": [
+      "Array",
+      "Graph",
+      "Topological Sort",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 59.1
+  },
+  "special_positions_in_a_binary_matrix": {
+    "qno": "1582",
+    "title": "Special Positions in a Binary Matrix",
+    "tags": [
+      "Array",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 68.6
+  },
+  "find_valid_matrix_given_row_and_column_sums": {
+    "qno": "1605",
+    "title": "Find Valid Matrix Given Row and Column Sums",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 77.3
+  },
+  "maximum_non_negative_product_in_a_matrix": {
+    "qno": "1594",
+    "title": "Maximum Non Negative Product in a Matrix",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 33.7
+  },
+  "minimum_cost_to_connect_two_groups_of_points": {
+    "qno": "1595",
+    "title": "Minimum Cost to Connect Two Groups of Points",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Bit Manipulation",
+      "Matrix",
+      "Bitmask"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 48
+  },
+  "cat_and_mouse_ii": {
+    "qno": "1728",
+    "title": "Cat and Mouse II",
+    "tags": [
+      "Array",
+      "Math",
+      "Dynamic Programming",
+      "Graph",
+      "Topological Sort",
+      "Memoization",
+      "Matrix",
+      "Game Theory"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 40
+  },
+  "path_with_minimum_effort": {
+    "qno": "1631",
+    "title": "Path With Minimum Effort",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Heap (Priority Queue)",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 59.8
+  },
+  "richest_customer_wealth": {
+    "qno": "1672",
+    "title": "Richest Customer Wealth",
+    "tags": [
+      "Array",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 88.1
+  },
+  "largest_submatrix_with_rearrangements": {
+    "qno": "1727",
+    "title": "Largest Submatrix With Rearrangements",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Sorting",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 75.3
+  },
+  "map_of_highest_peak": {
+    "qno": "1765",
+    "title": "Map of Highest Peak",
+    "tags": [
+      "Array",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 62.5
+  },
+  "maximum_number_of_accepted_invitations": {
+    "qno": "1820",
+    "title": "Maximum Number of Accepted Invitations",
+    "tags": [
+      "Array",
+      "Backtracking",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.9
+  },
+  "get_biggest_three_rhombus_sums_in_a_grid": {
+    "qno": "1878",
+    "title": "Get Biggest Three Rhombus Sums in a Grid",
+    "tags": [
+      "Array",
+      "Math",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Matrix",
+      "Prefix Sum"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 47.9
+  },
+  "determine_whether_matrix_can_be_obtained_by_rotation": {
+    "qno": "1886",
+    "title": "Determine Whether Matrix Can Be Obtained By Rotation",
+    "tags": [
+      "Array",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 56.9
+  },
+  "count_sub_islands": {
+    "qno": "1905",
+    "title": "Count Sub Islands",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 67.4
+  },
+  "nearest_exit_from_entrance_in_maze": {
+    "qno": "1926",
+    "title": "Nearest Exit from Entrance in Maze",
+    "tags": [
+      "Array",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 46.6
+  },
+  "cyclically_rotating_a_grid": {
+    "qno": "1914",
+    "title": "Cyclically Rotating a Grid",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.5
+  },
+  "find_a_peak_element_ii": {
+    "qno": "1901",
+    "title": "Find a Peak Element II",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 51.7
+  },
+  "check_if_move_is_legal": {
+    "qno": "1958",
+    "title": "Check if Move is Legal",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Enumeration"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 47.9
+  },
+  "maximum_matrix_sum": {
+    "qno": "1975",
+    "title": "Maximum Matrix Sum",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.6
+  },
+  "last_day_where_you_can_still_cross": {
+    "qno": "1970",
+    "title": "Last Day Where You Can Still Cross",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 61.9
+  },
+  "find_all_groups_of_farmland": {
+    "qno": "1992",
+    "title": "Find All Groups of Farmland",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 75.8
+  },
+  "minimize_the_difference_between_target_and_chosen_elements": {
+    "qno": "1981",
+    "title": "Minimize the Difference Between Target and Chosen Elements",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 34.8
+  },
+  "convert_1d_array_into_2d_array": {
+    "qno": "2022",
+    "title": "Convert 1D Array Into 2D Array",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 61.6
+  },
+  "grid_game": {
+    "qno": "2017",
+    "title": "Grid Game",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Prefix Sum"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 45.8
+  },
+  "check_if_word_can_be_placed_in_crossword": {
+    "qno": "2018",
+    "title": "Check if Word Can Be Placed In Crossword",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Enumeration"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.3
+  },
+  "minimum_operations_to_make_a_uni-value_grid": {
+    "qno": "2033",
+    "title": "Minimum Operations to Make a Uni-Value Grid",
+    "tags": [
+      "Array",
+      "Math",
+      "Sorting",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 53.3
+  },
+  "count_fertile_pyramids_in_a_land": {
+    "qno": "2088",
+    "title": "Count Fertile Pyramids in a Land",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 64.7
+  },
+  "stamping_the_grid": {
+    "qno": "2132",
+    "title": "Stamping the Grid",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Matrix",
+      "Prefix Sum"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 32.4
+  },
+  "number_of_spaces_cleaning_robot_cleaned": {
+    "qno": "2061",
+    "title": "Number of Spaces Cleaning Robot Cleaned",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 62.5
+  },
+  "number_of_laser_beams_in_a_bank": {
+    "qno": "2125",
+    "title": "Number of Laser Beams in a Bank",
+    "tags": [
+      "Array",
+      "Math",
+      "String",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 85.7
+  },
+  "k_highest_ranked_items_within_a_price_range": {
+    "qno": "2146",
+    "title": "K Highest Ranked Items Within a Price Range",
+    "tags": [
+      "Array",
+      "Breadth-First Search",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 43
+  },
+  "check_if_every_row_and_column_contains_all_numbers": {
+    "qno": "2133",
+    "title": "Check if Every Row and Column Contains All Numbers",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 51.7
+  },
+  "minimum_operations_to_remove_adjacent_ones_in_matrix": {
+    "qno": "2123",
+    "title": "Minimum Operations to Remove Adjacent Ones in Matrix",
+    "tags": [
+      "Array",
+      "Graph",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 40.8
+  },
+  "remove_all_ones_with_row_and_column_flips": {
+    "qno": "2128",
+    "title": "Remove All Ones With Row and Column Flips",
+    "tags": [
+      "Array",
+      "Math",
+      "Bit Manipulation",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 76.3
+  },
+  "remove_all_ones_with_row_and_column_flips_ii": {
+    "qno": "2174",
+    "title": "Remove All Ones With Row and Column Flips II",
+    "tags": [
+      "Array",
+      "Bit Manipulation",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 67.6
+  },
+  "count_unguarded_cells_in_the_grid": {
+    "qno": "2257",
+    "title": "Count Unguarded Cells in the Grid",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 52.5
+  },
+  "escape_the_spreading_fire": {
+    "qno": "2258",
+    "title": "Escape the Spreading Fire",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 35.1
+  },
+  "check_if_there_is_a_valid_parentheses_string_path": {
+    "qno": "2267",
+    "title": "Check if There Is a Valid Parentheses String Path",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 38.7
+  },
+  "maximum_trailing_zeros_in_a_cornered_path": {
+    "qno": "2245",
+    "title": "Maximum Trailing Zeros in a Cornered Path",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Prefix Sum"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 36.1
+  },
+  "minimum_obstacle_removal_to_reach_corner": {
+    "qno": "2290",
+    "title": "Minimum Obstacle Removal to Reach Corner",
+    "tags": [
+      "Array",
+      "Breadth-First Search",
+      "Graph",
+      "Heap (Priority Queue)",
+      "Matrix",
+      "Shortest Path"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 54
+  },
+  "check_if_matrix_is_x-matrix": {
+    "qno": "2319",
+    "title": "Check if Matrix Is X-Matrix",
+    "tags": [
+      "Array",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 65.2
+  },
+  "number_of_increasing_paths_in_a_grid": {
+    "qno": "2328",
+    "title": "Number of Increasing Paths in a Grid",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Graph",
+      "Topological Sort",
+      "Memoization",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 58.4
+  },
+  "spiral_matrix_iv": {
+    "qno": "2326",
+    "title": "Spiral Matrix IV",
+    "tags": [
+      "Array",
+      "Linked List",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 75.2
+  },
+  "number_of_people_that_can_be_seen_in_a_grid": {
+    "qno": "2282",
+    "title": "Number of People That Can Be Seen in a Grid",
+    "tags": [
+      "Array",
+      "Stack",
+      "Matrix",
+      "Monotonic Stack"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 48.3
+  },
+  "equal_row_and_column_pairs": {
+    "qno": "2352",
+    "title": "Equal Row and Column Pairs",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 70.4
+  },
+  "largest_local_values_in_a_matrix": {
+    "qno": "2373",
+    "title": "Largest Local Values in a Matrix",
+    "tags": [
+      "Array",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 88.1
+  },
+  "build_a_matrix_with_conditions": {
+    "qno": "2392",
+    "title": "Build a Matrix With Conditions",
+    "tags": [
+      "Array",
+      "Graph",
+      "Topological Sort",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 61.5
+  },
+  "maximum_rows_covered_by_columns": {
+    "qno": "2397",
+    "title": "Maximum Rows Covered by Columns",
+    "tags": [
+      "Array",
+      "Backtracking",
+      "Bit Manipulation",
+      "Matrix",
+      "Enumeration"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 54.9
+  },
+  "minimize_maximum_value_in_a_grid": {
+    "qno": "2371",
+    "title": "Minimize Maximum Value in a Grid",
+    "tags": [
+      "Array",
+      "Union Find",
+      "Graph",
+      "Topological Sort",
+      "Sorting",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 66
+  },
+  "maximum_sum_of_an_hourglass": {
+    "qno": "2428",
+    "title": "Maximum Sum of an Hourglass",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Prefix Sum"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 74.9
+  },
+  "paths_in_matrix_whose_sum_is_divisible_by_k": {
+    "qno": "2435",
+    "title": "Paths in Matrix Whose Sum Is Divisible by K",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 42.8
+  },
+  "median_of_a_row_wise_sorted_matrix": {
+    "qno": "2387",
+    "title": "Median of a Row Wise Sorted Matrix",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 71
+  },
+  "delete_greatest_value_in_each_row": {
+    "qno": "2500",
+    "title": "Delete Greatest Value in Each Row",
+    "tags": [
+      "Array",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 78.1
+  },
+  "difference_between_ones_and_zeros_in_row_and_column": {
+    "qno": "2482",
+    "title": "Difference Between Ones and Zeros in Row and Column",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 84.5
+  },
+  "increment_submatrices_by_one": {
+    "qno": "2536",
+    "title": "Increment Submatrices by One",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Prefix Sum"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.4
+  },
+  "sort_the_students_by_their_kth_score": {
+    "qno": "2545",
+    "title": "Sort the Students by Their Kth Score",
+    "tags": [
+      "Array",
+      "Sorting",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 85.3
+  },
+  "disconnect_path_in_a_binary_matrix_by_at_most_one_flip": {
+    "qno": "2556",
+    "title": "Disconnect Path in a Binary Matrix by at Most One Flip",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 27.2
+  },
+  "check_if_there_is_a_path_with_equal_number_of_0's_and_1's": {
+    "qno": "2510",
+    "title": "Check if There is a Path With Equal Number of 0's And 1's",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 50.2
+  },
+  "check_knight_tour_configuration": {
+    "qno": "2596",
+    "title": "Check Knight Tour Configuration",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 56.9
+  },
+  "find_the_width_of_columns_of_a_grid": {
+    "qno": "2639",
+    "title": "Find the Width of Columns of a Grid",
+    "tags": [
+      "Array",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 67.5
+  },
+  "first_completely_painted_row_or_column": {
+    "qno": "2661",
+    "title": "First Completely Painted Row or Column",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 50.4
+  },
+  "minimum_number_of_visited_cells_in_a_grid": {
+    "qno": "2617",
+    "title": "Minimum Number of Visited Cells in a Grid",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Stack",
+      "Breadth-First Search",
+      "Union Find",
+      "Heap (Priority Queue)",
+      "Matrix",
+      "Monotonic Stack"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 24.7
+  },
+  "find_the_string_with_lcp": {
+    "qno": "2573",
+    "title": "Find the String with LCP",
+    "tags": [
+      "Array",
+      "String",
+      "Dynamic Programming",
+      "Greedy",
+      "Union Find",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 31.5
+  },
+  "minimum_time_to_visit_a_cell_in_a_grid": {
+    "qno": "2577",
+    "title": "Minimum Time to Visit a Cell In a Grid",
+    "tags": [
+      "Array",
+      "Breadth-First Search",
+      "Graph",
+      "Heap (Priority Queue)",
+      "Matrix",
+      "Shortest Path"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 35.4
+  },
+  "prime_in_diagonal": {
+    "qno": "2614",
+    "title": "Prime In Diagonal",
+    "tags": [
+      "Array",
+      "Math",
+      "Matrix",
+      "Number Theory"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 34
+  },
+  "sum_in_a_matrix": {
+    "qno": "2679",
+    "title": "Sum in a Matrix",
+    "tags": [
+      "Array",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 59.7
+  },
+  "row_with_maximum_ones": {
+    "qno": "2643",
+    "title": "Row With Maximum Ones",
+    "tags": [
+      "Array",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 75.4
+  },
+  "maximum_number_of_fish_in_a_grid": {
+    "qno": "2658",
+    "title": "Maximum Number of Fish in a Grid",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 59.7
+  },
+  "maximum_number_of_moves_in_a_grid": {
+    "qno": "2684",
+    "title": "Maximum Number of Moves in a Grid",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 45.8
+  },
+  "difference_of_number_of_distinct_values_on_diagonals": {
+    "qno": "2711",
+    "title": "Difference of Number of Distinct Values on Diagonals",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 71
+  },
+  "maximum_strictly_increasing_cells_in_a_matrix": {
+    "qno": "2713",
+    "title": "Maximum Strictly Increasing Cells in a Matrix",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Binary Search",
+      "Dynamic Programming",
+      "Memoization",
+      "Sorting",
+      "Matrix",
+      "Ordered Set"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 30.6
+  },
+  "the_knight’s_tour": {
+    "qno": "2664",
+    "title": "The Knight’s Tour",
+    "tags": [
+      "Array",
+      "Backtracking",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 66.4
+  },
+  "find_a_good_subset_of_the_matrix": {
+    "qno": "2732",
+    "title": "Find a Good Subset of the Matrix",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Bit Manipulation",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 45.4
+  },
+  "find_the_safest_path_in_a_grid": {
+    "qno": "2812",
+    "title": "Find the Safest Path in a Grid",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.1
+  },
+  "construct_product_matrix": {
+    "qno": "2906",
+    "title": "Construct Product Matrix",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Prefix Sum"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 30.9
+  },
+  "minimum_time_takes_to_reach_destination_without_drowning": {
+    "qno": "2814",
+    "title": "Minimum Time Takes to Reach Destination Without Drowning",
+    "tags": [
+      "Array",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 63.3
+  },
+  "minimum_moves_to_spread_stones_over_grid": {
+    "qno": "2850",
+    "title": "Minimum Moves to Spread Stones Over Grid",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 44.2
+  },
+  "maximum_spending_after_buying_items": {
+    "qno": "2931",
+    "title": "Maximum Spending After Buying Items",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 65.3
+  },
+  "sum_of_remoteness_of_all_cells": {
+    "qno": "2852",
+    "title": "Sum of Remoteness of All Cells",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 64.9
+  },
+  "find_champion_i": {
+    "qno": "2923",
+    "title": "Find Champion I",
+    "tags": [
+      "Array",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 73.2
+  },
+  "matrix_similarity_after_cyclic_shifts": {
+    "qno": "2946",
+    "title": "Matrix Similarity After Cyclic Shifts",
+    "tags": [
+      "Array",
+      "Math",
+      "Matrix",
+      "Simulation"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 58
+  },
+  "find_missing_and_repeated_values": {
+    "qno": "2965",
+    "title": "Find Missing and Repeated Values",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Math",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 75.5
+  },
+  "find_the_grid_of_region_average": {
+    "qno": "3030",
+    "title": "Find the Grid of Region Average",
+    "tags": [
+      "Array",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 43.9
+  },
+  "most_frequent_prime": {
+    "qno": "3044",
+    "title": "Most Frequent Prime",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Math",
+      "Matrix",
+      "Counting",
+      "Enumeration",
+      "Number Theory"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 48.1
+  },
+  "modify_the_matrix": {
+    "qno": "3033",
+    "title": "Modify the Matrix",
+    "tags": [
+      "Array",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 68.3
+  },
+  "minimum_operations_to_write_the_letter_y_on_a_grid": {
+    "qno": "3071",
+    "title": "Minimum Operations to Write the Letter Y on a Grid",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Matrix",
+      "Counting"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 62.2
+  },
+  "count_submatrices_with_top-left_element_and_sum_less_than_k": {
+    "qno": "3070",
+    "title": "Count Submatrices with Top-Left Element and Sum Less Than k",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Prefix Sum"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 59.2
+  },
+  "match_alphanumerical_pattern_in_matrix_i": {
+    "qno": "3078",
+    "title": "Match Alphanumerical Pattern in Matrix I",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "String",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 67.2
+  },
+  "maximum_difference_score_in_a_grid": {
+    "qno": "3148",
+    "title": "Maximum Difference Score in a Grid",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 47.6
+  },
+  "make_a_square_with_the_same_color": {
+    "qno": "3127",
+    "title": "Make a Square with the Same Color",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Enumeration"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 51.2
+  },
+  "minimum_number_of_operations_to_satisfy_conditions": {
+    "qno": "3122",
+    "title": "Minimum Number of Operations to Satisfy Conditions",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 41.9
+  },
+  "check_if_grid_satisfies_conditions": {
+    "qno": "3142",
+    "title": "Check if Grid Satisfies Conditions",
+    "tags": [
+      "Array",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 43.1
+  },
+  "find_the_minimum_area_to_cover_all_ones_ii": {
+    "qno": "3197",
+    "title": "Find the Minimum Area to Cover All Ones II",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Enumeration"
+    ],
+    "default": "Matrix",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 33.2
+  },
+  "find_the_minimum_area_to_cover_all_ones_i": {
+    "qno": "3195",
+    "title": "Find the Minimum Area to Cover All Ones I",
+    "tags": [
+      "Array",
+      "Matrix"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 74.3
   }
 }
