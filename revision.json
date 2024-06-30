@@ -93,8 +93,13 @@
     "Strongly Connected Component": [],
     "Eulerian Circuit": [],
     "Radix Sort": [],
-    "Rejection Sampling": [],
-    "Biconnected Component": [],
+    "Rejection Sampling": [
+        470,
+        478
+    ],
+    "Biconnected Component": [
+        1192
+    ],
     "Array": [],
     "String": []
 }
