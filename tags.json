@@ -1,51 +1,51 @@
 [
     {
         "tag": "Array",
-        "count": "1633"
+        "count": "1678"
     },
     {
         "tag": "String",
-        "count": "696"
+        "count": "705"
     },
     {
         "tag": "Hash Table",
-        "count": "589"
+        "count": "613"
     },
     {
         "tag": "Dynamic Programming",
-        "count": "496"
+        "count": "510"
     },
     {
         "tag": "Math",
-        "count": "496"
+        "count": "502"
     },
     {
         "tag": "Sorting",
-        "count": "399"
+        "count": "406"
     },
     {
         "tag": "Greedy",
-        "count": "362"
+        "count": "365"
     },
     {
         "tag": "Depth-First Search",
-        "count": "286"
+        "count": "288"
     },
     {
         "tag": "Database",
-        "count": "266"
+        "count": "272"
     },
     {
         "tag": "Binary Search",
-        "count": "262"
+        "count": "269"
     },
     {
         "tag": "Tree",
-        "count": "228"
+        "count": "229"
     },
     {
         "tag": "Breadth-First Search",
-        "count": "227"
+        "count": "228"
     },
     {
         "tag": "Matrix",
@@ -53,31 +53,31 @@
     },
     {
         "tag": "Bit Manipulation",
-        "count": "205"
+        "count": "214"
     },
     {
         "tag": "Two Pointers",
-        "count": "201"
+        "count": "203"
     },
     {
         "tag": "Binary Tree",
-        "count": "174"
+        "count": "175"
     },
     {
         "tag": "Heap (Priority Queue)",
-        "count": "168"
+        "count": "169"
     },
     {
         "tag": "Prefix Sum",
-        "count": "157"
+        "count": "163"
     },
     {
         "tag": "Stack",
-        "count": "152"
+        "count": "155"
     },
     {
         "tag": "Simulation",
-        "count": "147"
+        "count": "153"
     },
     {
         "tag": "Graph",
@@ -85,7 +85,7 @@
     },
     {
         "tag": "Counting",
-        "count": "125"
+        "count": "133"
     },
     {
         "tag": "Design",
@@ -93,15 +93,15 @@
     },
     {
         "tag": "Sliding Window",
-        "count": "118"
+        "count": "119"
     },
     {
-        "tag": "co",
-        "count": "101"
+        "tag": "Backtracking",
+        "count": "102"
     },
     {
         "tag": "Enumeration",
-        "count": "82"
+        "count": "86"
     },
     {
         "tag": "Union Find",
@@ -113,7 +113,7 @@
     },
     {
         "tag": "Ordered Set",
-        "count": "60"
+        "count": "61"
     },
     {
         "tag": "Monotonic Stack",
@@ -129,34 +129,38 @@
     },
     {
         "tag": "Divide and Conquer",
+        "count": "47"
+    },
+    {
+        "tag": "Segment Tree",
         "count": "46"
+    },
+    {
+        "tag": "Bitmask",
+        "count": "45"
+    },
+    {
+        "tag": "Queue",
+        "count": "45"
     },
     {
         "tag": "Recursion",
         "count": "45"
     },
     {
-        "tag": "Bitmask",
-        "count": "44"
-    },
-    {
-        "tag": "Queue",
-        "count": "44"
-    },
-    {
-        "tag": "Segment Tree",
-        "count": "42"
-    },
-    {
         "tag": "Binary Search Tree",
         "count": "40"
     },
     {
-        "tag": "Geometry",
-        "count": "37"
+        "tag": "Memoization",
+        "count": "38"
     },
     {
-        "tag": "Memoization",
+        "tag": "Binary Indexed Tree",
+        "count": "38"
+    },
+    {
+        "tag": "Geometry",
         "count": "37"
     },
     {
@@ -164,16 +168,12 @@
         "count": "36"
     },
     {
-        "tag": "Binary Indexed Tree",
-        "count": "36"
+        "tag": "Combinatorics",
+        "count": "33"
     },
     {
         "tag": "Topological Sort",
         "count": "32"
-    },
-    {
-        "tag": "Combinatorics",
-        "count": "31"
     },
     {
         "tag": "String Matching",
@@ -236,6 +236,10 @@
         "count": "7"
     },
     {
+        "tag": "Counting Sort",
+        "count": "6"
+    },
+    {
         "tag": "Bucket Sort",
         "count": "6"
     },
@@ -245,10 +249,6 @@
     },
     {
         "tag": "Minimum Spanning Tree",
-        "count": "5"
-    },
-    {
-        "tag": "Counting Sort",
         "count": "5"
     },
     {
