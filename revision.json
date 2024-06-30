@@ -99,7 +99,9 @@
     "Reservoir Sampling": [],
     "Strongly Connected Component": [],
     "Eulerian Circuit": [
-        332
+        332,
+        753,
+        2097
     ],
     "Radix Sort": [],
     "Rejection Sampling": [
