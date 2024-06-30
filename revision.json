@@ -16,6 +16,15 @@
     "Monotonic Queue": [
         239
     ],
+    "Matrix": [
+        36,
+        48,
+        54,
+        59
+    ],
+    "Backtracking": [
+        37
+    ],
     "Hash Table": [],
     "Dynamic Programming": [],
     "Math": [],
@@ -26,7 +35,6 @@
     "Binary Search": [],
     "Tree": [],
     "Breadth-First Search": [],
-    "Matrix": [],
     "Bit Manipulation": [],
     "Binary Tree": [],
     "Heap (Priority Queue)": [],
@@ -36,7 +44,6 @@
     "Graph": [],
     "Counting": [],
     "Design": [],
-    "Backtracking": [],
     "Enumeration": [],
     "Union Find": [],
     "Linked List": [],
