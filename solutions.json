@@ -86,7 +86,7 @@
   },
   "54": {
     "java": {
-      "matrix": ""
+      "matrix": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Solution {\n    private static final int[] dr = {0, 1, 0, -1};\n    private static final int[] dc = {1, 0, -1, 0};\n\n    public List<Integer> spiralOrder(int[][] matrix) {\n        List<Integer> result = new ArrayList<>();\n        if (matrix == null || matrix.length == 0) return result;\n\n        int rows = matrix.length;\n        int cols = matrix[0].length;\n        boolean[][] visited = new boolean[rows][cols];\n\n        dfs(matrix, visited, result, 0, 0, 0);\n        return result;\n    }\n\n    private void dfs(int[][] matrix, boolean[][] visited, List<Integer> result, int row, int col, int direction) {\n        if (row < 0 || row >= matrix.length || col < 0 || col >= matrix[0].length || visited[row][col]) {\n            return;\n        }\n\n        visited[row][col] = true;\n        result.add(matrix[row][col]);\n\n        int nextRow = row + dr[direction];\n        int nextCol = col + dc[direction];\n\n        if (nextRow < 0 || nextRow >= matrix.length || nextCol < 0 || nextCol >= matrix[0].length || visited[nextRow][nextCol]) {\n            direction = (direction + 1) % 4; \n            nextRow = row + dr[direction];\n            nextCol = col + dc[direction];\n        }\n\n        dfs(matrix, visited, result, nextRow, nextCol, direction);\n    }\n\n}\n"
     }
   },
   "59": {
