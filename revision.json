@@ -130,7 +130,12 @@
     "Quickselect": [],
     "Bucket Sort": [],
     "Suffix Array": [],
-    "Minimum Spanning Tree": [],
+    "Minimum Spanning Tree": [
+        1135,
+        1168,
+        1584,
+        1724
+    ],
     "Counting Sort": [],
     "Shell": [
         192,
