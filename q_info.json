@@ -9286,7 +9286,13 @@
   "minimum_operations_to_make_binary_array_elements_equal_to_one_i": {
     "qno": "3191",
     "title": "Minimum Operations to Make Binary Array Elements Equal to One I",
-    "tags": [],
+    "tags": [
+      "Array",
+      "Bit Manipulation",
+      "Queue",
+      "Sliding Window",
+      "Prefix Sum"
+    ],
     "default": "Sliding Window",
     "difficulty": "Medium",
     "language": "Java",
