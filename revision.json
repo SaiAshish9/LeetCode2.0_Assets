@@ -128,8 +128,16 @@
         1227
     ],
     "Quickselect": [],
-    "Bucket Sort": [],
-    "Suffix Array": [],
+    "Bucket Sort": [
+        220,
+        347,
+        164,
+        451,
+        692
+    ],
+    "Suffix Array": [
+        1698
+    ],
     "Minimum Spanning Tree": [
         1135,
         1168,
