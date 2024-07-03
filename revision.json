@@ -127,7 +127,12 @@
     "Probability and Statistics": [
         1227
     ],
-    "Quickselect": [],
+    "Quickselect": [
+        215,
+        347,
+        973,
+        1985
+    ],
     "Bucket Sort": [
         347,
         451,
