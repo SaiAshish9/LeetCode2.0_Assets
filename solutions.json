@@ -3357,5 +3357,9 @@
     "java": {
       "matrix": ""
     }
+  },
+  "3191": {
+    "java": {
+      "sliding-window": "class Solution {\n    public int minOperations(int[] nums) {\n        int n = nums.length;\n        int ans = 0;\n\n        for (int i = 0; i + 2 < n; ++i)\n            if (nums[i] == 0) {\n                nums[i + 1] ^= 1;\n                nums[i + 2] ^= 1;\n                ++ans;\n            }\n\n        return nums[n - 1] == 0 || nums[n - 2] == 0 ? -1 : ans;\n    }\n}"    }
   }
 }
