@@ -132,7 +132,12 @@
     "Suffix Array": [],
     "Minimum Spanning Tree": [],
     "Counting Sort": [],
-    "Shell": [],
+    "Shell": [
+        192,
+        193,
+        194,
+        195
+    ],
     "Line Sweep": [
         391
     ],
