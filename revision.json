@@ -123,7 +123,13 @@
     "Merge Sort": [],
     "Iterator": [],
     "Concurrency": [],
-    "Doubly-Linked List": [],
+    "Doubly-Linked List": [
+        146,
+        460,
+        432,
+        716,
+        426
+    ],
     "Probability and Statistics": [
         1227
     ],
