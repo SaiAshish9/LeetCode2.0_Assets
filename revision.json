@@ -122,7 +122,10 @@
     ],
     "Merge Sort": [],
     "Iterator": [],
-    "Concurrency": [],
+    "Concurrency": [
+        1114,
+        1115
+    ],
     "Doubly-Linked List": [
         146,
         460,
