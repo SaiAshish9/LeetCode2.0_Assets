@@ -9297,5 +9297,18 @@
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 70.8
+  },
+  "minimum_average_of_smallest_and_largest_elements": {
+    "qno": "3194",
+    "title": "Minimum Average of Smallest and Largest Elements",
+    "tags": [
+      "Array",
+      "Two Pointers",
+      "Sorting"
+    ],
+    "default": "Two Pointers",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 84.5
   }
 }
