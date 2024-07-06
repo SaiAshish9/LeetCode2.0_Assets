@@ -22,7 +22,13 @@
         202,
         234,
         283,
-        287
+        287,
+        344,
+        345,
+        349,
+        350,
+        360,
+        457
     ],
     "Sliding Window": [
         3,
@@ -73,7 +79,9 @@
     "Backtracking": [
         37
     ],
-    "Hash Table": [],
+    "Hash Table": [
+        522
+    ],
     "Dynamic Programming": [],
     "Math": [],
     "Sorting": [],
