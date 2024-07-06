@@ -1304,7 +1304,7 @@
   },
   "923": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "import java.util.Arrays;\n\npublic class Solution {\n    public int threeSumMulti(int[] arr, int target) {\n        int MOD = 1_000_000_007;\n        Arrays.sort(arr);\n        int n = arr.length;\n        long result = 0;\n\n        for (int left = 0; left < n; left++) {\n            int T = target - arr[left];\n            int right = left + 1, k = n - 1;\n            while (right < k) {\n                if (arr[right] + arr[k] < T) {\n                    right++;\n                } else if (arr[right] + arr[k] > T) {\n                    k--;\n                } else if (arr[right] != arr[k]) {\n                    int leftCount = 1, rightCount = 1;\n                    while (right + 1 < k && arr[right] == arr[right + 1]) {\n                        leftCount++;\n                        right++;\n                    }\n                    while (k - 1 > right && arr[k] == arr[k - 1]) {\n                        rightCount++;\n                        k--;\n                    }\n                    result += leftCount * rightCount;\n                    result %= MOD;\n                    right++;\n                    k--;\n                } else {\n                    result += (k - right + 1) * (k - right) / 2;\n                    result %= MOD;\n                    break;\n                }\n            }\n        }\n\n        return (int) result;\n    }\n}\n"
     }
   },
   "925": {
