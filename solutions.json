@@ -3210,7 +3210,7 @@
   },
   "2970": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "class Solution {\n    public int incremovableSubarrayCount(int[] nums) {\n        int n = nums.length;\n        int count = 0;\n        \n        for (int start = 0; start < n; start++) {\n            for (int end = start + 1; end <= n; end++) {\n                if (isIncremovable(nums, start, end)) {\n                    count++;\n                }\n            }\n        }\n        \n        return count;\n    }\n    \n    private boolean isIncremovable(int[] nums, int start, int end) {\n        List<Integer> remaining = new ArrayList<>();\n        \n        for (int i = 0; i < nums.length; i++) {\n            if (i < start || i >= end) {\n                remaining.add(nums[i]);\n            }\n        }\n        \n        for (int i = 1; i < remaining.size(); i++) {\n            if (remaining.get(i) <= remaining.get(i - 1)) {\n                return false;\n            }\n        }\n        \n        return true;\n    }\n}\n"
     }
   },
   "2972": {
