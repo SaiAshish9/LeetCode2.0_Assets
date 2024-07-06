@@ -2108,7 +2108,7 @@
   },
   "1712": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "class Solution {\n    public int waysToSplit(int[] nums) {\n        int kMod = 1_000_000_007;\n        int n = nums.length;\n        int ans = 0;\n        int[] prefix = nums.clone();\n\n        for (int i = 1; i < n; ++i)\n            prefix[i] += prefix[i - 1];\n\n        for (int i = 0; i < n - 2; ++i) {\n            int j = firstGreaterEqual(prefix, i);\n            if (j == n - 1)\n                break;\n            int mid = prefix[j] - prefix[i];\n            int right = prefix[prefix.length - 1] - prefix[j];\n            if (mid > right)\n                continue;\n            int k = firstGreater(prefix, i);\n            ans = (ans + k - j) % kMod;\n        }\n\n        return ans;\n    }\n\n    private int firstGreaterEqual(int[] prefix, int i) {\n        int left = i + 1;\n        int right = prefix.length - 1;\n        while (left < right) {\n            int mid = (left + right) / 2;\n            if (prefix[mid] - prefix[i] >= prefix[i])\n                right = mid;\n            else\n                left = mid + 1;\n        }\n        return left;\n    };\n\n    private int firstGreater(int[] prefix, int i) {\n        int left = i + 1;\n        int right = prefix.length - 1;\n        while (left < right) {\n            int mid = (left + right) / 2;\n            if (prefix[mid] - prefix[i] > prefix[prefix.length - 1] - prefix[mid])\n                right = mid;\n            else\n                left = mid + 1;\n        }\n        return left;\n    };\n}"
     }
   },
   "1721": {
