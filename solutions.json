@@ -554,7 +554,7 @@
   },
   "345": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "import java.util.HashSet;\n\npublic class Solution {\n    public String reverseVowels(String s) {\n        char[] chars = s.toCharArray();\n        HashSet<Character> vowels = new HashSet<>();\n        vowels.addAll(Set.of('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'));\n\n        int left = 0, right = chars.length - 1;\n        while (left < right) {\n            while (left < right && !vowels.contains(chars[left])) {\n                left++;\n            }\n            while (left < right && !vowels.contains(chars[right])) {\n                right--;\n            }\n            if (left < right) {\n                char temp = chars[left];\n                chars[left] = chars[right];\n                chars[right] = temp;\n                left++;\n                right--;\n            }\n        }\n\n        return new String(chars);\n    }\n}\n"
     }
   },
   "347": {
