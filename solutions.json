@@ -3115,7 +3115,7 @@
   },
   "2903": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "public class Solution {\n    public int[] findIndices(int[] nums, int indexDifference, int valueDifference) {\n        int n = nums.length;\n        \n        for (int i = 0; i < n; i++) {\n            for (int j = i + indexDifference; j < n; j++) {\n                if (Math.abs(i - j) >= indexDifference && Math.abs(nums[i] - nums[j]) >= valueDifference) {\n                    return new int[]{i, j};\n                }\n            }\n        }\n        \n        return new int[]{-1, -1};\n    }\n}\n"
     }
   },
   "2904": {
