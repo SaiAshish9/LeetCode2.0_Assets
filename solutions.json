@@ -549,7 +549,7 @@
   },
   "344": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "public class Solution {\n    public void reverseString(char[] s) {\n        int left = 0;\n        int right = s.length - 1;\n        \n        while (left < right) {\n            char temp = s[left];\n            s[left] = s[right];\n            s[right] = temp;            \n            left++;\n            right--;\n        }\n    }\n}\n"
     }
   },
   "345": {
