@@ -28,7 +28,15 @@
         349,
         350,
         360,
-        457
+        457,
+        532,
+        556,
+        581,
+        611,
+        633,
+        658,
+        719,
+        786
     ],
     "Sliding Window": [
         3,
@@ -91,7 +99,9 @@
     "Binary Search": [],
     "Tree": [],
     "Breadth-First Search": [],
-    "Bit Manipulation": [],
+    "Bit Manipulation": [
+        832
+    ],
     "Binary Tree": [],
     "Heap (Priority Queue)": [],
     "Prefix Sum": [],
