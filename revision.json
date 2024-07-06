@@ -18,7 +18,11 @@
         141,
         142,
         167,
-        189
+        189,
+        202,
+        234,
+        283,
+        287
     ],
     "Sliding Window": [
         3,
@@ -91,7 +95,9 @@
     "Enumeration": [],
     "Union Find": [],
     "Linked List": [],
-    "Monotonic Stack": [],
+    "Monotonic Stack": [
+        321
+    ],
     "Number Theory": [],
     "Trie": [],
     "Divide and Conquer": [],
