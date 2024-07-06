@@ -721,7 +721,7 @@
   },
   "457": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "class Solution {\n    public boolean circularArrayLoop(int[] nums) {\n        if (nums.length < 2)\n            return false;\n\n        for (int i = 0; i < nums.length; ++i) {\n            if (nums[i] == 0)\n                continue;\n            int slow = i;\n            int fast = advance(nums, slow);\n            while (nums[i] * nums[fast] > 0 && nums[i] * nums[advance(nums, fast)] > 0) {\n                if (slow == fast) {\n                    if (slow == advance(nums, slow))\n                        break;\n                    return true;\n                }\n                slow = advance(nums, slow);\n                fast = advance(nums, advance(nums, fast));\n            }\n\n            slow = i;\n            int sign = nums[i];\n            while (sign * nums[slow] > 0) {\n                int next = advance(nums, slow);\n                nums[slow] = 0;\n                slow = next;\n            }\n        }\n\n        return false;\n    }\n\n    private int advance(int[] nums, int i) {\n        int n = nums.length;\n        int val = (i + nums[i]) % n;\n        return i + nums[i] >= 0 ? val : n + val;\n    }\n}"
     }
   },
   "460": {
