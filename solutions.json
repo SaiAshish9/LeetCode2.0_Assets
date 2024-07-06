@@ -570,12 +570,12 @@
   },
   "349": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "import java.util.*;\n\npublic class Solution {\n    public int[] intersection(int[] nums1, int[] nums2) {\n        Set<Integer> set = new HashSet<>();\n        Set<Integer> intersect = new HashSet<>();\n        \n        for (int num : nums1) {\n            set.add(num);\n        }\n        \n        for (int num : nums2) {\n            if (set.contains(num)) {\n                intersect.add(num);\n            }\n        }\n        \n        int[] result = new int[intersect.size()];\n        int index = 0;\n        for (int num : intersect) {\n            result[index++] = num;\n        }\n        \n        return result;\n    }\n}\n"
     }
   },
   "350": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "import java.util.*;\n\npublic class Solution {\n    public int[] intersect(int[] nums1, int[] nums2) {\n        Map<Integer, Integer> map = new HashMap<>();\n        for (int num : nums1) {\n            map.put(num, map.getOrDefault(num, 0) + 1);\n        }\n\n        List<Integer> intersect = new ArrayList<>();\n\n        for (int num : nums2) {\n            if (map.containsKey(num) && map.get(num) > 0) {\n                intersect.add(num);\n                map.put(num, map.get(num) - 1);\n            }\n        }\n\n        int[] result = new int[intersect.size()];\n        int index = 0;\n        for (int num : intersect) {\n            result[index++] = num;\n        }\n\n        return result;\n    }\n}\n"
     }
   },
   "360": {
