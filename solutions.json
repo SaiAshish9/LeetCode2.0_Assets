@@ -3125,7 +3125,7 @@
   },
   "2905": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "class Solution {\n    public int[] findIndices(int[] nums, int indexDifference, int valueDifference) {\n        int minIndex = 0;\n        int maxIndex = 0;\n\n        for (int i = indexDifference; i < nums.length; ++i) {\n            if (nums[i - indexDifference] < nums[minIndex])\n                minIndex = i - indexDifference;\n            if (nums[i - indexDifference] > nums[maxIndex])\n                maxIndex = i - indexDifference;\n            if (nums[i] - nums[minIndex] >= valueDifference)\n                return new int[] { i, minIndex };\n            if (nums[maxIndex] - nums[i] >= valueDifference)\n                return new int[] { i, maxIndex };\n        }\n\n        return new int[] { -1, -1 };\n    }\n}"
     }
   },
   "2906": {
