@@ -1360,7 +1360,7 @@
   },
   "977": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "import java.util.Arrays;\n\npublic class Solution {\n    public int[] sortedSquares(int[] nums) {\n        int n = nums.length;\n        int[] result = new int[n];\n        int left = 0, right = n - 1;\n\n        for (int i = n - 1; i >= 0; i--) {\n            if (Math.abs(nums[left]) > Math.abs(nums[right])) {\n                result[i] = nums[left] * nums[left];\n                left++;\n            } else {\n                result[i] = nums[right] * nums[right];\n                right--;\n            }\n        }\n\n        return result;\n    }\n}\n"
     }
   },
   "978": {
