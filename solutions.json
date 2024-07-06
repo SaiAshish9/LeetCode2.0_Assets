@@ -942,7 +942,7 @@
   },
   "647": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "public class Solution {\n    public int countSubstrings(String s) {\n        int n = s.length();\n        int count = 0;\n\n        for (int i = 0; i < n; i++) {\n            count += countPalindromesAroundCenter(s, i, i); // Odd length palindromes\n            count += countPalindromesAroundCenter(s, i, i + 1); // Even length palindromes\n        }\n\n        return count;\n    }\n\n    private int countPalindromesAroundCenter(String s, int left, int right) {\n        int count = 0;\n        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {\n            count++;\n            left--;\n            right++;\n        }\n        return count;\n    }\n}\n"
     }
   },
   "653": {
