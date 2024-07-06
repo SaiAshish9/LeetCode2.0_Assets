@@ -1032,7 +1032,7 @@
   },
   "719": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "import java.util.Arrays;\n\npublic class Solution {\n    public int smallestDistancePair(int[] nums, int k) {\n        Arrays.sort(nums);\n        int n = nums.length;\n        int left = 0;\n        int right = nums[n - 1] - nums[0];\n\n        while (left < right) {\n            int mid = (left + right) / 2;\n            if (countPairs(nums, mid) < k) {\n                left = mid + 1;\n            } else {\n                right = mid;\n            }\n        }\n\n        return left;\n    }\n\n    private int countPairs(int[] nums, int mid) {\n        int count = 0;\n        int n = nums.length;\n        for (int i = 0; i < n; i++) {\n            int j = i;\n            while (j < n && nums[j] - nums[i] <= mid) {\n                j++;\n            }\n            count += j - i - 1;\n        }\n        return count;\n    }\n}\n"
     }
   },
   "723": {
