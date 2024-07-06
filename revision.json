@@ -20,7 +20,6 @@
         167,
         189,
         202,
-        234,
         283,
         287,
         344,
@@ -127,7 +126,9 @@
     "Design": [],
     "Enumeration": [],
     "Union Find": [],
-    "Linked List": [],
+    "Linked List": [
+        234
+    ],
     "Monotonic Stack": [
         321
     ],
