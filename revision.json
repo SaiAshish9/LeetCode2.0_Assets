@@ -35,7 +35,6 @@
         647,
         658,
         719,
-        786,
         923,
         977,
         1099,
@@ -118,7 +117,9 @@
         832
     ],
     "Binary Tree": [],
-    "Heap (Priority Queue)": [],
+    "Heap (Priority Queue)": [
+        786
+    ],
     "Prefix Sum": [],
     "Stack": [],
     "Simulation": [],
