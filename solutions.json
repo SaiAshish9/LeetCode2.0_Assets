@@ -580,7 +580,7 @@
   },
   "360": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "class Solution {\n    public int[] sortTransformedArray(int[] nums, int a, int b, int c) {\n        int n = nums.length;\n        int left = 0, right = n - 1, k = a < 0 ? 0 : n - 1;\n        int[] res = new int[n];\n        while (left <= right) {\n            int v1 = fn(a, b, c, nums[left]), v2 = fn(a, b, c, nums[right]);\n            if (a < 0) {\n                if (v1 <= v2) {\n                    res[k] = v1;\n                    ++left;\n                } else {\n                    res[k] = v2;\n                    --right;\n                }\n                ++k;\n            } else {\n                if (v1 >= v2) {\n                    res[k] = v1;\n                    ++left;\n                } else {\n                    res[k] = v2;\n                    --right;\n                }\n                --k;\n            }\n        }\n        return res;\n    }\n\n    private int fn(int a, int b, int c, int x) {\n        return a * x * x + b * x + c;\n    }\n}\n"
     }
   },
   "361": {
