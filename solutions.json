@@ -866,7 +866,7 @@
   },
   "556": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "public class Solution {\n    public int nextGreaterElement(int n) {\n        char[] digits = Integer.toString(n).toCharArray();\n        int length = digits.length;\n\n        int left = length - 2;\n        while (left >= 0 && digits[left] >= digits[left + 1]) {\n            left--;\n        }\n\n        if (left == -1) {\n            return -1; \n        }\n\n        int right = length - 1;\n        while (digits[right] <= digits[left]) {\n            right--;\n        }\n\n        char temp = digits[left];\n        digits[left] = digits[right];\n        digits[right] = temp;\n\n        reverse(digits, left + 1, length - 1);\n        \n        try {\n            long result = Long.parseLong(new String(digits));\n            return (result <= Integer.MAX_VALUE) ? (int) result : -1;\n        } catch (NumberFormatException e) {\n            return -1;\n        }\n    }\n\n    private void reverse(char[] arr, int start, int end) {\n        while (start < end) {\n            char temp = arr[start];\n            arr[start] = arr[end];\n            arr[end] = temp;\n            start++;\n            end--;\n        }\n    }\n}\n"
     }
   },
   "557": {
