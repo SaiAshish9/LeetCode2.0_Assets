@@ -257,7 +257,7 @@
   },
   "167": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "class Solution {\n    public int[] twoSum(int[] numbers, int target) {\n        int left = 0;\n        int right = numbers.length - 1;\n\n        while (left < right) {\n            int sum = numbers[left] + numbers[right];\n            if (sum == target) {\n                return new int[] { left + 1, right + 1 };\n            } else if (sum < target) {\n                left++;\n            } else {\n                right--;\n            }\n        }\n        \n        return new int[] {};\n    }\n}"
     }
   },
   "170": {
@@ -3348,6 +3348,11 @@
       "two-pointers": ""
     }
   },
+  "3191": {
+    "java": {
+      "sliding-window": "class Solution {\n    public int minOperations(int[] nums) {\n        int n = nums.length;\n        int ans = 0;\n\n        for (int i = 0; i + 2 < n; ++i)\n            if (nums[i] == 0) {\n                nums[i + 1] ^= 1;\n                nums[i + 2] ^= 1;\n                ++ans;\n            }\n\n        return nums[n - 1] == 0 || nums[n - 2] == 0 ? -1 : ans;\n    }\n}"
+    }
+  },
   "3195": {
     "java": {
       "matrix": ""
@@ -3357,9 +3362,5 @@
     "java": {
       "matrix": ""
     }
-  },
-  "3191": {
-    "java": {
-      "sliding-window": "class Solution {\n    public int minOperations(int[] nums) {\n        int n = nums.length;\n        int ans = 0;\n\n        for (int i = 0; i + 2 < n; ++i)\n            if (nums[i] == 0) {\n                nums[i + 1] ^= 1;\n                nums[i + 2] ^= 1;\n                ++ans;\n            }\n\n        return nums[n - 1] == 0 || nums[n - 2] == 0 ? -1 : ans;\n    }\n}"    }
   }
 }
