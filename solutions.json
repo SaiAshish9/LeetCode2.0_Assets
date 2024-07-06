@@ -3095,7 +3095,7 @@
   },
   "2856": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "class Solution {\n    public int minLengthAfterRemovals(List<Integer> nums) {\n        Map<Integer, Integer> count = new HashMap<>();\n        for (int x : nums) {\n            count.merge(x, 1, Integer::sum);\n        }\n        PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.reverseOrder());\n        for (int x : count.values()) {\n            pq.offer(x);\n        }\n        int ans = nums.size();\n        while (pq.size() > 1) {\n            int x = pq.poll();\n            int y = pq.poll();\n            x--;\n            y--;\n            if (x > 0) {\n                pq.offer(x);\n            }\n            if (y > 0) {\n                pq.offer(y);\n            }\n            ans -= 2;\n        }\n        return ans;\n    }\n}"
     }
   },
   "2868": {
