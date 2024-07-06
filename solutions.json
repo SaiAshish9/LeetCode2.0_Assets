@@ -841,7 +841,7 @@
   },
   "532": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "import java.util.HashMap;\nimport java.util.HashSet;\nimport java.util.Map;\nimport java.util.Set;\n\npublic class Solution {\n    public int findPairs(int[] nums, int k) {\n        if (nums == null || nums.length < 2 || k < 0) {\n            return 0;\n        }\n\n        Map<Integer, Integer> frequencyMap = new HashMap<>();\n        Set<Integer> countedPairs = new HashSet<>();\n        int count = 0;\n\n        for (int num : nums) {\n            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);\n        }\n\n        for (int num : nums) {\n            if (frequencyMap.containsKey(num + k) && !countedPairs.contains(num)) {\n                if (k == 0) {\n                    if (frequencyMap.get(num) > 1) {\n                        count++;\n                        countedPairs.add(num);\n                    }\n                } else {\n                    count++;\n                    countedPairs.add(num);\n                }\n            }\n        }\n\n        return count;\n    }\n}\n"
     }
   },
   "533": {
