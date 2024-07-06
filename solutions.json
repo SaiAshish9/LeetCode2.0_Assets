@@ -1,7 +1,7 @@
 {
   "3": {
     "java": {
-      "sliding-window": "public class Solution {\n    public int lengthOfLongestSubstring(String s) {\n        int[] charIndex = new int[128]; \n        int left = 0, right = 0;\n        int maxLength = 0;\n\n        while (right < s.length()) {\n            char r = s.charAt(right);\n            left = Math.max(charIndex[r], left);\n            maxLength = Math.max(maxLength, right - left + 1);\n            charIndex[r] = right + 1;\n            right++;\n        }\n\n        return maxLength;\n    }\n\n    public static void main(String[] args) {\n        Solution sol = new Solution();\n        String input = \"abcabcbb\";\n        int result = sol.lengthOfLongestSubstring(input);\n        System.out.println(\"Length of Longest Substring Without Repeating Characters: \" + result);\n    }\n}"
+      "sliding-window": "public class Solution {\n    public int lengthOfLongestSubstring(String s) {\n        int[] charIndex = new int[128]; \n        int left = 0, right = 0;\n        int maxLength = 0;\n\n        while (right < s.length()) {\n            char right = s.charAt(right);\n            left = Math.max(charIndex[right], left);\n            maxLength = Math.max(maxLength, right - left + 1);\n            charIndex[right] = right + 1;\n            right++;\n        }\n\n        return maxLength;\n    }\n\n    public static void main(String[] args) {\n        Solution sol = new Solution();\n        String input = \"abcabcbb\";\n        int result = sol.lengthOfLongestSubstring(input);\n        System.out.println(\"Length of Longest Substring Without Repeating Characters: \" + result);\n    }\n}"
     }
   },
   "5": {
@@ -1501,7 +1501,7 @@
   },
   "1099": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "class Solution {\n    public int twoSumLessThanK(int[] nums, int k) {\n        Arrays.sort(nums);\n        int ans = -1;\n        int n = nums.length;\n        for (int i = 0; i < n; ++i) {\n            int j = search(nums, k - nums[i], i + 1, n) - 1;\n            if (i < j) {\n                ans = Math.max(ans, nums[i] + nums[j]);\n            }\n        }\n        return ans;\n    }\n\n    private int search(int[] nums, int x, int left, int right) {\n        while (left < right) {\n            int mid = (left + right) >> 1;\n            if (nums[mid] >= x) {\n                right = mid;\n            } else {\n                left = mid + 1;\n            }\n        }\n        return left;\n    }\n}\n"
     }
   },
   "1100": {
