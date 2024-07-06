@@ -3355,7 +3355,7 @@
   },
   "3194": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "import java.util.Arrays;\nimport java.util.ArrayList;\nimport java.util.List;\n\npublic class Solution {\n    public double minimumAverage(int[] nums) {\n        Arrays.sort(nums); \n        List<Double> averages = new ArrayList<>();\n        int left = 0, right = nums.length - 1;\n        \n        while (left < right) {\n            int min = nums[left++];\n            int max = nums[right--];\n            double avg = (min + max) / 2.0;\n            averages.add(avg);\n        }\n        \n        return averages.stream().mapToDouble(Double::doubleValue).min().orElse(0.0);\n    }\n}\n"
     }
   },
   "3195": {
