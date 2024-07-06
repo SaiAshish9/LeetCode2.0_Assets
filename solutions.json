@@ -932,7 +932,7 @@
   },
   "633": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "public class Solution {\n    public boolean judgeSquareSum(int c) {\n        long left = 0;\n        long right = (long) Math.sqrt(c);\n\n        while (left <= right) {\n            long sum = left * left + right * right;\n            if (sum == c) {\n                return true;\n            } else if (sum < c) {\n                left++;\n            } else {\n                right--;\n            }\n        }\n\n        return false;\n    }\n}\n"
     }
   },
   "643": {
