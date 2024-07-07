@@ -78,7 +78,8 @@
         487,
         594,
         845,
-        876
+        876,
+        2476
     ],
     "Ordered Set": [
         220
@@ -125,7 +126,10 @@
     "Simulation": [],
     "Graph": [],
     "Counting": [],
-    "Design": [],
+    "Design": [
+        173,
+        1586
+    ],
     "Enumeration": [],
     "Union Find": [],
     "Linked List": [
@@ -141,7 +145,34 @@
     "Bitmask": [],
     "Queue": [],
     "Segment Tree": [],
-    "Binary Search Tree": [],
+    "Binary Search Tree": [
+        95,
+        96,
+        98,
+        99,
+        108,
+        109,
+        230,
+        235,
+        255,
+        270,
+        272,
+        285,
+        333,
+        449,
+        450,
+        501,
+        530,
+        700,
+        701,
+        703,
+        783,
+        897,
+        1008,
+        1382,
+        1373,
+        1902
+    ],
     "Geometry": [],
     "Memoization": [],
     "Hash Function": [],
