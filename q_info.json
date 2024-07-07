@@ -9310,5 +9310,1877 @@
     "difficulty": "Easy",
     "language": "Java",
     "acceptance": 84.5
+  },
+  "binary_tree_inorder_traversal": {
+    "qno": "94",
+    "title": "Binary Tree Inorder Traversal",
+    "tags": [
+      "Stack",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 76.5
+  },
+  "same_tree": {
+    "qno": "100",
+    "title": "Same Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 62.6
+  },
+  "symmetric_tree": {
+    "qno": "101",
+    "title": "Symmetric Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 56.9
+  },
+  "binary_tree_level_order_traversal": {
+    "qno": "102",
+    "title": "Binary Tree Level Order Traversal",
+    "tags": [
+      "Tree",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 67.8
+  },
+  "binary_tree_zigzag_level_order_traversal": {
+    "qno": "103",
+    "title": "Binary Tree Zigzag Level Order Traversal",
+    "tags": [
+      "Tree",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 59.4
+  },
+  "maximum_depth_of_binary_tree": {
+    "qno": "104",
+    "title": "Maximum Depth of Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 75.7
+  },
+  "construct_binary_tree_from_preorder_and_inorder_traversal": {
+    "qno": "105",
+    "title": "Construct Binary Tree from Preorder and Inorder Traversal",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Divide and Conquer",
+      "Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 64.4
+  },
+  "construct_binary_tree_from_inorder_and_postorder_traversal": {
+    "qno": "106",
+    "title": "Construct Binary Tree from Inorder and Postorder Traversal",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Divide and Conquer",
+      "Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 63.5
+  },
+  "binary_tree_level_order_traversal_ii": {
+    "qno": "107",
+    "title": "Binary Tree Level Order Traversal II",
+    "tags": [
+      "Tree",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 63.8
+  },
+  "balanced_binary_tree": {
+    "qno": "110",
+    "title": "Balanced Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 52.6
+  },
+  "minimum_depth_of_binary_tree": {
+    "qno": "111",
+    "title": "Minimum Depth of Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 48.4
+  },
+  "path_sum": {
+    "qno": "112",
+    "title": "Path Sum",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 50.8
+  },
+  "path_sum_ii": {
+    "qno": "113",
+    "title": "Path Sum II",
+    "tags": [
+      "Backtracking",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 58.8
+  },
+  "flatten_binary_tree_to_linked_list": {
+    "qno": "114",
+    "title": "Flatten Binary Tree to Linked List",
+    "tags": [
+      "Linked List",
+      "Stack",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 65.5
+  },
+  "populating_next_right_pointers_in_each_node": {
+    "qno": "116",
+    "title": "Populating Next Right Pointers in Each Node",
+    "tags": [
+      "Linked List",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 63.1
+  },
+  "populating_next_right_pointers_in_each_node_ii": {
+    "qno": "117",
+    "title": "Populating Next Right Pointers in Each Node II",
+    "tags": [
+      "Linked List",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 53
+  },
+  "binary_tree_maximum_path_sum": {
+    "qno": "124",
+    "title": "Binary Tree Maximum Path Sum",
+    "tags": [
+      "Dynamic Programming",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 40.2
+  },
+  "sum_root_to_leaf_numbers": {
+    "qno": "129",
+    "title": "Sum Root to Leaf Numbers",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 66.2
+  },
+  "binary_tree_preorder_traversal": {
+    "qno": "144",
+    "title": "Binary Tree Preorder Traversal",
+    "tags": [
+      "Stack",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 70.1
+  },
+  "binary_tree_postorder_traversal": {
+    "qno": "145",
+    "title": "Binary Tree Postorder Traversal",
+    "tags": [
+      "Stack",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 71.6
+  },
+  "binary_tree_upside_down": {
+    "qno": "156",
+    "title": "Binary Tree Upside Down",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 63
+  },
+  "binary_tree_right_side_view": {
+    "qno": "199",
+    "title": "Binary Tree Right Side View",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 63.4
+  },
+  "count_complete_tree_nodes": {
+    "qno": "222",
+    "title": "Count Complete Tree Nodes",
+    "tags": [
+      "Binary Search",
+      "Bit Manipulation",
+      "Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 66.1
+  },
+  "invert_binary_tree": {
+    "qno": "226",
+    "title": "Invert Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 77.3
+  },
+  "lowest_common_ancestor_of_a_binary_tree": {
+    "qno": "236",
+    "title": "Lowest Common Ancestor of a Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 62.9
+  },
+  "count_univalue_subtrees": {
+    "qno": "250",
+    "title": "Count Univalue Subtrees",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 56.5
+  },
+  "binary_tree_paths": {
+    "qno": "257",
+    "title": "Binary Tree Paths",
+    "tags": [
+      "String",
+      "Backtracking",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 64.1
+  },
+  "serialize_and_deserialize_binary_tree": {
+    "qno": "297",
+    "title": "Serialize and Deserialize Binary Tree",
+    "tags": [
+      "String",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Design",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 57.1
+  },
+  "binary_tree_longest_consecutive_sequence": {
+    "qno": "298",
+    "title": "Binary Tree Longest Consecutive Sequence",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 53.6
+  },
+  "binary_tree_vertical_order_traversal": {
+    "qno": "314",
+    "title": "Binary Tree Vertical Order Traversal",
+    "tags": [
+      "Hash Table",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Sorting",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 54.7
+  },
+  "verify_preorder_serialization_of_a_binary_tree": {
+    "qno": "331",
+    "title": "Verify Preorder Serialization of a Binary Tree",
+    "tags": [
+      "String",
+      "Stack",
+      "Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 45.4
+  },
+  "house_robber_iii": {
+    "qno": "337",
+    "title": "House Robber III",
+    "tags": [
+      "Dynamic Programming",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 54.3
+  },
+  "find_leaves_of_binary_tree": {
+    "qno": "366",
+    "title": "Find Leaves of Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 80.6
+  },
+  "sum_of_left_leaves": {
+    "qno": "404",
+    "title": "Sum of Left Leaves",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 60.7
+  },
+  "path_sum_iii": {
+    "qno": "437",
+    "title": "Path Sum III",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 46.2
+  },
+  "most_frequent_subtree_sum": {
+    "qno": "508",
+    "title": "Most Frequent Subtree Sum",
+    "tags": [
+      "Hash Table",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 66.7
+  },
+  "find_bottom_left_tree_value": {
+    "qno": "513",
+    "title": "Find Bottom Left Tree Value",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 71.2
+  },
+  "find_largest_value_in_each_tree_row": {
+    "qno": "515",
+    "title": "Find Largest Value in Each Tree Row",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 65.7
+  },
+  "construct_binary_tree_from_string": {
+    "qno": "536",
+    "title": "Construct Binary Tree from String",
+    "tags": [
+      "String",
+      "Stack",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 57.1
+  },
+  "diameter_of_binary_tree": {
+    "qno": "543",
+    "title": "Diameter of Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 60.8
+  },
+  "boundary_of_binary_tree": {
+    "qno": "545",
+    "title": "Boundary of Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 45.6
+  },
+  "binary_tree_longest_consecutive_sequence_ii": {
+    "qno": "549",
+    "title": "Binary Tree Longest Consecutive Sequence II",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.5
+  },
+  "binary_tree_tilt": {
+    "qno": "563",
+    "title": "Binary Tree Tilt",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 62.1
+  },
+  "subtree_of_another_tree": {
+    "qno": "572",
+    "title": "Subtree of Another Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "String Matching",
+      "Binary Tree",
+      "Hash Function"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 48.2
+  },
+  "construct_string_from_binary_tree": {
+    "qno": "606",
+    "title": "Construct String from Binary Tree",
+    "tags": [
+      "String",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 69.3
+  },
+  "merge_two_binary_trees": {
+    "qno": "617",
+    "title": "Merge Two Binary Trees",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 79
+  },
+  "add_one_row_to_tree": {
+    "qno": "623",
+    "title": "Add One Row to Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 64
+  },
+  "average_of_levels_in_binary_tree": {
+    "qno": "637",
+    "title": "Average of Levels in Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 72.9
+  },
+  "find_duplicate_subtrees": {
+    "qno": "652",
+    "title": "Find Duplicate Subtrees",
+    "tags": [
+      "Hash Table",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 59.5
+  },
+  "maximum_binary_tree": {
+    "qno": "654",
+    "title": "Maximum Binary Tree",
+    "tags": [
+      "Array",
+      "Divide and Conquer",
+      "Stack",
+      "Tree",
+      "Monotonic Stack",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 85.5
+  },
+  "print_binary_tree": {
+    "qno": "655",
+    "title": "Print Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 64.2
+  },
+  "maximum_width_of_binary_tree": {
+    "qno": "662",
+    "title": "Maximum Width of Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 43
+  },
+  "equal_tree_partition": {
+    "qno": "663",
+    "title": "Equal Tree Partition",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 41.5
+  },
+  "path_sum_iv": {
+    "qno": "666",
+    "title": "Path Sum IV",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 61.4
+  },
+  "second_minimum_node_in_a_binary_tree": {
+    "qno": "671",
+    "title": "Second Minimum Node In a Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 44.6
+  },
+  "longest_univalue_path": {
+    "qno": "687",
+    "title": "Longest Univalue Path",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 41.7
+  },
+  "closest_leaf_in_a_binary_tree": {
+    "qno": "742",
+    "title": "Closest Leaf in a Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 46.4
+  },
+  "encode_n-ary_tree_to_binary_tree": {
+    "qno": "431",
+    "title": "Encode N-ary Tree to Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Design",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 79.6
+  },
+  "binary_tree_pruning": {
+    "qno": "814",
+    "title": "Binary Tree Pruning",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 72.3
+  },
+  "all_nodes_distance_k_in_binary_tree": {
+    "qno": "863",
+    "title": "All Nodes Distance K in Binary Tree",
+    "tags": [
+      "Hash Table",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 64.7
+  },
+  "smallest_subtree_with_all_the_deepest_nodes": {
+    "qno": "865",
+    "title": "Smallest Subtree with all the Deepest Nodes",
+    "tags": [
+      "Hash Table",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 70.8
+  },
+  "leaf-similar_trees": {
+    "qno": "872",
+    "title": "Leaf-Similar Trees",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 70.1
+  },
+  "construct_binary_tree_from_preorder_and_postorder_traversal": {
+    "qno": "889",
+    "title": "Construct Binary Tree from Preorder and Postorder Traversal",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Divide and Conquer",
+      "Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 71.5
+  },
+  "all_possible_full_binary_trees": {
+    "qno": "894",
+    "title": "All Possible Full Binary Trees",
+    "tags": [
+      "Dynamic Programming",
+      "Tree",
+      "Recursion",
+      "Memoization",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 82.7
+  },
+  "complete_binary_tree_inserter": {
+    "qno": "919",
+    "title": "Complete Binary Tree Inserter",
+    "tags": [
+      "Tree",
+      "Breadth-First Search",
+      "Design",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 65.7
+  },
+  "flip_equivalent_binary_trees": {
+    "qno": "951",
+    "title": "Flip Equivalent Binary Trees",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 67
+  },
+  "check_completeness_of_a_binary_tree": {
+    "qno": "958",
+    "title": "Check Completeness of a Binary Tree",
+    "tags": [
+      "Tree",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 57
+  },
+  "univalued_binary_tree": {
+    "qno": "965",
+    "title": "Univalued Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 71.1
+  },
+  "binary_tree_cameras": {
+    "qno": "968",
+    "title": "Binary Tree Cameras",
+    "tags": [
+      "Dynamic Programming",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 46.8
+  },
+  "flip_binary_tree_to_match_preorder_traversal": {
+    "qno": "971",
+    "title": "Flip Binary Tree To Match Preorder Traversal",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 50.6
+  },
+  "distribute_coins_in_binary_tree": {
+    "qno": "979",
+    "title": "Distribute Coins in Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 77.1
+  },
+  "vertical_order_traversal_of_a_binary_tree": {
+    "qno": "987",
+    "title": "Vertical Order Traversal of a Binary Tree",
+    "tags": [
+      "Hash Table",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Sorting",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 48.1
+  },
+  "smallest_string_starting_from_leaf": {
+    "qno": "988",
+    "title": "Smallest String Starting From Leaf",
+    "tags": [
+      "String",
+      "Backtracking",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 60.5
+  },
+  "cousins_in_binary_tree": {
+    "qno": "993",
+    "title": "Cousins in Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 56.3
+  },
+  "maximum_binary_tree_ii": {
+    "qno": "998",
+    "title": "Maximum Binary Tree II",
+    "tags": [
+      "Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 69.3
+  },
+  "sum_of_root_to_leaf_binary_numbers": {
+    "qno": "1022",
+    "title": "Sum of Root To Leaf Binary Numbers",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 73.1
+  },
+  "maximum_average_subtree": {
+    "qno": "1120",
+    "title": "Maximum Average Subtree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 66.6
+  },
+  "maximum_difference_between_node_and_ancestor": {
+    "qno": "1026",
+    "title": "Maximum Difference Between Node and Ancestor",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 78.1
+  },
+  "recover_a_tree_from_preorder_traversal": {
+    "qno": "1028",
+    "title": "Recover a Tree From Preorder Traversal",
+    "tags": [
+      "String",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 74.9
+  },
+  "maximum_level_sum_of_a_binary_tree": {
+    "qno": "1161",
+    "title": "Maximum Level Sum of a Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 67.1
+  },
+  "insufficient_nodes_in_root_to_leaf_paths": {
+    "qno": "1080",
+    "title": "Insufficient Nodes in Root to Leaf Paths",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 55.7
+  },
+  "path_in_zigzag_labelled_binary_tree": {
+    "qno": "1104",
+    "title": "Path In Zigzag Labelled Binary Tree",
+    "tags": [
+      "Math",
+      "Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 75.4
+  },
+  "delete_nodes_and_return_forest": {
+    "qno": "1110",
+    "title": "Delete Nodes And Return Forest",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 69.2
+  },
+  "lowest_common_ancestor_of_deepest_leaves": {
+    "qno": "1123",
+    "title": "Lowest Common Ancestor of Deepest Leaves",
+    "tags": [
+      "Hash Table",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 72.4
+  },
+  "sum_of_nodes_with_even-valued_grandparent": {
+    "qno": "1315",
+    "title": "Sum of Nodes with Even-Valued Grandparent",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 85.5
+  },
+  "binary_tree_coloring_game": {
+    "qno": "1145",
+    "title": "Binary Tree Coloring Game",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 52
+  },
+  "deepest_leaves_sum": {
+    "qno": "1302",
+    "title": "Deepest Leaves Sum",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 86.3
+  },
+  "validate_binary_tree_nodes": {
+    "qno": "1361",
+    "title": "Validate Binary Tree Nodes",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Graph",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 43.8
+  },
+  "find_elements_in_a_contaminated_binary_tree": {
+    "qno": "1261",
+    "title": "Find Elements in a Contaminated Binary Tree",
+    "tags": [
+      "Hash Table",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Design",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 77.4
+  },
+  "check_if_a_string_is_a_valid_sequence_from_root_to_leaves_path_in_a_binary_tree": {
+    "qno": "1430",
+    "title": "Check If a String Is a Valid Sequence from Root to Leaves Path in a Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 46.9
+  },
+  "delete_leaves_with_a_given_value": {
+    "qno": "1325",
+    "title": "Delete Leaves With a Given Value",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 77.5
+  },
+  "maximum_product_of_splitted_binary_tree": {
+    "qno": "1339",
+    "title": "Maximum Product of Splitted Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 47.7
+  },
+  "longest_zigzag_path_in_a_binary_tree": {
+    "qno": "1372",
+    "title": "Longest ZigZag Path in a Binary Tree",
+    "tags": [
+      "Dynamic Programming",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 65.9
+  },
+  "linked_list_in_binary_tree": {
+    "qno": "1367",
+    "title": "Linked List in Binary Tree",
+    "tags": [
+      "Linked List",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 43.9
+  },
+  "find_a_corresponding_node_of_a_binary_tree_in_a_clone_of_that_tree": {
+    "qno": "1379",
+    "title": "Find a Corresponding Node of a Binary Tree in a Clone of That Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 85.8
+  },
+  "count_good_nodes_in_binary_tree": {
+    "qno": "1448",
+    "title": "Count Good Nodes in Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 73
+  },
+  "pseudo-palindromic_paths_in_a_binary_tree": {
+    "qno": "1457",
+    "title": "Pseudo-Palindromic Paths in a Binary Tree",
+    "tags": [
+      "Bit Manipulation",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 68.4
+  },
+  "find_all_the_lonely_nodes": {
+    "qno": "1469",
+    "title": "Find All The Lonely Nodes",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 83.7
+  },
+  "clone_binary_tree_with_random_pointer": {
+    "qno": "1485",
+    "title": "Clone Binary Tree With Random Pointer",
+    "tags": [
+      "Hash Table",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 80.6
+  },
+  "number_of_good_leaf_nodes_pairs": {
+    "qno": "1530",
+    "title": "Number of Good Leaf Nodes Pairs",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 63.7
+  },
+  "even_odd_tree": {
+    "qno": "1609",
+    "title": "Even Odd Tree",
+    "tags": [
+      "Tree",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 65.8
+  },
+  "build_binary_expression_tree_from_infix_expression": {
+    "qno": "1597",
+    "title": "Build Binary Expression Tree From Infix Expression",
+    "tags": [
+      "String",
+      "Stack",
+      "Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 62.5
+  },
+  "find_nearest_right_node_in_binary_tree": {
+    "qno": "1602",
+    "title": "Find Nearest Right Node in Binary Tree",
+    "tags": [
+      "Tree",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 75.5
+  },
+  "check_if_two_expression_trees_are_equivalent": {
+    "qno": "1612",
+    "title": "Check If Two Expression Trees are Equivalent",
+    "tags": [
+      "Hash Table",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree",
+      "Counting"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 71
+  },
+  "design_an_expression_tree_with_evaluate_function": {
+    "qno": "1628",
+    "title": "Design an Expression Tree With Evaluate Function",
+    "tags": [
+      "Array",
+      "Math",
+      "Stack",
+      "Tree",
+      "Design",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 82.6
+  },
+  "lowest_common_ancestor_of_a_binary_tree_ii": {
+    "qno": "1644",
+    "title": "Lowest Common Ancestor of a Binary Tree II",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 64.6
+  },
+  "correct_a_binary_tree": {
+    "qno": "1660",
+    "title": "Correct a Binary Tree",
+    "tags": [
+      "Hash Table",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 74.4
+  },
+  "change_the_root_of_a_binary_tree": {
+    "qno": "1666",
+    "title": "Change the Root of a Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 74
+  },
+  "lowest_common_ancestor_of_a_binary_tree_iv": {
+    "qno": "1676",
+    "title": "Lowest Common Ancestor of a Binary Tree IV",
+    "tags": [
+      "Hash Table",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 78.5
+  },
+  "find_distance_in_a_binary_tree": {
+    "qno": "1740",
+    "title": "Find Distance in a Binary Tree",
+    "tags": [
+      "Hash Table",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 71.5
+  },
+  "merge_bsts_to_create_single_bst": {
+    "qno": "1932",
+    "title": "Merge BSTs to Create Single BST",
+    "tags": [
+      "Hash Table",
+      "Binary Search",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 36.2
+  },
+  "count_nodes_equal_to_sum_of_descendants": {
+    "qno": "1973",
+    "title": "Count Nodes Equal to Sum of Descendants",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 76.9
+  },
+  "subtree_removal_game_with_fibonacci_tree": {
+    "qno": "2005",
+    "title": "Subtree Removal Game with Fibonacci Tree",
+    "tags": [
+      "Math",
+      "Dynamic Programming",
+      "Tree",
+      "Binary Tree",
+      "Game Theory"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 58.9
+  },
+  "count_nodes_with_the_highest_score": {
+    "qno": "2049",
+    "title": "Count Nodes With the Highest Score",
+    "tags": [
+      "Array",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.5
+  },
+  "step-by-step_directions_from_a_binary_tree_node_to_another": {
+    "qno": "2096",
+    "title": "Step-By-Step Directions From a Binary Tree Node to Another",
+    "tags": [
+      "String",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 48.9
+  },
+  "create_binary_tree_from_descriptions": {
+    "qno": "2196",
+    "title": "Create Binary Tree From Descriptions",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 72.7
+  },
+  "count_nodes_equal_to_average_of_subtree": {
+    "qno": "2265",
+    "title": "Count Nodes Equal to Average of Subtree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 86.3
+  },
+  "root_equals_sum_of_children": {
+    "qno": "2236",
+    "title": "Root Equals Sum of Children",
+    "tags": [
+      "Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 84.4
+  },
+  "minimum_flips_in_binary_tree_to_get_result": {
+    "qno": "2313",
+    "title": "Minimum Flips in Binary Tree to Get Result",
+    "tags": [
+      "Dynamic Programming",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 59.1
+  },
+  "evaluate_boolean_binary_tree": {
+    "qno": "2331",
+    "title": "Evaluate Boolean Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 82.9
+  },
+  "amount_of_time_for_binary_tree_to_be_infected": {
+    "qno": "2385",
+    "title": "Amount of Time for Binary Tree to Be Infected",
+    "tags": [
+      "Hash Table",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 62.7
+  },
+  "reverse_odd_levels_of_binary_tree": {
+    "qno": "2415",
+    "title": "Reverse Odd Levels of Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 77.8
+  },
+  "height_of_binary_tree_after_subtree_removal_queries": {
+    "qno": "2458",
+    "title": "Height of Binary Tree After Subtree Removal Queries",
+    "tags": [
+      "Array",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 40.5
+  },
+  "minimum_number_of_operations_to_sort_a_binary_tree_by_level": {
+    "qno": "2471",
+    "title": "Minimum Number of Operations to Sort a Binary Tree by Level",
+    "tags": [
+      "Tree",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 61.9
+  },
+  "number_of_nodes_with_value_one": {
+    "qno": "2445",
+    "title": "Number of Nodes With Value One",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 68.8
+  },
+  "cycle_length_queries_in_a_tree": {
+    "qno": "2509",
+    "title": "Cycle Length Queries in a Tree",
+    "tags": [
+      "Array",
+      "Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 56.1
+  },
+  "kth_largest_sum_in_a_binary_tree": {
+    "qno": "2583",
+    "title": "Kth Largest Sum in a Binary Tree",
+    "tags": [
+      "Tree",
+      "Breadth-First Search",
+      "Sorting",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 47.5
+  },
+  "cousins_in_binary_tree_ii": {
+    "qno": "2641",
+    "title": "Cousins in Binary Tree II",
+    "tags": [
+      "Hash Table",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 67.7
+  },
+  "make_costs_of_paths_equal_in_a_binary_tree": {
+    "qno": "2673",
+    "title": "Make Costs of Paths Equal in a Binary Tree",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Greedy",
+      "Tree",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 59
+  },
+  "extract_kth_character_from_the_rope_tree": {
+    "qno": "2689",
+    "title": "Extract Kth Character From The Rope Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 74.5
+  },
+  "is_array_a_preorder_of_some_‌binary_tree": {
+    "qno": "2764",
+    "title": "Is Array a Preorder of Some ‌Binary Tree",
+    "tags": [
+      "Stack",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 66.6
+  },
+  "height_of_special_binary_tree": {
+    "qno": "2773",
+    "title": "Height of Special Binary Tree",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 74.2
+  },
+  "count_nodes_that_are_great_enough": {
+    "qno": "2792",
+    "title": "Count Nodes That Are Great Enough",
+    "tags": [
+      "Divide and Conquer",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 58.2
+  },
+  "find_the_level_of_tree_with_minimum_sum": {
+    "qno": "3157",
+    "title": "Find the Level of Tree with Minimum Sum",
+    "tags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "default": "Binary Tree",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 69.8
   }
 }
