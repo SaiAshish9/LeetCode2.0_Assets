@@ -63,7 +63,6 @@
         1358,
         1438,
         1493,
-        1871,
         1838,
         1918,
         2743,
@@ -103,7 +102,9 @@
         532,
         870
     ],
-    "Dynamic Programming": [],
+    "Dynamic Programming": [
+        1871
+    ],
     "Math": [],
     "Sorting": [],
     "Greedy": [],
