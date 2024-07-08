@@ -11182,5 +11182,345 @@
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 69.8
+  },
+  "implement_stack_using_queues": {
+    "qno": "225",
+    "title": "Implement Stack using Queues",
+    "tags": [
+      "Stack",
+      "Design",
+      "Queue"
+    ],
+    "default": "Queue",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 64.3
+  },
+  "implement_queue_using_stacks": {
+    "qno": "232",
+    "title": "Implement Queue using Stacks",
+    "tags": [
+      "Stack",
+      "Design",
+      "Queue"
+    ],
+    "default": "Queue",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 66.5
+  },
+  "moving_average_from_data_stream": {
+    "qno": "346",
+    "title": "Moving Average from Data Stream",
+    "tags": [
+      "Array",
+      "Design",
+      "Queue",
+      "Data Stream"
+    ],
+    "default": "Queue",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 78.6
+  },
+  "design_snake_game": {
+    "qno": "353",
+    "title": "Design Snake Game",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Design",
+      "Queue",
+      "Simulation"
+    ],
+    "default": "Queue",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 38.8
+  },
+  "design_hit_counter": {
+    "qno": "362",
+    "title": "Design Hit Counter",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Design",
+      "Queue",
+      "Data Stream"
+    ],
+    "default": "Queue",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 68.7
+  },
+  "design_phone_directory": {
+    "qno": "379",
+    "title": "Design Phone Directory",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Linked List",
+      "Design",
+      "Queue"
+    ],
+    "default": "Queue",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 51.8
+  },
+  "first_unique_character_in_a_string": {
+    "qno": "387",
+    "title": "First Unique Character in a String",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Queue",
+      "Counting"
+    ],
+    "default": "Queue",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 62.3
+  },
+  "dota2_senate": {
+    "qno": "649",
+    "title": "Dota2 Senate",
+    "tags": [
+      "String",
+      "Greedy",
+      "Queue"
+    ],
+    "default": "Queue",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 47.7
+  },
+  "design_circular_deque": {
+    "qno": "641",
+    "title": "Design Circular Deque",
+    "tags": [
+      "Array",
+      "Linked List",
+      "Design",
+      "Queue"
+    ],
+    "default": "Queue",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 57
+  },
+  "design_circular_queue": {
+    "qno": "622",
+    "title": "Design Circular Queue",
+    "tags": [
+      "Array",
+      "Linked List",
+      "Design",
+      "Queue"
+    ],
+    "default": "Queue",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 51.5
+  },
+  "number_of_recent_calls": {
+    "qno": "933",
+    "title": "Number of Recent Calls",
+    "tags": [
+      "Design",
+      "Queue",
+      "Data Stream"
+    ],
+    "default": "Queue",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 75.6
+  },
+  "stamping_the_sequence": {
+    "qno": "936",
+    "title": "Stamping The Sequence",
+    "tags": [
+      "String",
+      "Stack",
+      "Greedy",
+      "Queue"
+    ],
+    "default": "Queue",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 62.5
+  },
+  "reveal_cards_in_increasing_order": {
+    "qno": "950",
+    "title": "Reveal Cards In Increasing Order",
+    "tags": [
+      "Array",
+      "Queue",
+      "Sorting",
+      "Simulation"
+    ],
+    "default": "Queue",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 83
+  },
+  "first_unique_number": {
+    "qno": "1429",
+    "title": "First Unique Number",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Design",
+      "Queue",
+      "Data Stream"
+    ],
+    "default": "Queue",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 53.8
+  },
+  "product_of_the_last_k_numbers": {
+    "qno": "1352",
+    "title": "Product of the Last K Numbers",
+    "tags": [
+      "Array",
+      "Math",
+      "Design",
+      "Queue",
+      "Data Stream"
+    ],
+    "default": "Queue",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 51.6
+  },
+  "design_front_middle_back_queue": {
+    "qno": "1670",
+    "title": "Design Front Middle Back Queue",
+    "tags": [
+      "Array",
+      "Linked List",
+      "Design",
+      "Queue",
+      "Data Stream"
+    ],
+    "default": "Queue",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 56.4
+  },
+  "number_of_students_unable_to_eat_lunch": {
+    "qno": "1700",
+    "title": "Number of Students Unable to Eat Lunch",
+    "tags": [
+      "Array",
+      "Stack",
+      "Queue",
+      "Simulation"
+    ],
+    "default": "Queue",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 78.2
+  },
+  "find_the_winner_of_the_circular_game": {
+    "qno": "1823",
+    "title": "Find the Winner of the Circular Game",
+    "tags": [
+      "Array",
+      "Math",
+      "Recursion",
+      "Queue",
+      "Simulation"
+    ],
+    "default": "Queue",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 80.7
+  },
+  "finding_mk_average": {
+    "qno": "1825",
+    "title": "Finding MK Average",
+    "tags": [
+      "Design",
+      "Queue",
+      "Heap (Priority Queue)",
+      "Data Stream",
+      "Ordered Set"
+    ],
+    "default": "Queue",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 37.3
+  },
+  "time_needed_to_buy_tickets": {
+    "qno": "2073",
+    "title": "Time Needed to Buy Tickets",
+    "tags": [
+      "Array",
+      "Queue",
+      "Simulation"
+    ],
+    "default": "Queue",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 69.9
+  },
+  "number_of_people_aware_of_a_secret": {
+    "qno": "2327",
+    "title": "Number of People Aware of a Secret",
+    "tags": [
+      "Dynamic Programming",
+      "Queue",
+      "Simulation"
+    ],
+    "default": "Queue",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 45.9
+  },
+  "time_taken_to_cross_the_door": {
+    "qno": "2534",
+    "title": "Time Taken to Cross the Door",
+    "tags": [
+      "Array",
+      "Queue",
+      "Simulation"
+    ],
+    "default": "Queue",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 49.6
+  },
+  "find_consecutive_integers_from_a_data_stream": {
+    "qno": "2526",
+    "title": "Find Consecutive Integers from a Data Stream",
+    "tags": [
+      "Hash Table",
+      "Design",
+      "Queue",
+      "Counting",
+      "Data Stream"
+    ],
+    "default": "Queue",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.3
+  },
+  "minimum_sum_of_values_by_dividing_array": {
+    "qno": "3117",
+    "title": "Minimum Sum of Values by Dividing Array",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Dynamic Programming",
+      "Bit Manipulation",
+      "Segment Tree",
+      "Queue"
+    ],
+    "default": "Queue",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 27.4
   }
 }
