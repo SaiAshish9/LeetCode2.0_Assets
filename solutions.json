@@ -477,6 +477,11 @@
       "matrix": ""
     }
   },
+  "292": {
+    "java": {
+      "brainteaser": ""
+    }
+  },
   "295": {
     "java": {
       "two-pointers": ""
@@ -515,6 +520,11 @@
   "317": {
     "java": {
       "matrix": ""
+    }
+  },
+  "319": {
+    "java": {
+      "brainteaser": ""
     }
   },
   "321": {
@@ -1195,6 +1205,11 @@
       "two-pointers": ""
     }
   },
+  "810": {
+    "java": {
+      "brainteaser": ""
+    }
+  },
   "821": {
     "java": {
       "two-pointers": ""
@@ -1483,6 +1498,11 @@
       "two-pointers": ""
     }
   },
+  "1025": {
+    "java": {
+      "brainteaser": ""
+    }
+  },
   "1030": {
     "java": {
       "matrix": ""
@@ -1491,6 +1511,11 @@
   "1031": {
     "java": {
       "sliding-window": "public class Solution {\n    public int maxSumTwoNoOverlap(int[] nums, int L, int M) {\n        int n = nums.length;\n        int[] prefixSum = new int[n + 1];\n        \n        for (int i = 0; i < n; i++) {\n            prefixSum[i + 1] = prefixSum[i] + nums[i];\n        }\n        \n        int maxL = 0, maxM = 0, result = 0;\n        \n        for (int i = L + M; i <= n; i++) {\n            maxL = Math.max(maxL, prefixSum[i - M] - prefixSum[i - M - L]);\n            maxM = Math.max(maxM, prefixSum[i - L] - prefixSum[i - L - M]);\n            result = Math.max(result, Math.max(maxL + prefixSum[i] - prefixSum[i - M], maxM + prefixSum[i] - prefixSum[i - L]));\n        }\n        \n        return result;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums = {0, 6, 5, 2, 2, 5, 1, 9, 4};\n        int L = 1;\n        int M = 2;\n        System.out.println(solution.maxSumTwoNoOverlap(nums, L, M)); // Output: 20\n    }\n}\n"
+    }
+  },
+  "1033": {
+    "java": {
+      "brainteaser": ""
     }
   },
   "1034": {
@@ -1996,6 +2021,11 @@
       "monotonic-queue": "import java.util.Deque;\nimport java.util.LinkedList;\n\npublic class Solution {\n    public int findMaxValueOfEquation(int[][] points, int k) {\n        Deque<int[]> deque = new LinkedList<>();\n        int maxValue = Integer.MIN_VALUE;\n\n        for (int[] point : points) {\n            int xj = point[0];\n            int yj = point[1];\n\n            while (!deque.isEmpty() && xj - deque.peekFirst()[0] > k) {\n                deque.pollFirst();\n            }\n\n            if (!deque.isEmpty()) {\n                maxValue = Math.max(maxValue, yj + xj + deque.peekFirst()[1]);\n            }\n\n            while (!deque.isEmpty() && yj - xj >= deque.peekLast()[1]) {\n                deque.pollLast();\n            }\n\n            deque.offerLast(new int[]{xj, yj - xj});\n        }\n\n        return maxValue;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[][] points = {{1, 3}, {2, 0}, {3, 10}, {4, 10}, {5, 1}};\n        int k = 1;\n        System.out.println(solution.findMaxValueOfEquation(points, k));  // Output: 14\n    }\n}\n"
     }
   },
+  "1503": {
+    "java": {
+      "brainteaser": ""
+    }
+  },
   "1504": {
     "java": {
       "matrix": ""
@@ -2399,6 +2429,11 @@
   "1905": {
     "java": {
       "matrix": ""
+    }
+  },
+  "1908": {
+    "java": {
+      "brainteaser": ""
     }
   },
   "1914": {
@@ -2843,9 +2878,19 @@
       "sliding-window": "class Solution {\n  public int[] smallestSubarrays(int[] nums) {\n    final int kMaxBit = 30;\n    int[] ans = new int[nums.length];\n    int[] closest = new int[kMaxBit];\n\n    Arrays.fill(ans, 1);\n\n    for (int i = nums.length - 1; i >= 0; --i)\n      for (int j = 0; j < kMaxBit; ++j) {\n        if ((nums[i] >> j & 1) == 1)\n          closest[j] = i;\n        ans[i] = Math.max(ans[i], closest[j] - i + 1);\n      }\n\n    return ans;\n  }\n}"
     }
   },
+  "2419": {
+    "java": {
+      "brainteaser": ""
+    }
+  },
   "2422": {
     "java": {
       "two-pointers": ""
+    }
+  },
+  "2425": {
+    "java": {
+      "brainteaser": ""
     }
   },
   "2426": {
@@ -2921,6 +2966,11 @@
   "2503": {
     "java": {
       "two-pointers": ""
+    }
+  },
+  "2505": {
+    "java": {
+      "brainteaser": ""
     }
   },
   "2510": {
@@ -3006,6 +3056,11 @@
   "2565": {
     "java": {
       "two-pointers": ""
+    }
+  },
+  "2568": {
+    "java": {
+      "brainteaser": ""
     }
   },
   "2570": {
@@ -3118,6 +3173,11 @@
       "sliding-window": "class Solution {\n  public int longestSemiRepetitiveSubstring(String s) {\n    int ans = 1;\n    int prevStart = 0;\n    int start = 0;\n\n    for (int i = 1; i < s.length(); ++i) {\n      if (s.charAt(i) == s.charAt(i - 1)) {\n        if (prevStart > 0)\n          start = prevStart;\n        prevStart = i;\n      }\n      ans = Math.max(ans, i - start + 1);\n    }\n\n    return ans;\n  }\n}"
     }
   },
+  "2731": {
+    "java": {
+      "brainteaser": ""
+    }
+  },
   "2732": {
     "java": {
       "matrix": ""
@@ -3128,9 +3188,19 @@
       "sliding-window": "class Solution {\n    public int numberOfSpecialSubstrings(String s) {\n        int n = s.length();\n        int ans = 0;\n        int[] count = new int[26];\n        for (int i = 0, j = 0; i < n; ++i) {\n            int k = s.charAt(i) - 'a';\n            ++count[k];\n            while (count[k] > 1) {\n                --count[s.charAt(j++) - 'a'];\n            }\n            ans += i - j + 1;\n        }\n        return ans;\n    }\n}"
     }
   },
+  "2745": {
+    "java": {
+      "brainteaser": "class Solution {\n    public int longestString(int x, int y, int z) {\n        int min = Math.min(x, y);\n        if (x == y)\n            return (min * 2 + z) * 2;\n        return (min * 2 + 1 + z) * 2;\n    }\n}"
+    }
+  },
   "2747": {
     "java": {
       "sliding-window": "class Solution {\n    private class Query {\n        public int query;\n        public int index;\n        public Query(int q, int index) {\n            this.query = q;\n            this.index = index;\n        }\n    }\n\n    public int[] countServers(int n, int[][] logs, int x, int[] queries) {\n        Arrays.sort(logs, (int[] a, int[] b) -> Integer.compare(a[1], b[1]));\n        List<Query> queryList = new ArrayList<>();\n        for (int i = 0; i < queries.length; ++i) {\n            queryList.add(new Query(queries[i], i));\n        }\n        Collections.sort(queryList, (a, b) -> Integer.compare(a.query, b.query));\n\n        int[] ans = new int[queries.length];\n        Map<Integer, Integer> countMap = new HashMap<>();\n        int left = 0;\n        int right = 0;\n        for (int i = 0; i < queryList.size(); ++i) {\n            Query q = queryList.get(i);\n            while (right < logs.length && logs[right][1] <= q.query) {\n                countMap.put(logs[right][0], countMap.getOrDefault(logs[right][0], 0) + 1);\n                ++right;\n            }\n\n            while (left < logs.length && logs[left][1] < q.query - x) {\n                int newCount = countMap.get(logs[left][0]) - 1;\n                if (newCount == 0) {\n                    countMap.remove(logs[left][0]);\n                } else {\n                    countMap.put(logs[left][0], newCount);\n                }\n                ++left;\n            }\n            ans[q.index] = n - countMap.size();\n        }\n        return ans;\n    }\n}"
+    }
+  },
+  "2749": {
+    "java": {
+      "brainteaser": ""
     }
   },
   "2760": {
