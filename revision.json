@@ -77,7 +77,8 @@
         487,
         594,
         845,
-        876
+        876,
+        995
     ],
     "Ordered Set": [
         220
@@ -123,13 +124,17 @@
         2856
     ],
     "Prefix Sum": [],
-    "Stack": [],
+    "Stack": [
+        341
+    ],
     "Simulation": [],
     "Graph": [],
     "Counting": [],
     "Design": [
         173,
-        1586
+        1586,
+        641,
+        622
     ],
     "Enumeration": [],
     "Union Find": [],
@@ -144,10 +149,15 @@
     "Divide and Conquer": [],
     "Recursion": [],
     "Bitmask": [],
-    "Queue": [],
+    "Queue": [
+        225,
+        232,
+        387,
+
+    ],
     "Segment Tree": [],
     "Binary Tree": [
-        94, 
+        94,
         100,
         101,
         102,
