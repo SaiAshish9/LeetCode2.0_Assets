@@ -2283,7 +2283,7 @@
   },
   "1823": {
     "java": {
-      "queue": ""
+      "queue": "class Solution {\n    public int findTheWinner(int n, int k) {\n        List<Integer> players = new ArrayList<>();\n        for (int i = 1; i <= n; i++) {\n            players.add(i);\n        }\n        \n        int index = 0;\n        while (players.size() > 1) {\n            index = (index + k - 1) % players.size();\n            players.remove(index);\n        }\n        \n        return players.get(0);\n    }\n}\n"
     }
   },
   "1825": {
