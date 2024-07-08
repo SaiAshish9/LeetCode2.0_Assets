@@ -11522,5 +11522,193 @@
     "difficulty": "Hard",
     "language": "Java",
     "acceptance": 27.4
+  },
+  "nim_game": {
+    "qno": "292",
+    "title": "Nim Game",
+    "tags": [
+      "Math",
+      "Brainteaser",
+      "Game Theory"
+    ],
+    "default": "Brainteaser",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 57
+  },
+  "bulb_switcher": {
+    "qno": "319",
+    "title": "Bulb Switcher",
+    "tags": [
+      "Math",
+      "Brainteaser"
+    ],
+    "default": "Brainteaser",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 52.9
+  },
+  "chalkboard_xor_game": {
+    "qno": "810",
+    "title": "Chalkboard XOR Game",
+    "tags": [
+      "Array",
+      "Math",
+      "Bit Manipulation",
+      "Brainteaser",
+      "Game Theory"
+    ],
+    "default": "Brainteaser",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 60
+  },
+  "divisor_game": {
+    "qno": "1025",
+    "title": "Divisor Game",
+    "tags": [
+      "Math",
+      "Dynamic Programming",
+      "Brainteaser",
+      "Game Theory"
+    ],
+    "default": "Brainteaser",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 68.9
+  },
+  "moving_stones_until_consecutive": {
+    "qno": "1033",
+    "title": "Moving Stones Until Consecutive",
+    "tags": [
+      "Math",
+      "Brainteaser"
+    ],
+    "default": "Brainteaser",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 48.2
+  },
+  "last_moment_before_all_ants_fall_out_of_a_plank": {
+    "qno": "1503",
+    "title": "Last Moment Before All Ants Fall Out of a Plank",
+    "tags": [
+      "Array",
+      "Brainteaser",
+      "Simulation"
+    ],
+    "default": "Brainteaser",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 68.5
+  },
+  "game_of_nim": {
+    "qno": "1908",
+    "title": "Game of Nim",
+    "tags": [
+      "Array",
+      "Math",
+      "Dynamic Programming",
+      "Bit Manipulation",
+      "Brainteaser",
+      "Game Theory"
+    ],
+    "default": "Brainteaser",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 63.1
+  },
+  "longest_subarray_with_maximum_bitwise_and": {
+    "qno": "2419",
+    "title": "Longest Subarray With Maximum Bitwise AND",
+    "tags": [
+      "Array",
+      "Bit Manipulation",
+      "Brainteaser"
+    ],
+    "default": "Brainteaser",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.5
+  },
+  "bitwise_xor_of_all_pairings": {
+    "qno": "2425",
+    "title": "Bitwise XOR of All Pairings",
+    "tags": [
+      "Array",
+      "Bit Manipulation",
+      "Brainteaser"
+    ],
+    "default": "Brainteaser",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 58.1
+  },
+  "bitwise_or_of_all_subsequence_sums": {
+    "qno": "2505",
+    "title": "Bitwise OR of All Subsequence Sums",
+    "tags": [
+      "Array",
+      "Math",
+      "Bit Manipulation",
+      "Brainteaser"
+    ],
+    "default": "Brainteaser",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 68.7
+  },
+  "minimum_impossible_or": {
+    "qno": "2568",
+    "title": "Minimum Impossible OR",
+    "tags": [
+      "Array",
+      "Bit Manipulation",
+      "Brainteaser"
+    ],
+    "default": "Brainteaser",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 57.5
+  },
+  "movement_of_robots": {
+    "qno": "2731",
+    "title": "Movement of Robots",
+    "tags": [
+      "Array",
+      "Brainteaser",
+      "Sorting",
+      "Prefix Sum"
+    ],
+    "default": "Brainteaser",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 28
+  },
+  "minimum_operations_to_make_the_integer_zero": {
+    "qno": "2749",
+    "title": "Minimum Operations to Make the Integer Zero",
+    "tags": [
+      "Bit Manipulation",
+      "Brainteaser"
+    ],
+    "default": "Brainteaser",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 29.7
+  },
+  "construct_the_longest_new_string": {
+    "qno": "2745",
+    "title": "Construct the Longest New String",
+    "tags": [
+      "Math",
+      "Dynamic Programming",
+      "Greedy",
+      "Brainteaser"
+    ],
+    "default": "Brainteaser",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 53.7
   }
 }
