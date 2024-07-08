@@ -166,7 +166,7 @@
   },
   "96": {
     "java": {
-      "binary-search-tree": ""
+      "binary-search-tree": "public class Solution {\n\n    public int numTrees(int n) {\n        int[] dp = new int[n + 1];\n        dp[0] = 1;\n        dp[1] = 1;\n        for (int nodes = 2; nodes <= n; nodes++) {\n            for (int root = 1; root <= nodes; root++) {\n                dp[nodes] += dp[root - 1] * dp[nodes - root];\n            }\n        }\n        return dp[n];\n    }\n\n}\n"
     }
   },
   "98": {
