@@ -1918,7 +1918,7 @@
   },
   "1429": {
     "java": {
-      "queue": ""
+      "queue": "class FirstUnique {\n    private Map<Integer, Integer> cnt = new HashMap<>();\n    private Set<Integer> unique = new LinkedHashSet<>();\n\n    public FirstUnique(int[] nums) {\n        for (int v : nums) {\n            cnt.put(v, cnt.getOrDefault(v, 0) + 1);\n        }\n        for (int v : nums) {\n            if (cnt.get(v) == 1) {\n                unique.add(v);\n            }\n        }\n    }\n\n    public int showFirstUnique() {\n        return unique.isEmpty() ? -1 : unique.iterator().next();\n    }\n\n    public void add(int value) {\n        cnt.put(value, cnt.getOrDefault(value, 0) + 1);\n        if (cnt.get(value) == 1) {\n            unique.add(value);\n        } else {\n            unique.remove(value);\n        }\n    }\n}\n\n/**\n * Your FirstUnique object will be instantiated and called as such:\n * FirstUnique obj = new FirstUnique(nums);\n * int param_1 = obj.showFirstUnique();\n * obj.add(value);\n */"
     }
   },
   "1438": {
