@@ -80,9 +80,6 @@
         876,
         995
     ],
-    "Ordered Set": [
-        220
-    ],
     "Monotonic Queue": [
         862,
         918,
@@ -90,68 +87,11 @@
         2762,
         2944
     ],
-    "Matrix": [
-        48,
-        54,
-        59,
-        36
-    ],
-    "Backtracking": [
-        37
-    ],
-    "Hash Table": [
-        522,
-        532,
-        870
-    ],
-    "Dynamic Programming": [
-        53,
-        1871,
-        2945
-    ],
-    "Math": [],
-    "Sorting": [],
-    "Greedy": [],
-    "Depth-First Search": [],
-    "Database": [],
-    "Binary Search": [],
-    "Tree": [],
-    "Breadth-First Search": [],
-    "Bit Manipulation": [
-        832
-    ],
     "Heap (Priority Queue)": [
         703,
         786,
         2856
     ],
-    "Prefix Sum": [],
-    "Stack": [
-        341
-    ],
-    "Simulation": [],
-    "Graph": [],
-    "Counting": [],
-    "Design": [
-        173,
-        1586,
-        641,
-        622,
-        1670
-    ],
-    "Enumeration": [],
-    "Union Find": [],
-    "Linked List": [
-        234
-    ],
-    "Monotonic Stack": [
-        321
-    ],
-    "Number Theory": [],
-    "Trie": [],
-    "Divide and Conquer": [],
-    "Recursion": [],
-    "Bitmask": [],
     "Queue": [
         225,
         232,
@@ -160,7 +100,6 @@
         1823,
         1429
     ],
-    "Segment Tree": [],
     "Binary Tree": [
         94,
         100,
@@ -272,6 +211,67 @@
         1902,
         2476
     ],
+    "Ordered Set": [
+        220
+    ],
+    "Matrix": [
+        48,
+        54,
+        59,
+        36
+    ],
+    "Backtracking": [
+        37
+    ],
+    "Hash Table": [
+        522,
+        532,
+        870
+    ],
+    "Dynamic Programming": [
+        53,
+        1871,
+        2945
+    ],
+    "Math": [],
+    "Sorting": [],
+    "Greedy": [],
+    "Depth-First Search": [],
+    "Database": [],
+    "Binary Search": [],
+    "Tree": [],
+    "Breadth-First Search": [],
+    "Bit Manipulation": [
+        832
+    ],
+    "Prefix Sum": [],
+    "Stack": [
+        341
+    ],
+    "Simulation": [],
+    "Graph": [],
+    "Counting": [],
+    "Design": [
+        173,
+        1586,
+        641,
+        622,
+        1670
+    ],
+    "Enumeration": [],
+    "Union Find": [],
+    "Linked List": [
+        234
+    ],
+    "Monotonic Stack": [
+        321
+    ],
+    "Number Theory": [],
+    "Trie": [],
+    "Divide and Conquer": [],
+    "Recursion": [],
+    "Bitmask": [],
+    "Segment Tree": [],
     "Geometry": [],
     "Memoization": [],
     "Hash Function": [],
