@@ -1818,7 +1818,7 @@
   },
   "1382": {
     "java": {
-      "binary-search-tree": ""
+      "binary-search-tree": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public TreeNode balanceBST(TreeNode root) {\n        List<TreeNode> nodes = new ArrayList<>();\n        inorderTraversal(root, nodes);\n        return buildBalancedBST(nodes, 0, nodes.size() - 1);\n    }\n    \n    private void inorderTraversal(TreeNode root, List<TreeNode> nodes) {\n        if (root == null) {\n            return;\n        }\n        inorderTraversal(root.left, nodes);\n        nodes.add(root);\n        inorderTraversal(root.right, nodes);\n    }\n    \n    private TreeNode buildBalancedBST(List<TreeNode> nodes, int start, int end) {\n        if (start > end) {\n            return null;\n        }\n        int mid = (start + end) / 2;\n        TreeNode node = nodes.get(mid);\n        node.left = buildBalancedBST(nodes, start, mid - 1);\n        node.right = buildBalancedBST(nodes, mid + 1, end);\n        return node;\n    }\n}\n"
     }
   },
   "1385": {
