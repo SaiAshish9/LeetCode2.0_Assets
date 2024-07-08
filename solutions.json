@@ -479,7 +479,7 @@
   },
   "292": {
     "java": {
-      "brainteaser": ""
+      "brainteaser": "class Solution {\n    public boolean canWinNim(int n) {\n        return n % 4 != 0;\n    }\n}\n"
     }
   },
   "295": {
