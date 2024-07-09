@@ -13274,5 +13274,16 @@
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 35.6
+  },
+  "max_consecutive_ones": {
+    "qno": "485",
+    "title": "Max Consecutive Ones",
+    "tags": [
+      "Array"
+    ],
+    "default": "Array",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 59.7
   }
 }
