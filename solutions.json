@@ -2010,7 +2010,7 @@
   },
   "1337": {
     "java": {
-      "matrix": ""
+      "matrix": "import java.util.*;\n\nclass Solution {\n    public int[] kWeakestRows(int[][] mat, int k) {\n        int m = mat.length;\n        int n = mat[0].length;\n        \n        PriorityQueue<int[]> pq = new PriorityQueue<>(\n            (a, b) -> a[1] == b[1] ? a[0] - b[0] : a[1] - b[1]\n        );\n        \n        for (int i = 0; i < m; i++) {\n            int soldiers = countSoldiers(mat[i]);\n            pq.offer(new int[]{i, soldiers});\n        }\n        \n        int[] result = new int[k];\n        for (int i = 0; i < k; i++) {\n            result[i] = pq.poll()[0];\n        }\n        \n        return result;\n    }\n    \n    private int countSoldiers(int[] row) {\n        int count = 0;\n        for (int num : row) {\n            if (num == 1) {\n                count++;\n            }\n        }\n        return count;\n    }\n}\n"
     }
   },
   "1338": {
