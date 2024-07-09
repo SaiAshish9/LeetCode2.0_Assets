@@ -546,7 +546,7 @@
       "Counting",
       "Quickselect"
     ],
-    "default": "Bucket Sort",
+    "default": "Heap (Priority Queue)",
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 62.9
@@ -593,7 +593,7 @@
       "Heap (Priority Queue)",
       "Quickselect"
     ],
-    "default": "Quickselect",
+    "default": "Heap (Priority Queue)",
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 66.8
