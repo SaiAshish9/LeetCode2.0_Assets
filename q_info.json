@@ -13285,5 +13285,609 @@
     "difficulty": "Easy",
     "language": "Java",
     "acceptance": 59.7
+  },
+  "largest_rectangle_in_histogram": {
+    "qno": "84",
+    "title": "Largest Rectangle in Histogram",
+    "tags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 44.9
+  },
+  "remove_duplicate_letters": {
+    "qno": "316",
+    "title": "Remove Duplicate Letters",
+    "tags": [
+      "String",
+      "Stack",
+      "Greedy",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.9
+  },
+  "remove_k_digits": {
+    "qno": "402",
+    "title": "Remove K Digits",
+    "tags": [
+      "String",
+      "Stack",
+      "Greedy",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 33.7
+  },
+  "132_pattern": {
+    "qno": "456",
+    "title": "132 Pattern",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Stack",
+      "Monotonic Stack",
+      "Ordered Set"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 33.8
+  },
+  "next_greater_element_i": {
+    "qno": "496",
+    "title": "Next Greater Element I",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 72.5
+  },
+  "next_greater_element_ii": {
+    "qno": "503",
+    "title": "Next Greater Element II",
+    "tags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 64.2
+  },
+  "daily_temperatures": {
+    "qno": "739",
+    "title": "Daily Temperatures",
+    "tags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 66.1
+  },
+  "max_chunks_to_make_sorted_ii": {
+    "qno": "768",
+    "title": "Max Chunks To Make Sorted II",
+    "tags": [
+      "Array",
+      "Stack",
+      "Greedy",
+      "Sorting",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 53.3
+  },
+  "max_chunks_to_make_sorted": {
+    "qno": "769",
+    "title": "Max Chunks To Make Sorted",
+    "tags": [
+      "Array",
+      "Stack",
+      "Greedy",
+      "Sorting",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 58.4
+  },
+  "car_fleet": {
+    "qno": "853",
+    "title": "Car Fleet",
+    "tags": [
+      "Array",
+      "Stack",
+      "Sorting",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 51.4
+  },
+  "online_stock_span": {
+    "qno": "901",
+    "title": "Online Stock Span",
+    "tags": [
+      "Stack",
+      "Design",
+      "Monotonic Stack",
+      "Data Stream"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 66.1
+  },
+  "sum_of_subarray_minimums": {
+    "qno": "907",
+    "title": "Sum of Subarray Minimums",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 37.3
+  },
+  "maximum_width_ramp": {
+    "qno": "962",
+    "title": "Maximum Width Ramp",
+    "tags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 50.3
+  },
+  "odd_even_jump": {
+    "qno": "975",
+    "title": "Odd Even Jump",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Stack",
+      "Monotonic Stack",
+      "Ordered Set"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 40.1
+  },
+  "number_of_valid_subarrays": {
+    "qno": "1063",
+    "title": "Number of Valid Subarrays",
+    "tags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 79.1
+  },
+  "next_greater_node_in_linked_list": {
+    "qno": "1019",
+    "title": "Next Greater Node In Linked List",
+    "tags": [
+      "Array",
+      "Linked List",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 61
+  },
+  "smallest_subsequence_of_distinct_characters": {
+    "qno": "1081",
+    "title": "Smallest Subsequence of Distinct Characters",
+    "tags": [
+      "String",
+      "Stack",
+      "Greedy",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 61
+  },
+  "longest_well-performing_interval": {
+    "qno": "1124",
+    "title": "Longest Well-Performing Interval",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Stack",
+      "Monotonic Stack",
+      "Prefix Sum"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 35.1
+  },
+  "minimum_cost_tree_from_leaf_values": {
+    "qno": "1130",
+    "title": "Minimum Cost Tree From Leaf Values",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Stack",
+      "Greedy",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 67.7
+  },
+  "number_of_visible_people_in_a_queue": {
+    "qno": "1944",
+    "title": "Number of Visible People in a Queue",
+    "tags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 69.8
+  },
+  "final_prices_with_a_special_discount_in_a_shop": {
+    "qno": "1475",
+    "title": "Final Prices With a Special Discount in a Shop",
+    "tags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 78
+  },
+  "minimum_number_of_increments_on_subarrays_to_form_a_target_array": {
+    "qno": "1526",
+    "title": "Minimum Number of Increments on Subarrays to Form a Target Array",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Stack",
+      "Greedy",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 69.8
+  },
+  "find_the_most_competitive_subsequence": {
+    "qno": "1673",
+    "title": "Find the Most Competitive Subsequence",
+    "tags": [
+      "Array",
+      "Stack",
+      "Greedy",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 50.5
+  },
+  "buildings_with_an_ocean_view": {
+    "qno": "1762",
+    "title": "Buildings With an Ocean View",
+    "tags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 79.9
+  },
+  "maximum_subarray_min-product": {
+    "qno": "1856",
+    "title": "Maximum Subarray Min-Product",
+    "tags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack",
+      "Prefix Sum"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 38.1
+  },
+  "jump_game_viii": {
+    "qno": "2297",
+    "title": "Jump Game VIII",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Stack",
+      "Graph",
+      "Monotonic Stack",
+      "Shortest Path"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 45.7
+  },
+  "maximum_of_minimum_values_in_all_subarrays": {
+    "qno": "1950",
+    "title": "Maximum of Minimum Values in All Subarrays",
+    "tags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.8
+  },
+  "the_number_of_weak_characters_in_the_game": {
+    "qno": "1996",
+    "title": "The Number of Weak Characters in the Game",
+    "tags": [
+      "Array",
+      "Stack",
+      "Greedy",
+      "Sorting",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 44
+  },
+  "smallest_k-length_subsequence_with_occurrences_of_a_letter": {
+    "qno": "2030",
+    "title": "Smallest K-Length Subsequence With Occurrences of a Letter",
+    "tags": [
+      "String",
+      "Stack",
+      "Greedy",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 39.2
+  },
+  "sum_of_subarray_ranges": {
+    "qno": "2104",
+    "title": "Sum of Subarray Ranges",
+    "tags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 61.2
+  },
+  "sum_of_total_strength_of_wizards": {
+    "qno": "2281",
+    "title": "Sum of Total Strength of Wizards",
+    "tags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack",
+      "Prefix Sum"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 27.9
+  },
+  "steps_to_make_array_non-decreasing": {
+    "qno": "2289",
+    "title": "Steps to Make Array Non-decreasing",
+    "tags": [
+      "Array",
+      "Linked List",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 21.9
+  },
+  "subarray_with_elements_greater_than_varying_threshold": {
+    "qno": "2334",
+    "title": "Subarray With Elements Greater Than Varying Threshold",
+    "tags": [
+      "Array",
+      "Stack",
+      "Union Find",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 42.8
+  },
+  "finding_the_number_of_visible_mountains": {
+    "qno": "2345",
+    "title": "Finding the Number of Visible Mountains",
+    "tags": [
+      "Array",
+      "Stack",
+      "Sorting",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 38
+  },
+  "maximum_number_of_books_you_can_take": {
+    "qno": "2355",
+    "title": "Maximum Number of Books You Can Take",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 40.5
+  },
+  "remove_nodes_from_linked_list": {
+    "qno": "2487",
+    "title": "Remove Nodes From Linked List",
+    "tags": [
+      "Linked List",
+      "Stack",
+      "Recursion",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 74.4
+  },
+  "maximum_sum_queries": {
+    "qno": "2736",
+    "title": "Maximum Sum Queries",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Stack",
+      "Binary Indexed Tree",
+      "Segment Tree",
+      "Sorting",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 29.1
+  },
+  "apply_operations_to_maximize_score": {
+    "qno": "2818",
+    "title": "Apply Operations to Maximize Score",
+    "tags": [
+      "Array",
+      "Math",
+      "Stack",
+      "Greedy",
+      "Monotonic Stack",
+      "Number Theory"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 32.8
+  },
+  "maximal_range_that_each_element_is_maximum_in_it": {
+    "qno": "2832",
+    "title": "Maximal Range That Each Element Is Maximum in It",
+    "tags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 74.1
+  },
+  "beautiful_towers_ii": {
+    "qno": "2866",
+    "title": "Beautiful Towers II",
+    "tags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 34.7
+  },
+  "beautiful_towers_i": {
+    "qno": "2865",
+    "title": "Beautiful Towers I",
+    "tags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 43.5
+  },
+  "find_the_number_of_subarrays_where_boundary_elements_are_maximum": {
+    "qno": "3113",
+    "title": "Find the Number of Subarrays Where Boundary Elements Are Maximum",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 29.3
+  },
+  "maximum_array_hopping_score_i": {
+    "qno": "3205",
+    "title": "Maximum Array Hopping Score I",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "default": "Monotonic Stack",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 89.2
   }
 }
