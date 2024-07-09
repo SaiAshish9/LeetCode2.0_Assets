@@ -877,7 +877,7 @@
   },
   "505": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n    public int shortestDistance(int[][] maze, int[] start, int[] destination) {\n        int m = maze.length, n = maze[0].length;\n        int inf = 1 << 30;\n        int[][] dist = new int[m][n];\n        for (var row : dist) {\n            Arrays.fill(row, inf);\n        }\n        int si = start[0], sj = start[1];\n        int di = destination[0], dj = destination[1];\n        dist[si][sj] = 0;\n        Deque<int[]> q = new ArrayDeque<>();\n        q.offer(new int[] {si, sj});\n        int[] dirs = {-1, 0, 1, 0, -1};\n        while (!q.isEmpty()) {\n            var p = q.poll();\n            int i = p[0], j = p[1];\n            for (int d = 0; d < 4; ++d) {\n                int x = i, y = j, k = dist[i][j];\n                int a = dirs[d], b = dirs[d + 1];\n                while (\n                    x + a >= 0 && x + a < m && y + b >= 0 && y + b < n && maze[x + a][y + b] == 0) {\n                    x += a;\n                    y += b;\n                    ++k;\n                }\n                if (k < dist[x][y]) {\n                    dist[x][y] = k;\n                    q.offer(new int[] {x, y});\n                }\n            }\n        }\n        return dist[di][dj] == inf ? -1 : dist[di][dj];\n    }\n}"
     }
   },
   "506": {
