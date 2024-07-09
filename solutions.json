@@ -584,7 +584,7 @@
   },
   "316": {
       "java": {
-          "monotonic-stack": ""
+          "monotonic-stack": "import java.util.Stack;\n\nclass Solution {\n    public String removeDuplicateLetters(String s) {\n        int[] count = new int[26];\n        for (char c : s.toCharArray()) {\n            count[c - 'a']++;\n        }\n\n        boolean[] visited = new boolean[26];\n        Stack<Character> stack = new Stack<>();\n\n        for (char c : s.toCharArray()) {\n            count[c - 'a']--;\n\n            if (visited[c - 'a']) {\n                continue;\n            }\n\n            while (!stack.isEmpty() && stack.peek() > c\n                    && count[stack.peek() - 'a'] > 0) {\n                visited[stack.pop() - 'a'] = false;\n            }\n\n            stack.push(c);\n            visited[c - 'a'] = true;\n        }\n\n        StringBuilder result = new StringBuilder();\n        while (!stack.isEmpty()) {\n            result.insert(0, stack.pop());\n        }\n\n        return result.toString();\n    }\n}\n"
       }
   },
   "317": {
