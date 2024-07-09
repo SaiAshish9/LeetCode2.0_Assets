@@ -11438,21 +11438,6 @@
     "language": "Java",
     "acceptance": 80.7
   },
-  "finding_mk_average": {
-    "qno": "1825",
-    "title": "Finding MK Average",
-    "tags": [
-      "Design",
-      "Queue",
-      "Heap (Priority Queue)",
-      "Data Stream",
-      "Ordered Set"
-    ],
-    "default": "Queue",
-    "difficulty": "Hard",
-    "language": "Java",
-    "acceptance": 37.3
-  },
   "time_needed_to_buy_tickets": {
     "qno": "2073",
     "title": "Time Needed to Buy Tickets",
@@ -11710,5 +11695,1584 @@
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 53.7
+  },
+  "ugly_number_ii": {
+    "qno": "264",
+    "title": "Ugly Number II",
+    "tags": [
+      "Hash Table",
+      "Math",
+      "Dynamic Programming",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 46.3
+  },
+  "design_twitter": {
+    "qno": "355",
+    "title": "Design Twitter",
+    "tags": [
+      "Hash Table",
+      "Linked List",
+      "Design",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 40
+  },
+  "rearrange_string_k_distance_apart": {
+    "qno": "358",
+    "title": "Rearrange String k Distance Apart",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Counting"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 38.9
+  },
+  "find_k_pairs_with_smallest_sums": {
+    "qno": "373",
+    "title": "Find K Pairs with Smallest Sums",
+    "tags": [
+      "Array",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 40
+  },
+  "strong_password_checker": {
+    "qno": "420",
+    "title": "Strong Password Checker",
+    "tags": [
+      "String",
+      "Greedy",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 13.8
+  },
+  "ipo": {
+    "qno": "502",
+    "title": "IPO",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 53.2
+  },
+  "relative_ranks": {
+    "qno": "506",
+    "title": "Relative Ranks",
+    "tags": [
+      "Array",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 71.8
+  },
+  "task_scheduler": {
+    "qno": "621",
+    "title": "Task Scheduler",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Counting"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 60.1
+  },
+  "course_schedule_iii": {
+    "qno": "630",
+    "title": "Course Schedule III",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 40.2
+  },
+  "design_search_autocomplete_system": {
+    "qno": "642",
+    "title": "Design Search Autocomplete System",
+    "tags": [
+      "String",
+      "Design",
+      "Trie",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Data Stream"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 49
+  },
+  "split_array_into_consecutive_subsequences": {
+    "qno": "659",
+    "title": "Split Array into Consecutive Subsequences",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Greedy",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 51.1
+  },
+  "network_delay_time": {
+    "qno": "743",
+    "title": "Network Delay Time",
+    "tags": [
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Graph",
+      "Heap (Priority Queue)",
+      "Shortest Path"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 54.3
+  },
+  "employee_free_time": {
+    "qno": "759",
+    "title": "Employee Free Time",
+    "tags": [
+      "Array",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 72.2
+  },
+  "reorganize_string": {
+    "qno": "767",
+    "title": "Reorganize String",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Counting"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 54.8
+  },
+  "cheapest_flights_within_k_stops": {
+    "qno": "787",
+    "title": "Cheapest Flights Within K Stops",
+    "tags": [
+      "Dynamic Programming",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Graph",
+      "Heap (Priority Queue)",
+      "Shortest Path"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 39.4
+  },
+  "exam_room": {
+    "qno": "855",
+    "title": "Exam Room",
+    "tags": [
+      "Design",
+      "Heap (Priority Queue)",
+      "Ordered Set"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 43.5
+  },
+  "minimum_cost_to_hire_k_workers": {
+    "qno": "857",
+    "title": "Minimum Cost to Hire K Workers",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 63.4
+  },
+  "minimum_number_of_refueling_stops": {
+    "qno": "871",
+    "title": "Minimum Number of Refueling Stops",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Greedy",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 40.1
+  },
+  "reachable_nodes_in_subdivided_graph": {
+    "qno": "882",
+    "title": "Reachable Nodes In Subdivided Graph",
+    "tags": [
+      "Graph",
+      "Heap (Priority Queue)",
+      "Shortest Path"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 50.5
+  },
+  "high_five": {
+    "qno": "1086",
+    "title": "High Five",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 74.5
+  },
+  "minimum_cost_to_connect_sticks": {
+    "qno": "1167",
+    "title": "Minimum Cost to Connect Sticks",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 70.1
+  },
+  "last_stone_weight": {
+    "qno": "1046",
+    "title": "Last Stone Weight",
+    "tags": [
+      "Array",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 65.5
+  },
+  "distant_barcodes": {
+    "qno": "1054",
+    "title": "Distant Barcodes",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Counting"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 46.6
+  },
+  "maximum_number_of_ones": {
+    "qno": "1183",
+    "title": "Maximum Number of Ones",
+    "tags": [
+      "Greedy",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 68
+  },
+  "minimum_time_to_build_blocks": {
+    "qno": "1199",
+    "title": "Minimum Time to Build Blocks",
+    "tags": [
+      "Array",
+      "Math",
+      "Greedy",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 45.8
+  },
+  "car_pooling": {
+    "qno": "1094",
+    "title": "Car Pooling",
+    "tags": [
+      "Array",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Simulation",
+      "Prefix Sum"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 56
+  },
+  "dinner_plate_stacks": {
+    "qno": "1172",
+    "title": "Dinner Plate Stacks",
+    "tags": [
+      "Hash Table",
+      "Stack",
+      "Design",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 32.7
+  },
+  "longest_happy_string": {
+    "qno": "1405",
+    "title": "Longest Happy String",
+    "tags": [
+      "String",
+      "Greedy",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 57.4
+  },
+  "path_with_maximum_probability": {
+    "qno": "1514",
+    "title": "Path with Maximum Probability",
+    "tags": [
+      "Array",
+      "Graph",
+      "Heap (Priority Queue)",
+      "Shortest Path"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 55.3
+  },
+  "search_suggestions_system": {
+    "qno": "1268",
+    "title": "Search Suggestions System",
+    "tags": [
+      "Array",
+      "String",
+      "Binary Search",
+      "Trie",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 65.1
+  },
+  "reduce_array_size_to_the_half": {
+    "qno": "1338",
+    "title": "Reduce Array Size to The Half",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 68.9
+  },
+  "maximum_number_of_events_that_can_be_attended": {
+    "qno": "1353",
+    "title": "Maximum Number of Events That Can Be Attended",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 32.5
+  },
+  "construct_target_array_with_multiple_sums": {
+    "qno": "1354",
+    "title": "Construct Target Array With Multiple Sums",
+    "tags": [
+      "Array",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 36.2
+  },
+  "pizza_with_3n_slices": {
+    "qno": "1388",
+    "title": "Pizza With 3n Slices",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Greedy",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 51.9
+  },
+  "maximum_performance_of_a_team": {
+    "qno": "1383",
+    "title": "Maximum Performance of a Team",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 47.8
+  },
+  "diagonal_traverse_ii": {
+    "qno": "1424",
+    "title": "Diagonal Traverse II",
+    "tags": [
+      "Array",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 57
+  },
+  "maximum_product_of_two_elements_in_an_array": {
+    "qno": "1464",
+    "title": "Maximum Product of Two Elements in an Array",
+    "tags": [
+      "Array",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 82.7
+  },
+  "avoid_flood_in_the_city": {
+    "qno": "1488",
+    "title": "Avoid Flood in The City",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Binary Search",
+      "Greedy",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 27
+  },
+  "design_a_file_sharing_system": {
+    "qno": "1500",
+    "title": "Design a File Sharing System",
+    "tags": [
+      "Hash Table",
+      "Design",
+      "Heap (Priority Queue)",
+      "Data Stream"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 43.4
+  },
+  "find_servers_that_handled_most_number_of_requests": {
+    "qno": "1606",
+    "title": "Find Servers That Handled Most Number of Requests",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Heap (Priority Queue)",
+      "Ordered Set"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 43.7
+  },
+  "furthest_building_you_can_reach": {
+    "qno": "1642",
+    "title": "Furthest Building You Can Reach",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.8
+  },
+  "sell_diminishing-valued_colored_balls": {
+    "qno": "1648",
+    "title": "Sell Diminishing-Valued Colored Balls",
+    "tags": [
+      "Array",
+      "Math",
+      "Binary Search",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 30
+  },
+  "stone_game_vi": {
+    "qno": "1686",
+    "title": "Stone Game VI",
+    "tags": [
+      "Array",
+      "Math",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Game Theory"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 57.2
+  },
+  "minimize_deviation_in_array": {
+    "qno": "1675",
+    "title": "Minimize Deviation in Array",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Heap (Priority Queue)",
+      "Ordered Set"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 54
+  },
+  "maximum_number_of_eaten_apples": {
+    "qno": "1705",
+    "title": "Maximum Number of Eaten Apples",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 39.2
+  },
+  "maximum_score_from_removing_stones": {
+    "qno": "1753",
+    "title": "Maximum Score From Removing Stones",
+    "tags": [
+      "Math",
+      "Greedy",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 67.4
+  },
+  "car_fleet_ii": {
+    "qno": "1776",
+    "title": "Car Fleet II",
+    "tags": [
+      "Array",
+      "Math",
+      "Stack",
+      "Heap (Priority Queue)",
+      "Monotonic Stack"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 55.2
+  },
+  "number_of_restricted_paths_from_first_to_last_node": {
+    "qno": "1786",
+    "title": "Number of Restricted Paths From First to Last Node",
+    "tags": [
+      "Dynamic Programming",
+      "Graph",
+      "Topological Sort",
+      "Heap (Priority Queue)",
+      "Shortest Path"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 39.2
+  },
+  "maximum_average_pass_ratio": {
+    "qno": "1792",
+    "title": "Maximum Average Pass Ratio",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 53.9
+  },
+  "number_of_orders_in_the_backlog": {
+    "qno": "1801",
+    "title": "Number of Orders in the Backlog",
+    "tags": [
+      "Array",
+      "Heap (Priority Queue)",
+      "Simulation"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.8
+  },
+  "finding_mk_average": {
+    "qno": "1825",
+    "title": "Finding MK Average",
+    "tags": [
+      "Design",
+      "Queue",
+      "Heap (Priority Queue)",
+      "Data Stream",
+      "Ordered Set"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 37.3
+  },
+  "seat_reservation_manager": {
+    "qno": "1845",
+    "title": "Seat Reservation Manager",
+    "tags": [
+      "Design",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 69.3
+  },
+  "minimum_path_cost_in_a_hidden_grid": {
+    "qno": "1810",
+    "title": "Minimum Path Cost in a Hidden Grid",
+    "tags": [
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Graph",
+      "Heap (Priority Queue)",
+      "Interactive"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 56.4
+  },
+  "single-threaded_cpu": {
+    "qno": "1834",
+    "title": "Single-Threaded CPU",
+    "tags": [
+      "Array",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 45.6
+  },
+  "process_tasks_using_servers": {
+    "qno": "1882",
+    "title": "Process Tasks Using Servers",
+    "tags": [
+      "Array",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 40.3
+  },
+  "design_movie_rental_system": {
+    "qno": "1912",
+    "title": "Design Movie Rental System",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Design",
+      "Heap (Priority Queue)",
+      "Ordered Set"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 36.6
+  },
+  "the_number_of_the_smallest_unoccupied_chair": {
+    "qno": "1942",
+    "title": "The Number of the Smallest Unoccupied Chair",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 42.1
+  },
+  "remove_stones_to_minimize_the_total": {
+    "qno": "1962",
+    "title": "Remove Stones to Minimize the Total",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 62.4
+  },
+  "average_height_of_buildings_in_each_segment": {
+    "qno": "2015",
+    "title": "Average Height of Buildings in Each Segment",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 59.4
+  },
+  "stock_price_fluctuation": {
+    "qno": "2034",
+    "title": "Stock Price Fluctuation",
+    "tags": [
+      "Hash Table",
+      "Design",
+      "Heap (Priority Queue)",
+      "Data Stream",
+      "Ordered Set"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 48.7
+  },
+  "two_best_non-overlapping_events": {
+    "qno": "2054",
+    "title": "Two Best Non-Overlapping Events",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Dynamic Programming",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 46.5
+  },
+  "find_subsequence_of_length_k_with_the_largest_sum": {
+    "qno": "2099",
+    "title": "Find Subsequence of Length K With the Largest Sum",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 43.7
+  },
+  "sequentially_ordinal_rank_tracker": {
+    "qno": "2102",
+    "title": "Sequentially Ordinal Rank Tracker",
+    "tags": [
+      "Design",
+      "Heap (Priority Queue)",
+      "Data Stream",
+      "Ordered Set"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 64.6
+  },
+  "minimum_cost_to_reach_city_with_discounts": {
+    "qno": "2093",
+    "title": "Minimum Cost to Reach City With Discounts",
+    "tags": [
+      "Graph",
+      "Heap (Priority Queue)",
+      "Shortest Path"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 56
+  },
+  "minimum_difference_in_sums_after_removal_of_elements": {
+    "qno": "2163",
+    "title": "Minimum Difference in Sums After Removal of Elements",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 48
+  },
+  "construct_string_with_repeat_limit": {
+    "qno": "2182",
+    "title": "Construct String With Repeat Limit",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Greedy",
+      "Heap (Priority Queue)",
+      "Counting"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 54.2
+  },
+  "minimum_operations_to_halve_array_sum": {
+    "qno": "2208",
+    "title": "Minimum Operations to Halve Array Sum",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 46.7
+  },
+  "largest_number_after_digit_swaps_by_parity": {
+    "qno": "2231",
+    "title": "Largest Number After Digit Swaps by Parity",
+    "tags": [
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 61.7
+  },
+  "maximum_product_after_k_increments": {
+    "qno": "2233",
+    "title": "Maximum Product After K Increments",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 41.7
+  },
+  "maximum_total_importance_of_roads": {
+    "qno": "2285",
+    "title": "Maximum Total Importance of Roads",
+    "tags": [
+      "Greedy",
+      "Graph",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 69.4
+  },
+  "minimum_amount_of_time_to_fill_cups": {
+    "qno": "2335",
+    "title": "Minimum Amount of Time to Fill Cups",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 57.8
+  },
+  "smallest_number_in_infinite_set": {
+    "qno": "2336",
+    "title": "Smallest Number in Infinite Set",
+    "tags": [
+      "Hash Table",
+      "Design",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 71.7
+  },
+  "minimum_sum_of_squared_difference": {
+    "qno": "2333",
+    "title": "Minimum Sum of Squared Difference",
+    "tags": [
+      "Array",
+      "Math",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 25.4
+  },
+  "minimum_deletions_to_make_array_divisible": {
+    "qno": "2344",
+    "title": "Minimum Deletions to Make Array Divisible",
+    "tags": [
+      "Array",
+      "Math",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Number Theory"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 56.1
+  },
+  "design_a_food_rating_system": {
+    "qno": "2353",
+    "title": "Design a Food Rating System",
+    "tags": [
+      "Hash Table",
+      "Design",
+      "Heap (Priority Queue)",
+      "Ordered Set"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 45.2
+  },
+  "design_a_number_container_system": {
+    "qno": "2349",
+    "title": "Design a Number Container System",
+    "tags": [
+      "Hash Table",
+      "Design",
+      "Heap (Priority Queue)",
+      "Ordered Set"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 44.8
+  },
+  "make_array_zero_by_subtracting_equal_amounts": {
+    "qno": "2357",
+    "title": "Make Array Zero by Subtracting Equal Amounts",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Simulation"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 72.4
+  },
+  "find_the_k-sum_of_an_array": {
+    "qno": "2386",
+    "title": "Find the K-Sum of an Array",
+    "tags": [
+      "Array",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 38.9
+  },
+  "max_sum_of_a_pair_with_equal_sum_of_digits": {
+    "qno": "2342",
+    "title": "Max Sum of a Pair With Equal Sum of Digits",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 55.1
+  },
+  "meeting_rooms_iii": {
+    "qno": "2402",
+    "title": "Meeting Rooms III",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Simulation"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 44.4
+  },
+  "longest_uploaded_prefix": {
+    "qno": "2424",
+    "title": "Longest Uploaded Prefix",
+    "tags": [
+      "Binary Search",
+      "Union Find",
+      "Design",
+      "Binary Indexed Tree",
+      "Segment Tree",
+      "Heap (Priority Queue)",
+      "Ordered Set"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 55.4
+  },
+  "most_popular_video_creator": {
+    "qno": "2456",
+    "title": "Most Popular Video Creator",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "String",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 43.8
+  },
+  "next_greater_element_iv": {
+    "qno": "2454",
+    "title": "Next Greater Element IV",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Stack",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Monotonic Stack"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 38.7
+  },
+  "maximum_star_sum_of_a_graph": {
+    "qno": "2497",
+    "title": "Maximum Star Sum of a Graph",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Graph",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 39.4
+  },
+  "reward_top_k_students": {
+    "qno": "2512",
+    "title": "Reward Top K Students",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "String",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 45.1
+  },
+  "minimum_cost_to_buy_apples": {
+    "qno": "2473",
+    "title": "Minimum Cost to Buy Apples",
+    "tags": [
+      "Array",
+      "Graph",
+      "Heap (Priority Queue)",
+      "Shortest Path"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 67.9
+  },
+  "maximal_score_after_applying_k_operations": {
+    "qno": "2530",
+    "title": "Maximal Score After Applying K Operations",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 45.9
+  },
+  "maximum_subsequence_score": {
+    "qno": "2542",
+    "title": "Maximum Subsequence Score",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 53.7
+  },
+  "time_to_cross_a_bridge": {
+    "qno": "2532",
+    "title": "Time to Cross a Bridge",
+    "tags": [
+      "Array",
+      "Heap (Priority Queue)",
+      "Simulation"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 43.7
+  },
+  "make_the_prefix_sum_non-negative": {
+    "qno": "2599",
+    "title": "Make the Prefix Sum Non-negative",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 51.3
+  },
+  "design_graph_with_shortest_path_calculator": {
+    "qno": "2642",
+    "title": "Design Graph With Shortest Path Calculator",
+    "tags": [
+      "Graph",
+      "Design",
+      "Heap (Priority Queue)",
+      "Shortest Path"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 70.7
+  },
+  "put_marbles_in_bags": {
+    "qno": "2551",
+    "title": "Put Marbles in Bags",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 66.6
+  },
+  "minimum_cost_of_a_path_with_special_roads": {
+    "qno": "2662",
+    "title": "Minimum Cost of a Path With Special Roads",
+    "tags": [
+      "Array",
+      "Graph",
+      "Heap (Priority Queue)",
+      "Shortest Path"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 38.7
+  },
+  "take_gifts_from_the_richest_pile": {
+    "qno": "2558",
+    "title": "Take Gifts From the Richest Pile",
+    "tags": [
+      "Array",
+      "Heap (Priority Queue)",
+      "Simulation"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 66.8
+  },
+  "find_score_of_an_array_after_marking_all_elements": {
+    "qno": "2593",
+    "title": "Find Score of an Array After Marking All Elements",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Simulation"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 52.4
+  },
+  "mice_and_cheese": {
+    "qno": "2611",
+    "title": "Mice and Cheese",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 45.8
+  },
+  "modify_graph_edge_weights": {
+    "qno": "2699",
+    "title": "Modify Graph Edge Weights",
+    "tags": [
+      "Graph",
+      "Heap (Priority Queue)",
+      "Shortest Path"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 24.3
+  },
+  "find_shortest_path_with_k_hops": {
+    "qno": "2714",
+    "title": "Find Shortest Path with K Hops",
+    "tags": [
+      "Graph",
+      "Heap (Priority Queue)",
+      "Shortest Path"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 62.4
+  },
+  "find_the_closest_marked_node": {
+    "qno": "2737",
+    "title": "Find the Closest Marked Node",
+    "tags": [
+      "Array",
+      "Graph",
+      "Heap (Priority Queue)",
+      "Shortest Path"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 57.1
+  },
+  "maximum_elegance_of_a_k-length_subsequence": {
+    "qno": "2813",
+    "title": "Maximum Elegance of a K-Length Subsequence",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Stack",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 32.9
+  },
+  "find_building_where_alice_and_bob_can_meet": {
+    "qno": "2940",
+    "title": "Find Building Where Alice and Bob Can Meet",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Stack",
+      "Binary Indexed Tree",
+      "Segment Tree",
+      "Heap (Priority Queue)",
+      "Monotonic Stack"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 35.3
+  },
+  "number_of_possible_sets_of_closing_branches": {
+    "qno": "2959",
+    "title": "Number of Possible Sets of Closing Branches",
+    "tags": [
+      "Bit Manipulation",
+      "Graph",
+      "Heap (Priority Queue)",
+      "Enumeration",
+      "Shortest Path"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 51
+  },
+  "find_number_of_coins_to_place_in_tree_nodes": {
+    "qno": "2973",
+    "title": "Find Number of Coins to Place in Tree Nodes",
+    "tags": [
+      "Dynamic Programming",
+      "Tree",
+      "Depth-First Search",
+      "Sorting",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 36.6
+  },
+  "minimum_number_game": {
+    "qno": "2974",
+    "title": "Minimum Number Game",
+    "tags": [
+      "Array",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Simulation"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Easy",
+    "language": "Java",
+    "acceptance": 85.8
+  },
+  "earliest_second_to_mark_indices_ii": {
+    "qno": "3049",
+    "title": "Earliest Second to Mark Indices II",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Greedy",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 22.5
+  },
+  "mark_elements_on_array_by_performing_queries": {
+    "qno": "3080",
+    "title": "Mark Elements on Array by Performing Queries",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Simulation"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 49.1
+  },
+  "minimum_operations_to_exceed_threshold_value_ii": {
+    "qno": "3066",
+    "title": "Minimum Operations to Exceed Threshold Value II",
+    "tags": [
+      "Array",
+      "Heap (Priority Queue)",
+      "Simulation"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 27.5
+  },
+  "replace_question_marks_in_string_to_minimize_its_value": {
+    "qno": "3081",
+    "title": "Replace Question Marks in String to Minimize Its Value",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Greedy",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Counting"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 27
+  },
+  "most_frequent_ids": {
+    "qno": "3092",
+    "title": "Most Frequent IDs",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Heap (Priority Queue)",
+      "Ordered Set"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 42.4
+  },
+  "find_edges_in_shortest_paths": {
+    "qno": "3123",
+    "title": "Find Edges in Shortest Paths",
+    "tags": [
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Graph",
+      "Heap (Priority Queue)",
+      "Shortest Path"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Hard",
+    "language": "Java",
+    "acceptance": 49.3
+  },
+  "minimum_time_to_visit_disappearing_nodes": {
+    "qno": "3112",
+    "title": "Minimum Time to Visit Disappearing Nodes",
+    "tags": [
+      "Array",
+      "Graph",
+      "Heap (Priority Queue)",
+      "Shortest Path"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 34.2
+  },
+  "lexicographically_minimum_string_after_removing_stars": {
+    "qno": "3170",
+    "title": "Lexicographically Minimum String After Removing Stars",
+    "tags": [
+      "Hash Table",
+      "String",
+      "Stack",
+      "Greedy",
+      "Heap (Priority Queue)"
+    ],
+    "default": "Heap (Priority Queue)",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 35.6
   }
 }
