@@ -3041,7 +3041,7 @@
   },
   "2233": {
     "java": {
-      "heap-(priority-queue)": ""
+      "heap-(priority-queue)": "class Solution {\n    public int maximumProduct(int[] nums, int k) {\n        int kMod = 1_000_000_007;\n        long ans = 1;\n        Queue<Integer> minHeap = new PriorityQueue<>();\n\n        for (int num : nums)\n            minHeap.offer(num);\n\n        for (int i = 0; i < k; ++i) {\n            int minNum = minHeap.poll();\n            minHeap.offer(minNum + 1);\n        }\n\n        while (!minHeap.isEmpty()) {\n            ans *= minHeap.poll();\n            ans %= kMod;\n        }\n\n        return (int) ans;\n    }\n}"
     }
   },
   "2234": {
