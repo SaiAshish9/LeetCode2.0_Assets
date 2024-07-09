@@ -362,7 +362,9 @@
     "Reservoir Sampling": [
         497
     ],
-    "Strongly Connected Component": [],
+    "Strongly Connected Component": [
+        1568
+    ],
     "Eulerian Circuit": [
         332,
         753,
