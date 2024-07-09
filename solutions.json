@@ -3060,7 +3060,7 @@
   },
   "2568": {
     "java": {
-      "brainteaser": ""
+      "brainteaser": "class Solution {\n    public int minImpossibleOR(int[] nums) {\n        int res = 1;\n        Set<Integer> seen = new HashSet<>();\n        for (int num : nums) {\n            seen.add(num);\n        }\n\n        while (seen.contains(res)) {\n            res <<= 1; // Move to the next power of 2\n        }\n        \n        return res;\n    }\n}\n"
     }
   },
   "2570": {
