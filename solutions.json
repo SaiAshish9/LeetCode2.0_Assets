@@ -897,7 +897,7 @@
   },
   "456": {
     "java": {
-      "monotonic-stack": ""
+      "monotonic-stack": "class Solution {\n    public boolean find132pattern(int[] nums) {\n        int n = nums.length;\n        if (n < 3) {\n            return false;\n        }\n\n        Stack<Integer> stack = new Stack<>();\n        int[] min = new int[n];\n        min[0] = nums[0];\n\n        for (int i = 1; i < n; ++i) {\n            min[i] = Math.min(min[i - 1], nums[i]);\n        }\n\n        for (int j = n - 1; j >= 0; --j) {\n            if (nums[j] > min[j]) {\n                while (!stack.isEmpty() && stack.peek() <= min[j]) {\n                    stack.pop();\n                }\n                if (!stack.isEmpty() && stack.peek() < nums[j]) {\n                    return true;\n                }\n                stack.push(nums[j]);\n            }\n        }\n\n        return false;\n    }\n}\n"
     }
   },
   "457": {
@@ -972,7 +972,7 @@
   },
   "496": {
     "java": {
-      "monotonic-stack": ""
+      "monotonic-stack": "class Solution {\n    public int[] nextGreaterElement(int[] nums1, int[] nums2) {\n        Map<Integer, Integer> map = new HashMap<>();\n        Stack<Integer> stack = new Stack<>();\n\n        for (int num : nums2) {\n            while (!stack.isEmpty() && stack.peek() < num) {\n                map.put(stack.pop(), num);\n            }\n            stack.push(num);\n        }\n\n        for (int i = 0; i < nums1.length; i++) {\n            nums1[i] = map.getOrDefault(nums1[i], -1);\n        }\n\n        return nums1;\n    }\n}\n"
     }
   },
   "497": {
