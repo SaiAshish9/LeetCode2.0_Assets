@@ -830,6 +830,11 @@
       "two-pointers": ""
     }
   },
+  "485": {
+    "java": {
+      "array": "class Solution {\n    public int findMaxConsecutiveOnes(int[] nums) {\n        int maxCount = 0;\n        int currentCount = 0;\n        \n        for (int num : nums) {\n            if (num == 1) {\n                currentCount++;\n                maxCount = Math.max(maxCount, currentCount);\n            } else {\n                currentCount = 0;\n            }\n        }\n        \n        return maxCount;\n    }\n}\n"
+    }
+  },
   "487": {
     "java": {
       "sliding-window": "class Solution {\n    public int findMaxConsecutiveOnes(int[] nums) {\n        int left = 0, right = 0;\n        int k = 1;\n        while (right < nums.length) {\n            if (nums[right++] == 0) {\n                --k;\n            }\n            if (k < 0 && nums[left++] == 0) {\n                ++k;\n            }\n        }\n        return right - left;\n    }\n}"
