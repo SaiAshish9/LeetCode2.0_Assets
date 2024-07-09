@@ -110,6 +110,13 @@
         1823,
         1429
     ],
+    "Monotonic Stack": [
+        321,
+        316
+    ],
+    "Stack": [
+        341
+    ],
     "Binary Tree": [
         94,
         100,
@@ -259,9 +266,6 @@
         832
     ],
     "Prefix Sum": [],
-    "Stack": [
-        341
-    ],
     "Simulation": [],
     "Graph": [],
     "Counting": [],
@@ -276,9 +280,6 @@
     "Union Find": [],
     "Linked List": [
         234
-    ],
-    "Monotonic Stack": [
-        321
     ],
     "Number Theory": [],
     "Trie": [],
