@@ -524,7 +524,7 @@
   },
   "319": {
     "java": {
-      "brainteaser": ""
+      "brainteaser": "class Solution {\n    public int bulbSwitch(int n) {\n        return (int) Math.sqrt(n);\n    }\n}\n"
     }
   },
   "321": {
