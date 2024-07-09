@@ -796,7 +796,7 @@
   },
   "402": {
     "java": {
-      "monotonic-stack": ""
+      "monotonic-stack": "class Solution {\n    public String removeKdigits(String num, int k) {\n        if (k == num.length()) {\n            return \"0\";\n        }\n\n        Stack<Character> stack = new Stack<>();\n\n        for (char digit : num.toCharArray()) {\n            while (!stack.isEmpty() && k > 0 && stack.peek() > digit) {\n                stack.pop();\n                k--;\n            }\n            stack.push(digit);\n        }\n\n        while (k > 0) {\n            stack.pop();\n            k--;\n        }\n\n        StringBuilder result = new StringBuilder();\n        while (!stack.isEmpty()) {\n            result.append(stack.pop());\n        }\n\n        result.reverse();\n        while (result.length() > 1 && result.charAt(0) == '0') {\n            result.deleteCharAt(0);\n        }\n\n        return result.toString();\n    }\n}\n"
     }
   },
   "407": {
