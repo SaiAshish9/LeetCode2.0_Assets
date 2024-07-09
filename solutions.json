@@ -2433,7 +2433,7 @@
   },
   "1908": {
     "java": {
-      "brainteaser": ""
+      "brainteaser": "class Solution {\n    public boolean nimGame(int[] piles) {\n        int xor = 0;\n        for (int pile : piles)\n            xor ^= pile;\n        return xor != 0;\n    }\n}"
     }
   },
   "1914": {
