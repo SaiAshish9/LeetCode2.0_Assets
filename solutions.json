@@ -2575,7 +2575,7 @@
   },
   "1504": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n    public int numSubmat(int[][] mat) {\n        int m = mat.length;\n        int n = mat[0].length;\n        int ans = 0;\n        int[] hist = new int[n];\n\n        for (int[] row : mat) {\n            for (int i = 0; i < row.length; ++i)\n                hist[i] = row[i] == 0 ? 0 : hist[i] + 1;\n            ans += count(hist);\n        }\n\n        return ans;\n    }\n\n    private int count(int[] nums) {\n        int[] submatrices = new int[nums.length];\n        Deque<Integer> stack = new ArrayDeque<>();\n\n        for (int i = 0; i < nums.length; ++i) {\n            while (!stack.isEmpty() && nums[stack.peek()] >= nums[i])\n                stack.pop();\n            if (!stack.isEmpty()) {\n                int prevIndex = stack.peek();\n                submatrices[i] = submatrices[prevIndex] + nums[i] * (i - prevIndex);\n            } else {\n                submatrices[i] = nums[i] * (i + 1);\n            }\n            stack.push(i);\n        }\n\n        return Arrays.stream(submatrices).sum();\n    }\n}"
     }
   },
   "1508": {
