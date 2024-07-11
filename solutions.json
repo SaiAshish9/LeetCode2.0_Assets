@@ -3742,7 +3742,7 @@
   },
   "2390": {
     "java": {
-      "stack": ""
+      "stack": "import java.util.*;\n\nclass Solution {\n    public String removeStars(String s) {\n        Deque<Integer> stack = new ArrayDeque<>();\n        \n        for (int i = 0; i < s.length(); i++) {\n            char ch = s.charAt(i);\n            if (ch == '*') {\n                if (!stack.isEmpty()) {\n                    stack.pop(); \n                }\n            } else {\n                stack.push(i); \n            }\n        }\n        \n        StringBuilder result = new StringBuilder();\n        while (!stack.isEmpty()) {\n            result.append(s.charAt(stack.pop()));\n        }\n        \n        return result.reverse().toString();\n    }\n}\n"
     }
   },
   "2392": {
