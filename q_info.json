@@ -12856,7 +12856,7 @@
       "Heap (Priority Queue)",
       "Monotonic Stack"
     ],
-    "default": "Heap (Priority Queue)",
+    "default": "Monotonic Stack",
     "difficulty": "Hard",
     "language": "Java",
     "acceptance": 38.7
