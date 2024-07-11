@@ -1414,7 +1414,7 @@
   },
   "769": {
     "java": {
-      "monotonic-stack": ""
+      "monotonic-stack": "public class Solution {\n    public int maxChunksToSorted(int[] arr) {\n        int maxChunks = 0;\n        int maxElement = 0;\n\n        for (int i = 0; i < arr.length; i++) {\n            maxElement = Math.max(maxElement, arr[i]);\n            if (maxElement == i) {\n                maxChunks++;\n            }\n        }\n\n        return maxChunks;\n    }\n}\n"
     }
   },
   "770": {
