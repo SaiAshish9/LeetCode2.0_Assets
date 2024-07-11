@@ -2068,7 +2068,7 @@
   },
   "1130": {
     "java": {
-      "monotonic-stack": ""
+      "monotonic-stack": "class Solution {\n  public int mctFromLeafValues(int[] arr) {\n    int ans = 0;\n    Deque<Integer> stack = new ArrayDeque<>();\n    stack.push(Integer.MAX_VALUE);\n\n    for (int a : arr) {\n      while (stack.peek() <= a) {\n        int mid = stack.pop();\n        ans += Math.min(stack.peek(), a) * mid;\n      }\n      stack.push(a);\n    }\n\n    while (stack.size() > 2)\n      ans += stack.pop() * stack.peek();\n\n    return ans;\n  }\n}"
     }
   },
   "1135": {
