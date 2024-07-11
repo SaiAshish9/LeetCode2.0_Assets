@@ -3165,7 +3165,7 @@
   },
   "1944": {
     "java": {
-      "monotonic-stack": ""
+      "monotonic-stack": "import java.util.ArrayDeque;\nimport java.util.Deque;\n\nclass Solution {\n    public int[] canSeePersonsCount(int[] heights) {\n        int n = heights.length;\n        int[] result = new int[n];\n        Deque<Integer> stack = new ArrayDeque<>();\n\n        for (int i = 0; i < n; i++) {\n            while (!stack.isEmpty() && heights[stack.peek()] <= heights[i]) {\n                result[stack.pop()]++;\n            }\n            if (!stack.isEmpty()) {\n                result[stack.peek()]++; \n            }\n            stack.push(i);\n        }\n\n        return result;\n    }\n}\n"
     }
   },
   "1950": {
