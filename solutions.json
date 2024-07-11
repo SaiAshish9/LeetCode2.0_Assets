@@ -3045,7 +3045,7 @@
   },
   "1856": {
     "java": {
-      "monotonic-stack": ""
+      "monotonic-stack": "import java.util.ArrayDeque;\nimport java.util.Deque;\n\nclass Solution {\n    public int maxSumMinProduct(int[] nums) {\n        int n = nums.length;\n        long[] prefixSum = new long[n + 1];\n        for (int i = 0; i < n; i++) {\n            prefixSum[i + 1] = prefixSum[i] + nums[i];\n        }\n        \n        int[] left = new int[n];\n        int[] right = new int[n];\n        \n        Deque<Integer> stack = new ArrayDeque<>();\n        for (int i = 0; i < n; i++) {\n            while (!stack.isEmpty() && nums[stack.peek()] >= nums[i]) {\n                stack.pop();\n            }\n            left[i] = stack.isEmpty() ? 0 : stack.peek() + 1;\n            stack.push(i);\n        }\n        \n        stack.clear();\n        for (int i = n - 1; i >= 0; i--) {\n            while (!stack.isEmpty() && nums[stack.peek()] >= nums[i]) {\n                stack.pop();\n            }\n            right[i] = stack.isEmpty() ? n : stack.peek();\n            stack.push(i);\n        }\n        \n        long maxMinProduct = 0;\n        for (int i = 0; i < n; i++) {\n            long minProduct = (prefixSum[right[i]] - prefixSum[left[i]]) * nums[i];\n            maxMinProduct = Math.max(maxMinProduct, minProduct);\n        }\n        \n        return (int) (maxMinProduct % 1000000007);\n    }\n}\n"
     }
   },
   "1861": {
