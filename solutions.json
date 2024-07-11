@@ -4357,7 +4357,7 @@
   },
   "2865": {
     "java": {
-      "monotonic-stack": ""
+      "monotonic-stack": "import java.util.*;\n\nclass Solution {\n    public long maximumSumOfHeights(int[] heights) {\n        int n = heights.length;\n        long[] maxSum = new long[n];\n        Deque<Integer> stack = new ArrayDeque<>(Arrays.asList(-1));\n        long sum = 0;\n\n        for (int i = 0; i < n; ++i) {\n            sum = process(stack, heights, i, sum);\n            maxSum[i] = sum;\n        }\n\n        stack = new ArrayDeque<>(Arrays.asList(n));\n        sum = 0;\n\n        for (int i = n - 1; i >= 0; --i) {\n            sum = process(stack, heights, i, sum);\n            maxSum[i] += sum - heights[i];\n        }\n\n        return Arrays.stream(maxSum).max().getAsLong();\n    }\n\n    private long process(Deque<Integer> stack, int[] heights, int i, long sum) {\n        while (stack.size() > 1 && heights[stack.peek()] > heights[i]) {\n            int j = stack.pop();\n            sum -= Math.abs(j - stack.peek()) * (long) heights[j];\n        }\n        sum += Math.abs(i - stack.peek()) * (long) heights[i];\n        stack.push(i);\n        return sum;\n    }\n}\n"
     }
   },
   "2866": {
