@@ -2645,7 +2645,7 @@
   },
   "1574": {
     "java": {
-      "two-pointers": ""
+      "two-pointers": "class Solution {\n    public int findLengthOfShortestSubarray(int[] arr) {\n        int n = arr.length;\n        int left = 0, right = n - 1;\n        \n        while (left < n - 1 && arr[left] <= arr[left + 1]) {\n            left++;\n        }\n        \n        if (left == n - 1) {\n            return 0;\n        }\n        \n        while (right > 0 && arr[right - 1] <= arr[right]) {\n            right--;\n        }\n        \n        int minRemove = Math.min(n - left - 1, right);        \n        int i = 0, j = right;\n        while (i <= left && j < n) {\n            if (arr[i] <= arr[j]) {\n                minRemove = Math.min(minRemove, j - i - 1);\n                i++;\n            } else {\n                j++;\n            }\n        }\n        \n        return minRemove;\n    }\n}\n"
     }
   },
   "1577": {
