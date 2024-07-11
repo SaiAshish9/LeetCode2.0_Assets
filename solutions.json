@@ -36,7 +36,7 @@
   },
   "20": {
     "java": {
-      "stack": ""
+      "stack": "import java.util.*;\n\nclass Solution {\n    public boolean isValid(String s) {\n        Deque<Character> stack = new ArrayDeque<>();\n\n        for (char ch : s.toCharArray()) {\n            if (ch == '(' || ch == '{' || ch == '[') {\n                stack.push(ch);\n            } else {\n                if (stack.isEmpty())\n                    return false;\n                char open = stack.pop();\n                if (!isMatchingPair(open, ch))\n                    return false;\n            }\n        }\n\n        return stack.isEmpty();\n    }\n\n    private boolean isMatchingPair(char open, char close) {\n        return (open == '(' && close == ')') ||\n                (open == '{' && close == '}') ||\n                (open == '[' && close == ']');\n    }\n}\n"
     }
   },
   "23": {
