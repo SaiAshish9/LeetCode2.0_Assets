@@ -1862,7 +1862,7 @@
   },
   "1019": {
     "java": {
-      "monotonic-stack": ""
+      "monotonic-stack": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public int[] nextLargerNodes(ListNode head) {\n        List<Integer> nums = new ArrayList<>();\n        for (; head != null; head = head.next) {\n            nums.add(head.val);\n        }\n        Deque<Integer> stack = new ArrayDeque<>();\n        int n = nums.size();\n        int[] ans = new int[n];\n        for (int i = n - 1; i >= 0; --i) {\n            while (!stack.isEmpty() && stack.peek() <= nums.get(i)) {\n                stack.pop();\n            }\n            if (!stack.isEmpty()) {\n                ans[i] = stack.peek();\n            }\n            stack.push(nums.get(i));\n        }\n        return ans;\n    }\n}"
     }
   },
   "1020": {
