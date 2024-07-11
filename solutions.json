@@ -3361,7 +3361,7 @@
   },
   "2104": {
     "java": {
-      "monotonic-stack": ""
+      "monotonic-stack": "class Solution {\n    public long subArrayRanges(int[] nums) {\n        return subarraySum(nums, '<') - subarraySum(nums, '>');\n    }\n\n    private long subarraySum(int[] A, char op) {\n        int n = A.length;\n        long res = 0;\n        int[] prev = new int[n];\n        int[] next = new int[n];\n        Deque<Integer> stack = new ArrayDeque<>();\n\n        Arrays.fill(prev, -1);\n        Arrays.fill(next, n);\n\n        for (int i = 0; i < n; ++i) {\n            while (!stack.isEmpty() && func(op, A[stack.peek()], A[i])) {\n                int index = stack.pop();\n                next[index] = i;\n            }\n            if (!stack.isEmpty())\n                prev[i] = stack.peek();\n            stack.push(i);\n        }\n\n        for (int i = 0; i < n; ++i)\n            res += (long) A[i] * (i - prev[i]) * (next[i] - i);\n\n        return res;\n    }\n\n    private boolean func(char op, int a, int b) {\n        if (op == '<')\n            return a < b;\n        return a > b;\n    }\n}"
     }
   },
   "2105": {
