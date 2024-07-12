@@ -121,7 +121,7 @@
   },
   "71": {
     "java": {
-      "stack": "import java.util.*;\n\nclass Solution {\n    public String simplifyPath(String path) {\n        Deque<String> stack = new ArrayDeque<>();\n        String[] components = path.split(\"/\");\n\n        for (String component : components) {\n            if (component.equals(\"\\\") || component.equals(\".\")) {\n                continue;\n            } else if (component.equals(\"..\")) {\n                if (!stack.isEmpty()) {\n                    stack.pop();\n                }\n            } else {\n                stack.push(component);\n            }\n        }\n\n        StringBuilder simplifiedPath = new StringBuilder();\n        while (!stack.isEmpty()) {\n            simplifiedPath.insert(0, \"/\" + stack.pop());\n        }\n\n        return simplifiedPath.length() > 0 ? simplifiedPath.toString() : \"/\";\n    }\n}\n"
+      "stack": "import java.util.*;\n\nclass Solution {\n    public String simplifyPath(String path) {\n        Deque<String> stack = new ArrayDeque<>();\n        String[] components = path.split(\"/\");\n\n        for (String component : components) {\n            if (component.equals(\"\") || component.equals(\".\")) {\n                continue;\n            } else if (component.equals(\"..\")) {\n                if (!stack.isEmpty()) {\n                    stack.pop();\n                }\n            } else {\n                stack.push(component);\n            }\n        }\n\n        StringBuilder simplifiedPath = new StringBuilder();\n        while (!stack.isEmpty()) {\n            simplifiedPath.insert(0, \"/\" + stack.pop());\n        }\n\n        return simplifiedPath.length() > 0 ? simplifiedPath.toString() : \"/\";\n    }\n}\n"
     }
   },
   "73": {
