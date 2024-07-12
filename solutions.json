@@ -71,7 +71,7 @@
   },
   "32": {
     "java": {
-      "stack": ""
+      "stack": "import java.util.*;\n\nclass Solution {\n    public int longestValidParentheses(String s) {\n        Deque<Integer> stack = new ArrayDeque<>();\n        stack.push(-1);\n        int maxLength = 0;\n\n        for (int i = 0; i < s.length(); i++) {\n            char ch = s.charAt(i);\n            if (ch == '(') {\n                stack.push(i);\n            } else {\n                stack.pop();\n                if (stack.isEmpty()) {\n                    stack.push(i);\n                } else {\n                    maxLength = Math.max(maxLength, i - stack.peek());\n                }\n            }\n        }\n\n        return maxLength;\n    }\n}\n"
     }
   },
   "36": {
