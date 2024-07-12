@@ -2235,7 +2235,7 @@
   },
   "1249": {
     "java": {
-      "stack": ""
+      "stack": "class Solution {\n    public String minRemoveToMakeValid(String s) {\n        Stack<Integer> stack = new Stack<>();\n        char[] chars = s.toCharArray();\n        \n        for (int i = 0; i < chars.length; i++) {\n            if (chars[i] == '(') {\n                stack.push(i); \n            } else if (chars[i] == ')') {\n                if (!stack.isEmpty()) {\n                    stack.pop();\n                } else {\n                    chars[i] = '*'; \n                }\n            }\n        }\n        \n        while (!stack.isEmpty()) {\n            chars[stack.pop()] = '*';\n        }\n        \n        StringBuilder result = new StringBuilder();\n        for (char c : chars) {\n            if (c != '*') {\n                result.append(c);\n            }\n        }\n        \n        return result.toString();\n    }\n}\n"
     }
   },
   "1253": {
