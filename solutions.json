@@ -2138,7 +2138,7 @@
   },
   "1190": {
     "java": {
-      "stack": ""
+      "stack": "class Solution {\n    public String reverseParentheses(String s) {\n        Stack<Integer> stack = new Stack<>();\n        StringBuilder sb = new StringBuilder();\n        \n        for (int i = 0; i < s.length(); i++) {\n            char c = s.charAt(i);\n            if (c == '(') {\n                stack.push(sb.length());\n            } else if (c == ')') {\n                int start = stack.pop();\n                int end = sb.length() - 1;\n                reverse(sb, start, end);\n            } else {\n                sb.append(c);\n            }\n        }\n        \n        return sb.toString();\n    }\n    \n    private void reverse(StringBuilder sb, int start, int end) {\n        while (start < end) {\n            char temp = sb.charAt(start);\n            sb.setCharAt(start++, sb.charAt(end));\n            sb.setCharAt(end--, temp);\n        }\n    }\n}\n"
     }
   },
   "1192": {
