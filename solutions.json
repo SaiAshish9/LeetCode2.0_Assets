@@ -766,7 +766,7 @@
   },
   "388": {
     "java": {
-      "stack": ""
+      "stack": "import java.util.HashMap;\n\npublic class Solution {\n    public int lengthLongestPath(String input) {\n        HashMap<Integer, Integer> pathLengths = new HashMap<>();\n        pathLengths.put(0, 0); \n        int maxLength = 0;\n\n        for (String part : input.split(\"\n\")) {\n            int level = part.lastIndexOf('\t') + 1; \n            int len = part.length() - level; \n\n            if (part.contains(\".\")) { \n                maxLength = Math.max(maxLength, pathLengths.get(level) + len);\n            } else { \n                pathLengths.put(level + 1, pathLengths.get(level) + len + 1);\n            }\n        }\n\n        return maxLength;\n    }\n\n}\n"
     }
   },
   "391": {
