@@ -14745,5 +14745,18 @@
     "difficulty": "Medium",
     "language": "Java",
     "acceptance": 61.6
+  },
+  "count_submatrices_with_equal_frequency_of_x_and_y": {
+    "qno": "3212",
+    "title": "Count Submatrices With Equal Frequency of X and Y",
+    "tags": [
+      "Array",
+      "Matrix",
+      "Prefix Sum"
+    ],
+    "default": "Matrix",
+    "difficulty": "Medium",
+    "language": "Java",
+    "acceptance": 50.4
   }
 }
