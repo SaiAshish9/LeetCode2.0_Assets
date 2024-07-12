@@ -872,7 +872,7 @@
   },
   "445": {
     "java": {
-      "stack": ""
+      "stack": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n * int val;\n * ListNode next;\n * ListNode() {}\n * ListNode(int val) { this.val = val; }\n * ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\n\npublic class Solution {\n    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {\n        Stack<Integer> s1 = new Stack<>();\n        Stack<Integer> s2 = new Stack<>();\n\n        while (l1 != null) {\n            s1.push(l1.val);\n            l1 = l1.next;\n        }\n        while (l2 != null) {\n            s2.push(l2.val);\n            l2 = l2.next;\n        }\n\n        int carry = 0;\n        ListNode head = null;\n\n        while (!s1.isEmpty() || !s2.isEmpty() || carry != 0) {\n            int sum = carry;\n            if (!s1.isEmpty())\n                sum += s1.pop();\n            if (!s2.isEmpty())\n                sum += s2.pop();\n\n            carry = sum / 10;\n            ListNode newNode = new ListNode(sum % 10);\n            newNode.next = head;\n            head = newNode;\n        }\n\n        return head;\n    }\n\n}\n"
     }
   },
   "449": {
