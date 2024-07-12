@@ -1649,7 +1649,7 @@
   },
   "895": {
     "java": {
-      "stack": ""
+      "stack": "class FreqStack {\n  public void push(int val) {\n    count.merge(val, 1, Integer::sum);\n    countToStack.putIfAbsent(count.get(val), new ArrayDeque<>());\n    countToStack.get(count.get(val)).push(val);\n    maxFreq = Math.max(maxFreq, count.get(val));\n  }\n\n  public int pop() {\n    final int val = countToStack.get(maxFreq).pop();\n    count.merge(val, -1, Integer::sum);\n    if (countToStack.get(maxFreq).isEmpty())\n      --maxFreq;\n    return val;\n  }\n\n  private int maxFreq = 0;\n  private Map<Integer, Integer> count = new HashMap<>();\n  private Map<Integer, Deque<Integer>> countToStack = new HashMap<>();\n}\n\n/**\n * Your FreqStack object will be instantiated and called as such:\n * FreqStack obj = new FreqStack();\n * obj.push(val);\n * int param_2 = obj.pop();\n */"
     }
   },
   "897": {
