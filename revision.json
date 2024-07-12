@@ -349,6 +349,10 @@
         3195,
         3212
     ],
+    "Prefix Sum": [
+        304
+    ],
+    "Binary Search": [],
     "Ordered Set": [
         220
     ],
@@ -376,14 +380,10 @@
     ],
     "Depth-First Search": [],
     "Database": [],
-    "Binary Search": [],
     "Tree": [],
     "Breadth-First Search": [],
     "Bit Manipulation": [
         832
-    ],
-    "Prefix Sum": [
-        304
     ],
     "Simulation": [],
     "Graph": [],
