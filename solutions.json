@@ -161,7 +161,7 @@
   },
   "84": {
     "java": {
-      "monotonic-stack": ""
+      "monotonic-stack": "class Solution {\n    public int largestRectangleArea(int[] heights) {\n        Stack<Integer> stack = new Stack<>();\n        int maxArea = 0;\n        int index = 0;\n\n        while (index < heights.length) {\n            if (stack.isEmpty() || heights[index] >= heights[stack.peek()]) {\n                stack.push(index++);\n            } else {\n                int top = stack.pop();\n                int height = heights[top];\n                int width = stack.isEmpty() ? index : index - stack.peek() - 1;\n                maxArea = Math.max(maxArea, height * width);\n            }\n        }\n\n        while (!stack.isEmpty()) {\n            int top = stack.pop();\n            int height = heights[top];\n            int width = stack.isEmpty() ? index : index - stack.peek() - 1;\n            maxArea = Math.max(maxArea, height * width);\n        }\n\n        return maxArea;\n    }\n}"
     }
   },
   "85": {
