@@ -352,7 +352,9 @@
     "Prefix Sum": [
         304
     ],
-    "Binary Search": [],
+    "Binary Search": [
+        4
+    ],
     "Ordered Set": [
         220
     ],
