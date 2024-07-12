@@ -272,7 +272,15 @@
         36,
         73,
         74,
-        79
+        79,
+        130,
+        174,
+        200,
+        212,
+        240,
+        289,
+        329,
+        296
     ],
     "Ordered Set": [
         220
@@ -305,7 +313,9 @@
     "Bit Manipulation": [
         832
     ],
-    "Prefix Sum": [],
+    "Prefix Sum": [
+        304
+    ],
     "Simulation": [],
     "Graph": [],
     "Counting": [],
