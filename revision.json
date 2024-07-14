@@ -427,7 +427,9 @@
     ],
     "Depth-First Search": [],
     "Database": [],
-    "Tree": [],
+    "Tree": [
+        1245
+    ],
     "Breadth-First Search": [],
     "Bit Manipulation": [
         832
@@ -458,7 +460,14 @@
     "Memoization": [],
     "Hash Function": [],
     "Binary Indexed Tree": [],
-    "Topological Sort": [],
+    "Topological Sort": [
+        207,
+        210,
+        269,
+        444,
+        1059,
+        1136
+    ],
     "Combinatorics": [],
     "String Matching": [],
     "Shortest Path": [],
