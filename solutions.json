@@ -370,9 +370,19 @@
           "two-pointers": "import java.util.HashSet;\n\npublic class Solution {\n    public boolean isHappy(int n) {\n        HashSet<Integer> seen = new HashSet<>();\n\n        while (n != 1 && !seen.contains(n)) {\n            seen.add(n);\n            n = getNextNumber(n);\n        }\n\n        return n == 1;\n    }\n\n    private int getNextNumber(int n) {\n        int sum = 0;\n        while (n > 0) {\n            int digit = n % 10;\n            sum += digit * digit;\n            n /= 10;\n        }\n        return sum;\n    }\n}\n"
       }
   },
+  "207": {
+      "java": {
+          "topological-sort": ""
+      }
+  },
   "209": {
       "java": {
           "sliding-window": "public class Solution {\n    public int minSubArrayLen(int target, int[] nums) {\n        int n = nums.length;\n        int minLength = Integer.MAX_VALUE;\n        int left = 0;\n        int sum = 0;\n        \n        for (int right = 0; right < n; right++) {\n            sum += nums[right];\n            \n            while (sum >= target) {\n                minLength = Math.min(minLength, right - left + 1);\n                sum -= nums[left];\n                left++;\n            }\n        }\n        \n        return (minLength == Integer.MAX_VALUE) ? 0 : minLength;\n    }\n}\n"
+      }
+  },
+  "210": {
+      "java": {
+          "topological-sort": ""
       }
   },
   "212": {
@@ -492,6 +502,11 @@
           "heap-(priority-queue)": ""
       }
   },
+  "269": {
+      "java": {
+          "topological-sort": ""
+      }
+  },
   "270": {
       "java": {
           "binary-search-tree": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public int closestValue(TreeNode root, double target) {\n        int ans = root.val;\n        double max = Double.MAX_VALUE;\n        while (root != null) {\n            double t = Math.abs(root.val - target);\n            if (t < max || (t == max && root.val < ans)) {\n                max = t;\n                ans = root.val;\n            }\n            if (root.val > target) {\n                root = root.left;\n            } else {\n                root = root.right;\n            }\n        }\n        return ans;\n    }\n}"
@@ -580,6 +595,11 @@
   "308": {
       "java": {
           "matrix": ""
+      }
+  },
+  "310": {
+      "java": {
+          "topological-sort": ""
       }
   },
   "311": {
@@ -893,6 +913,11 @@
   "443": {
       "java": {
           "two-pointers": ""
+      }
+  },
+  "444": {
+      "java": {
+          "topological-sort": ""
       }
   },
   "445": {
@@ -1547,6 +1572,11 @@
           "prefix-sum": ""
       }
   },
+  "802": {
+      "java": {
+          "topological-sort": ""
+      }
+  },
   "803": {
       "java": {
           "matrix": ""
@@ -1640,6 +1670,11 @@
   "850": {
       "java": {
           "line-sweep": "class Event {\n  public int x;\n  public int y1;\n  public int y2;\n  public char type;\n  public Event(int x, int y1, int y2, char type) {\n    this.x = x;\n    this.y1 = y1;\n    this.y2 = y2;\n    this.type = type;\n  }\n}\n\nclass Solution {\n  public int rectangleArea(int[][] rectangles) {\n  int kMod = 1_000_000_007;\n    List<Event> events = new ArrayList<>();\n\n    for (int[] right : rectangles) {\n      events.add(new Event(right[0], right[1], right[3], 's'));\n      events.add(new Event(right[2], right[1], right[3], 'e'));\n    }\n\n    Collections.sort(events, (a, b) -> a.x - b.x);\n\n    long ans = 0;\n    int prevX = 0;\n    List<Pair<Integer, Integer>> yPairs = new ArrayList<>();\n\n    for (Event e : events) {\n      if (e.x > prevX) {\n      int width = e.x - prevX;\n        ans = (ans + width * getHeight(yPairs)) % kMod;\n        prevX = e.x;\n      }\n      if (e.type == 's') {\n        yPairs.add(new Pair<>(e.y1, e.y2));\n        Collections.sort(yPairs, Comparator.comparing(Pair::getKey));\n      } else { // type == 'e'\n        yPairs.remove(new Pair<>(e.y1, e.y2));\n      }\n    }\n\n    return (int) (ans % kMod);\n  }\n\n  private long getHeight(List<Pair<Integer, Integer>> yPairs) {\n    int height = 0;\n    int prevY = 0;\n\n    for (Pair<Integer, Integer> pair : yPairs) {\n    int y1 = pair.getKey();\n    int y2 = pair.getValue();\n      prevY = Math.max(prevY, y1);\n      if (y2 > prevY) {\n        height += y2 - prevY;\n        prevY = y2;\n      }\n    }\n\n    return height;\n  }\n}"
+      }
+  },
+  "851": {
+      "java": {
+          "topological-sort": ""
       }
   },
   "853": {
@@ -1777,6 +1812,11 @@
           "radix-sort": "import java.util.Arrays;\n\nclass Solution {\n    public int[] sortArray(int[] nums) {\n        if (nums == null || nums.length < 2) {\n            return nums;\n        }\n\n        // Find the maximum absolute value to handle negative numbers\n        int max = Arrays.stream(nums).map(Math::abs).max().getAsInt();\n        int exp = 1;\n\n        while (max / exp > 0) {\n            countingSort(nums, exp);\n            exp *= 10;\n        }\n\n        return nums;\n    }\n\n    private void countingSort(int[] nums, int exp) {\n        int n = nums.length;\n        int[] output = new int[n];\n        int[] count = new int[19]; // 19 because the range of values is [-9, 9]\n\n        for (int num : nums) {\n            int index = (num / exp) % 10 + 9; // Shifting by 9 to handle negative numbers\n            count[index]++;\n        }\n\n        for (int i = 1; i < 19; i++) {\n            count[i] += count[i - 1];\n        }\n\n        for (int i = n - 1; i >= 0; i--) {\n            int index = (nums[i] / exp) % 10 + 9;\n            output[count[index] - 1] = nums[i];\n            count[index]--;\n        }\n\n        System.arraycopy(output, 0, nums, 0, n);\n    }\n}\n",
           "bucket-sort": "import java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\nclass Solution {\n    public int[] sortArray(int[] nums) {\n        if (nums == null || nums.length == 0) return nums;\n\n        int n = nums.length;\n        int minValue = nums[0];\n        int maxValue = nums[0];\n\n        for (int num : nums) {\n            if (num < minValue) {\n                minValue = num;\n            } else if (num > maxValue) {\n                maxValue = num;\n            }\n        }\n\n        int bucketCount = (maxValue - minValue) / n + 1;\n        List<Integer>[] buckets = new List[bucketCount];\n        for (int i = 0; i < bucketCount; i++) {\n            buckets[i] = new ArrayList<>();\n        }\n\n        for (int num : nums) {\n            int bucketIndex = (num - minValue) / n;\n            buckets[bucketIndex].add(num);\n        }\n\n        int index = 0;\n        for (List<Integer> bucket : buckets) {\n            Collections.sort(bucket);\n            for (int num : bucket) {\n                nums[index++] = num;\n            }\n        }\n\n        return nums;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums = {5, 2, 9, 1, 5, 6};\n        int[] sorted = solution.sortArray(nums);\n        for (int num : sorted) {\n            System.out.print(num + \" \");\n        }\n        // Output: 1 2 5 5 6 9\n    }\n}\n",
           "merge-sort": "class Solution {\n    public int[] sortArray(int[] nums) {\n        mergeSort(nums, 0, nums.length - 1);\n        return nums;\n    }\n    \n    private void mergeSort(int[] nums, int left, int right) {\n        if (left < right) {\n            int mid = left + (right - left) / 2;\n            mergeSort(nums, left, mid);\n            mergeSort(nums, mid + 1, right);\n            merge(nums, left, mid, right);\n        }\n    }\n    \n    private void merge(int[] nums, int left, int mid, int right) {\n        int n1 = mid - left + 1;\n        int n2 = right - mid;\n        \n        int[] leftArr = new int[n1];\n        int[] rightArr = new int[n2];\n        \n        for (int i = 0; i < n1; i++) {\n            leftArr[i] = nums[left + i];\n        }\n        \n        for (int j = 0; j < n2; j++) {\n            rightArr[j] = nums[mid + 1 + j];\n        }\n        \n        int i = 0, j = 0, k = left;\n        \n        while (i < n1 && j < n2) {\n            if (leftArr[i] <= rightArr[j]) {\n                nums[k++] = leftArr[i++];\n            } else {\n                nums[k++] = rightArr[j++];\n            }\n        }\n        \n        while (i < n1) {\n            nums[k++] = leftArr[i++];\n        }\n        \n        while (j < n2) {\n            nums[k++] = rightArr[j++];\n        }\n    }\n}\n"
+      }
+  },
+  "913": {
+      "java": {
+          "topological-sort": ""
       }
   },
   "917": {
@@ -2050,6 +2090,11 @@
           "two-pointers": ""
       }
   },
+  "1059": {
+      "java": {
+          "topological-sort": ""
+      }
+  },
   "1062": {
       "java": {
           "suffix-array": "import java.util.*;\n\npublic class Solution {\n    public String longestRepeatingSubstring(String s) {\n        int n = s.length();\n        int[] suffixArray = buildSuffixArray(s);\n        int[] lcpArray = buildLCPArray(s, suffixArray);\n        \n        int left = 1, right = n;\n        int maxLength = 0;\n        String result = \"\";\n        \n        while (left <= right) {\n            int mid = left + (right - left) / 2;\n            if (hasRepeatedSubstring(mid, n, suffixArray, lcpArray)) {\n                maxLength = mid;\n                left = mid + 1;\n            } else {\n                right = mid - 1;\n            }\n        }\n        \n        for (int i = 0; i <= n - maxLength; i++) {\n            String candidate = s.substring(suffixArray[i], suffixArray[i] + maxLength);\n            if (hasRepeatedSubstring(candidate, s, maxLength)) {\n                return candidate;\n            }\n        }\n        \n        return result;\n    }\n    \n    private boolean hasRepeatedSubstring(int len, int n, int[] suffixArray, int[] lcpArray) {\n        for (int i = 1; i < n; i++) {\n            if (lcpArray[i] >= len) {\n                int start1 = suffixArray[i - 1];\n                int start2 = suffixArray[i];\n                if ((start1 < n - len && start2 > n - len) || (start1 > n - len && start2 < n - len)) {\n                    return true;\n                }\n            }\n        }\n        return false;\n    }\n    \n    private boolean hasRepeatedSubstring(String candidate, String s, int len) {\n        int count = 0;\n        int index = s.indexOf(candidate);\n        while (index != -1) {\n            count++;\n            index = s.indexOf(candidate, index + 1);\n        }\n        return count > 1;\n    }\n    \n    private int[] buildSuffixArray(String s) {\n        int n = s.length();\n        Integer[] order = new Integer[n];\n        for (int i = 0; i < n; i++) {\n            order[i] = i;\n        }\n        \n        Arrays.sort(order, (a, b) -> Character.compare(s.charAt(a), s.charAt(b)));\n        \n        int[] suffixArray = new int[n];\n        int[] classes = new int[n];\n        \n        for (int i = 0; i < n; i++) {\n            suffixArray[i] = order[i];\n            classes[i] = s.charAt(i);\n        }\n        \n        for (int len = 1; len < n; len *= 2) {\n            int[] c = classes.clone();\n            for (int i = 0; i < n; i++) {\n                classes[suffixArray[i]] = i > 0 && c[suffixArray[i - 1]] == c[suffixArray[i]] && suffixArray[i - 1] + len < n\n                        && c[suffixArray[i - 1] + len / 2] == c[suffixArray[i] + len / 2] ? classes[suffixArray[i - 1]] : i;\n            }\n            \n            int[] count = new int[n];\n            for (int i = 0; i < n; i++) {\n                count[i] = i;\n            }\n            \n            int[] s = suffixArray.clone();\n            for (int i = 0; i < n; i++) {\n                int s1 = s[i] - len;\n                if (s1 >= 0) {\n                    suffixArray[count[classes[s1]]++] = s1;\n                }\n            }\n        }\n        \n        return suffixArray;\n    }\n    \n    private int[] buildLCPArray(String s, int[] suffixArray) {\n        int n = s.length();\n        int[] rank = new int[n];\n        for (int i = 0; i < n; i++) {\n            rank[suffixArray[i]] = i;\n        }\n        \n        int[] lcpArray = new int[n - 1];\n        int h = 0;\n        \n        for (int i = 0; i < n; i++) {\n            if (rank[i] > 0) {\n                int j = suffixArray[rank[i] - 1];\n                while (i + h < n && j + h < n && s.charAt(i + h) == s.charAt(j + h)) {\n                    h++;\n                }\n                lcpArray[rank[i] - 1] = h;\n                if (h > 0) {\n                    h--;\n                }\n            }\n        }\n        \n        return lcpArray;\n    }\n}\n",
@@ -2176,6 +2221,11 @@
           "minimum-spanning-tree": "import java.util.*;\n\nclass Solution {\n    class Edge {\n        int src, dest, weight;\n        Edge(int src, int dest, int weight) {\n            this.src = src;\n            this.dest = dest;\n            this.weight = weight;\n        }\n    }\n\n    class UnionFind {\n        int[] parent, rank;\n\n        UnionFind(int n) {\n            parent = new int[n];\n            rank = new int[n];\n            for (int i = 0; i < n; i++) {\n                parent[i] = i;\n                rank[i] = 0;\n            }\n        }\n\n        int find(int x) {\n            if (parent[x] != x) {\n                parent[x] = find(parent[x]);\n            }\n            return parent[x];\n        }\n\n        boolean union(int x, int y) {\n            int rootX = find(x);\n            int rootY = find(y);\n            if (rootX != rootY) {\n                if (rank[rootX] > rank[rootY]) {\n                    parent[rootY] = rootX;\n                } else if (rank[rootX] < rank[rootY]) {\n                    parent[rootX] = rootY;\n                } else {\n                    parent[rootY] = rootX;\n                    rank[rootX]++;\n                }\n                return true;\n            }\n            return false;\n        }\n    }\n\n    public int minimumCost(int n, int[][] connections) {\n        List<Edge> edges = new ArrayList<>();\n        for (int[] connection : connections) {\n            edges.add(new Edge(connection[0] - 1, connection[1] - 1, connection[2]));\n        }\n        edges.sort(Comparator.comparingInt(e -> e.weight));\n\n        UnionFind uf = new UnionFind(n);\n        int cost = 0, count = 0;\n        for (Edge edge : edges) {\n            if (uf.union(edge.src, edge.dest)) {\n                cost += edge.weight;\n                count++;\n                if (count == n - 1) {\n                    return cost;\n                }\n            }\n        }\n        return -1; // if it's not possible to connect all cities\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[][] connections = { {1, 2, 5}, {1, 3, 6}, {2, 3, 1} };\n        int n = 3;\n        int result = solution.minimumCost(n, connections);\n        System.out.println(\"Minimum cost to connect all cities: \" + result); // Output: 6\n    }\n}\n"
       }
   },
+  "1136": {
+      "java": {
+          "topological-sort": ""
+      }
+  },
   "1139": {
       "java": {
           "matrix": ""
@@ -2273,6 +2323,11 @@
           "heap-(priority-queue)": ""
       }
   },
+  "1203": {
+      "java": {
+          "topological-sort": ""
+      }
+  },
   "1208": {
       "java": {
           "sliding-window": "class Solution {\n    public int equalSubstring(String s, String t, int maxCost) {\n        int n = s.length();\n        int[] cost = new int[n];\n        \n        for (int i = 0; i < n; i++) {\n            cost[i] = Math.abs(s.charAt(i) - t.charAt(i));\n        }\n        \n        int left = 0, right = 0;\n        int currentCost = 0;\n        int maxLength = 0;\n        \n        while (right < n) {\n            currentCost += cost[right];\n            \n            while (currentCost > maxCost) {\n                currentCost -= cost[left];\n                left++;\n            }\n            \n            maxLength = Math.max(maxLength, right - left + 1);\n            right++;\n        }\n        \n        return maxLength;\n    }\n}\n"
@@ -2336,6 +2391,11 @@
   "1242": {
       "java": {
           "concurrency": "import java.net.URI;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\nimport java.util.Set;\nimport java.util.concurrent.ConcurrentHashMap;\nimport java.util.concurrent.ConcurrentSkipListSet;\nimport java.util.stream.Collectors;\nimport java.util.stream.Stream;\n\npublic class Web_Crawler_Multithreaded {\n\n    class Solution_1_synchronizedList {\n        private final Set<String> set = Collections.newSetFromMap(new ConcurrentHashMap<String, Boolean>());\n        private final List<String> result = Collections.synchronizedList(new ArrayList<String>());\n        private String HOSTNAME = null;\n\n        public List<String> crawl(String startUrl, HtmlParser htmlParser) {\n            initHostName(startUrl);\n            set.add(startUrl);\n            getUrlDfs(startUrl, htmlParser);\n            return result;\n        }\n\n        private boolean judgeHostname(String url) {\n            int idx = url.indexOf('/', 7);\n            String hostName = (idx != -1) ? url.substring(0, idx) : url;\n            return hostName.equals(HOSTNAME);\n        }\n\n        private void initHostName(String url) {\n            int idx = url.indexOf('/', 7);\n            HOSTNAME = (idx != -1) ? url.substring(0, idx) : url;\n        }\n\n        private void getUrlDfs(String startUrl, HtmlParser htmlParser) {\n            result.add(startUrl);\n            List<String> res = htmlParser.getUrls(startUrl);\n            List<Thread> threads = new ArrayList<>();\n            for (String url : res) {\n                if (judgeHostname(url) && !set.contains(url)) {\n                    set.add(url);\n                    threads.add(new Thread(() -> {\n                        getUrlDfs(url, htmlParser);\n                    }));\n                }\n            }\n            for (Thread thread : threads) {\n                thread.start();\n            }\n            try {\n                for (Thread thread : threads) {\n                    thread.join(); \n                }\n            } catch (InterruptedException e) {\n                e.printStackTrace();\n            }\n        }\n\n    }\n\n    class Solution_2_ConcurrentSkipListSet {\n\n        public List<String> crawl(String startUrl, HtmlParser htmlParser) {\n            Set<String> visited = new ConcurrentSkipListSet<>();\n            String hostname = getHostname(startUrl);\n            visited.add(startUrl);\n\n            return crawlDfs(startUrl, htmlParser, hostname, visited).collect(Collectors.toList());\n        }\n\n        private Stream<String> crawlDfs(String startUrl, HtmlParser htmlParser, String hostname,\n                                     Set<String> visited) {\n            try (Stream<String> stream = htmlParser.getUrls(startUrl)\n                .parallelStream()\n                .filter(url -> isSameHostname(url, hostname))\n                .filter(visited::add)\n                .flatMap(url -> crawlDfs(url, htmlParser, hostname, visited))) {\n\n                return Stream.concat(Stream.of(startUrl), stream);\n            }\n        }\n\n        private String getHostname(String url) {\n            int idx = url.indexOf('/', 7);\n            return (idx != -1) ? url.substring(0, idx) : url;\n        }\n\n        private boolean isSameHostname(String url, String hostname) {\n            return url.startsWith(hostname) && (url.length() == hostname.length()\n                || url.charAt(hostname.length()) == '/');\n        }\n    }\n\n    interface HtmlParser {\n        List<String> getUrls(String str);\n    }\n\n\n    class Solution_CrawlerClass {\n        public List<String> crawl(String startUrl, HtmlParser htmlParser) {\n            String host = URI.create(startUrl).getHost();\n            Crawler crawler = new Crawler(startUrl, host, htmlParser);\n            crawler.res = new ArrayList<>();\n            crawler.start();\n            Crawler.joinThread(crawler);\n            return crawler.res;\n        }\n    }\n\n    static class Crawler extends Thread {\n        String startUrl;\n        String hostname;\n        HtmlParser htmlParser;\n        public volatile List<String> res = new ArrayList<>();\n\n        public Crawler(String startUrl, String hostname, HtmlParser htmlParser) {\n            this.startUrl = startUrl;\n            this.hostname = hostname;\n            this.htmlParser = htmlParser;\n        }\n\n        @Override\n        public void run() {\n            String host = URI.create(startUrl).getHost();\n            if (!host.equals(hostname) || res.contains(startUrl)) {\n                return;\n            }\n            res.add(startUrl);\n            List<Thread> threads = new ArrayList<>();\n            for (String s : htmlParser.getUrls(startUrl)) {\n                Crawler crawler = new Crawler(s, hostname, htmlParser);\n                crawler.start();\n                threads.add(crawler);\n            }\n            for (Thread t : threads) {\n                joinThread(t);\n            }\n        }\n\n        public static void joinThread(Thread thread) {\n            try {\n                thread.join();\n            } catch (InterruptedException e) {\n            }\n        }\n\n    }\n}"
+      }
+  },
+  "1245": {
+      "java": {
+          "topological-sort": ""
       }
   },
   "1248": {
@@ -2636,6 +2696,11 @@
   "1456": {
       "java": {
           "sliding-window": "class Solution {\n    public int maxVowels(String s, int k) {\n        int maxVowels = 0;\n        int currentVowels = 0;\n        int n = s.length();\n\n        for (int i = 0; i < k; i++) {\n            if (isVowel(s.charAt(i))) {\n                currentVowels++;\n            }\n        }\n\n        maxVowels = currentVowels;\n\n        for (int i = k; i < n; i++) {\n            if (isVowel(s.charAt(i))) {\n                currentVowels++;\n            }\n            if (isVowel(s.charAt(i - k))) {\n                currentVowels--;\n            }\n            maxVowels = Math.max(maxVowels, currentVowels);\n        }\n\n        return maxVowels;\n    }\n\n    private boolean isVowel(char c) {\n        return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' ||\n               c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U';\n    }\n}\n"
+      }
+  },
+  "1462": {
+      "java": {
+          "topological-sort": ""
       }
   },
   "1463": {
@@ -3263,6 +3328,11 @@
           "monotonic-stack": "import java.util.ArrayDeque;\nimport java.util.Deque;\n\nclass Solution {\n    public int maxSumMinProduct(int[] nums) {\n        int n = nums.length;\n        long[] prefixSum = new long[n + 1];\n        for (int i = 0; i < n; i++) {\n            prefixSum[i + 1] = prefixSum[i] + nums[i];\n        }\n        \n        int[] left = new int[n];\n        int[] right = new int[n];\n        \n        Deque<Integer> stack = new ArrayDeque<>();\n        for (int i = 0; i < n; i++) {\n            while (!stack.isEmpty() && nums[stack.peek()] >= nums[i]) {\n                stack.pop();\n            }\n            left[i] = stack.isEmpty() ? 0 : stack.peek() + 1;\n            stack.push(i);\n        }\n        \n        stack.clear();\n        for (int i = n - 1; i >= 0; i--) {\n            while (!stack.isEmpty() && nums[stack.peek()] >= nums[i]) {\n                stack.pop();\n            }\n            right[i] = stack.isEmpty() ? n : stack.peek();\n            stack.push(i);\n        }\n        \n        long maxMinProduct = 0;\n        for (int i = 0; i < n; i++) {\n            long minProduct = (prefixSum[right[i]] - prefixSum[left[i]]) * nums[i];\n            maxMinProduct = Math.max(maxMinProduct, minProduct);\n        }\n        \n        return (int) (maxMinProduct % 1000000007);\n    }\n}\n"
       }
   },
+  "1857": {
+      "java": {
+          "topological-sort": ""
+      }
+  },
   "1861": {
       "java": {
           "two-pointers": ""
@@ -3388,6 +3458,11 @@
           "prefix-sum": ""
       }
   },
+  "1916": {
+      "java": {
+          "topological-sort": ""
+      }
+  },
   "1918": {
       "java": {
           "sliding-window": "class Solution {\n    public int kthSmallestSubarraySum(int[] nums, int k) {\n        int min = Integer.MAX_VALUE, sum = 0;\n        for (int num : nums) {\n            min = Math.min(min, num);\n            sum += num;\n        }\n        int low = min, high = sum;\n        while (low < high) {\n            int mid = (high - low) / 2 + low;\n            int count = countSubarrays(nums, mid);\n            if (count < k)\n                low = mid + 1;\n            else\n                high = mid;\n        }\n        return low;\n    }\n\n    public int countSubarrays(int[] nums, int threshold) {\n        int count = 0;\n        int sum = 0;\n        int length = nums.length;\n        int left = 0, right = 0;\n        while (right < length) {\n            sum += nums[right];\n            while (sum > threshold) {\n                sum -= nums[left];\n                left++;\n            }\n            count += right - left + 1;\n            right++;\n        }\n        return count;\n    }\n}"
@@ -3456,6 +3531,11 @@
   "1975": {
       "java": {
           "matrix": ""
+      }
+  },
+  "1976": {
+      "java": {
+          "topological-sort": ""
       }
   },
   "1977": {
@@ -3579,6 +3659,11 @@
           "two-pointers": ""
       }
   },
+  "2050": {
+      "java": {
+          "topological-sort": ""
+      }
+  },
   "2054": {
       "java": {
           "heap-(priority-queue)": ""
@@ -3684,6 +3769,11 @@
           "two-pointers": ""
       }
   },
+  "2115": {
+      "java": {
+          "topological-sort": ""
+      }
+  },
   "2116": {
       "java": {
           "stack": ""
@@ -3702,6 +3792,11 @@
   "2125": {
       "java": {
           "matrix": ""
+      }
+  },
+  "2127": {
+      "java": {
+          "topological-sort": ""
       }
   },
   "2128": {
@@ -3777,6 +3872,11 @@
   "2182": {
       "java": {
           "heap-(priority-queue)": ""
+      }
+  },
+  "2192": {
+      "java": {
+          "topological-sort": ""
       }
   },
   "2193": {
@@ -3862,6 +3962,11 @@
   "2245": {
       "java": {
           "matrix": ""
+      }
+  },
+  "2246": {
+      "java": {
+          "topological-sort": ""
       }
   },
   "2251": {
@@ -4063,6 +4168,11 @@
   "2357": {
       "java": {
           "heap-(priority-queue)": ""
+      }
+  },
+  "2360": {
+      "java": {
+          "topological-sort": ""
       }
   },
   "2367": {
@@ -4538,6 +4648,11 @@
   "2602": {
       "java": {
           "prefix-sum": ""
+      }
+  },
+  "2603": {
+      "java": {
+          "topological-sort": ""
       }
   },
   "2604": {
