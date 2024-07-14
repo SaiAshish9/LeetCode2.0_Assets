@@ -17966,5 +17966,332 @@
         "difficulty": "Medium",
         "language": "Java",
         "acceptance": 54.7
+    },
+    "course_schedule": {
+        "qno": "207",
+        "title": "Course Schedule",
+        "tags": [
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Graph",
+            "Topological Sort"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 47.1
+    },
+    "course_schedule_ii": {
+        "qno": "210",
+        "title": "Course Schedule II",
+        "tags": [
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Graph",
+            "Topological Sort"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 51
+    },
+    "alien_dictionary": {
+        "qno": "269",
+        "title": "Alien Dictionary",
+        "tags": [
+            "Array",
+            "String",
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Graph",
+            "Topological Sort"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 35.9
+    },
+    "minimum_height_trees": {
+        "qno": "310",
+        "title": "Minimum Height Trees",
+        "tags": [
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Graph",
+            "Topological Sort"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 41.8
+    },
+    "sequence_reconstruction": {
+        "qno": "444",
+        "title": "Sequence Reconstruction",
+        "tags": [
+            "Array",
+            "Graph",
+            "Topological Sort"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 28.4
+    },
+    "all_paths_from_source_lead_to_destination": {
+        "qno": "1059",
+        "title": "All Paths from Source Lead to Destination",
+        "tags": [
+            "Graph",
+            "Topological Sort"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 37.5
+    },
+    "find_eventual_safe_states": {
+        "qno": "802",
+        "title": "Find Eventual Safe States",
+        "tags": [
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Graph",
+            "Topological Sort"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 63.3
+    },
+    "loud_and_rich": {
+        "qno": "851",
+        "title": "Loud and Rich",
+        "tags": [
+            "Array",
+            "Depth-First Search",
+            "Graph",
+            "Topological Sort"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 59.7
+    },
+    "cat_and_mouse": {
+        "qno": "913",
+        "title": "Cat and Mouse",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Graph",
+            "Topological Sort",
+            "Memoization",
+            "Game Theory"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 33.9
+    },
+    "parallel_courses": {
+        "qno": "1136",
+        "title": "Parallel Courses",
+        "tags": [
+            "Graph",
+            "Topological Sort"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 61.5
+    },
+    "tree_diameter": {
+        "qno": "1245",
+        "title": "Tree Diameter",
+        "tags": [
+            "Tree",
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Graph",
+            "Topological Sort"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 61.2
+    },
+    "sort_items_by_groups_respecting_dependencies": {
+        "qno": "1203",
+        "title": "Sort Items by Groups Respecting Dependencies",
+        "tags": [
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Graph",
+            "Topological Sort"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 66.4
+    },
+    "count_ways_to_build_rooms_in_an_ant_colony": {
+        "qno": "1916",
+        "title": "Count Ways to Build Rooms in an Ant Colony",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Tree",
+            "Graph",
+            "Topological Sort",
+            "Combinatorics"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 48.7
+    },
+    "all_ancestors_of_a_node_in_a_directed_acyclic_graph": {
+        "qno": "2192",
+        "title": "All Ancestors of a Node in a Directed Acyclic Graph",
+        "tags": [
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Graph",
+            "Topological Sort"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 62.2
+    },
+    "course_schedule_iv": {
+        "qno": "1462",
+        "title": "Course Schedule IV",
+        "tags": [
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Graph",
+            "Topological Sort"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 49.9
+    },
+    "largest_color_value_in_a_directed_graph": {
+        "qno": "1857",
+        "title": "Largest Color Value in a Directed Graph",
+        "tags": [
+            "Hash Table",
+            "Dynamic Programming",
+            "Graph",
+            "Topological Sort",
+            "Memoization",
+            "Counting"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 50
+    },
+    "number_of_ways_to_arrive_at_destination": {
+        "qno": "1976",
+        "title": "Number of Ways to Arrive at Destination",
+        "tags": [
+            "Dynamic Programming",
+            "Graph",
+            "Topological Sort",
+            "Shortest Path"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 27.6
+    },
+    "parallel_courses_iii": {
+        "qno": "2050",
+        "title": "Parallel Courses III",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Graph",
+            "Topological Sort"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 67.3
+    },
+    "find_all_possible_recipes_from_given_supplies": {
+        "qno": "2115",
+        "title": "Find All Possible Recipes from Given Supplies",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Graph",
+            "Topological Sort"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 50
+    },
+    "maximum_employees_to_be_invited_to_a_meeting": {
+        "qno": "2127",
+        "title": "Maximum Employees to Be Invited to a Meeting",
+        "tags": [
+            "Depth-First Search",
+            "Graph",
+            "Topological Sort"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 37.2
+    },
+    "longest_path_with_different_adjacent_characters": {
+        "qno": "2246",
+        "title": "Longest Path With Different Adjacent Characters",
+        "tags": [
+            "Array",
+            "String",
+            "Tree",
+            "Depth-First Search",
+            "Graph",
+            "Topological Sort"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 54.5
+    },
+    "longest_cycle_in_a_graph": {
+        "qno": "2360",
+        "title": "Longest Cycle in a Graph",
+        "tags": [
+            "Depth-First Search",
+            "Graph",
+            "Topological Sort"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 49.8
+    },
+    "collect_coins_in_a_tree": {
+        "qno": "2603",
+        "title": "Collect Coins in a Tree",
+        "tags": [
+            "Array",
+            "Tree",
+            "Graph",
+            "Topological Sort"
+        ],
+        "default": "Topological Sort",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 37.3
     }
 }
