@@ -466,11 +466,14 @@
         269,
         444,
         1059,
-        1136
+        1136,
+        1857
     ],
     "Combinatorics": [],
     "String Matching": [],
-    "Shortest Path": [],
+    "Shortest Path": [
+        1976
+    ],
     "Rolling Hash": [],
     "Game Theory": [],
     "Interactive": [],
