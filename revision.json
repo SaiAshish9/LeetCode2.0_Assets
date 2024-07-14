@@ -400,6 +400,17 @@
         2560,
         2861
     ],
+    "Topological Sort": [
+        207,
+        210,
+        269,
+        444,
+        1059,
+        1136,
+        1857,
+        2360,
+        1462
+    ],
     "Ordered Set": [
         220
     ],
@@ -461,17 +472,6 @@
     "Memoization": [],
     "Hash Function": [],
     "Binary Indexed Tree": [],
-    "Topological Sort": [
-        207,
-        210,
-        269,
-        444,
-        1059,
-        1136,
-        1857,
-        2360,
-        1462
-    ],
     "Combinatorics": [],
     "String Matching": [],
     "Shortest Path": [
