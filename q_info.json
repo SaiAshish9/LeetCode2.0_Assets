@@ -18855,5 +18855,4431 @@
         "difficulty": "Medium",
         "language": "Java",
         "acceptance": 43
+    },
+    "regular_expression_matching": {
+        "qno": "10",
+        "title": "Regular Expression Matching",
+        "tags": [
+            "String",
+            "Dynamic Programming",
+            "Recursion"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 28.3
+    },
+    "generate_parentheses": {
+        "qno": "22",
+        "title": "Generate Parentheses",
+        "tags": [
+            "String",
+            "Dynamic Programming",
+            "Backtracking"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 75
+    },
+    "wildcard_matching": {
+        "qno": "44",
+        "title": "Wildcard Matching",
+        "tags": [
+            "String",
+            "Dynamic Programming",
+            "Greedy",
+            "Recursion"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 28.3
+    },
+    "jump_game_ii": {
+        "qno": "45",
+        "title": "Jump Game II",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Greedy"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 40.6
+    },
+    "maximum_subarray": {
+        "qno": "53",
+        "title": "Maximum Subarray",
+        "tags": [
+            "Array",
+            "Divide and Conquer",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 51
+    },
+    "jump_game": {
+        "qno": "55",
+        "title": "Jump Game",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Greedy"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 38.6
+    },
+    "unique_paths": {
+        "qno": "62",
+        "title": "Unique Paths",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Combinatorics"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 64.5
+    },
+    "climbing_stairs": {
+        "qno": "70",
+        "title": "Climbing Stairs",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Memoization"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 53
+    },
+    "edit_distance": {
+        "qno": "72",
+        "title": "Edit Distance",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 56.9
+    },
+    "scramble_string": {
+        "qno": "87",
+        "title": "Scramble String",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 40.4
+    },
+    "decode_ways": {
+        "qno": "91",
+        "title": "Decode Ways",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 35.2
+    },
+    "interleaving_string": {
+        "qno": "97",
+        "title": "Interleaving String",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 40.3
+    },
+    "distinct_subsequences": {
+        "qno": "115",
+        "title": "Distinct Subsequences",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 47.6
+    },
+    "pascal's_triangle": {
+        "qno": "118",
+        "title": "Pascal's Triangle",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 74.8
+    },
+    "pascal's_triangle_ii": {
+        "qno": "119",
+        "title": "Pascal's Triangle II",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 64.3
+    },
+    "triangle": {
+        "qno": "120",
+        "title": "Triangle",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 57.2
+    },
+    "best_time_to_buy_and_sell_stock": {
+        "qno": "121",
+        "title": "Best Time to Buy and Sell Stock",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 53.9
+    },
+    "best_time_to_buy_and_sell_stock_ii": {
+        "qno": "122",
+        "title": "Best Time to Buy and Sell Stock II",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Greedy"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 67.1
+    },
+    "best_time_to_buy_and_sell_stock_iii": {
+        "qno": "123",
+        "title": "Best Time to Buy and Sell Stock III",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 48.6
+    },
+    "palindrome_partitioning": {
+        "qno": "131",
+        "title": "Palindrome Partitioning",
+        "tags": [
+            "String",
+            "Dynamic Programming",
+            "Backtracking"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 69.8
+    },
+    "palindrome_partitioning_ii": {
+        "qno": "132",
+        "title": "Palindrome Partitioning II",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 34.1
+    },
+    "word_break": {
+        "qno": "139",
+        "title": "Word Break",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Dynamic Programming",
+            "Trie",
+            "Memoization"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 47
+    },
+    "word_break_ii": {
+        "qno": "140",
+        "title": "Word Break II",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Dynamic Programming",
+            "Backtracking",
+            "Trie",
+            "Memoization"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 51.2
+    },
+    "maximum_product_subarray": {
+        "qno": "152",
+        "title": "Maximum Product Subarray",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 34.4
+    },
+    "best_time_to_buy_and_sell_stock_iv": {
+        "qno": "188",
+        "title": "Best Time to Buy and Sell Stock IV",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 43.7
+    },
+    "house_robber": {
+        "qno": "198",
+        "title": "House Robber",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 51.3
+    },
+    "house_robber_ii": {
+        "qno": "213",
+        "title": "House Robber II",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 42.2
+    },
+    "number_of_digit_one": {
+        "qno": "233",
+        "title": "Number of Digit One",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Recursion"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 34.8
+    },
+    "different_ways_to_add_parentheses": {
+        "qno": "241",
+        "title": "Different Ways to Add Parentheses",
+        "tags": [
+            "Math",
+            "String",
+            "Dynamic Programming",
+            "Recursion",
+            "Memoization"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 65.7
+    },
+    "paint_house": {
+        "qno": "256",
+        "title": "Paint House",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 62.7
+    },
+    "paint_house_ii": {
+        "qno": "265",
+        "title": "Paint House II",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 54.9
+    },
+    "paint_fence": {
+        "qno": "276",
+        "title": "Paint Fence",
+        "tags": [
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 46.8
+    },
+    "perfect_squares": {
+        "qno": "279",
+        "title": "Perfect Squares",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Breadth-First Search"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 55
+    },
+    "best_time_to_buy_and_sell_stock_with_cooldown": {
+        "qno": "309",
+        "title": "Best Time to Buy and Sell Stock with Cooldown",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 58.7
+    },
+    "burst_balloons": {
+        "qno": "312",
+        "title": "Burst Balloons",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 59.3
+    },
+    "super_ugly_number": {
+        "qno": "313",
+        "title": "Super Ugly Number",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 45.3
+    },
+    "coin_change": {
+        "qno": "322",
+        "title": "Coin Change",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Breadth-First Search"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 44.4
+    },
+    "counting_bits": {
+        "qno": "338",
+        "title": "Counting Bits",
+        "tags": [
+            "Dynamic Programming",
+            "Bit Manipulation"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 78.6
+    },
+    "integer_break": {
+        "qno": "343",
+        "title": "Integer Break",
+        "tags": [
+            "Math",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 60.5
+    },
+    "android_unlock_patterns": {
+        "qno": "351",
+        "title": "Android Unlock Patterns",
+        "tags": [
+            "Dynamic Programming",
+            "Backtracking",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 51.9
+    },
+    "count_numbers_with_unique_digits": {
+        "qno": "357",
+        "title": "Count Numbers with Unique Digits",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Backtracking"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 53.2
+    },
+    "largest_divisible_subset": {
+        "qno": "368",
+        "title": "Largest Divisible Subset",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming",
+            "Sorting"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 45.5
+    },
+    "wiggle_subsequence": {
+        "qno": "376",
+        "title": "Wiggle Subsequence",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Greedy"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 48.6
+    },
+    "combination_sum_iv": {
+        "qno": "377",
+        "title": "Combination Sum IV",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 54.2
+    },
+    "rotate_function": {
+        "qno": "396",
+        "title": "Rotate Function",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 42.7
+    },
+    "integer_replacement": {
+        "qno": "397",
+        "title": "Integer Replacement",
+        "tags": [
+            "Dynamic Programming",
+            "Greedy",
+            "Bit Manipulation",
+            "Memoization"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 36
+    },
+    "frog_jump": {
+        "qno": "403",
+        "title": "Frog Jump",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 46.2
+    },
+    "arithmetic_slices": {
+        "qno": "413",
+        "title": "Arithmetic Slices",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 65
+    },
+    "partition_equal_subset_sum": {
+        "qno": "416",
+        "title": "Partition Equal Subset Sum",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 46.5
+    },
+    "sentence_screen_fitting": {
+        "qno": "418",
+        "title": "Sentence Screen Fitting",
+        "tags": [
+            "Array",
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 36.2
+    },
+    "non-overlapping_intervals": {
+        "qno": "435",
+        "title": "Non-overlapping Intervals",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Greedy",
+            "Sorting"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 53.7
+    },
+    "arithmetic_slices_ii_-_subsequence": {
+        "qno": "446",
+        "title": "Arithmetic Slices II - Subsequence",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 54.6
+    },
+    "poor_pigs": {
+        "qno": "458",
+        "title": "Poor Pigs",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Combinatorics"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 59.6
+    },
+    "optimal_account_balancing": {
+        "qno": "465",
+        "title": "Optimal Account Balancing",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Backtracking",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 49.6
+    },
+    "count_the_repetitions": {
+        "qno": "466",
+        "title": "Count The Repetitions",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 30.4
+    },
+    "unique_substrings_in_wraparound_string": {
+        "qno": "467",
+        "title": "Unique Substrings in Wraparound String",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 39.9
+    },
+    "encode_string_with_shortest_length": {
+        "qno": "471",
+        "title": "Encode String with Shortest Length",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 50.5
+    },
+    "concatenated_words": {
+        "qno": "472",
+        "title": "Concatenated Words",
+        "tags": [
+            "Array",
+            "String",
+            "Dynamic Programming",
+            "Depth-First Search",
+            "Trie"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 49.4
+    },
+    "matchsticks_to_square": {
+        "qno": "473",
+        "title": "Matchsticks to Square",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Backtracking",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 40.3
+    },
+    "ones_and_zeroes": {
+        "qno": "474",
+        "title": "Ones and Zeroes",
+        "tags": [
+            "Array",
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 47.8
+    },
+    "kth_smallest_instructions": {
+        "qno": "1643",
+        "title": "Kth Smallest Instructions",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming",
+            "Combinatorics"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 48.2
+    },
+    "target_sum": {
+        "qno": "494",
+        "title": "Target Sum",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Backtracking"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 47.1
+    },
+    "maximum_alternating_subarray_sum": {
+        "qno": "2036",
+        "title": "Maximum Alternating Subarray Sum",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 40.3
+    },
+    "freedom_trail": {
+        "qno": "514",
+        "title": "Freedom Trail",
+        "tags": [
+            "String",
+            "Dynamic Programming",
+            "Depth-First Search",
+            "Breadth-First Search"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 59
+    },
+    "longest_palindromic_subsequence": {
+        "qno": "516",
+        "title": "Longest Palindromic Subsequence",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 62.9
+    },
+    "coin_change_ii": {
+        "qno": "518",
+        "title": "Coin Change II",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 64.3
+    },
+    "beautiful_arrangement": {
+        "qno": "526",
+        "title": "Beautiful Arrangement",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Backtracking",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 64.3
+    },
+    "remove_boxes": {
+        "qno": "546",
+        "title": "Remove Boxes",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Memoization"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 47.9
+    },
+    "student_attendance_record_ii": {
+        "qno": "552",
+        "title": "Student Attendance Record II",
+        "tags": [
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 55.1
+    },
+    "optimal_division": {
+        "qno": "553",
+        "title": "Optimal Division",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 60.9
+    },
+    "out_of_boundary_paths": {
+        "qno": "576",
+        "title": "Out of Boundary Paths",
+        "tags": [
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 48.1
+    },
+    "delete_operation_for_two_strings": {
+        "qno": "583",
+        "title": "Delete Operation for Two Strings",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 62.1
+    },
+    "non-negative_integers_without_consecutive_ones": {
+        "qno": "600",
+        "title": "Non-negative Integers without Consecutive Ones",
+        "tags": [
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 39.9
+    },
+    "k_inverse_pairs_array": {
+        "qno": "629",
+        "title": "K Inverse Pairs Array",
+        "tags": [
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 49.6
+    },
+    "find_the_derangement_of_an_array": {
+        "qno": "634",
+        "title": "Find the Derangement of An Array",
+        "tags": [
+            "Math",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 41.9
+    },
+    "shopping_offers": {
+        "qno": "638",
+        "title": "Shopping Offers",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Backtracking",
+            "Bit Manipulation",
+            "Memoization",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 52
+    },
+    "decode_ways_ii": {
+        "qno": "639",
+        "title": "Decode Ways II",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 30.8
+    },
+    "maximum_length_of_pair_chain": {
+        "qno": "646",
+        "title": "Maximum Length of Pair Chain",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Greedy",
+            "Sorting"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 60
+    },
+    "2_keys_keyboard": {
+        "qno": "650",
+        "title": "2 Keys Keyboard",
+        "tags": [
+            "Math",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 54.2
+    },
+    "4_keys_keyboard": {
+        "qno": "651",
+        "title": "4 Keys Keyboard",
+        "tags": [
+            "Math",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 55.9
+    },
+    "coin_path": {
+        "qno": "656",
+        "title": "Coin Path",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 32.1
+    },
+    "strange_printer": {
+        "qno": "664",
+        "title": "Strange Printer",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 55
+    },
+    "number_of_longest_increasing_subsequence": {
+        "qno": "673",
+        "title": "Number of Longest Increasing Subsequence",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Binary Indexed Tree",
+            "Segment Tree"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 48.3
+    },
+    "knight_probability_in_chessboard": {
+        "qno": "688",
+        "title": "Knight Probability in Chessboard",
+        "tags": [
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 56.2
+    },
+    "maximum_sum_of_3_non-overlapping_subarrays": {
+        "qno": "689",
+        "title": "Maximum Sum of 3 Non-Overlapping Subarrays",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 50.2
+    },
+    "stickers_to_spell_word": {
+        "qno": "691",
+        "title": "Stickers to Spell Word",
+        "tags": [
+            "Array",
+            "String",
+            "Dynamic Programming",
+            "Backtracking",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 48.9
+    },
+    "partition_to_k_equal_sum_subsets": {
+        "qno": "698",
+        "title": "Partition to K Equal Sum Subsets",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Backtracking",
+            "Bit Manipulation",
+            "Memoization",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 38.2
+    },
+    "minimum_ascii_delete_sum_for_two_strings": {
+        "qno": "712",
+        "title": "Minimum ASCII Delete Sum for Two Strings",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 65.2
+    },
+    "best_time_to_buy_and_sell_stock_with_transaction_fee": {
+        "qno": "714",
+        "title": "Best Time to Buy and Sell Stock with Transaction Fee",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Greedy"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 68.9
+    },
+    "count_different_palindromic_subsequences": {
+        "qno": "730",
+        "title": "Count Different Palindromic Subsequences",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 45.6
+    },
+    "delete_and_earn": {
+        "qno": "740",
+        "title": "Delete and Earn",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 56.5
+    },
+    "min_cost_climbing_stairs": {
+        "qno": "746",
+        "title": "Min Cost Climbing Stairs",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 65.9
+    },
+    "largest_plus_sign": {
+        "qno": "764",
+        "title": "Largest Plus Sign",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 48.3
+    },
+    "rotated_digits": {
+        "qno": "788",
+        "title": "Rotated Digits",
+        "tags": [
+            "Math",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 56.4
+    },
+    "domino_and_tromino_tiling": {
+        "qno": "790",
+        "title": "Domino and Tromino Tiling",
+        "tags": [
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 50.3
+    },
+    "champagne_tower": {
+        "qno": "799",
+        "title": "Champagne Tower",
+        "tags": [
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 58.2
+    },
+    "minimum_swaps_to_make_sequences_increasing": {
+        "qno": "801",
+        "title": "Minimum Swaps To Make Sequences Increasing",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 40.1
+    },
+    "split_array_with_same_average": {
+        "qno": "805",
+        "title": "Split Array With Same Average",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 25.5
+    },
+    "race_car": {
+        "qno": "818",
+        "title": "Race Car",
+        "tags": [
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 43.8
+    },
+    "binary_trees_with_factors": {
+        "qno": "823",
+        "title": "Binary Trees With Factors",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Dynamic Programming",
+            "Sorting"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 52.9
+    },
+    "count_unique_characters_of_all_substrings_of_a_given_string": {
+        "qno": "828",
+        "title": "Count Unique Characters of All Substrings of a Given String",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 52.5
+    },
+    "sum_of_distances_in_tree": {
+        "qno": "834",
+        "title": "Sum of Distances in Tree",
+        "tags": [
+            "Dynamic Programming",
+            "Tree",
+            "Depth-First Search",
+            "Graph"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 65.3
+    },
+    "shortest_path_visiting_all_nodes": {
+        "qno": "847",
+        "title": "Shortest Path Visiting All Nodes",
+        "tags": [
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Breadth-First Search",
+            "Graph",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 65.3
+    },
+    "length_of_longest_fibonacci_subsequence": {
+        "qno": "873",
+        "title": "Length of Longest Fibonacci Subsequence",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 48.4
+    },
+    "profitable_schemes": {
+        "qno": "879",
+        "title": "Profitable Schemes",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 48.3
+    },
+    "bitwise_ors_of_subarrays": {
+        "qno": "898",
+        "title": "Bitwise ORs of Subarrays",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Bit Manipulation"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 39.2
+    },
+    "number_of_music_playlists": {
+        "qno": "920",
+        "title": "Number of Music Playlists",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Combinatorics"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 60.4
+    },
+    "flip_string_to_monotone_increasing": {
+        "qno": "926",
+        "title": "Flip String to Monotone Increasing",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 61.5
+    },
+    "knight_dialer": {
+        "qno": "935",
+        "title": "Knight Dialer",
+        "tags": [
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 60.3
+    },
+    "distinct_subsequences_ii": {
+        "qno": "940",
+        "title": "Distinct Subsequences II",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 43.1
+    },
+    "find_the_shortest_superstring": {
+        "qno": "943",
+        "title": "Find the Shortest Superstring",
+        "tags": [
+            "Array",
+            "String",
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 43.9
+    },
+    "tallest_billboard": {
+        "qno": "956",
+        "title": "Tallest Billboard",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 52.2
+    },
+    "delete_columns_to_make_sorted_iii": {
+        "qno": "960",
+        "title": "Delete Columns to Make Sorted III",
+        "tags": [
+            "Array",
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 58.2
+    },
+    "least_operators_to_express_number": {
+        "qno": "964",
+        "title": "Least Operators to Express Number",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Memoization"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 48.6
+    },
+    "fibonacci_number": {
+        "qno": "509",
+        "title": "Fibonacci Number",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Recursion",
+            "Memoization"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 71.4
+    },
+    "minimum_cost_for_tickets": {
+        "qno": "983",
+        "title": "Minimum Cost For Tickets",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 65.2
+    },
+    "number_of_squareful_arrays": {
+        "qno": "996",
+        "title": "Number of Squareful Arrays",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Math",
+            "Dynamic Programming",
+            "Backtracking",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 50.2
+    },
+    "numbers_with_repeated_digits": {
+        "qno": "1012",
+        "title": "Numbers With Repeated Digits",
+        "tags": [
+            "Math",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 42.4
+    },
+    "best_sightseeing_pair": {
+        "qno": "1014",
+        "title": "Best Sightseeing Pair",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 59.1
+    },
+    "campus_bikes_ii": {
+        "qno": "1066",
+        "title": "Campus Bikes II",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Backtracking",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 55.2
+    },
+    "digit_count_in_range": {
+        "qno": "1067",
+        "title": "Digit Count in Range",
+        "tags": [
+            "Math",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 46.3
+    },
+    "video_stitching": {
+        "qno": "1024",
+        "title": "Video Stitching",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Greedy"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 51.4
+    },
+    "uncrossed_lines": {
+        "qno": "1035",
+        "title": "Uncrossed Lines",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 63.2
+    },
+    "minimum_score_triangulation_of_polygon": {
+        "qno": "1039",
+        "title": "Minimum Score Triangulation of Polygon",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 59.3
+    },
+    "partition_array_for_maximum_sum": {
+        "qno": "1043",
+        "title": "Partition Array for Maximum Sum",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 76.6
+    },
+    "last_stone_weight_ii": {
+        "qno": "1049",
+        "title": "Last Stone Weight II",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 55.7
+    },
+    "shortest_common_supersequence": {
+        "qno": "1092",
+        "title": "Shortest Common Supersequence",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 59.3
+    },
+    "valid_palindrome_iii": {
+        "qno": "1216",
+        "title": "Valid Palindrome III",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 49.3
+    },
+    "filling_bookcase_shelves": {
+        "qno": "1105",
+        "title": "Filling Bookcase Shelves",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 59.6
+    },
+    "palindrome_removal": {
+        "qno": "1246",
+        "title": "Palindrome Removal",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 46.4
+    },
+    "handshakes_that_don't_cross": {
+        "qno": "1259",
+        "title": "Handshakes That Don't Cross",
+        "tags": [
+            "Math",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 59.6
+    },
+    "smallest_sufficient_team": {
+        "qno": "1125",
+        "title": "Smallest Sufficient Team",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 55.5
+    },
+    "n-th_tribonacci_number": {
+        "qno": "1137",
+        "title": "N-th Tribonacci Number",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Memoization"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 63.8
+    },
+    "longest_common_subsequence": {
+        "qno": "1143",
+        "title": "Longest Common Subsequence",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 57.7
+    },
+    "number_of_dice_rolls_with_target_sum": {
+        "qno": "1155",
+        "title": "Number of Dice Rolls With Target Sum",
+        "tags": [
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 61
+    },
+    "largest_multiple_of_three": {
+        "qno": "1363",
+        "title": "Largest Multiple of Three",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Greedy"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 32.6
+    },
+    "maximum_subarray_sum_with_one_deletion": {
+        "qno": "1186",
+        "title": "Maximum Subarray Sum with One Deletion",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 44
+    },
+    "k-concatenation_maximum_sum": {
+        "qno": "1191",
+        "title": "K-Concatenation Maximum Sum",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 23.8
+    },
+    "longest_arithmetic_subsequence_of_given_difference": {
+        "qno": "1218",
+        "title": "Longest Arithmetic Subsequence of Given Difference",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 54.7
+    },
+    "count_vowels_permutation": {
+        "qno": "1220",
+        "title": "Count Vowels Permutation",
+        "tags": [
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 61.9
+    },
+    "sum_of_numbers_with_units_digit_k": {
+        "qno": "2310",
+        "title": "Sum of Numbers With Units Digit K",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Greedy",
+            "Enumeration"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 26.7
+    },
+    "dice_roll_simulation": {
+        "qno": "1223",
+        "title": "Dice Roll Simulation",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 49.2
+    },
+    "maximum_score_of_spliced_array": {
+        "qno": "2321",
+        "title": "Maximum Score Of Spliced Array",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 56.8
+    },
+    "maximum_height_by_stacking_cuboids": {
+        "qno": "1691",
+        "title": "Maximum Height by Stacking Cuboids",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Sorting"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 57.6
+    },
+    "selling_pieces_of_wood": {
+        "qno": "2312",
+        "title": "Selling Pieces of Wood",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Memoization"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 50
+    },
+    "maximum_score_words_formed_by_letters": {
+        "qno": "1255",
+        "title": "Maximum Score Words Formed by Letters",
+        "tags": [
+            "Array",
+            "String",
+            "Dynamic Programming",
+            "Backtracking",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 82.1
+    },
+    "number_of_ways_to_build_house_of_cards": {
+        "qno": "2189",
+        "title": "Number of Ways to Build House of Cards",
+        "tags": [
+            "Math",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 63.3
+    },
+    "greatest_sum_divisible_by_three": {
+        "qno": "1262",
+        "title": "Greatest Sum Divisible by Three",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Greedy",
+            "Sorting"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 50.6
+    },
+    "number_of_ways_to_stay_in_the_same_place_after_some_steps": {
+        "qno": "1269",
+        "title": "Number of Ways to Stay in the Same Place After Some Steps",
+        "tags": [
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 50.4
+    },
+    "palindrome_partitioning_iii": {
+        "qno": "1278",
+        "title": "Palindrome Partitioning III",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 61
+    },
+    "fair_distribution_of_cookies": {
+        "qno": "2305",
+        "title": "Fair Distribution of Cookies",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Backtracking",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 69.2
+    },
+    "make_array_non-decreasing_or_non-increasing": {
+        "qno": "2263",
+        "title": "Make Array Non-decreasing or Non-increasing",
+        "tags": [
+            "Dynamic Programming",
+            "Greedy"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 66.1
+    },
+    "minimum_insertion_steps_to_make_a_string_palindrome": {
+        "qno": "1312",
+        "title": "Minimum Insertion Steps to Make a String Palindrome",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 71
+    },
+    "minimum_distance_to_type_a_word_using_two_fingers": {
+        "qno": "1320",
+        "title": "Minimum Distance to Type a Word Using Two Fingers",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 59.2
+    },
+    "minimum_number_of_taps_to_open_to_water_a_garden": {
+        "qno": "1326",
+        "title": "Minimum Number of Taps to Open to Water a Garden",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Greedy"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 50.9
+    },
+    "find_the_city_with_the_smallest_number_of_neighbors_at_a_threshold_distance": {
+        "qno": "1334",
+        "title": "Find the City With the Smallest Number of Neighbors at a Threshold Distance",
+        "tags": [
+            "Dynamic Programming",
+            "Graph",
+            "Shortest Path"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 61.8
+    },
+    "minimum_difficulty_of_a_job_schedule": {
+        "qno": "1335",
+        "title": "Minimum Difficulty of a Job Schedule",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 59.6
+    },
+    "count_all_valid_pickup_and_delivery_options": {
+        "qno": "1359",
+        "title": "Count All Valid Pickup and Delivery Options",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Combinatorics"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 65
+    },
+    "jump_game_v": {
+        "qno": "1340",
+        "title": "Jump Game V",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Sorting"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 63.4
+    },
+    "sort_integers_by_the_power_value": {
+        "qno": "1387",
+        "title": "Sort Integers by The Power Value",
+        "tags": [
+            "Dynamic Programming",
+            "Memoization",
+            "Sorting"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 70.1
+    },
+    "reducing_dishes": {
+        "qno": "1402",
+        "title": "Reducing Dishes",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Greedy",
+            "Sorting"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 76.2
+    },
+    "count_number_of_teams": {
+        "qno": "1395",
+        "title": "Count Number of Teams",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Binary Indexed Tree"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 65.9
+    },
+    "find_all_good_strings": {
+        "qno": "1397",
+        "title": "Find All Good Strings",
+        "tags": [
+            "String",
+            "Dynamic Programming",
+            "String Matching"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 42.2
+    },
+    "restore_the_array": {
+        "qno": "1416",
+        "title": "Restore The Array",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 47.6
+    },
+    "number_of_ways_to_paint_n_×_3_grid": {
+        "qno": "1411",
+        "title": "Number of Ways to Paint N × 3 Grid",
+        "tags": [
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 63.7
+    },
+    "number_of_ways_to_wear_different_hats_to_each_other": {
+        "qno": "1434",
+        "title": "Number of Ways to Wear Different Hats to Each Other",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 43.8
+    },
+    "form_largest_integer_with_digits_that_add_up_to_target": {
+        "qno": "1449",
+        "title": "Form Largest Integer With Digits That Add up to Target",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 48.2
+    },
+    "max_dot_product_of_two_subsequences": {
+        "qno": "1458",
+        "title": "Max Dot Product of Two Subsequences",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 62.5
+    },
+    "allocate_mailboxes": {
+        "qno": "1478",
+        "title": "Allocate Mailboxes",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming",
+            "Sorting"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 55.4
+    },
+    "paint_house_iii": {
+        "qno": "1473",
+        "title": "Paint House III",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 61
+    },
+    "parallel_courses_ii": {
+        "qno": "1494",
+        "title": "Parallel Courses II",
+        "tags": [
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Graph",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 29.5
+    },
+    "number_of_good_ways_to_split_a_string": {
+        "qno": "1525",
+        "title": "Number of Good Ways to Split a String",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Dynamic Programming",
+            "Bit Manipulation"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 68.3
+    },
+    "string_compression_ii": {
+        "qno": "1531",
+        "title": "String Compression II",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 52.5
+    },
+    "minimum_cost_to_cut_a_stick": {
+        "qno": "1547",
+        "title": "Minimum Cost to Cut a Stick",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Sorting"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 61.7
+    },
+    "minimum_number_of_days_to_eat_n_oranges": {
+        "qno": "1553",
+        "title": "Minimum Number of Days to Eat N Oranges",
+        "tags": [
+            "Dynamic Programming",
+            "Memoization"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 35.4
+    },
+    "count_all_possible_routes": {
+        "qno": "1575",
+        "title": "Count All Possible Routes",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Memoization"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 65.3
+    },
+    "the_most_similar_path_in_a_graph": {
+        "qno": "1548",
+        "title": "The Most Similar Path in a Graph",
+        "tags": [
+            "Dynamic Programming",
+            "Graph"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 59.2
+    },
+    "maximum_length_of_subarray_with_positive_product": {
+        "qno": "1567",
+        "title": "Maximum Length of Subarray With Positive Product",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Greedy"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 44.3
+    },
+    "minimum_time_to_make_rope_colorful": {
+        "qno": "1578",
+        "title": "Minimum Time to Make Rope Colorful",
+        "tags": [
+            "Array",
+            "String",
+            "Dynamic Programming",
+            "Greedy"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 63.7
+    },
+    "number_of_sets_of_k_non-overlapping_line_segments": {
+        "qno": "1621",
+        "title": "Number of Sets of K Non-Overlapping Line Segments",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Combinatorics"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 43.6
+    },
+    "minimum_one_bit_operations_to_make_integers_zero": {
+        "qno": "1611",
+        "title": "Minimum One Bit Operations to Make Integers Zero",
+        "tags": [
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Memoization"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 74.1
+    },
+    "count_subtrees_with_max_distance_between_cities": {
+        "qno": "1617",
+        "title": "Count Subtrees With Max Distance Between Cities",
+        "tags": [
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Tree",
+            "Enumeration",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 65.8
+    },
+    "count_substrings_that_differ_by_one_character": {
+        "qno": "1638",
+        "title": "Count Substrings That Differ by One Character",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Dynamic Programming",
+            "Enumeration"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 71.2
+    },
+    "number_of_ways_to_form_a_target_string_given_a_dictionary": {
+        "qno": "1639",
+        "title": "Number of Ways to Form a Target String Given a Dictionary",
+        "tags": [
+            "Array",
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 51.1
+    },
+    "best_team_with_no_conflicts": {
+        "qno": "1626",
+        "title": "Best Team With No Conflicts",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Sorting"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 50.4
+    },
+    "minimum_jumps_to_reach_home": {
+        "qno": "1654",
+        "title": "Minimum Jumps to Reach Home",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Breadth-First Search"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 29.4
+    },
+    "distribute_repeating_integers": {
+        "qno": "1655",
+        "title": "Distribute Repeating Integers",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Backtracking",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 39.6
+    },
+    "count_sorted_vowel_strings": {
+        "qno": "1641",
+        "title": "Count Sorted Vowel Strings",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Combinatorics"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 78.5
+    },
+    "maximum_repeating_substring": {
+        "qno": "1668",
+        "title": "Maximum Repeating Substring",
+        "tags": [
+            "String",
+            "Dynamic Programming",
+            "String Matching"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 38.7
+    },
+    "maximize_grid_happiness": {
+        "qno": "1659",
+        "title": "Maximize Grid Happiness",
+        "tags": [
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Memoization",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 39.6
+    },
+    "minimum_incompatibility": {
+        "qno": "1681",
+        "title": "Minimum Incompatibility",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 38.8
+    },
+    "sum_of_special_evenly-spaced_elements_in_array": {
+        "qno": "1714",
+        "title": "Sum Of Special Evenly-Spaced Elements In Array",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 49.6
+    },
+    "longest_palindromic_subsequence_ii": {
+        "qno": "1682",
+        "title": "Longest Palindromic Subsequence II",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 50
+    },
+    "find_minimum_time_to_finish_all_jobs": {
+        "qno": "1723",
+        "title": "Find Minimum Time to Finish All Jobs",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Backtracking",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 42.4
+    },
+    "count_ways_to_distribute_candies": {
+        "qno": "1692",
+        "title": "Count Ways to Distribute Candies",
+        "tags": [
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 62.6
+    },
+    "count_ways_to_make_array_with_product": {
+        "qno": "1735",
+        "title": "Count Ways to Make Array With Product",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming",
+            "Combinatorics",
+            "Number Theory"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 51.7
+    },
+    "maximum_absolute_sum_of_any_subarray": {
+        "qno": "1749",
+        "title": "Maximum Absolute Sum of Any Subarray",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 60.1
+    },
+    "palindrome_partitioning_iv": {
+        "qno": "1745",
+        "title": "Palindrome Partitioning IV",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 44.4
+    },
+    "maximum_subarray_sum_after_one_operation": {
+        "qno": "1746",
+        "title": "Maximum Subarray Sum After One Operation",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 62.3
+    },
+    "maximum_score_from_performing_multiplication_operations": {
+        "qno": "1770",
+        "title": "Maximum Score from Performing Multiplication Operations",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 40.4
+    },
+    "maximize_palindrome_length_from_subsequences": {
+        "qno": "1771",
+        "title": "Maximize Palindrome Length From Subsequences",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 36.3
+    },
+    "closest_dessert_cost": {
+        "qno": "1774",
+        "title": "Closest Dessert Cost",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Backtracking"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 47.6
+    },
+    "maximize_score_after_n_operations": {
+        "qno": "1799",
+        "title": "Maximize Score After N Operations",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming",
+            "Backtracking",
+            "Bit Manipulation",
+            "Number Theory",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 57.8
+    },
+    "make_the_xor_of_all_segments_equal_to_zero": {
+        "qno": "1787",
+        "title": "Make the XOR of All Segments Equal to Zero",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Bit Manipulation"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 39.7
+    },
+    "maximum_number_of_groups_getting_fresh_donuts": {
+        "qno": "1815",
+        "title": "Maximum Number of Groups Getting Fresh Donuts",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Memoization",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 40
+    },
+    "minimum_sideway_jumps": {
+        "qno": "1824",
+        "title": "Minimum Sideway Jumps",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Greedy"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 50.1
+    },
+    "minimum_xor_sum_of_two_arrays": {
+        "qno": "1879",
+        "title": "Minimum XOR Sum of Two Arrays",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 47.6
+    },
+    "number_of_ways_to_rearrange_sticks_with_k_sticks_visible": {
+        "qno": "1866",
+        "title": "Number of Ways to Rearrange Sticks With K Sticks Visible",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Combinatorics"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 57.4
+    },
+    "maximum_cost_of_trip_with_k_highways": {
+        "qno": "2247",
+        "title": "Maximum Cost of Trip With K Highways",
+        "tags": [
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Graph",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 50.1
+    },
+    "minimum_skips_to_arrive_at_meeting_on_time": {
+        "qno": "1883",
+        "title": "Minimum Skips to Arrive at Meeting On Time",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 37.8
+    },
+    "maximum_alternating_subsequence_sum": {
+        "qno": "1911",
+        "title": "Maximum Alternating Subsequence Sum",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 59.1
+    },
+    "the_earliest_and_latest_rounds_where_players_compete": {
+        "qno": "1900",
+        "title": "The Earliest and Latest Rounds Where Players Compete",
+        "tags": [
+            "Dynamic Programming",
+            "Memoization"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 51
+    },
+    "egg_drop_with_2_eggs_and_n_floors": {
+        "qno": "1884",
+        "title": "Egg Drop With 2 Eggs and N Floors",
+        "tags": [
+            "Math",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 72.9
+    },
+    "minimum_cost_to_reach_destination_in_time": {
+        "qno": "1928",
+        "title": "Minimum Cost to Reach Destination in Time",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Graph"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 38
+    },
+    "painting_a_grid_with_three_different_colors": {
+        "qno": "1931",
+        "title": "Painting a Grid With Three Different Colors",
+        "tags": [
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 57.7
+    },
+    "maximum_number_of_points_with_cost": {
+        "qno": "1937",
+        "title": "Maximum Number of Points with Cost",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 35.7
+    },
+    "maximum_compatibility_score_sum": {
+        "qno": "1947",
+        "title": "Maximum Compatibility Score Sum",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Backtracking",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 62.2
+    },
+    "minimum_total_space_wasted_with_k_resizing_operations": {
+        "qno": "1959",
+        "title": "Minimum Total Space Wasted With K Resizing Operations",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 43
+    },
+    "minimum_cost_to_separate_sentence_into_rows": {
+        "qno": "2052",
+        "title": "Minimum Cost to Separate Sentence Into Rows",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 49.5
+    },
+    "count_number_of_special_subsequences": {
+        "qno": "1955",
+        "title": "Count Number of Special Subsequences",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 51.2
+    },
+    "the_number_of_good_subsets": {
+        "qno": "1994",
+        "title": "The Number of Good Subsets",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 34.9
+    },
+    "minimum_number_of_work_sessions_to_finish_the_tasks": {
+        "qno": "1986",
+        "title": "Minimum Number of Work Sessions to Finish the Tasks",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Backtracking",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 33.2
+    },
+    "number_of_unique_good_subsequences": {
+        "qno": "1987",
+        "title": "Number of Unique Good Subsequences",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 52.4
+    },
+    "first_day_where_you_have_been_in_all_the_rooms": {
+        "qno": "1997",
+        "title": "First Day Where You Have Been in All the Rooms",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 37.5
+    },
+    "maximum_product_of_the_length_of_two_palindromic_subsequences": {
+        "qno": "2002",
+        "title": "Maximum Product of the Length of Two Palindromic Subsequences",
+        "tags": [
+            "String",
+            "Dynamic Programming",
+            "Backtracking",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 60
+    },
+    "smallest_missing_genetic_value_in_each_subtree": {
+        "qno": "2003",
+        "title": "Smallest Missing Genetic Value in Each Subtree",
+        "tags": [
+            "Dynamic Programming",
+            "Tree",
+            "Depth-First Search",
+            "Union Find"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 46.6
+    },
+    "check_if_an_original_string_exists_given_two_encoded_strings": {
+        "qno": "2060",
+        "title": "Check if an Original String Exists Given Two Encoded Strings",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 43.7
+    },
+    "vowels_of_all_substrings": {
+        "qno": "2063",
+        "title": "Vowels of All Substrings",
+        "tags": [
+            "Math",
+            "String",
+            "Dynamic Programming",
+            "Combinatorics"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 54
+    },
+    "minimum_number_of_food_buckets_to_feed_the_hamsters": {
+        "qno": "2086",
+        "title": "Minimum Number of Food Buckets to Feed the Hamsters",
+        "tags": [
+            "String",
+            "Dynamic Programming",
+            "Greedy"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 46.6
+    },
+    "number_of_smooth_descent_periods_of_a_stock": {
+        "qno": "2110",
+        "title": "Number of Smooth Descent Periods of a Stock",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 59
+    },
+    "number_of_ways_to_divide_a_long_corridor": {
+        "qno": "2147",
+        "title": "Number of Ways to Divide a Long Corridor",
+        "tags": [
+            "Math",
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 49.4
+    },
+    "solving_questions_with_brainpower": {
+        "qno": "2140",
+        "title": "Solving Questions With Brainpower",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 55
+    },
+    "choose_numbers_from_two_arrays_in_range": {
+        "qno": "2143",
+        "title": "Choose Numbers From Two Arrays in Range",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 51.7
+    },
+    "minimum_time_to_remove_all_cars_containing_illegal_goods": {
+        "qno": "2167",
+        "title": "Minimum Time to Remove All Cars Containing Illegal Goods",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 41.4
+    },
+    "minimum_number_of_lines_to_cover_points": {
+        "qno": "2152",
+        "title": "Minimum Number of Lines to Cover Points",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Math",
+            "Dynamic Programming",
+            "Backtracking",
+            "Bit Manipulation",
+            "Geometry",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 44.2
+    },
+    "maximum_and_sum_of_array": {
+        "qno": "2172",
+        "title": "Maximum AND Sum of Array",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 49.1
+    },
+    "minimum_time_to_finish_the_race": {
+        "qno": "2188",
+        "title": "Minimum Time to Finish the Race",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 41.6
+    },
+    "number_of_ways_to_build_sturdy_brick_wall": {
+        "qno": "2184",
+        "title": "Number of Ways to Build Sturdy Brick Wall",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 49.1
+    },
+    "total_appeal_of_a_string": {
+        "qno": "2262",
+        "title": "Total Appeal of A String",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 55.7
+    },
+    "count_number_of_texts": {
+        "qno": "2266",
+        "title": "Count Number of Texts",
+        "tags": [
+            "Hash Table",
+            "Math",
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 47.8
+    },
+    "substring_with_largest_variance": {
+        "qno": "2272",
+        "title": "Substring With Largest Variance",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 46.3
+    },
+    "longest_binary_subsequence_less_than_or_equal_to_k": {
+        "qno": "2311",
+        "title": "Longest Binary Subsequence Less Than or Equal to K",
+        "tags": [
+            "String",
+            "Dynamic Programming",
+            "Greedy",
+            "Memoization"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 37.9
+    },
+    "count_number_of_ways_to_place_houses": {
+        "qno": "2320",
+        "title": "Count Number of Ways to Place Houses",
+        "tags": [
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 41.9
+    },
+    "number_of_distinct_roll_sequences": {
+        "qno": "2318",
+        "title": "Number of Distinct Roll Sequences",
+        "tags": [
+            "Dynamic Programming",
+            "Memoization"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 57.1
+    },
+    "count_the_number_of_ideal_arrays": {
+        "qno": "2338",
+        "title": "Count the Number of Ideal Arrays",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Combinatorics",
+            "Number Theory"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 26.9
+    },
+    "maximum_profit_from_trading_stocks": {
+        "qno": "2291",
+        "title": "Maximum Profit From Trading Stocks",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 45.3
+    },
+    "check_if_there_is_a_valid_partition_for_the_array": {
+        "qno": "2369",
+        "title": "Check if There is a Valid Partition For The Array",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 51.8
+    },
+    "longest_ideal_subsequence": {
+        "qno": "2370",
+        "title": "Longest Ideal Subsequence",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 47.4
+    },
+    "count_special_integers": {
+        "qno": "2376",
+        "title": "Count Special Integers",
+        "tags": [
+            "Math",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 38.7
+    },
+    "time_needed_to_rearrange_a_binary_string": {
+        "qno": "2380",
+        "title": "Time Needed to Rearrange a Binary String",
+        "tags": [
+            "String",
+            "Dynamic Programming",
+            "Simulation"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 49.9
+    },
+    "number_of_ways_to_reach_a_position_after_exactly_k_steps": {
+        "qno": "2400",
+        "title": "Number of Ways to Reach a Position After Exactly k Steps",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Combinatorics"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 35.2
+    },
+    "minimum_costs_using_the_train_line": {
+        "qno": "2361",
+        "title": "Minimum Costs Using the Train Line",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 78.9
+    },
+    "maximum_deletions_on_a_string": {
+        "qno": "2430",
+        "title": "Maximum Deletions on a String",
+        "tags": [
+            "String",
+            "Dynamic Programming",
+            "Rolling Hash",
+            "String Matching",
+            "Hash Function"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 33.5
+    },
+    "partition_string_into_substrings_with_values_at_most_k": {
+        "qno": "2522",
+        "title": "Partition String Into Substrings With Values at Most K",
+        "tags": [
+            "String",
+            "Dynamic Programming",
+            "Greedy"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 46.2
+    },
+    "choose_edges_to_maximize_score_in_a_tree": {
+        "qno": "2378",
+        "title": "Choose Edges to Maximize Score in a Tree",
+        "tags": [
+            "Dynamic Programming",
+            "Tree",
+            "Depth-First Search"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 58.6
+    },
+    "count_strictly_increasing_subarrays": {
+        "qno": "2393",
+        "title": "Count Strictly Increasing Subarrays",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 74.9
+    },
+    "minimum_time_to_kill_all_monsters": {
+        "qno": "2403",
+        "title": "Minimum Time to Kill All Monsters",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 56.1
+    },
+    "minimum_total_distance_traveled": {
+        "qno": "2463",
+        "title": "Minimum Total Distance Traveled",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Sorting"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 40.8
+    },
+    "maximum_number_of_non-overlapping_palindrome_substrings": {
+        "qno": "2472",
+        "title": "Maximum Number of Non-overlapping Palindrome Substrings",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 40.3
+    },
+    "count_ways_to_build_good_strings": {
+        "qno": "2466",
+        "title": "Count Ways To Build Good Strings",
+        "tags": [
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 54.5
+    },
+    "number_of_beautiful_partitions": {
+        "qno": "2478",
+        "title": "Number of Beautiful Partitions",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 31
+    },
+    "maximize_total_tastiness_of_purchased_fruits": {
+        "qno": "2431",
+        "title": "Maximize Total Tastiness of Purchased Fruits",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 64.1
+    },
+    "count_palindromic_subsequences": {
+        "qno": "2484",
+        "title": "Count Palindromic Subsequences",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 38.1
+    },
+    "minimum_split_into_subarrays_with_gcd_greater_than_one": {
+        "qno": "2436",
+        "title": "Minimum Split Into Subarrays With GCD Greater Than One",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming",
+            "Greedy",
+            "Number Theory"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 71.4
+    },
+    "number_of_great_partitions": {
+        "qno": "2518",
+        "title": "Number of Great Partitions",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 31.3
+    },
+    "minimum_subarrays_in_a_valid_split": {
+        "qno": "2464",
+        "title": "Minimum Subarrays in a Valid Split",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming",
+            "Number Theory"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 54.5
+    },
+    "difference_between_maximum_and_minimum_price_sum": {
+        "qno": "2538",
+        "title": "Difference Between Maximum and Minimum Price Sum",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Tree",
+            "Depth-First Search"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 32.1
+    },
+    "minimum_cost_to_split_an_array": {
+        "qno": "2547",
+        "title": "Minimum Cost to Split an Array",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Dynamic Programming",
+            "Counting"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 40.4
+    },
+    "number_of_subarrays_having_even_product": {
+        "qno": "2495",
+        "title": "Number of Subarrays Having Even Product",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 64.3
+    },
+    "number_of_ways_to_earn_points": {
+        "qno": "2585",
+        "title": "Number of Ways to Earn Points",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 57.5
+    },
+    "count_number_of_possible_root_nodes": {
+        "qno": "2581",
+        "title": "Count Number of Possible Root Nodes",
+        "tags": [
+            "Hash Table",
+            "Dynamic Programming",
+            "Tree",
+            "Depth-First Search"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 45.7
+    },
+    "find_the_substring_with_maximum_cost": {
+        "qno": "2606",
+        "title": "Find the Substring With Maximum Cost",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 56.8
+    },
+    "number_of_good_binary_strings": {
+        "qno": "2533",
+        "title": "Number of Good Binary Strings",
+        "tags": [
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 51.8
+    },
+    "the_number_of_beautiful_subsets": {
+        "qno": "2597",
+        "title": "The Number of Beautiful Subsets",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Backtracking",
+            "Sorting"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 51.2
+    },
+    "count_the_number_of_square-free_subsets": {
+        "qno": "2572",
+        "title": "Count the Number of Square-Free Subsets",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 23.1
+    },
+    "minimum_operations_to_reduce_an_integer_to_0": {
+        "qno": "2571",
+        "title": "Minimum Operations to Reduce an Integer to 0",
+        "tags": [
+            "Dynamic Programming",
+            "Greedy",
+            "Bit Manipulation"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 55
+    },
+    "count_the_number_of_k-free_subsets": {
+        "qno": "2638",
+        "title": "Count the Number of K-Free Subsets",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Sorting"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 47.4
+    },
+    "minimize_the_total_price_of_the_trips": {
+        "qno": "2646",
+        "title": "Minimize the Total Price of the Trips",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Tree",
+            "Depth-First Search",
+            "Graph"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 45.4
+    },
+    "maximum_strength_of_a_group": {
+        "qno": "2708",
+        "title": "Maximum Strength of a Group",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Backtracking",
+            "Greedy",
+            "Bit Manipulation",
+            "Sorting",
+            "Enumeration"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 24.1
+    },
+    "extra_characters_in_a_string": {
+        "qno": "2707",
+        "title": "Extra Characters in a String",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Dynamic Programming",
+            "Trie"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 52.5
+    },
+    "count_of_integers": {
+        "qno": "2719",
+        "title": "Count of Integers",
+        "tags": [
+            "Math",
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 34.6
+    },
+    "painting_the_walls": {
+        "qno": "2742",
+        "title": "Painting the Walls",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 50.9
+    },
+    "minimum_cost_to_make_all_characters_equal": {
+        "qno": "2712",
+        "title": "Minimum Cost to Make All Characters Equal",
+        "tags": [
+            "String",
+            "Dynamic Programming",
+            "Greedy"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 54.4
+    },
+    "special_permutations": {
+        "qno": "2741",
+        "title": "Special Permutations",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 28.3
+    },
+    "decremental_string_concatenation": {
+        "qno": "2746",
+        "title": "Decremental String Concatenation",
+        "tags": [
+            "Array",
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 26.7
+    },
+    "maximum_number_of_jumps_to_reach_the_last_index": {
+        "qno": "2770",
+        "title": "Maximum Number of Jumps to Reach the Last Index",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 31
+    },
+    "ways_to_split_array_into_good_subarrays": {
+        "qno": "2750",
+        "title": "Ways to Split Array Into Good Subarrays",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 34.1
+    },
+    "longest_non-decreasing_subarray_from_two_arrays": {
+        "qno": "2771",
+        "title": "Longest Non-decreasing Subarray From Two Arrays",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 29.3
+    },
+    "ways_to_express_an_integer_as_sum_of_powers": {
+        "qno": "2787",
+        "title": "Ways to Express an Integer as Sum of Powers",
+        "tags": [
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 33.8
+    },
+    "partition_string_into_minimum_beautiful_substrings": {
+        "qno": "2767",
+        "title": "Partition String Into Minimum Beautiful Substrings",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Dynamic Programming",
+            "Backtracking"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 53.3
+    },
+    "visit_array_positions_to_maximize_score": {
+        "qno": "2786",
+        "title": "Visit Array Positions to Maximize Score",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 36
+    },
+    "count_paths_that_can_form_a_palindrome_in_a_tree": {
+        "qno": "2791",
+        "title": "Count Paths That Can Form a Palindrome in a Tree",
+        "tags": [
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Tree",
+            "Depth-First Search",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 48.1
+    },
+    "check_if_it_is_possible_to_split_array": {
+        "qno": "2811",
+        "title": "Check if it is Possible to Split Array",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Greedy"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 33.7
+    },
+    "count_stepping_numbers_in_range": {
+        "qno": "2801",
+        "title": "Count Stepping Numbers in Range",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 27.8
+    },
+    "minimum_time_to_make_array_sum_at_most_x": {
+        "qno": "2809",
+        "title": "Minimum Time to Make Array Sum At Most x",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Sorting"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 25.9
+    },
+    "number_of_beautiful_integers_in_the_range": {
+        "qno": "2827",
+        "title": "Number of Beautiful Integers in the Range",
+        "tags": [
+            "Math",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 18
+    },
+    "string_transformation": {
+        "qno": "2851",
+        "title": "String Transformation",
+        "tags": [
+            "Math",
+            "String",
+            "Dynamic Programming",
+            "String Matching"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 29.2
+    },
+    "maximize_value_of_function_in_a_ball_passing_game": {
+        "qno": "2836",
+        "title": "Maximize Value of Function in a Ball Passing Game",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Bit Manipulation"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 30.9
+    },
+    "apply_operations_to_make_two_strings_equal": {
+        "qno": "2896",
+        "title": "Apply Operations to Make Two Strings Equal",
+        "tags": [
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 26.8
+    },
+    "minimum_edge_reversals_so_every_node_is_reachable": {
+        "qno": "2858",
+        "title": "Minimum Edge Reversals So Every Node Is Reachable",
+        "tags": [
+            "Dynamic Programming",
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Graph"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 58.7
+    },
+    "length_of_the_longest_subsequence_that_sums_to_target": {
+        "qno": "2915",
+        "title": "Length of the Longest Subsequence That Sums to Target",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 35.5
+    },
+    "count_valid_paths_in_a_tree": {
+        "qno": "2867",
+        "title": "Count Valid Paths in a Tree",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Tree",
+            "Depth-First Search",
+            "Number Theory"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 35
+    },
+    "subarrays_distinct_element_sum_of_squares_ii": {
+        "qno": "2916",
+        "title": "Subarrays Distinct Element Sum of Squares II",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Binary Indexed Tree",
+            "Segment Tree"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 21.3
+    },
+    "count_visited_nodes_in_a_directed_graph": {
+        "qno": "2876",
+        "title": "Count Visited Nodes in a Directed Graph",
+        "tags": [
+            "Dynamic Programming",
+            "Graph",
+            "Memoization"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 32.9
+    },
+    "longest_unequal_adjacent_groups_subsequence_ii": {
+        "qno": "2901",
+        "title": "Longest Unequal Adjacent Groups Subsequence II",
+        "tags": [
+            "Array",
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 27.2
+    },
+    "longest_unequal_adjacent_groups_subsequence_i": {
+        "qno": "2900",
+        "title": "Longest Unequal Adjacent Groups Subsequence I",
+        "tags": [
+            "Array",
+            "String",
+            "Dynamic Programming",
+            "Greedy"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 63.1
+    },
+    "minimizing_array_after_replacing_pairs_with_their_product": {
+        "qno": "2892",
+        "title": "Minimizing Array After Replacing Pairs With Their Product",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Greedy"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 40.6
+    },
+    "minimum_increment_operations_to_make_array_beautiful": {
+        "qno": "2919",
+        "title": "Minimum Increment Operations to Make Array Beautiful",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 34.3
+    },
+    "maximum_points_after_collecting_coins_from_all_nodes": {
+        "qno": "2920",
+        "title": "Maximum Points After Collecting Coins From All Nodes",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Tree",
+            "Depth-First Search"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 37.4
+    },
+    "maximum_score_after_applying_operations_on_a_tree": {
+        "qno": "2925",
+        "title": "Maximum Score After Applying Operations on a Tree",
+        "tags": [
+            "Dynamic Programming",
+            "Tree",
+            "Depth-First Search"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 49.5
+    },
+    "number_of_ways_to_reach_destination_in_the_grid": {
+        "qno": "2912",
+        "title": "Number of Ways to Reach Destination in the Grid",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Combinatorics"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 64.2
+    },
+    "number_of_strings_which_can_be_rearranged_to_contain_substring": {
+        "qno": "2930",
+        "title": "Number of Strings Which Can Be Rearranged to Contain Substring",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Combinatorics"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 56.1
+    },
+    "remove_adjacent_almost-equal_characters": {
+        "qno": "2957",
+        "title": "Remove Adjacent Almost-Equal Characters",
+        "tags": [
+            "String",
+            "Dynamic Programming",
+            "Greedy"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 52.3
+    },
+    "maximize_the_number_of_partitions_after_operations": {
+        "qno": "3003",
+        "title": "Maximize the Number of Partitions After Operations",
+        "tags": [
+            "String",
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 28.2
+    },
+    "minimum_cost_to_convert_string_ii": {
+        "qno": "2977",
+        "title": "Minimum Cost to Convert String II",
+        "tags": [
+            "Array",
+            "String",
+            "Dynamic Programming",
+            "Graph",
+            "Trie",
+            "Shortest Path"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 24.8
+    },
+    "minimum_number_of_operations_to_make_x_and_y_equal": {
+        "qno": "2998",
+        "title": "Minimum Number of Operations to Make X and Y Equal",
+        "tags": [
+            "Dynamic Programming",
+            "Breadth-First Search",
+            "Memoization"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 46.2
+    },
+    "count_the_number_of_powerful_integers": {
+        "qno": "2999",
+        "title": "Count the Number of Powerful Integers",
+        "tags": [
+            "Math",
+            "String",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 26.3
+    },
+    "most_expensive_item_that_can_not_be_bought": {
+        "qno": "2979",
+        "title": "Most Expensive Item That Can Not Be Bought",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Number Theory"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 77
+    },
+    "number_of_self-divisible_permutations": {
+        "qno": "2992",
+        "title": "Number of Self-Divisible Permutations",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Recursion",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 73.4
+    },
+    "maximize_consecutive_elements_in_an_array_after_modification": {
+        "qno": "3041",
+        "title": "Maximize Consecutive Elements in an Array After Modification",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Sorting"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 32
+    },
+    "maximum_subtree_of_the_same_color": {
+        "qno": "3004",
+        "title": "Maximum Subtree of the Same Color",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Tree",
+            "Depth-First Search"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 65.2
+    },
+    "find_the_maximum_sum_of_node_values": {
+        "qno": "3068",
+        "title": "Find the Maximum Sum of Node Values",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Greedy",
+            "Bit Manipulation",
+            "Tree",
+            "Sorting"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 67.2
+    },
+    "find_the_sum_of_subsequence_powers": {
+        "qno": "3098",
+        "title": "Find the Sum of Subsequence Powers",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Sorting"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 24
+    },
+    "maximum_number_of_operations_with_the_same_score_ii": {
+        "qno": "3040",
+        "title": "Maximum Number of Operations With the Same Score II",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Memoization"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 33.1
+    },
+    "maximum_number_of_removal_queries_that_can_be_processed_i": {
+        "qno": "3018",
+        "title": "Maximum Number of Removal Queries That Can Be Processed I",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 44.9
+    },
+    "count_numbers_with_unique_digits_ii": {
+        "qno": "3032",
+        "title": "Count Numbers With Unique Digits II",
+        "tags": [
+            "Hash Table",
+            "Math",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 87.4
+    },
+    "find_the_sum_of_the_power_of_all_subsequences": {
+        "qno": "3082",
+        "title": "Find the Sum of the Power of All Subsequences",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 38.7
+    },
+    "minimum_substring_partition_of_equal_character_frequency": {
+        "qno": "3144",
+        "title": "Minimum Substring Partition of Equal Character Frequency",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Dynamic Programming",
+            "Counting"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 40.3
+    },
+    "find_number_of_ways_to_reach_the_k-th_stair": {
+        "qno": "3154",
+        "title": "Find Number of Ways to Reach the K-th Stair",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Memoization",
+            "Combinatorics"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 36
+    },
+    "maximum_sum_of_subsequence_with_non-adjacent_elements": {
+        "qno": "3165",
+        "title": "Maximum Sum of Subsequence With Non-adjacent Elements",
+        "tags": [
+            "Array",
+            "Divide and Conquer",
+            "Dynamic Programming",
+            "Segment Tree"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 17.3
+    },
+    "find_the_minimum_cost_array_permutation": {
+        "qno": "3149",
+        "title": "Find the Minimum Cost Array Permutation",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Bitmask"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 22.6
+    },
+    "maximum_total_reward_using_operations_i": {
+        "qno": "3180",
+        "title": "Maximum Total Reward Using Operations I",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 29
+    },
+    "maximum_total_reward_using_operations_ii": {
+        "qno": "3181",
+        "title": "Maximum Total Reward Using Operations II",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Bit Manipulation"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 20.2
+    },
+    "find_the_maximum_length_of_a_good_subsequence_ii": {
+        "qno": "3177",
+        "title": "Find the Maximum Length of a Good Subsequence II",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 23.2
+    },
+    "find_the_maximum_length_of_a_good_subsequence_i": {
+        "qno": "3176",
+        "title": "Find the Maximum Length of a Good Subsequence I",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 29.8
+    },
+    "count_the_number_of_inversions": {
+        "qno": "3193",
+        "title": "Count the Number of Inversions",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 32.6
+    },
+    "maximize_total_cost_of_alternating_subarrays": {
+        "qno": "3196",
+        "title": "Maximize Total Cost of Alternating Subarrays",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 27.9
+    },
+    "minimum_operations_to_make_binary_array_elements_equal_to_one_ii": {
+        "qno": "3192",
+        "title": "Minimum Operations to Make Binary Array Elements Equal to One II",
+        "tags": [
+            "Array",
+            "Dynamic Programming",
+            "Greedy"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 64.8
+    },
+    "construct_string_with_minimum_cost": {
+        "qno": "3213",
+        "title": "Construct String with Minimum Cost",
+        "tags": [
+            "Array",
+            "String",
+            "Dynamic Programming",
+            "Suffix Array"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 16.9
+    },
+    "the_number_of_ways_to_make_the_sum": {
+        "qno": "3183",
+        "title": "The Number of Ways to Make the Sum",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 60.3
+    },
+    "find_the_maximum_length_of_valid_subsequence_i": {
+        "qno": "3201",
+        "title": "Find the Maximum Length of Valid Subsequence I",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 36.6
+    },
+    "find_the_maximum_length_of_valid_subsequence_ii": {
+        "qno": "3202",
+        "title": "Find the Maximum Length of Valid Subsequence II",
+        "tags": [
+            "Array",
+            "Dynamic Programming"
+        ],
+        "default": "Dynamic Programming",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 38.1
     }
 }
