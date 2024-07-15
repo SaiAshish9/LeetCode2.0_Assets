@@ -446,7 +446,9 @@
     ],
     "Breadth-First Search": [],
     "Bit Manipulation": [
-        832
+        832,
+        3064,
+        3094
     ],
     "Simulation": [],
     "Graph": [],
@@ -485,7 +487,8 @@
         277,
         154,
         1237,
-        1533
+        1533,
+        1428
     ],
     "Data Stream": [
         295,
