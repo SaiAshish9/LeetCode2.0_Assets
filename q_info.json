@@ -18491,5 +18491,191 @@
         "difficulty": "Medium",
         "language": "Java",
         "acceptance": 80.1
+    },
+    "flip_game_ii": {
+        "qno": "294",
+        "title": "Flip Game II",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Backtracking",
+            "Memoization",
+            "Game Theory"
+        ],
+        "default": "Game Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 52.1
+    },
+    "guess_number_higher_or_lower_ii": {
+        "qno": "375",
+        "title": "Guess Number Higher or Lower II",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Game Theory"
+        ],
+        "default": "Game Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 49.4
+    },
+    "can_i_win": {
+        "qno": "464",
+        "title": "Can I Win",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Bit Manipulation",
+            "Memoization",
+            "Game Theory",
+            "Bitmask"
+        ],
+        "default": "Game Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 29.8
+    },
+    "predict_the_winner": {
+        "qno": "486",
+        "title": "Predict the Winner",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming",
+            "Recursion",
+            "Game Theory"
+        ],
+        "default": "Game Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 55.4
+    },
+    "stone_game": {
+        "qno": "877",
+        "title": "Stone Game",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming",
+            "Game Theory"
+        ],
+        "default": "Game Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 70.7
+    },
+    "stone_game_iii": {
+        "qno": "1406",
+        "title": "Stone Game III",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming",
+            "Game Theory"
+        ],
+        "default": "Game Theory",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 63.9
+    },
+    "stone_game_iv": {
+        "qno": "1510",
+        "title": "Stone Game IV",
+        "tags": [
+            "Math",
+            "Dynamic Programming",
+            "Game Theory"
+        ],
+        "default": "Game Theory",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 59.8
+    },
+    "maximum_number_of_coins_you_can_get": {
+        "qno": "1561",
+        "title": "Maximum Number of Coins You Can Get",
+        "tags": [
+            "Array",
+            "Math",
+            "Greedy",
+            "Sorting",
+            "Game Theory"
+        ],
+        "default": "Game Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 84.6
+    },
+    "stone_game_v": {
+        "qno": "1563",
+        "title": "Stone Game V",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming",
+            "Game Theory"
+        ],
+        "default": "Game Theory",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 40.9
+    },
+    "stone_game_vii": {
+        "qno": "1690",
+        "title": "Stone Game VII",
+        "tags": [
+            "Array",
+            "Math",
+            "Dynamic Programming",
+            "Game Theory"
+        ],
+        "default": "Game Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 58.1
+    },
+    "sum_game": {
+        "qno": "1927",
+        "title": "Sum Game",
+        "tags": [
+            "Math",
+            "String",
+            "Greedy",
+            "Game Theory"
+        ],
+        "default": "Game Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 47.8
+    },
+    "remove_colored_pieces_if_both_neighbors_are_the_same_color": {
+        "qno": "2038",
+        "title": "Remove Colored Pieces if Both Neighbors are the Same Color",
+        "tags": [
+            "Math",
+            "String",
+            "Greedy",
+            "Game Theory"
+        ],
+        "default": "Game Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 62.8
+    },
+    "stone_game_ix": {
+        "qno": "2029",
+        "title": "Stone Game IX",
+        "tags": [
+            "Array",
+            "Math",
+            "Greedy",
+            "Counting",
+            "Game Theory"
+        ],
+        "default": "Game Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 28.3
     }
 }
