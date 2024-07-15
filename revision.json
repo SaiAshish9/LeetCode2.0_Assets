@@ -437,7 +437,9 @@
         1183,
         1338
     ],
-    "Depth-First Search": [],
+    "Depth-First Search": [
+        1236
+    ],
     "Database": [],
     "Tree": [
         1245
@@ -479,7 +481,12 @@
     ],
     "Rolling Hash": [],
     "Game Theory": [],
-    "Interactive": [],
+    "Interactive": [
+        277,
+        154,
+        1237,
+        1533
+    ],
     "Data Stream": [
         295,
         2526
