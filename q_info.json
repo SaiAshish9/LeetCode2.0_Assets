@@ -18293,5 +18293,47 @@
         "difficulty": "Hard",
         "language": "Java",
         "acceptance": 37.3
+    },
+    "logger_rate_limiter": {
+        "qno": "359",
+        "title": "Logger Rate Limiter",
+        "tags": [
+            "Hash Table",
+            "Design",
+            "Data Stream"
+        ],
+        "default": "Data Stream",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 76
+    },
+    "stream_of_characters": {
+        "qno": "1032",
+        "title": "Stream of Characters",
+        "tags": [
+            "Array",
+            "String",
+            "Design",
+            "Trie",
+            "Data Stream"
+        ],
+        "default": "Data Stream",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 52.1
+    },
+    "design_an_ordered_stream": {
+        "qno": "1656",
+        "title": "Design an Ordered Stream",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Design",
+            "Data Stream"
+        ],
+        "default": "Data Stream",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 84.4
     }
 }
