@@ -582,6 +582,11 @@
       "brainteaser": "class Solution {\n    public boolean canWinNim(int n) {\n        return n % 4 != 0;\n    }\n}\n"
     }
   },
+  "294": {
+    "java": {
+      "game-theory": ""
+    }
+  },
   "295": {
     "java": {
       "two-pointers": ""
@@ -789,6 +794,11 @@
       "interactive": ""
     }
   },
+  "375": {
+    "java": {
+      "game-theory": ""
+    }
+  },
   "378": {
     "java": {
       "matrix": "import java.util.PriorityQueue;\n\nclass Solution {\n    public int kthSmallest(int[][] matrix, int k) {\n        int n = matrix.length;\n        PriorityQueue<int[]> minHeap = new PriorityQueue<>((a, b) -> a[0] - b[0]);\n        \n        for (int j = 0; j < n; j++) {\n            minHeap.offer(new int[]{matrix[0][j], 0, j}); // value, row, col\n        }\n        \n        for (int i = 0; i < k - 1; i++) {\n            int[] current = minHeap.poll();\n            int row = current[1];\n            int col = current[2];\n            \n            if (row < n - 1) {\n                minHeap.offer(new int[]{matrix[row + 1][col], row + 1, col});\n            }\n        }\n        \n        return minHeap.poll()[0];\n    }\n}\n"
@@ -990,6 +1000,11 @@
       "matrix": ""
     }
   },
+  "464": {
+    "java": {
+      "game-theory": ""
+    }
+  },
   "470": {
     "java": {
       "rejection-sampling": "/**\n * The rand7() API is already defined in the parent class SolBase.\n * public int rand7();\n * @return a random integer in the range 1 to 7\n */\nclass Solution extends SolBase {\n    public int rand10() {\n        while (true) {\n            int num = (rand7() - 1) * 7 + rand7(); // Generate a number from 1 to 49\n            if (num <= 40) { // Accept only if the number is in the range 1 to 40\n                return 1 + (num - 1) % 10; // Map to the range 1 to 10\n            }\n        }\n    }\n}"
@@ -1023,6 +1038,11 @@
   "485": {
     "java": {
       "array": "class Solution {\n    public int findMaxConsecutiveOnes(int[] nums) {\n        int maxCount = 0;\n        int currentCount = 0;\n        \n        for (int num : nums) {\n            if (num == 1) {\n                currentCount++;\n                maxCount = Math.max(maxCount, currentCount);\n            } else {\n                currentCount = 0;\n            }\n        }\n        \n        return maxCount;\n    }\n}\n"
+    }
+  },
+  "486": {
+    "java": {
+      "game-theory": ""
     }
   },
   "487": {
@@ -1770,6 +1790,11 @@
   "876": {
     "java": {
       "two-pointers": ""
+    }
+  },
+  "877": {
+    "java": {
+      "game-theory": ""
     }
   },
   "880": {
@@ -2683,6 +2708,11 @@
       "heap-(priority-queue)": ""
     }
   },
+  "1406": {
+    "java": {
+      "game-theory": ""
+    }
+  },
   "1413": {
     "java": {
       "prefix-sum": ""
@@ -2853,6 +2883,11 @@
       "two-pointers": ""
     }
   },
+  "1510": {
+    "java": {
+      "game-theory": ""
+    }
+  },
   "1514": {
     "java": {
       "heap-(priority-queue)": ""
@@ -2911,6 +2946,16 @@
   "1559": {
     "java": {
       "matrix": ""
+    }
+  },
+  "1561": {
+    "java": {
+      "game-theory": ""
+    }
+  },
+  "1563": {
+    "java": {
+      "game-theory": ""
     }
   },
   "1568": {
@@ -3136,6 +3181,11 @@
   "1687": {
     "java": {
       "monotonic-queue": "class Solution {\n    public int boxDelivering(int[][] boxes, int portsCount, int maxBoxes, int maxWeight) {\n        int length = boxes.length;\n        int[] ports = new int[length + 1];\n        int[] weights = new int[length + 1];\n        int[] differences = new int[length + 1];\n        long[] prefixWeights = new long[length + 1];\n        for (int i = 1; i <= length; i++) {\n            ports[i] = boxes[i - 1][0];\n            weights[i] = boxes[i - 1][1];\n            if (i > 1)\n                differences[i] = differences[i - 1] + (ports[i - 1] != ports[i] ? 1 : 0);\n            prefixWeights[i] = prefixWeights[i - 1] + weights[i];\n        }\n        Deque<Integer> deque = new LinkedList<Integer>();\n        deque.offerLast(0);\n        int[] dp = new int[length + 1];\n        int[] remain = new int[length + 1];\n        for (int i = 1; i <= length; i++) {\n            while (!deque.isEmpty() && (i - deque.peekFirst() > maxBoxes || prefixWeights[i] - prefixWeights[deque.peekFirst()] > maxWeight))\n                deque.pollFirst();\n            dp[i] = remain[deque.peekFirst()] + differences[i] + 2;\n            if (i != length) {\n                remain[i] = dp[i] - differences[i + 1];\n                while (!deque.isEmpty() && remain[i] <= remain[deque.peekLast()])\n                    deque.pollLast();\n                deque.offerLast(i);\n            }\n        }\n        return dp[length];\n    }\n}"
+    }
+  },
+  "1690": {
+    "java": {
+      "game-theory": ""
     }
   },
   "1695": {
@@ -3563,6 +3613,11 @@
       "matrix": ""
     }
   },
+  "1927": {
+    "java": {
+      "game-theory": ""
+    }
+  },
   "1930": {
     "java": {
       "prefix-sum": ""
@@ -3669,6 +3724,11 @@
       "two-pointers": ""
     }
   },
+  "2005": {
+    "java": {
+      "game-theory": ""
+    }
+  },
   "2009": {
     "java": {
       "sliding-window": "import java.util.Arrays;\nimport java.util.HashSet;\nimport java.util.Set;\n\nclass Solution {\n    public int minOperations(int[] nums) {\n        Set<Integer> set = new HashSet<>();\n        for (int num : nums) {\n            set.add(num);\n        }\n        int[] uniqueNums = new int[set.size()];\n        int index = 0;\n        for (int num : set) {\n            uniqueNums[index++] = num;\n        }\n        Arrays.sort(uniqueNums);\n\n        int maxLength = 0;\n        int left = 0;\n        for (int right = 0; right < uniqueNums.length; ++right) {\n            while (uniqueNums[right] - uniqueNums[left] >= nums.length) {\n                left++;\n            }\n            maxLength = Math.max(maxLength, right - left + 1);\n        }\n\n        return nums.length - maxLength;\n    }\n}\n"
@@ -3714,6 +3774,11 @@
       "prefix-sum": ""
     }
   },
+  "2029": {
+    "java": {
+      "game-theory": ""
+    }
+  },
   "2030": {
     "java": {
       "monotonic-stack": ""
@@ -3737,6 +3802,11 @@
   "2035": {
     "java": {
       "two-pointers": ""
+    }
+  },
+  "2038": {
+    "java": {
+      "game-theory": ""
     }
   },
   "2046": {
