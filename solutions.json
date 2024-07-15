@@ -734,6 +734,11 @@
       "two-pointers": "import java.util.*;\n\npublic class Solution {\n    public int[] intersect(int[] nums1, int[] nums2) {\n        Map<Integer, Integer> map = new HashMap<>();\n        for (int num : nums1) {\n            map.put(num, map.getOrDefault(num, 0) + 1);\n        }\n\n        List<Integer> intersect = new ArrayList<>();\n\n        for (int num : nums2) {\n            if (map.containsKey(num) && map.get(num) > 0) {\n                intersect.add(num);\n                map.put(num, map.get(num) - 1);\n            }\n        }\n\n        int[] result = new int[intersect.size()];\n        int index = 0;\n        for (int num : intersect) {\n            result[index++] = num;\n        }\n\n        return result;\n    }\n}\n"
     }
   },
+  "352": {
+    "java": {
+      "ordered-set": ""
+    }
+  },
   "353": {
     "java": {
       "queue": ""
@@ -1306,6 +1311,11 @@
       "two-pointers": "public class Solution {\n    public boolean judgeSquareSum(int c) {\n        long left = 0;\n        long right = (long) Math.sqrt(c);\n\n        while (left <= right) {\n            long sum = left * left + right * right;\n            if (sum == c) {\n                return true;\n            } else if (sum < c) {\n                left++;\n            } else {\n                right--;\n            }\n        }\n\n        return false;\n    }\n}\n"
     }
   },
+  "635": {
+    "java": {
+      "ordered-set": ""
+    }
+  },
   "636": {
     "java": {
       "stack": ""
@@ -1412,6 +1422,11 @@
       "two-pointers": ""
     }
   },
+  "699": {
+    "java": {
+      "ordered-set": ""
+    }
+  },
   "700": {
     "java": {
       "binary-search-tree": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public TreeNode searchBST(TreeNode root, int val) {\n        if (root == null || root.val == val) {\n            return root;\n        }\n        \n        if (val < root.val) {\n            return searchBST(root.left, val);\n        } else {\n            return searchBST(root.right, val);\n        }\n    }\n}\n"
@@ -1440,6 +1455,11 @@
   "713": {
     "java": {
       "sliding-window": "class Solution {\n    public int numSubarrayProductLessThanK(int[] nums, int k) {\n        if (k <= 1) return 0; /\n        int left = 0;\n        int product = 1;\n        int count = 0;\n        \n        for (int right = 0; right < nums.length; right++) {\n            product *= nums[right];\n            \n            while (product >= k) {\n                product /= nums[left];\n                left++;\n            }\n            \n            count += right - left + 1;\n        }\n        \n        return count;\n    }\n}"
+    }
+  },
+  "715": {
+    "java": {
+      "ordered-set": ""
     }
   },
   "716": {
@@ -1475,6 +1495,11 @@
   "727": {
     "java": {
       "sliding-window": "class Solution {\n  public String minWindow(String s1, String s2) {\n  int m = s2.length();\n  int n = s1.length();\n    int[][] dp = new int[m + 1][n + 1];\n\n    for (int j = 0; j <= n; ++j)\n      dp[0][j] = j + 1;\n\n    for (int i = 1; i <= m; ++i)\n      for (int j = 1; j <= n; ++j)\n        if (s2.charAt(i - 1) == s1.charAt(j - 1))\n          dp[i][j] = dp[i - 1][j - 1];\n        else\n          dp[i][j] = dp[i][j - 1];\n\n    int bestLeft = 0;\n    int minLength = Integer.MAX_VALUE;\n\n    for (int j = 1; j <= n; ++j)\n      if (dp[m][j] > 0 && j - dp[m][j] + 1 < minLength) {\n        bestLeft = dp[m][j] - 1;\n        minLength = j - dp[m][j] + 1;\n      }\n\n    return minLength == Integer.MAX_VALUE ? \"\" : s1.substring(bestLeft, bestLeft + minLength);\n  }\n}"
+    }
+  },
+  "729": {
+    "java": {
+      "ordered-set": ""
     }
   },
   "731": {
@@ -2623,6 +2648,11 @@
       "two-pointers": ""
     }
   },
+  "1348": {
+    "java": {
+      "ordered-set": ""
+    }
+  },
   "1349": {
     "java": {
       "matrix": ""
@@ -2716,6 +2746,11 @@
   "1413": {
     "java": {
       "prefix-sum": ""
+    }
+  },
+  "1418": {
+    "java": {
+      "ordered-set": ""
     }
   },
   "1420": {
@@ -3383,6 +3418,11 @@
       "two-pointers": ""
     }
   },
+  "1818": {
+    "java": {
+      "ordered-set": ""
+    }
+  },
   "1820": {
     "java": {
       "matrix": ""
@@ -3999,6 +4039,11 @@
       "sliding-window": "class Solution {\n    public String subStrHash(String s, int power, int modulo, int k, int hashValue) {\n        long maxPower = 1;\n        long hash = 0;\n        int bestLeft = -1;\n\n        for (int i = s.length() - 1; i >= 0; --i) {\n            hash = (hash * power + val(s.charAt(i))) % modulo;\n            if (i + k < s.length())\n                hash = (hash - val(s.charAt(i + k)) * maxPower % modulo + modulo) % modulo;\n            else\n                maxPower = maxPower * power % modulo;\n            if (hash == hashValue)\n                bestLeft = i;\n        }\n\n        return s.substring(bestLeft, bestLeft + k);\n    }\n\n    private int val(char c) {\n        return c - 'a' + 1;\n    }\n}"
     }
   },
+  "2158": {
+    "java": {
+      "ordered-set": ""
+    }
+  },
   "2161": {
     "java": {
       "two-pointers": ""
@@ -4067,6 +4112,11 @@
   "2211": {
     "java": {
       "stack": ""
+    }
+  },
+  "2213": {
+    "java": {
+      "ordered-set": ""
     }
   },
   "2216": {
@@ -4172,6 +4222,11 @@
   "2271": {
     "java": {
       "prefix-sum": ""
+    }
+  },
+  "2276": {
+    "java": {
+      "ordered-set": ""
     }
   },
   "2281": {
@@ -4328,6 +4383,11 @@
   "2360": {
     "java": {
       "topological-sort": ""
+    }
+  },
+  "2363": {
+    "java": {
+      "ordered-set": ""
     }
   },
   "2367": {
@@ -4820,6 +4880,16 @@
       "heap-(priority-queue)": ""
     }
   },
+  "2612": {
+    "java": {
+      "ordered-set": ""
+    }
+  },
+  "2613": {
+    "java": {
+      "ordered-set": ""
+    }
+  },
   "2614": {
     "java": {
       "matrix": ""
@@ -4868,6 +4938,11 @@
   "2658": {
     "java": {
       "matrix": ""
+    }
+  },
+  "2659": {
+    "java": {
+      "ordered-set": ""
     }
   },
   "2661": {
@@ -5005,6 +5080,11 @@
       "monotonic-queue": "import java.util.Deque;\nimport java.util.LinkedList;\n\nclass Solution {\n    public long continuousSubarrays(int[] nums) {\n        long count = 0;\n        int left = 0;\n        Deque<Integer> maxDeque = new LinkedList<>();\n        Deque<Integer> minDeque = new LinkedList<>();\n\n        for (int right = 0; right < nums.length; right++) {\n            while (!maxDeque.isEmpty() && nums[maxDeque.peekLast()] <= nums[right]) {\n                maxDeque.pollLast();\n            }\n            maxDeque.offerLast(right);\n\n            while (!minDeque.isEmpty() && nums[minDeque.peekLast()] >= nums[right]) {\n                minDeque.pollLast();\n            }\n            minDeque.offerLast(right);\n\n            while (nums[maxDeque.peekFirst()] - nums[minDeque.peekFirst()] > 2) {\n                left++;\n                if (maxDeque.peekFirst() < left) {\n                    maxDeque.pollFirst();\n                }\n                if (minDeque.peekFirst() < left) {\n                    minDeque.pollFirst();\n                }\n            }\n\n            count += right - left + 1;\n        }\n\n        return count;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums1 = {5, 4, 2, 4};\n        System.out.println(solution.continuousSubarrays(nums1)); \n\n        int[] nums2 = {1, 2, 3};\n        System.out.println(solution.continuousSubarrays(nums2));\n    }\n}\n"
     }
   },
+  "2763": {
+    "java": {
+      "ordered-set": ""
+    }
+  },
   "2764": {
     "java": {
       "stack": ""
@@ -5053,6 +5133,11 @@
   "2816": {
     "java": {
       "stack": ""
+    }
+  },
+  "2817": {
+    "java": {
+      "ordered-set": ""
     }
   },
   "2818": {
@@ -5405,6 +5490,11 @@
       "matrix": ""
     }
   },
+  "3073": {
+    "java": {
+      "ordered-set": ""
+    }
+  },
   "3077": {
     "java": {
       "prefix-sum": ""
@@ -5458,6 +5548,11 @@
   "3097": {
     "java": {
       "sliding-window": "class Solution {\n    public int minimumSubarrayLength(int[] nums, int k) {\n        int kMax = 50;\n        int n = nums.length;\n        int ans = n + 1;\n        int ors = 0;\n        int[] count = new int[kMax + 1];\n\n        for (int left = 0, right = 0; right < n; ++right) {\n            ors = orNum(ors, nums[right], count);\n            while (ors >= k && left <= right) {\n                ans = Math.min(ans, right - left + 1);\n                ors = undoOrNum(ors, nums[left], count);\n                ++left;\n            }\n        }\n\n        return (ans == n + 1) ? -1 : ans;\n    }\n\n    private static final int kMaxBit = 30;\n\n    private int orNum(int ors, int num, int[] count) {\n        for (int i = 0; i < kMaxBit; ++i)\n            if ((num >> i & 1) == 1 && ++count[i] == 1)\n                ors += 1 << i;\n        return ors;\n    }\n\n    private int undoOrNum(int ors, int num, int[] count) {\n        for (int i = 0; i < kMaxBit; ++i)\n            if ((num >> i & 1) == 1 && --count[i] == 0)\n                ors -= 1 << i;\n        return ors;\n    }\n}"
+    }
+  },
+  "3102": {
+    "java": {
+      "ordered-set": ""
     }
   },
   "3104": {
