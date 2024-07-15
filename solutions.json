@@ -729,6 +729,11 @@
       "heap-(priority-queue)": ""
     }
   },
+  "359": {
+    "java": {
+      "data-stream": ""
+    }
+  },
   "360": {
     "java": {
       "two-pointers": "class Solution {\n    public int[] sortTransformedArray(int[] nums, int a, int b, int c) {\n        int n = nums.length;\n        int left = 0, right = n - 1, k = a < 0 ? 0 : n - 1;\n        int[] res = new int[n];\n        while (left <= right) {\n            int v1 = fn(a, b, c, nums[left]), v2 = fn(a, b, c, nums[right]);\n            if (a < 0) {\n                if (v1 <= v2) {\n                    res[k] = v1;\n                    ++left;\n                } else {\n                    res[k] = v2;\n                    --right;\n                }\n                ++k;\n            } else {\n                if (v1 >= v2) {\n                    res[k] = v1;\n                    ++left;\n                } else {\n                    res[k] = v2;\n                    --right;\n                }\n                --k;\n            }\n        }\n        return res;\n    }\n\n    private int fn(int a, int b, int c, int x) {\n        return a * x * x + b * x + c;\n    }\n}\n"
@@ -2030,6 +2035,11 @@
       "sliding-window": "public class Solution {\n    public int maxSumTwoNoOverlap(int[] nums, int L, int M) {\n        int n = nums.length;\n        int[] prefixSum = new int[n + 1];\n        \n        for (int i = 0; i < n; i++) {\n            prefixSum[i + 1] = prefixSum[i] + nums[i];\n        }\n        \n        int maxL = 0, maxM = 0, result = 0;\n        \n        for (int i = L + M; i <= n; i++) {\n            maxL = Math.max(maxL, prefixSum[i - M] - prefixSum[i - M - L]);\n            maxM = Math.max(maxM, prefixSum[i - L] - prefixSum[i - L - M]);\n            result = Math.max(result, Math.max(maxL + prefixSum[i] - prefixSum[i - M], maxM + prefixSum[i] - prefixSum[i - L]));\n        }\n        \n        return result;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums = {0, 6, 5, 2, 2, 5, 1, 9, 4};\n        int L = 1;\n        int M = 2;\n        System.out.println(solution.maxSumTwoNoOverlap(nums, L, M)); // Output: 20\n    }\n}\n"
     }
   },
+  "1032": {
+    "java": {
+      "data-stream": ""
+    }
+  },
   "1033": {
     "java": {
       "brainteaser": ""
@@ -3001,6 +3011,11 @@
   "1653": {
     "java": {
       "stack": ""
+    }
+  },
+  "1656": {
+    "java": {
+      "data-stream": ""
     }
   },
   "1658": {
