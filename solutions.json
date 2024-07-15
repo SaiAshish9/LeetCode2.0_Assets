@@ -279,6 +279,16 @@
       "stack": "import java.util.Stack;\n\nclass MinStack {\n    private Stack<Integer> stack;\n    private Stack<Integer> minStack;\n\n    public MinStack() {\n        stack = new Stack<>();\n        minStack = new Stack<>();\n    }\n\n    public void push(int val) {\n        stack.push(val);\n        if (minStack.isEmpty() || val <= minStack.peek()) {\n            minStack.push(val);\n        }\n    }\n\n    public void pop() {\n        if (stack.peek().equals(minStack.peek())) {\n            minStack.pop();\n        }\n        stack.pop();\n    }\n\n    public int top() {\n        return stack.peek();\n    }\n\n    public int getMin() {\n        return minStack.peek();\n    }\n}"
     }
   },
+  "157": {
+    "java": {
+      "interactive": ""
+    }
+  },
+  "158": {
+    "java": {
+      "interactive": ""
+    }
+  },
   "159": {
     "java": {
       "sliding-window": "class Solution {\n    public int lengthOfLongestSubstringTwoDistinct(String s) {\n        Map<Character, Integer> count = new HashMap<>();\n        int n = s.length();\n        int ans = 0;\n        int left = 0;\n        for (int right = 0; right < n; ++right) {\n            char c = s.charAt(right);\n            count.put(c, count.getOrDefault(c, 0) + 1);\n            while (count.size() > 2) {\n                char t = s.charAt(left++);\n                count.put(t, count.get(t) - 1);\n                if (count.get(t) == 0) {\n                    count.remove(t);\n                }\n            }\n            ans = Math.max(ans, right - left + 1);\n        }\n        return ans;\n    }\n}"
@@ -527,6 +537,11 @@
       "two-pointers": ""
     }
   },
+  "278": {
+    "java": {
+      "interactive": ""
+    }
+  },
   "281": {
     "java": {
       "iterator": "public class ZigzagIterator {\n    private int curr;\n    private int size;\n    private List<Integer> indexes = new ArrayList<>();\n    private List<List<Integer>> vectors = new ArrayList<>();\n\n    public ZigzagIterator(List<Integer> v1, List<Integer> v2) {\n        curr = 0;\n        size = 2;\n        indexes.add(0);\n        indexes.add(0);\n        vectors.add(v1);\n        vectors.add(v2);\n    }\n\n    public int next() {\n        List<Integer> vector = vectors.get(curr);\n        int index = indexes.get(curr);\n        int res = vector.get(index);\n        indexes.set(curr, index + 1);\n        curr = (curr + 1) % size;\n        return res;\n    }\n\n    public boolean hasNext() {\n        int start = curr;\n        while (indexes.get(curr) == vectors.get(curr).size()) {\n            curr = (curr + 1) % size;\n            if (start == curr) {\n                return false;\n            }\n        }\n        return true;\n    }\n}\n\n/**\n * Your ZigzagIterator object will be instantiated and called as such:\n * ZigzagIterator i = new ZigzagIterator(v1, v2);\n * while (i.hasNext()) v[dp()] = i.next();\n */"
@@ -767,6 +782,11 @@
   "373": {
     "java": {
       "heap-(priority-queue)": ""
+    }
+  },
+  "374": {
+    "java": {
+      "interactive": ""
     }
   },
   "378": {
@@ -1013,6 +1033,11 @@
   "488": {
     "java": {
       "stack": ""
+    }
+  },
+  "489": {
+    "java": {
+      "interactive": ""
     }
   },
   "490": {
@@ -1377,6 +1402,11 @@
       "binary-search-tree": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public TreeNode insertIntoBST(TreeNode root, int val) {\n        if (root == null) {\n            return new TreeNode(val);\n        }\n        \n        if (val < root.val) {\n            root.left = insertIntoBST(root.left, val);\n        } else {\n            root.right = insertIntoBST(root.right, val);\n        }\n        \n        return root;\n    }\n}\n"
     }
   },
+  "702": {
+    "java": {
+      "interactive": ""
+    }
+  },
   "703": {
     "java": {
       "binary-search-tree": "import java.util.PriorityQueue;\n\nclass KthLargest {\n    private PriorityQueue<Integer> minHeap;\n    private int k;\n\n    public KthLargest(int k, int[] nums) {\n        this.k = k;\n        this.minHeap = new PriorityQueue<>(k);\n        \n        for (int num : nums) {\n            add(num);\n        }\n    }\n    \n    public int add(int val) {\n        if (minHeap.size() < k) {\n            minHeap.offer(val);\n        } else if (val > minHeap.peek()) {\n            minHeap.poll();\n            minHeap.offer(val);\n        }\n        return minHeap.peek();\n    }\n}\n"
@@ -1655,6 +1685,11 @@
   "840": {
     "java": {
       "matrix": ""
+    }
+  },
+  "843": {
+    "java": {
+      "interactive": ""
     }
   },
   "844": {
@@ -2156,6 +2191,11 @@
       "heap-(priority-queue)": ""
     }
   },
+  "1095": {
+    "java": {
+      "interactive": ""
+    }
+  },
   "1096": {
     "java": {
       "stack": ""
@@ -2393,6 +2433,11 @@
       "sliding-window": "class Solution {\n  public int balancedString(String s) {\n  int n = s.length();\n  int k = n / 4;\n    int ans = n;\n    int[] count = new int[128];\n\n    for (final char c : s.toCharArray())\n      ++count[c];\n\n    for (int i = 0, j = 0; i < n; ++i) {\n      --count[s.charAt(i)];\n      while (j < n && count['Q'] <= k && count['W'] <= k && count['E'] <= k && count['R'] <= k) {\n        ans = Math.min(ans, i - j + 1);\n        ++count[s.charAt(j)];\n        ++j;\n      }\n    }\n\n    return ans;\n  }\n}"
     }
   },
+  "1236": {
+    "java": {
+      "interactive": ""
+    }
+  },
   "1237": {
     "java": {
       "two-pointers": ""
@@ -2451,6 +2496,11 @@
   "1268": {
     "java": {
       "heap-(priority-queue)": ""
+    }
+  },
+  "1274": {
+    "java": {
+      "interactive": ""
     }
   },
   "1275": {
@@ -2823,6 +2873,11 @@
       "monotonic-stack": ""
     }
   },
+  "1533": {
+    "java": {
+      "interactive": ""
+    }
+  },
   "1536": {
     "java": {
       "matrix": ""
@@ -2831,6 +2886,11 @@
   "1537": {
     "java": {
       "two-pointers": ""
+    }
+  },
+  "1538": {
+    "java": {
+      "interactive": ""
     }
   },
   "1541": {
@@ -2961,6 +3021,11 @@
   "1616": {
     "java": {
       "two-pointers": ""
+    }
+  },
+  "1618": {
+    "java": {
+      "interactive": ""
     }
   },
   "1628": {
@@ -3221,6 +3286,11 @@
   "1776": {
     "java": {
       "heap-(priority-queue)": ""
+    }
+  },
+  "1778": {
+    "java": {
+      "interactive": ""
     }
   },
   "1782": {
@@ -4800,6 +4870,11 @@
       "heap-(priority-queue)": ""
     }
   },
+  "2728": {
+    "java": {
+      "interactive": ""
+    }
+  },
   "2730": {
     "java": {
       "sliding-window": "class Solution {\n  public int longestSemiRepetitiveSubstring(String s) {\n    int ans = 1;\n    int prevStart = 0;\n    int start = 0;\n\n    for (int i = 1; i < s.length(); ++i) {\n      if (s.charAt(i) == s.charAt(i - 1)) {\n        if (prevStart > 0)\n          start = prevStart;\n        prevStart = i;\n      }\n      ans = Math.max(ans, i - start + 1);\n    }\n\n    return ans;\n  }\n}"
@@ -4878,6 +4953,11 @@
   "2781": {
     "java": {
       "sliding-window": "class Solution {\n    public int longestValidSubstring(String word, List<String> forbidden) {\n        int ans = 0;\n        Set<String> forbiddenSet = new HashSet<>(forbidden);\n\n        int right = word.length() - 1;\n        for (int left = word.length() - 1; left >= 0; --left) {\n            for (int end = left; end < Math.min(left + 10, right + 1); ++end)\n                if (forbiddenSet.contains(word.substring(left, end + 1))) {\n                    right = end - 1;\n                    break;\n                }\n            ans = Math.max(ans, right - left + 1);\n        }\n\n        return ans;\n    }\n}"
+    }
+  },
+  "2782": {
+    "java": {
+      "interactive": ""
     }
   },
   "2799": {
@@ -5043,6 +5123,11 @@
   "2935": {
     "java": {
       "sliding-window": "class TrieNode {\n    public TrieNode[] children = new TrieNode[2];\n    public int min = Integer.MAX_VALUE;\n    public int max = Integer.MIN_VALUE;\n}\n\nclass BitTrie {\n    public BitTrie(int maxBit) {\n        this.maxBit = maxBit;\n    }\n\n    public void insert(int num) {\n        TrieNode node = root;\n        for (int i = maxBit; i >= 0; --i) {\n            int bit = (int) (num >> i & 1);\n            if (node.children[bit] == null)\n                node.children[bit] = new TrieNode();\n            node = node.children[bit];\n            node.min = Math.min(node.min, num);\n            node.max = Math.max(node.max, num);\n        }\n    }\n\n    public int getMaxXor(int x) {\n        int maxXor = 0;\n        TrieNode node = root;\n        for (int i = maxBit; i >= 0; --i) {\n            int bit = (int) (x >> i & 1);\n            int toggleBit = bit ^ 1;\n            if (node.children[toggleBit] != null && node.children[toggleBit].max > x &&\n                    node.children[toggleBit].min <= 2 * x) {\n                maxXor = maxXor | 1 << i;\n                node = node.children[toggleBit];\n            } else if (node.children[bit] != null) {\n                node = node.children[bit];\n            } else {\n                return 0;\n            }\n        }\n        return maxXor;\n    }\n\n    private int maxBit;\n    private TrieNode root = new TrieNode();\n}\n\nclass Solution {\n    public int maximumStrongPairXor(int[] nums) {\n        int maxNum = Arrays.stream(nums).max().getAsInt();\n        int maxBit = (int) (Math.log(maxNum) / Math.log(2));\n        int ans = 0;\n        BitTrie bitTrie = new BitTrie(maxBit);\n\n        for (int num : nums)\n            bitTrie.insert(num);\n\n        for (int num : nums)\n            ans = Math.max(ans, bitTrie.getMaxXor(num));\n\n        return ans;\n    }\n}"
+    }
+  },
+  "2936": {
+    "java": {
+      "interactive": ""
     }
   },
   "2938": {
@@ -5230,6 +5315,11 @@
       "heap-(priority-queue)": ""
     }
   },
+  "3064": {
+    "java": {
+      "interactive": ""
+    }
+  },
   "3066": {
     "java": {
       "heap-(priority-queue)": ""
@@ -5278,6 +5368,11 @@
   "3092": {
     "java": {
       "heap-(priority-queue)": ""
+    }
+  },
+  "3094": {
+    "java": {
+      "interactive": ""
     }
   },
   "3095": {
