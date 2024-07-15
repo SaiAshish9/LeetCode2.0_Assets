@@ -18677,5 +18677,183 @@
         "difficulty": "Medium",
         "language": "Java",
         "acceptance": 28.3
+    },
+    "design_log_storage_system": {
+        "qno": "635",
+        "title": "Design Log Storage System",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Design",
+            "Ordered Set"
+        ],
+        "default": "Ordered Set",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 60.8
+    },
+    "falling_squares": {
+        "qno": "699",
+        "title": "Falling Squares",
+        "tags": [
+            "Array",
+            "Segment Tree",
+            "Ordered Set"
+        ],
+        "default": "Ordered Set",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 45.2
+    },
+    "range_module": {
+        "qno": "715",
+        "title": "Range Module",
+        "tags": [
+            "Design",
+            "Segment Tree",
+            "Ordered Set"
+        ],
+        "default": "Ordered Set",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 44
+    },
+    "display_table_of_food_orders_in_a_restaurant": {
+        "qno": "1418",
+        "title": "Display Table of Food Orders in a Restaurant",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Sorting",
+            "Ordered Set"
+        ],
+        "default": "Ordered Set",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 74.8
+    },
+    "amount_of_new_area_painted_each_day": {
+        "qno": "2158",
+        "title": "Amount of New Area Painted Each Day",
+        "tags": [
+            "Array",
+            "Segment Tree",
+            "Ordered Set"
+        ],
+        "default": "Ordered Set",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 55.3
+    },
+    "longest_substring_of_one_repeating_character": {
+        "qno": "2213",
+        "title": "Longest Substring of One Repeating Character",
+        "tags": [
+            "Array",
+            "String",
+            "Segment Tree",
+            "Ordered Set"
+        ],
+        "default": "Ordered Set",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 32.2
+    },
+    "count_integers_in_intervals": {
+        "qno": "2276",
+        "title": "Count Integers in Intervals",
+        "tags": [
+            "Design",
+            "Segment Tree",
+            "Ordered Set"
+        ],
+        "default": "Ordered Set",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 35.3
+    },
+    "merge_similar_items": {
+        "qno": "2363",
+        "title": "Merge Similar Items",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Sorting",
+            "Ordered Set"
+        ],
+        "default": "Ordered Set",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 75.7
+    },
+    "beautiful_pairs": {
+        "qno": "2613",
+        "title": "Beautiful Pairs",
+        "tags": [
+            "Array",
+            "Math",
+            "Divide and Conquer",
+            "Geometry",
+            "Sorting",
+            "Ordered Set"
+        ],
+        "default": "Ordered Set",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 43.4
+    },
+    "minimum_reverse_operations": {
+        "qno": "2612",
+        "title": "Minimum Reverse Operations",
+        "tags": [
+            "Array",
+            "Breadth-First Search",
+            "Ordered Set"
+        ],
+        "default": "Ordered Set",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 16.4
+    },
+    "sum_of_imbalance_numbers_of_all_subarrays": {
+        "qno": "2763",
+        "title": "Sum of Imbalance Numbers of All Subarrays",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Ordered Set"
+        ],
+        "default": "Ordered Set",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 46.6
+    },
+    "minimize_manhattan_distances": {
+        "qno": "3102",
+        "title": "Minimize Manhattan Distances",
+        "tags": [
+            "Array",
+            "Math",
+            "Geometry",
+            "Sorting",
+            "Ordered Set"
+        ],
+        "default": "Ordered Set",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 32.2
+    },
+    "maximum_increasing_triplet_value": {
+        "qno": "3073",
+        "title": "Maximum Increasing Triplet Value",
+        "tags": [
+            "Array",
+            "Ordered Set"
+        ],
+        "default": "Ordered Set",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 43
     }
 }
