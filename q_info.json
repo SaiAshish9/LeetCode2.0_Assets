@@ -18339,7 +18339,11 @@
     "read_n_characters_given_read4": {
         "qno": "157",
         "title": "Read N Characters Given Read4",
-        "tags": [],
+        "tags": [
+            "Array",
+            "Simulation",
+            "Interactive"
+        ],
         "default": "Interactive",
         "difficulty": "Easy",
         "language": "Java",
@@ -18348,7 +18352,11 @@
     "read_n_characters_given_read4_ii_-_call_multiple_times": {
         "qno": "158",
         "title": "Read N Characters Given read4 II - Call Multiple Times",
-        "tags": [],
+        "tags": [
+            "Array",
+            "Simulation",
+            "Interactive"
+        ],
         "default": "Interactive",
         "difficulty": "Hard",
         "language": "Java",
@@ -18357,7 +18365,10 @@
     "robot_room_cleaner": {
         "qno": "489",
         "title": "Robot Room Cleaner",
-        "tags": [],
+        "tags": [
+            "Backtracking",
+            "Interactive"
+        ],
         "default": "Interactive",
         "difficulty": "Hard",
         "language": "Java",
@@ -18366,7 +18377,13 @@
     "guess_the_word": {
         "qno": "843",
         "title": "Guess the Word",
-        "tags": [],
+        "tags": [
+            "Array",
+            "Math",
+            "String",
+            "Interactive",
+            "Game Theory"
+        ],
         "default": "Interactive",
         "difficulty": "Hard",
         "language": "Java",
@@ -18375,7 +18392,11 @@
     "number_of_ships_in_a_rectangle": {
         "qno": "1274",
         "title": "Number of Ships in a Rectangle",
-        "tags": [],
+        "tags": [
+            "Array",
+            "Divide and Conquer",
+            "Interactive"
+        ],
         "default": "Interactive",
         "difficulty": "Hard",
         "language": "Java",
@@ -18384,7 +18405,12 @@
     "web_crawler": {
         "qno": "1236",
         "title": "Web Crawler",
-        "tags": [],
+        "tags": [
+            "String",
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Interactive"
+        ],
         "default": "Interactive",
         "difficulty": "Medium",
         "language": "Java",
@@ -18393,7 +18419,11 @@
     "guess_the_majority_in_a_hidden_array": {
         "qno": "1538",
         "title": "Guess the Majority in a Hidden Array",
-        "tags": [],
+        "tags": [
+            "Array",
+            "Math",
+            "Interactive"
+        ],
         "default": "Interactive",
         "difficulty": "Medium",
         "language": "Java",
@@ -18402,7 +18432,12 @@
     "shortest_path_in_a_hidden_grid": {
         "qno": "1778",
         "title": "Shortest Path in a Hidden Grid",
-        "tags": [],
+        "tags": [
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Graph",
+            "Interactive"
+        ],
         "default": "Interactive",
         "difficulty": "Medium",
         "language": "Java",
@@ -18411,7 +18446,10 @@
     "count_houses_in_a_circular_street": {
         "qno": "2728",
         "title": "Count Houses in a Circular Street",
-        "tags": [],
+        "tags": [
+            "Array",
+            "Interactive"
+        ],
         "default": "Interactive",
         "difficulty": "Easy",
         "language": "Java",
@@ -18420,7 +18458,11 @@
     "number_of_unique_categories": {
         "qno": "2782",
         "title": "Number of Unique Categories",
-        "tags": [],
+        "tags": [
+            "Union Find",
+            "Interactive",
+            "Counting"
+        ],
         "default": "Interactive",
         "difficulty": "Medium",
         "language": "Java",
@@ -18429,7 +18471,10 @@
     "guess_the_number_using_bitwise_questions_i": {
         "qno": "3064",
         "title": "Guess the Number Using Bitwise Questions I",
-        "tags": [],
+        "tags": [
+            "Bit Manipulation",
+            "Interactive"
+        ],
         "default": "Interactive",
         "difficulty": "Medium",
         "language": "Java",
@@ -18438,7 +18483,10 @@
     "guess_the_number_using_bitwise_questions_ii": {
         "qno": "3094",
         "title": "Guess the Number Using Bitwise Questions II",
-        "tags": [],
+        "tags": [
+            "Bit Manipulation",
+            "Interactive"
+        ],
         "default": "Interactive",
         "difficulty": "Medium",
         "language": "Java",
