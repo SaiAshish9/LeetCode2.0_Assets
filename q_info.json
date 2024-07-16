@@ -23281,5 +23281,208 @@
         "difficulty": "Medium",
         "language": "Java",
         "acceptance": 38.1
+    },
+    "shortest_palindrome": {
+        "qno": "214",
+        "title": "Shortest Palindrome",
+        "tags": [
+            "String",
+            "Rolling Hash",
+            "String Matching",
+            "Hash Function"
+        ],
+        "default": "Rolling Hash",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 33.7
+    },
+    "distinct_echo_substrings": {
+        "qno": "1316",
+        "title": "Distinct Echo Substrings",
+        "tags": [
+            "String",
+            "Trie",
+            "Rolling Hash",
+            "Hash Function"
+        ],
+        "default": "Rolling Hash",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 50.6
+    },
+    "maximum_product_of_the_length_of_two_palindromic_substrings": {
+        "qno": "1960",
+        "title": "Maximum Product of the Length of Two Palindromic Substrings",
+        "tags": [
+            "String",
+            "Rolling Hash",
+            "Hash Function"
+        ],
+        "default": "Rolling Hash",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 30.7
+    },
+    "longest_happy_prefix": {
+        "qno": "1392",
+        "title": "Longest Happy Prefix",
+        "tags": [
+            "String",
+            "Rolling Hash",
+            "String Matching",
+            "Hash Function"
+        ],
+        "default": "Rolling Hash",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 46.3
+    },
+    "check_if_a_string_contains_all_binary_codes_of_size_k": {
+        "qno": "1461",
+        "title": "Check If a String Contains All Binary Codes of Size K",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Bit Manipulation",
+            "Rolling Hash",
+            "Hash Function"
+        ],
+        "default": "Rolling Hash",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 56.5
+    },
+    "strings_differ_by_one_character": {
+        "qno": "1554",
+        "title": "Strings Differ by One Character",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Rolling Hash",
+            "Hash Function"
+        ],
+        "default": "Rolling Hash",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 41.7
+    },
+    "unique_substrings_with_equal_digit_frequency": {
+        "qno": "2168",
+        "title": "Unique Substrings With Equal Digit Frequency",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Rolling Hash",
+            "Counting",
+            "Hash Function"
+        ],
+        "default": "Rolling Hash",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 59.9
+    },
+    "k_divisible_elements_subarrays": {
+        "qno": "2261",
+        "title": "K Divisible Elements Subarrays",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Trie",
+            "Rolling Hash",
+            "Hash Function",
+            "Enumeration"
+        ],
+        "default": "Rolling Hash",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 51.7
+    },
+    "number_of_subarrays_that_match_a_pattern_i": {
+        "qno": "3034",
+        "title": "Number of Subarrays That Match a Pattern I",
+        "tags": [
+            "Array",
+            "Rolling Hash",
+            "String Matching",
+            "Hash Function"
+        ],
+        "default": "Rolling Hash",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 66.6
+    },
+    "number_of_subarrays_that_match_a_pattern_ii": {
+        "qno": "3036",
+        "title": "Number of Subarrays That Match a Pattern II",
+        "tags": [
+            "Array",
+            "Rolling Hash",
+            "String Matching",
+            "Hash Function"
+        ],
+        "default": "Rolling Hash",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 32.4
+    },
+    "minimum_time_to_revert_word_to_initial_state_ii": {
+        "qno": "3031",
+        "title": "Minimum Time to Revert Word to Initial State II",
+        "tags": [
+            "String",
+            "Rolling Hash",
+            "String Matching",
+            "Hash Function"
+        ],
+        "default": "Rolling Hash",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 35.6
+    },
+    "minimum_time_to_revert_word_to_initial_state_i": {
+        "qno": "3029",
+        "title": "Minimum Time to Revert Word to Initial State I",
+        "tags": [
+            "String",
+            "Rolling Hash",
+            "String Matching",
+            "Hash Function"
+        ],
+        "default": "Rolling Hash",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 40.8
+    },
+    "count_prefix_and_suffix_pairs_ii": {
+        "qno": "3045",
+        "title": "Count Prefix and Suffix Pairs II",
+        "tags": [
+            "Array",
+            "String",
+            "Trie",
+            "Rolling Hash",
+            "String Matching",
+            "Hash Function"
+        ],
+        "default": "Rolling Hash",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 24.8
+    },
+    "count_prefix_and_suffix_pairs_i": {
+        "qno": "3042",
+        "title": "Count Prefix and Suffix Pairs I",
+        "tags": [
+            "Array",
+            "String",
+            "Trie",
+            "Rolling Hash",
+            "String Matching",
+            "Hash Function"
+        ],
+        "default": "Rolling Hash",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 65.1
     }
 }
