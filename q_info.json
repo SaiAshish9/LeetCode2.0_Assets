@@ -1202,7 +1202,7 @@
             "Suffix Array",
             "Hash Function"
         ],
-        "default": "Binary Search",
+        "default": "Suffix Array",
         "difficulty": "Hard",
         "language": "Java",
         "acceptance": 30.6
