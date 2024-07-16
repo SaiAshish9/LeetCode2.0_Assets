@@ -540,6 +540,11 @@
       "dynamic-programming": ""
     }
   },
+  "214": {
+    "java": {
+      "rolling-hash": ""
+    }
+  },
   "215": {
     "java": {
       "quickselect": "public class Solution {\n    public int findKthLargest(int[] nums, int k) {\n        int left = 0, right = nums.length - 1;\n        Random rand = new Random();\n        while (true) {\n            int pivot_index = left + rand.nextInt(right - left + 1);\n            int new_pivot_index = partition(nums, left, right, pivot_index);\n            if (new_pivot_index == nums.length - k) {\n                return nums[new_pivot_index];\n            } else if (new_pivot_index > nums.length - k) {\n                right = new_pivot_index - 1;\n            } else {\n                left = new_pivot_index + 1;\n            }\n        }\n    }\n\n    private int partition(int[] nums, int left, int right, int pivot_index) {\n        int pivot = nums[pivot_index];\n        swap(nums, pivot_index, right);\n        int stored_index = left;\n        for (int i = left; i < right; i++) {\n            if (nums[i] < pivot) {\n                swap(nums, i, stored_index);\n                stored_index++;\n            }\n        }\n        swap(nums, right, stored_index);\n        return stored_index;\n    }\n\n    private void swap(int[] nums, int i, int j) {\n        int temp = nums[i];\n        nums[i] = nums[j];\n        nums[j] = temp;\n    }\n}",
@@ -3398,6 +3403,11 @@
       "matrix": ""
     }
   },
+  "1316": {
+    "java": {
+      "rolling-hash": ""
+    }
+  },
   "1320": {
     "java": {
       "dynamic-programming": ""
@@ -3558,6 +3568,11 @@
       "matrix": ""
     }
   },
+  "1392": {
+    "java": {
+      "rolling-hash": ""
+    }
+  },
   "1395": {
     "java": {
       "dynamic-programming": ""
@@ -3686,6 +3701,11 @@
   "1458": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "1461": {
+    "java": {
+      "rolling-hash": ""
     }
   },
   "1462": {
@@ -3886,6 +3906,11 @@
   "1553": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "1554": {
+    "java": {
+      "rolling-hash": ""
     }
   },
   "1559": {
@@ -4828,6 +4853,11 @@
       "dynamic-programming": ""
     }
   },
+  "1960": {
+    "java": {
+      "rolling-hash": ""
+    }
+  },
   "1961": {
     "java": {
       "two-pointers": ""
@@ -5284,6 +5314,11 @@
       "dynamic-programming": ""
     }
   },
+  "2168": {
+    "java": {
+      "rolling-hash": ""
+    }
+  },
   "2171": {
     "java": {
       "prefix-sum": ""
@@ -5457,6 +5492,11 @@
   "2260": {
     "java": {
       "sliding-window": "class Solution {\n  public int minimumCardPickup(int[] cards) {\n    int ans = Integer.MAX_VALUE;\n    Map<Integer, Integer> seen = new HashMap<>();\n\n    for (int i = 0; i < cards.length; ++i) {\n      if (seen.containsKey(cards[i]))\n        ans = Math.min(ans, i - seen.get(cards[i]) + 1);\n      seen.put(cards[i], i);\n    }\n\n    return ans == Integer.MAX_VALUE ? -1 : ans;\n  }\n}"
+    }
+  },
+  "2261": {
+    "java": {
+      "rolling-hash": ""
     }
   },
   "2262": {
@@ -7175,9 +7215,19 @@
       "prefix-sum": ""
     }
   },
+  "3029": {
+    "java": {
+      "rolling-hash": ""
+    }
+  },
   "3030": {
     "java": {
       "matrix": ""
+    }
+  },
+  "3031": {
+    "java": {
+      "rolling-hash": ""
     }
   },
   "3032": {
@@ -7188,6 +7238,16 @@
   "3033": {
     "java": {
       "matrix": ""
+    }
+  },
+  "3034": {
+    "java": {
+      "rolling-hash": ""
+    }
+  },
+  "3036": {
+    "java": {
+      "rolling-hash": ""
     }
   },
   "3037": {
@@ -7205,9 +7265,19 @@
       "dynamic-programming": ""
     }
   },
+  "3042": {
+    "java": {
+      "rolling-hash": ""
+    }
+  },
   "3044": {
     "java": {
       "matrix": ""
+    }
+  },
+  "3045": {
+    "java": {
+      "rolling-hash": ""
     }
   },
   "3049": {
