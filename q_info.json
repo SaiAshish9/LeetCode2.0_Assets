@@ -25195,5 +25195,81 @@
         "difficulty": "Medium",
         "language": "Java",
         "acceptance": 86.1
+    },
+    "majority_element": {
+        "qno": "169",
+        "title": "Majority Element",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Divide and Conquer",
+            "Sorting",
+            "Counting"
+        ],
+        "default": "Divide and Conquer",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 65
+    },
+    "reverse_bits": {
+        "qno": "190",
+        "title": "Reverse Bits",
+        "tags": [
+            "Divide and Conquer",
+            "Bit Manipulation"
+        ],
+        "default": "Divide and Conquer",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 59.4
+    },
+    "number_of_1_bits": {
+        "qno": "191",
+        "title": "Number of 1 Bits",
+        "tags": [
+            "Divide and Conquer",
+            "Bit Manipulation"
+        ],
+        "default": "Divide and Conquer",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 71.7
+    },
+    "super_pow": {
+        "qno": "372",
+        "title": "Super Pow",
+        "tags": [
+            "Math",
+            "Divide and Conquer"
+        ],
+        "default": "Divide and Conquer",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 35.1
+    },
+    "beautiful_array": {
+        "qno": "932",
+        "title": "Beautiful Array",
+        "tags": [
+            "Array",
+            "Math",
+            "Divide and Conquer"
+        ],
+        "default": "Divide and Conquer",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 65.9
+    },
+    "find_array_given_subset_sums": {
+        "qno": "1982",
+        "title": "Find Array Given Subset Sums",
+        "tags": [
+            "Array",
+            "Divide and Conquer"
+        ],
+        "default": "Divide and Conquer",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 49.2
     }
 }
