@@ -24896,5 +24896,304 @@
         "difficulty": "Medium",
         "language": "Java",
         "acceptance": 62.6
+    },
+    "add_two_numbers": {
+        "qno": "2",
+        "title": "Add Two Numbers",
+        "tags": [
+            "Linked List",
+            "Math",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 43.5
+    },
+    "merge_two_sorted_lists": {
+        "qno": "21",
+        "title": "Merge Two Sorted Lists",
+        "tags": [
+            "Linked List",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 64.8
+    },
+    "swap_nodes_in_pairs": {
+        "qno": "24",
+        "title": "Swap Nodes in Pairs",
+        "tags": [
+            "Linked List",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 64.8
+    },
+    "reverse_nodes_in_k-group": {
+        "qno": "25",
+        "title": "Reverse Nodes in k-Group",
+        "tags": [
+            "Linked List",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 59.6
+    },
+    "pow(x,_n)": {
+        "qno": "50",
+        "title": "Pow(x, n)",
+        "tags": [
+            "Math",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 35.2
+    },
+    "permutation_sequence": {
+        "qno": "60",
+        "title": "Permutation Sequence",
+        "tags": [
+            "Math",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 47.6
+    },
+    "remove_linked_list_elements": {
+        "qno": "203",
+        "title": "Remove Linked List Elements",
+        "tags": [
+            "Linked List",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 49.3
+    },
+    "reverse_linked_list": {
+        "qno": "206",
+        "title": "Reverse Linked List",
+        "tags": [
+            "Linked List",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 77.1
+    },
+    "power_of_two": {
+        "qno": "231",
+        "title": "Power of Two",
+        "tags": [
+            "Math",
+            "Bit Manipulation",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 47.9
+    },
+    "strobogrammatic_number_ii": {
+        "qno": "247",
+        "title": "Strobogrammatic Number II",
+        "tags": [
+            "Array",
+            "String",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 52.5
+    },
+    "strobogrammatic_number_iii": {
+        "qno": "248",
+        "title": "Strobogrammatic Number III",
+        "tags": [
+            "Array",
+            "String",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 42.2
+    },
+    "integer_to_english_words": {
+        "qno": "273",
+        "title": "Integer to English Words",
+        "tags": [
+            "Math",
+            "String",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 30.9
+    },
+    "power_of_three": {
+        "qno": "326",
+        "title": "Power of Three",
+        "tags": [
+            "Math",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 46.8
+    },
+    "power_of_four": {
+        "qno": "342",
+        "title": "Power of Four",
+        "tags": [
+            "Math",
+            "Bit Manipulation",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 48.2
+    },
+    "elimination_game": {
+        "qno": "390",
+        "title": "Elimination Game",
+        "tags": [
+            "Math",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 45.9
+    },
+    "output_contest_matches": {
+        "qno": "544",
+        "title": "Output Contest Matches",
+        "tags": [
+            "String",
+            "Recursion",
+            "Simulation"
+        ],
+        "default": "Recursion",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 77.2
+    },
+    "special_binary_string": {
+        "qno": "761",
+        "title": "Special Binary String",
+        "tags": [
+            "String",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 61.3
+    },
+    "k-th_symbol_in_grammar": {
+        "qno": "779",
+        "title": "K-th Symbol in Grammar",
+        "tags": [
+            "Math",
+            "Bit Manipulation",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 46.6
+    },
+    "find_kth_bit_in_nth_binary_string": {
+        "qno": "1545",
+        "title": "Find Kth Bit in Nth Binary String",
+        "tags": [
+            "String",
+            "Recursion",
+            "Simulation"
+        ],
+        "default": "Recursion",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 58.9
+    },
+    "maximize_number_of_nice_divisors": {
+        "qno": "1808",
+        "title": "Maximize Number of Nice Divisors",
+        "tags": [
+            "Math",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 33.1
+    },
+    "count_good_numbers": {
+        "qno": "1922",
+        "title": "Count Good Numbers",
+        "tags": [
+            "Math",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 45.7
+    },
+    "minimum_non-zero_product_of_the_array_elements": {
+        "qno": "1969",
+        "title": "Minimum Non-Zero Product of the Array Elements",
+        "tags": [
+            "Math",
+            "Greedy",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 35.5
+    },
+    "count_collisions_of_monkeys_on_a_polygon": {
+        "qno": "2550",
+        "title": "Count Collisions of Monkeys on a Polygon",
+        "tags": [
+            "Math",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 27.6
+    },
+    "generate_binary_strings_without_adjacent_zeros": {
+        "qno": "3211",
+        "title": "Generate Binary Strings Without Adjacent Zeros",
+        "tags": [
+            "String",
+            "Bit Manipulation",
+            "Recursion"
+        ],
+        "default": "Recursion",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 86.1
     }
 }
