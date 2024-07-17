@@ -673,7 +673,9 @@
     "Bitmask": [],
     "Segment Tree": [],
     "Geometry": [],
-    "Binary Indexed Tree": [],
+    "Binary Indexed Tree": [
+        2179
+    ],
     "String Matching": [
         214
     ],
