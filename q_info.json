@@ -23484,5 +23484,94 @@
         "difficulty": "Easy",
         "language": "Java",
         "acceptance": 65.1
+    },
+    "encode_and_decode_tinyurl": {
+        "qno": "535",
+        "title": "Encode and Decode TinyURL",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Design",
+            "Hash Function"
+        ],
+        "default": "Hash Function",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 86.4
+    },
+    "number_of_distinct_islands": {
+        "qno": "694",
+        "title": "Number of Distinct Islands",
+        "tags": [
+            "Hash Table",
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Union Find",
+            "Hash Function"
+        ],
+        "default": "Hash Function",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 61.4
+    },
+    "number_of_distinct_islands_ii": {
+        "qno": "711",
+        "title": "Number of Distinct Islands II",
+        "tags": [
+            "Hash Table",
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Union Find",
+            "Hash Function"
+        ],
+        "default": "Hash Function",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 53
+    },
+    "design_hashset": {
+        "qno": "705",
+        "title": "Design HashSet",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Linked List",
+            "Design",
+            "Hash Function"
+        ],
+        "default": "Hash Function",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 67.1
+    },
+    "design_hashmap": {
+        "qno": "706",
+        "title": "Design HashMap",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Linked List",
+            "Design",
+            "Hash Function"
+        ],
+        "default": "Hash Function",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 65.6
+    },
+    "delete_duplicate_folders_in_system": {
+        "qno": "1948",
+        "title": "Delete Duplicate Folders in System",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Trie",
+            "Hash Function"
+        ],
+        "default": "Hash Function",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 55.5
     }
 }

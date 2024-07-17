@@ -592,7 +592,9 @@
     "Segment Tree": [],
     "Geometry": [],
     "Memoization": [],
-    "Hash Function": [],
+    "Hash Function": [
+        
+    ],
     "Binary Indexed Tree": [],
     "Combinatorics": [],
     "String Matching": [],
