@@ -28763,5 +28763,287 @@
       "difficulty": "Easy",
       "language": "Java",
       "acceptance": 41.9
+    },
+    "remove_duplicates_from_sorted_list": {
+      "qno": "83",
+      "title": "Remove Duplicates from Sorted List",
+      "tags": [
+        "Linked List"
+      ],
+      "default": "Linked List",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 53
+    },
+    "reverse_linked_list_ii": {
+      "qno": "92",
+      "title": "Reverse Linked List II",
+      "tags": [
+        "Linked List"
+      ],
+      "default": "Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48
+    },
+    "copy_list_with_random_pointer": {
+      "qno": "138",
+      "title": "Copy List with Random Pointer",
+      "tags": [
+        "Hash Table",
+        "Linked List"
+      ],
+      "default": "Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.9
+    },
+    "insertion_sort_list": {
+      "qno": "147",
+      "title": "Insertion Sort List",
+      "tags": [
+        "Linked List",
+        "Sorting"
+      ],
+      "default": "Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.1
+    },
+    "delete_node_in_a_linked_list": {
+      "qno": "237",
+      "title": "Delete Node in a Linked List",
+      "tags": [
+        "Linked List"
+      ],
+      "default": "Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 80.3
+    },
+    "odd_even_linked_list": {
+      "qno": "328",
+      "title": "Odd Even Linked List",
+      "tags": [
+        "Linked List"
+      ],
+      "default": "Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.5
+    },
+    "plus_one_linked_list": {
+      "qno": "369",
+      "title": "Plus One Linked List",
+      "tags": [
+        "Linked List",
+        "Math"
+      ],
+      "default": "Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.1
+    },
+    "split_linked_list_in_parts": {
+      "qno": "725",
+      "title": "Split Linked List in Parts",
+      "tags": [
+        "Linked List"
+      ],
+      "default": "Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.2
+    },
+    "linked_list_components": {
+      "qno": "817",
+      "title": "Linked List Components",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Linked List"
+      ],
+      "default": "Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.9
+    },
+    "design_linked_list": {
+      "qno": "707",
+      "title": "Design Linked List",
+      "tags": [
+        "Linked List",
+        "Design"
+      ],
+      "default": "Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 28.3
+    },
+    "insert_into_a_sorted_circular_linked_list": {
+      "qno": "708",
+      "title": "Insert into a Sorted Circular Linked List",
+      "tags": [
+        "Linked List"
+      ],
+      "default": "Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.4
+    },
+    "remove_zero_sum_consecutive_nodes_from_linked_list": {
+      "qno": "1171",
+      "title": "Remove Zero Sum Consecutive Nodes from Linked List",
+      "tags": [
+        "Hash Table",
+        "Linked List"
+      ],
+      "default": "Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52.8
+    },
+    "design_skiplist": {
+      "qno": "1206",
+      "title": "Design Skiplist",
+      "tags": [
+        "Linked List",
+        "Design"
+      ],
+      "default": "Linked List",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 61.7
+    },
+    "convert_binary_number_in_a_linked_list_to_integer": {
+      "qno": "1290",
+      "title": "Convert Binary Number in a Linked List to Integer",
+      "tags": [
+        "Linked List",
+        "Math"
+      ],
+      "default": "Linked List",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 81.1
+    },
+    "delete_n_nodes_after_m_nodes_of_a_linked_list": {
+      "qno": "1474",
+      "title": "Delete N Nodes After M Nodes of a Linked List",
+      "tags": [
+        "Linked List"
+      ],
+      "default": "Linked List",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 73.2
+    },
+    "merge_in_between_linked_lists": {
+      "qno": "1669",
+      "title": "Merge In Between Linked Lists",
+      "tags": [
+        "Linked List"
+      ],
+      "default": "Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 81.6
+    },
+    "design_authentication_manager": {
+      "qno": "1797",
+      "title": "Design Authentication Manager",
+      "tags": [
+        "Hash Table",
+        "Linked List",
+        "Design",
+        "Doubly-Linked List"
+      ],
+      "default": "Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.5
+    },
+    "remove_duplicates_from_an_unsorted_linked_list": {
+      "qno": "1836",
+      "title": "Remove Duplicates From an Unsorted Linked List",
+      "tags": [
+        "Hash Table",
+        "Linked List"
+      ],
+      "default": "Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 74.3
+    },
+    "find_the_minimum_and_maximum_number_of_nodes_between_critical_points": {
+      "qno": "2058",
+      "title": "Find the Minimum and Maximum Number of Nodes Between Critical Points",
+      "tags": [
+        "Linked List"
+      ],
+      "default": "Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 69.8
+    },
+    "reverse_nodes_in_even_length_groups": {
+      "qno": "2074",
+      "title": "Reverse Nodes in Even Length Groups",
+      "tags": [
+        "Linked List"
+      ],
+      "default": "Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58
+    },
+    "merge_nodes_in_between_zeros": {
+      "qno": "2181",
+      "title": "Merge Nodes in Between Zeros",
+      "tags": [
+        "Linked List",
+        "Simulation"
+      ],
+      "default": "Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 89.9
+    },
+    "linked_list_frequency": {
+      "qno": "3063",
+      "title": "Linked List Frequency",
+      "tags": [
+        "Hash Table",
+        "Linked List",
+        "Counting"
+      ],
+      "default": "Linked List",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 86.2
+    },
+    "winner_of_the_linked_list_game": {
+      "qno": "3062",
+      "title": "Winner of the Linked List Game",
+      "tags": [
+        "Linked List"
+      ],
+      "default": "Linked List",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 81.1
+    },
+    "delete_nodes_from_linked_list_present_in_array": {
+      "qno": "3217",
+      "title": "Delete Nodes From Linked List Present in Array",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Linked List"
+      ],
+      "default": "Linked List",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.5
     }
-}
+  }
