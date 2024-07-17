@@ -620,6 +620,10 @@
         2550,
         3211
     ],
+    "Divide and Conquer": [
+        4,
+        53
+    ],
     "Hash Table": [
         1,
         522,
@@ -665,10 +669,6 @@
     ],
     "Number Theory": [],
     "Trie": [],
-    "Divide and Conquer": [
-        4,
-        53
-    ],
     "Bitmask": [],
     "Segment Tree": [],
     "Geometry": [],
