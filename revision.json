@@ -618,7 +618,11 @@
     "Geometry": [],
     "Memoization": [],
     "Binary Indexed Tree": [],
-    "Combinatorics": [],
+    "Combinatorics": [
+        1467,
+        1569,
+        3179
+    ],
     "String Matching": [
         214
     ],
