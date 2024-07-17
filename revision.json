@@ -721,7 +721,12 @@
     "Segment Tree": [],
     "Geometry": [
         587,
-        963
+        963,
+        1266,
+        1401,
+        2481,
+        3025,
+        3047
     ],
     "Binary Indexed Tree": [
         2179
