@@ -26302,5 +26302,992 @@
         "difficulty": "Hard",
         "language": "Java",
         "acceptance": 40.7
+    },
+    "divide_two_integers": {
+        "qno": "29",
+        "title": "Divide Two Integers",
+        "tags": [
+            "Math",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 17.6
+    },
+    "add_binary": {
+        "qno": "67",
+        "title": "Add Binary",
+        "tags": [
+            "Math",
+            "String",
+            "Bit Manipulation",
+            "Simulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 54
+    },
+    "single_number": {
+        "qno": "136",
+        "title": "Single Number",
+        "tags": [
+            "Array",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 73.5
+    },
+    "single_number_ii": {
+        "qno": "137",
+        "title": "Single Number II",
+        "tags": [
+            "Array",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 63.3
+    },
+    "bitwise_and_of_numbers_range": {
+        "qno": "201",
+        "title": "Bitwise AND of Numbers Range",
+        "tags": [
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 47.1
+    },
+    "single_number_iii": {
+        "qno": "260",
+        "title": "Single Number III",
+        "tags": [
+            "Array",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 70.8
+    },
+    "palindrome_permutation": {
+        "qno": "266",
+        "title": "Palindrome Permutation",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 67.5
+    },
+    "maximum_product_of_word_lengths": {
+        "qno": "318",
+        "title": "Maximum Product of Word Lengths",
+        "tags": [
+            "Array",
+            "String",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 60.1
+    },
+    "sum_of_two_integers": {
+        "qno": "371",
+        "title": "Sum of Two Integers",
+        "tags": [
+            "Math",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 52.2
+    },
+    "find_the_difference": {
+        "qno": "389",
+        "title": "Find the Difference",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Bit Manipulation",
+            "Sorting"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 59.6
+    },
+    "utf-8_validation": {
+        "qno": "393",
+        "title": "UTF-8 Validation",
+        "tags": [
+            "Array",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 45.2
+    },
+    "convert_a_number_to_hexadecimal": {
+        "qno": "405",
+        "title": "Convert a Number to Hexadecimal",
+        "tags": [
+            "Math",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 48.9
+    },
+    "hamming_distance": {
+        "qno": "461",
+        "title": "Hamming Distance",
+        "tags": [
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 75.5
+    },
+    "number_complement": {
+        "qno": "476",
+        "title": "Number Complement",
+        "tags": [
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 67.7
+    },
+    "total_hamming_distance": {
+        "qno": "477",
+        "title": "Total Hamming Distance",
+        "tags": [
+            "Array",
+            "Math",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 52.8
+    },
+    "set_mismatch": {
+        "qno": "645",
+        "title": "Set Mismatch",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Bit Manipulation",
+            "Sorting"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 44.5
+    },
+    "bulb_switcher_ii": {
+        "qno": "672",
+        "title": "Bulb Switcher II",
+        "tags": [
+            "Math",
+            "Bit Manipulation",
+            "Depth-First Search",
+            "Breadth-First Search"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 50.2
+    },
+    "binary_number_with_alternating_bits": {
+        "qno": "693",
+        "title": "Binary Number with Alternating Bits",
+        "tags": [
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 62.7
+    },
+    "ip_to_cidr": {
+        "qno": "751",
+        "title": "IP to CIDR",
+        "tags": [
+            "String",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 55.5
+    },
+    "pyramid_transition_matrix": {
+        "qno": "756",
+        "title": "Pyramid Transition Matrix",
+        "tags": [
+            "Bit Manipulation",
+            "Depth-First Search",
+            "Breadth-First Search"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 52.9
+    },
+    "prime_number_of_set_bits_in_binary_representation": {
+        "qno": "762",
+        "title": "Prime Number of Set Bits in Binary Representation",
+        "tags": [
+            "Math",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 69.7
+    },
+    "binary_gap": {
+        "qno": "868",
+        "title": "Binary Gap",
+        "tags": [
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 63.6
+    },
+    "prison_cells_after_n_days": {
+        "qno": "957",
+        "title": "Prison Cells After N Days",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Math",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 39
+    },
+    "triples_with_bitwise_and_equal_to_zero": {
+        "qno": "982",
+        "title": "Triples with Bitwise AND Equal To Zero",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 58.3
+    },
+    "complement_of_base_10_integer": {
+        "qno": "1009",
+        "title": "Complement of Base 10 Integer",
+        "tags": [
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 60.8
+    },
+    "binary_prefix_divisible_by_5": {
+        "qno": "1018",
+        "title": "Binary Prefix Divisible By 5",
+        "tags": [
+            "Array",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 46.8
+    },
+    "encode_number": {
+        "qno": "1256",
+        "title": "Encode Number",
+        "tags": [
+            "Math",
+            "String",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 69.8
+    },
+    "minimum_flips_to_make_a_or_b_equal_to_c": {
+        "qno": "1318",
+        "title": "Minimum Flips to Make a OR b Equal to c",
+        "tags": [
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 71.1
+    },
+    "number_of_steps_to_reduce_a_number_to_zero": {
+        "qno": "1342",
+        "title": "Number of Steps to Reduce a Number to Zero",
+        "tags": [
+            "Math",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 85.2
+    },
+    "sort_integers_by_the_number_of_1_bits": {
+        "qno": "1356",
+        "title": "Sort Integers by The Number of 1 Bits",
+        "tags": [
+            "Array",
+            "Bit Manipulation",
+            "Sorting",
+            "Counting"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 78.3
+    },
+    "cinema_seat_allocation": {
+        "qno": "1386",
+        "title": "Cinema Seat Allocation",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Greedy",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 42.1
+    },
+    "number_of_steps_to_reduce_a_number_in_binary_representation_to_one": {
+        "qno": "1404",
+        "title": "Number of Steps to Reduce a Number in Binary Representation to One",
+        "tags": [
+            "String",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 61.5
+    },
+    "xor_operation_in_an_array": {
+        "qno": "1486",
+        "title": "XOR Operation in an Array",
+        "tags": [
+            "Math",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 86
+    },
+    "minimum_numbers_of_function_calls_to_make_target_array": {
+        "qno": "1558",
+        "title": "Minimum Numbers of Function Calls to Make Target Array",
+        "tags": [
+            "Array",
+            "Greedy",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 63.6
+    },
+    "find_longest_awesome_substring": {
+        "qno": "1542",
+        "title": "Find Longest Awesome Substring",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 43.7
+    },
+    "count_the_number_of_consistent_strings": {
+        "qno": "1684",
+        "title": "Count the Number of Consistent Strings",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 83.3
+    },
+    "concatenation_of_consecutive_binary_numbers": {
+        "qno": "1680",
+        "title": "Concatenation of Consecutive Binary Numbers",
+        "tags": [
+            "Math",
+            "Bit Manipulation",
+            "Simulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 57.1
+    },
+    "decode_xored_permutation": {
+        "qno": "1734",
+        "title": "Decode XORed Permutation",
+        "tags": [
+            "Array",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 64.8
+    },
+    "decode_xored_array": {
+        "qno": "1720",
+        "title": "Decode XORed Array",
+        "tags": [
+            "Array",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 86.4
+    },
+    "find_xor_sum_of_all_pairs_bitwise_and": {
+        "qno": "1835",
+        "title": "Find XOR Sum of All Pairs Bitwise AND",
+        "tags": [
+            "Array",
+            "Math",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 61.4
+    },
+    "two_out_of_three": {
+        "qno": "2032",
+        "title": "Two Out of Three",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 75.3
+    },
+    "count_words_obtained_after_adding_a_letter": {
+        "qno": "2135",
+        "title": "Count Words Obtained After Adding a Letter",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Bit Manipulation",
+            "Sorting"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 43.1
+    },
+    "groups_of_strings": {
+        "qno": "2157",
+        "title": "Groups of Strings",
+        "tags": [
+            "String",
+            "Bit Manipulation",
+            "Union Find"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 26.1
+    },
+    "divide_array_into_equal_pairs": {
+        "qno": "2206",
+        "title": "Divide Array Into Equal Pairs",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Bit Manipulation",
+            "Counting"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 73.5
+    },
+    "minimum_bit_flips_to_convert_number": {
+        "qno": "2220",
+        "title": "Minimum Bit Flips to Convert Number",
+        "tags": [
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 85
+    },
+    "largest_combination_with_bitwise_and_greater_than_zero": {
+        "qno": "2275",
+        "title": "Largest Combination With Bitwise AND Greater Than Zero",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Bit Manipulation",
+            "Counting"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 72.9
+    },
+    "naming_a_company": {
+        "qno": "2306",
+        "title": "Naming a Company",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Bit Manipulation",
+            "Enumeration"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 46.4
+    },
+    "maximum_xor_after_operations": {
+        "qno": "2317",
+        "title": "Maximum XOR After Operations",
+        "tags": [
+            "Array",
+            "Math",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 79.6
+    },
+    "first_letter_to_appear_twice": {
+        "qno": "2351",
+        "title": "First Letter to Appear Twice",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Bit Manipulation",
+            "Counting"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 73.6
+    },
+    "minimize_xor": {
+        "qno": "2429",
+        "title": "Minimize XOR",
+        "tags": [
+            "Greedy",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 44.2
+    },
+    "find_the_original_array_of_prefix_xor": {
+        "qno": "2433",
+        "title": "Find The Original Array of Prefix Xor",
+        "tags": [
+            "Array",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 88.1
+    },
+    "count_pairs_of_similar_strings": {
+        "qno": "2506",
+        "title": "Count Pairs Of Similar Strings",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 70.1
+    },
+    "find_xor-beauty_of_array": {
+        "qno": "2527",
+        "title": "Find Xor-Beauty of Array",
+        "tags": [
+            "Array",
+            "Math",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 68.7
+    },
+    "apply_bitwise_operations_to_make_strings_equal": {
+        "qno": "2546",
+        "title": "Apply Bitwise Operations to Make Strings Equal",
+        "tags": [
+            "String",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 41.1
+    },
+    "number_of_even_and_odd_bits": {
+        "qno": "2595",
+        "title": "Number of Even and Odd Bits",
+        "tags": [
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 73.4
+    },
+    "substring_xor_queries": {
+        "qno": "2564",
+        "title": "Substring XOR Queries",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 33.5
+    },
+    "find_the_prefix_common_array_of_two_arrays": {
+        "qno": "2657",
+        "title": "Find the Prefix Common Array of Two Arrays",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 81.3
+    },
+    "neighboring_bitwise_xor": {
+        "qno": "2683",
+        "title": "Neighboring Bitwise XOR",
+        "tags": [
+            "Array",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 61.8
+    },
+    "count_pairs_of_points_with_distance_k": {
+        "qno": "2857",
+        "title": "Count Pairs of Points With Distance k",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 32.1
+    },
+    "minimum_operations_to_form_subsequence_with_target_sum": {
+        "qno": "2835",
+        "title": "Minimum Operations to Form Subsequence With Target Sum",
+        "tags": [
+            "Array",
+            "Greedy",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 32.3
+    },
+    "find_the_k-th_lucky_number": {
+        "qno": "2802",
+        "title": "Find The K-th Lucky Number",
+        "tags": [
+            "Math",
+            "String",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 77.5
+    },
+    "minimum_operations_to_collect_elements": {
+        "qno": "2869",
+        "title": "Minimum Operations to Collect Elements",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 60.2
+    },
+    "split_array_into_maximum_number_of_subarrays": {
+        "qno": "2871",
+        "title": "Split Array Into Maximum Number of Subarrays",
+        "tags": [
+            "Array",
+            "Greedy",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 44
+    },
+    "sum_of_values_at_indices_with_k_set_bits": {
+        "qno": "2859",
+        "title": "Sum of Values at Indices With K Set Bits",
+        "tags": [
+            "Array",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 86.6
+    },
+    "apply_operations_on_array_to_maximize_sum_of_squares": {
+        "qno": "2897",
+        "title": "Apply Operations on Array to Maximize Sum of Squares",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Greedy",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 46.9
+    },
+    "find_the_k-or_of_an_array": {
+        "qno": "2917",
+        "title": "Find the K-or of an Array",
+        "tags": [
+            "Array",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 74.7
+    },
+    "maximum_xor_product": {
+        "qno": "2939",
+        "title": "Maximum Xor Product",
+        "tags": [
+            "Math",
+            "Greedy",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 26.1
+    },
+    "check_if_bitwise_or_has_trailing_zeros": {
+        "qno": "2980",
+        "title": "Check if Bitwise OR Has Trailing Zeros",
+        "tags": [
+            "Array",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 70.5
+    },
+    "minimum_number_of_operations_to_make_array_xor_equal_to_k": {
+        "qno": "2997",
+        "title": "Minimum Number of Operations to Make Array XOR Equal to K",
+        "tags": [
+            "Array",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 86.5
+    },
+    "minimize_or_of_remaining_elements_using_operations": {
+        "qno": "3022",
+        "title": "Minimize OR of Remaining Elements Using Operations",
+        "tags": [
+            "Array",
+            "Greedy",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 33.7
+    },
+    "find_if_array_can_be_sorted": {
+        "qno": "3011",
+        "title": "Find if Array Can Be Sorted",
+        "tags": [
+            "Array",
+            "Bit Manipulation",
+            "Sorting"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 51.4
+    },
+    "minimum_cost_walk_in_weighted_graph": {
+        "qno": "3108",
+        "title": "Minimum Cost Walk in Weighted Graph",
+        "tags": [
+            "Array",
+            "Bit Manipulation",
+            "Union Find",
+            "Graph"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 45.5
+    },
+    "minimum_array_end": {
+        "qno": "3133",
+        "title": "Minimum Array End",
+        "tags": [
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 37.7
+    },
+    "find_the_xor_of_numbers_which_appear_twice": {
+        "qno": "3158",
+        "title": "Find the XOR of Numbers Which Appear Twice",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 82.1
+    },
+    "maximum_hamming_distances": {
+        "qno": "3141",
+        "title": "Maximum Hamming Distances",
+        "tags": [
+            "Array",
+            "Bit Manipulation",
+            "Breadth-First Search"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 72.6
+    },
+    "bitwise_or_of_adjacent_elements": {
+        "qno": "3173",
+        "title": "Bitwise OR of Adjacent Elements",
+        "tags": [
+            "Array",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 95.1
+    },
+    "count_triplets_with_even_xor_set_bits_i": {
+        "qno": "3199",
+        "title": "Count Triplets with Even XOR Set Bits I",
+        "tags": [
+            "Array",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 84.7
+    },
+    "count_triplets_with_even_xor_set_bits_ii": {
+        "qno": "3215",
+        "title": "Count Triplets with Even XOR Set Bits II",
+        "tags": [
+            "Array",
+            "Bit Manipulation"
+        ],
+        "default": "Bit Manipulation",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 75
     }
 }
