@@ -1667,6 +1667,11 @@
       "dynamic-programming": ""
     }
   },
+  "459": {
+    "java": {
+      "string-matching": ""
+    }
+  },
   "460": {
     "java": {
       "doubly-linked-list": "class LFUCache {\n    class Node {\n        int key, value, freq;\n        Node prev, next;\n        Node(int k, int v) {\n            key = k;\n            value = v;\n            freq = 1;\n        }\n    }\n\n    class DoublyLinkedList {\n        Node head, tail;\n        DoublyLinkedList() {\n            head = new Node(0, 0);\n            tail = new Node(0, 0);\n            head.next = tail;\n            tail.prev = head;\n        }\n\n        void addNode(Node node) {\n            Node nextNode = head.next;\n            head.next = node;\n            node.prev = head;\n            node.next = nextNode;\n            nextNode.prev = node;\n        }\n\n        void removeNode(Node node) {\n            Node prevNode = node.prev;\n            Node nextNode = node.next;\n            prevNode.next = nextNode;\n            nextNode.prev = prevNode;\n        }\n\n        boolean isEmpty() {\n            return head.next == tail;\n        }\n    }\n\n    private int capacity, size, minFreq;\n    private Map<Integer, Node> keyToNode;\n    private Map<Integer, DoublyLinkedList> freqToDLL;\n\n    public LFUCache(int capacity) {\n        this.capacity = capacity;\n        this.size = 0;\n        this.minFreq = 0;\n        this.keyToNode = new HashMap<>();\n        this.freqToDLL = new HashMap<>();\n    }\n\n    public int get(int key) {\n        if (!keyToNode.containsKey(key)) return -1;\n        Node node = keyToNode.get(key);\n        updateFrequency(node);\n        return node.value;\n    }\n\n    public void put(int key, int value) {\n        if (capacity == 0) return;\n        if (keyToNode.containsKey(key)) {\n            Node node = keyToNode.get(key);\n            node.value = value;\n            updateFrequency(node);\n        } else {\n            if (size == capacity) {\n                DoublyLinkedList minFreqList = freqToDLL.get(minFreq);\n                keyToNode.remove(minFreqList.tail.prev.key);\n                minFreqList.removeNode(minFreqList.tail.prev);\n                size--;\n            }\n            Node newNode = new Node(key, value);\n            keyToNode.put(key, newNode);\n            minFreq = 1;\n            freqToDLL.computeIfAbsent(1, k -> new DoublyLinkedList()).addNode(newNode);\n            size++;\n        }\n    }\n\n    private void updateFrequency(Node node) {\n        int oldFreq = node.freq;\n        DoublyLinkedList oldList = freqToDLL.get(oldFreq);\n        oldList.removeNode(node);\n        if (oldFreq == minFreq && oldList.isEmpty()) minFreq++;\n        node.freq++;\n        freqToDLL.computeIfAbsent(node.freq, k -> new DoublyLinkedList()).addNode(node);\n    }\n}\n"
@@ -2123,6 +2128,11 @@
       "two-pointers": "import java.util.Arrays;\n\npublic class Solution {\n    public int triangleNumber(int[] nums) {\n        Arrays.sort(nums);\n        int count = 0;\n        for (int i = nums.length - 1; i >= 2; i--) {\n            int left = 0, right = i - 1;\n            while (left < right) {\n                if (nums[left] + nums[right] > nums[i]) {\n                    count += right - left;\n                    right--;\n                } else {\n                    left++;\n                }\n            }\n        }\n        return count;\n    }\n}\n"
     }
   },
+  "616": {
+    "java": {
+      "string-matching": ""
+    }
+  },
   "617": {
     "java": {
       "tree": ""
@@ -2351,6 +2361,11 @@
   "683": {
     "java": {
       "sliding-window": "class Solution {\n    public int kEmptySlots(int[] bulbs, int k) {\n      int n = bulbs.length;\n        int ans = Integer.MAX_VALUE;\n        int[] day = new int[n]; // day[i] will store the day when bulb at position (i+1) is turned on\n\n        for (int i = 0; i < n; ++i)\n            day[bulbs[i] - 1] = i + 1;\n\n        int left = 0;\n        int right = left + k + 1;\n        \n        for (int i = 1; right < n; ++i) {\n            if (i == right) {\n                ans = Math.min(ans, Math.max(day[left], day[right]));\n                left = i;\n                right = i + k + 1;\n            } else if (day[i] < Math.max(day[left], day[right])) {\n                left = i;\n                right = i + k + 1;\n            }\n        }\n\n        return ans == Integer.MAX_VALUE ? -1 : ans;\n    }\n}\n"
+    }
+  },
+  "686": {
+    "java": {
+      "string-matching": ""
     }
   },
   "687": {
@@ -2584,6 +2599,11 @@
       "eulerian-circuit": "class Solution {\n\n    public String crackSafe(int n, int k) {\n        if (n == 1) {\n            StringBuilder sb = new StringBuilder();\n            for (int i = 0; i < k; i++) {\n                sb.append(i);\n            }\n            return sb.toString();\n        }\n\n        StringBuilder result = new StringBuilder();\n        Set<String> visited = new HashSet<>();\n        Stack<String> stack = new Stack<>();\n        String start = String.join('', Collections.nCopies(n - 1, '0'));\n        stack.push(start);\n\n        while (!stack.isEmpty()) {\n            String node = stack.peek();\n            boolean hasUnvisitedEdge = false;\n\n            // Try all possible edges from this node by appending each digit from 0 to k-1\n            for (int i = 0; i < k; i++) {\n                String next = node + i;\n                if (!visited.contains(next)) {\n                    visited.add(next);\n                    stack.push(next.substring(1));\n                    hasUnvisitedEdge = true;\n                    break;\n                }\n            }\n\n            // If all edges from this node are visited, backtrack and append the last\n            // character to the result\n            if (!hasUnvisitedEdge) {\n                result.append(stack.pop().charAt(node.length() - 1));\n            }\n        }\n\n        result.append(start.substring(0, start.length() - 1));\n        return result.toString();\n    }\n\n    // public String crackSafe(int n, int k) {\n    // StringBuilder result = new StringBuilder();\n    // Set<String> visited = new HashSet<>();\n    // String start = String.join('', Collections.nCopies(n - 1, '0'));\n    // dfs(start, k, visited, result, n);\n    // result.append(start);\n    // return result.toString();\n    // }\n    // private void dfs(String node, int k, Set<String> visited, StringBuilder\n    // result, int n) {\n    // for (int i = 0; i < k; i++) {\n    // String next = node + i;\n    // if (!visited.contains(next)) {\n    // visited.add(next);\n    // dfs(next.substring(1), k, visited, result, n);\n    // result.append(i);\n    // }\n    // }\n    // }\n\n}"
     }
   },
+  "758": {
+    "java": {
+      "string-matching": ""
+    }
+  },
   "759": {
     "java": {
       "heap-(priority-queue)": ""
@@ -2707,6 +2727,11 @@
   "795": {
     "java": {
       "two-pointers": ""
+    }
+  },
+  "796": {
+    "java": {
+      "string-matching": ""
     }
   },
   "797": {
@@ -4420,6 +4445,11 @@
   "1406": {
     "java": {
       "game-theory": ""
+    }
+  },
+  "1408": {
+    "java": {
+      "string-matching": ""
     }
   },
   "1411": {
@@ -6423,6 +6453,11 @@
       "dynamic-programming": ""
     }
   },
+  "2185": {
+    "java": {
+      "string-matching": ""
+    }
+  },
   "2188": {
     "java": {
       "dynamic-programming": ""
@@ -6696,6 +6731,11 @@
   "2300": {
     "java": {
       "two-pointers": ""
+    }
+  },
+  "2301": {
+    "java": {
+      "string-matching": ""
     }
   },
   "2302": {
