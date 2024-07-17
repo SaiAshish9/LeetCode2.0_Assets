@@ -8741,7 +8741,8 @@
   },
   "3154": {
     "java": {
-      "dynamic-programming": ""
+      "dynamic-programming": "",
+      "memoization": "class Solution {\n    HashMap<String, Integer> memoizeMap = new HashMap<>();\n    int K;\n\n    public int waysToReachStair(int k) {\n\n        K = k;\n        int index = 1;\n        int jump = 0;\n        boolean canJumpBack = true;\n\n        return solve(index, jump, canJumpBack);\n    }\n\n    public int solve(int index, int jump, boolean canJumpBack) {\n\n        if (index > K + 1) {\n            return 0;\n        }\n\n        String str = String.valueOf(index) + \"_\" + String.valueOf(jump) + \"_\" + String.valueOf(canJumpBack);\n\n        if (memoizeMap.containsKey(str)) {\n\n            return memoizeMap.get(str);\n        }\n\n        int totalWays = 0;\n\n        if (index == K) {\n            totalWays++;\n        }\n\n        if (canJumpBack == true) {\n\n            totalWays += solve(index - 1, jump, false);\n        }\n        totalWays += solve(index + (int) Math.pow(2, jump), jump + 1, true);\n        memoizeMap.put(str, totalWays);\n\n        return totalWays;\n    }\n}"
     }
   },
   "3157": {
