@@ -25327,5 +25327,111 @@
         "difficulty": "Medium",
         "language": "Java",
         "acceptance": 40
+    },
+    "repeated_substring_pattern": {
+        "qno": "459",
+        "title": "Repeated Substring Pattern",
+        "tags": [
+            "String",
+            "String Matching"
+        ],
+        "default": "String Matching",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 46.2
+    },
+    "add_bold_tag_in_string": {
+        "qno": "616",
+        "title": "Add Bold Tag in String",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Trie",
+            "String Matching"
+        ],
+        "default": "String Matching",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 49.9
+    },
+    "repeated_string_match": {
+        "qno": "686",
+        "title": "Repeated String Match",
+        "tags": [
+            "String",
+            "String Matching"
+        ],
+        "default": "String Matching",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 35.3
+    },
+    "bold_words_in_string": {
+        "qno": "758",
+        "title": "Bold Words in String",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Trie",
+            "String Matching"
+        ],
+        "default": "String Matching",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 51.5
+    },
+    "rotate_string": {
+        "qno": "796",
+        "title": "Rotate String",
+        "tags": [
+            "String",
+            "String Matching"
+        ],
+        "default": "String Matching",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 58.6
+    },
+    "string_matching_in_an_array": {
+        "qno": "1408",
+        "title": "String Matching in an Array",
+        "tags": [
+            "Array",
+            "String",
+            "String Matching"
+        ],
+        "default": "String Matching",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 64
+    },
+    "counting_words_with_a_given_prefix": {
+        "qno": "2185",
+        "title": "Counting Words With a Given Prefix",
+        "tags": [
+            "Array",
+            "String",
+            "String Matching"
+        ],
+        "default": "String Matching",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 78.2
+    },
+    "match_substring_after_replacement": {
+        "qno": "2301",
+        "title": "Match Substring After Replacement",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "String Matching"
+        ],
+        "default": "String Matching",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 40.9
     }
 }
