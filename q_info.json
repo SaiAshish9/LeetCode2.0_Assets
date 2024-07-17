@@ -25271,5 +25271,61 @@
         "difficulty": "Hard",
         "language": "Java",
         "acceptance": 49.2
+    },
+    "evaluate_division": {
+        "qno": "399",
+        "title": "Evaluate Division",
+        "tags": [
+            "Array",
+            "String",
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Union Find",
+            "Graph",
+            "Shortest Path"
+        ],
+        "default": "Shortest Path",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 61.9
+    },
+    "second_minimum_time_to_reach_destination": {
+        "qno": "2045",
+        "title": "Second Minimum Time to Reach Destination",
+        "tags": [
+            "Breadth-First Search",
+            "Graph",
+            "Shortest Path"
+        ],
+        "default": "Shortest Path",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 41
+    },
+    "minimum_weighted_subgraph_with_the_required_paths": {
+        "qno": "2203",
+        "title": "Minimum Weighted Subgraph With the Required Paths",
+        "tags": [
+            "Graph",
+            "Shortest Path"
+        ],
+        "default": "Shortest Path",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 37
+    },
+    "minimum_cost_to_convert_string_i": {
+        "qno": "2976",
+        "title": "Minimum Cost to Convert String I",
+        "tags": [
+            "Array",
+            "String",
+            "Graph",
+            "Shortest Path"
+        ],
+        "default": "Shortest Path",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 40
     }
 }
