@@ -551,6 +551,7 @@
         3201,
         3202
     ],
+    "Memoization": [],
     "Rolling Hash": [
         1044,
         1960,
@@ -570,6 +571,12 @@
     "Backtracking": [
         37
     ],
+    "Combinatorics": [
+        1467,
+        1569,
+        3179
+    ],
+    "Recursion": [],
     "Hash Table": [
         1,
         522,
@@ -612,17 +619,10 @@
     "Number Theory": [],
     "Trie": [],
     "Divide and Conquer": [],
-    "Recursion": [],
     "Bitmask": [],
     "Segment Tree": [],
     "Geometry": [],
-    "Memoization": [],
     "Binary Indexed Tree": [],
-    "Combinatorics": [
-        1467,
-        1569,
-        3179
-    ],
     "String Matching": [
         214
     ],
