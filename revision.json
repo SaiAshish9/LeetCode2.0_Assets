@@ -288,6 +288,7 @@
         2031,
         1409
     ],
+    "Segment Tree": [],
     "Matrix": [
         48,
         54,
@@ -728,7 +729,6 @@
     "Number Theory": [],
     "Trie": [],
     "Bitmask": [],
-    "Segment Tree": [],
     "Geometry": [
         587,
         963,
