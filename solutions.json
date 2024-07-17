@@ -1535,6 +1535,11 @@
       "matrix": ""
     }
   },
+  "535": {
+    "java": {
+      "hash-function": ""
+    }
+  },
   "536": {
     "java": {
       "stack": ""
@@ -1614,6 +1619,11 @@
   "568": {
     "java": {
       "matrix": ""
+    }
+  },
+  "572": {
+    "java": {
+      "hash-function": ""
     }
   },
   "576": {
@@ -1862,6 +1872,11 @@
       "heap-(priority-queue)": "import java.util.*;\n\nclass Solution {\n    public List<String> topKFrequent(String[] words, int k) {\n        Map<String, Integer> frequencyMap = new HashMap<>();\n        for (String word : words) {\n            frequencyMap.put(word, frequencyMap.getOrDefault(word, 0) + 1);\n        }\n\n        PriorityQueue<String> minHeap = new PriorityQueue<>(\n                (a, b) -> frequencyMap.get(a).equals(frequencyMap.get(b))\n                        ? b.compareTo(a)\n                        : frequencyMap.get(a) - frequencyMap.get(b));\n\n        for (String word : frequencyMap.keySet()) {\n            minHeap.offer(word);\n            if (minHeap.size() > k) {\n                minHeap.poll();\n            }\n        }\n\n        List<String> result = new ArrayList<>();\n        while (!minHeap.isEmpty()) {\n            result.add(minHeap.poll());\n        }\n        Collections.reverse(result);\n        return result;\n    }\n}\n"
     }
   },
+  "694": {
+    "java": {
+      "hash-function": ""
+    }
+  },
   "695": {
     "java": {
       "matrix": ""
@@ -1902,9 +1917,24 @@
       "binary-search-tree": "import java.util.PriorityQueue;\n\nclass KthLargest {\n    private PriorityQueue<Integer> minHeap;\n    private int k;\n\n    public KthLargest(int k, int[] nums) {\n        this.k = k;\n        this.minHeap = new PriorityQueue<>(k);\n        \n        for (int num : nums) {\n            add(num);\n        }\n    }\n    \n    public int add(int val) {\n        if (minHeap.size() < k) {\n            minHeap.offer(val);\n        } else if (val > minHeap.peek()) {\n            minHeap.poll();\n            minHeap.offer(val);\n        }\n        return minHeap.peek();\n    }\n}\n"
     }
   },
+  "705": {
+    "java": {
+      "hash-function": ""
+    }
+  },
+  "706": {
+    "java": {
+      "hash-function": ""
+    }
+  },
   "710": {
     "java": {
       "randomized": ""
+    }
+  },
+  "711": {
+    "java": {
+      "hash-function": ""
     }
   },
   "712": {
@@ -4832,6 +4862,11 @@
   "1947": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "1948": {
+    "java": {
+      "hash-function": ""
     }
   },
   "1950": {
