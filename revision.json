@@ -665,7 +665,9 @@
     ],
     "Number Theory": [],
     "Trie": [],
-    "Divide and Conquer": [],
+    "Divide and Conquer": [
+        
+    ],
     "Bitmask": [],
     "Segment Tree": [],
     "Geometry": [],
