@@ -24175,5 +24175,726 @@
         "difficulty": "Medium",
         "language": "Java",
         "acceptance": 47.1
+    },
+    "letter_combinations_of_a_phone_number": {
+        "qno": "17",
+        "title": "Letter Combinations of a Phone Number",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 61.1
+    },
+    "combination_sum": {
+        "qno": "39",
+        "title": "Combination Sum",
+        "tags": [
+            "Array",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 72.1
+    },
+    "combination_sum_ii": {
+        "qno": "40",
+        "title": "Combination Sum II",
+        "tags": [
+            "Array",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 54.9
+    },
+    "permutations": {
+        "qno": "46",
+        "title": "Permutations",
+        "tags": [
+            "Array",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 78.8
+    },
+    "permutations_ii": {
+        "qno": "47",
+        "title": "Permutations II",
+        "tags": [
+            "Array",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 59.6
+    },
+    "n-queens": {
+        "qno": "51",
+        "title": "N-Queens",
+        "tags": [
+            "Array",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 69.2
+    },
+    "n-queens_ii": {
+        "qno": "52",
+        "title": "N-Queens II",
+        "tags": [
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 74.5
+    },
+    "combinations": {
+        "qno": "77",
+        "title": "Combinations",
+        "tags": [
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 70.8
+    },
+    "subsets": {
+        "qno": "78",
+        "title": "Subsets",
+        "tags": [
+            "Array",
+            "Backtracking",
+            "Bit Manipulation"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 78.7
+    },
+    "gray_code": {
+        "qno": "89",
+        "title": "Gray Code",
+        "tags": [
+            "Math",
+            "Backtracking",
+            "Bit Manipulation"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 59.7
+    },
+    "subsets_ii": {
+        "qno": "90",
+        "title": "Subsets II",
+        "tags": [
+            "Array",
+            "Backtracking",
+            "Bit Manipulation"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 57.7
+    },
+    "restore_ip_addresses": {
+        "qno": "93",
+        "title": "Restore IP Addresses",
+        "tags": [
+            "String",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 50.5
+    },
+    "word_ladder_ii": {
+        "qno": "126",
+        "title": "Word Ladder II",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Backtracking",
+            "Breadth-First Search"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 27.2
+    },
+    "combination_sum_iii": {
+        "qno": "216",
+        "title": "Combination Sum III",
+        "tags": [
+            "Array",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 70.1
+    },
+    "factor_combinations": {
+        "qno": "254",
+        "title": "Factor Combinations",
+        "tags": [
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 49.6
+    },
+    "palindrome_permutation_ii": {
+        "qno": "267",
+        "title": "Palindrome Permutation II",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 41.7
+    },
+    "expression_add_operators": {
+        "qno": "282",
+        "title": "Expression Add Operators",
+        "tags": [
+            "Math",
+            "String",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 40.1
+    },
+    "word_pattern_ii": {
+        "qno": "291",
+        "title": "Word Pattern II",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 48.3
+    },
+    "remove_invalid_parentheses": {
+        "qno": "301",
+        "title": "Remove Invalid Parentheses",
+        "tags": [
+            "String",
+            "Backtracking",
+            "Breadth-First Search"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 48.4
+    },
+    "additive_number": {
+        "qno": "306",
+        "title": "Additive Number",
+        "tags": [
+            "String",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 31.8
+    },
+    "generalized_abbreviation": {
+        "qno": "320",
+        "title": "Generalized Abbreviation",
+        "tags": [
+            "String",
+            "Backtracking",
+            "Bit Manipulation"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 58.5
+    },
+    "binary_watch": {
+        "qno": "401",
+        "title": "Binary Watch",
+        "tags": [
+            "Backtracking",
+            "Bit Manipulation"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 54.8
+    },
+    "minimum_unique_word_abbreviation": {
+        "qno": "411",
+        "title": "Minimum Unique Word Abbreviation",
+        "tags": [
+            "String",
+            "Backtracking",
+            "Bit Manipulation"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 39.8
+    },
+    "word_squares": {
+        "qno": "425",
+        "title": "Word Squares",
+        "tags": [
+            "Array",
+            "String",
+            "Backtracking",
+            "Trie"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 53.4
+    },
+    "non-decreasing_subsequences": {
+        "qno": "491",
+        "title": "Non-decreasing Subsequences",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Backtracking",
+            "Bit Manipulation"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 60.9
+    },
+    "24_game": {
+        "qno": "679",
+        "title": "24 Game",
+        "tags": [
+            "Array",
+            "Math",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 49.4
+    },
+    "next_closest_time": {
+        "qno": "681",
+        "title": "Next Closest Time",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Backtracking",
+            "Enumeration"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 46.7
+    },
+    "letter_case_permutation": {
+        "qno": "784",
+        "title": "Letter Case Permutation",
+        "tags": [
+            "String",
+            "Backtracking",
+            "Bit Manipulation"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 74.3
+    },
+    "all_paths_from_source_to_target": {
+        "qno": "797",
+        "title": "All Paths From Source to Target",
+        "tags": [
+            "Backtracking",
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Graph"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 82.5
+    },
+    "ambiguous_coordinates": {
+        "qno": "816",
+        "title": "Ambiguous Coordinates",
+        "tags": [
+            "String",
+            "Backtracking",
+            "Enumeration"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 56.8
+    },
+    "split_array_into_fibonacci_sequence": {
+        "qno": "842",
+        "title": "Split Array into Fibonacci Sequence",
+        "tags": [
+            "String",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 39.1
+    },
+    "numbers_with_same_consecutive_differences": {
+        "qno": "967",
+        "title": "Numbers With Same Consecutive Differences",
+        "tags": [
+            "Backtracking",
+            "Breadth-First Search"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 58.1
+    },
+    "brace_expansion": {
+        "qno": "1087",
+        "title": "Brace Expansion",
+        "tags": [
+            "String",
+            "Backtracking",
+            "Breadth-First Search"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 66.4
+    },
+    "confusing_number_ii": {
+        "qno": "1088",
+        "title": "Confusing Number II",
+        "tags": [
+            "Math",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 47.2
+    },
+    "stepping_numbers": {
+        "qno": "1215",
+        "title": "Stepping Numbers",
+        "tags": [
+            "Backtracking",
+            "Breadth-First Search"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 47.2
+    },
+    "letter_tile_possibilities": {
+        "qno": "1079",
+        "title": "Letter Tile Possibilities",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Backtracking",
+            "Counting"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 76.4
+    },
+    "synonymous_sentences": {
+        "qno": "1258",
+        "title": "Synonymous Sentences",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Backtracking",
+            "Union Find"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 56.4
+    },
+    "circular_permutation_in_binary_representation": {
+        "qno": "1238",
+        "title": "Circular Permutation in Binary Representation",
+        "tags": [
+            "Math",
+            "Backtracking",
+            "Bit Manipulation"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 70.3
+    },
+    "maximum_length_of_a_concatenated_string_with_unique_characters": {
+        "qno": "1239",
+        "title": "Maximum Length of a Concatenated String with Unique Characters",
+        "tags": [
+            "Array",
+            "String",
+            "Backtracking",
+            "Bit Manipulation"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 54.1
+    },
+    "tiling_a_rectangle_with_the_fewest_squares": {
+        "qno": "1240",
+        "title": "Tiling a Rectangle with the Fewest Squares",
+        "tags": [
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 54.3
+    },
+    "verbal_arithmetic_puzzle": {
+        "qno": "1307",
+        "title": "Verbal Arithmetic Puzzle",
+        "tags": [
+            "Array",
+            "Math",
+            "String",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 34.5
+    },
+    "the_k-th_lexicographical_string_of_all_happy_strings_of_length_n": {
+        "qno": "1415",
+        "title": "The k-th Lexicographical String of All Happy Strings of Length n",
+        "tags": [
+            "String",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 74.7
+    },
+    "split_a_string_into_the_max_number_of_unique_substrings": {
+        "qno": "1593",
+        "title": "Split a String Into the Max Number of Unique Substrings",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 56.6
+    },
+    "maximum_number_of_achievable_transfer_requests": {
+        "qno": "1601",
+        "title": "Maximum Number of Achievable Transfer Requests",
+        "tags": [
+            "Array",
+            "Backtracking",
+            "Bit Manipulation",
+            "Enumeration"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 64.5
+    },
+    "construct_the_lexicographically_largest_valid_sequence": {
+        "qno": "1718",
+        "title": "Construct the Lexicographically Largest Valid Sequence",
+        "tags": [
+            "Array",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 53.7
+    },
+    "splitting_a_string_into_descending_consecutive_values": {
+        "qno": "1849",
+        "title": "Splitting a String Into Descending Consecutive Values",
+        "tags": [
+            "String",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 35.8
+    },
+    "find_unique_binary_string": {
+        "qno": "1980",
+        "title": "Find Unique Binary String",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 74.6
+    },
+    "longest_subsequence_repeated_k_times": {
+        "qno": "2014",
+        "title": "Longest Subsequence Repeated k Times",
+        "tags": [
+            "String",
+            "Backtracking",
+            "Greedy",
+            "Counting",
+            "Enumeration"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 55.6
+    },
+    "number_of_valid_move_combinations_on_chessboard": {
+        "qno": "2056",
+        "title": "Number of Valid Move Combinations On Chessboard",
+        "tags": [
+            "Array",
+            "String",
+            "Backtracking",
+            "Simulation"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 52.6
+    },
+    "count_number_of_maximum_bitwise-or_subsets": {
+        "qno": "2044",
+        "title": "Count Number of Maximum Bitwise-OR Subsets",
+        "tags": [
+            "Array",
+            "Backtracking",
+            "Bit Manipulation",
+            "Enumeration"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 77.7
+    },
+    "next_greater_numerically_balanced_number": {
+        "qno": "2048",
+        "title": "Next Greater Numerically Balanced Number",
+        "tags": [
+            "Math",
+            "Backtracking",
+            "Enumeration"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 48.5
+    },
+    "maximum_path_quality_of_a_graph": {
+        "qno": "2065",
+        "title": "Maximum Path Quality of a Graph",
+        "tags": [
+            "Array",
+            "Backtracking",
+            "Graph"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 58.6
+    },
+    "maximum_good_people_based_on_statements": {
+        "qno": "2151",
+        "title": "Maximum Good People Based on Statements",
+        "tags": [
+            "Array",
+            "Backtracking",
+            "Bit Manipulation",
+            "Enumeration"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 50
+    },
+    "maximum_split_of_positive_even_integers": {
+        "qno": "2178",
+        "title": "Maximum Split of Positive Even Integers",
+        "tags": [
+            "Math",
+            "Backtracking",
+            "Greedy"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 59.2
+    },
+    "maximum_points_in_an_archery_competition": {
+        "qno": "2212",
+        "title": "Maximum Points in an Archery Competition",
+        "tags": [
+            "Array",
+            "Backtracking",
+            "Bit Manipulation",
+            "Enumeration"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 50.1
+    },
+    "find_the_punishment_number_of_an_integer": {
+        "qno": "2698",
+        "title": "Find the Punishment Number of an Integer",
+        "tags": [
+            "Math",
+            "Backtracking"
+        ],
+        "default": "Backtracking",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 62.6
     }
 }
