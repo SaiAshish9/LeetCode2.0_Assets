@@ -561,6 +561,11 @@
       "merge-sort": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode sortList(ListNode head) {\n        if (head == null || head.next == null) {\n            return head;\n        }\n\n        ListNode mid = getMid(head);\n        ListNode left = head;\n        ListNode right = mid.next;\n        mid.next = null; \n        left = sortList(left);\n        right = sortList(right);\n\n        return merge(left, right);\n    }\n\n    private ListNode getMid(ListNode head) {\n        ListNode slow = head;\n        ListNode fast = head.next;\n        while (fast != null && fast.next != null) {\n            slow = slow.next;\n            fast = fast.next.next;\n        }\n\n        return slow;\n    }\n\n    private ListNode merge(ListNode l1, ListNode l2) {\n        ListNode dummy = new ListNode(0);\n        ListNode current = dummy;\n\n        while (l1 != null && l2 != null) {\n            if (l1.val < l2.val) {\n                current.next = l1;\n                l1 = l1.next;\n            } else {\n                current.next = l2;\n                l2 = l2.next;\n            }\n            current = current.next;\n        }\n\n        if (l1 != null) {\n            current.next = l1;\n        } else {\n            current.next = l2;\n        }\n\n        return dummy.next;\n    }\n}\n"
     }
   },
+  "149": {
+    "java": {
+      "geometry": ""
+    }
+  },
   "150": {
     "java": {
       "stack": ""
@@ -792,6 +797,11 @@
   "222": {
     "java": {
       "tree": ""
+    }
+  },
+  "223": {
+    "java": {
+      "geometry": ""
     }
   },
   "224": {
@@ -1202,6 +1212,11 @@
   "333": {
     "java": {
       "binary-search-tree": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    private int ans;\n\n    public int largestBSTSubtree(TreeNode root) {\n        ans = 0;\n        dfs(root);\n        return ans;\n    }\n\n    private int[] dfs(TreeNode root) {\n        if (root == null) {\n            return new int[] {Integer.MAX_VALUE, Integer.MIN_VALUE, 0};\n        }\n        int[] left = dfs(root.left);\n        int[] right = dfs(root.right);\n        if (left[1] < root.val && root.val < right[0]) {\n            ans = Math.max(ans, left[2] + right[2] + 1);\n            return new int[] {\n                Math.min(root.val, left[0]), Math.max(root.val, right[1]), left[2] + right[2] + 1};\n        }\n        return new int[] {Integer.MIN_VALUE, Integer.MAX_VALUE, 0};\n    }\n}"
+    }
+  },
+  "335": {
+    "java": {
+      "geometry": ""
     }
   },
   "337": {
@@ -1702,6 +1717,11 @@
       "dynamic-programming": ""
     }
   },
+  "469": {
+    "java": {
+      "geometry": ""
+    }
+  },
   "470": {
     "java": {
       "rejection-sampling": "/**\n * The rand7() API is already defined in the parent class SolBase.\n * public int rand7();\n * @return a random integer in the range 1 to 7\n */\nclass Solution extends SolBase {\n    public int rand10() {\n        while (true) {\n            int num = (rand7() - 1) * 7 + rand7(); // Generate a number from 1 to 49\n            if (num <= 40) { // Accept only if the number is in the range 1 to 40\n                return 1 + (num - 1) % 10; // Map to the range 1 to 10\n            }\n        }\n    }\n}"
@@ -2088,6 +2108,11 @@
       "dynamic-programming": ""
     }
   },
+  "587": {
+    "java": {
+      "geometry": ""
+    }
+  },
   "589": {
     "java": {
       "stack": "/*\n// Definition for a Node.\nclass Node {\n    public int val;\n    public List<Node> children;\n\n    public Node() {}\n\n    public Node(int _val) {\n        val = _val;\n    }\n\n    public Node(int _val, List<Node> _children) {\n        val = _val;\n        children = _children;\n    }\n};\n*/\n\nclass Solution {\n    public List<Integer> preorder(Node root) {\n        List<Integer> result = new ArrayList<>();\n        if (root == null) {\n            return result;\n        }\n\n        Stack<Node> stack = new Stack<>();\n        stack.push(root);\n\n        while (!stack.isEmpty()) {\n            Node node = stack.pop();\n            result.add(node.val);\n            for (int i = node.children.size() - 1; i >= 0; i--) {\n                stack.push(node.children.get(i));\n            }\n        }\n\n        return result;\n    }\n}"
@@ -2101,6 +2126,11 @@
   "591": {
     "java": {
       "stack": ""
+    }
+  },
+  "593": {
+    "java": {
+      "geometry": ""
     }
   },
   "594": {
@@ -2789,6 +2819,11 @@
       "brainteaser": ""
     }
   },
+  "812": {
+    "java": {
+      "geometry": ""
+    }
+  },
   "813": {
     "java": {
       "prefix-sum": ""
@@ -2852,6 +2887,11 @@
   "835": {
     "java": {
       "matrix": ""
+    }
+  },
+  "836": {
+    "java": {
+      "geometry": ""
     }
   },
   "837": {
@@ -2927,6 +2967,11 @@
   "857": {
     "java": {
       "heap-(priority-queue)": ""
+    }
+  },
+  "858": {
+    "java": {
+      "geometry": ""
     }
   },
   "861": {
@@ -3191,6 +3236,11 @@
       "binary-search-tree": ""
     }
   },
+  "939": {
+    "java": {
+      "geometry": ""
+    }
+  },
   "940": {
     "java": {
       "dynamic-programming": ""
@@ -3249,6 +3299,11 @@
   "962": {
     "java": {
       "monotonic-stack": ""
+    }
+  },
+  "963": {
+    "java": {
+      "geometry": ""
     }
   },
   "964": {
@@ -3485,6 +3540,11 @@
   "1035": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "1037": {
+    "java": {
+      "geometry": ""
     }
   },
   "1038": {
@@ -3987,6 +4047,11 @@
       "probability-and-statistics": "class Solution {\n    public double probabilityOfHeads(double[] prob, int target) {\n        int n = prob.length;\n        double[][] dp = new double[n + 1][target + 1];\n        dp[0][0] = 1;\n        for (int i = 1; i <= n; ++i) {\n            for (int j = 0; j <= Math.min(i, target); ++j) {\n                dp[i][j] = (1 - prob[i - 1]) * dp[i - 1][j];\n                if (j > 0) {\n                    dp[i][j] += prob[i - 1] * dp[i - 1][j - 1];\n                }\n            }\n        }\n        return dp[n][target];\n    }\n}"
     }
   },
+  "1232": {
+    "java": {
+      "geometry": ""
+    }
+  },
   "1234": {
     "java": {
       "sliding-window": "class Solution {\n  public int balancedString(String s) {\n  int n = s.length();\n  int k = n / 4;\n    int ans = n;\n    int[] count = new int[128];\n\n    for (final char c : s.toCharArray())\n      ++count[c];\n\n    for (int i = 0, j = 0; i < n; ++i) {\n      --count[s.charAt(i)];\n      while (j < n && count['Q'] <= k && count['W'] <= k && count['E'] <= k && count['R'] <= k) {\n        ans = Math.min(ans, i - j + 1);\n        ++count[s.charAt(j)];\n        ++j;\n      }\n    }\n\n    return ans;\n  }\n}"
@@ -4100,6 +4165,11 @@
   "1265": {
     "java": {
       "two-pointers": ""
+    }
+  },
+  "1266": {
+    "java": {
+      "geometry": ""
     }
   },
   "1267": {
@@ -4432,6 +4502,11 @@
       "dynamic-programming": ""
     }
   },
+  "1401": {
+    "java": {
+      "geometry": ""
+    }
+  },
   "1402": {
     "java": {
       "dynamic-programming": ""
@@ -4560,6 +4635,11 @@
   "1449": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "1453": {
+    "java": {
+      "geometry": ""
     }
   },
   "1455": {
@@ -5547,6 +5627,11 @@
       "two-pointers": ""
     }
   },
+  "1828": {
+    "java": {
+      "geometry": ""
+    }
+  },
   "1829": {
     "java": {
       "prefix-sum": ""
@@ -5802,6 +5887,11 @@
       "suffix-array": "class Solution {\n    public int longestCommonSubpath(int n, int[][] paths) {\n        int left = 0;\n        int right = paths[0].length;\n\n        while (left < right) {\n          int m = left + (right - left + 1) / 2;\n            if (checkCommonSubpath(paths, m))\n                left = m;\n            else\n                right = m - 1;\n        }\n\n        return left;\n    }\n\n    private static final long kMod = 8_417_508_174_513L;\n    private static final long kBase = 165_131L;\n\n    private boolean checkCommonSubpath(int[][] paths, int m) {\n        Set<Long>[] hashSets = new Set[paths.length];\n\n        for (int i = 0; i < paths.length; ++i)\n            hashSets[i] = rabinKarp(paths[i], m);\n\n        for (final long subpathHash : hashSets[0])\n            if (Arrays.stream(hashSets).allMatch(hashSet -> hashSet.contains(subpathHash)))\n                return true;\n\n        return false;\n    }\n\n    private Set<Long> rabinKarp(int[] path, int m) {\n        Set<Long> hashes = new HashSet<>();\n        long maxPower = 1;\n        long hash = 0;\n        for (int i = 0; i < path.length; ++i) {\n            hash = (hash * kBase + path[i]) % kMod;\n            if (i >= m)\n                hash = (hash - path[i - m] * maxPower % kMod + kMod) % kMod;\n            else\n                maxPower = maxPower * kBase % kMod;\n            if (i >= m - 1)\n                hashes.add(hash);\n        }\n        return hashes;\n    }\n}"
     }
   },
+  "1924": {
+    "java": {
+      "geometry": ""
+    }
+  },
   "1926": {
     "java": {
       "matrix": ""
@@ -5870,6 +5960,11 @@
   "1955": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "1956": {
+    "java": {
+      "geometry": ""
     }
   },
   "1958": {
@@ -6253,6 +6348,11 @@
       "prefix-sum": ""
     }
   },
+  "2101": {
+    "java": {
+      "geometry": ""
+    }
+  },
   "2102": {
     "java": {
       "heap-(priority-queue)": ""
@@ -6598,6 +6698,11 @@
       "dynamic-programming": ""
     }
   },
+  "2249": {
+    "java": {
+      "geometry": ""
+    }
+  },
   "2251": {
     "java": {
       "prefix-sum": ""
@@ -6686,6 +6791,11 @@
   "2277": {
     "java": {
       "tree": ""
+    }
+  },
+  "2280": {
+    "java": {
+      "geometry": ""
     }
   },
   "2281": {
@@ -7272,6 +7382,11 @@
   "2479": {
     "java": {
       "tree": ""
+    }
+  },
+  "2481": {
+    "java": {
+      "geometry": ""
     }
   },
   "2482": {
@@ -8484,6 +8599,11 @@
       "two-pointers": ""
     }
   },
+  "3009": {
+    "java": {
+      "geometry": ""
+    }
+  },
   "3013": {
     "java": {
       "sliding-window": "class Multiset {\n    public void add(int num) {\n        map.merge(num, 1, Integer::sum);\n        ++sz;\n    }\n\n    public void remove(int num) {\n        map.merge(num, -1, Integer::sum);\n        if (map.get(num) == 0)\n            map.remove(num);\n        --sz;\n    }\n\n    public int min() {\n        return map.firstEntry().getKey();\n    }\n\n    public int max() {\n        return map.lastEntry().getKey();\n    }\n\n    public int size() {\n        return sz;\n    }\n\n    public boolean contains(int num) {\n        return map.containsKey(num);\n    }\n\n    private TreeMap<Integer, Integer> map = new TreeMap<>();\n    private int sz = 0;\n}\n\nclass Solution {\n    public long minimumCost(int[] nums, int k, int dist) {\n        long windowSum = 0;\n        Multiset selected = new Multiset();\n        Multiset candidates = new Multiset();\n\n        for (int i = 1; i <= dist + 1; ++i) {\n            windowSum += nums[i];\n            selected.add(nums[i]);\n        }\n\n        windowSum = balance(windowSum, selected, candidates, k);\n        long minWindowSum = windowSum;\n\n        for (int i = dist + 2; i < nums.length; ++i) {\n          int outOfScope = nums[i - dist - 1];\n            if (selected.contains(outOfScope)) {\n                windowSum -= outOfScope;\n                selected.remove(outOfScope);\n            } else {\n                candidates.remove(outOfScope);\n            }\n            if (nums[i] < selected.max()) {\n                windowSum += nums[i];\n                selected.add(nums[i]);\n            } else {\n                candidates.add(nums[i]);\n            }\n            windowSum = balance(windowSum, selected, candidates, k);\n            minWindowSum = Math.min(minWindowSum, windowSum);\n        }\n\n        return nums[0] + minWindowSum;\n    }\n\n    private long balance(long windowSum, Multiset selected, Multiset candidates, int k) {\n        while (selected.size() < k - 1) {\n          int minCandidate = candidates.min();\n            windowSum += minCandidate;\n            selected.add(minCandidate);\n            candidates.remove(minCandidate);\n        }\n        while (selected.size() > k - 1) {\n          int maxSelected = selected.max();\n            windowSum -= maxSelected;\n            selected.remove(maxSelected);\n            candidates.add(maxSelected);\n        }\n        return windowSum;\n    }\n}"
@@ -8509,9 +8629,19 @@
       "sliding-window": "**\n * Definition for an infinite stream.\n * class InfiniteStream {\n *     public InfiniteStream(int[] bits);\n *     public int next();\n * }\n */\nclass Solution {\n    public int findPattern(InfiniteStream infiniteStream, int[] pattern) {\n        long a = 0, b = 0;\n        int m = pattern.length;\n        int half = m >> 1;\n        long mask1 = (1L << half) - 1;\n        long mask2 = (1L << (m - half)) - 1;\n        for (int i = 0; i < half; ++i) {\n            a |= (long) pattern[i] << (half - 1 - i);\n        }\n        for (int i = half; i < m; ++i) {\n            b |= (long) pattern[i] << (m - 1 - i);\n        }\n        long x = 0, y = 0;\n        for (int i = 1;; ++i) {\n            int v = infiniteStream.next();\n            y = y << 1 | v;\n            v = (int) ((y >> (m - half)) & 1);\n            y &= mask2;\n            x = x << 1 | v;\n            x &= mask1;\n            if (i >= m && a == x && b == y) {\n                return i - m;\n            }\n        }\n    }\n}"
     }
   },
+  "3025": {
+    "java": {
+      "geometry": ""
+    }
+  },
   "3026": {
     "java": {
       "prefix-sum": ""
+    }
+  },
+  "3027": {
+    "java": {
+      "geometry": ""
     }
   },
   "3028": {
@@ -8582,6 +8712,11 @@
   "3045": {
     "java": {
       "rolling-hash": ""
+    }
+  },
+  "3047": {
+    "java": {
+      "geometry": ""
     }
   },
   "3049": {
