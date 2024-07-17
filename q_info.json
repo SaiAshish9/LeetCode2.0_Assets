@@ -25433,5 +25433,353 @@
         "difficulty": "Hard",
         "language": "Java",
         "acceptance": 40.9
+    },
+    "max_points_on_a_line": {
+        "qno": "149",
+        "title": "Max Points on a Line",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Math",
+            "Geometry"
+        ],
+        "default": "Geometry",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 27.1
+    },
+    "rectangle_area": {
+        "qno": "223",
+        "title": "Rectangle Area",
+        "tags": [
+            "Math",
+            "Geometry"
+        ],
+        "default": "Geometry",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 46.4
+    },
+    "self_crossing": {
+        "qno": "335",
+        "title": "Self Crossing",
+        "tags": [
+            "Array",
+            "Math",
+            "Geometry"
+        ],
+        "default": "Geometry",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 30.7
+    },
+    "convex_polygon": {
+        "qno": "469",
+        "title": "Convex Polygon",
+        "tags": [
+            "Array",
+            "Math",
+            "Geometry"
+        ],
+        "default": "Geometry",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 39.5
+    },
+    "erect_the_fence": {
+        "qno": "587",
+        "title": "Erect the Fence",
+        "tags": [
+            "Array",
+            "Math",
+            "Geometry"
+        ],
+        "default": "Geometry",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 51.9
+    },
+    "valid_square": {
+        "qno": "593",
+        "title": "Valid Square",
+        "tags": [
+            "Math",
+            "Geometry"
+        ],
+        "default": "Geometry",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 44.1
+    },
+    "largest_triangle_area": {
+        "qno": "812",
+        "title": "Largest Triangle Area",
+        "tags": [
+            "Array",
+            "Math",
+            "Geometry"
+        ],
+        "default": "Geometry",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 60.8
+    },
+    "rectangle_overlap": {
+        "qno": "836",
+        "title": "Rectangle Overlap",
+        "tags": [
+            "Math",
+            "Geometry"
+        ],
+        "default": "Geometry",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 44.9
+    },
+    "mirror_reflection": {
+        "qno": "858",
+        "title": "Mirror Reflection",
+        "tags": [
+            "Math",
+            "Geometry",
+            "Number Theory"
+        ],
+        "default": "Geometry",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 62.5
+    },
+    "minimum_area_rectangle": {
+        "qno": "939",
+        "title": "Minimum Area Rectangle",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Math",
+            "Geometry",
+            "Sorting"
+        ],
+        "default": "Geometry",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 54
+    },
+    "minimum_area_rectangle_ii": {
+        "qno": "963",
+        "title": "Minimum Area Rectangle II",
+        "tags": [
+            "Array",
+            "Math",
+            "Geometry"
+        ],
+        "default": "Geometry",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 55.1
+    },
+    "valid_boomerang": {
+        "qno": "1037",
+        "title": "Valid Boomerang",
+        "tags": [
+            "Array",
+            "Math",
+            "Geometry"
+        ],
+        "default": "Geometry",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 37.1
+    },
+    "check_if_it_is_a_straight_line": {
+        "qno": "1232",
+        "title": "Check If It Is a Straight Line",
+        "tags": [
+            "Array",
+            "Math",
+            "Geometry"
+        ],
+        "default": "Geometry",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 39.5
+    },
+    "minimum_time_visiting_all_points": {
+        "qno": "1266",
+        "title": "Minimum Time Visiting All Points",
+        "tags": [
+            "Array",
+            "Math",
+            "Geometry"
+        ],
+        "default": "Geometry",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 82.5
+    },
+    "circle_and_rectangle_overlapping": {
+        "qno": "1401",
+        "title": "Circle and Rectangle Overlapping",
+        "tags": [
+            "Math",
+            "Geometry"
+        ],
+        "default": "Geometry",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 46.5
+    },
+    "maximum_number_of_darts_inside_of_a_circular_dartboard": {
+        "qno": "1453",
+        "title": "Maximum Number of Darts Inside of a Circular Dartboard",
+        "tags": [
+            "Array",
+            "Math",
+            "Geometry"
+        ],
+        "default": "Geometry",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 38
+    },
+    "queries_on_number_of_points_inside_a_circle": {
+        "qno": "1828",
+        "title": "Queries on Number of Points Inside a Circle",
+        "tags": [
+            "Array",
+            "Math",
+            "Geometry"
+        ],
+        "default": "Geometry",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 86.3
+    },
+    "erect_the_fence_ii": {
+        "qno": "1924",
+        "title": "Erect the Fence II",
+        "tags": [
+            "Array",
+            "Math",
+            "Geometry"
+        ],
+        "default": "Geometry",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 50.7
+    },
+    "detonate_the_maximum_bombs": {
+        "qno": "2101",
+        "title": "Detonate the Maximum Bombs",
+        "tags": [
+            "Array",
+            "Math",
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Graph",
+            "Geometry"
+        ],
+        "default": "Geometry",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 48.7
+    },
+    "count_lattice_points_inside_a_circle": {
+        "qno": "2249",
+        "title": "Count Lattice Points Inside a Circle",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Math",
+            "Geometry",
+            "Enumeration"
+        ],
+        "default": "Geometry",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 53
+    },
+    "minimum_lines_to_represent_a_line_chart": {
+        "qno": "2280",
+        "title": "Minimum Lines to Represent a Line Chart",
+        "tags": [
+            "Array",
+            "Math",
+            "Geometry",
+            "Sorting",
+            "Number Theory"
+        ],
+        "default": "Geometry",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 25.3
+    },
+    "minimum_cuts_to_divide_a_circle": {
+        "qno": "2481",
+        "title": "Minimum Cuts to Divide a Circle",
+        "tags": [
+            "Math",
+            "Geometry"
+        ],
+        "default": "Geometry",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 53.3
+    },
+    "find_the_number_of_ways_to_place_people_ii": {
+        "qno": "3027",
+        "title": "Find the Number of Ways to Place People II",
+        "tags": [
+            "Array",
+            "Math",
+            "Geometry",
+            "Sorting",
+            "Enumeration"
+        ],
+        "default": "Geometry",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 47.9
+    },
+    "find_the_number_of_ways_to_place_people_i": {
+        "qno": "3025",
+        "title": "Find the Number of Ways to Place People I",
+        "tags": [
+            "Array",
+            "Math",
+            "Geometry",
+            "Sorting",
+            "Enumeration"
+        ],
+        "default": "Geometry",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 41.1
+    },
+    "maximum_number_of_intersections_on_the_chart": {
+        "qno": "3009",
+        "title": "Maximum Number of Intersections on the Chart",
+        "tags": [
+            "Array",
+            "Math",
+            "Binary Indexed Tree",
+            "Geometry"
+        ],
+        "default": "Geometry",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 46.3
+    },
+    "find_the_largest_area_of_square_inside_two_rectangles": {
+        "qno": "3047",
+        "title": "Find the Largest Area of Square Inside Two Rectangles",
+        "tags": [
+            "Array",
+            "Math",
+            "Geometry"
+        ],
+        "default": "Geometry",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 45.1
     }
 }
