@@ -23573,5 +23573,439 @@
         "difficulty": "Hard",
         "language": "Java",
         "acceptance": 55.5
+    },
+    "kill_process": {
+        "qno": "582",
+        "title": "Kill Process",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Tree",
+            "Depth-First Search",
+            "Breadth-First Search"
+        ],
+        "default": "Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 69.5
+    },
+    "employee_importance": {
+        "qno": "690",
+        "title": "Employee Importance",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Tree",
+            "Depth-First Search",
+            "Breadth-First Search"
+        ],
+        "default": "Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 67.2
+    },
+    "n-ary_tree_level_order_traversal": {
+        "qno": "429",
+        "title": "N-ary Tree Level Order Traversal",
+        "tags": [
+            "Tree",
+            "Breadth-First Search"
+        ],
+        "default": "Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 70.9
+    },
+    "serialize_and_deserialize_n-ary_tree": {
+        "qno": "428",
+        "title": "Serialize and Deserialize N-ary Tree",
+        "tags": [
+            "String",
+            "Tree",
+            "Depth-First Search",
+            "Breadth-First Search"
+        ],
+        "default": "Tree",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 67.4
+    },
+    "logical_or_of_two_binary_grids_represented_as_quad-trees": {
+        "qno": "558",
+        "title": "Logical OR of Two Binary Grids Represented as Quad-Trees",
+        "tags": [
+            "Divide and Conquer",
+            "Tree"
+        ],
+        "default": "Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 49.9
+    },
+    "maximum_depth_of_n-ary_tree": {
+        "qno": "559",
+        "title": "Maximum Depth of N-ary Tree",
+        "tags": [
+            "Tree",
+            "Depth-First Search",
+            "Breadth-First Search"
+        ],
+        "default": "Tree",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 72.3
+    },
+    "smallest_common_region": {
+        "qno": "1257",
+        "title": "Smallest Common Region",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Tree",
+            "Depth-First Search",
+            "Breadth-First Search"
+        ],
+        "default": "Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 65.7
+    },
+    "delete_tree_nodes": {
+        "qno": "1273",
+        "title": "Delete Tree Nodes",
+        "tags": [
+            "Array",
+            "Tree",
+            "Depth-First Search",
+            "Breadth-First Search"
+        ],
+        "default": "Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 61.2
+    },
+    "time_needed_to_inform_all_employees": {
+        "qno": "1376",
+        "title": "Time Needed to Inform All Employees",
+        "tags": [
+            "Tree",
+            "Depth-First Search",
+            "Breadth-First Search"
+        ],
+        "default": "Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 60
+    },
+    "frog_position_after_t_seconds": {
+        "qno": "1377",
+        "title": "Frog Position After T Seconds",
+        "tags": [
+            "Tree",
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Graph"
+        ],
+        "default": "Tree",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 35.5
+    },
+    "minimum_time_to_collect_all_apples_in_a_tree": {
+        "qno": "1443",
+        "title": "Minimum Time to Collect All Apples in a Tree",
+        "tags": [
+            "Hash Table",
+            "Tree",
+            "Depth-First Search",
+            "Breadth-First Search"
+        ],
+        "default": "Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 62.4
+    },
+    "clone_n-ary_tree": {
+        "qno": "1490",
+        "title": "Clone N-ary Tree",
+        "tags": [
+            "Hash Table",
+            "Tree",
+            "Depth-First Search",
+            "Breadth-First Search"
+        ],
+        "default": "Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 83.1
+    },
+    "number_of_nodes_in_the_sub-tree_with_the_same_label": {
+        "qno": "1519",
+        "title": "Number of Nodes in the Sub-Tree With the Same Label",
+        "tags": [
+            "Hash Table",
+            "Tree",
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Counting"
+        ],
+        "default": "Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 55
+    },
+    "find_root_of_n-ary_tree": {
+        "qno": "1506",
+        "title": "Find Root of N-Ary Tree",
+        "tags": [
+            "Hash Table",
+            "Bit Manipulation",
+            "Tree",
+            "Depth-First Search"
+        ],
+        "default": "Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 78.4
+    },
+    "move_sub-tree_of_n-ary_tree": {
+        "qno": "1516",
+        "title": "Move Sub-Tree of N-Ary Tree",
+        "tags": [
+            "Tree",
+            "Depth-First Search"
+        ],
+        "default": "Tree",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 62.1
+    },
+    "diameter_of_n-ary_tree": {
+        "qno": "1522",
+        "title": "Diameter of N-Ary Tree",
+        "tags": [
+            "Tree",
+            "Depth-First Search"
+        ],
+        "default": "Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 74.4
+    },
+    "throne_inheritance": {
+        "qno": "1600",
+        "title": "Throne Inheritance",
+        "tags": [
+            "Hash Table",
+            "Tree",
+            "Depth-First Search",
+            "Design"
+        ],
+        "default": "Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 65.5
+    },
+    "number_of_ways_to_reconstruct_a_tree": {
+        "qno": "1719",
+        "title": "Number Of Ways To Reconstruct A Tree",
+        "tags": [
+            "Tree",
+            "Graph"
+        ],
+        "default": "Tree",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 44.5
+    },
+    "tree_of_coprimes": {
+        "qno": "1766",
+        "title": "Tree of Coprimes",
+        "tags": [
+            "Array",
+            "Math",
+            "Tree",
+            "Depth-First Search",
+            "Number Theory"
+        ],
+        "default": "Tree",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 41.2
+    },
+    "operations_on_tree": {
+        "qno": "1993",
+        "title": "Operations on Tree",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Tree",
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Design"
+        ],
+        "default": "Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 45.8
+    },
+    "minimum_score_after_removals_on_a_tree": {
+        "qno": "2322",
+        "title": "Minimum Score After Removals on a Tree",
+        "tags": [
+            "Array",
+            "Bit Manipulation",
+            "Tree",
+            "Depth-First Search"
+        ],
+        "default": "Tree",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 52.3
+    },
+    "closest_node_to_path_in_tree": {
+        "qno": "2277",
+        "title": "Closest Node to Path in Tree",
+        "tags": [
+            "Array",
+            "Tree",
+            "Depth-First Search",
+            "Breadth-First Search"
+        ],
+        "default": "Tree",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 62.5
+    },
+    "reachable_nodes_with_restrictions": {
+        "qno": "2368",
+        "title": "Reachable Nodes With Restrictions",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Tree",
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Union Find",
+            "Graph"
+        ],
+        "default": "Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 58.9
+    },
+    "number_of_good_paths": {
+        "qno": "2421",
+        "title": "Number of Good Paths",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Tree",
+            "Union Find",
+            "Graph",
+            "Sorting"
+        ],
+        "default": "Tree",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 56.3
+    },
+    "create_components_with_same_value": {
+        "qno": "2440",
+        "title": "Create Components With Same Value",
+        "tags": [
+            "Array",
+            "Math",
+            "Tree",
+            "Depth-First Search",
+            "Enumeration"
+        ],
+        "default": "Tree",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 53
+    },
+    "most_profitable_path_in_a_tree": {
+        "qno": "2467",
+        "title": "Most Profitable Path in a Tree",
+        "tags": [
+            "Array",
+            "Tree",
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Graph"
+        ],
+        "default": "Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 49.4
+    },
+    "minimum_fuel_cost_to_report_to_the_capital": {
+        "qno": "2477",
+        "title": "Minimum Fuel Cost to Report to the Capital",
+        "tags": [
+            "Tree",
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Graph"
+        ],
+        "default": "Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 64.5
+    },
+    "maximum_xor_of_two_non-overlapping_subtrees": {
+        "qno": "2479",
+        "title": "Maximum XOR of Two Non-Overlapping Subtrees",
+        "tags": [
+            "Tree",
+            "Depth-First Search",
+            "Graph",
+            "Trie"
+        ],
+        "default": "Tree",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 49.5
+    },
+    "maximum_number_of_k-divisible_components": {
+        "qno": "2872",
+        "title": "Maximum Number of K-Divisible Components",
+        "tags": [
+            "Tree",
+            "Depth-First Search"
+        ],
+        "default": "Tree",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 58
+    },
+    "count_pairs_of_connectable_servers_in_a_weighted_tree_network": {
+        "qno": "3067",
+        "title": "Count Pairs of Connectable Servers in a Weighted Tree Network",
+        "tags": [
+            "Array",
+            "Tree",
+            "Depth-First Search"
+        ],
+        "default": "Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 57.9
+    },
+    "find_minimum_diameter_after_merging_two_trees": {
+        "qno": "3203",
+        "title": "Find Minimum Diameter After Merging Two Trees",
+        "tags": [
+            "Tree",
+            "Depth-First Search",
+            "Breadth-First Search",
+            "Graph"
+        ],
+        "default": "Tree",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 34.9
     }
 }
