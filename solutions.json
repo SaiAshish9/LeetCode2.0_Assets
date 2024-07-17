@@ -29,6 +29,11 @@
       "two-pointers": "import java.util.*;\n\npublic class Solution {\n    public int threeSumClosest(int[] nums, int target) {\n        Arrays.sort(nums);\n        int closestSum = nums[0] + nums[1] + nums[2];\n\n        for (int i = 0; i < nums.length - 2; i++) {\n            int left = i + 1, right = nums.length - 1;\n            while (left < right) {\n                int currentSum = nums[i] + nums[left] + nums[right];\n                if (Math.abs(currentSum - target) < Math.abs(closestSum - target)) {\n                    closestSum = currentSum;\n                }\n                if (currentSum < target) {\n                    left++;\n                } else if (currentSum > target) {\n                    right--;\n                } else {\n                    return target; // Early exit if we find an exact match\n                }\n            }\n        }\n\n        return closestSum;\n    }\n}"
     }
   },
+  "17": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "18": {
     "java": {
       "two-pointers": "import java.util.*;\n\nclass Solution {\n    public List<List<Integer>> fourSum(int[] nums, int target) {\n        List<List<Integer>> result = new ArrayList<>();\n        int n = nums.length;\n        if (n < 4) return result;\n        \n        Arrays.sort(nums);\n        \n        for (int i = 0; i < n - 3; i++) {\n            if (i > 0 && nums[i] == nums[i - 1]) continue; \n            for (int j = i + 1; j < n - 2; j++) {\n                if (j > i + 1 && nums[j] == nums[j - 1]) continue; \n                \n                int left = j + 1;\n                int right = n - 1;\n                \n                while (left < right) {\n                    long sum = (long) nums[i] + nums[j] + nums[left] + nums[right];\n                    \n                    if (sum == target) {\n                        result.add(Arrays.asList(nums[i], nums[j], nums[left], nums[right]));\n                        \n                        while (left < right && nums[left] == nums[left + 1]) left++;\n                        while (left < right && nums[right] == nums[right - 1]) right--;\n                        \n                        left++;\n                        right--;\n                    } else if (sum < target) {\n                        left++;\n                    } else {\n                        right--;\n                    }\n                }\n            }\n        }\n        \n        return result;\n    }\n    \n    public static void main(String[] args) {\n        Solution sol = new Solution();\n        int[] nums = {1000000000, 1000000000, 1000000000, 1000000000};\n        int target = -294967296;\n        List<List<Integer>> result = sol.fourSum(nums, target);\n        \n        // Expected Output: []\n        for (List<Integer> quad : result) {\n            System.out.println(quad);\n        }\n    }\n}\n"
@@ -94,6 +99,16 @@
       "backtracking": "public class Solution {\n\n   public boolean isSafe(int[][] board, int row, int col, int num, int n) {\n        for (int j = 0; j < n; j++)\n            if (board[row][j] == num)\n                return false;\n\n        for (int i = 0; i < n; i++)\n            if (board[i][col] == num)\n                return false;\n\n        int startRow = row - row % 3,\n                startCol = col - col % 3;\n\n        // check within the section (3 * 3)(n = 3)\n        for (int i = 0; i < 3; i++) {\n            for (int j = 0; j < 3; j++) {\n                if (board[i + startRow][j + startCol] == num)\n                    return false;\n            }\n        }\n\n        return true;\n    }\n\n    boolean solve(int[][] board, int row, int col, int n) {\n        // avoid further tracking if all cells are explored\n        if (row == n - 1 && col == n)\n            return true;\n\n        // move to next row\n        if (col == n) {\n            row++;\n            col = 0;\n        }\n\n        // check for next element horizontally if element is\n        // already present\n        if (board[row][col] != 0)\n            return solve(board, row, col + 1, n);\n\n        // if present value is 0, replace it with values from 0-9\n        for (int num = 1; num < n + 1; num++) {\n            if (isSafe(board, row, col, num, n)) {\n                board[row][col] = num;\n        // check for next column\n                if (solve(board, row, col + 1, n)) {\n                    return true;\n                }\n            }\n            board[row][col] = 0;\n        }\n\n        return false;\n    }\n\n    public void solveSudoku(char[][] board) {\n        int n = board[0].length;\n        int grid[][] = new int[n][n];\n        for (int i = 0; i < n; i++) {\n            for (int j = 0; j < n; j++) {\n                if (board[i][j] == '.') {\n                    grid[i][j] = 0;\n                } else {\n                    grid[i][j] = Integer.parseInt(String.valueOf(board[i][j]));\n                }\n            }\n        }\n        solve(grid, 0, 0, n);\n        for (int i = 0; i < n; i++) {\n            for (int j = 0; j < n; j++) {\n                if (grid[i][j] == 0) {\n                    board[i][j] = '.';\n                } else {\n                    board[i][j] = (char) (grid[i][j] + '0');\n                }\n            }\n        }\n    }\n\n}\n"
     }
   },
+  "39": {
+    "java": {
+      "backtracking": ""
+    }
+  },
+  "40": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "42": {
     "java": {
       "two-pointers": "class Solution {\n    public int trap(int[] height) {\n        if (height == null || height.length == 0) return 0;\n\n        int left = 0, right = height.length - 1;\n        int left_max = 0, right_max = 0;\n        int waterTrapped = 0;\n\n        while (left < right) {\n            if (height[left] < height[right]) {\n                if (height[left] >= left_max) {\n                    left_max = height[left];\n                } else {\n                    waterTrapped += left_max - height[left];\n                }\n                left++;\n            } else {\n                if (height[right] >= right_max) {\n                    right_max = height[right];\n                } else {\n                    waterTrapped += right_max - height[right];\n                }\n                right--;\n            }\n        }\n\n        return waterTrapped;\n    }\n\n    public static void main(String[] args) {\n        Solution sol = new Solution();\n        int[] height = {0,1,0,2,1,0,1,3,2,1,2,1};\n        System.out.println(sol.trap(height)); // Output: 6\n    }\n}\n"
@@ -109,9 +124,29 @@
       "dynamic-programming": ""
     }
   },
+  "46": {
+    "java": {
+      "backtracking": ""
+    }
+  },
+  "47": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "48": {
     "java": {
       "matrix": "public class RotateImage {\n\n    public void rotate(int[][] matrix) {\n        if (matrix == null || matrix.length == 0) return;\n        \n        int n = matrix.length;\n        transpose(matrix, n);\n        \n        for (int i = 0; i < n; i++) {\n            reverseRow(matrix[i], n);\n        }\n    }\n    \n    private void transpose(int[][] matrix, int n) {\n        for (int i = 0; i < n; i++) {\n            for (int j = i + 1; j < n; j++) {\n                swap(matrix, i, j, j, i);\n            }\n        }\n    }\n    \n    private void reverseRow(int[] row, int n) {\n        int left = 0, right = n - 1;\n        while (left < right) {\n            int temp = row[left];\n            row[left] = row[right];\n            row[right] = temp;\n            left++;\n            right--;\n        }\n    }\n    \n    private void swap(int[][] matrix, int i, int j, int x, int y) {\n        int temp = matrix[i][j];\n        matrix[i][j] = matrix[x][y];\n        matrix[x][y] = temp;\n    }\n\n    public static void main(String[] args) {\n        RotateImage ri = new RotateImage();\n        int[][] matrix = {\n            {1, 2, 3},\n            {4, 5, 6},\n            {7, 8, 9}\n        };\n        \n        ri.rotate(matrix);\n        \n        for (int i = 0; i < matrix.length; i++) {\n            for (int j = 0; j < matrix[i].length; j++) {\n                System.out.print(matrix[i][j] + \" \");\n            }\n            System.out.println();\n        }\n    }\n}\n"
+    }
+  },
+  "51": {
+    "java": {
+      "backtracking": ""
+    }
+  },
+  "52": {
+    "java": {
+      "backtracking": ""
     }
   },
   "53": {
@@ -189,6 +224,16 @@
       "sliding-window": "import java.util.HashMap;\nimport java.util.Map;\n\npublic class Solution {\n    public String minWindow(String s, String t) {\n        if (s == null || s.length() == 0 || t == null || t.length() == 0) {\n            return;\n        }\n\n        Map<Character, Integer> tCount = new HashMap<>();\n        for (char c : t.toCharArray()) {\n            tCount.put(c, tCount.getOrDefault(c, 0) + 1);\n        }\n\n        int required = tCount.size();\n        int left = 0, right = 0;\n        int formed = 0;\n        Map<Character, Integer> windowCounts = new HashMap<>();\n        int[] ans = {-1, 0, 0}; // length, left, right\n\n        while (right < s.length()) {\n            char c = s.charAt(right);\n            windowCounts.put(c, windowCounts.getOrDefault(c, 0) + 1);\n\n            if (tCount.containsKey(c) && windowCounts.get(c).intValue() == tCount.get(c).intValue()) {\n                formed++;\n            }\n\n            while (left <= right && formed == required) {\n                c = s.charAt(left);\n                \n                if (ans[0] == -1 || right - left + 1 < ans[0]) {\n                    ans[0] = right - left + 1;\n                    ans[1] = left;\n                    ans[2] = right;\n                }\n\n                windowCounts.put(c, windowCounts.get(c) - 1);\n                if (tCount.containsKey(c) && windowCounts.get(c).intValue() < tCount.get(c).intValue()) {\n                    formed--;\n                }\n\n                left++;\n            }\n\n            right++;\n        }\n\n        return ans[0] == -1 ? : s.substring(ans[1], ans[2] + 1);\n    }\n}\n"
     }
   },
+  "77": {
+    "java": {
+      "backtracking": ""
+    }
+  },
+  "78": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "79": {
     "java": {
       "matrix": ""
@@ -229,9 +274,24 @@
       "two-pointers": "class Solution {\n    public void merge(int[] nums1, int m, int[] nums2, int n) {\n        int p1 = m - 1;\n        int p2 = n - 1;\n        \n        int p = m + n - 1; \n        while (p1 >= 0 && p2 >= 0) {\n            if (nums1[p1] > nums2[p2]) {\n                nums1[p--] = nums1[p1--];\n            } else {\n                nums1[p--] = nums2[p2--];\n            }\n        }\n        \n        while (p2 >= 0) {\n            nums1[p--] = nums2[p2--];\n        }\n    }\n}\n"
     }
   },
+  "89": {
+    "java": {
+      "backtracking": ""
+    }
+  },
+  "90": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "91": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "93": {
+    "java": {
+      "backtracking": ""
     }
   },
   "94": {
@@ -392,6 +452,11 @@
   "125": {
     "java": {
       "two-pointers": "class Solution {\n    public boolean isPalindrome(String s) {\n        int left = 0, right = s.length() - 1;\n        \n        while (left < right) {\n            char c1 = s.charAt(left);\n            char c2 = s.charAt(right);\n            \n            if (!Character.isLetterOrDigit(c1)) {\n                left++;\n            } else if (!Character.isLetterOrDigit(c2)) {\n                right--;\n            } else {\n                if (Character.toLowerCase(c1) != Character.toLowerCase(c2)) {\n                    return false;\n                }\n                left++;\n                right--;\n            }\n        }\n        \n        return true;\n    }\n}\n"
+    }
+  },
+  "126": {
+    "java": {
+      "backtracking": ""
     }
   },
   "129": {
@@ -636,6 +701,11 @@
       "heap-(priority-queue)": "class Solution {\n  public int findKthLargest(int[] nums, int k) {\n    Queue<Integer> minHeap = new PriorityQueue<>();\n\n    for (final int num : nums) {\n      minHeap.offer(num);\n      while (minHeap.size() > k)\n        minHeap.poll();\n    }\n\n    return minHeap.peek();\n  }\n}"
     }
   },
+  "216": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "218": {
     "java": {
       "line-sweep": "import java.util.*;\n\nclass Solution {\n    public List<List<Integer>> getSkyline(int[][] buildings) {\n        List<List<Integer>> result = new ArrayList<>();\n        List<int[]> heights = new ArrayList<>();\n        \n        // Step 1: Collect Events\n        for (int[] building : buildings) {\n            heights.add(new int[]{building[0], -building[2]}); // start event\n            heights.add(new int[]{building[1], building[2]});  // end event\n        }\n        \n        // Step 2: Sort Events\n        Collections.sort(heights, (a, b) -> {\n            if (a[0] != b[0]) {\n                return a[0] - b[0];\n            }\n            return a[1] - b[1];\n        });\n        \n        // Step 3: Process Events\n        PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> b - a);\n        pq.offer(0);\n        int prevHeight = 0;\n        \n        for (int[] h : heights) {\n            if (h[1] < 0) {\n                pq.offer(-h[1]); // start event\n            } else {\n                pq.remove(h[1]); // end event\n            }\n            int currHeight = pq.peek();\n            if (prevHeight != currHeight) {\n                result.add(Arrays.asList(h[0], currHeight));\n                prevHeight = currHeight;\n            }\n        }\n        \n        return result;\n    }\n}\n"
@@ -757,6 +827,11 @@
       "two-pointers": ""
     }
   },
+  "254": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "255": {
     "java": {
       "binary-search-tree": "class Solution {\n    public boolean verifyPreorder(int[] preorder) {\n        Deque<Integer> stack = new ArrayDeque<>();\n        int last = Integer.MIN_VALUE;\n        for (int x : preorder) {\n            if (x < last) {\n                return false;\n            }\n            while (!stack.isEmpty() && stack.peek() < x) {\n                last = stack.poll();\n            }\n            stack.push(x);\n        }\n        return true;\n    }\n}"
@@ -785,6 +860,11 @@
   "265": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "267": {
+    "java": {
+      "backtracking": ""
     }
   },
   "269": {
@@ -832,6 +912,11 @@
       "iterator": "public class ZigzagIterator {\n    private int curr;\n    private int size;\n    private List<Integer> indexes = new ArrayList<>();\n    private List<List<Integer>> vectors = new ArrayList<>();\n\n    public ZigzagIterator(List<Integer> v1, List<Integer> v2) {\n        curr = 0;\n        size = 2;\n        indexes.add(0);\n        indexes.add(0);\n        vectors.add(v1);\n        vectors.add(v2);\n    }\n\n    public int next() {\n        List<Integer> vector = vectors.get(curr);\n        int index = indexes.get(curr);\n        int res = vector.get(index);\n        indexes.set(curr, index + 1);\n        curr = (curr + 1) % size;\n        return res;\n    }\n\n    public boolean hasNext() {\n        int start = curr;\n        while (indexes.get(curr) == vectors.get(curr).size()) {\n            curr = (curr + 1) % size;\n            if (start == curr) {\n                return false;\n            }\n        }\n        return true;\n    }\n}\n\n/**\n * Your ZigzagIterator object will be instantiated and called as such:\n * ZigzagIterator i = new ZigzagIterator(v1, v2);\n * while (i.hasNext()) v[dp()] = i.next();\n */"
     }
   },
+  "282": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "283": {
     "java": {
       "two-pointers": "public class Solution {\n    public void moveZeroes(int[] nums) {\n        int slow = 0;\n\n        for (int fast = 0; fast < nums.length; fast++) {\n            if (nums[fast] != 0) {\n                int temp = nums[slow];\n                nums[slow] = nums[fast];\n                nums[fast] = temp;\n                slow++;\n            }\n        }\n    }\n}\n"
@@ -860,6 +945,11 @@
   "289": {
     "java": {
       "matrix": ""
+    }
+  },
+  "291": {
+    "java": {
+      "backtracking": ""
     }
   },
   "292": {
@@ -897,6 +987,11 @@
       "dynamic-programming": ""
     }
   },
+  "301": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "302": {
     "java": {
       "matrix": ""
@@ -910,6 +1005,11 @@
   "304": {
     "java": {
       "matrix": ""
+    }
+  },
+  "306": {
+    "java": {
+      "backtracking": ""
     }
   },
   "308": {
@@ -965,6 +1065,11 @@
   "319": {
     "java": {
       "brainteaser": "class Solution {\n    public int bulbSwitch(int n) {\n        return (int) Math.sqrt(n);\n    }\n}\n"
+    }
+  },
+  "320": {
+    "java": {
+      "backtracking": ""
     }
   },
   "321": {
@@ -1259,6 +1364,11 @@
       "reservoir-sampling": "public class Solution {\n    private int[] nums;\n    private Random rand;\n\n    public Solution(int[] nums) {\n        this.nums = nums;\n        this.rand = new Random();\n    }\n\n    public int pick(int target) {\n        int count = 0;\n        int result = -1; // Variable to store the chosen index\n\n        for (int i = 0; i < nums.length; i++) {\n            if (nums[i] == target) {\n                count++;\n                // With probability 1/count, select the current index\n                if (rand.nextInt(count) == 0) {\n                    result = i;\n                }\n            }\n        }\n\n        return result;\n    }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution obj = new Solution(nums);\n * int param_1 = obj.pick(target);\n */"
     }
   },
+  "401": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "402": {
     "java": {
       "monotonic-stack": "class Solution {\n    public String removeKdigits(String num, int k) {\n        if (k == num.length()) {\n            return \"0\";\n        }\n\n        Stack<Character> stack = new Stack<>();\n\n        for (char digit : num.toCharArray()) {\n            while (!stack.isEmpty() && k > 0 && stack.peek() > digit) {\n                stack.pop();\n                k--;\n            }\n            stack.push(digit);\n        }\n\n        while (k > 0) {\n            stack.pop();\n            k--;\n        }\n\n        StringBuilder result = new StringBuilder();\n        while (!stack.isEmpty()) {\n            result.append(stack.pop());\n        }\n\n        result.reverse();\n        while (result.length() > 1 && result.charAt(0) == '0') {\n            result.deleteCharAt(0);\n        }\n\n        return result.toString();\n    }\n}\n"
@@ -1287,6 +1397,11 @@
   "410": {
     "java": {
       "prefix-sum": ""
+    }
+  },
+  "411": {
+    "java": {
+      "backtracking": ""
     }
   },
   "413": {
@@ -1327,6 +1442,11 @@
   "424": {
     "java": {
       "sliding-window": "public class Solution {\n    public int characterReplacement(String s, int k) {\n        int[] count = new int[26];\n        int maxCount = 0, left = 0, maxLength = 0;\n\n        for (int right = 0; right < s.length(); right++) {\n            char rightChar = s.charAt(right);\n            count[rightChar - 'A']++;\n            maxCount = Math.max(maxCount, count[rightChar - 'A']);\n\n            while (right - left + 1 - maxCount > k) {\n                char leftChar = s.charAt(left);\n                count[leftChar - 'A']--;\n                left++;\n            }\n\n            maxLength = Math.max(maxLength, right - left + 1);\n        }\n\n        return maxLength;\n    }\n}\n"
+    }
+  },
+  "425": {
+    "java": {
+      "backtracking": ""
     }
   },
   "426": {
@@ -1548,6 +1668,11 @@
   "490": {
     "java": {
       "matrix": ""
+    }
+  },
+  "491": {
+    "java": {
+      "backtracking": ""
     }
   },
   "493": {
@@ -2091,9 +2216,19 @@
       "stack": ""
     }
   },
+  "679": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "680": {
     "java": {
       "two-pointers": ""
+    }
+  },
+  "681": {
+    "java": {
+      "backtracking": ""
     }
   },
   "682": {
@@ -2412,6 +2547,11 @@
       "binary-search-tree": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    private Integer prev;\n    private int minDiff;\n\n    public int minDiffInBST(TreeNode root) {\n        minDiff = Integer.MAX_VALUE;\n        prev = null;\n        inorder(root);\n        return minDiff;\n    }\n    \n    private void inorder(TreeNode node) {\n        if (node == null) {\n            return;\n        }\n        \n        inorder(node.left);\n        \n        if (prev != null) {\n            minDiff = Math.min(minDiff, node.val - prev);\n        }\n        prev = node.val;\n        \n        inorder(node.right);\n    }\n}\n"
     }
   },
+  "784": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "786": {
     "java": {
       "two-pointers": "import java.util.PriorityQueue;\n\npublic class Solution {\n    public int[] kthSmallestPrimeFraction(int[] arr, int k) {\n        int n = arr.length;\n        PriorityQueue<Fraction> minHeap = new PriorityQueue<>((a, b) -> Double.compare(a.value, b.value));\n\n        for (int i = 0; i < n - 1; i++) {\n            minHeap.offer(new Fraction(i, n - 1, (double) arr[i] / arr[n - 1]));\n        }\n\n        Fraction fraction = null;\n        for (int i = 0; i < k; i++) {\n            fraction = minHeap.poll();\n            int numeratorIndex = fraction.numeratorIndex;\n            int denominatorIndex = fraction.denominatorIndex;\n            if (denominatorIndex - 1 > numeratorIndex) {\n                minHeap.offer(new Fraction(numeratorIndex, denominatorIndex - 1,\n                        (double) arr[numeratorIndex] / arr[denominatorIndex - 1]));\n            }\n        }\n\n        return new int[] { arr[fraction.numeratorIndex], arr[fraction.denominatorIndex] };\n    }\n\n    private static class Fraction {\n        int numeratorIndex;\n        int denominatorIndex;\n        double value;\n\n        Fraction(int numeratorIndex, int denominatorIndex, double value) {\n            this.numeratorIndex = numeratorIndex;\n            this.denominatorIndex = denominatorIndex;\n            this.value = value;\n        }\n    }\n}\n"
@@ -2445,6 +2585,11 @@
   "795": {
     "java": {
       "two-pointers": ""
+    }
+  },
+  "797": {
+    "java": {
+      "backtracking": ""
     }
   },
   "798": {
@@ -2505,6 +2650,11 @@
   "814": {
     "java": {
       "tree": ""
+    }
+  },
+  "816": {
+    "java": {
+      "backtracking": ""
     }
   },
   "818": {
@@ -2570,6 +2720,11 @@
   "840": {
     "java": {
       "matrix": ""
+    }
+  },
+  "842": {
+    "java": {
+      "backtracking": ""
     }
   },
   "843": {
@@ -2954,6 +3109,11 @@
       "tree": ""
     }
   },
+  "967": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "968": {
     "java": {
       "dynamic-programming": ""
@@ -3277,6 +3437,11 @@
       "matrix": ""
     }
   },
+  "1079": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "1080": {
     "java": {
       "tree": ""
@@ -3290,6 +3455,16 @@
   "1086": {
     "java": {
       "heap-(priority-queue)": ""
+    }
+  },
+  "1087": {
+    "java": {
+      "backtracking": ""
+    }
+  },
+  "1088": {
+    "java": {
+      "backtracking": ""
     }
   },
   "1089": {
@@ -3604,6 +3779,11 @@
       "two-pointers": ""
     }
   },
+  "1215": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "1216": {
     "java": {
       "dynamic-programming": ""
@@ -3674,6 +3854,21 @@
       "two-pointers": ""
     }
   },
+  "1238": {
+    "java": {
+      "backtracking": ""
+    }
+  },
+  "1239": {
+    "java": {
+      "backtracking": ""
+    }
+  },
+  "1240": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "1242": {
     "java": {
       "concurrency": "import java.net.URI;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\nimport java.util.Set;\nimport java.util.concurrent.ConcurrentHashMap;\nimport java.util.concurrent.ConcurrentSkipListSet;\nimport java.util.stream.Collectors;\nimport java.util.stream.Stream;\n\npublic class Web_Crawler_Multithreaded {\n\n    class Solution_1_synchronizedList {\n        private final Set<String> set = Collections.newSetFromMap(new ConcurrentHashMap<String, Boolean>());\n        private final List<String> result = Collections.synchronizedList(new ArrayList<String>());\n        private String HOSTNAME = null;\n\n        public List<String> crawl(String startUrl, HtmlParser htmlParser) {\n            initHostName(startUrl);\n            set.add(startUrl);\n            getUrlDfs(startUrl, htmlParser);\n            return result;\n        }\n\n        private boolean judgeHostname(String url) {\n            int idx = url.indexOf('/', 7);\n            String hostName = (idx != -1) ? url.substring(0, idx) : url;\n            return hostName.equals(HOSTNAME);\n        }\n\n        private void initHostName(String url) {\n            int idx = url.indexOf('/', 7);\n            HOSTNAME = (idx != -1) ? url.substring(0, idx) : url;\n        }\n\n        private void getUrlDfs(String startUrl, HtmlParser htmlParser) {\n            result.add(startUrl);\n            List<String> res = htmlParser.getUrls(startUrl);\n            List<Thread> threads = new ArrayList<>();\n            for (String url : res) {\n                if (judgeHostname(url) && !set.contains(url)) {\n                    set.add(url);\n                    threads.add(new Thread(() -> {\n                        getUrlDfs(url, htmlParser);\n                    }));\n                }\n            }\n            for (Thread thread : threads) {\n                thread.start();\n            }\n            try {\n                for (Thread thread : threads) {\n                    thread.join(); \n                }\n            } catch (InterruptedException e) {\n                e.printStackTrace();\n            }\n        }\n\n    }\n\n    class Solution_2_ConcurrentSkipListSet {\n\n        public List<String> crawl(String startUrl, HtmlParser htmlParser) {\n            Set<String> visited = new ConcurrentSkipListSet<>();\n            String hostname = getHostname(startUrl);\n            visited.add(startUrl);\n\n            return crawlDfs(startUrl, htmlParser, hostname, visited).collect(Collectors.toList());\n        }\n\n        private Stream<String> crawlDfs(String startUrl, HtmlParser htmlParser, String hostname,\n                                     Set<String> visited) {\n            try (Stream<String> stream = htmlParser.getUrls(startUrl)\n                .parallelStream()\n                .filter(url -> isSameHostname(url, hostname))\n                .filter(visited::add)\n                .flatMap(url -> crawlDfs(url, htmlParser, hostname, visited))) {\n\n                return Stream.concat(Stream.of(startUrl), stream);\n            }\n        }\n\n        private String getHostname(String url) {\n            int idx = url.indexOf('/', 7);\n            return (idx != -1) ? url.substring(0, idx) : url;\n        }\n\n        private boolean isSameHostname(String url, String hostname) {\n            return url.startsWith(hostname) && (url.length() == hostname.length()\n                || url.charAt(hostname.length()) == '/');\n        }\n    }\n\n    interface HtmlParser {\n        List<String> getUrls(String str);\n    }\n\n\n    class Solution_CrawlerClass {\n        public List<String> crawl(String startUrl, HtmlParser htmlParser) {\n            String host = URI.create(startUrl).getHost();\n            Crawler crawler = new Crawler(startUrl, host, htmlParser);\n            crawler.res = new ArrayList<>();\n            crawler.start();\n            Crawler.joinThread(crawler);\n            return crawler.res;\n        }\n    }\n\n    static class Crawler extends Thread {\n        String startUrl;\n        String hostname;\n        HtmlParser htmlParser;\n        public volatile List<String> res = new ArrayList<>();\n\n        public Crawler(String startUrl, String hostname, HtmlParser htmlParser) {\n            this.startUrl = startUrl;\n            this.hostname = hostname;\n            this.htmlParser = htmlParser;\n        }\n\n        @Override\n        public void run() {\n            String host = URI.create(startUrl).getHost();\n            if (!host.equals(hostname) || res.contains(startUrl)) {\n                return;\n            }\n            res.add(startUrl);\n            List<Thread> threads = new ArrayList<>();\n            for (String s : htmlParser.getUrls(startUrl)) {\n                Crawler crawler = new Crawler(s, hostname, htmlParser);\n                crawler.start();\n                threads.add(crawler);\n            }\n            for (Thread t : threads) {\n                joinThread(t);\n            }\n        }\n\n        public static void joinThread(Thread thread) {\n            try {\n                thread.join();\n            } catch (InterruptedException e) {\n            }\n        }\n\n    }\n}"
@@ -3717,6 +3912,11 @@
   "1257": {
     "java": {
       "tree": ""
+    }
+  },
+  "1258": {
+    "java": {
+      "backtracking": ""
     }
   },
   "1259": {
@@ -3837,6 +4037,11 @@
   "1305": {
     "java": {
       "binary-search-tree": ""
+    }
+  },
+  "1307": {
+    "java": {
+      "backtracking": ""
     }
   },
   "1310": {
@@ -4097,6 +4302,11 @@
   "1413": {
     "java": {
       "prefix-sum": ""
+    }
+  },
+  "1415": {
+    "java": {
+      "backtracking": ""
     }
   },
   "1416": {
@@ -4559,6 +4769,11 @@
       "matrix": ""
     }
   },
+  "1593": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "1594": {
     "java": {
       "matrix": ""
@@ -4582,6 +4797,11 @@
   "1600": {
     "java": {
       "tree": ""
+    }
+  },
+  "1601": {
+    "java": {
+      "backtracking": ""
     }
   },
   "1602": {
@@ -4904,6 +5124,11 @@
       "stack": ""
     }
   },
+  "1718": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "1719": {
     "java": {
       "tree": ""
@@ -5187,6 +5412,11 @@
   "1845": {
     "java": {
       "heap-(priority-queue)": ""
+    }
+  },
+  "1849": {
+    "java": {
+      "backtracking": ""
     }
   },
   "1850": {
@@ -5524,6 +5754,11 @@
       "suffix-array": "class Solution {\n    public int numberOfCombinations(String num) {\n        if (num.charAt(0) == '0')\n            return 0;\n\n      int kMod = 1_000_000_007;\n      int n = num.length();\n        // dp[i][k] := the number of possible lists of integers ending in num[i] with\n        // the length of the last number being 1..k\n        long[][] dp = new long[n][n + 1];\n        // lcs[i][j] := the number of the same digits in num[i..n) and num[j..n)\n        int[][] lcs = new int[n + 1][n + 1];\n\n        // Step 1: Compute LCS array\n        for (int i = n - 1; i >= 0; --i)\n            for (int j = i + 1; j < n; ++j)\n                if (num.charAt(i) == num.charAt(j))\n                    lcs[i][j] = lcs[i + 1][j + 1] + 1;\n\n        // Step 2: Dynamic programming to count number of combinations\n        for (int i = 0; i < n; ++i)\n            for (int k = 1; k <= i + 1; ++k) {\n                dp[i][k] += dp[i][k - 1];\n                dp[i][k] %= kMod;\n                // The last number is num[s..i].\n              int s = i - k + 1;\n                if (num.charAt(s) == '0')\n                    // If the number starts with '0', skip it as it's invalid\n                    continue;\n                if (s == 0) {\n                    // If the whole string is considered, increment the count by 1\n                    dp[i][k] += 1;\n                    continue;\n                }\n                if (s < k) {\n                    // If the length k is not enough, add counts from num[0..s - 1]\n                    dp[i][k] += dp[s - 1][s];\n                    continue;\n                }\n              int left = lcs[s - k][s];\n                if (left >= k || num.charAt(s - k + left) <= num.charAt(s + left))\n                    // If num[s - k..s - 1] <= num[s..i], add counts from dp[s - 1][k]\n                    dp[i][k] += dp[s - 1][k];\n                else\n                    // Otherwise, add counts from dp[s - 1][k - 1]\n                    dp[i][k] += dp[s - 1][k - 1];\n                \n                dp[i][k] %= kMod;\n            }\n\n        return (int) dp[n - 1][n] % kMod;\n    }\n}\n"
     }
   },
+  "1980": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "1981": {
     "java": {
       "matrix": ""
@@ -5615,6 +5850,11 @@
       "sliding-window": "import java.util.Arrays;\nimport java.util.HashSet;\nimport java.util.Set;\n\nclass Solution {\n    public int minOperations(int[] nums) {\n        Set<Integer> set = new HashSet<>();\n        for (int num : nums) {\n            set.add(num);\n        }\n        int[] uniqueNums = new int[set.size()];\n        int index = 0;\n        for (int num : set) {\n            uniqueNums[index++] = num;\n        }\n        Arrays.sort(uniqueNums);\n\n        int maxLength = 0;\n        int left = 0;\n        for (int right = 0; right < uniqueNums.length; ++right) {\n            while (uniqueNums[right] - uniqueNums[left] >= nums.length) {\n                left++;\n            }\n            maxLength = Math.max(maxLength, right - left + 1);\n        }\n\n        return nums.length - maxLength;\n    }\n}\n"
     }
   },
+  "2014": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "2015": {
     "java": {
       "heap-(priority-queue)": ""
@@ -5695,9 +5935,19 @@
       "game-theory": ""
     }
   },
+  "2044": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "2046": {
     "java": {
       "two-pointers": ""
+    }
+  },
+  "2048": {
+    "java": {
+      "backtracking": ""
     }
   },
   "2049": {
@@ -5725,6 +5975,11 @@
       "prefix-sum": ""
     }
   },
+  "2056": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "2060": {
     "java": {
       "dynamic-programming": ""
@@ -5738,6 +5993,11 @@
   "2063": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "2065": {
+    "java": {
+      "backtracking": ""
     }
   },
   "2067": {
@@ -5930,6 +6190,11 @@
       "two-pointers": ""
     }
   },
+  "2151": {
+    "java": {
+      "backtracking": ""
+    }
+  },
   "2152": {
     "java": {
       "dynamic-programming": ""
@@ -5978,6 +6243,11 @@
   "2174": {
     "java": {
       "matrix": ""
+    }
+  },
+  "2178": {
+    "java": {
+      "backtracking": ""
     }
   },
   "2179": {
@@ -6048,6 +6318,11 @@
   "2211": {
     "java": {
       "stack": ""
+    }
+  },
+  "2212": {
+    "java": {
+      "backtracking": ""
     }
   },
   "2213": {
@@ -7294,6 +7569,11 @@
   "2697": {
     "java": {
       "two-pointers": ""
+    }
+  },
+  "2698": {
+    "java": {
+      "backtracking": ""
     }
   },
   "2699": {
