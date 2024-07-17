@@ -27289,5 +27289,448 @@
         "difficulty": "Medium",
         "language": "Java",
         "acceptance": 75
+    },
+    "count_primes": {
+        "qno": "204",
+        "title": "Count Primes",
+        "tags": [
+            "Array",
+            "Math",
+            "Enumeration",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 33.8
+    },
+    "add_digits": {
+        "qno": "258",
+        "title": "Add Digits",
+        "tags": [
+            "Math",
+            "Simulation",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 66.9
+    },
+    "prime_palindrome": {
+        "qno": "866",
+        "title": "Prime Palindrome",
+        "tags": [
+            "Math",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 26.1
+    },
+    "x_of_a_kind_in_a_deck_of_cards": {
+        "qno": "914",
+        "title": "X of a Kind in a Deck of Cards",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Math",
+            "Counting",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 29.9
+    },
+    "largest_component_size_by_common_factor": {
+        "qno": "952",
+        "title": "Largest Component Size by Common Factor",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Math",
+            "Union Find",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 40.8
+    },
+    "graph_connectivity_with_threshold": {
+        "qno": "1627",
+        "title": "Graph Connectivity With Threshold",
+        "tags": [
+            "Array",
+            "Math",
+            "Union Find",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 47.1
+    },
+    "check_if_it_is_a_good_array": {
+        "qno": "1250",
+        "title": "Check If It Is a Good Array",
+        "tags": [
+            "Array",
+            "Math",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 59.6
+    },
+    "simplified_fractions": {
+        "qno": "1447",
+        "title": "Simplified Fractions",
+        "tags": [
+            "Math",
+            "String",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 66.9
+    },
+    "the_kth_factor_of_n": {
+        "qno": "1492",
+        "title": "The kth Factor of n",
+        "tags": [
+            "Math",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 68
+    },
+    "number_of_different_subsequences_gcds": {
+        "qno": "1819",
+        "title": "Number of Different Subsequences GCDs",
+        "tags": [
+            "Array",
+            "Math",
+            "Counting",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 40.8
+    },
+    "three_divisors": {
+        "qno": "1952",
+        "title": "Three Divisors",
+        "tags": [
+            "Math",
+            "Enumeration",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 60.9
+    },
+    "find_greatest_common_divisor_of_array": {
+        "qno": "1979",
+        "title": "Find Greatest Common Divisor of Array",
+        "tags": [
+            "Array",
+            "Math",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 77.9
+    },
+    "gcd_sort_of_an_array": {
+        "qno": "1998",
+        "title": "GCD Sort of an Array",
+        "tags": [
+            "Array",
+            "Math",
+            "Union Find",
+            "Sorting",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 45.9
+    },
+    "number_of_pairs_of_interchangeable_rectangles": {
+        "qno": "2001",
+        "title": "Number of Pairs of Interchangeable Rectangles",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Math",
+            "Counting",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 49.9
+    },
+    "count_array_pairs_divisible_by_k": {
+        "qno": "2183",
+        "title": "Count Array Pairs Divisible by K",
+        "tags": [
+            "Array",
+            "Math",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 29.6
+    },
+    "smallest_even_multiple": {
+        "qno": "2413",
+        "title": "Smallest Even Multiple",
+        "tags": [
+            "Math",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 87.8
+    },
+    "number_of_common_factors": {
+        "qno": "2427",
+        "title": "Number of Common Factors",
+        "tags": [
+            "Math",
+            "Enumeration",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 79.1
+    },
+    "number_of_subarrays_with_gcd_equal_to_k": {
+        "qno": "2447",
+        "title": "Number of Subarrays With GCD Equal to K",
+        "tags": [
+            "Array",
+            "Math",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 50.1
+    },
+    "number_of_subarrays_with_lcm_equal_to_k": {
+        "qno": "2470",
+        "title": "Number of Subarrays With LCM Equal to K",
+        "tags": [
+            "Array",
+            "Math",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 38.9
+    },
+    "smallest_value_after_replacing_with_sum_of_prime_factors": {
+        "qno": "2507",
+        "title": "Smallest Value After Replacing With Sum of Prime Factors",
+        "tags": [
+            "Math",
+            "Simulation",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 48.6
+    },
+    "distinct_prime_factors_of_product_of_array": {
+        "qno": "2521",
+        "title": "Distinct Prime Factors of Product of Array",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Math",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 51.2
+    },
+    "closest_prime_numbers_in_range": {
+        "qno": "2523",
+        "title": "Closest Prime Numbers in Range",
+        "tags": [
+            "Math",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 37.5
+    },
+    "check_if_point_is_reachable": {
+        "qno": "2543",
+        "title": "Check if Point Is Reachable",
+        "tags": [
+            "Math",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 42.3
+    },
+    "split_the_array_to_make_coprime_products": {
+        "qno": "2584",
+        "title": "Split the Array to Make Coprime Products",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Math",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 23.1
+    },
+    "make_k-subarray_sums_equal": {
+        "qno": "2607",
+        "title": "Make K-Subarray Sums Equal",
+        "tags": [
+            "Array",
+            "Math",
+            "Sorting",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 36.8
+    },
+    "minimum_number_of_operations_to_make_all_array_elements_equal_to_1": {
+        "qno": "2654",
+        "title": "Minimum Number of Operations to Make All Array Elements Equal to 1",
+        "tags": [
+            "Array",
+            "Math",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 35.2
+    },
+    "greatest_common_divisor_traversal": {
+        "qno": "2709",
+        "title": "Greatest Common Divisor Traversal",
+        "tags": [
+            "Array",
+            "Math",
+            "Union Find",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 42.6
+    },
+    "number_of_beautiful_pairs": {
+        "qno": "2748",
+        "title": "Number of Beautiful Pairs",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Math",
+            "Counting",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 50.1
+    },
+    "prime_pairs_with_target_sum": {
+        "qno": "2761",
+        "title": "Prime Pairs With Target Sum",
+        "tags": [
+            "Array",
+            "Math",
+            "Enumeration",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 34.2
+    },
+    "insert_greatest_common_divisors_in_linked_list": {
+        "qno": "2807",
+        "title": "Insert Greatest Common Divisors in Linked List",
+        "tags": [
+            "Linked List",
+            "Math",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 88.7
+    },
+    "maximum_element-sum_of_a_complete_subset_of_indices": {
+        "qno": "2862",
+        "title": "Maximum Element-Sum of a Complete Subset of Indices",
+        "tags": [
+            "Array",
+            "Math",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 44.1
+    },
+    "minimize_length_of_array_using_operations": {
+        "qno": "3012",
+        "title": "Minimize Length of Array Using Operations",
+        "tags": [
+            "Array",
+            "Math",
+            "Greedy",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 35.2
+    },
+    "maximum_prime_difference": {
+        "qno": "3115",
+        "title": "Maximum Prime Difference",
+        "tags": [
+            "Array",
+            "Math",
+            "Number Theory"
+        ],
+        "default": "Number Theory",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 58.2
     }
 }
