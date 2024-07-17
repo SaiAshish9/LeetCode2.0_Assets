@@ -757,6 +757,11 @@
         "recursion": ""
       }
     },
+    "204": {
+      "java": {
+        "number-theory": ""
+      }
+    },
     "206": {
       "java": {
         "recursion": ""
@@ -972,6 +977,11 @@
     "257": {
       "java": {
         "tree": ""
+      }
+    },
+    "258": {
+      "java": {
+        "number-theory": ""
       }
     },
     "259": {
@@ -3185,6 +3195,11 @@
         "tree": ""
       }
     },
+    "866": {
+      "java": {
+        "number-theory": ""
+      }
+    },
     "867": {
       "java": {
         "matrix": ""
@@ -3342,6 +3357,11 @@
         "topological-sort": ""
       }
     },
+    "914": {
+      "java": {
+        "number-theory": ""
+      }
+    },
     "917": {
       "java": {
         "two-pointers": ""
@@ -3465,6 +3485,11 @@
     "951": {
       "java": {
         "tree": ""
+      }
+    },
+    "952": {
+      "java": {
+        "number-theory": ""
       }
     },
     "956": {
@@ -4343,6 +4368,11 @@
         "stack": "class Solution {\n    public String minRemoveToMakeValid(String s) {\n        Stack<Integer> stack = new Stack<>();\n        char[] chars = s.toCharArray();\n        \n        for (int i = 0; i < chars.length; i++) {\n            if (chars[i] == '(') {\n                stack.push(i); \n            } else if (chars[i] == ')') {\n                if (!stack.isEmpty()) {\n                    stack.pop();\n                } else {\n                    chars[i] = '*'; \n                }\n            }\n        }\n        \n        while (!stack.isEmpty()) {\n            chars[stack.pop()] = '*';\n        }\n        \n        StringBuilder result = new StringBuilder();\n        for (char c : chars) {\n            if (c != '*') {\n                result.append(c);\n            }\n        }\n        \n        return result.toString();\n    }\n}\n"
       }
     },
+    "1250": {
+      "java": {
+        "number-theory": ""
+      }
+    },
     "1253": {
       "java": {
         "matrix": ""
@@ -4888,6 +4918,11 @@
         "matrix": ""
       }
     },
+    "1447": {
+      "java": {
+        "number-theory": ""
+      }
+    },
     "1448": {
       "java": {
         "tree": ""
@@ -5021,6 +5056,11 @@
     "1490": {
       "java": {
         "tree": ""
+      }
+    },
+    "1492": {
+      "java": {
+        "number-theory": ""
       }
     },
     "1493": {
@@ -5391,6 +5431,11 @@
     "1626": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1627": {
+      "java": {
+        "number-theory": ""
       }
     },
     "1628": {
@@ -5918,6 +5963,11 @@
         "ordered-set": ""
       }
     },
+    "1819": {
+      "java": {
+        "number-theory": ""
+      }
+    },
     "1820": {
       "java": {
         "matrix": ""
@@ -6288,6 +6338,11 @@
         "monotonic-stack": ""
       }
     },
+    "1952": {
+      "java": {
+        "number-theory": ""
+      }
+    },
     "1955": {
       "java": {
         "dynamic-programming": ""
@@ -6356,6 +6411,11 @@
     "1977": {
       "java": {
         "suffix-array": "class Solution {\n    public int numberOfCombinations(String num) {\n        if (num.charAt(0) == '0')\n            return 0;\n\n      int kMod = 1_000_000_007;\n      int n = num.length();\n        // dp[i][k] := the number of possible lists of integers ending in num[i] with\n        // the length of the last number being 1..k\n        long[][] dp = new long[n][n + 1];\n        // lcs[i][j] := the number of the same digits in num[i..n) and num[j..n)\n        int[][] lcs = new int[n + 1][n + 1];\n\n        // Step 1: Compute LCS array\n        for (int i = n - 1; i >= 0; --i)\n            for (int j = i + 1; j < n; ++j)\n                if (num.charAt(i) == num.charAt(j))\n                    lcs[i][j] = lcs[i + 1][j + 1] + 1;\n\n        // Step 2: Dynamic programming to count number of combinations\n        for (int i = 0; i < n; ++i)\n            for (int k = 1; k <= i + 1; ++k) {\n                dp[i][k] += dp[i][k - 1];\n                dp[i][k] %= kMod;\n                // The last number is num[s..i].\n              int s = i - k + 1;\n                if (num.charAt(s) == '0')\n                    // If the number starts with '0', skip it as it's invalid\n                    continue;\n                if (s == 0) {\n                    // If the whole string is considered, increment the count by 1\n                    dp[i][k] += 1;\n                    continue;\n                }\n                if (s < k) {\n                    // If the length k is not enough, add counts from num[0..s - 1]\n                    dp[i][k] += dp[s - 1][s];\n                    continue;\n                }\n              int left = lcs[s - k][s];\n                if (left >= k || num.charAt(s - k + left) <= num.charAt(s + left))\n                    // If num[s - k..s - 1] <= num[s..i], add counts from dp[s - 1][k]\n                    dp[i][k] += dp[s - 1][k];\n                else\n                    // Otherwise, add counts from dp[s - 1][k - 1]\n                    dp[i][k] += dp[s - 1][k - 1];\n                \n                dp[i][k] %= kMod;\n            }\n\n        return (int) dp[n - 1][n] % kMod;\n    }\n}\n"
+      }
+    },
+    "1979": {
+      "java": {
+        "number-theory": ""
       }
     },
     "1980": {
@@ -6429,9 +6489,19 @@
         "dynamic-programming": ""
       }
     },
+    "1998": {
+      "java": {
+        "number-theory": ""
+      }
+    },
     "2000": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "2001": {
+      "java": {
+        "number-theory": ""
       }
     },
     "2002": {
@@ -6892,6 +6962,11 @@
     "2182": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "2183": {
+      "java": {
+        "number-theory": ""
       }
     },
     "2184": {
@@ -7575,6 +7650,11 @@
         "sliding-window": "class Solution {\n  public int[] smallestSubarrays(int[] nums) {\n  int kMaxBit = 30;\n    int[] ans = new int[nums.length];\n    int[] closest = new int[kMaxBit];\n\n    Arrays.fill(ans, 1);\n\n    for (int i = nums.length - 1; i >= 0; --i)\n      for (int j = 0; j < kMaxBit; ++j) {\n        if ((nums[i] >> j & 1) == 1)\n          closest[j] = i;\n        ans[i] = Math.max(ans[i], closest[j] - i + 1);\n      }\n\n    return ans;\n  }\n}"
       }
     },
+    "2413": {
+      "java": {
+        "number-theory": ""
+      }
+    },
     "2415": {
       "java": {
         "tree": ""
@@ -7618,6 +7698,11 @@
     "2426": {
       "java": {
         "merge-sort": "import java.util.*;\n\nclass Solution {\n    public long numberOfPairs(int[] nums1, int[] nums2, int diff) {\n        int n = nums1.length;\n        int[] A = new int[n];\n        \n        for (int i = 0; i < n; ++i) {\n            A[i] = nums1[i] - nums2[i];\n        }\n        \n        long[] ans = {0}; \n        mergeSort(A, 0, n - 1, diff, ans);\n        \n        return ans[0];\n    }\n\n    private void mergeSort(int[] A, int left, int right, int diff, long[] ans) {\n        if (left >= right) {\n            return;\n        }\n        \n        int m = (left + right) / 2;\n        mergeSort(A, left, m, diff, ans);\n        mergeSort(A, m + 1, right, diff, ans);\n        merge(A, left, m, right, diff, ans);\n    }\n\n    private void merge(int[] A, int left, int m, int right, int diff, long[] ans) {\n        int lo = m + 1;\n        int hi = m + 1; \n        for (int i = left; i <= m; ++i) {\n            while (hi <= right && A[i] > A[hi] + diff) {\n                ++hi;\n            }\n            ans[0] += right - hi + 1;\n        }\n        \n        int[] sorted = new int[right - left + 1];\n        int k = 0; // Index for sorted array\n        int i = left; // Index for left subarray\n        int j = m + 1; // Index for right subarray\n        \n        while (i <= m && j <= right) {\n            if (A[i] <= A[j]) {\n                sorted[k++] = A[i++];\n            } else {\n                sorted[k++] = A[j++];\n            }\n        }\n        \n        while (i <= m) {\n            sorted[k++] = A[i++];\n        }\n        \n        while (j <= right) {\n            sorted[k++] = A[j++];\n        }\n        \n        System.arraycopy(sorted, 0, A, left, sorted.length);\n    }\n}\n"
+      }
+    },
+    "2427": {
+      "java": {
+        "number-theory": ""
       }
     },
     "2428": {
@@ -7690,6 +7775,11 @@
         "tree": ""
       }
     },
+    "2447": {
+      "java": {
+        "number-theory": ""
+      }
+    },
     "2448": {
       "java": {
         "prefix-sum": ""
@@ -7748,6 +7838,11 @@
     "2467": {
       "java": {
         "tree": ""
+      }
+    },
+    "2470": {
+      "java": {
+        "number-theory": ""
       }
     },
     "2471": {
@@ -7870,6 +7965,11 @@
         "bit-manipulation": ""
       }
     },
+    "2507": {
+      "java": {
+        "number-theory": ""
+      }
+    },
     "2509": {
       "java": {
         "tree": ""
@@ -7888,6 +7988,11 @@
     "2512": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "2513": {
+      "java": {
+        "number-theory": ""
       }
     },
     "2514": {
@@ -7910,9 +8015,19 @@
         "merge-sort": "class FenwickTree {\n  public FenwickTree(int n) {\n    sums = new int[n + 1];\n  }\n\n  public void add(int i, int delta) {\n    while (i < sums.length) {\n      sums[i] += delta;\n      i += lowbit(i);\n    }\n  }\n\n  public int get(int i) {\n    int sum = 0;\n    while (i > 0) {\n      sum += sums[i];\n      i -= lowbit(i);\n    }\n    return sum;\n  }\n\n  private int[] sums;\n\n  private static int lowbit(int i) {\n    return i & -i;\n  }\n}\n\nclass Solution {\n  public int kBigIndices(int[] nums, int k) {\n  int n = nums.length;\n    int ans = 0;\n    FenwickTree leftTree = new FenwickTree(n);\n    FenwickTree rightTree = new FenwickTree(n);\n    int[] left = new int[n];\n    int[] right = new int[n];\n\n    for (int i = 0; i < n; ++i) {\n      left[i] = leftTree.get(nums[i] - 1);\n      leftTree.add(nums[i], 1);\n    }\n\n    for (int i = n - 1; i >= 0; --i) {\n      right[i] = rightTree.get(nums[i] - 1);\n      rightTree.add(nums[i], 1);\n    }\n\n    for (int i = 0; i < n; ++i)\n      if (left[i] >= k && right[i] >= k)\n        ++ans;\n\n    return ans;\n  }\n}"
       }
     },
+    "2521": {
+      "java": {
+        "number-theory": ""
+      }
+    },
     "2522": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "2523": {
+      "java": {
+        "number-theory": ""
       }
     },
     "2524": {
@@ -7983,6 +8098,11 @@
     "2542": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "2543": {
+      "java": {
+        "number-theory": ""
       }
     },
     "2545": {
@@ -8110,6 +8230,11 @@
         "tree": ""
       }
     },
+    "2584": {
+      "java": {
+        "number-theory": ""
+      }
+    },
     "2585": {
       "java": {
         "dynamic-programming": ""
@@ -8160,6 +8285,11 @@
         "heap-(priority-queue)": ""
       }
     },
+    "2601": {
+      "java": {
+        "number-theory": ""
+      }
+    },
     "2602": {
       "java": {
         "prefix-sum": ""
@@ -8178,6 +8308,11 @@
     "2606": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "2607": {
+      "java": {
+        "number-theory": ""
       }
     },
     "2611": {
@@ -8253,6 +8388,11 @@
     "2653": {
       "java": {
         "sliding-window": "class Solution {\n    public int[] getSubarrayBeauty(int[] nums, int k, int x) {\n        int[] ans = new int[nums.length - k + 1];\n        int[] count = new int[50];\n\n        for (int i = 0; i < nums.length; ++i) {\n            if (nums[i] < 0)\n                ++count[nums[i] + 50];\n            if (i - k >= 0 && nums[i - k] < 0)\n                --count[nums[i - k] + 50];\n            if (i + 1 >= k)\n                ans[i - k + 1] = getXthSmallestNum(count, x);\n        }\n\n        return ans;\n    }\n\n    private int getXthSmallestNum(int[] count, int x) {\n        int prefix = 0;\n        for (int i = 0; i < 50; ++i) {\n            prefix += count[i];\n            if (prefix >= x)\n                return i - 50;\n        }\n        return 0;\n    }\n}"
+      }
+    },
+    "2654": {
+      "java": {
+        "number-theory": ""
       }
     },
     "2657": {
@@ -8355,6 +8495,11 @@
         "dynamic-programming": ""
       }
     },
+    "2709": {
+      "java": {
+        "number-theory": ""
+      }
+    },
     "2711": {
       "java": {
         "matrix": ""
@@ -8440,6 +8585,11 @@
         "sliding-window": "class Solution {\n    private class Query {\n        public int query;\n        public int index;\n        public Query(int q, int index) {\n            this.query = q;\n            this.index = index;\n        }\n    }\n\n    public int[] countServers(int n, int[][] logs, int x, int[] queries) {\n        Arrays.sort(logs, (int[] a, int[] b) -> Integer.compare(a[1], b[1]));\n        List<Query> queryList = new ArrayList<>();\n        for (int i = 0; i < queries.length; ++i) {\n            queryList.add(new Query(queries[i], i));\n        }\n        Collections.sort(queryList, (a, b) -> Integer.compare(a.query, b.query));\n\n        int[] ans = new int[queries.length];\n        Map<Integer, Integer> countMap = new HashMap<>();\n        int left = 0;\n        int right = 0;\n        for (int i = 0; i < queryList.size(); ++i) {\n            Query q = queryList.get(i);\n            while (right < logs.length && logs[right][1] <= q.query) {\n                countMap.put(logs[right][0], countMap.getOrDefault(logs[right][0], 0) + 1);\n                ++right;\n            }\n\n            while (left < logs.length && logs[left][1] < q.query - x) {\n                int newCount = countMap.get(logs[left][0]) - 1;\n                if (newCount == 0) {\n                    countMap.remove(logs[left][0]);\n                } else {\n                    countMap.put(logs[left][0], newCount);\n                }\n                ++left;\n            }\n            ans[q.index] = n - countMap.size();\n        }\n        return ans;\n    }\n}"
       }
     },
+    "2748": {
+      "java": {
+        "number-theory": ""
+      }
+    },
     "2749": {
       "java": {
         "brainteaser": ""
@@ -8458,6 +8608,11 @@
     "2760": {
       "java": {
         "sliding-window": "class Solution {\n    public int longestAlternatingSubarray(int[] nums, int threshold) {\n        int ans = 0;\n        int dp = 0;\n\n        for (int i = 0; i < nums.length; ++i) {\n            if (nums[i] > threshold)\n                dp = 0;\n            else if (i > 0 && dp > 0 && isOddEven(nums[i - 1], nums[i]))\n                ++dp;\n            else\n                dp = nums[i] % 2 == 0 ? 1 : 0;\n            ans = Math.max(ans, dp);\n        }\n\n        return ans;\n    }\n\n    private boolean isOddEven(int a, int b) {\n        return a % 2 != b % 2;\n    }\n}"
+      }
+    },
+    "2761": {
+      "java": {
+        "number-theory": ""
       }
     },
     "2762": {
@@ -8548,6 +8703,11 @@
     "2802": {
       "java": {
         "bit-manipulation": ""
+      }
+    },
+    "2807": {
+      "java": {
+        "number-theory": ""
       }
     },
     "2809": {
@@ -8703,6 +8863,11 @@
     "2859": {
       "java": {
         "bit-manipulation": ""
+      }
+    },
+    "2862": {
+      "java": {
+        "number-theory": ""
       }
     },
     "2865": {
@@ -8905,6 +9070,11 @@
         "heap-(priority-queue)": ""
       }
     },
+    "2941": {
+      "java": {
+        "number-theory": ""
+      }
+    },
     "2944": {
       "java": {
         "monotonic-queue": "class Solution {\n    public int minimumCoins(int[] prices) {\n      int n = prices.length;\n        int ans = Integer.MAX_VALUE;\n\n        Deque<Pair<Integer, Integer>> deque = new ArrayDeque<>();\n        deque.offerFirst(new Pair<>(0, n));\n\n        for (int i = n - 1; i >= 0; --i) {\n            while (!deque.isEmpty() && deque.peekFirst().getValue() > (i + 1) * 2)\n                deque.pollFirst();\n            ans = prices[i] + deque.peekFirst().getKey();\n            while (!deque.isEmpty() && deque.peekLast().getKey() >= ans)\n                deque.pollLast();\n            deque.offerLast(new Pair<>(ans, i));\n        }\n\n        return ans;\n    }\n}"
@@ -9103,6 +9273,11 @@
     "3011": {
       "java": {
         "bit-manipulation": ""
+      }
+    },
+    "3012": {
+      "java": {
+        "number-theory": ""
       }
     },
     "3013": {
@@ -9375,6 +9550,11 @@
         "monotonic-stack": "class Solution {\n    public long numberOfSubarrays(int[] nums) {\n        Deque<int[]> stack = new ArrayDeque<>();\n        long ans = 0;\n        int top = -1;\n\n        for (int num : nums) {\n            while (!stack.isEmpty() && stack.peek()[0] < num)\n                stack.pop();\n            if (stack.isEmpty() || stack.peek()[0] != num)\n                stack.push(new int[] { num, 0 });\n            ans += ++stack.peek()[1];\n        }\n\n        return ans;\n    }\n}"
       }
     },
+    "3115": {
+      "java": {
+        "number-theory": ""
+      }
+    },
     "3116": {
       "java": {
         "combinatorics": ""
@@ -9631,4 +9811,4 @@
         "bit-manipulation": ""
       }
     }
-  }
+}
