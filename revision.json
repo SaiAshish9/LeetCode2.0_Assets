@@ -265,6 +265,9 @@
         1902,
         2476
     ],
+    "Tree": [
+        1245
+    ],
     "Matrix": [
         48,
         54,
@@ -575,9 +578,6 @@
         1236
     ],
     "Database": [],
-    "Tree": [
-        1245
-    ],
     "Breadth-First Search": [],
     "Bit Manipulation": [
         832,
