@@ -699,6 +699,14 @@
         3034,
         3023
     ],
+    "Bitmask": [
+        464
+    ],
+    "Bit Manipulation": [
+        832,
+        3064,
+        3094
+    ],
     "Hash Table": [
         1,
         522,
@@ -724,12 +732,6 @@
     ],
     "Database": [],
     "Breadth-First Search": [],
-    "Bit Manipulation": [
-        464,
-        832,
-        3064,
-        3094
-    ],
     "Simulation": [],
     "Graph": [],
     "Counting": [],
@@ -748,7 +750,6 @@
         2487
     ],
     "Number Theory": [],
-    "Bitmask": [],
     "Geometry": [
         587,
         963,
