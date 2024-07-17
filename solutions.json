@@ -1537,7 +1537,7 @@
   },
   "535": {
     "java": {
-      "hash-function": ""
+      "hash-function": "import java.util.HashMap;\nimport java.util.Map;\n\npublic class Codec {\n    private static final String BASE_URL = \"http://tinyurl.com/\";\n    private Map<String, String> shortToLongMap = new HashMap<>();\n    private Map<String, String> longToShortMap = new HashMap<>();\n    \n    private String getHash(String url) {\n        return Integer.toHexString(url.hashCode());\n    }\n\n    public String encode(String longUrl) {\n        if (longToShortMap.containsKey(longUrl)) {\n            return BASE_URL + longToShortMap.get(longUrl);\n        }\n\n        String shortKey = getHash(longUrl);\n        while (shortToLongMap.containsKey(shortKey)) {\n            longUrl += \" \";\n            shortKey = getHash(longUrl);\n        }\n        \n        shortToLongMap.put(shortKey, longUrl);\n        longToShortMap.put(longUrl, shortKey);\n        \n        return BASE_URL + shortKey;\n    }\n\n    public String decode(String shortUrl) {\n        String shortKey = shortUrl.replace(BASE_URL, \"\");\n        return shortToLongMap.get(shortKey);\n    }\n\n}\n"
     }
   },
   "536": {

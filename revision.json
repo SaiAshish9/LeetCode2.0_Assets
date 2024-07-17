@@ -539,6 +539,21 @@
         3201,
         3202
     ],
+    "Rolling Hash": [
+        1044,
+        1960,
+        1392,
+        1698,
+        1923,
+        2156,
+        3034,
+        3036
+    ],
+    "Hash Function": [
+        187,
+        214,
+        535
+    ],
     "Backtracking": [
         37
     ],
@@ -592,9 +607,6 @@
     "Segment Tree": [],
     "Geometry": [],
     "Memoization": [],
-    "Hash Function": [
-
-    ],
     "Binary Indexed Tree": [],
     "Combinatorics": [],
     "String Matching": [
@@ -602,16 +614,6 @@
     ],
     "Shortest Path": [
         1976
-    ],
-    "Rolling Hash": [
-        1044,
-        1960,
-        1392,
-        1698,
-        1923,
-        2156,
-        3034,
-        3036
     ],
     "Game Theory": [
         294,
