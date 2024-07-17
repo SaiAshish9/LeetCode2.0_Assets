@@ -25901,5 +25901,406 @@
         "difficulty": "Hard",
         "language": "Java",
         "acceptance": 28.2
+    },
+    "longest_common_prefix": {
+        "qno": "14",
+        "title": "Longest Common Prefix",
+        "tags": [
+            "String",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 43.3
+    },
+    "implement_trie_(prefix_tree)": {
+        "qno": "208",
+        "title": "Implement Trie (Prefix Tree)",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Design",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 65.8
+    },
+    "design_add_and_search_words_data_structure": {
+        "qno": "211",
+        "title": "Design Add and Search Words Data Structure",
+        "tags": [
+            "String",
+            "Depth-First Search",
+            "Design",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 45.6
+    },
+    "palindrome_pairs": {
+        "qno": "336",
+        "title": "Palindrome Pairs",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 35.4
+    },
+    "lexicographical_numbers": {
+        "qno": "386",
+        "title": "Lexicographical Numbers",
+        "tags": [
+            "Depth-First Search",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 64.3
+    },
+    "maximum_xor_of_two_numbers_in_an_array": {
+        "qno": "421",
+        "title": "Maximum XOR of Two Numbers in an Array",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Bit Manipulation",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 53.3
+    },
+    "k-th_smallest_in_lexicographical_order": {
+        "qno": "440",
+        "title": "K-th Smallest in Lexicographical Order",
+        "tags": [
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 32.5
+    },
+    "word_abbreviation": {
+        "qno": "527",
+        "title": "Word Abbreviation",
+        "tags": [
+            "Array",
+            "String",
+            "Greedy",
+            "Trie",
+            "Sorting"
+        ],
+        "default": "Trie",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 61.1
+    },
+    "design_in-memory_file_system": {
+        "qno": "588",
+        "title": "Design In-Memory File System",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Design",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 48.1
+    },
+    "replace_words": {
+        "qno": "648",
+        "title": "Replace Words",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 68
+    },
+    "implement_magic_dictionary": {
+        "qno": "676",
+        "title": "Implement Magic Dictionary",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Depth-First Search",
+            "Design",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 57.6
+    },
+    "map_sum_pairs": {
+        "qno": "677",
+        "title": "Map Sum Pairs",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Design",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 56.7
+    },
+    "longest_word_in_dictionary": {
+        "qno": "720",
+        "title": "Longest Word in Dictionary",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Trie",
+            "Sorting"
+        ],
+        "default": "Trie",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 52.6
+    },
+    "prefix_and_suffix_search": {
+        "qno": "745",
+        "title": "Prefix and Suffix Search",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Design",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 41.1
+    },
+    "short_encoding_of_words": {
+        "qno": "820",
+        "title": "Short Encoding of Words",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 60.5
+    },
+    "index_pairs_of_a_string": {
+        "qno": "1065",
+        "title": "Index Pairs of a String",
+        "tags": [
+            "Array",
+            "String",
+            "Trie",
+            "Sorting"
+        ],
+        "default": "Trie",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 67.5
+    },
+    "design_file_system": {
+        "qno": "1166",
+        "title": "Design File System",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Design",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 63
+    },
+    "number_of_valid_words_for_each_puzzle": {
+        "qno": "1178",
+        "title": "Number of Valid Words for Each Puzzle",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Bit Manipulation",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 46.8
+    },
+    "remove_sub-folders_from_the_filesystem": {
+        "qno": "1233",
+        "title": "Remove Sub-Folders from the Filesystem",
+        "tags": [
+            "Array",
+            "String",
+            "Depth-First Search",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 66
+    },
+    "encrypt_and_decrypt_strings": {
+        "qno": "2227",
+        "title": "Encrypt and Decrypt Strings",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Design",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 40.5
+    },
+    "maximum_xor_with_an_element_from_array": {
+        "qno": "1707",
+        "title": "Maximum XOR With an Element From Array",
+        "tags": [
+            "Array",
+            "Bit Manipulation",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 50.8
+    },
+    "count_pairs_with_xor_in_a_range": {
+        "qno": "1803",
+        "title": "Count Pairs With XOR in a Range",
+        "tags": [
+            "Array",
+            "Bit Manipulation",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 48.1
+    },
+    "implement_trie_ii_(prefix_tree)": {
+        "qno": "1804",
+        "title": "Implement Trie II (Prefix Tree)",
+        "tags": [
+            "Hash Table",
+            "String",
+            "Design",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 61.5
+    },
+    "longest_word_with_all_prefixes": {
+        "qno": "1858",
+        "title": "Longest Word With All Prefixes",
+        "tags": [
+            "Depth-First Search",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 68.5
+    },
+    "maximum_genetic_difference_query": {
+        "qno": "1938",
+        "title": "Maximum Genetic Difference Query",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Bit Manipulation",
+            "Depth-First Search",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 42.7
+    },
+    "sum_of_prefix_scores_of_strings": {
+        "qno": "2416",
+        "title": "Sum of Prefix Scores of Strings",
+        "tags": [
+            "Array",
+            "String",
+            "Trie",
+            "Counting"
+        ],
+        "default": "Trie",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 46.2
+    },
+    "find_the_length_of_the_longest_common_prefix": {
+        "qno": "3043",
+        "title": "Find the Length of the Longest Common Prefix",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 34.3
+    },
+    "shortest_uncommon_substring_in_an_array": {
+        "qno": "3076",
+        "title": "Shortest Uncommon Substring in an Array",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 45.4
+    },
+    "longest_common_suffix_queries": {
+        "qno": "3093",
+        "title": "Longest Common Suffix Queries",
+        "tags": [
+            "Array",
+            "String",
+            "Trie"
+        ],
+        "default": "Trie",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 40.7
     }
 }
