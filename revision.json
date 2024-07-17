@@ -593,11 +593,13 @@
     "Geometry": [],
     "Memoization": [],
     "Hash Function": [
-        
+
     ],
     "Binary Indexed Tree": [],
     "Combinatorics": [],
-    "String Matching": [],
+    "String Matching": [
+        214
+    ],
     "Shortest Path": [
         1976
     ],
