@@ -511,6 +511,11 @@
         "backtracking": ""
       }
     },
+    "128": {
+      "java": {
+        "union-find": ""
+      }
+    },
     "129": {
       "java": {
         "tree": ""
@@ -518,7 +523,7 @@
     },
     "130": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "131": {
@@ -739,7 +744,7 @@
     },
     "200": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "201": {
@@ -994,6 +999,11 @@
         "bit-manipulation": ""
       }
     },
+    "261": {
+      "java": {
+        "union-find": ""
+      }
+    },
     "264": {
       "java": {
         "heap-(priority-queue)": ""
@@ -1164,6 +1174,11 @@
         "matrix": ""
       }
     },
+    "305": {
+      "java": {
+        "union-find": ""
+      }
+    },
     "306": {
       "java": {
         "backtracking": ""
@@ -1242,6 +1257,11 @@
     "322": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "323": {
+      "java": {
+        "union-find": ""
       }
     },
     "324": {
@@ -1579,7 +1599,7 @@
     },
     "399": {
       "java": {
-        "shortest-path": ""
+        "union-find": ""
       }
     },
     "401": {
@@ -2138,6 +2158,11 @@
         "dynamic-programming": ""
       }
     },
+    "547": {
+      "java": {
+        "union-find": ""
+      }
+    },
     "548": {
       "java": {
         "prefix-sum": ""
@@ -2554,6 +2579,16 @@
         "sliding-window": "class Solution {\n    public int kEmptySlots(int[] bulbs, int k) {\n      int n = bulbs.length;\n        int ans = Integer.MAX_VALUE;\n        int[] day = new int[n]; // day[i] will store the day when bulb at position (i+1) is turned on\n\n        for (int i = 0; i < n; ++i)\n            day[bulbs[i] - 1] = i + 1;\n\n        int left = 0;\n        int right = left + k + 1;\n        \n        for (int i = 1; right < n; ++i) {\n            if (i == right) {\n                ans = Math.min(ans, Math.max(day[left], day[right]));\n                left = i;\n                right = i + k + 1;\n            } else if (day[i] < Math.max(day[left], day[right])) {\n                left = i;\n                right = i + k + 1;\n            }\n        }\n\n        return ans == Integer.MAX_VALUE ? -1 : ans;\n    }\n}\n"
       }
     },
+    "684": {
+      "java": {
+        "union-find": ""
+      }
+    },
+    "685": {
+      "java": {
+        "union-find": ""
+      }
+    },
     "686": {
       "java": {
         "string-matching": ""
@@ -2597,12 +2632,12 @@
     },
     "694": {
       "java": {
-        "hash-function": ""
+        "union-find": ""
       }
     },
     "695": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "696": {
@@ -2657,7 +2692,7 @@
     },
     "711": {
       "java": {
-        "hash-function": ""
+        "union-find": ""
       }
     },
     "712": {
@@ -2698,6 +2733,11 @@
     "720": {
       "java": {
         "trie": ""
+      }
+    },
+    "721": {
+      "java": {
+        "union-find": ""
       }
     },
     "723": {
@@ -2753,6 +2793,11 @@
     "736": {
       "java": {
         "stack": ""
+      }
+    },
+    "737": {
+      "java": {
+        "union-find": ""
       }
     },
     "739": {
@@ -2845,6 +2890,11 @@
         "dynamic-programming": ""
       }
     },
+    "765": {
+      "java": {
+        "union-find": ""
+      }
+    },
     "766": {
       "java": {
         "matrix": ""
@@ -2892,7 +2942,7 @@
     },
     "778": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "779": {
@@ -2913,6 +2963,11 @@
     "784": {
       "java": {
         "backtracking": ""
+      }
+    },
+    "785": {
+      "java": {
+        "union-find": ""
       }
     },
     "786": {
@@ -2982,7 +3037,7 @@
     },
     "803": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "805": {
@@ -3062,7 +3117,7 @@
     },
     "827": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "828": {
@@ -3098,6 +3153,11 @@
     "838": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "839": {
+      "java": {
+        "union-find": ""
       }
     },
     "840": {
@@ -3270,6 +3330,11 @@
         "matrix": ""
       }
     },
+    "886": {
+      "java": {
+        "union-find": ""
+      }
+    },
     "887": {
       "java": {
         "dynamic-programming": ""
@@ -3397,6 +3462,11 @@
         "two-pointers": "import java.util.Arrays;\n\npublic class Solution {\n    public int threeSumMulti(int[] arr, int target) {\n        int MOD = 1_000_000_007;\n        Arrays.sort(arr);\n        int n = arr.length;\n        long result = 0;\n\n        for (int left = 0; left < n; left++) {\n            int T = target - arr[left];\n            int right = left + 1, k = n - 1;\n            while (right < k) {\n                if (arr[right] + arr[k] < T) {\n                    right++;\n                } else if (arr[right] + arr[k] > T) {\n                    k--;\n                } else if (arr[right] != arr[k]) {\n                    int leftCount = 1, rightCount = 1;\n                    while (right + 1 < k && arr[right] == arr[right + 1]) {\n                        leftCount++;\n                        right++;\n                    }\n                    while (k - 1 > right && arr[k] == arr[k - 1]) {\n                        rightCount++;\n                        k--;\n                    }\n                    result += leftCount * rightCount;\n                    result %= MOD;\n                    right++;\n                    k--;\n                } else {\n                    result += (k - right + 1) * (k - right) / 2;\n                    result %= MOD;\n                    break;\n                }\n            }\n        }\n\n        return (int) result;\n    }\n}\n"
       }
     },
+    "924": {
+      "java": {
+        "union-find": ""
+      }
+    },
     "925": {
       "java": {
         "two-pointers": ""
@@ -3405,6 +3475,11 @@
     "926": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "928": {
+      "java": {
+        "union-find": ""
       }
     },
     "930": {
@@ -3472,6 +3547,11 @@
         "stack": ""
       }
     },
+    "947": {
+      "java": {
+        "union-find": ""
+      }
+    },
     "948": {
       "java": {
         "two-pointers": ""
@@ -3489,7 +3569,7 @@
     },
     "952": {
       "java": {
-        "number-theory": ""
+        "union-find": ""
       }
     },
     "956": {
@@ -3509,7 +3589,7 @@
     },
     "959": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "960": {
@@ -3618,6 +3698,11 @@
         "tree": ""
       }
     },
+    "990": {
+      "java": {
+        "union-find": ""
+      }
+    },
     "992": {
       "java": {
         "sliding-window": "class Solution {\n    public int subarraysWithKDistinct(int[] nums, int k) {\n        return atMostackDistinct(nums, k) - atMostackDistinct(nums, k - 1);\n    }\n    \n    private int atMostackDistinct(int[] nums, int k) {\n        int n = nums.length;\n        int left = 0;\n        int count = 0;\n        Map<Integer, Integer> frequency = new HashMap<>();\n        int distinctCount = 0;\n        \n        for (int right = 0; right < n; right++) {\n            int num = nums[right];\n            if (frequency.getOrDefault(num, 0) == 0) {\n                distinctCount++;\n            }\n            frequency.put(num, frequency.getOrDefault(num, 0) + 1);\n            \n            while (distinctCount > k) {\n                int leftNum = nums[left++];\n                frequency.put(leftNum, frequency.get(leftNum) - 1);\n                if (frequency.get(leftNum) == 0) {\n                    distinctCount--;\n                }\n            }\n            \n            count += right - left + 1;\n        }\n        \n        return count;\n    }\n}\n"
@@ -3705,7 +3790,7 @@
     },
     "1020": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "1021": {
@@ -3854,6 +3939,11 @@
         "topological-sort": ""
       }
     },
+    "1061": {
+      "java": {
+        "union-find": ""
+      }
+    },
     "1062": {
       "java": {
         "suffix-array": "import java.util.*;\n\npublic class Solution {\n    public String longestRepeatingSubstring(String s) {\n        int n = s.length();\n        int[] suffixArray = buildSuffixArray(s);\n        int[] lcpArray = buildLCPArray(s, suffixArray);\n        \n        int left = 1, right = n;\n        int maxLength = 0;\n        String result = \"\";\n        \n        while (left <= right) {\n            int mid = left + (right - left) / 2;\n            if (hasRepeatedSubstring(mid, n, suffixArray, lcpArray)) {\n                maxLength = mid;\n                left = mid + 1;\n            } else {\n                right = mid - 1;\n            }\n        }\n        \n        for (int i = 0; i <= n - maxLength; i++) {\n            String candidate = s.substring(suffixArray[i], suffixArray[i] + maxLength);\n            if (hasRepeatedSubstring(candidate, s, maxLength)) {\n                return candidate;\n            }\n        }\n        \n        return result;\n    }\n    \n    private boolean hasRepeatedSubstring(int len, int n, int[] suffixArray, int[] lcpArray) {\n        for (int i = 1; i < n; i++) {\n            if (lcpArray[i] >= len) {\n                int start1 = suffixArray[i - 1];\n                int start2 = suffixArray[i];\n                if ((start1 < n - len && start2 > n - len) || (start1 > n - len && start2 < n - len)) {\n                    return true;\n                }\n            }\n        }\n        return false;\n    }\n    \n    private boolean hasRepeatedSubstring(String candidate, String s, int len) {\n        int count = 0;\n        int index = s.indexOf(candidate);\n        while (index != -1) {\n            count++;\n            index = s.indexOf(candidate, index + 1);\n        }\n        return count > 1;\n    }\n    \n    private int[] buildSuffixArray(String s) {\n        int n = s.length();\n        Integer[] order = new Integer[n];\n        for (int i = 0; i < n; i++) {\n            order[i] = i;\n        }\n        \n        Arrays.sort(order, (a, b) -> Character.compare(s.charAt(a), s.charAt(b)));\n        \n        int[] suffixArray = new int[n];\n        int[] classes = new int[n];\n        \n        for (int i = 0; i < n; i++) {\n            suffixArray[i] = order[i];\n            classes[i] = s.charAt(i);\n        }\n        \n        for (int len = 1; len < n; len *= 2) {\n            int[] c = classes.clone();\n            for (int i = 0; i < n; i++) {\n                classes[suffixArray[i]] = i > 0 && c[suffixArray[i - 1]] == c[suffixArray[i]] && suffixArray[i - 1] + len < n\n                        && c[suffixArray[i - 1] + len / 2] == c[suffixArray[i] + len / 2] ? classes[suffixArray[i - 1]] : i;\n            }\n            \n            int[] count = new int[n];\n            for (int i = 0; i < n; i++) {\n                count[i] = i;\n            }\n            \n            int[] s = suffixArray.clone();\n            for (int i = 0; i < n; i++) {\n                int s1 = s[i] - len;\n                if (s1 >= 0) {\n                    suffixArray[count[classes[s1]]++] = s1;\n                }\n            }\n        }\n        \n        return suffixArray;\n    }\n    \n    private int[] buildLCPArray(String s, int[] suffixArray) {\n        int n = s.length();\n        int[] rank = new int[n];\n        for (int i = 0; i < n; i++) {\n            rank[suffixArray[i]] = i;\n        }\n        \n        int[] lcpArray = new int[n - 1];\n        int h = 0;\n        \n        for (int i = 0; i < n; i++) {\n            if (rank[i] > 0) {\n                int j = suffixArray[rank[i] - 1];\n                while (i + h < n && j + h < n && s.charAt(i + h) == s.charAt(j + h)) {\n                    h++;\n                }\n                lcpArray[rank[i] - 1] = h;\n                if (h > 0) {\n                    h--;\n                }\n            }\n        }\n        \n        return lcpArray;\n    }\n}\n",
@@ -3965,9 +4055,14 @@
         "sliding-window": "public class Solution {\n    public int numKLenSubstrNoRepeats(String S, int K) {\n        int n = S.length();\n        if (n < K) return 0;\n\n        HashSet<Character> set = new HashSet<>();\n        int count = 0;\n\n        for (int i = 0; i <= n - K; i++) {\n            set.clear();\n            boolean isValid = true;\n            for (int j = i; j < i + K; j++) {\n                char ch = S.charAt(j);\n                if (set.contains(ch)) {\n                    isValid = false;\n                    break;\n                }\n                set.add(ch);\n            }\n            if (isValid) {\n                count++;\n            }\n        }\n        return count;\n    }\n}"
       }
     },
+    "1101": {
+      "java": {
+        "union-find": ""
+      }
+    },
     "1102": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "1104": {
@@ -4052,7 +4147,7 @@
     },
     "1135": {
       "java": {
-        "minimum-spanning-tree": "import java.util.*;\n\nclass Solution {\n    class Edge {\n        int src, dest, weight;\n        Edge(int src, int dest, int weight) {\n            this.src = src;\n            this.dest = dest;\n            this.weight = weight;\n        }\n    }\n\n    class UnionFind {\n        int[] parent, rank;\n\n        UnionFind(int n) {\n            parent = new int[n];\n            rank = new int[n];\n            for (int i = 0; i < n; i++) {\n                parent[i] = i;\n                rank[i] = 0;\n            }\n        }\n\n        int find(int x) {\n            if (parent[x] != x) {\n                parent[x] = find(parent[x]);\n            }\n            return parent[x];\n        }\n\n        boolean union(int x, int y) {\n            int rootX = find(x);\n            int rootY = find(y);\n            if (rootX != rootY) {\n                if (rank[rootX] > rank[rootY]) {\n                    parent[rootY] = rootX;\n                } else if (rank[rootX] < rank[rootY]) {\n                    parent[rootX] = rootY;\n                } else {\n                    parent[rootY] = rootX;\n                    rank[rootX]++;\n                }\n                return true;\n            }\n            return false;\n        }\n    }\n\n    public int minimumCost(int n, int[][] connections) {\n        List<Edge> edges = new ArrayList<>();\n        for (int[] connection : connections) {\n            edges.add(new Edge(connection[0] - 1, connection[1] - 1, connection[2]));\n        }\n        edges.sort(Comparator.comparingInt(e -> e.weight));\n\n        UnionFind uf = new UnionFind(n);\n        int cost = 0, count = 0;\n        for (Edge edge : edges) {\n            if (uf.union(edge.src, edge.dest)) {\n                cost += edge.weight;\n                count++;\n                if (count == n - 1) {\n                    return cost;\n                }\n            }\n        }\n        return -1; // if it's not possible to connect all cities\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[][] connections = { {1, 2, 5}, {1, 3, 6}, {2, 3, 1} };\n        int n = 3;\n        int result = solution.minimumCost(n, connections);\n        System.out.println(\"Minimum cost to connect all cities: \" + result); // Output: 6\n    }\n}\n"
+        "union-find": ""
       }
     },
     "1136": {
@@ -4133,7 +4228,7 @@
     },
     "1168": {
       "java": {
-        "minimum-spanning-tree": "import java.util.*;\n\nclass Solution {\n    class Edge {\n        int u, v, cost;\n        Edge(int u, int v, int cost) {\n            this.u = u;\n            this.v = v;\n            this.cost = cost;\n        }\n    }\n\n    class UnionFind {\n        int[] parent, rank;\n\n        UnionFind(int n) {\n            parent = new int[n];\n            rank = new int[n];\n            for (int i = 0; i < n; i++) {\n                parent[i] = i;\n                rank[i] = 0;\n            }\n        }\n\n        int find(int x) {\n            if (parent[x] != x) {\n                parent[x] = find(parent[x]);\n            }\n            return parent[x];\n        }\n\n        boolean union(int x, int y) {\n            int rootX = find(x);\n            int rootY = find(y);\n            if (rootX != rootY) {\n                if (rank[rootX] > rank[rootY]) {\n                    parent[rootY] = rootX;\n                } else if (rank[rootX] < rank[rootY]) {\n                    parent[rootX] = rootY;\n                } else {\n                    parent[rootY] = rootX;\n                    rank[rootX]++;\n                }\n                return true;\n            }\n            return false;\n        }\n    }\n\n    public int minCostToSupplyWater(int n, int[] wells, int[][] pipes) {\n        List<Edge> edges = new ArrayList<>();\n\n        // Add the virtual vertex connections to the wells\n        for (int i = 0; i < wells.length; i++) {\n            edges.add(new Edge(0, i + 1, wells[i]));\n        }\n\n        // Add the existing pipes connections\n        for (int[] pipe : pipes) {\n            edges.add(new Edge(pipe[0], pipe[1], pipe[2]));\n        }\n\n        // Sort all edges by cost\n        edges.sort(Comparator.comparingInt(e -> e.cost));\n\n        // Kruskal's algorithm to find the MST\n        UnionFind uf = new UnionFind(n + 1);\n        int minCost = 0;\n\n        for (Edge edge : edges) {\n            if (uf.union(edge.u, edge.v)) {\n                minCost += edge.cost;\n            }\n        }\n\n        return minCost;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int n = 3;\n        int[] wells = {1, 2, 2};\n        int[][] pipes = {{1, 2, 1}, {2, 3, 1}};\n        System.out.println(\"Minimum cost to supply water: \" + solution.minCostToSupplyWater(n, wells, pipes)); // Output: 3\n    }\n}\n"
+        "union-find": ""
       }
     },
     "1172": {
@@ -4216,6 +4311,11 @@
     "1201": {
       "java": {
         "combinatorics": ""
+      }
+    },
+    "1202": {
+      "java": {
+        "union-find": ""
       }
     },
     "1203": {
@@ -4380,7 +4480,7 @@
     },
     "1254": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "1255": {
@@ -4400,7 +4500,7 @@
     },
     "1258": {
       "java": {
-        "backtracking": ""
+        "union-find": ""
       }
     },
     "1259": {
@@ -4440,7 +4540,7 @@
     },
     "1267": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "1268": {
@@ -4563,6 +4663,11 @@
         "bit-manipulation": ""
       }
     },
+    "1319": {
+      "java": {
+        "union-find": ""
+      }
+    },
     "1320": {
       "java": {
         "dynamic-programming": ""
@@ -4680,7 +4785,7 @@
     },
     "1361": {
       "java": {
-        "tree": ""
+        "union-find": ""
       }
     },
     "1363": {
@@ -4770,7 +4875,7 @@
     },
     "1391": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "1392": {
@@ -5050,7 +5155,7 @@
     },
     "1489": {
       "java": {
-        "strongly-connected-component": "import java.util.*;\n\nclass UnionFind {\n    private int[] id;\n    private int[] rank;\n\n    public UnionFind(int n) {\n        id = new int[n];\n        rank = new int[n];\n        for (int i = 0; i < n; ++i)\n            id[i] = i;\n    }\n\n    public void unionByRank(int u, int v) {\n        int i = find(u);\n        int j = find(v);\n        if (i == j)\n            return;\n        if (rank[i] < rank[j]) {\n            id[i] = j;\n        } else if (rank[i] > rank[j]) {\n            id[j] = i;\n        } else {\n            id[i] = j;\n            ++rank[j];\n        }\n    }\n\n    public int find(int u) {\n        return id[u] == u ? u : (id[u] = find(id[u]));\n    }\n}\n\nclass Solution {\n    public List<List<Integer>> findCriticalAndPseudoCriticalEdges(int n, int[][] edges) {\n        List<Integer> criticalEdges = new ArrayList<>();\n        List<Integer> pseudoCriticalEdges = new ArrayList<>();\n\n        for (int i = 0; i < edges.length; ++i)\n            edges[i] = new int[] {edges[i][0], edges[i][1], edges[i][2], i};\n\n        Arrays.sort(edges, (a, b) -> a[2] - b[2]);\n\n      int mstWeight = getMSTWeight(n, edges, new int[] {}, -1);\n\n        for (int[] edge : edges) {\n          int index = edge[3];\n            // Deleting the `edge` increases the MST's weight or makes the MST invalid.\n            if (getMSTWeight(n, edges, new int[] {}, index) > mstWeight)\n                criticalEdges.add(index);\n            // If an edge can be in any MST, we can always add `edge` to the edge set.\n            else if (getMSTWeight(n, edges, edge, -1) == mstWeight)\n                pseudoCriticalEdges.add(index);\n        }\n\n        return new ArrayList<>(Arrays.asList(criticalEdges, pseudoCriticalEdges));\n    }\n\n    private int getMSTWeight(int n, int[][] edges, int[] firstEdge, int deletedEdgeIndex) {\n        int mstWeight = 0;\n        UnionFind uf = new UnionFind(n);\n\n        if (firstEdge.length == 4) {\n            uf.unionByRank(firstEdge[0], firstEdge[1]);\n            mstWeight += firstEdge[2];\n        }\n\n        for (int[] edge : edges) {\n          int u = edge[0];\n          int v = edge[1];\n          int weight = edge[2];\n          int index = edge[3];\n            if (index == deletedEdgeIndex)\n                continue;\n            if (uf.find(u) == uf.find(v))\n                continue;\n            uf.unionByRank(u, v);\n            mstWeight += weight;\n        }\n\n      int root = uf.find(0);\n        for (int i = 0; i < n; ++i)\n            if (uf.find(i) != root)\n                return Integer.MAX_VALUE;\n\n        return mstWeight;\n    }\n\n    public static void main(String[] args) {\n        Solution sol = new Solution();\n        int n = 14;\n        int[][] edges = {\n            {0, 1, 13}, {0, 2, 6}, {2, 3, 13}, {3, 4, 4}, {0, 5, 11}, {4, 6, 14}, {4, 7, 8}, \n            {2, 8, 6}, {4, 9, 6}, {7, 10, 4}, {5, 11, 3}, {6, 12, 7}, {12, 13, 9}, {7, 13, 2}, \n            {5, 13, 10}, {0, 6, 4}, {2, 7, 3}, {0, 7, 8}, {1, 12, 9}, {10, 12, 11}, {1, 2, 7}, \n            {1, 3, 10}, {3, 10, 6}, {6, 10, 4}, {4, 8, 5}, {1, 13, 4}, {11, 13, 8}, {2, 12, 10}, \n            {5, 8, 1}, {3, 7, 6}, {7, 12, 12}, {1, 7, 9}, {5, 9, 1}, {2, 13, 10}, {10, 11, 4}, \n            {3, 5, 10}, {6, 11, 14}, {5, 12, 3}, {0, 8, 13}, {8, 9, 1}, {3, 6, 8}, {0, 3, 4}, \n            {2, 9, 6}, {0, 11, 4}, {2, 5, 14}, {4, 11, 2}, {7, 11, 11}, {1, 11, 6}, {2, 10, 12}, \n            {0, 13, 4}, {3, 9, 9}, {4, 12, 3}, {6, 7, 10}, {6, 8, 13}, {9, 11, 3}, {1, 6, 2}, \n            {2, 4, 12}, {0, 10, 3}, {3, 12, 1}, {3, 8, 12}, {1, 8, 6}, {8, 13, 2}, {10, 13, 12}, \n            {9, 13, 11}, {2, 11, 14}, {5, 10, 9}, {5, 6, 10}, {2, 6, 9}, {8, 11, 3}\n        };\n        List<List<Integer>> result = sol.findCriticalAndPseudoCriticalEdges(n, edges);\n        System.out.println(result); \n    }\n}\n"
+        "union-find": ""
       }
     },
     "1490": {
@@ -5240,7 +5345,7 @@
     },
     "1559": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "1561": {
@@ -5265,7 +5370,7 @@
     },
     "1569": {
       "java": {
-        "binary-search-tree": ""
+        "union-find": ""
       }
     },
     "1570": {
@@ -5298,6 +5403,11 @@
         "dynamic-programming": ""
       }
     },
+    "1579": {
+      "java": {
+        "union-find": ""
+      }
+    },
     "1582": {
       "java": {
         "matrix": ""
@@ -5305,7 +5415,7 @@
     },
     "1584": {
       "java": {
-        "minimum-spanning-tree": "import java.util.*;\n\nclass Solution {\n    class Edge {\n        int u, v, cost;\n        Edge(int u, int v, int cost) {\n            this.u = u;\n            this.v = v;\n            this.cost = cost;\n        }\n    }\n\n    class UnionFind {\n        int[] parent, rank;\n\n        UnionFind(int n) {\n            parent = new int[n];\n            rank = new int[n];\n            for (int i = 0; i < n; i++) {\n                parent[i] = i;\n                rank[i] = 0;\n            }\n        }\n\n        int find(int x) {\n            if (parent[x] != x) {\n                parent[x] = find(parent[x]);\n            }\n            return parent[x];\n        }\n\n        boolean union(int x, int y) {\n            int rootX = find(x);\n            int rootY = find(y);\n            if (rootX != rootY) {\n                if (rank[rootX] > rank[rootY]) {\n                    parent[rootY] = rootX;\n                } else if (rank[rootX] < rank[rootY]) {\n                    parent[rootX] = rootY;\n                } else {\n                    parent[rootY] = rootX;\n                    rank[rootX]++;\n                }\n                return true;\n            }\n            return false;\n        }\n    }\n\n    public int minCostConnectPoints(int[][] points) {\n        int n = points.length;\n        List<Edge> edges = new ArrayList<>();\n\n        // Create all possible edges with their costs\n        for (int i = 0; i < n; i++) {\n            for (int j = i + 1; j < n; j++) {\n                int cost = Math.abs(points[i][0] - points[j][0]) + Math.abs(points[i][1] - points[j][1]);\n                edges.add(new Edge(i, j, cost));\n            }\n        }\n\n        // Sort edges by cost\n        edges.sort(Comparator.comparingInt(e -> e.cost));\n\n        // Kruskal's algorithm to find the MST\n        UnionFind uf = new UnionFind(n);\n        int minCost = 0, edgesUsed = 0;\n\n        for (Edge edge : edges) {\n            if (uf.union(edge.u, edge.v)) {\n                minCost += edge.cost;\n                edgesUsed++;\n                if (edgesUsed == n - 1) {\n                    break;\n                }\n            }\n        }\n\n        return minCost;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[][] points = { {0, 0}, {2, 2}, {3, 10}, {5, 2}, {7, 0} };\n        System.out.println(\"Minimum cost to connect all points: \" + solution.minCostConnectPoints(points));\n    }\n}\n"
+        "union-find": ""
       }
     },
     "1586": {
@@ -5435,7 +5545,7 @@
     },
     "1627": {
       "java": {
-        "number-theory": ""
+        "union-find": ""
       }
     },
     "1628": {
@@ -5445,12 +5555,12 @@
     },
     "1631": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "1632": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "1634": {
@@ -5660,7 +5770,7 @@
     },
     "1697": {
       "java": {
-        "two-pointers": ""
+        "union-find": ""
       }
     },
     "1698": {
@@ -5728,6 +5838,11 @@
         "two-pointers": ""
       }
     },
+    "1722": {
+      "java": {
+        "union-find": ""
+      }
+    },
     "1723": {
       "java": {
         "dynamic-programming": ""
@@ -5735,7 +5850,7 @@
     },
     "1724": {
       "java": {
-        "minimum-spanning-tree": "import java.util.*;\n\nclass PersistentUnionFind {\n    private int[] parent;\n    private int[] rank;\n    private int[] version;\n\n    public PersistentUnionFind(int n) {\n        parent = new int[n];\n        rank = new int[n];\n        version = new int[n];\n        Arrays.fill(rank, 0);\n        for (int i = 0; i < n; i++) {\n            parent[i] = i;\n            version[i] = Integer.MAX_VALUE;\n        }\n    }\n\n    public int find(int x, int t) {\n        if (parent[x] == x || version[x] >= t) {\n            return x;\n        }\n        return find(parent[x], t);\n    }\n\n    public boolean union(int a, int b, int t) {\n        int rootX = find(a, Integer.MAX_VALUE);\n        int rootY = find(b, Integer.MAX_VALUE);\n        if (rootX == rootY) {\n            return false;\n        }\n        if (rank[rootX] > rank[rootY]) {\n            version[rootY] = t;\n            parent[rootY] = rootX;\n        } else {\n            version[rootX] = t;\n            parent[rootX] = rootY;\n            if (rank[rootX] == rank[rootY]) {\n                rank[rootY]++;\n            }\n        }\n        return true;\n    }\n}\n\nclass DistanceLimitedPathsExist {\n    private PersistentUnionFind puf;\n\n    public DistanceLimitedPathsExist(int n, int[][] edgeList) {\n        puf = new PersistentUnionFind(n);\n        Arrays.sort(edgeList, Comparator.comparingInt(a -> a[2]));\n        for (int[] edge : edgeList) {\n            int u = edge[0];\n            int v = edge[1];\n            int dis = edge[2];\n            puf.union(u, v, dis);\n        }\n    }\n\n    public boolean query(int p, int q, int limit) {\n        return puf.find(p, limit) == puf.find(q, limit);\n    }\n\n    public static void main(String[] args) {\n        int n = 4;\n        int[][] edgeList = { {0, 1, 2}, {1, 2, 3}, {2, 3, 4} };\n\n        DistanceLimitedPathsExist checker = new DistanceLimitedPathsExist(n, edgeList);\n\n        System.out.println(checker.query(0, 3, 4));  // Output: true\n        System.out.println(checker.query(0, 3, 2));  // Output: false\n    }\n}\n"
+        "union-find": ""
       }
     },
     "1727": {
@@ -6215,7 +6330,7 @@
     },
     "1905": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "1908": {
@@ -6390,7 +6505,12 @@
     },
     "1970": {
       "java": {
-        "matrix": ""
+        "union-find": ""
+      }
+    },
+    "1971": {
+      "java": {
+        "union-find": ""
       }
     },
     "1973": {
@@ -6491,7 +6611,7 @@
     },
     "1998": {
       "java": {
-        "number-theory": ""
+        "union-find": ""
       }
     },
     "2000": {
@@ -6511,7 +6631,7 @@
     },
     "2003": {
       "java": {
-        "dynamic-programming": ""
+        "union-find": ""
       }
     },
     "2005": {
@@ -6704,6 +6824,11 @@
         "queue": ""
       }
     },
+    "2076": {
+      "java": {
+        "union-find": ""
+      }
+    },
     "2083": {
       "java": {
         "prefix-sum": ""
@@ -6722,6 +6847,11 @@
     "2090": {
       "java": {
         "sliding-window": "class Solution {\n    public int[] getAverages(int[] nums, int k) {\n        int n = nums.length;\n        int[] result = new int[n];\n        Arrays.fill(result, -1);\n\n        if (2 * k + 1 > n) return result;  \n        long windowSum = 0;\n        int windowSize = 2 * k + 1;\n        for (int i = 0; i < windowSize; i++) {\n            windowSum += nums[i];\n        }\n        result[k] = (int)(windowSum / windowSize);\n        for (int i = k + 1; i < n - k; i++) {\n            windowSum = windowSum - nums[i - k - 1] + nums[i + k];\n            result[i] = (int)(windowSum / windowSize);\n        }\n\n        return result;\n    }\n}\n"
+      }
+    },
+    "2092": {
+      "java": {
+        "union-find": ""
       }
     },
     "2093": {
@@ -6906,7 +7036,7 @@
     },
     "2157": {
       "java": {
-        "bit-manipulation": ""
+        "union-find": ""
       }
     },
     "2158": {
@@ -7017,6 +7147,11 @@
     "2203": {
       "java": {
         "shortest-path": ""
+      }
+    },
+    "2204": {
+      "java": {
+        "union-find": ""
       }
     },
     "2206": {
@@ -7309,6 +7444,11 @@
         "bit-manipulation": ""
       }
     },
+    "2307": {
+      "java": {
+        "union-find": ""
+      }
+    },
     "2310": {
       "java": {
         "dynamic-programming": ""
@@ -7327,6 +7467,11 @@
     "2313": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "2316": {
+      "java": {
+        "union-find": ""
       }
     },
     "2317": {
@@ -7396,7 +7541,7 @@
     },
     "2334": {
       "java": {
-        "monotonic-stack": ""
+        "union-find": ""
       }
     },
     "2335": {
@@ -7497,7 +7642,7 @@
     },
     "2368": {
       "java": {
-        "tree": ""
+        "union-find": ""
       }
     },
     "2369": {
@@ -7512,7 +7657,7 @@
     },
     "2371": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "2373": {
@@ -7552,7 +7697,7 @@
     },
     "2382": {
       "java": {
-        "prefix-sum": ""
+        "union-find": ""
       }
     },
     "2385": {
@@ -7677,7 +7822,7 @@
     },
     "2421": {
       "java": {
-        "tree": ""
+        "union-find": ""
       }
     },
     "2422": {
@@ -7687,7 +7832,7 @@
     },
     "2424": {
       "java": {
-        "heap-(priority-queue)": ""
+        "union-find": ""
       }
     },
     "2425": {
@@ -7930,6 +8075,16 @@
         "two-pointers": ""
       }
     },
+    "2492": {
+      "java": {
+        "union-find": ""
+      }
+    },
+    "2493": {
+      "java": {
+        "union-find": ""
+      }
+    },
     "2495": {
       "java": {
         "dynamic-programming": ""
@@ -7952,7 +8107,7 @@
     },
     "2503": {
       "java": {
-        "two-pointers": ""
+        "union-find": ""
       }
     },
     "2505": {
@@ -8202,7 +8357,7 @@
     },
     "2573": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "2574": {
@@ -8342,7 +8497,7 @@
     },
     "2617": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "2638": {
@@ -8402,7 +8557,7 @@
     },
     "2658": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "2659": {
@@ -8497,7 +8652,7 @@
     },
     "2709": {
       "java": {
-        "number-theory": ""
+        "union-find": ""
       }
     },
     "2711": {
@@ -8667,7 +8822,7 @@
     },
     "2782": {
       "java": {
-        "interactive": ""
+        "union-find": ""
       }
     },
     "2786": {
@@ -8722,7 +8877,7 @@
     },
     "2812": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "2813": {
@@ -8842,7 +8997,7 @@
     },
     "2852": {
       "java": {
-        "matrix": ""
+        "union-find": ""
       }
     },
     "2856": {
@@ -9093,6 +9248,11 @@
     "2947": {
       "java": {
         "prefix-sum": ""
+      }
+    },
+    "2948": {
+      "java": {
+        "union-find": ""
       }
     },
     "2949": {
@@ -9532,7 +9692,7 @@
     },
     "3108": {
       "java": {
-        "bit-manipulation": ""
+        "union-find": ""
       }
     },
     "3109": {
