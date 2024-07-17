@@ -5,7 +5,7 @@
         "tags": [
             "Array",
             "Binary Search",
-            "Divide and Conquer"
+            "Divide And Conquer"
         ],
         "default": "Binary Search",
         "difficulty": "Hard",
@@ -168,7 +168,7 @@
         "tags": [
             "Array",
             "Binary Search",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Matrix"
         ],
         "default": "Binary Search",
@@ -293,7 +293,7 @@
         "tags": [
             "Array",
             "Binary Search",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Binary Indexed Tree",
             "Segment Tree",
             "Merge Sort",
@@ -310,7 +310,7 @@
         "tags": [
             "Array",
             "Binary Search",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Binary Indexed Tree",
             "Segment Tree",
             "Merge Sort",
@@ -546,7 +546,7 @@
         "tags": [
             "Array",
             "Binary Search",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Binary Indexed Tree",
             "Segment Tree",
             "Merge Sort",
@@ -563,7 +563,7 @@
         "tags": [
             "Array",
             "Binary Search",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Binary Indexed Tree",
             "Segment Tree",
             "Merge Sort",
@@ -1859,7 +1859,7 @@
         "tags": [
             "Array",
             "Binary Search",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Binary Indexed Tree",
             "Segment Tree",
             "Merge Sort",
@@ -2470,7 +2470,7 @@
         "tags": [
             "Array",
             "Binary Search",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Binary Indexed Tree",
             "Segment Tree",
             "Merge Sort",
@@ -2735,7 +2735,7 @@
         "tags": [
             "Array",
             "Binary Search",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Binary Indexed Tree",
             "Segment Tree",
             "Merge Sort",
@@ -2967,7 +2967,7 @@
         "tags": [
             "Array",
             "Binary Search",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Binary Indexed Tree",
             "Segment Tree",
             "Merge Sort",
@@ -3673,7 +3673,7 @@
         "tags": [
             "Array",
             "Binary Search",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Binary Indexed Tree",
             "Segment Tree",
             "Merge Sort",
@@ -3859,7 +3859,7 @@
         "title": "Sort an Array",
         "tags": [
             "Array",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Sorting",
             "Heap (Priority Queue)",
             "Merge Sort",
@@ -3878,7 +3878,7 @@
         "tags": [
             "Array",
             "String",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Sorting",
             "Heap (Priority Queue)",
             "Radix Sort",
@@ -4004,7 +4004,7 @@
         "title": "The Skyline Problem",
         "tags": [
             "Array",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Binary Indexed Tree",
             "Segment Tree",
             "Line Sweep",
@@ -4243,7 +4243,7 @@
         "tags": [
             "Array",
             "Hash Table",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Sorting",
             "Heap (Priority Queue)",
             "Bucket Sort",
@@ -4292,7 +4292,7 @@
         "title": "Kth Largest Element in an Array",
         "tags": [
             "Array",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Sorting",
             "Heap (Priority Queue)",
             "Quickselect"
@@ -4307,7 +4307,7 @@
         "title": "Wiggle Sort II",
         "tags": [
             "Array",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Greedy",
             "Sorting",
             "Quickselect"
@@ -4323,7 +4323,7 @@
         "tags": [
             "Array",
             "Math",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Geometry",
             "Sorting",
             "Heap (Priority Queue)",
@@ -4339,7 +4339,7 @@
         "title": "Find Kth Largest XOR Coordinate Value",
         "tags": [
             "Array",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Bit Manipulation",
             "Sorting",
             "Heap (Priority Queue)",
@@ -4358,7 +4358,7 @@
         "tags": [
             "Array",
             "String",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Sorting",
             "Heap (Priority Queue)",
             "Quickselect"
@@ -4808,7 +4808,7 @@
         "title": "Merge k Sorted Lists",
         "tags": [
             "Linked List",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Heap (Priority Queue)",
             "Merge Sort"
         ],
@@ -4823,7 +4823,7 @@
         "tags": [
             "Linked List",
             "Two Pointers",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Sorting",
             "Merge Sort"
         ],
@@ -4908,7 +4908,7 @@
         "title": "Maximum Sum Circular Subarray",
         "tags": [
             "Array",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Dynamic Programming",
             "Queue",
             "Monotonic Queue"
@@ -5002,7 +5002,7 @@
         "title": "Longest Increasing Subsequence II",
         "tags": [
             "Array",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Dynamic Programming",
             "Binary Indexed Tree",
             "Segment Tree",
@@ -7184,7 +7184,7 @@
         "tags": [
             "Hash Table",
             "String",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Sliding Window"
         ],
         "default": "Sliding Window",
@@ -7646,7 +7646,7 @@
         "tags": [
             "Hash Table",
             "String",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Bit Manipulation",
             "Sliding Window"
         ],
@@ -8249,7 +8249,7 @@
         "title": "Convert Sorted Array to Binary Search Tree",
         "tags": [
             "Array",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Tree",
             "Binary Search Tree",
             "Binary Tree"
@@ -8264,7 +8264,7 @@
         "title": "Convert Sorted List to Binary Search Tree",
         "tags": [
             "Linked List",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Tree",
             "Binary Search Tree",
             "Binary Tree"
@@ -8612,7 +8612,7 @@
         "qno": "1382",
         "title": "Balance a Binary Search Tree",
         "tags": [
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Greedy",
             "Tree",
             "Depth-First Search",
@@ -8630,7 +8630,7 @@
         "tags": [
             "Array",
             "Math",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Dynamic Programming",
             "Tree",
             "Union Find",
@@ -9370,7 +9370,7 @@
         "title": "Construct Quad Tree",
         "tags": [
             "Array",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Tree",
             "Matrix"
         ],
@@ -11552,7 +11552,7 @@
         "tags": [
             "Array",
             "Hash Table",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Tree",
             "Binary Tree"
         ],
@@ -11567,7 +11567,7 @@
         "tags": [
             "Array",
             "Hash Table",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Tree",
             "Binary Tree"
         ],
@@ -12138,7 +12138,7 @@
         "title": "Maximum Binary Tree",
         "tags": [
             "Array",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Stack",
             "Tree",
             "Monotonic Stack",
@@ -12322,7 +12322,7 @@
         "tags": [
             "Array",
             "Hash Table",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Tree",
             "Binary Tree"
         ],
@@ -13283,7 +13283,7 @@
         "qno": "2792",
         "title": "Count Nodes That Are Great Enough",
         "tags": [
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Tree",
             "Depth-First Search",
             "Binary Tree"
@@ -18394,7 +18394,7 @@
         "title": "Number of Ships in a Rectangle",
         "tags": [
             "Array",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Interactive"
         ],
         "default": "Interactive",
@@ -18793,7 +18793,7 @@
         "tags": [
             "Array",
             "Math",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Geometry",
             "Sorting",
             "Ordered Set"
@@ -18914,7 +18914,7 @@
         "title": "Maximum Subarray",
         "tags": [
             "Array",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Dynamic Programming"
         ],
         "default": "Dynamic Programming",
@@ -23121,7 +23121,7 @@
         "title": "Maximum Sum of Subsequence With Non-adjacent Elements",
         "tags": [
             "Array",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Dynamic Programming",
             "Segment Tree"
         ],
@@ -23634,7 +23634,7 @@
         "qno": "558",
         "title": "Logical OR of Two Binary Grids Represented as Quad-Trees",
         "tags": [
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Tree"
         ],
         "default": "Tree",
@@ -25202,11 +25202,11 @@
         "tags": [
             "Array",
             "Hash Table",
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Sorting",
             "Counting"
         ],
-        "default": "Divide and Conquer",
+        "default": "Divide And Conquer",
         "difficulty": "Easy",
         "language": "Java",
         "acceptance": 65
@@ -25215,10 +25215,10 @@
         "qno": "190",
         "title": "Reverse Bits",
         "tags": [
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Bit Manipulation"
         ],
-        "default": "Divide and Conquer",
+        "default": "Divide And Conquer",
         "difficulty": "Easy",
         "language": "Java",
         "acceptance": 59.4
@@ -25227,10 +25227,10 @@
         "qno": "191",
         "title": "Number of 1 Bits",
         "tags": [
-            "Divide and Conquer",
+            "Divide And Conquer",
             "Bit Manipulation"
         ],
-        "default": "Divide and Conquer",
+        "default": "Divide And Conquer",
         "difficulty": "Easy",
         "language": "Java",
         "acceptance": 71.7
@@ -25240,9 +25240,9 @@
         "title": "Super Pow",
         "tags": [
             "Math",
-            "Divide and Conquer"
+            "Divide And Conquer"
         ],
-        "default": "Divide and Conquer",
+        "default": "Divide And Conquer",
         "difficulty": "Medium",
         "language": "Java",
         "acceptance": 35.1
@@ -25253,9 +25253,9 @@
         "tags": [
             "Array",
             "Math",
-            "Divide and Conquer"
+            "Divide And Conquer"
         ],
-        "default": "Divide and Conquer",
+        "default": "Divide And Conquer",
         "difficulty": "Medium",
         "language": "Java",
         "acceptance": 65.9
@@ -25265,9 +25265,9 @@
         "title": "Find Array Given Subset Sums",
         "tags": [
             "Array",
-            "Divide and Conquer"
+            "Divide And Conquer"
         ],
-        "default": "Divide and Conquer",
+        "default": "Divide And Conquer",
         "difficulty": "Hard",
         "language": "Java",
         "acceptance": 49.2
