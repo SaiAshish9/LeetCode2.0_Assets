@@ -1903,6 +1903,11 @@
         "rejection-sampling": "import java.util.Random;\n\nclass Solution {\n    private double radius;\n    private double x_center;\n    private double y_center;\n    private Random random;\n\n    public Solution(double radius, double x_center, double y_center) {\n        this.radius = radius;\n        this.x_center = x_center;\n        this.y_center = y_center;\n        this.random = new Random();\n    }\n\n    public double[] randPoint() {\n        double x = x_center - radius + 2 * radius * random.nextDouble();\n        double y = y_center - radius + 2 * radius * random.nextDouble();\n\n        while (!isInCircle(x, y)) {\n            x = x_center - radius + 2 * radius * random.nextDouble();\n            y = y_center - radius + 2 * radius * random.nextDouble();\n        }\n\n        return new double[]{x, y};\n    }\n\n    private boolean isInCircle(double x, double y) {\n        return Math.pow(x - x_center, 2) + Math.pow(y - y_center, 2) <= Math.pow(radius, 2);\n    }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution obj = new Solution(radius, x_center, y_center);\n * double[] param_1 = obj.randPoint();\n */"
       }
     },
+    "479": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "480": {
       "java": {
         "sliding-window": "import java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Solution {\n    public double[] medianSlidingWindow(int[] nums, int k) {\n        List<Double> resList = new ArrayList<>();\n        int n = nums.length;\n        int i = 0;\n        int j = k - 1;\n        List<Integer> temp = new ArrayList<>();\n        for (int x = 0; x < k - 1; x++) {\n            temp.add(nums[x]);\n        }\n        Collections.sort(temp);\n        while (j < n) {\n            int num = nums[j];\n            int insertIdx = Collections.binarySearch(temp, num);\n            if (insertIdx < 0) {\n                insertIdx = -insertIdx - 1;\n            }\n            temp.add(insertIdx, num);\n\n            if (k % 2 == 1) {\n                double median = (double) temp.get(k / 2);\n                resList.add(median);\n            } else {\n                int idx = k / 2;\n                double median1 = (double) temp.get(idx);\n                double median2 = (double) temp.get(idx - 1);\n                resList.add((median1 + median2) / 2);\n            }\n\n            int removeIdx = Collections.binarySearch(temp, nums[i]);\n            if (removeIdx < 0) {\n                removeIdx = -removeIdx - 1;\n            }\n            temp.remove(removeIdx);\n\n            i++;\n            j++;\n        }\n\n        double[] resArray = new double[resList.size()];\n        for (int x = 0; x < resList.size(); x++) {\n            resArray[x] = resList.get(x);\n        }\n\n        return resArray;\n    }\n}"
@@ -3025,6 +3030,11 @@
         "dynamic-programming": ""
       }
     },
+    "800": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "801": {
       "java": {
         "dynamic-programming": ""
@@ -3123,6 +3133,11 @@
     "828": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "829": {
+      "java": {
+        "enumeration": ""
       }
     },
     "832": {
@@ -3270,6 +3285,11 @@
         "bit-manipulation": ""
       }
     },
+    "869": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "870": {
       "java": {
         "two-pointers": ""
@@ -3398,6 +3418,11 @@
     "905": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "906": {
+      "java": {
+        "enumeration": ""
       }
     },
     "907": {
@@ -3557,6 +3582,11 @@
         "two-pointers": ""
       }
     },
+    "949": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "950": {
       "java": {
         "queue": ""
@@ -3630,6 +3660,11 @@
     "969": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "970": {
+      "java": {
+        "enumeration": ""
       }
     },
     "971": {
@@ -4598,6 +4633,11 @@
         "matrix": ""
       }
     },
+    "1291": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "1292": {
       "java": {
         "matrix": ""
@@ -5278,6 +5318,11 @@
         "interactive": ""
       }
     },
+    "1534": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "1536": {
       "java": {
         "matrix": ""
@@ -5356,6 +5401,11 @@
     "1563": {
       "java": {
         "game-theory": ""
+      }
+    },
+    "1566": {
+      "java": {
+        "enumeration": ""
       }
     },
     "1567": {
@@ -5533,9 +5583,19 @@
         "interactive": ""
       }
     },
+    "1620": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "1621": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1625": {
+      "java": {
+        "enumeration": ""
       }
     },
     "1626": {
@@ -6383,6 +6443,11 @@
         "geometry": ""
       }
     },
+    "1925": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "1926": {
       "java": {
         "matrix": ""
@@ -6599,6 +6664,11 @@
         "dynamic-programming": ""
       }
     },
+    "1995": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "1996": {
       "java": {
         "monotonic-stack": ""
@@ -6612,6 +6682,11 @@
     "1998": {
       "java": {
         "union-find": ""
+      }
+    },
+    "1999": {
+      "java": {
+        "enumeration": ""
       }
     },
     "2000": {
@@ -6829,6 +6904,11 @@
         "union-find": ""
       }
     },
+    "2081": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "2083": {
       "java": {
         "prefix-sum": ""
@@ -6857,6 +6937,11 @@
     "2093": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "2094": {
+      "java": {
+        "enumeration": ""
       }
     },
     "2095": {
@@ -6942,6 +7027,11 @@
     "2121": {
       "java": {
         "prefix-sum": ""
+      }
+    },
+    "2122": {
+      "java": {
+        "enumeration": ""
       }
     },
     "2123": {
@@ -7047,6 +7137,11 @@
     "2161": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "2162": {
+      "java": {
+        "enumeration": ""
       }
     },
     "2163": {
@@ -7234,6 +7329,11 @@
         "heap-(priority-queue)": "class Solution {\n    public int largestInteger(int num) {\n        String s = String.valueOf(num);\n        int ans = 0;\n        // maxHeap[0] := the odd digits\n        // maxHeap[1] := the even digits\n        Queue<Integer>[] maxHeap = new Queue[2];\n\n        for (int i = 0; i < 2; ++i)\n            maxHeap[i] = new PriorityQueue<>(Comparator.reverseOrder());\n\n        for (char c : s.toCharArray()) {\n            int digit = c - '0';\n            maxHeap[digit & 1].offer(digit);\n        }\n\n        for (char c : s.toCharArray()) {\n            int i = c - '0' & 1;\n            ans = (ans * 10 + maxHeap[i].poll());\n        }\n\n        return ans;\n    }\n}"
       }
     },
+    "2232": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "2233": {
       "java": {
         "heap-(priority-queue)": "class Solution {\n    public int maximumProduct(int[] nums, int k) {\n        int kMod = 1_000_000_007;\n        long ans = 1;\n        Queue<Integer> minHeap = new PriorityQueue<>();\n\n        for (int num : nums)\n            minHeap.offer(num);\n\n        for (int i = 0; i < k; ++i) {\n            int minNum = minHeap.poll();\n            minHeap.offer(minNum + 1);\n        }\n\n        while (!minHeap.isEmpty()) {\n            ans *= minHeap.poll();\n            ans %= kMod;\n        }\n\n        return (int) ans;\n    }\n}"
@@ -7252,6 +7352,16 @@
     "2237": {
       "java": {
         "prefix-sum": ""
+      }
+    },
+    "2240": {
+      "java": {
+        "enumeration": ""
+      }
+    },
+    "2242": {
+      "java": {
+        "enumeration": ""
       }
     },
     "2245": {
@@ -7297,6 +7407,11 @@
     "2258": {
       "java": {
         "matrix": ""
+      }
+    },
+    "2259": {
+      "java": {
+        "enumeration": ""
       }
     },
     "2260": {
@@ -7447,6 +7562,11 @@
     "2307": {
       "java": {
         "union-find": ""
+      }
+    },
+    "2309": {
+      "java": {
+        "enumeration": ""
       }
     },
     "2310": {
@@ -7810,6 +7930,11 @@
         "trie": ""
       }
     },
+    "2417": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "2419": {
       "java": {
         "brainteaser": "class Solution {\n    public int longestSubarray(int[] nums) {\n        int max = 0;\n        for (int num : nums) {\n            max = Math.max(max, num);\n        }\n\n        int maxLength = 0;\n        int currentLength = 0;\n        for (int num : nums) {\n            if (num == max) {\n                currentLength++;\n                maxLength = Math.max(maxLength, currentLength);\n            } else {\n                currentLength = 0;\n            }\n        }\n        return maxLength;\n    }\n}\n"
@@ -7890,6 +8015,11 @@
         "dynamic-programming": ""
       }
     },
+    "2437": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "2438": {
       "java": {
         "prefix-sum": ""
@@ -7908,6 +8038,11 @@
     "2441": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "2443": {
+      "java": {
+        "enumeration": ""
       }
     },
     "2444": {
@@ -8460,6 +8595,11 @@
         "two-pointers": ""
       }
     },
+    "2605": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "2606": {
       "java": {
         "dynamic-programming": ""
@@ -8700,6 +8840,11 @@
         "matrix": ""
       }
     },
+    "2735": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "2736": {
       "java": {
         "monotonic-stack": ""
@@ -8785,9 +8930,19 @@
         "stack": ""
       }
     },
+    "2765": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "2767": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "2768": {
+      "java": {
+        "enumeration": ""
       }
     },
     "2770": {
@@ -8808,6 +8963,11 @@
     "2773": {
       "java": {
         "tree": ""
+      }
+    },
+    "2778": {
+      "java": {
+        "enumeration": ""
       }
     },
     "2779": {
@@ -8848,6 +9008,11 @@
     "2799": {
       "java": {
         "sliding-window": "import java.util.HashSet;\nimport java.util.HashMap;\nimport java.util.Set;\n\nclass Solution {\n    public int countCompleteSubarrays(int[] nums) {\n        Set<Integer> uniqueElements = new HashSet<>();\n        for (int num : nums) {\n            uniqueElements.add(num);\n        }\n        int uniqueCount = uniqueElements.size();\n        int result = 0;\n        HashMap<Integer, Integer> windowCounts = new HashMap<>();\n        int left = 0;\n        \n        for (int right = 0; right < nums.length; right++) {\n            windowCounts.put(nums[right], windowCounts.getOrDefault(nums[right], 0) + 1);\n            \n            while (windowCounts.size() == uniqueCount) {\n                result += nums.length - right;\n                int leftNum = nums[left];\n                windowCounts.put(leftNum, windowCounts.get(leftNum) - 1);\n                if (windowCounts.get(leftNum) == 0) {\n                    windowCounts.remove(leftNum);\n                }\n                left++;\n            }\n        }\n        \n        return result;\n    }\n}\n"
+      }
+    },
+    "2800": {
+      "java": {
+        "enumeration": ""
       }
     },
     "2801": {
@@ -8970,6 +9135,16 @@
         "combinatorics": ""
       }
     },
+    "2843": {
+      "java": {
+        "enumeration": ""
+      }
+    },
+    "2844": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "2845": {
       "java": {
         "prefix-sum": ""
@@ -9018,6 +9193,11 @@
     "2859": {
       "java": {
         "bit-manipulation": ""
+      }
+    },
+    "2860": {
+      "java": {
+        "enumeration": ""
       }
     },
     "2862": {
@@ -9200,6 +9380,11 @@
         "sliding-window": "class TrieNode {\n    public TrieNode[] children = new TrieNode[2];\n    public int min = Integer.MAX_VALUE;\n    public int max = Integer.MIN_VALUE;\n}\n\nclass BitTrie {\n    public BitTrie(int maxBit) {\n        this.maxBit = maxBit;\n    }\n\n    public void insert(int num) {\n        TrieNode node = root;\n        for (int i = maxBit; i >= 0; --i) {\n            int bit = (int) (num >> i & 1);\n            if (node.children[bit] == null)\n                node.children[bit] = new TrieNode();\n            node = node.children[bit];\n            node.min = Math.min(node.min, num);\n            node.max = Math.max(node.max, num);\n        }\n    }\n\n    public int getMaxXor(int x) {\n        int maxXor = 0;\n        TrieNode node = root;\n        for (int i = maxBit; i >= 0; --i) {\n            int bit = (int) (x >> i & 1);\n            int toggleBit = bit ^ 1;\n            if (node.children[toggleBit] != null && node.children[toggleBit].max > x &&\n                    node.children[toggleBit].min <= 2 * x) {\n                maxXor = maxXor | 1 << i;\n                node = node.children[toggleBit];\n            } else if (node.children[bit] != null) {\n                node = node.children[bit];\n            } else {\n                return 0;\n            }\n        }\n        return maxXor;\n    }\n\n    private int maxBit;\n    private TrieNode root = new TrieNode();\n}\n\nclass Solution {\n    public int maximumStrongPairXor(int[] nums) {\n        int maxNum = Arrays.stream(nums).max().getAsInt();\n        int maxBit = (int) (Math.log(maxNum) / Math.log(2));\n        int ans = 0;\n        BitTrie bitTrie = new BitTrie(maxBit);\n\n        for (int num : nums)\n            bitTrie.insert(num);\n\n        for (int num : nums)\n            ans = Math.max(ans, bitTrie.getMaxXor(num));\n\n        return ans;\n    }\n}"
       }
     },
+    "2934": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "2935": {
       "java": {
         "sliding-window": "class TrieNode {\n    public TrieNode[] children = new TrieNode[2];\n    public int min = Integer.MAX_VALUE;\n    public int max = Integer.MIN_VALUE;\n}\n\nclass BitTrie {\n    public BitTrie(int maxBit) {\n        this.maxBit = maxBit;\n    }\n\n    public void insert(int num) {\n        TrieNode node = root;\n        for (int i = maxBit; i >= 0; --i) {\n            int bit = (int) (num >> i & 1);\n            if (node.children[bit] == null)\n                node.children[bit] = new TrieNode();\n            node = node.children[bit];\n            node.min = Math.min(node.min, num);\n            node.max = Math.max(node.max, num);\n        }\n    }\n\n    public int getMaxXor(int x) {\n        int maxXor = 0;\n        TrieNode node = root;\n        for (int i = maxBit; i >= 0; --i) {\n            int bit = (int) (x >> i & 1);\n            int toggleBit = bit ^ 1;\n            if (node.children[toggleBit] != null && node.children[toggleBit].max > x &&\n                    node.children[toggleBit].min <= 2 * x) {\n                maxXor = maxXor | 1 << i;\n                node = node.children[toggleBit];\n            } else if (node.children[bit] != null) {\n                node = node.children[bit];\n            } else {\n                return 0;\n            }\n        }\n        return maxXor;\n    }\n\n    private int maxBit;\n    private TrieNode root = new TrieNode();\n}\n\nclass Solution {\n    public int maximumStrongPairXor(int[] nums) {\n        int maxNum = Arrays.stream(nums).max().getAsInt();\n        int maxBit = (int) (Math.log(maxNum) / Math.log(2));\n        int ans = 0;\n        BitTrie bitTrie = new BitTrie(maxBit);\n\n        for (int num : nums)\n            bitTrie.insert(num);\n\n        for (int num : nums)\n            ans = Math.max(ans, bitTrie.getMaxXor(num));\n\n        return ans;\n    }\n}"
@@ -9263,6 +9448,11 @@
     "2950": {
       "java": {
         "prefix-sum": ""
+      }
+    },
+    "2951": {
+      "java": {
+        "enumeration": ""
       }
     },
     "2953": {
@@ -9345,6 +9535,11 @@
         "heap-(priority-queue)": ""
       }
     },
+    "2975": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "2976": {
       "java": {
         "shortest-path": ""
@@ -9400,6 +9595,11 @@
         "dynamic-programming": ""
       }
     },
+    "3001": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "3003": {
       "java": {
         "dynamic-programming": ""
@@ -9430,6 +9630,11 @@
         "geometry": ""
       }
     },
+    "3010": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "3011": {
       "java": {
         "bit-manipulation": ""
@@ -9458,6 +9663,11 @@
     "3018": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "3020": {
+      "java": {
+        "enumeration": ""
       }
     },
     "3022": {
@@ -9645,6 +9855,11 @@
         "sliding-window": "class Solution {\n    public int maximumLengthSubstring(String s) {\n        int ans = 0;\n        int[] count = new int[26];\n\n        for (int left = 0, right = 0; right < s.length(); ++right) {\n            ++count[s.charAt(right) - 'a'];\n            while (count[s.charAt(right) - 'a'] > 2)\n                --count[s.charAt(left++) - 'a'];\n            ans = Math.max(ans, right - left + 1);\n        }\n\n        return ans;\n    }\n}"
       }
     },
+    "3091": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "3092": {
       "java": {
         "heap-(priority-queue)": ""
@@ -9710,6 +9925,11 @@
         "monotonic-stack": "class Solution {\n    public long numberOfSubarrays(int[] nums) {\n        Deque<int[]> stack = new ArrayDeque<>();\n        long ans = 0;\n        int top = -1;\n\n        for (int num : nums) {\n            while (!stack.isEmpty() && stack.peek()[0] < num)\n                stack.pop();\n            if (stack.isEmpty() || stack.peek()[0] != num)\n                stack.push(new int[] { num, 0 });\n            ans += ++stack.peek()[1];\n        }\n\n        return ans;\n    }\n}"
       }
     },
+    "3114": {
+      "java": {
+        "enumeration": ""
+      }
+    },
     "3115": {
       "java": {
         "number-theory": ""
@@ -9773,6 +9993,11 @@
     "3135": {
       "java": {
         "sliding-window": "class Solution {\n    public int minOperations(String initial, String target) {\n        int m = initial.length(), n = target.length();\n        int[][] dp = new int[m + 1][n + 1];\n        int mx = 0;\n        for (int i = 1; i <= m; ++i) {\n            for (int j = 1; j <= n; ++j) {\n                if (initial.charAt(i - 1) == target.charAt(j - 1)) {\n                    dp[i][j] = dp[i - 1][j - 1] + 1;\n                    mx = Math.max(mx, dp[i][j]);\n                }\n            }\n        }\n        return m + n - 2 * mx;\n    }\n}"
+      }
+    },
+    "3139": {
+      "java": {
+        "enumeration": ""
       }
     },
     "3141": {
@@ -9924,6 +10149,11 @@
     "3199": {
       "java": {
         "bit-manipulation": ""
+      }
+    },
+    "3200": {
+      "java": {
+        "enumeration": ""
       }
     },
     "3201": {
