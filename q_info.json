@@ -28184,5 +28184,584 @@
       "difficulty": "Medium",
       "language": "Java",
       "acceptance": 39.3
+    },
+    "largest_palindrome_product": {
+      "qno": "479",
+      "title": "Largest Palindrome Product",
+      "tags": [
+        "Math",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 33.5
+    },
+    "similar_rgb_color": {
+      "qno": "800",
+      "title": "Similar RGB Color",
+      "tags": [
+        "Math",
+        "String",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 67.5
+    },
+    "consecutive_numbers_sum": {
+      "qno": "829",
+      "title": "Consecutive Numbers Sum",
+      "tags": [
+        "Math",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 41.9
+    },
+    "reordered_power_of_2": {
+      "qno": "869",
+      "title": "Reordered Power of 2",
+      "tags": [
+        "Hash Table",
+        "Math",
+        "Sorting",
+        "Counting",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.6
+    },
+    "super_palindromes": {
+      "qno": "906",
+      "title": "Super Palindromes",
+      "tags": [
+        "Math",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 39
+    },
+    "largest_time_for_given_digits": {
+      "qno": "949",
+      "title": "Largest Time for Given Digits",
+      "tags": [
+        "Array",
+        "String",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 35.3
+    },
+    "powerful_integers": {
+      "qno": "970",
+      "title": "Powerful Integers",
+      "tags": [
+        "Hash Table",
+        "Math",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.9
+    },
+    "sequential_digits": {
+      "qno": "1291",
+      "title": "Sequential Digits",
+      "tags": [
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.3
+    },
+    "greatest_english_letter_in_upper_and_lower_case": {
+      "qno": "2309",
+      "title": "Greatest English Letter in Upper and Lower Case",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 69.9
+    },
+    "count_good_triplets": {
+      "qno": "1534",
+      "title": "Count Good Triplets",
+      "tags": [
+        "Array",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 81.3
+    },
+    "detect_pattern_of_length_m_repeated_k_or_more_times": {
+      "qno": "1566",
+      "title": "Detect Pattern of Length M Repeated K or More Times",
+      "tags": [
+        "Array",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 43.2
+    },
+    "coordinate_with_maximum_network_quality": {
+      "qno": "1620",
+      "title": "Coordinate With Maximum Network Quality",
+      "tags": [
+        "Array",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38
+    },
+    "lexicographically_smallest_string_after_applying_operations": {
+      "qno": "1625",
+      "title": "Lexicographically Smallest String After Applying Operations",
+      "tags": [
+        "String",
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.5
+    },
+    "count_square_sum_triples": {
+      "qno": "1925",
+      "title": "Count Square Sum Triples",
+      "tags": [
+        "Math",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 67.9
+    },
+    "count_special_quadruplets": {
+      "qno": "1995",
+      "title": "Count Special Quadruplets",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 61.5
+    },
+    "smallest_greater_multiple_made_of_two_digits": {
+      "qno": "1999",
+      "title": "Smallest Greater Multiple Made of Two Digits",
+      "tags": [
+        "Math",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.6
+    },
+    "sum_of_k-mirror_numbers": {
+      "qno": "2081",
+      "title": "Sum of k-Mirror Numbers",
+      "tags": [
+        "Math",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 42.4
+    },
+    "finding_3-digit_even_numbers": {
+      "qno": "2094",
+      "title": "Finding 3-Digit Even Numbers",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 60.6
+    },
+    "recover_the_original_array": {
+      "qno": "2122",
+      "title": "Recover the Original Array",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 39.3
+    },
+    "minimum_cost_to_set_cooking_time": {
+      "qno": "2162",
+      "title": "Minimum Cost to Set Cooking Time",
+      "tags": [
+        "Math",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41.1
+    },
+    "minimize_result_by_adding_parentheses_to_expression": {
+      "qno": "2232",
+      "title": "Minimize Result by Adding Parentheses to Expression",
+      "tags": [
+        "String",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.5
+    },
+    "remove_digit_from_number_to_maximize_result": {
+      "qno": "2259",
+      "title": "Remove Digit From Number to Maximize Result",
+      "tags": [
+        "String",
+        "Greedy",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 45.5
+    },
+    "number_of_ways_to_buy_pens_and_pencils": {
+      "qno": "2240",
+      "title": "Number of Ways to Buy Pens and Pencils",
+      "tags": [
+        "Math",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.1
+    },
+    "maximum_score_of_a_node_sequence": {
+      "qno": "2242",
+      "title": "Maximum Score of a Node Sequence",
+      "tags": [
+        "Array",
+        "Graph",
+        "Sorting",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 38.7
+    },
+    "number_of_valid_clock_times": {
+      "qno": "2437",
+      "title": "Number of Valid Clock Times",
+      "tags": [
+        "String",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 46.7
+    },
+    "sum_of_number_and_its_reverse": {
+      "qno": "2443",
+      "title": "Sum of Number and Its Reverse",
+      "tags": [
+        "Math",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.4
+    },
+    "closest_fair_integer": {
+      "qno": "2417",
+      "title": "Closest Fair Integer",
+      "tags": [
+        "Math",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45
+    },
+    "form_smallest_number_from_two_digit_arrays": {
+      "qno": "2605",
+      "title": "Form Smallest Number From Two Digit Arrays",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 54
+    },
+    "collecting_chocolates": {
+      "qno": "2735",
+      "title": "Collecting Chocolates",
+      "tags": [
+        "Array",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 33.3
+    },
+    "sum_of_squares_of_special_elements": {
+      "qno": "2778",
+      "title": "Sum of Squares of Special Elements",
+      "tags": [
+        "Array",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 81.4
+    },
+    "longest_alternating_subarray": {
+      "qno": "2765",
+      "title": "Longest Alternating Subarray",
+      "tags": [
+        "Array",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 34.1
+    },
+    "shortest_string_that_contains_three_strings": {
+      "qno": "2800",
+      "title": "Shortest String That Contains Three Strings",
+      "tags": [
+        "String",
+        "Greedy",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 30.5
+    },
+    "number_of_black_blocks": {
+      "qno": "2768",
+      "title": "Number of Black Blocks",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.2
+    },
+    "count_symmetric_integers": {
+      "qno": "2843",
+      "title": "Count Symmetric Integers",
+      "tags": [
+        "Math",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 74.4
+    },
+    "minimum_operations_to_make_a_special_number": {
+      "qno": "2844",
+      "title": "Minimum Operations to Make a Special Number",
+      "tags": [
+        "Math",
+        "String",
+        "Greedy",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38.1
+    },
+    "happy_students": {
+      "qno": "2860",
+      "title": "Happy Students",
+      "tags": [
+        "Array",
+        "Sorting",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52.1
+    },
+    "minimum_operations_to_maximize_last_elements_in_arrays": {
+      "qno": "2934",
+      "title": "Minimum Operations to Maximize Last Elements in Arrays",
+      "tags": [
+        "Array",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.9
+    },
+    "find_the_peaks": {
+      "qno": "2951",
+      "title": "Find the Peaks",
+      "tags": [
+        "Array",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 75.6
+    },
+    "maximum_square_area_by_removing_fences_from_a_field": {
+      "qno": "2975",
+      "title": "Maximum Square Area by Removing Fences From a Field",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 22.8
+    },
+    "divide_an_array_into_subarrays_with_minimum_cost_i": {
+      "qno": "3010",
+      "title": "Divide an Array Into Subarrays With Minimum Cost I",
+      "tags": [
+        "Array",
+        "Sorting",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 66.2
+    },
+    "minimum_moves_to_capture_the_queen": {
+      "qno": "3001",
+      "title": "Minimum Moves to Capture The Queen",
+      "tags": [
+        "Array",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 20.9
+    },
+    "find_the_maximum_number_of_elements_in_subset": {
+      "qno": "3020",
+      "title": "Find the Maximum Number of Elements in Subset",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 24.6
+    },
+    "apply_operations_to_make_sum_of_array_greater_than_or_equal_to_k": {
+      "qno": "3091",
+      "title": "Apply Operations to Make Sum of Array Greater Than or Equal to k",
+      "tags": [
+        "Math",
+        "Greedy",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.5
+    },
+    "latest_time_you_can_obtain_after_replacing_characters": {
+      "qno": "3114",
+      "title": "Latest Time You Can Obtain After Replacing Characters",
+      "tags": [
+        "String",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 35.5
+    },
+    "minimum_cost_to_equalize_array": {
+      "qno": "3139",
+      "title": "Minimum Cost to Equalize Array",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 16.3
+    },
+    "maximum_height_of_a_triangle": {
+      "qno": "3200",
+      "title": "Maximum Height of a Triangle",
+      "tags": [
+        "Array",
+        "Enumeration"
+      ],
+      "default": "Enumeration",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 41.9
     }
 }
