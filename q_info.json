@@ -25889,5 +25889,17 @@
         "difficulty": "Hard",
         "language": "Java",
         "acceptance": 26.6
+    },
+    "handling_sum_queries_after_update": {
+        "qno": "2569",
+        "title": "Handling Sum Queries After Update",
+        "tags": [
+            "Array",
+            "Segment Tree"
+        ],
+        "default": "Segment Tree",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 28.2
     }
 }
