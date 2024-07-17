@@ -3574,6 +3574,11 @@
       "heap-(priority-queue)": ""
     }
   },
+  "1201": {
+    "java": {
+      "combinatorics": ""
+    }
+  },
   "1203": {
     "java": {
       "topological-sort": ""
@@ -5154,6 +5159,11 @@
       "prefix-sum": ""
     }
   },
+  "1830": {
+    "java": {
+      "combinatorics": ""
+    }
+  },
   "1834": {
     "java": {
       "heap-(priority-queue)": ""
@@ -5222,6 +5232,11 @@
   "1862": {
     "java": {
       "prefix-sum": ""
+    }
+  },
+  "1863": {
+    "java": {
+      "combinatorics": ""
     }
   },
   "1866": {
@@ -6055,6 +6070,11 @@
       "prefix-sum": ""
     }
   },
+  "2221": {
+    "java": {
+      "combinatorics": ""
+    }
+  },
   "2222": {
     "java": {
       "prefix-sum": ""
@@ -6871,6 +6891,11 @@
       "heap-(priority-queue)": ""
     }
   },
+  "2514": {
+    "java": {
+      "combinatorics": ""
+    }
+  },
   "2516": {
     "java": {
       "sliding-window": "class Solution {\n    public int takeCharacters(String s, int k) {\n      int n = s.length();\n        int ans = n;\n        int[] count = new int[3];\n\n        for (final char c : s.toCharArray())\n            ++count[c - 'a'];\n\n        if (count[0] < k || count[1] < k || count[2] < k)\n            return -1;\n\n        for (int left = 0, right = 0; right < n; ++right) {\n            --count[s.charAt(right) - 'a'];\n            while (count[s.charAt(right) - 'a'] < k)\n                ++count[s.charAt(left++) - 'a'];\n            ans = Math.min(ans, n - (right - left + 1));\n        }\n\n        return ans;\n    }\n}"
@@ -6939,6 +6964,11 @@
   "2538": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "2539": {
+    "java": {
+      "combinatorics": ""
     }
   },
   "2540": {
@@ -7566,6 +7596,11 @@
       "sliding-window": "public class Solution {\n    public long maxSum(List<Integer> nums, int m, int k) {\n        long ans = 0;\n        long sum = 0;\n        Map<Integer, Integer> count = new HashMap<>();\n\n        for (int i = 0; i < nums.size(); ++i) {\n            sum += nums.get(i);\n            count.merge(nums.get(i), 1, Integer::sum);\n            if (i >= k) {\n              int numToRemove = nums.get(i - k);\n                sum -= numToRemove;\n                count.merge(numToRemove, -1, Integer::sum);\n                if (count.get(numToRemove) == 0)\n                    count.remove(numToRemove);\n            }\n            if (count.size() >= m)\n                ans = Math.max(ans, sum);\n        }\n\n        return ans;\n    }\n}"
     }
   },
+  "2842": {
+    "java": {
+      "combinatorics": ""
+    }
+  },
   "2845": {
     "java": {
       "prefix-sum": ""
@@ -7731,6 +7766,21 @@
       "dynamic-programming": ""
     }
   },
+  "2927": {
+    "java": {
+      "combinatorics": ""
+    }
+  },
+  "2928": {
+    "java": {
+      "combinatorics": ""
+    }
+  },
+  "2929": {
+    "java": {
+      "combinatorics": ""
+    }
+  },
   "2930": {
     "java": {
       "dynamic-programming": ""
@@ -7801,6 +7851,11 @@
       "sliding-window": "class Solution {\n    public int countCompleteSubstrings(String word, int k) {\n      int uniqueLetters = word.chars().boxed().collect(Collectors.toSet()).size();\n        int ans = 0;\n\n        for (int windowSize = k; windowSize <= k * uniqueLetters && windowSize <= word.length(); windowSize += k) {\n            ans += countCompleteStrings(word, k, windowSize);\n        }\n\n        return ans;\n    }\n\n    private int countCompleteStrings(final String word, int k, int windowSize) {\n        int res = 0;\n        int countLetters = 0;\n        int[] count = new int[26];\n\n        for (int i = 0; i < word.length(); ++i) {\n            ++count[word.charAt(i) - 'a'];\n            ++countLetters;\n            if (i > 0 && Math.abs(word.charAt(i) - word.charAt(i - 1)) > 2) {\n                count = new int[26];\n                ++count[word.charAt(i) - 'a'];\n                countLetters = 1;\n            }\n            if (countLetters == windowSize + 1) {\n                --count[word.charAt(i - windowSize) - 'a'];\n                --countLetters;\n            }\n            if (countLetters == windowSize)\n                res += Arrays.stream(count).allMatch(freq -> freq == 0 || freq == k) ? 1 : 0;\n        }\n\n        return res;\n    }\n}"
     }
   },
+  "2954": {
+    "java": {
+      "combinatorics": ""
+    }
+  },
   "2955": {
     "java": {
       "prefix-sum": ""
@@ -7824,6 +7879,11 @@
   "2962": {
     "java": {
       "sliding-window": "class Solution {\n    public long countSubarrays(int[] nums, int k) {\n      int maxNum = Arrays.stream(nums).max().getAsInt();\n        long ans = 0;\n        int count = 0;\n\n        for (int left = 0, right = 0; right < nums.length; ++right) {\n            if (nums[right] == maxNum)\n                ++count;\n            while (count == k)\n                if (nums[left++] == maxNum)\n                    --count;\n            ans += left;\n        }\n\n        return ans;\n    }\n}"
+    }
+  },
+  "2963": {
+    "java": {
+      "combinatorics": ""
     }
   },
   "2965": {
@@ -8161,6 +8221,11 @@
       "monotonic-stack": "class Solution {\n    public long numberOfSubarrays(int[] nums) {\n        Deque<int[]> stack = new ArrayDeque<>();\n        long ans = 0;\n        int top = -1;\n\n        for (int num : nums) {\n            while (!stack.isEmpty() && stack.peek()[0] < num)\n                stack.pop();\n            if (stack.isEmpty() || stack.peek()[0] != num)\n                stack.push(new int[] { num, 0 });\n            ans += ++stack.peek()[1];\n        }\n\n        return ans;\n    }\n}"
     }
   },
+  "3116": {
+    "java": {
+      "combinatorics": ""
+    }
+  },
   "3117": {
     "java": {
       "queue": ""
@@ -8179,6 +8244,11 @@
   "3127": {
     "java": {
       "matrix": ""
+    }
+  },
+  "3128": {
+    "java": {
+      "combinatorics": ""
     }
   },
   "3129": {

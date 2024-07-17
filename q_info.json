@@ -24007,5 +24007,173 @@
         "difficulty": "Hard",
         "language": "Java",
         "acceptance": 34.9
+    },
+    "minimum_number_of_operations_to_make_string_sorted": {
+        "qno": "1830",
+        "title": "Minimum Number of Operations to Make String Sorted",
+        "tags": [
+            "Math",
+            "String",
+            "Combinatorics"
+        ],
+        "default": "Combinatorics",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 50.1
+    },
+    "sum_of_all_subset_xor_totals": {
+        "qno": "1863",
+        "title": "Sum of All Subset XOR Totals",
+        "tags": [
+            "Array",
+            "Math",
+            "Backtracking",
+            "Bit Manipulation",
+            "Combinatorics",
+            "Enumeration"
+        ],
+        "default": "Combinatorics",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 87.9
+    },
+    "find_triangular_sum_of_an_array": {
+        "qno": "2221",
+        "title": "Find Triangular Sum of an Array",
+        "tags": [
+            "Array",
+            "Math",
+            "Simulation",
+            "Combinatorics"
+        ],
+        "default": "Combinatorics",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 78.8
+    },
+    "count_anagrams": {
+        "qno": "2514",
+        "title": "Count Anagrams",
+        "tags": [
+            "Hash Table",
+            "Math",
+            "String",
+            "Combinatorics",
+            "Counting"
+        ],
+        "default": "Combinatorics",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 33.4
+    },
+    "count_the_number_of_good_subsequences": {
+        "qno": "2539",
+        "title": "Count the Number of Good Subsequences",
+        "tags": [
+            "Hash Table",
+            "Math",
+            "String",
+            "Combinatorics",
+            "Counting"
+        ],
+        "default": "Combinatorics",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 52.7
+    },
+    "count_k-subsequences_of_a_string_with_maximum_beauty": {
+        "qno": "2842",
+        "title": "Count K-Subsequences of a String With Maximum Beauty",
+        "tags": [
+            "Hash Table",
+            "Math",
+            "String",
+            "Greedy",
+            "Combinatorics"
+        ],
+        "default": "Combinatorics",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 29.3
+    },
+    "distribute_candies_among_children_i": {
+        "qno": "2928",
+        "title": "Distribute Candies Among Children I",
+        "tags": [
+            "Math",
+            "Combinatorics",
+            "Enumeration"
+        ],
+        "default": "Combinatorics",
+        "difficulty": "Easy",
+        "language": "Java",
+        "acceptance": 75.8
+    },
+    "distribute_candies_among_children_ii": {
+        "qno": "2929",
+        "title": "Distribute Candies Among Children II",
+        "tags": [
+            "Math",
+            "Combinatorics",
+            "Enumeration"
+        ],
+        "default": "Combinatorics",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 35.2
+    },
+    "count_the_number_of_good_partitions": {
+        "qno": "2963",
+        "title": "Count the Number of Good Partitions",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Math",
+            "Combinatorics"
+        ],
+        "default": "Combinatorics",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 49.9
+    },
+    "distribute_candies_among_children_iii": {
+        "qno": "2927",
+        "title": "Distribute Candies Among Children III",
+        "tags": [
+            "Math",
+            "Combinatorics"
+        ],
+        "default": "Combinatorics",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 44.6
+    },
+    "count_the_number_of_infection_sequences": {
+        "qno": "2954",
+        "title": "Count the Number of Infection Sequences",
+        "tags": [
+            "Array",
+            "Math",
+            "Combinatorics"
+        ],
+        "default": "Combinatorics",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 36.7
+    },
+    "right_triangles": {
+        "qno": "3128",
+        "title": "Right Triangles",
+        "tags": [
+            "Array",
+            "Hash Table",
+            "Math",
+            "Combinatorics",
+            "Counting"
+        ],
+        "default": "Combinatorics",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 47.1
     }
 }
