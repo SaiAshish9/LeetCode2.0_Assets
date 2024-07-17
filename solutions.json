@@ -264,6 +264,46 @@
       "binary-search-tree": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\npublic class Solution {\n\n    public void recoverTree(TreeNode root) {\n        TreeNode first = null;\n        TreeNode second = null;\n        TreeNode prev = null;\n        TreeNode temp = null;\n\n        while (root != null) {\n            if (root.left != null) {\n                // Find the rightmost node in the left subtree or link it to the current root\n                temp = root.left;\n                while (temp.right != null && temp.right != root) {\n                    temp = temp.right;\n                }\n\n                if (temp.right != null) {\n                    // Unlink the rightmost node from the current root\n                    if (prev != null && root.val < prev.val) {\n                        if (first == null) {\n                            first = prev;\n                        }\n                        second = root;\n                    }\n                    prev = root;\n\n                    temp.right = null;\n                    root = root.right;\n                } else {\n                    // Link the rightmost node to the current root\n                    temp.right = root;\n                    root = root.left;\n                }\n            } else {\n                // Check for swapped nodes\n                if (prev != null && root.val < prev.val) {\n                    if (first == null) {\n                        first = prev;\n                    }\n                    second = root;\n                }\n                prev = root;\n\n                root = root.right;\n            }\n        }\n\n        // Swap the values of the two nodes\n        if (first != null && second != null) {\n            int tempVal = first.val;\n            first.val = second.val;\n            second.val = tempVal;\n        }\n    }\n}\n"
     }
   },
+  "100": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "101": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "102": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "103": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "104": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "105": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "106": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "107": {
+    "java": {
+      "tree": ""
+    }
+  },
   "108": {
     "java": {
       "binary-search-tree": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n * int val;\n * TreeNode left;\n * TreeNode right;\n * TreeNode() {}\n * TreeNode(int val) { this.val = val; }\n * TreeNode(int val, TreeNode left, TreeNode right) {\n * this.val = val;\n * this.left = left;\n * this.right = right;\n * }\n * }\n */\nclass Solution {\n    public TreeNode sortedArrayToBST(int[] nums) {\n        if (nums == null || nums.length == 0) {\n            return null;\n        }\n        return constructBST(nums, 0, nums.length - 1);\n    }\n\n    private TreeNode constructBST(int[] nums, int left, int right) {\n        if (left > right) {\n            return null;\n        }\n\n        int mid = left + (right - left) / 2;\n        TreeNode node = new TreeNode(nums[mid]);\n\n        node.left = constructBST(nums, left, mid - 1);\n        node.right = constructBST(nums, mid + 1, right);\n\n        return node;\n    }\n}"
@@ -274,6 +314,26 @@
       "binary-search-tree": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\n/**\n * Definition for a binary tree node.\n * public class TreeNode {\n * int val;\n * TreeNode left;\n * TreeNode right;\n * TreeNode() {}\n * TreeNode(int val) { this.val = val; }\n * TreeNode(int val, TreeNode left, TreeNode right) {\n * this.val = val;\n * this.left = left;\n * this.right = right;\n * }\n * }\n */\nclass Solution {\n    public TreeNode sortedListToBST(ListNode head) {\n        if (head == null) {\n            return null;\n        }\n        return sortedListToBSTHelper(head, null);\n    }\n\n    private TreeNode sortedListToBSTHelper(ListNode head, ListNode tail) {\n        if (head == tail) {\n            return null;\n        }\n\n        ListNode slow = head;\n        ListNode fast = head;\n\n        while (fast != tail && fast.next != tail) {\n            slow = slow.next;\n            fast = fast.next.next;\n        }\n\n        TreeNode node = new TreeNode(slow.val);\n        node.left = sortedListToBSTHelper(head, slow);\n        node.right = sortedListToBSTHelper(slow.next, tail);\n        return node;\n    }\n}"
     }
   },
+  "110": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "111": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "112": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "113": {
+    "java": {
+      "tree": ""
+    }
+  },
   "114": {
     "java": {
       "stack": ""
@@ -282,6 +342,16 @@
   "115": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "116": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "117": {
+    "java": {
+      "tree": ""
     }
   },
   "118": {
@@ -322,6 +392,11 @@
   "125": {
     "java": {
       "two-pointers": "class Solution {\n    public boolean isPalindrome(String s) {\n        int left = 0, right = s.length() - 1;\n        \n        while (left < right) {\n            char c1 = s.charAt(left);\n            char c2 = s.charAt(right);\n            \n            if (!Character.isLetterOrDigit(c1)) {\n                left++;\n            } else if (!Character.isLetterOrDigit(c2)) {\n                right--;\n            } else {\n                if (Character.toLowerCase(c1) != Character.toLowerCase(c2)) {\n                    return false;\n                }\n                left++;\n                right--;\n            }\n        }\n        \n        return true;\n    }\n}\n"
+    }
+  },
+  "129": {
+    "java": {
+      "tree": ""
     }
   },
   "130": {
@@ -402,6 +477,11 @@
   "155": {
     "java": {
       "stack": "import java.util.Stack;\n\nclass MinStack {\n    private Stack<Integer> stack;\n    private Stack<Integer> minStack;\n\n    public MinStack() {\n        stack = new Stack<>();\n        minStack = new Stack<>();\n    }\n\n    public void push(int val) {\n        stack.push(val);\n        if (minStack.isEmpty() || val <= minStack.peek()) {\n            minStack.push(val);\n        }\n    }\n\n    public void pop() {\n        if (stack.peek().equals(minStack.peek())) {\n            minStack.pop();\n        }\n        stack.pop();\n    }\n\n    public int top() {\n        return stack.peek();\n    }\n\n    public int getMin() {\n        return minStack.peek();\n    }\n}"
+    }
+  },
+  "156": {
+    "java": {
+      "tree": ""
     }
   },
   "157": {
@@ -505,6 +585,11 @@
       "dynamic-programming": ""
     }
   },
+  "199": {
+    "java": {
+      "tree": ""
+    }
+  },
   "200": {
     "java": {
       "matrix": ""
@@ -572,6 +657,11 @@
       "matrix": ""
     }
   },
+  "222": {
+    "java": {
+      "tree": ""
+    }
+  },
   "224": {
     "java": {
       "stack": "import java.util.Stack;\n\npublic class Solution {\n    public int calculate(String s) {\n        Stack<Integer> stack = new Stack<>();\n        int result = 0;\n        int number = 0;\n        int sign = 1; \n\n        for (int i = 0; i < s.length(); i++) {\n            char c = s.charAt(i);\n\n            if (Character.isDigit(c)) {\n                number = number * 10 + (c - '0');\n            } else if (c == '+') {\n                result += sign * number;\n                number = 0;\n                sign = 1;\n            } else if (c == '-') {\n                result += sign * number;\n                number = 0;\n                sign = -1;\n            } else if (c == '(') {\n                stack.push(result);\n                stack.push(sign);\n                result = 0;\n                sign = 1;\n            } else if (c == ')') {\n                result += sign * number;\n                number = 0;\n                result *= stack.pop();\n                result += stack.pop();\n            }\n        }\n\n        if (number != 0) {\n            result += sign * number;\n        }\n\n        return result;\n    }\n}\n"
@@ -580,6 +670,11 @@
   "225": {
     "java": {
       "queue": "import java.util.LinkedList;\nimport java.util.Queue;\n\nclass MyStack {\n\n    private Queue<Integer> queue1;\n    private Queue<Integer> queue2;\n\n    public MyStack() {\n        queue1 = new LinkedList<>();\n        queue2 = new LinkedList<>();\n    }\n    \n    public void push(int x) {\n        queue2.offer(x);\n        while (!queue1.isEmpty()) {\n            queue2.offer(queue1.poll());\n        }\n        Queue<Integer> temp = queue1;\n        queue1 = queue2;\n        queue2 = temp;\n    }\n    \n    public int pop() {\n        if (queue1.isEmpty()) {\n            throw new RuntimeException(\"Stack is empty\");\n        }\n        return queue1.poll();\n    }\n    \n    public int top() {\n        if (queue1.isEmpty()) {\n            throw new RuntimeException(\"Stack is empty\");\n        }\n        return queue1.peek();\n    }\n    \n    public boolean empty() {\n        return queue1.isEmpty();\n    }\n}\n\n/**\n * Your MyStack object will be instantiated and called as such:\n * MyStack obj = new MyStack();\n * obj.push(x);\n * int param_2 = obj.pop();\n * int param_3 = obj.top();\n * boolean param_4 = obj.empty();\n */\n"
+    }
+  },
+  "226": {
+    "java": {
+      "tree": ""
     }
   },
   "227": {
@@ -612,6 +707,11 @@
       "binary-search-tree": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n * int val;\n * TreeNode left;\n * TreeNode right;\n * TreeNode(int x) { val = x; }\n * }\n */\n\npublic class Solution {\n\n    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {\n        if (root == null) {\n            return null;\n        }\n\n        if (p.val < root.val && q.val < root.val) {\n            return lowestCommonAncestor(root.left, p, q);\n        } else if (p.val > root.val && q.val > root.val) {\n            return lowestCommonAncestor(root.right, p, q);\n        } else {\n            return root;\n        }\n    }\n\n}\n"
     }
   },
+  "236": {
+    "java": {
+      "tree": ""
+    }
+  },
   "238": {
     "java": {
       "prefix-sum": ""
@@ -642,6 +742,11 @@
       "two-pointers": ""
     }
   },
+  "250": {
+    "java": {
+      "tree": ""
+    }
+  },
   "251": {
     "java": {
       "iterator": "class Vector2D {\n    private int i;\n    private int j;\n    private int[][] vec;\n\n    public Vector2D(int[][] vec) {\n        this.vec = vec;\n    }\n\n    public int next() {\n        forward();\n        return vec[i][j++];\n    }\n\n    public boolean hasNext() {\n        forward();\n        return i < vec.length;\n    }\n\n    private void forward() {\n        while (i < vec.length && j >= vec[i].length) {\n            ++i;\n            j = 0;\n        }\n    }\n}\n\n/**\n * Your Vector2D object will be instantiated and called as such:\n * Vector2D obj = new Vector2D(vec);\n * int param_1 = obj.next();\n * boolean param_2 = obj.hasNext();\n */"
@@ -660,6 +765,11 @@
   "256": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "257": {
+    "java": {
+      "tree": ""
     }
   },
   "259": {
@@ -772,6 +882,16 @@
       "matrix": ""
     }
   },
+  "297": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "298": {
+    "java": {
+      "tree": ""
+    }
+  },
   "300": {
     "java": {
       "dynamic-programming": ""
@@ -820,6 +940,11 @@
   "313": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "314": {
+    "java": {
+      "tree": ""
     }
   },
   "315": {
@@ -1014,6 +1139,11 @@
       "stack": ""
     }
   },
+  "366": {
+    "java": {
+      "tree": ""
+    }
+  },
   "368": {
     "java": {
       "dynamic-programming": ""
@@ -1139,6 +1269,11 @@
       "dynamic-programming": ""
     }
   },
+  "404": {
+    "java": {
+      "tree": ""
+    }
+  },
   "407": {
     "java": {
       "matrix": ""
@@ -1204,9 +1339,24 @@
       "matrix": ""
     }
   },
+  "428": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "429": {
+    "java": {
+      "tree": ""
+    }
+  },
   "430": {
     "java": {
       "doubly-linked-list": "/*\nDefinition for a Node.\nclass Node {\n    public int val;\n    public Node prev;\n    public Node next;\n    public Node child;\n};\n*/\n\nclass Solution {\n    public Node flatten(Node head) {\n        if (head == null) return head;\n        \n        Node pointer = head;\n        \n        while (pointer != null) {\n            if (pointer.child == null) {\n                pointer = pointer.next;\n                continue;\n            }\n            \n            Node nextNode = pointer.next;            \n            Node child = pointer.child;\n            Node flattenedChild = flatten(child);\n            \n            pointer.next = flattenedChild;\n            flattenedChild.prev = pointer;\n            \n            Node tail = flattenedChild;\n            while (tail.next != null) {\n                tail = tail.next;\n            }\n            \n            tail.next = nextNode;\n            if (nextNode != null) {\n                nextNode.prev = tail;\n            }\n            \n            pointer.child = null;            \n            pointer = nextNode;\n        }\n        \n        return head;\n    }\n}\n\n"
+    }
+  },
+  "431": {
+    "java": {
+      "tree": ""
     }
   },
   "432": {
@@ -1218,6 +1368,11 @@
   "435": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "437": {
+    "java": {
+      "tree": ""
     }
   },
   "438": {
@@ -1450,6 +1605,11 @@
       "heap-(priority-queue)": ""
     }
   },
+  "508": {
+    "java": {
+      "tree": ""
+    }
+  },
   "509": {
     "java": {
       "dynamic-programming": ""
@@ -1460,9 +1620,19 @@
       "binary-search-tree": ""
     }
   },
+  "513": {
+    "java": {
+      "tree": ""
+    }
+  },
   "514": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "515": {
+    "java": {
+      "tree": ""
     }
   },
   "516": {
@@ -1560,6 +1730,16 @@
       "matrix": ""
     }
   },
+  "543": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "545": {
+    "java": {
+      "tree": ""
+    }
+  },
   "546": {
     "java": {
       "dynamic-programming": ""
@@ -1568,6 +1748,11 @@
   "548": {
     "java": {
       "prefix-sum": ""
+    }
+  },
+  "549": {
+    "java": {
+      "tree": ""
     }
   },
   "552": {
@@ -1590,6 +1775,16 @@
       "two-pointers": ""
     }
   },
+  "558": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "559": {
+    "java": {
+      "tree": ""
+    }
+  },
   "560": {
     "java": {
       "prefix-sum": ""
@@ -1603,6 +1798,11 @@
   "562": {
     "java": {
       "matrix": ""
+    }
+  },
+  "563": {
+    "java": {
+      "tree": ""
     }
   },
   "566": {
@@ -1634,6 +1834,11 @@
   "581": {
     "java": {
       "two-pointers": "public class Solution {\n    public int findUnsortedSubarray(int[] nums) {\n        int n = nums.length;\n        int left = 0, right = n - 1;\n        \n        while (left < n - 1 && nums[left] <= nums[left + 1]) {\n            left++;\n        }\n        \n        if (left == n - 1) {\n            return 0;\n        }\n        \n        while (right > 0 && nums[right] >= nums[right - 1]) {\n            right--;\n        }\n        \n        int subarrayMin = Integer.MAX_VALUE, subarrayMax = Integer.MIN_VALUE;\n        for (int i = left; i <= right; i++) {\n            subarrayMin = Math.min(subarrayMin, nums[i]);\n            subarrayMax = Math.max(subarrayMax, nums[i]);\n        }\n        \n        while (left > 0 && nums[left - 1] > subarrayMin) {\n            left--;\n        }\n        \n        while (right < n - 1 && nums[right + 1] < subarrayMax) {\n            right++;\n        }\n        \n        return right - left + 1;\n    }\n}\n"
+    }
+  },
+  "582": {
+    "java": {
+      "tree": ""
     }
   },
   "583": {
@@ -1671,9 +1876,19 @@
       "iterator": "class StringIterator {\n    private List<Node> d = new ArrayList<>();\n    private int p;\n\n    public StringIterator(String compressedString) {\n        int n = compressedString.length();\n        int i = 0;\n        while (i < n) {\n            char c = compressedString.charAt(i);\n            int x = 0;\n            while (++i < n && Character.isDigit(compressedString.charAt(i))) {\n                x = x * 10 + (compressedString.charAt(i) - '0');\n            }\n            d.add(new Node(c, x));\n        }\n    }\n\n    public char next() {\n        if (!hasNext()) {\n            return ' ';\n        }\n        char ans = d.get(p).c;\n        if (--d.get(p).x == 0) {\n            ++p;\n        }\n        return ans;\n    }\n\n    public boolean hasNext() {\n        return p < d.size() && d.get(p).x > 0;\n    }\n}\n\nclass Node {\n    char c;\n    int x;\n\n    Node(char c, int x) {\n        this.c = c;\n        this.x = x;\n    }\n}\n\n/**\n * Your StringIterator object will be instantiated and called as such:\n * StringIterator obj = new StringIterator(compressedString);\n * char param_1 = obj.next();\n * boolean param_2 = obj.hasNext();\n */"
     }
   },
+  "606": {
+    "java": {
+      "tree": ""
+    }
+  },
   "611": {
     "java": {
       "two-pointers": "import java.util.Arrays;\n\npublic class Solution {\n    public int triangleNumber(int[] nums) {\n        Arrays.sort(nums);\n        int count = 0;\n        for (int i = nums.length - 1; i >= 2; i--) {\n            int left = 0, right = i - 1;\n            while (left < right) {\n                if (nums[left] + nums[right] > nums[i]) {\n                    count += right - left;\n                    right--;\n                } else {\n                    left++;\n                }\n            }\n        }\n        return count;\n    }\n}\n"
+    }
+  },
+  "617": {
+    "java": {
+      "tree": ""
     }
   },
   "621": {
@@ -1684,6 +1899,11 @@
   "622": {
     "java": {
       "queue": ""
+    }
+  },
+  "623": {
+    "java": {
+      "tree": ""
     }
   },
   "629": {
@@ -1724,6 +1944,11 @@
   "636": {
     "java": {
       "stack": ""
+    }
+  },
+  "637": {
+    "java": {
+      "tree": ""
     }
   },
   "638": {
@@ -1781,6 +2006,11 @@
       "dynamic-programming": ""
     }
   },
+  "652": {
+    "java": {
+      "tree": ""
+    }
+  },
   "653": {
     "java": {
       "two-pointers": ""
@@ -1789,6 +2019,11 @@
   "654": {
     "java": {
       "monotonic-stack": ""
+    }
+  },
+  "655": {
+    "java": {
+      "tree": ""
     }
   },
   "656": {
@@ -1811,14 +2046,34 @@
       "matrix": ""
     }
   },
+  "662": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "663": {
+    "java": {
+      "tree": ""
+    }
+  },
   "664": {
     "java": {
       "dynamic-programming": ""
     }
   },
+  "666": {
+    "java": {
+      "tree": ""
+    }
+  },
   "669": {
     "java": {
       "binary-search-tree": ""
+    }
+  },
+  "671": {
+    "java": {
+      "tree": ""
     }
   },
   "673": {
@@ -1851,6 +2106,11 @@
       "sliding-window": "class Solution {\n    public int kEmptySlots(int[] bulbs, int k) {\n      int n = bulbs.length;\n        int ans = Integer.MAX_VALUE;\n        int[] day = new int[n]; // day[i] will store the day when bulb at position (i+1) is turned on\n\n        for (int i = 0; i < n; ++i)\n            day[bulbs[i] - 1] = i + 1;\n\n        int left = 0;\n        int right = left + k + 1;\n        \n        for (int i = 1; right < n; ++i) {\n            if (i == right) {\n                ans = Math.min(ans, Math.max(day[left], day[right]));\n                left = i;\n                right = i + k + 1;\n            } else if (day[i] < Math.max(day[left], day[right])) {\n                left = i;\n                right = i + k + 1;\n            }\n        }\n\n        return ans == Integer.MAX_VALUE ? -1 : ans;\n    }\n}\n"
     }
   },
+  "687": {
+    "java": {
+      "tree": ""
+    }
+  },
   "688": {
     "java": {
       "dynamic-programming": ""
@@ -1859,6 +2119,11 @@
   "689": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "690": {
+    "java": {
+      "tree": ""
     }
   },
   "691": {
@@ -2040,6 +2305,11 @@
   "741": {
     "java": {
       "matrix": ""
+    }
+  },
+  "742": {
+    "java": {
+      "tree": ""
     }
   },
   "743": {
@@ -2232,6 +2502,11 @@
       "prefix-sum": ""
     }
   },
+  "814": {
+    "java": {
+      "tree": ""
+    }
+  },
   "818": {
     "java": {
       "dynamic-programming": ""
@@ -2362,9 +2637,19 @@
       "monotonic-queue": "import java.util.Deque;\nimport java.util.LinkedList;\n\npublic class Solution {\n\n    public int shortestSubarray(int[] nums, int K) {\n        int n = nums.length;\n        long[] prefixSum = new long[n + 1];        \n        for (int i = 0; i < n; i++) {\n            prefixSum[i + 1] = prefixSum[i] + nums[i];\n        }\n        \n        Deque<Integer> deque = new LinkedList<>();\n        int minLength = Integer.MAX_VALUE;\n        \n        for (int i = 0; i <= n; i++) {\n            while (!deque.isEmpty() && prefixSum[i] - prefixSum[deque.peekFirst()] >= K) {\n                minLength = Math.min(minLength, i - deque.pollFirst());\n            }            \n            while (!deque.isEmpty() && prefixSum[i] <= prefixSum[deque.peekLast()]) {\n                deque.pollLast();\n            }\n            \n            deque.addLast(i);\n        }\n        \n        return minLength == Integer.MAX_VALUE ? -1 : minLength;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums = {2, -1, 2};\n        int K = 3;\n        System.out.println(solution.shortestSubarray(nums, K)); \n    }\n}\n"
     }
   },
+  "863": {
+    "java": {
+      "tree": ""
+    }
+  },
   "864": {
     "java": {
       "matrix": ""
+    }
+  },
+  "865": {
+    "java": {
+      "tree": ""
     }
   },
   "867": {
@@ -2380,6 +2665,11 @@
   "871": {
     "java": {
       "heap-(priority-queue)": ""
+    }
+  },
+  "872": {
+    "java": {
+      "tree": ""
     }
   },
   "873": {
@@ -2430,6 +2720,11 @@
   "887": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "889": {
+    "java": {
+      "tree": ""
     }
   },
   "892": {
@@ -2517,6 +2812,11 @@
   "918": {
     "java": {
       "monotonic-queue": "import java.util.Deque;\nimport java.util.LinkedList;\n\npublic class Solution {\n    public int maxSubarraySumCircular(int[] nums) {\n        int n = nums.length;\n        int[] extendedNums = new int[2 * n];        \n        System.arraycopy(nums, 0, extendedNums, 0, n);\n        System.arraycopy(nums, 0, extendedNums, n, n);        \n        long[] prefixSum = new long[2 * n + 1];\n        for (int i = 0; i < 2 * n; i++) {\n            prefixSum[i + 1] = prefixSum[i] + extendedNums[i];\n        }\n        \n        Deque<Integer> deque = new LinkedList<>();\n        deque.add(0);\n        int maxSum = Integer.MIN_VALUE;\n        \n        for (int i = 1; i <= 2 * n; i++) {\n            if (deque.peekFirst() < i - n) {\n                deque.pollFirst();\n            }            \n            maxSum = Math.max(maxSum, (int)(prefixSum[i] - prefixSum[deque.peekFirst()]));\n            \n            // Maintain the deque's monotonic property\n            while (!deque.isEmpty() && prefixSum[i] <= prefixSum[deque.peekLast()]) {\n                deque.pollLast();\n            }\n            \n            deque.addLast(i);\n        }\n        \n        return maxSum;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums = {1, -2, 3, -2};\n        System.out.println(solution.maxSubarraySumCircular(nums));  // Output: 3\n    }\n}\n"
+    }
+  },
+  "919": {
+    "java": {
+      "tree": ""
     }
   },
   "920": {
@@ -2614,9 +2914,19 @@
       "queue": ""
     }
   },
+  "951": {
+    "java": {
+      "tree": ""
+    }
+  },
   "956": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "958": {
+    "java": {
+      "tree": ""
     }
   },
   "959": {
@@ -2639,6 +2949,11 @@
       "dynamic-programming": ""
     }
   },
+  "965": {
+    "java": {
+      "tree": ""
+    }
+  },
   "968": {
     "java": {
       "dynamic-programming": ""
@@ -2647,6 +2962,11 @@
   "969": {
     "java": {
       "two-pointers": ""
+    }
+  },
+  "971": {
+    "java": {
+      "tree": ""
     }
   },
   "973": {
@@ -2675,6 +2995,11 @@
       "sliding-window": "class Solution {\n    public int maxTurbulenceSize(int[] arr) {\n        int ans = 1;\n        int increasing = 1;\n        int decreasing = 1;\n\n        for (int i = 1; i < arr.length; ++i) {\n            if (arr[i] > arr[i - 1]) {\n                increasing = decreasing + 1;\n                decreasing = 1;\n            } else if (arr[i] < arr[i - 1]) {\n                decreasing = increasing + 1;\n                increasing = 1;\n            } else {\n                increasing = 1;\n                decreasing = 1;\n            }\n            ans = Math.max(ans, Math.max(increasing, decreasing));\n        }\n\n        return ans;\n    }\n}\n"
     }
   },
+  "979": {
+    "java": {
+      "tree": ""
+    }
+  },
   "980": {
     "java": {
       "matrix": ""
@@ -2690,9 +3015,24 @@
       "two-pointers": ""
     }
   },
+  "987": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "988": {
+    "java": {
+      "tree": ""
+    }
+  },
   "992": {
     "java": {
       "sliding-window": "class Solution {\n    public int subarraysWithKDistinct(int[] nums, int k) {\n        return atMostackDistinct(nums, k) - atMostackDistinct(nums, k - 1);\n    }\n    \n    private int atMostackDistinct(int[] nums, int k) {\n        int n = nums.length;\n        int left = 0;\n        int count = 0;\n        Map<Integer, Integer> frequency = new HashMap<>();\n        int distinctCount = 0;\n        \n        for (int right = 0; right < n; right++) {\n            int num = nums[right];\n            if (frequency.getOrDefault(num, 0) == 0) {\n                distinctCount++;\n            }\n            frequency.put(num, frequency.getOrDefault(num, 0) + 1);\n            \n            while (distinctCount > k) {\n                int leftNum = nums[left++];\n                frequency.put(leftNum, frequency.get(leftNum) - 1);\n                if (frequency.get(leftNum) == 0) {\n                    distinctCount--;\n                }\n            }\n            \n            count += right - left + 1;\n        }\n        \n        return count;\n    }\n}\n"
+    }
+  },
+  "993": {
+    "java": {
+      "tree": ""
     }
   },
   "994": {
@@ -2708,6 +3048,11 @@
   "996": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "998": {
+    "java": {
+      "tree": ""
     }
   },
   "999": {
@@ -2765,6 +3110,11 @@
       "stack": ""
     }
   },
+  "1022": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1023": {
     "java": {
       "two-pointers": ""
@@ -2780,9 +3130,19 @@
       "brainteaser": ""
     }
   },
+  "1026": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1027": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "1028": {
+    "java": {
+      "tree": ""
     }
   },
   "1030": {
@@ -2917,6 +3277,11 @@
       "matrix": ""
     }
   },
+  "1080": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1081": {
     "java": {
       "monotonic-stack": ""
@@ -2977,6 +3342,11 @@
       "matrix": ""
     }
   },
+  "1104": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1105": {
     "java": {
       "dynamic-programming": ""
@@ -2990,6 +3360,11 @@
   "1109": {
     "java": {
       "prefix-sum": ""
+    }
+  },
+  "1110": {
+    "java": {
+      "tree": ""
     }
   },
   "1111": {
@@ -3017,9 +3392,19 @@
       "concurrency": "import java.util.concurrent.Semaphore;\n\nclass H2O {\n    private Semaphore hydrogenSemaphore;\n    private Semaphore oxygenSemaphore;\n    private int hydrogenCount;\n\n    public H2O() {\n        hydrogenSemaphore = new Semaphore(2); // Allow up to 2 hydrogen atoms\n        oxygenSemaphore = new Semaphore(1); // Allow up to 1 oxygen atom\n        hydrogenCount = 0;\n    }\n\n    public void hydrogen(Runnable releaseHydrogen) throws InterruptedException {\n        hydrogenSemaphore.acquire();\n        synchronized (this) {\n            hydrogenCount++;\n            releaseHydrogen.run();\n            if (hydrogenCount == 2) {\n                oxygenSemaphore.release();            }\n        }\n    }\n\n    public void oxygen(Runnable releaseOxygen) throws InterruptedException {\n        oxygenSemaphore.acquire();\n        synchronized (this) {\n            releaseOxygen.run();\n            hydrogenCount = 0;\n            hydrogenSemaphore.release(2);\n        }\n    }\n}\n"
     }
   },
+  "1120": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1122": {
     "java": {
       "counting-sort": "class Solution {\n    public int[] relativeSortArray(int[] arr1, int[] arr2) {\n        int maxNum = 1000; // assuming the values in arr1 are between 0 and 1000\n        int[] count = new int[maxNum + 1];\n        \n        for (int num : arr1) {\n            count[num]++;\n        }\n        \n        int[] result = new int[arr1.length];\n        int index = 0;\n        \n        for (int num : arr2) {\n            while (count[num] > 0) {\n                result[index++] = num;\n                count[num]--;\n            }\n        }\n        \n        for (int i = 0; i <= maxNum; i++) {\n            while (count[i] > 0) {\n                result[index++] = i;\n                count[i]--;\n            }\n        }\n        \n        return result;\n    }\n}\n"
+    }
+  },
+  "1123": {
+    "java": {
+      "tree": ""
     }
   },
   "1124": {
@@ -3067,6 +3452,11 @@
       "dynamic-programming": ""
     }
   },
+  "1145": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1147": {
     "java": {
       "two-pointers": ""
@@ -3085,6 +3475,11 @@
   "1156": {
     "java": {
       "sliding-window": "public class Solution {\n    public int maxRepOpt1(String text) {\n        int[] count = new int[26];\n        for (char c : text.toCharArray()) {\n            count[c - 'a']++;\n        }\n        int maxLen = 0;\n        for (int i = 0; i < text.length(); ) {\n            char currentChar = text.charAt(i);\n            int start = i;            \n            while (i < text.length() && text.charAt(i) == currentChar) {\n                i++;\n            }\n            int blockLen = i - start;            \n            int nextBlockStart = i + 1;\n            while (nextBlockStart < text.length() && text.charAt(nextBlockStart) == currentChar) {\n                nextBlockStart++;\n            }\n            int totalLen = blockLen + (nextBlockStart - i - 1);            \n            maxLen = Math.max(maxLen, Math.min(totalLen + 1, count[currentChar - 'a']));            \n            i = start + blockLen;\n        }\n\n        return maxLen;\n    }\n}\n"
+    }
+  },
+  "1161": {
+    "java": {
+      "tree": ""
     }
   },
   "1162": {
@@ -3314,6 +3709,11 @@
       "dynamic-programming": ""
     }
   },
+  "1257": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1259": {
     "java": {
       "dynamic-programming": ""
@@ -3322,6 +3722,11 @@
   "1260": {
     "java": {
       "matrix": ""
+    }
+  },
+  "1261": {
+    "java": {
+      "tree": ""
     }
   },
   "1262": {
@@ -3352,6 +3757,11 @@
   "1269": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "1273": {
+    "java": {
+      "tree": ""
     }
   },
   "1274": {
@@ -3414,6 +3824,11 @@
       "matrix": ""
     }
   },
+  "1302": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1305": {
     "java": {
       "binary-search-tree": ""
@@ -3434,6 +3849,11 @@
       "matrix": ""
     }
   },
+  "1315": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1316": {
     "java": {
       "rolling-hash": ""
@@ -3442,6 +3862,11 @@
   "1320": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "1325": {
+    "java": {
+      "tree": ""
     }
   },
   "1326": {
@@ -3477,6 +3902,11 @@
   "1338": {
     "java": {
       "heap-(priority-queue)": ""
+    }
+  },
+  "1339": {
+    "java": {
+      "tree": ""
     }
   },
   "1340": {
@@ -3534,9 +3964,19 @@
       "dynamic-programming": ""
     }
   },
+  "1361": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1363": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "1367": {
+    "java": {
+      "tree": ""
     }
   },
   "1368": {
@@ -3557,6 +3997,21 @@
   "1373": {
     "java": {
       "binary-search-tree": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n * int val;\n * TreeNode left;\n * TreeNode right;\n * TreeNode() {}\n * TreeNode(int val) { this.val = val; }\n * TreeNode(int val, TreeNode left, TreeNode right) {\n * this.val = val;\n * this.left = left;\n * this.right = right;\n * }\n * }\n */\nclass Solution {\n    private int maxSum = 0;\n\n    public int maxSumBST(TreeNode root) {\n        dfs(root);\n        return maxSum;\n    }\n\n    private int[] dfs(TreeNode node) {\n        if (node == null) {\n            return new int[] { 1, Integer.MAX_VALUE, Integer.MIN_VALUE, 0 }; // isBST, min, max, sum\n        }\n\n        int[] left = dfs(node.left);\n        int[] right = dfs(node.right);\n\n        if (left[0] == 1 && right[0] == 1 && node.val > left[2] && node.val < right[1]) {\n            int sum = left[3] + right[3] + node.val;\n            maxSum = Math.max(maxSum, sum);\n            int min = Math.min(left[1], node.val);\n            int max = Math.max(right[2], node.val);\n            return new int[] { 1, min, max, sum };\n        } else {\n            return new int[] { 0, 0, 0, 0 }; // not a BST\n        }\n    }\n}\n"
+    }
+  },
+  "1376": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "1377": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "1379": {
+    "java": {
+      "tree": ""
     }
   },
   "1380": {
@@ -3684,6 +4139,11 @@
       "queue": "class FirstUnique {\n    private Map<Integer, Integer> count = new HashMap<>();\n    private Set<Integer> unique = new LinkedHashSet<>();\n\n    public FirstUnique(int[] nums) {\n        for (int v : nums) {\n            count.put(v, count.getOrDefault(v, 0) + 1);\n        }\n        for (int v : nums) {\n            if (count.get(v) == 1) {\n                unique.add(v);\n            }\n        }\n    }\n\n    public int showFirstUnique() {\n        return unique.isEmpty() ? -1 : unique.iterator().next();\n    }\n\n    public void add(int value) {\n        count.put(value, count.getOrDefault(value, 0) + 1);\n        if (count.get(value) == 1) {\n            unique.add(value);\n        } else {\n            unique.remove(value);\n        }\n    }\n}\n\n/**\n * Your FirstUnique object will be instantiated and called as such:\n * FirstUnique obj = new FirstUnique(nums);\n * int param_1 = obj.showFirstUnique();\n * obj.add(value);\n */"
     }
   },
+  "1430": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1434": {
     "java": {
       "dynamic-programming": ""
@@ -3709,9 +4169,19 @@
       "prefix-sum": ""
     }
   },
+  "1443": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1444": {
     "java": {
       "matrix": ""
+    }
+  },
+  "1448": {
+    "java": {
+      "tree": ""
     }
   },
   "1449": {
@@ -3727,6 +4197,11 @@
   "1456": {
     "java": {
       "sliding-window": "class Solution {\n    public int maxVowels(String s, int k) {\n        int maxVowels = 0;\n        int currentVowels = 0;\n        int n = s.length();\n\n        for (int i = 0; i < k; i++) {\n            if (isVowel(s.charAt(i))) {\n                currentVowels++;\n            }\n        }\n\n        maxVowels = currentVowels;\n\n        for (int i = k; i < n; i++) {\n            if (isVowel(s.charAt(i))) {\n                currentVowels++;\n            }\n            if (isVowel(s.charAt(i - k))) {\n                currentVowels--;\n            }\n            maxVowels = Math.max(maxVowels, currentVowels);\n        }\n\n        return maxVowels;\n    }\n\n    private boolean isVowel(char c) {\n        return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' ||\n               c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U';\n    }\n}\n"
+    }
+  },
+  "1457": {
+    "java": {
+      "tree": ""
     }
   },
   "1458": {
@@ -3757,6 +4232,11 @@
   "1467": {
     "java": {
       "probability-and-statistics": "enum BoxCase {\n    kEqualBalls, kEqualDistantBalls\n}\n\nclass Solution {\n    public double getProbability(int[] balls) {\n      int n = Arrays.stream(balls).sum() / 2;\n        return cases(balls, 0, 0, 0, 0, 0, n, BoxCase.kEqualDistantBalls) /\n                cases(balls, 0, 0, 0, 0, 0, n, BoxCase.kEqualBalls);\n    }\n\n    private int[] fact = { 1, 1, 2, 6, 24, 120, 720 };\n\n    double cases(int[] balls, int i, int ballsCountA, int ballsCountB, int colorsCountA,\n            int colorsCountB, int n, BoxCase boxCase) {\n        if (ballsCountA > n || ballsCountB > n)\n            return 0;\n        if (i == balls.length)\n            return boxCase == BoxCase.kEqualBalls ? 1 : (colorsCountA == colorsCountB ? 1 : 0);\n\n        double ans = 0;\n\n        for (int ballsTakenA = 0; ballsTakenA <= balls[i]; ++ballsTakenA) {\n          int ballsTakenB = balls[i] - ballsTakenA;\n          int newcolorsCountA = colorsCountA + (ballsTakenA > 0 ? 1 : 0);\n          int newcolorsCountB = colorsCountB + (ballsTakenB > 0 ? 1 : 0);\n            ans += cases(balls, i + 1, ballsCountA + ballsTakenA, ballsCountB + ballsTakenB,\n                    newcolorsCountA, newcolorsCountB, n, boxCase) /\n                    (fact[ballsTakenA] * fact[ballsTakenB]);\n        }\n\n        return ans;\n    }\n}"
+    }
+  },
+  "1469": {
+    "java": {
+      "tree": ""
     }
   },
   "1471": {
@@ -3804,6 +4284,11 @@
       "dynamic-programming": ""
     }
   },
+  "1485": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1488": {
     "java": {
       "heap-(priority-queue)": ""
@@ -3812,6 +4297,11 @@
   "1489": {
     "java": {
       "strongly-connected-component": "import java.util.*;\n\nclass UnionFind {\n    private int[] id;\n    private int[] rank;\n\n    public UnionFind(int n) {\n        id = new int[n];\n        rank = new int[n];\n        for (int i = 0; i < n; ++i)\n            id[i] = i;\n    }\n\n    public void unionByRank(int u, int v) {\n        int i = find(u);\n        int j = find(v);\n        if (i == j)\n            return;\n        if (rank[i] < rank[j]) {\n            id[i] = j;\n        } else if (rank[i] > rank[j]) {\n            id[j] = i;\n        } else {\n            id[i] = j;\n            ++rank[j];\n        }\n    }\n\n    public int find(int u) {\n        return id[u] == u ? u : (id[u] = find(id[u]));\n    }\n}\n\nclass Solution {\n    public List<List<Integer>> findCriticalAndPseudoCriticalEdges(int n, int[][] edges) {\n        List<Integer> criticalEdges = new ArrayList<>();\n        List<Integer> pseudoCriticalEdges = new ArrayList<>();\n\n        for (int i = 0; i < edges.length; ++i)\n            edges[i] = new int[] {edges[i][0], edges[i][1], edges[i][2], i};\n\n        Arrays.sort(edges, (a, b) -> a[2] - b[2]);\n\n      int mstWeight = getMSTWeight(n, edges, new int[] {}, -1);\n\n        for (int[] edge : edges) {\n          int index = edge[3];\n            // Deleting the `edge` increases the MST's weight or makes the MST invalid.\n            if (getMSTWeight(n, edges, new int[] {}, index) > mstWeight)\n                criticalEdges.add(index);\n            // If an edge can be in any MST, we can always add `edge` to the edge set.\n            else if (getMSTWeight(n, edges, edge, -1) == mstWeight)\n                pseudoCriticalEdges.add(index);\n        }\n\n        return new ArrayList<>(Arrays.asList(criticalEdges, pseudoCriticalEdges));\n    }\n\n    private int getMSTWeight(int n, int[][] edges, int[] firstEdge, int deletedEdgeIndex) {\n        int mstWeight = 0;\n        UnionFind uf = new UnionFind(n);\n\n        if (firstEdge.length == 4) {\n            uf.unionByRank(firstEdge[0], firstEdge[1]);\n            mstWeight += firstEdge[2];\n        }\n\n        for (int[] edge : edges) {\n          int u = edge[0];\n          int v = edge[1];\n          int weight = edge[2];\n          int index = edge[3];\n            if (index == deletedEdgeIndex)\n                continue;\n            if (uf.find(u) == uf.find(v))\n                continue;\n            uf.unionByRank(u, v);\n            mstWeight += weight;\n        }\n\n      int root = uf.find(0);\n        for (int i = 0; i < n; ++i)\n            if (uf.find(i) != root)\n                return Integer.MAX_VALUE;\n\n        return mstWeight;\n    }\n\n    public static void main(String[] args) {\n        Solution sol = new Solution();\n        int n = 14;\n        int[][] edges = {\n            {0, 1, 13}, {0, 2, 6}, {2, 3, 13}, {3, 4, 4}, {0, 5, 11}, {4, 6, 14}, {4, 7, 8}, \n            {2, 8, 6}, {4, 9, 6}, {7, 10, 4}, {5, 11, 3}, {6, 12, 7}, {12, 13, 9}, {7, 13, 2}, \n            {5, 13, 10}, {0, 6, 4}, {2, 7, 3}, {0, 7, 8}, {1, 12, 9}, {10, 12, 11}, {1, 2, 7}, \n            {1, 3, 10}, {3, 10, 6}, {6, 10, 4}, {4, 8, 5}, {1, 13, 4}, {11, 13, 8}, {2, 12, 10}, \n            {5, 8, 1}, {3, 7, 6}, {7, 12, 12}, {1, 7, 9}, {5, 9, 1}, {2, 13, 10}, {10, 11, 4}, \n            {3, 5, 10}, {6, 11, 14}, {5, 12, 3}, {0, 8, 13}, {8, 9, 1}, {3, 6, 8}, {0, 3, 4}, \n            {2, 9, 6}, {0, 11, 4}, {2, 5, 14}, {4, 11, 2}, {7, 11, 11}, {1, 11, 6}, {2, 10, 12}, \n            {0, 13, 4}, {3, 9, 9}, {4, 12, 3}, {6, 7, 10}, {6, 8, 13}, {9, 11, 3}, {1, 6, 2}, \n            {2, 4, 12}, {0, 10, 3}, {3, 12, 1}, {3, 8, 12}, {1, 8, 6}, {8, 13, 2}, {10, 13, 12}, \n            {9, 13, 11}, {2, 11, 14}, {5, 10, 9}, {5, 6, 10}, {2, 6, 9}, {8, 11, 3}\n        };\n        List<List<Integer>> result = sol.findCriticalAndPseudoCriticalEdges(n, edges);\n        System.out.println(result); \n    }\n}\n"
+    }
+  },
+  "1490": {
+    "java": {
+      "tree": ""
     }
   },
   "1493": {
@@ -3849,6 +4339,11 @@
       "matrix": "class Solution {\n    public int numSubmat(int[][] mat) {\n        int m = mat.length;\n        int n = mat[0].length;\n        int ans = 0;\n        int[] hist = new int[n];\n\n        for (int[] row : mat) {\n            for (int i = 0; i < row.length; ++i)\n                hist[i] = row[i] == 0 ? 0 : hist[i] + 1;\n            ans += count(hist);\n        }\n\n        return ans;\n    }\n\n    private int count(int[] nums) {\n        int[] submatrices = new int[nums.length];\n        Deque<Integer> stack = new ArrayDeque<>();\n\n        for (int i = 0; i < nums.length; ++i) {\n            while (!stack.isEmpty() && nums[stack.peek()] >= nums[i])\n                stack.pop();\n            if (!stack.isEmpty()) {\n                int prevIndex = stack.peek();\n                submatrices[i] = submatrices[prevIndex] + nums[i] * (i - prevIndex);\n            } else {\n                submatrices[i] = nums[i] * (i + 1);\n            }\n            stack.push(i);\n        }\n\n        return Arrays.stream(submatrices).sum();\n    }\n}"
     }
   },
+  "1506": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1508": {
     "java": {
       "two-pointers": ""
@@ -3869,6 +4364,21 @@
       "randomized": "class Solution {\n    public double getMinDistSum(int[][] positions) {\n        int n = positions.length;\n        double x = 0, y = 0;\n        for (int[] p : positions) {\n            x += p[0];\n            y += p[1];\n        }\n        x /= n;\n        y /= n;\n        double decay = 0.999;\n        double eps = 1e-6;\n        double alpha = 0.5;\n        while (true) {\n            double gradX = 0, gradY = 0;\n            double dist = 0;\n            for (int[] p : positions) {\n                double a = x - p[0], b = y - p[1];\n                double c = Math.sqrt(a * a + b * b);\n                gradX += a / (c + 1e-8);\n                gradY += b / (c + 1e-8);\n                dist += c;\n            }\n            double dx = gradX * alpha, dy = gradY * alpha;\n            if (Math.abs(dx) <= eps && Math.abs(dy) <= eps) {\n                return dist;\n            }\n            x -= dx;\n            y -= dy;\n            alpha *= decay;\n        }\n    }\n}"
     }
   },
+  "1516": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "1519": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "1522": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1524": {
     "java": {
       "prefix-sum": ""
@@ -3882,6 +4392,11 @@
   "1526": {
     "java": {
       "monotonic-stack": ""
+    }
+  },
+  "1530": {
+    "java": {
+      "tree": ""
     }
   },
   "1531": {
@@ -4059,6 +4574,16 @@
       "stack": ""
     }
   },
+  "1600": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "1602": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1605": {
     "java": {
       "matrix": ""
@@ -4069,6 +4594,11 @@
       "heap-(priority-queue)": ""
     }
   },
+  "1609": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1610": {
     "java": {
       "sliding-window": "import java.util.*;\n\nclass Solution {\n    public int visiblePoints(List<List<Integer>> points, int angle, List<Integer> location) {\n        int sameLocationCount = 0;\n        List<Double> angles = new ArrayList<>();\n\n        int x0 = location.get(0);\n        int y0 = location.get(1);\n\n        for (List<Integer> point : points) {\n            int x = point.get(0);\n            int y = point.get(1);\n\n            if (x == x0 && y == y0) {\n                sameLocationCount++;\n            } else {\n                double theta = Math.atan2(y - y0, x - x0) * (180 / Math.PI);\n                angles.add(theta);\n            }\n        }\n\n        Collections.sort(angles);\n\n        int m = angles.size();\n        for (int i = 0; i < m; i++) {\n            angles.add(angles.get(i) + 360);\n        }\n\n        int maxVisible = 0;\n        int left = 0;\n\n        for (int right = 0; right < angles.size(); right++) {\n            while (angles.get(right) - angles.get(left) > angle) {\n                left++;\n            }\n            maxVisible = Math.max(maxVisible, right - left + 1);\n        }\n\n        return maxVisible + sameLocationCount;\n    }\n}\n"
@@ -4077,6 +4607,11 @@
   "1611": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "1612": {
+    "java": {
+      "tree": ""
     }
   },
   "1614": {
@@ -4154,6 +4689,11 @@
       "dynamic-programming": ""
     }
   },
+  "1644": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1648": {
     "java": {
       "heap-(priority-queue)": ""
@@ -4204,9 +4744,19 @@
       "dynamic-programming": ""
     }
   },
+  "1660": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1664": {
     "java": {
       "prefix-sum": ""
+    }
+  },
+  "1666": {
+    "java": {
+      "tree": ""
     }
   },
   "1668": {
@@ -4242,6 +4792,11 @@
   "1675": {
     "java": {
       "heap-(priority-queue)": ""
+    }
+  },
+  "1676": {
+    "java": {
+      "tree": ""
     }
   },
   "1679": {
@@ -4344,6 +4899,11 @@
       "stack": ""
     }
   },
+  "1719": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1721": {
     "java": {
       "two-pointers": ""
@@ -4392,6 +4952,11 @@
   "1738": {
     "java": {
       "quickselect": "import java.util.*;\n\npublic class Solution {\n    public int kthLargestValue(int[][] matrix, int k) {\n        int m = matrix.length;\n        int n = matrix[0].length;\n        \n        int[][] xorMatrix = new int[m][n];\n        List<Integer> xorValues = new ArrayList<>();\n        \n        for (int i = 0; i < m; i++) {\n            for (int j = 0; j < n; j++) {\n                int xor = matrix[i][j];\n                if (i > 0) xor ^= xorMatrix[i - 1][j];\n                if (j > 0) xor ^= xorMatrix[i][j - 1];\n                if (i > 0 && j > 0) xor ^= xorMatrix[i - 1][j - 1];\n                xorMatrix[i][j] = xor;\n                xorValues.add(xor);\n            }\n        }\n        \n        int[] xorArray = xorValues.stream().mapToInt(Integer::intValue).toArray();\n        int kthLargestXOR = quickselect(xorArray, 0, xorArray.length - 1, xorArray.length - k);\n        \n        return kthLargestXOR;\n    }\n    \n    private int quickselect(int[] nums, int left, int right, int k) {\n        while (left < right) {\n            int pivotIndex = partition(nums, left, right);\n            if (pivotIndex == k) {\n                return nums[k];\n            } else if (pivotIndex < k) {\n                left = pivotIndex + 1;\n            } else {\n                right = pivotIndex - 1;\n            }\n        }\n        return nums[left];\n    }\n    \n    private int partition(int[] nums, int left, int right) {\n        int pivot = nums[right];\n        int i = left;\n        for (int j = left; j < right; j++) {\n            if (nums[j] < pivot) {\n                swap(nums, i++, j);\n            }\n        }\n        swap(nums, i, right);\n        return i;\n    }\n    \n    private void swap(int[] nums, int i, int j) {\n        int temp = nums[i];\n        nums[i] = nums[j];\n        nums[j] = temp;\n    }\n}\n"
+    }
+  },
+  "1740": {
+    "java": {
+      "tree": ""
     }
   },
   "1744": {
@@ -4462,6 +5027,11 @@
   "1765": {
     "java": {
       "matrix": ""
+    }
+  },
+  "1766": {
+    "java": {
+      "tree": ""
     }
   },
   "1768": {
@@ -4839,6 +5409,11 @@
       "dynamic-programming": ""
     }
   },
+  "1932": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1937": {
     "java": {
       "dynamic-programming": ""
@@ -4914,6 +5489,11 @@
       "matrix": ""
     }
   },
+  "1973": {
+    "java": {
+      "tree": ""
+    }
+  },
   "1975": {
     "java": {
       "matrix": ""
@@ -4968,6 +5548,11 @@
   "1992": {
     "java": {
       "matrix": ""
+    }
+  },
+  "1993": {
+    "java": {
+      "tree": ""
     }
   },
   "1994": {
@@ -5100,6 +5685,11 @@
       "two-pointers": ""
     }
   },
+  "2049": {
+    "java": {
+      "tree": ""
+    }
+  },
   "2050": {
     "java": {
       "topological-sort": ""
@@ -5178,6 +5768,11 @@
   "2095": {
     "java": {
       "two-pointers": ""
+    }
+  },
+  "2096": {
+    "java": {
+      "tree": ""
     }
   },
   "2097": {
@@ -5405,6 +6000,11 @@
       "two-pointers": ""
     }
   },
+  "2196": {
+    "java": {
+      "tree": ""
+    }
+  },
   "2197": {
     "java": {
       "stack": ""
@@ -5480,6 +6080,11 @@
       "two-pointers": ""
     }
   },
+  "2236": {
+    "java": {
+      "tree": ""
+    }
+  },
   "2237": {
     "java": {
       "prefix-sum": ""
@@ -5545,6 +6150,11 @@
       "dynamic-programming": ""
     }
   },
+  "2265": {
+    "java": {
+      "tree": ""
+    }
+  },
   "2266": {
     "java": {
       "dynamic-programming": ""
@@ -5578,6 +6188,11 @@
   "2276": {
     "java": {
       "ordered-set": ""
+    }
+  },
+  "2277": {
+    "java": {
+      "tree": ""
     }
   },
   "2281": {
@@ -5680,6 +6295,11 @@
       "dynamic-programming": ""
     }
   },
+  "2322": {
+    "java": {
+      "tree": ""
+    }
+  },
   "2326": {
     "java": {
       "matrix": ""
@@ -5698,6 +6318,11 @@
   "2330": {
     "java": {
       "two-pointers": ""
+    }
+  },
+  "2331": {
+    "java": {
+      "tree": ""
     }
   },
   "2332": {
@@ -5801,6 +6426,11 @@
       "two-pointers": ""
     }
   },
+  "2368": {
+    "java": {
+      "tree": ""
+    }
+  },
   "2369": {
     "java": {
       "dynamic-programming": ""
@@ -5854,6 +6484,11 @@
   "2382": {
     "java": {
       "prefix-sum": ""
+    }
+  },
+  "2385": {
+    "java": {
+      "tree": ""
     }
   },
   "2386": {
@@ -5946,6 +6581,11 @@
       "sliding-window": "class Solution {\n  public int[] smallestSubarrays(int[] nums) {\n  int kMaxBit = 30;\n    int[] ans = new int[nums.length];\n    int[] closest = new int[kMaxBit];\n\n    Arrays.fill(ans, 1);\n\n    for (int i = nums.length - 1; i >= 0; --i)\n      for (int j = 0; j < kMaxBit; ++j) {\n        if ((nums[i] >> j & 1) == 1)\n          closest[j] = i;\n        ans[i] = Math.max(ans[i], closest[j] - i + 1);\n      }\n\n    return ans;\n  }\n}"
     }
   },
+  "2415": {
+    "java": {
+      "tree": ""
+    }
+  },
   "2419": {
     "java": {
       "brainteaser": "class Solution {\n    public int longestSubarray(int[] nums) {\n        int max = 0;\n        for (int num : nums) {\n            max = Math.max(max, num);\n        }\n\n        int maxLength = 0;\n        int currentLength = 0;\n        for (int num : nums) {\n            if (num == max) {\n                currentLength++;\n                maxLength = Math.max(maxLength, currentLength);\n            } else {\n                currentLength = 0;\n            }\n        }\n        return maxLength;\n    }\n}\n"
@@ -5954,6 +6594,11 @@
   "2420": {
     "java": {
       "prefix-sum": ""
+    }
+  },
+  "2421": {
+    "java": {
+      "tree": ""
     }
   },
   "2422": {
@@ -6016,6 +6661,11 @@
       "prefix-sum": ""
     }
   },
+  "2440": {
+    "java": {
+      "tree": ""
+    }
+  },
   "2441": {
     "java": {
       "two-pointers": ""
@@ -6024,6 +6674,11 @@
   "2444": {
     "java": {
       "monotonic-queue": "class Solution {\n    public long countSubarrays(int[] nums, int minK, int maxK) {\n        long ans = 0;\n        int j1 = -1, j2 = -1, k = -1;\n        for (int i = 0; i < nums.length; ++i) {\n            if (nums[i] < minK || nums[i] > maxK) {\n                k = i;\n            }\n            if (nums[i] == minK) {\n                j1 = i;\n            }\n            if (nums[i] == maxK) {\n                j2 = i;\n            }\n            ans += Math.max(0, Math.min(j1, j2) - k);\n        }\n        return ans;\n    }\n}"
+    }
+  },
+  "2445": {
+    "java": {
+      "tree": ""
     }
   },
   "2448": {
@@ -6039,6 +6694,11 @@
   "2456": {
     "java": {
       "heap-(priority-queue)": ""
+    }
+  },
+  "2458": {
+    "java": {
+      "tree": ""
     }
   },
   "2460": {
@@ -6076,6 +6736,16 @@
       "dynamic-programming": ""
     }
   },
+  "2467": {
+    "java": {
+      "tree": ""
+    }
+  },
+  "2471": {
+    "java": {
+      "tree": ""
+    }
+  },
   "2472": {
     "java": {
       "dynamic-programming": ""
@@ -6091,9 +6761,19 @@
       "binary-search-tree": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    private List<Integer> nums = new ArrayList<>();\n\n    public List<List<Integer>> closestNodes(TreeNode root, List<Integer> queries) {\n        inorder(root);\n        List<List<Integer>> ans = new ArrayList<>();\n        for (int x : queries) {\n            int i = Collections.binarySearch(nums, x + 1);\n            int j = Collections.binarySearch(nums, x);\n            i = i < 0 ? -i - 2 : i - 1;\n            j = j < 0 ? -j - 1 : j;\n            int mi = i >= 0 && i < nums.size() ? nums.get(i) : -1;\n            int mx = j >= 0 && j < nums.size() ? nums.get(j) : -1;\n            ans.add(List.of(mi, mx));\n        }\n        return ans;\n    }\n\n    private void inorder(TreeNode root) {\n        if (root == null) {\n            return;\n        }\n        inorder(root.left);\n        nums.add(root.val);\n        inorder(root.right);\n    }\n}\n"
     }
   },
+  "2477": {
+    "java": {
+      "tree": ""
+    }
+  },
   "2478": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "2479": {
+    "java": {
+      "tree": ""
     }
   },
   "2482": {
@@ -6169,6 +6849,11 @@
   "2505": {
     "java": {
       "brainteaser": ""
+    }
+  },
+  "2509": {
+    "java": {
+      "tree": ""
     }
   },
   "2510": {
@@ -6366,6 +7051,11 @@
       "dynamic-programming": ""
     }
   },
+  "2583": {
+    "java": {
+      "tree": ""
+    }
+  },
   "2585": {
     "java": {
       "dynamic-programming": ""
@@ -6476,6 +7166,11 @@
       "prefix-sum": ""
     }
   },
+  "2641": {
+    "java": {
+      "tree": ""
+    }
+  },
   "2642": {
     "java": {
       "heap-(priority-queue)": ""
@@ -6554,6 +7249,11 @@
   "2684": {
     "java": {
       "matrix": ""
+    }
+  },
+  "2689": {
+    "java": {
+      "tree": ""
     }
   },
   "2696": {
@@ -6721,6 +7421,11 @@
       "prefix-sum": ""
     }
   },
+  "2773": {
+    "java": {
+      "tree": ""
+    }
+  },
   "2779": {
     "java": {
       "sliding-window": "class Solution {\n    public int maximumBeauty(int[] nums, int k) {\n        int ans = 0;\n\n        Arrays.sort(nums);\n\n        for (int left = 0, right = 0; right < nums.length; ++right) {\n            while (nums[right] - nums[left] > 2 * k)\n                ++left;\n            ans = Math.max(ans, right - left + 1);\n        }\n\n        return ans;\n    }\n}"
@@ -6749,6 +7454,11 @@
   "2791": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "2792": {
+    "java": {
+      "tree": ""
     }
   },
   "2799": {
@@ -6914,6 +7624,11 @@
   "2868": {
     "java": {
       "two-pointers": ""
+    }
+  },
+  "2872": {
+    "java": {
+      "tree": ""
     }
   },
   "2875": {
@@ -7331,6 +8046,11 @@
       "heap-(priority-queue)": ""
     }
   },
+  "3067": {
+    "java": {
+      "tree": ""
+    }
+  },
   "3068": {
     "java": {
       "dynamic-programming": ""
@@ -7521,6 +8241,11 @@
       "dynamic-programming": ""
     }
   },
+  "3157": {
+    "java": {
+      "tree": ""
+    }
+  },
   "3165": {
     "java": {
       "dynamic-programming": ""
@@ -7609,6 +8334,11 @@
   "3202": {
     "java": {
       "dynamic-programming": ""
+    }
+  },
+  "3203": {
+    "java": {
+      "tree": ""
     }
   },
   "3205": {
