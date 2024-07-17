@@ -674,6 +674,7 @@
         3123,
         3112
     ],
+    "Trie": [],
     "String Matching": [
         214,
         28,
@@ -736,7 +737,6 @@
         2487
     ],
     "Number Theory": [],
-    "Trie": [],
     "Bitmask": [],
     "Geometry": [
         587,
