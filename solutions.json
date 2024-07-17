@@ -3731,7 +3731,8 @@
   },
   "1137": {
     "java": {
-      "dynamic-programming": ""
+      "dynamic-programming": "",
+      "memoization": "public class Solution {\n    private HashMap<Integer, Integer> memo = new HashMap<>();\n\n    public int tribonacci(int n) {\n        if (n == 0)\n            return 0;\n        if (n == 1 || n == 2)\n            return 1;\n\n        if (memo.containsKey(n)) {\n            return memo.get(n);\n        }\n\n        int result = tribonacci(n - 1) + tribonacci(n - 2) + tribonacci(n - 3);\n        memo.put(n, result);\n\n        return result;\n    }\n\n}"
     }
   },
   "1139": {
