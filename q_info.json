@@ -25781,5 +25781,113 @@
         "difficulty": "Medium",
         "language": "Java",
         "acceptance": 45.1
+    },
+    "range_sum_query_-_mutable": {
+        "qno": "307",
+        "title": "Range Sum Query - Mutable",
+        "tags": [
+            "Array",
+            "Design",
+            "Binary Indexed Tree",
+            "Segment Tree"
+        ],
+        "default": "Binary Indexed Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 41.1
+    },
+    "queue_reconstruction_by_height": {
+        "qno": "406",
+        "title": "Queue Reconstruction by Height",
+        "tags": [
+            "Array",
+            "Binary Indexed Tree",
+            "Segment Tree",
+            "Sorting"
+        ],
+        "default": "Binary Indexed Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 73.6
+    },
+    "queries_on_a_permutation_with_key": {
+        "qno": "1409",
+        "title": "Queries on a Permutation With Key",
+        "tags": [
+            "Array",
+            "Binary Indexed Tree",
+            "Simulation"
+        ],
+        "default": "Binary Indexed Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 84.3
+    },
+    "minimum_possible_integer_after_at_most_k_adjacent_swaps_on_digits": {
+        "qno": "1505",
+        "title": "Minimum Possible Integer After at Most K Adjacent Swaps On Digits",
+        "tags": [
+            "String",
+            "Greedy",
+            "Binary Indexed Tree",
+            "Segment Tree"
+        ],
+        "default": "Binary Indexed Tree",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 39.5
+    },
+    "maximum_profitable_triplets_with_increasing_prices_i": {
+        "qno": "2907",
+        "title": "Maximum Profitable Triplets With Increasing Prices I",
+        "tags": [
+            "Array",
+            "Binary Indexed Tree",
+            "Segment Tree"
+        ],
+        "default": "Binary Indexed Tree",
+        "difficulty": "Medium",
+        "language": "Java",
+        "acceptance": 56.7
+    },
+    "maximum_profitable_triplets_with_increasing_prices_ii": {
+        "qno": "2921",
+        "title": "Maximum Profitable Triplets With Increasing Prices II",
+        "tags": [
+            "Array",
+            "Binary Indexed Tree",
+            "Segment Tree"
+        ],
+        "default": "Binary Indexed Tree",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 49.5
+    },
+    "distribute_elements_into_two_arrays_ii": {
+        "qno": "3072",
+        "title": "Distribute Elements Into Two Arrays II",
+        "tags": [
+            "Array",
+            "Binary Indexed Tree",
+            "Segment Tree",
+            "Simulation"
+        ],
+        "default": "Binary Indexed Tree",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 27.5
+    },
+    "peaks_in_array": {
+        "qno": "3187",
+        "title": "Peaks in Array",
+        "tags": [
+            "Array",
+            "Binary Indexed Tree",
+            "Segment Tree"
+        ],
+        "default": "Binary Indexed Tree",
+        "difficulty": "Hard",
+        "language": "Java",
+        "acceptance": 26.6
     }
 }
