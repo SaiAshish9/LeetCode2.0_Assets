@@ -725,6 +725,7 @@
     "Database": [],
     "Breadth-First Search": [],
     "Bit Manipulation": [
+        464,
         832,
         3064,
         3094
@@ -762,8 +763,8 @@
     "Game Theory": [
         294,
         292,
-        375,
         464,
+        375,
         486,
         877,
         1140,
