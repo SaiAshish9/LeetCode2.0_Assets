@@ -719,7 +719,10 @@
     "Trie": [],
     "Bitmask": [],
     "Segment Tree": [],
-    "Geometry": [],
+    "Geometry": [
+        587,
+        963
+    ],
     "Binary Indexed Tree": [
         2179
     ],
