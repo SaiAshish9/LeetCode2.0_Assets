@@ -30517,5 +30517,3030 @@
       "difficulty": "Medium",
       "language": "Java",
       "acceptance": 29.8
+    },
+    "combine_two_tables": {
+      "qno": "175",
+      "title": "Combine Two Tables",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 76.3
+    },
+    "second_highest_salary": {
+      "qno": "176",
+      "title": "Second Highest Salary",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41
+    },
+    "nth_highest_salary": {
+      "qno": "177",
+      "title": "Nth Highest Salary",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 37.9
+    },
+    "rank_scores": {
+      "qno": "178",
+      "title": "Rank Scores",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.8
+    },
+    "consecutive_numbers": {
+      "qno": "180",
+      "title": "Consecutive Numbers",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.8
+    },
+    "employees_earning_more_than_their_managers": {
+      "qno": "181",
+      "title": "Employees Earning More Than Their Managers",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 69.8
+    },
+    "duplicate_emails": {
+      "qno": "182",
+      "title": "Duplicate Emails",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 71.3
+    },
+    "customers_who_never_order": {
+      "qno": "183",
+      "title": "Customers Who Never Order",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 69.3
+    },
+    "department_highest_salary": {
+      "qno": "184",
+      "title": "Department Highest Salary",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52.2
+    },
+    "department_top_three_salaries": {
+      "qno": "185",
+      "title": "Department Top Three Salaries",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 54.1
+    },
+    "delete_duplicate_emails": {
+      "qno": "196",
+      "title": "Delete Duplicate Emails",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 62.4
+    },
+    "rising_temperature": {
+      "qno": "197",
+      "title": "Rising Temperature",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 48.1
+    },
+    "trips_and_users": {
+      "qno": "262",
+      "title": "Trips and Users",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 36.5
+    },
+    "median_employee_salary": {
+      "qno": "569",
+      "title": "Median Employee Salary",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 65.9
+    },
+    "managers_with_at_least_5_direct_reports": {
+      "qno": "570",
+      "title": "Managers with at Least 5 Direct Reports",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.8
+    },
+    "find_median_given_frequency_of_numbers": {
+      "qno": "571",
+      "title": "Find Median Given Frequency of Numbers",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 42.4
+    },
+    "winning_candidate": {
+      "qno": "574",
+      "title": "Winning Candidate",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.9
+    },
+    "employee_bonus": {
+      "qno": "577",
+      "title": "Employee Bonus",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 75.7
+    },
+    "get_highest_answer_rate_question": {
+      "qno": "578",
+      "title": "Get Highest Answer Rate Question",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 40.3
+    },
+    "find_cumulative_salary_of_an_employee": {
+      "qno": "579",
+      "title": "Find Cumulative Salary of an Employee",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 47.2
+    },
+    "count_student_number_in_departments": {
+      "qno": "580",
+      "title": "Count Student Number in Departments",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.1
+    },
+    "find_customer_referee": {
+      "qno": "584",
+      "title": "Find Customer Referee",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 70.2
+    },
+    "investments_in_2016": {
+      "qno": "585",
+      "title": "Investments in 2016",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.1
+    },
+    "customer_placing_the_largest_number_of_orders": {
+      "qno": "586",
+      "title": "Customer Placing the Largest Number of Orders",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 64.6
+    },
+    "big_countries": {
+      "qno": "595",
+      "title": "Big Countries",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 68.1
+    },
+    "classes_more_than_5_students": {
+      "qno": "596",
+      "title": "Classes More Than 5 Students",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 56
+    },
+    "friend_requests_i:_overall_acceptance_rate": {
+      "qno": "597",
+      "title": "Friend Requests I: Overall Acceptance Rate",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 41.8
+    },
+    "human_traffic_of_stadium": {
+      "qno": "601",
+      "title": "Human Traffic of Stadium",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 48.7
+    },
+    "friend_requests_ii:_who_has_the_most_friends": {
+      "qno": "602",
+      "title": "Friend Requests II: Who Has the Most Friends",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.6
+    },
+    "consecutive_available_seats": {
+      "qno": "603",
+      "title": "Consecutive Available Seats",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 66
+    },
+    "sales_person": {
+      "qno": "607",
+      "title": "Sales Person",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 65.7
+    },
+    "tree_node": {
+      "qno": "608",
+      "title": "Tree Node",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 72.5
+    },
+    "triangle_judgement": {
+      "qno": "610",
+      "title": "Triangle Judgement",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 71.9
+    },
+    "shortest_distance_in_a_plane": {
+      "qno": "612",
+      "title": "Shortest Distance in a Plane",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.3
+    },
+    "shortest_distance_in_a_line": {
+      "qno": "613",
+      "title": "Shortest Distance in a Line",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 80.2
+    },
+    "second_degree_follower": {
+      "qno": "614",
+      "title": "Second Degree Follower",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38.8
+    },
+    "average_salary:_departments_vs_company": {
+      "qno": "615",
+      "title": "Average Salary: Departments VS Company",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 56.1
+    },
+    "students_report_by_geography": {
+      "qno": "618",
+      "title": "Students Report By Geography",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 63.5
+    },
+    "biggest_single_number": {
+      "qno": "619",
+      "title": "Biggest Single Number",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 64.4
+    },
+    "not_boring_movies": {
+      "qno": "620",
+      "title": "Not Boring Movies",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 73.9
+    },
+    "exchange_seats": {
+      "qno": "626",
+      "title": "Exchange Seats",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 70.1
+    },
+    "swap_salary": {
+      "qno": "627",
+      "title": "Swap Salary",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 83.3
+    },
+    "customers_who_bought_all_products": {
+      "qno": "1045",
+      "title": "Customers Who Bought All Products",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.9
+    },
+    "actors_and_directors_who_cooperated_at_least_three_times": {
+      "qno": "1050",
+      "title": "Actors and Directors Who Cooperated At Least Three Times",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 70.1
+    },
+    "product_sales_analysis_i": {
+      "qno": "1068",
+      "title": "Product Sales Analysis I",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 83.1
+    },
+    "product_sales_analysis_ii": {
+      "qno": "1069",
+      "title": "Product Sales Analysis II",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 81.8
+    },
+    "product_sales_analysis_iii": {
+      "qno": "1070",
+      "title": "Product Sales Analysis III",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 42.9
+    },
+    "project_employees_i": {
+      "qno": "1075",
+      "title": "Project Employees I",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 62.1
+    },
+    "project_employees_ii": {
+      "qno": "1076",
+      "title": "Project Employees II",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 49.9
+    },
+    "project_employees_iii": {
+      "qno": "1077",
+      "title": "Project Employees III",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 76.6
+    },
+    "sales_analysis_i": {
+      "qno": "1082",
+      "title": "Sales Analysis I",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 74.4
+    },
+    "sales_analysis_ii": {
+      "qno": "1083",
+      "title": "Sales Analysis II",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 49.7
+    },
+    "sales_analysis_iii": {
+      "qno": "1084",
+      "title": "Sales Analysis III",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 46.5
+    },
+    "game_play_analysis_i": {
+      "qno": "511",
+      "title": "Game Play Analysis I",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 74.8
+    },
+    "game_play_analysis_ii": {
+      "qno": "512",
+      "title": "Game Play Analysis II",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 53
+    },
+    "game_play_analysis_iii": {
+      "qno": "534",
+      "title": "Game Play Analysis III",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 80.9
+    },
+    "game_play_analysis_iv": {
+      "qno": "550",
+      "title": "Game Play Analysis IV",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.9
+    },
+    "game_play_analysis_v": {
+      "qno": "1097",
+      "title": "Game Play Analysis V",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 51.1
+    },
+    "unpopular_books": {
+      "qno": "1098",
+      "title": "Unpopular Books",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.2
+    },
+    "new_users_daily_count": {
+      "qno": "1107",
+      "title": "New Users Daily Count",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.6
+    },
+    "highest_grade_for_each_student": {
+      "qno": "1112",
+      "title": "Highest Grade For Each Student",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 70.9
+    },
+    "reported_posts": {
+      "qno": "1113",
+      "title": "Reported Posts",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 64.9
+    },
+    "active_businesses": {
+      "qno": "1126",
+      "title": "Active Businesses",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.7
+    },
+    "user_purchase_platform": {
+      "qno": "1127",
+      "title": "User Purchase Platform",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 47.2
+    },
+    "reported_posts_ii": {
+      "qno": "1132",
+      "title": "Reported Posts II",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 32.3
+    },
+    "user_activity_for_the_past_30_days_i": {
+      "qno": "1141",
+      "title": "User Activity for the Past 30 Days I",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 48.6
+    },
+    "user_activity_for_the_past_30_days_ii": {
+      "qno": "1142",
+      "title": "User Activity for the Past 30 Days II",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 35.7
+    },
+    "article_views_i": {
+      "qno": "1148",
+      "title": "Article Views I",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 75.7
+    },
+    "article_views_ii": {
+      "qno": "1149",
+      "title": "Article Views II",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47
+    },
+    "market_analysis_i": {
+      "qno": "1158",
+      "title": "Market Analysis I",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.1
+    },
+    "market_analysis_ii": {
+      "qno": "1159",
+      "title": "Market Analysis II",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 57.1
+    },
+    "product_price_at_a_given_date": {
+      "qno": "1164",
+      "title": "Product Price at a Given Date",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.8
+    },
+    "immediate_food_delivery_i": {
+      "qno": "1173",
+      "title": "Immediate Food Delivery I",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 80.9
+    },
+    "immediate_food_delivery_ii": {
+      "qno": "1174",
+      "title": "Immediate Food Delivery II",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.5
+    },
+    "reformat_department_table": {
+      "qno": "1179",
+      "title": "Reformat Department Table",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 77
+    },
+    "monthly_transactions_i": {
+      "qno": "1193",
+      "title": "Monthly Transactions I",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.7
+    },
+    "tournament_winners": {
+      "qno": "1194",
+      "title": "Tournament Winners",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 49.2
+    },
+    "last_person_to_fit_in_the_bus": {
+      "qno": "1204",
+      "title": "Last Person to Fit in the Bus",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67
+    },
+    "monthly_transactions_ii": {
+      "qno": "1205",
+      "title": "Monthly Transactions II",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41.8
+    },
+    "queries_quality_and_percentage": {
+      "qno": "1211",
+      "title": "Queries Quality and Percentage",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 45.9
+    },
+    "team_scores_in_football_tournament": {
+      "qno": "1212",
+      "title": "Team Scores in Football Tournament",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.8
+    },
+    "report_contiguous_dates": {
+      "qno": "1225",
+      "title": "Report Contiguous Dates",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 57.6
+    },
+    "number_of_comments_per_post": {
+      "qno": "1241",
+      "title": "Number of Comments per Post",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 65.9
+    },
+    "average_selling_price": {
+      "qno": "1251",
+      "title": "Average Selling Price",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 38.4
+    },
+    "page_recommendations": {
+      "qno": "1264",
+      "title": "Page Recommendations",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.2
+    },
+    "all_people_report_to_the_given_manager": {
+      "qno": "1270",
+      "title": "All People Report to the Given Manager",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 84.8
+    },
+    "students_and_examinations": {
+      "qno": "1280",
+      "title": "Students and Examinations",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 57.6
+    },
+    "find_the_start_and_end_number_of_continuous_ranges": {
+      "qno": "1285",
+      "title": "Find the Start and End Number of Continuous Ranges",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 82.3
+    },
+    "weather_type_in_each_country": {
+      "qno": "1294",
+      "title": "Weather Type in Each Country",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 66.7
+    },
+    "find_the_team_size": {
+      "qno": "1303",
+      "title": "Find the Team Size",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 89.5
+    },
+    "running_total_for_different_genders": {
+      "qno": "1308",
+      "title": "Running Total for Different Genders",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 86.4
+    },
+    "restaurant_growth": {
+      "qno": "1321",
+      "title": "Restaurant Growth",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.4
+    },
+    "ads_performance": {
+      "qno": "1322",
+      "title": "Ads Performance",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 59.5
+    },
+    "list_the_products_ordered_in_a_period": {
+      "qno": "1327",
+      "title": "List the Products Ordered in a Period",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 70.7
+    },
+    "number_of_transactions_per_visit": {
+      "qno": "1336",
+      "title": "Number of Transactions per Visit",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 47.7
+    },
+    "movie_rating": {
+      "qno": "1341",
+      "title": "Movie Rating",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 39.9
+    },
+    "students_with_invalid_departments": {
+      "qno": "1350",
+      "title": "Students With Invalid Departments",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 89.7
+    },
+    "activity_participants": {
+      "qno": "1355",
+      "title": "Activity Participants",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 72.3
+    },
+    "number_of_trusted_contacts_of_a_customer": {
+      "qno": "1364",
+      "title": "Number of Trusted Contacts of a Customer",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 75.1
+    },
+    "get_the_second_most_recent_activity": {
+      "qno": "1369",
+      "title": "Get the Second Most Recent Activity",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 67.7
+    },
+    "replace_employee_id_with_the_unique_identifier": {
+      "qno": "1378",
+      "title": "Replace Employee ID With The Unique Identifier",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 82.9
+    },
+    "total_sales_amount_by_year": {
+      "qno": "1384",
+      "title": "Total Sales Amount by Year",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 61.3
+    },
+    "capital_gain/loss": {
+      "qno": "1393",
+      "title": "Capital Gain/Loss",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 85.4
+    },
+    "customers_who_bought_products_a_and_b_but_not_c": {
+      "qno": "1398",
+      "title": "Customers Who Bought Products A and B but Not C",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 72.7
+    },
+    "top_travellers": {
+      "qno": "1407",
+      "title": "Top Travellers",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 57.6
+    },
+    "find_the_quiet_students_in_all_exams": {
+      "qno": "1412",
+      "title": "Find the Quiet Students in All Exams",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 59.1
+    },
+    "npv_queries": {
+      "qno": "1421",
+      "title": "NPV Queries",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 82.8
+    },
+    "create_a_session_bar_chart": {
+      "qno": "1435",
+      "title": "Create a Session Bar Chart",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 75.3
+    },
+    "evaluate_boolean_expression": {
+      "qno": "1440",
+      "title": "Evaluate Boolean Expression",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 72.5
+    },
+    "apples_&_oranges": {
+      "qno": "1445",
+      "title": "Apples & Oranges",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 86.3
+    },
+    "active_users": {
+      "qno": "1454",
+      "title": "Active Users",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.6
+    },
+    "rectangles_area": {
+      "qno": "1459",
+      "title": "Rectangles Area",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68.5
+    },
+    "calculate_salaries": {
+      "qno": "1468",
+      "title": "Calculate Salaries",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 78.5
+    },
+    "sales_by_day_of_the_week": {
+      "qno": "1479",
+      "title": "Sales by Day of the Week",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 77.4
+    },
+    "group_sold_products_by_the_date": {
+      "qno": "1484",
+      "title": "Group Sold Products By The Date",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 76.9
+    },
+    "friendly_movies_streamed_last_month": {
+      "qno": "1495",
+      "title": "Friendly Movies Streamed Last Month",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 49
+    },
+    "countries_you_can_safely_invest_in": {
+      "qno": "1501",
+      "title": "Countries You Can Safely Invest In",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.1
+    },
+    "customer_order_frequency": {
+      "qno": "1511",
+      "title": "Customer Order Frequency",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 67.9
+    },
+    "find_users_with_valid_e-mails": {
+      "qno": "1517",
+      "title": "Find Users With Valid E-Mails",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 44.2
+    },
+    "patients_with_a_condition": {
+      "qno": "1527",
+      "title": "Patients With a Condition",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 40.3
+    },
+    "the_most_recent_three_orders": {
+      "qno": "1532",
+      "title": "The Most Recent Three Orders",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68.4
+    },
+    "fix_product_name_format": {
+      "qno": "1543",
+      "title": "Fix Product Name Format",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 59.4
+    },
+    "the_most_recent_orders_for_each_product": {
+      "qno": "1549",
+      "title": "The Most Recent Orders for Each Product",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.8
+    },
+    "bank_account_summary": {
+      "qno": "1555",
+      "title": "Bank Account Summary",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.3
+    },
+    "unique_orders_and_customers_per_month": {
+      "qno": "1565",
+      "title": "Unique Orders and Customers Per Month",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 82
+    },
+    "warehouse_manager": {
+      "qno": "1571",
+      "title": "Warehouse Manager",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 87.8
+    },
+    "customer_who_visited_but_did_not_make_any_transactions": {
+      "qno": "1581",
+      "title": "Customer Who Visited but Did Not Make Any Transactions",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 67.9
+    },
+    "bank_account_summary_ii": {
+      "qno": "1587",
+      "title": "Bank Account Summary II",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 83.4
+    },
+    "the_most_frequently_ordered_products_for_each_customer": {
+      "qno": "1596",
+      "title": "The Most Frequently Ordered Products for Each Customer",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 78.4
+    },
+    "sellers_with_no_sales": {
+      "qno": "1607",
+      "title": "Sellers With No Sales",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 54.3
+    },
+    "find_the_missing_ids": {
+      "qno": "1613",
+      "title": "Find the Missing IDs",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 73
+    },
+    "all_valid_triplets_that_can_represent_a_country": {
+      "qno": "1623",
+      "title": "All Valid Triplets That Can Represent a Country",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 82
+    },
+    "percentage_of_users_attended_a_contest": {
+      "qno": "1633",
+      "title": "Percentage of Users Attended a Contest",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 56
+    },
+    "hopper_company_queries_i": {
+      "qno": "1635",
+      "title": "Hopper Company Queries I",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 47.6
+    },
+    "hopper_company_queries_ii": {
+      "qno": "1645",
+      "title": "Hopper Company Queries II",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 39.1
+    },
+    "hopper_company_queries_iii": {
+      "qno": "1651",
+      "title": "Hopper Company Queries III",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 65.2
+    },
+    "average_time_of_process_per_machine": {
+      "qno": "1661",
+      "title": "Average Time of Process per Machine",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 67.4
+    },
+    "fix_names_in_a_table": {
+      "qno": "1667",
+      "title": "Fix Names in a Table",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 61.5
+    },
+    "product's_worth_over_invoices": {
+      "qno": "1677",
+      "title": "Product's Worth Over Invoices",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 38.1
+    },
+    "invalid_tweets": {
+      "qno": "1683",
+      "title": "Invalid Tweets",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 85.3
+    },
+    "daily_leads_and_partners": {
+      "qno": "1693",
+      "title": "Daily Leads and Partners",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 86.6
+    },
+    "number_of_calls_between_two_persons": {
+      "qno": "1699",
+      "title": "Number of Calls Between Two Persons",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 81.2
+    },
+    "biggest_window_between_visits": {
+      "qno": "1709",
+      "title": "Biggest Window Between Visits",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 70.5
+    },
+    "count_apples_and_oranges": {
+      "qno": "1715",
+      "title": "Count Apples and Oranges",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 75.5
+    },
+    "find_followers_count": {
+      "qno": "1729",
+      "title": "Find Followers Count",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 69.1
+    },
+    "the_number_of_employees_which_report_to_each_employee": {
+      "qno": "1731",
+      "title": "The Number of Employees Which Report to Each Employee",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 48.2
+    },
+    "find_total_time_spent_by_each_employee": {
+      "qno": "1741",
+      "title": "Find Total Time Spent by Each Employee",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 86.9
+    },
+    "leetflex_banned_accounts": {
+      "qno": "1747",
+      "title": "Leetflex Banned Accounts",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63.5
+    },
+    "recyclable_and_low_fat_products": {
+      "qno": "1757",
+      "title": "Recyclable and Low Fat Products",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 89.2
+    },
+    "find_the_subtasks_that_did_not_execute": {
+      "qno": "1767",
+      "title": "Find the Subtasks That Did Not Execute",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 77.2
+    },
+    "product's_price_for_each_store": {
+      "qno": "1777",
+      "title": "Product's Price for Each Store",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 82.3
+    },
+    "grand_slam_titles": {
+      "qno": "1783",
+      "title": "Grand Slam Titles",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 83.5
+    },
+    "primary_department_for_each_employee": {
+      "qno": "1789",
+      "title": "Primary Department for Each Employee",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 64.3
+    },
+    "rearrange_products_table": {
+      "qno": "1795",
+      "title": "Rearrange Products Table",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 85.3
+    },
+    "ad-free_sessions": {
+      "qno": "1809",
+      "title": "Ad-Free Sessions",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 58.6
+    },
+    "find_interview_candidates": {
+      "qno": "1811",
+      "title": "Find Interview Candidates",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.9
+    },
+    "find_customers_with_positive_revenue_this_year": {
+      "qno": "1821",
+      "title": "Find Customers With Positive Revenue this Year",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 87.9
+    },
+    "maximum_transaction_each_day": {
+      "qno": "1831",
+      "title": "Maximum Transaction Each Day",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 81.7
+    },
+    "league_statistics": {
+      "qno": "1841",
+      "title": "League Statistics",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.4
+    },
+    "suspicious_bank_accounts": {
+      "qno": "1843",
+      "title": "Suspicious Bank Accounts",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.8
+    },
+    "convert_date_format": {
+      "qno": "1853",
+      "title": "Convert Date Format",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 85.7
+    },
+    "orders_with_maximum_quantity_above_average": {
+      "qno": "1867",
+      "title": "Orders With Maximum Quantity Above Average",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.1
+    },
+    "calculate_special_bonus": {
+      "qno": "1873",
+      "title": "Calculate Special Bonus",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 57.6
+    },
+    "group_employees_of_the_same_salary": {
+      "qno": "1875",
+      "title": "Group Employees of the Same Salary",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.7
+    },
+    "the_latest_login_in_2020": {
+      "qno": "1890",
+      "title": "The Latest Login in 2020",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 77.2
+    },
+    "page_recommendations_ii": {
+      "qno": "1892",
+      "title": "Page Recommendations II",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 43.5
+    },
+    "count_salary_categories": {
+      "qno": "1907",
+      "title": "Count Salary Categories",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.2
+    },
+    "leetcodify_friends_recommendations": {
+      "qno": "1917",
+      "title": "Leetcodify Friends Recommendations",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 26.9
+    },
+    "leetcodify_similar_friends": {
+      "qno": "1919",
+      "title": "Leetcodify Similar Friends",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 41.6
+    },
+    "confirmation_rate": {
+      "qno": "1934",
+      "title": "Confirmation Rate",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.4
+    },
+    "users_that_actively_request_confirmation_messages": {
+      "qno": "1939",
+      "title": "Users That Actively Request Confirmation Messages",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 56.4
+    },
+    "strong_friendship": {
+      "qno": "1949",
+      "title": "Strong Friendship",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.4
+    },
+    "all_the_pairs_with_the_maximum_number_of_common_followers": {
+      "qno": "1951",
+      "title": "All the Pairs With the Maximum Number of Common Followers",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68.7
+    },
+    "employees_with_missing_information": {
+      "qno": "1965",
+      "title": "Employees With Missing Information",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 72.2
+    },
+    "first_and_last_call_on_the_same_day": {
+      "qno": "1972",
+      "title": "First and Last Call On the Same Day",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 50.3
+    },
+    "employees_whose_manager_left_the_company": {
+      "qno": "1978",
+      "title": "Employees Whose Manager Left the Company",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 48.2
+    },
+    "find_cutoff_score_for_each_school": {
+      "qno": "1988",
+      "title": "Find Cutoff Score for Each School",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67
+    },
+    "count_the_number_of_experiments": {
+      "qno": "1990",
+      "title": "Count the Number of Experiments",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.1
+    },
+    "the_number_of_seniors_and_juniors_to_join_the_company": {
+      "qno": "2004",
+      "title": "The Number of Seniors and Juniors to Join the Company",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 43.3
+    },
+    "the_number_of_seniors_and_juniors_to_join_the_company_ii": {
+      "qno": "2010",
+      "title": "The Number of Seniors and Juniors to Join the Company II",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 62.2
+    },
+    "number_of_accounts_that_did_not_stream": {
+      "qno": "2020",
+      "title": "Number of Accounts That Did Not Stream",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.8
+    },
+    "low-quality_problems": {
+      "qno": "2026",
+      "title": "Low-Quality Problems",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 84.3
+    },
+    "accepted_candidates_from_the_interviews": {
+      "qno": "2041",
+      "title": "Accepted Candidates From the Interviews",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 78.2
+    },
+    "the_category_of_each_member_in_the_store": {
+      "qno": "2051",
+      "title": "The Category of Each Member in the Store",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 70.1
+    },
+    "account_balance": {
+      "qno": "2066",
+      "title": "Account Balance",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 82
+    },
+    "the_winner_university": {
+      "qno": "2072",
+      "title": "The Winner University",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 73.8
+    },
+    "the_number_of_rich_customers": {
+      "qno": "2082",
+      "title": "The Number of Rich Customers",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 77.2
+    },
+    "drop_type_1_orders_for_customers_with_type_0_orders": {
+      "qno": "2084",
+      "title": "Drop Type 1 Orders for Customers With Type 0 Orders",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 86.9
+    },
+    "the_airport_with_the_most_traffic": {
+      "qno": "2112",
+      "title": "The Airport With the Most Traffic",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 70
+    },
+    "build_the_equation": {
+      "qno": "2118",
+      "title": "Build the Equation",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 55.5
+    },
+    "the_number_of_passengers_in_each_bus_i": {
+      "qno": "2142",
+      "title": "The Number of Passengers in Each Bus I",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.3
+    },
+    "the_number_of_passengers_in_each_bus_ii": {
+      "qno": "2153",
+      "title": "The Number of Passengers in Each Bus II",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 40.1
+    },
+    "order_two_columns_independently": {
+      "qno": "2159",
+      "title": "Order Two Columns Independently",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.2
+    },
+    "longest_winning_streak": {
+      "qno": "2173",
+      "title": "Longest Winning Streak",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 52.9
+    },
+    "the_change_in_global_rankings": {
+      "qno": "2175",
+      "title": "The Change in Global Rankings",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.5
+    },
+    "finding_the_topic_of_each_post": {
+      "qno": "2199",
+      "title": "Finding the Topic of Each Post",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 48.9
+    },
+    "the_number_of_users_that_are_eligible_for_discount": {
+      "qno": "2205",
+      "title": "The Number of Users That Are Eligible for Discount",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 49.9
+    },
+    "users_with_two_purchases_within_seven_days": {
+      "qno": "2228",
+      "title": "Users With Two Purchases Within Seven Days",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.8
+    },
+    "the_users_that_are_eligible_for_discount": {
+      "qno": "2230",
+      "title": "The Users That Are Eligible for Discount",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 49.8
+    },
+    "number_of_times_a_driver_was_a_passenger": {
+      "qno": "2238",
+      "title": "Number of Times a Driver Was a Passenger",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.3
+    },
+    "dynamic_pivoting_of_a_table": {
+      "qno": "2252",
+      "title": "Dynamic Pivoting of a Table",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 55.7
+    },
+    "dynamic_unpivoting_of_a_table": {
+      "qno": "2253",
+      "title": "Dynamic Unpivoting of a Table",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 66.5
+    },
+    "products_with_three_or_more_orders_in_two_consecutive_years": {
+      "qno": "2292",
+      "title": "Products With Three or More Orders in Two Consecutive Years",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 39.2
+    },
+    "tasks_count_in_the_weekend": {
+      "qno": "2298",
+      "title": "Tasks Count in the Weekend",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 81.4
+    },
+    "arrange_table_by_gender": {
+      "qno": "2308",
+      "title": "Arrange Table by Gender",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 69
+    },
+    "the_first_day_of_the_maximum_recorded_degree_in_each_city": {
+      "qno": "2314",
+      "title": "The First Day of the Maximum Recorded Degree in Each City",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.6
+    },
+    "product_sales_analysis_iv": {
+      "qno": "2324",
+      "title": "Product Sales Analysis IV",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 74.1
+    },
+    "product_sales_analysis_v": {
+      "qno": "2329",
+      "title": "Product Sales Analysis V",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 69.6
+    },
+    "all_the_matches_of_the_league": {
+      "qno": "2339",
+      "title": "All the Matches of the League",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 87.7
+    },
+    "compute_the_rank_as_a_percentage": {
+      "qno": "2346",
+      "title": "Compute the Rank as a Percentage",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 33.6
+    },
+    "number_of_unique_subjects_taught_by_each_teacher": {
+      "qno": "2356",
+      "title": "Number of Unique Subjects Taught by Each Teacher",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 88.3
+    },
+    "generate_the_invoice": {
+      "qno": "2362",
+      "title": "Generate the Invoice",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 74.2
+    },
+    "calculate_the_influence_of_each_salesperson": {
+      "qno": "2372",
+      "title": "Calculate the Influence of Each Salesperson",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 83.1
+    },
+    "sort_the_olympic_table": {
+      "qno": "2377",
+      "title": "Sort the Olympic Table",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 78.7
+    },
+    "change_null_values_in_a_table_to_the_previous_value": {
+      "qno": "2388",
+      "title": "Change Null Values in a Table to the Previous Value",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.6
+    },
+    "employees_with_deductions": {
+      "qno": "2394",
+      "title": "Employees With Deductions",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 40.5
+    },
+    "customers_with_strictly_increasing_purchases": {
+      "qno": "2474",
+      "title": "Customers With Strictly Increasing Purchases",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 44.5
+    },
+    "form_a_chemical_bond": {
+      "qno": "2480",
+      "title": "Form a Chemical Bond",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 75.9
+    },
+    "merge_overlapping_events_in_the_same_hall": {
+      "qno": "2494",
+      "title": "Merge Overlapping Events in the Same Hall",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 31.3
+    },
+    "concatenate_the_name_and_the_profession": {
+      "qno": "2504",
+      "title": "Concatenate the Name and the Profession",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 75.5
+    },
+    "find_latest_salaries": {
+      "qno": "2668",
+      "title": "Find Latest Salaries",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 71.8
+    },
+    "count_artist_occurrences_on_spotify_ranking_list": {
+      "qno": "2669",
+      "title": "Count Artist Occurrences On Spotify Ranking List",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 71.9
+    },
+    "immediate_food_delivery_iii": {
+      "qno": "2686",
+      "title": "Immediate Food Delivery III",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.9
+    },
+    "bikes_last_time_used": {
+      "qno": "2687",
+      "title": "Bikes Last Time Used",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 80.2
+    },
+    "find_active_users": {
+      "qno": "2688",
+      "title": "Find Active Users",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41.7
+    },
+    "customers_with_maximum_number_of_transactions_on_consecutive_days": {
+      "qno": "2752",
+      "title": "Customers with Maximum Number of Transactions on Consecutive Days",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 37.2
+    },
+    "consecutive_transactions_with_increasing_amounts": {
+      "qno": "2701",
+      "title": "Consecutive Transactions with Increasing Amounts",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 32.2
+    },
+    "popularity_percentage": {
+      "qno": "2720",
+      "title": "Popularity Percentage",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 50.8
+    },
+    "count_occurrences_in_text": {
+      "qno": "2738",
+      "title": "Count Occurrences in Text",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.7
+    },
+    "flight_occupancy_and_waitlist_analysis": {
+      "qno": "2783",
+      "title": "Flight Occupancy and Waitlist Analysis",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 37.1
+    },
+    "total_traveled_distance": {
+      "qno": "2837",
+      "title": "Total Traveled Distance",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 74.6
+    },
+    "highest_salaries_difference": {
+      "qno": "2853",
+      "title": "Highest Salaries Difference",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 74.2
+    },
+    "rolling_average_steps": {
+      "qno": "2854",
+      "title": "Rolling Average Steps",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.3
+    },
+    "calculate_orders_within_each_interval": {
+      "qno": "2893",
+      "title": "Calculate Orders Within Each Interval",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68
+    },
+    "market_analysis_iii": {
+      "qno": "2922",
+      "title": "Market Analysis III",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 40.3
+    },
+    "symmetric_coordinates": {
+      "qno": "2978",
+      "title": "Symmetric Coordinates",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 42.5
+    },
+    "pizza_toppings_cost_analysis": {
+      "qno": "3050",
+      "title": "Pizza Toppings Cost Analysis",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68.5
+    },
+    "find_candidates_for_data_scientist_position": {
+      "qno": "3051",
+      "title": "Find Candidates for Data Scientist Position",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 74.4
+    },
+    "maximize_items": {
+      "qno": "3052",
+      "title": "Maximize Items",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 72.6
+    },
+    "classifying_triangles_by_lengths": {
+      "qno": "3053",
+      "title": "Classifying Triangles by Lengths",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 50.9
+    },
+    "binary_tree_nodes": {
+      "qno": "3054",
+      "title": "Binary Tree Nodes",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 79.4
+    },
+    "find_peak_calling_hours_for_each_city": {
+      "qno": "2984",
+      "title": "Find Peak Calling Hours for Each City",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.9
+    },
+    "calculate_compressed_mean": {
+      "qno": "2985",
+      "title": "Calculate Compressed Mean",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 87.1
+    },
+    "find_third_transaction": {
+      "qno": "2986",
+      "title": "Find Third Transaction",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.6
+    },
+    "find_expensive_cities": {
+      "qno": "2987",
+      "title": "Find Expensive Cities",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 78.9
+    },
+    "manager_of_the_largest_department": {
+      "qno": "2988",
+      "title": "Manager of the Largest Department",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 79.6
+    },
+    "class_performance": {
+      "qno": "2989",
+      "title": "Class Performance",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 89.4
+    },
+    "loan_types": {
+      "qno": "2990",
+      "title": "Loan Types",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 61.5
+    },
+    "top_three_wineries": {
+      "qno": "2991",
+      "title": "Top Three Wineries",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 53
+    },
+    "friday_purchases_i": {
+      "qno": "2993",
+      "title": "Friday Purchases I",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 80.5
+    },
+    "friday_purchases_ii": {
+      "qno": "2994",
+      "title": "Friday Purchases II",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 73.3
+    },
+    "viewers_turned_streamers": {
+      "qno": "2995",
+      "title": "Viewers Turned Streamers",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 42.9
+    },
+    "top_percentile_fraud": {
+      "qno": "3055",
+      "title": "Top Percentile Fraud",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.4
+    },
+    "snaps_analysis": {
+      "qno": "3056",
+      "title": "Snaps Analysis",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.3
+    },
+    "employees_project_allocation": {
+      "qno": "3057",
+      "title": "Employees Project Allocation",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 69
+    },
+    "friends_with_no_mutual_friends": {
+      "qno": "3058",
+      "title": "Friends With No Mutual Friends",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52.3
+    },
+    "find_all_unique_email_domains": {
+      "qno": "3059",
+      "title": "Find All Unique Email Domains",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 67.1
+    },
+    "user_activities_within_time_bounds": {
+      "qno": "3060",
+      "title": "User Activities within Time Bounds",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 40.1
+    },
+    "calculate_trapping_rain_water": {
+      "qno": "3061",
+      "title": "Calculate Trapping Rain Water",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 79.5
+    },
+    "find_trending_hashtags": {
+      "qno": "3087",
+      "title": "Find Trending Hashtags",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.9
+    },
+    "find_bursty_behavior": {
+      "qno": "3089",
+      "title": "Find Bursty Behavior",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 40.3
+    },
+    "find_trending_hashtags_ii": {
+      "qno": "3103",
+      "title": "Find Trending Hashtags II",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 66.4
+    },
+    "friday_purchase_iii": {
+      "qno": "3118",
+      "title": "Friday Purchase III",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.9
+    },
+    "find_longest_calls": {
+      "qno": "3124",
+      "title": "Find Longest Calls",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71
+    },
+    "server_utilization_time": {
+      "qno": "3126",
+      "title": "Server Utilization Time",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.8
+    },
+    "consecutive_available_seats_ii": {
+      "qno": "3140",
+      "title": "Consecutive Available Seats II",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63.8
+    },
+    "invalid_tweets_ii": {
+      "qno": "3150",
+      "title": "Invalid Tweets II",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 89.7
+    },
+    "employee_task_duration_and_concurrent_tasks": {
+      "qno": "3156",
+      "title": "Employee Task Duration and Concurrent Tasks",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 58
+    },
+    "calculate_parking_fees_and_duration": {
+      "qno": "3166",
+      "title": "Calculate Parking Fees and Duration",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63
+    },
+    "second_day_verification": {
+      "qno": "3172",
+      "title": "Second Day Verification",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 75.1
+    },
+    "find_top_scoring_students": {
+      "qno": "3182",
+      "title": "Find Top Scoring Students",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.4
+    },
+    "find_top_scoring_students_ii": {
+      "qno": "3188",
+      "title": "Find Top Scoring Students II",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 53.3
+    },
+    "find_cities_in_each_state": {
+      "qno": "3198",
+      "title": "Find Cities in Each State",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 85.5
+    },
+    "bitwise_user_permissions_analysis": {
+      "qno": "3204",
+      "title": "Bitwise User Permissions Analysis",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 96.7
+    },
+    "year_on_year_growth_rate": {
+      "qno": "3214",
+      "title": "Year on Year Growth Rate",
+      "tags": [
+        "Database"
+      ],
+      "default": "Database",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 63.7
     }
-}
+  }
