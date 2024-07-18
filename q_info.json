@@ -33707,5 +33707,1831 @@
       "difficulty": "Medium",
       "language": "Java",
       "acceptance": 56.3
+    },
+    "gas_station": {
+      "qno": "134",
+      "title": "Gas Station",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.5
+    },
+    "candy": {
+      "qno": "135",
+      "title": "Candy",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 43.6
+    },
+    "largest_number": {
+      "qno": "179",
+      "title": "Largest Number",
+      "tags": [
+        "Array",
+        "String",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.6
+    },
+    "wiggle_sort": {
+      "qno": "280",
+      "title": "Wiggle Sort",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.8
+    },
+    "patching_array": {
+      "qno": "330",
+      "title": "Patching Array",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 53.1
+    },
+    "increasing_triplet_subsequence": {
+      "qno": "334",
+      "title": "Increasing Triplet Subsequence",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 39.6
+    },
+    "longest_palindrome": {
+      "qno": "409",
+      "title": "Longest Palindrome",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 55.3
+    },
+    "minimum_number_of_arrows_to_burst_balloons": {
+      "qno": "452",
+      "title": "Minimum Number of Arrows to Burst Balloons",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.2
+    },
+    "super_washing_machines": {
+      "qno": "517",
+      "title": "Super Washing Machines",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 41.4
+    },
+    "split_concatenated_strings": {
+      "qno": "555",
+      "title": "Split Concatenated Strings",
+      "tags": [
+        "Array",
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.4
+    },
+    "can_place_flowers": {
+      "qno": "605",
+      "title": "Can Place Flowers",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 29
+    },
+    "maximum_distance_in_arrays": {
+      "qno": "624",
+      "title": "Maximum Distance in Arrays",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 42.4
+    },
+    "minimum_factorization": {
+      "qno": "625",
+      "title": "Minimum Factorization",
+      "tags": [
+        "Math",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 33.6
+    },
+    "maximum_swap": {
+      "qno": "670",
+      "title": "Maximum Swap",
+      "tags": [
+        "Math",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.9
+    },
+    "monotone_increasing_digits": {
+      "qno": "738",
+      "title": "Monotone Increasing Digits",
+      "tags": [
+        "Math",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.2
+    },
+    "set_intersection_size_at_least_two": {
+      "qno": "757",
+      "title": "Set Intersection Size At Least Two",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 44.6
+    },
+    "rabbits_in_forest": {
+      "qno": "781",
+      "title": "Rabbits in Forest",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Math",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.1
+    },
+    "hand_of_straights": {
+      "qno": "846",
+      "title": "Hand of Straights",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.7
+    },
+    "lemonade_change": {
+      "qno": "860",
+      "title": "Lemonade Change",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 53.7
+    },
+    "smallest_range_ii": {
+      "qno": "910",
+      "title": "Smallest Range II",
+      "tags": [
+        "Array",
+        "Math",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.3
+    },
+    "array_of_doubled_pairs": {
+      "qno": "954",
+      "title": "Array of Doubled Pairs",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 39.2
+    },
+    "delete_columns_to_make_sorted_ii": {
+      "qno": "955",
+      "title": "Delete Columns to Make Sorted II",
+      "tags": [
+        "Array",
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 35.3
+    },
+    "largest_perimeter_triangle": {
+      "qno": "976",
+      "title": "Largest Perimeter Triangle",
+      "tags": [
+        "Array",
+        "Math",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 56.2
+    },
+    "string_without_aaa_or_bbb": {
+      "qno": "984",
+      "title": "String Without AAA or BBB",
+      "tags": [
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44
+    },
+    "broken_calculator": {
+      "qno": "991",
+      "title": "Broken Calculator",
+      "tags": [
+        "Math",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.5
+    },
+    "maximize_sum_of_array_after_k_negations": {
+      "qno": "1005",
+      "title": "Maximize Sum Of Array After K Negations",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 51.3
+    },
+    "minimum_domino_rotations_for_equal_row": {
+      "qno": "1007",
+      "title": "Minimum Domino Rotations For Equal Row",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52.2
+    },
+    "campus_bikes": {
+      "qno": "1057",
+      "title": "Campus Bikes",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.6
+    },
+    "minimize_rounding_error_to_meet_target": {
+      "qno": "1058",
+      "title": "Minimize Rounding Error to Meet Target",
+      "tags": [
+        "Array",
+        "Math",
+        "String",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.1
+    },
+    "partition_array_into_three_parts_with_equal_sum": {
+      "qno": "1013",
+      "title": "Partition Array Into Three Parts With Equal Sum",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 42
+    },
+    "two_city_scheduling": {
+      "qno": "1029",
+      "title": "Two City Scheduling",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.8
+    },
+    "previous_permutation_with_one_swap": {
+      "qno": "1053",
+      "title": "Previous Permutation With One Swap",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.7
+    },
+    "how_many_apples_can_you_put_into_the_basket": {
+      "qno": "1196",
+      "title": "How Many Apples Can You Put into the Basket",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 67.1
+    },
+    "decrease_elements_to_make_array_zigzag": {
+      "qno": "1144",
+      "title": "Decrease Elements To Make Array Zigzag",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.9
+    },
+    "break_a_palindrome": {
+      "qno": "1328",
+      "title": "Break a Palindrome",
+      "tags": [
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.8
+    },
+    "reverse_subarray_to_maximize_array_value": {
+      "qno": "1330",
+      "title": "Reverse Subarray To Maximize Array Value",
+      "tags": [
+        "Array",
+        "Math",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 41.5
+    },
+    "minimum_moves_to_reach_target_score": {
+      "qno": "2139",
+      "title": "Minimum Moves to Reach Target Score",
+      "tags": [
+        "Math",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.8
+    },
+    "minimum_cost_to_move_chips_to_the_same_position": {
+      "qno": "1217",
+      "title": "Minimum Cost to Move Chips to The Same Position",
+      "tags": [
+        "Array",
+        "Math",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 71.7
+    },
+    "maximize_the_topmost_element_after_k_moves": {
+      "qno": "2202",
+      "title": "Maximize the Topmost Element After K Moves",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 23
+    },
+    "minimum_swaps_to_make_strings_equal": {
+      "qno": "1247",
+      "title": "Minimum Swaps to Make Strings Equal",
+      "tags": [
+        "Math",
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.5
+    },
+    "divide_array_in_sets_of_k_consecutive_numbers": {
+      "qno": "1296",
+      "title": "Divide Array in Sets of K Consecutive Numbers",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.4
+    },
+    "maximum_69_number": {
+      "qno": "1323",
+      "title": "Maximum 69 Number",
+      "tags": [
+        "Math",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 82.4
+    },
+    "find_the_minimum_number_of_fibonacci_numbers_whose_sum_is_k": {
+      "qno": "1414",
+      "title": "Find the Minimum Number of Fibonacci Numbers Whose Sum Is K",
+      "tags": [
+        "Math",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.4
+    },
+    "minimum_subsequence_in_non-increasing_order": {
+      "qno": "1403",
+      "title": "Minimum Subsequence in Non-Increasing Order",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 72.6
+    },
+    "max_difference_you_can_get_from_changing_an_integer": {
+      "qno": "1432",
+      "title": "Max Difference You Can Get From Changing an Integer",
+      "tags": [
+        "Math",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41
+    },
+    "check_if_a_string_can_break_another_string": {
+      "qno": "1433",
+      "title": "Check If a String Can Break Another String",
+      "tags": [
+        "String",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 69.8
+    },
+    "maximum_area_of_a_piece_of_cake_after_horizontal_and_vertical_cuts": {
+      "qno": "1465",
+      "title": "Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41.1
+    },
+    "minimum_difference_between_largest_and_smallest_value_in_three_moves": {
+      "qno": "1509",
+      "title": "Minimum Difference Between Largest and Smallest Value in Three Moves",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.2
+    },
+    "maximum_number_of_non-overlapping_substrings": {
+      "qno": "1520",
+      "title": "Maximum Number of Non-Overlapping Substrings",
+      "tags": [
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 39.4
+    },
+    "minimum_suffix_flips": {
+      "qno": "1529",
+      "title": "Minimum Suffix Flips",
+      "tags": [
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 73.4
+    },
+    "put_boxes_into_the_warehouse_i": {
+      "qno": "1564",
+      "title": "Put Boxes Into the Warehouse I",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.4
+    },
+    "check_if_string_is_transformable_with_substring_sort_operations": {
+      "qno": "1585",
+      "title": "Check If String Is Transformable With Substring Sort Operations",
+      "tags": [
+        "String",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 48.6
+    },
+    "put_boxes_into_the_warehouse_ii": {
+      "qno": "1580",
+      "title": "Put Boxes Into the Warehouse II",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.2
+    },
+    "minimum_deletions_to_make_character_frequencies_unique": {
+      "qno": "1647",
+      "title": "Minimum Deletions to Make Character Frequencies Unique",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.2
+    },
+    "smallest_string_with_a_given_numeric_value": {
+      "qno": "1663",
+      "title": "Smallest String With A Given Numeric Value",
+      "tags": [
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.8
+    },
+    "minimum_initial_energy_to_finish_tasks": {
+      "qno": "1665",
+      "title": "Minimum Initial Energy to Finish Tasks",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 58.1
+    },
+    "maximum_binary_string_after_change": {
+      "qno": "1702",
+      "title": "Maximum Binary String After Change",
+      "tags": [
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46.9
+    },
+    "partitioning_into_minimum_number_of_deci-binary_numbers": {
+      "qno": "1689",
+      "title": "Partitioning Into Minimum Number Of Deci-Binary Numbers",
+      "tags": [
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 88.7
+    },
+    "maximum_units_on_a_truck": {
+      "qno": "1710",
+      "title": "Maximum Units on a Truck",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 73.7
+    },
+    "minimum_number_of_people_to_teach": {
+      "qno": "1733",
+      "title": "Minimum Number of People to Teach",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 42.6
+    },
+    "largest_subarray_length_k": {
+      "qno": "1708",
+      "title": "Largest Subarray Length K",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 64.9
+    },
+    "latest_time_by_replacing_hidden_digits": {
+      "qno": "1736",
+      "title": "Latest Time by Replacing Hidden Digits",
+      "tags": [
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 42.7
+    },
+    "minimum_elements_to_add_to_form_a_given_sum": {
+      "qno": "1785",
+      "title": "Minimum Elements to Add to Form a Given Sum",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.5
+    },
+    "maximum_number_of_consecutive_values_you_can_make": {
+      "qno": "1798",
+      "title": "Maximum Number of Consecutive Values You Can Make",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.9
+    },
+    "minimum_operations_to_make_the_array_increasing": {
+      "qno": "1827",
+      "title": "Minimum Operations to Make the Array Increasing",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 79.9
+    },
+    "count_pairs_of_equal_substrings_with_minimum_difference": {
+      "qno": "1794",
+      "title": "Count Pairs of Equal Substrings With Minimum Difference",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.2
+    },
+    "maximum_element_after_decreasing_and_rearranging": {
+      "qno": "1846",
+      "title": "Maximum Element After Decreasing and Rearranging",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.9
+    },
+    "maximum_ice_cream_bars": {
+      "qno": "1833",
+      "title": "Maximum Ice Cream Bars",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 73.8
+    },
+    "maximum_number_of_people_that_can_be_caught_in_tag": {
+      "qno": "1989",
+      "title": "Maximum Number of People That Can Be Caught in Tag",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.2
+    },
+    "minimum_number_of_swaps_to_make_the_binary_string_alternating": {
+      "qno": "1864",
+      "title": "Minimum Number of Swaps to Make the Binary String Alternating",
+      "tags": [
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.4
+    },
+    "maximum_value_after_insertion": {
+      "qno": "1881",
+      "title": "Maximum Value after Insertion",
+      "tags": [
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38
+    },
+    "merge_triplets_to_form_target_triplet": {
+      "qno": "1899",
+      "title": "Merge Triplets to Form Target Triplet",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.1
+    },
+    "minimize_product_sum_of_two_arrays": {
+      "qno": "1874",
+      "title": "Minimize Product Sum of Two Arrays",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 89.4
+    },
+    "largest_odd_number_in_string": {
+      "qno": "1903",
+      "title": "Largest Odd Number in String",
+      "tags": [
+        "Math",
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 63.5
+    },
+    "eliminate_maximum_number_of_monsters": {
+      "qno": "1921",
+      "title": "Eliminate Maximum Number of Monsters",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.9
+    },
+    "add_minimum_number_of_rungs": {
+      "qno": "1936",
+      "title": "Add Minimum Number of Rungs",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 42.9
+    },
+    "largest_number_after_mutating_substring": {
+      "qno": "1946",
+      "title": "Largest Number After Mutating Substring",
+      "tags": [
+        "Array",
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36
+    },
+    "maximum_number_of_weeks_for_which_you_can_work": {
+      "qno": "1953",
+      "title": "Maximum Number of Weeks for Which You Can Work",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 40.7
+    },
+    "array_with_elements_not_equal_to_average_of_neighbors": {
+      "qno": "1968",
+      "title": "Array With Elements Not Equal to Average of Neighbors",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.2
+    },
+    "minimum_time_to_type_word_using_special_typewriter": {
+      "qno": "1974",
+      "title": "Minimum Time to Type Word Using Special Typewriter",
+      "tags": [
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 75.4
+    },
+    "find_original_array_from_doubled_array": {
+      "qno": "2007",
+      "title": "Find Original Array From Doubled Array",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 40.5
+    },
+    "minimum_number_of_moves_to_seat_everyone": {
+      "qno": "2037",
+      "title": "Minimum Number of Moves to Seat Everyone",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 87.7
+    },
+    "minimum_moves_to_convert_string": {
+      "qno": "2027",
+      "title": "Minimum Moves to Convert String",
+      "tags": [
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 54.9
+    },
+    "minimum_cost_homecoming_of_a_robot_in_a_grid": {
+      "qno": "2087",
+      "title": "Minimum Cost Homecoming of a Robot in a Grid",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51
+    },
+    "two_furthest_houses_with_different_colors": {
+      "qno": "2078",
+      "title": "Two Furthest Houses With Different Colors",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 66.1
+    },
+    "removing_minimum_and_maximum_from_array": {
+      "qno": "2091",
+      "title": "Removing Minimum and Maximum From Array",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.9
+    },
+    "subsequence_of_size_k_with_the_largest_even_sum": {
+      "qno": "2098",
+      "title": "Subsequence of Size K With the Largest Even Sum",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.5
+    },
+    "destroying_asteroids": {
+      "qno": "2126",
+      "title": "Destroying Asteroids",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.7
+    },
+    "minimum_cost_of_buying_candies_with_discount": {
+      "qno": "2144",
+      "title": "Minimum Cost of Buying Candies With Discount",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 61.3
+    },
+    "earliest_possible_day_of_full_bloom": {
+      "qno": "2136",
+      "title": "Earliest Possible Day of Full Bloom",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 71.8
+    },
+    "minimum_sum_of_four_digit_number_after_splitting_digits": {
+      "qno": "2160",
+      "title": "Minimum Sum of Four Digit Number After Splitting Digits",
+      "tags": [
+        "Math",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 86.2
+    },
+    "append_k_integers_with_minimal_sum": {
+      "qno": "2195",
+      "title": "Append K Integers With Minimal Sum",
+      "tags": [
+        "Array",
+        "Math",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 25.4
+    },
+    "minimum_number_of_operations_to_convert_time": {
+      "qno": "2224",
+      "title": "Minimum Number of Operations to Convert Time",
+      "tags": [
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 65.2
+    },
+    "minimum_health_to_beat_game": {
+      "qno": "2214",
+      "title": "Minimum Health to Beat Game",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.7
+    },
+    "maximum_bags_with_full_capacity_of_rocks": {
+      "qno": "2279",
+      "title": "Maximum Bags With Full Capacity of Rocks",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.5
+    },
+    "partition_array_such_that_maximum_difference_is_k": {
+      "qno": "2294",
+      "title": "Partition Array Such That Maximum Difference Is K",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 73.9
+    },
+    "shortest_impossible_sequence_of_rolls": {
+      "qno": "2350",
+      "title": "Shortest Impossible Sequence of Rolls",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 68.5
+    },
+    "minimum_replacements_to_sort_the_array": {
+      "qno": "2366",
+      "title": "Minimum Replacements to Sort the Array",
+      "tags": [
+        "Array",
+        "Math",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 53.6
+    },
+    "find_minimum_time_to_finish_all_jobs_ii": {
+      "qno": "2323",
+      "title": "Find Minimum Time to Finish All Jobs II",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66
+    },
+    "minimum_hours_of_training_to_win_a_competition": {
+      "qno": "2383",
+      "title": "Minimum Hours of Training to Win a Competition",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 41.2
+    },
+    "minimum_adjacent_swaps_to_make_a_valid_array": {
+      "qno": "2340",
+      "title": "Minimum Adjacent Swaps to Make a Valid Array",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 72.5
+    },
+    "optimal_partition_of_string": {
+      "qno": "2405",
+      "title": "Optimal Partition of String",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 78
+    },
+    "sort_array_by_moving_items_to_empty_space": {
+      "qno": "2459",
+      "title": "Sort Array by Moving Items to Empty Space",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 45.8
+    },
+    "minimum_money_required_before_transactions": {
+      "qno": "2412",
+      "title": "Minimum Money Required Before Transactions",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 40.4
+    },
+    "minimum_number_of_operations_to_make_arrays_similar": {
+      "qno": "2449",
+      "title": "Minimum Number of Operations to Make Arrays Similar",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 62
+    },
+    "minimum_addition_to_make_integer_beautiful": {
+      "qno": "2457",
+      "title": "Minimum Addition to Make Integer Beautiful",
+      "tags": [
+        "Math",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 37.6
+    },
+    "minimum_operations_to_make_array_equal_ii": {
+      "qno": "2541",
+      "title": "Minimum Operations to Make Array Equal II",
+      "tags": [
+        "Array",
+        "Math",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 31.5
+    },
+    "split_with_minimum_sum": {
+      "qno": "2578",
+      "title": "Split With Minimum Sum",
+      "tags": [
+        "Math",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 70.7
+    },
+    "smallest_missing_non-negative_integer_after_operations": {
+      "qno": "2598",
+      "title": "Smallest Missing Non-negative Integer After Operations",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Math",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 39.2
+    },
+    "distribute_money_to_maximum_children": {
+      "qno": "2591",
+      "title": "Distribute Money to Maximum Children",
+      "tags": [
+        "Math",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 19.2
+    },
+    "lexicographically_smallest_beautiful_string": {
+      "qno": "2663",
+      "title": "Lexicographically Smallest Beautiful String",
+      "tags": [
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 37.5
+    },
+    "rearranging_fruits": {
+      "qno": "2561",
+      "title": "Rearranging Fruits",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 34
+    },
+    "maximum_price_to_fill_a_bag": {
+      "qno": "2548",
+      "title": "Maximum Price to Fill a Bag",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.7
+    },
+    "maximum_difference_by_remapping_a_digit": {
+      "qno": "2566",
+      "title": "Maximum Difference by Remapping a Digit",
+      "tags": [
+        "Math",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 59.9
+    },
+    "minimum_score_by_changing_two_elements": {
+      "qno": "2567",
+      "title": "Minimum Score by Changing Two Elements",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.9
+    },
+    "k_items_with_the_maximum_sum": {
+      "qno": "2600",
+      "title": "K Items With the Maximum Sum",
+      "tags": [
+        "Math",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 61.8
+    },
+    "maximum_sum_with_exactly_k_elements": {
+      "qno": "2656",
+      "title": "Maximum Sum With Exactly K Elements",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 82.2
+    },
+    "determine_the_minimum_sum_of_a_k-avoiding_array": {
+      "qno": "2829",
+      "title": "Determine the Minimum Sum of a k-avoiding Array",
+      "tags": [
+        "Math",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.3
+    },
+    "lexicographically_smallest_string_after_substring_operation": {
+      "qno": "2734",
+      "title": "Lexicographically Smallest String After Substring Operation",
+      "tags": [
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 30.9
+    },
+    "largest_element_in_an_array_after_merge_operations": {
+      "qno": "2789",
+      "title": "Largest Element in an Array after Merge Operations",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.1
+    },
+    "find_the_minimum_possible_sum_of_a_beautiful_array": {
+      "qno": "2834",
+      "title": "Find the Minimum Possible Sum of a Beautiful Array",
+      "tags": [
+        "Math",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38.4
+    },
+    "maximum_odd_binary_number": {
+      "qno": "2864",
+      "title": "Maximum Odd Binary Number",
+      "tags": [
+        "Math",
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 83.2
+    },
+    "smallest_number_with_given_digit_product": {
+      "qno": "2847",
+      "title": "Smallest Number With Given Digit Product",
+      "tags": [
+        "Math",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.3
+    },
+    "minimum_processing_time": {
+      "qno": "2895",
+      "title": "Minimum Processing Time",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68.8
+    },
+    "minimum_number_of_groups_to_create_a_valid_assignment": {
+      "qno": "2910",
+      "title": "Minimum Number of Groups to Create a Valid Assignment",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 25.1
+    },
+    "minimum_equal_sum_of_two_arrays_after_replacing_zeros": {
+      "qno": "2918",
+      "title": "Minimum Equal Sum of Two Arrays After Replacing Zeros",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 35
+    },
+    "maximum_size_of_a_set_after_removals": {
+      "qno": "3002",
+      "title": "Maximum Size of a Set After Removals",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.6
+    },
+    "minimum_cost_to_make_array_equalindromic": {
+      "qno": "2967",
+      "title": "Minimum Cost to Make Array Equalindromic",
+      "tags": [
+        "Array",
+        "Math",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 22.1
+    },
+    "minimum_number_of_coins_to_be_added": {
+      "qno": "2952",
+      "title": "Minimum Number of Coins to be Added",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56
+    },
+    "divide_array_into_arrays_with_max_difference": {
+      "qno": "2966",
+      "title": "Divide Array Into Arrays With Max Difference",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.6
+    },
+    "maximum_points_after_enemy_battles": {
+      "qno": "3207",
+      "title": "Maximum Points After Enemy Battles",
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 31.1
+    },
+    "minimum_number_of_pushes_to_type_word_i": {
+      "qno": "3014",
+      "title": "Minimum Number of Pushes to Type Word I",
+      "tags": [
+        "Math",
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 64
+    },
+    "apple_redistribution_into_boxes": {
+      "qno": "3074",
+      "title": "Apple Redistribution into Boxes",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 66.8
+    },
+    "lexicographically_smallest_string_after_operations_with_constraint": {
+      "qno": "3106",
+      "title": "Lexicographically Smallest String After Operations With Constraint",
+      "tags": [
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63.3
+    },
+    "maximize_happiness_of_selected_children": {
+      "qno": "3075",
+      "title": "Maximize Happiness of Selected Children",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55
+    },
+    "minimum_operations_to_make_median_of_array_equal_to_k": {
+      "qno": "3107",
+      "title": "Minimum Operations to Make Median of Array Equal to K",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.4
+    },
+    "minimum_rectangles_to_cover_points": {
+      "qno": "3111",
+      "title": "Minimum Rectangles to Cover Points",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63.4
+    },
+    "make_string_anti-palindrome": {
+      "qno": "3088",
+      "title": "Make String Anti-palindrome",
+      "tags": [
+        "String",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 54.3
+    },
+    "maximum_number_of_potholes_that_can_be_fixed": {
+      "qno": "3119",
+      "title": "Maximum Number of Potholes That Can Be Fixed",
+      "tags": [
+        "String",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.8
+    },
+    "maximum_number_that_makes_result_of_bitwise_and_zero": {
+      "qno": "3125",
+      "title": "Maximum Number That Makes Result of Bitwise AND Zero",
+      "tags": [
+        "String",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 69.1
+    },
+    "lexicographically_smallest_string_after_a_swap": {
+      "qno": "3216",
+      "title": "Lexicographically Smallest String After a Swap",
+      "tags": [
+        "String",
+        "Greedy"
+      ],
+      "default": "Greedy",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 52.4
+    },
+    "minimum_cost_for_cutting_cake_i": {
+      "qno": "3218",
+      "title": "Minimum Cost for Cutting Cake I",
+      "tags": [
+        "Array",
+        "Dynamic Programming",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.2
+    },
+    "minimum_cost_for_cutting_cake_ii": {
+      "qno": "3219",
+      "title": "Minimum Cost for Cutting Cake II",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting"
+      ],
+      "default": "Greedy",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 55.4
+    },
+    "minimum_moves_to_get_a_peaceful_board": {
+      "qno": "3189",
+      "title": "Minimum Moves to Get a Peaceful Board",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting",
+        "Counting Sort"
+      ],
+      "default": "Greedy",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 74.3
     }
 }
