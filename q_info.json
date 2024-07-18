@@ -37758,5 +37758,1090 @@
       "difficulty": "Easy",
       "language": "Java",
       "acceptance": 89.4
+    },
+    "two_sum": {
+      "qno": "1",
+      "title": "Two Sum",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 53.1
+    },
+    "first_missing_positive": {
+      "qno": "41",
+      "title": "First Missing Positive",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 39.7
+    },
+    "isomorphic_strings": {
+      "qno": "205",
+      "title": "Isomorphic Strings",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 45.4
+    },
+    "group_shifted_strings": {
+      "qno": "249",
+      "title": "Group Shifted Strings",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.9
+    },
+    "word_pattern": {
+      "qno": "290",
+      "title": "Word Pattern",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 42.2
+    },
+    "find_all_duplicates_in_an_array": {
+      "qno": "442",
+      "title": "Find All Duplicates in an Array",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 75.8
+    },
+    "find_all_numbers_disappeared_in_an_array": {
+      "qno": "448",
+      "title": "Find All Numbers Disappeared in an Array",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 61.2
+    },
+    "4sum_ii": {
+      "qno": "454",
+      "title": "4Sum II",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.3
+    },
+    "keyboard_row": {
+      "qno": "500",
+      "title": "Keyboard Row",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 71
+    },
+    "brick_wall": {
+      "qno": "554",
+      "title": "Brick Wall",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.1
+    },
+    "distribute_candies": {
+      "qno": "575",
+      "title": "Distribute Candies",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 68
+    },
+    "minimum_index_sum_of_two_lists": {
+      "qno": "599",
+      "title": "Minimum Index Sum of Two Lists",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 55.9
+    },
+    "find_duplicate_file_in_system": {
+      "qno": "609",
+      "title": "Find Duplicate File in System",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.7
+    },
+    "degree_of_an_array": {
+      "qno": "697",
+      "title": "Degree of an Array",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 56.6
+    },
+    "sentence_similarity": {
+      "qno": "734",
+      "title": "Sentence Similarity",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 44.4
+    },
+    "shortest_completing_word": {
+      "qno": "748",
+      "title": "Shortest Completing Word",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 60.2
+    },
+    "find_anagram_mappings": {
+      "qno": "760",
+      "title": "Find Anagram Mappings",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 83.7
+    },
+    "jewels_and_stones": {
+      "qno": "771",
+      "title": "Jewels and Stones",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 88.7
+    },
+    "unique_morse_code_words": {
+      "qno": "804",
+      "title": "Unique Morse Code Words",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 82.9
+    },
+    "card_flipping_game": {
+      "qno": "822",
+      "title": "Card Flipping Game",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.7
+    },
+    "buddy_strings": {
+      "qno": "859",
+      "title": "Buddy Strings",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 33.2
+    },
+    "walking_robot_simulation": {
+      "qno": "874",
+      "title": "Walking Robot Simulation",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Simulation"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 40.3
+    },
+    "uncommon_words_from_two_sentences": {
+      "qno": "884",
+      "title": "Uncommon Words from Two Sentences",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 67.5
+    },
+    "find_and_replace_pattern": {
+      "qno": "890",
+      "title": "Find and Replace Pattern",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 76.8
+    },
+    "word_subsets": {
+      "qno": "916",
+      "title": "Word Subsets",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52
+    },
+    "unique_email_addresses": {
+      "qno": "929",
+      "title": "Unique Email Addresses",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 67.2
+    },
+    "verifying_an_alien_dictionary": {
+      "qno": "953",
+      "title": "Verifying an Alien Dictionary",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 55.1
+    },
+    "n-repeated_element_in_size_2n_array": {
+      "qno": "961",
+      "title": "N-Repeated Element in Size 2N Array",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 76.8
+    },
+    "vowel_spellchecker": {
+      "qno": "966",
+      "title": "Vowel Spellchecker",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.4
+    },
+    "grid_illumination": {
+      "qno": "1001",
+      "title": "Grid Illumination",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 37.1
+    },
+    "find_common_characters": {
+      "qno": "1002",
+      "title": "Find Common Characters",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 74.6
+    },
+    "find_words_that_can_be_formed_by_characters": {
+      "qno": "1160",
+      "title": "Find Words That Can Be Formed by Characters",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 70.6
+    },
+    "single-row_keyboard": {
+      "qno": "1165",
+      "title": "Single-Row Keyboard",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 87.5
+    },
+    "string_transforms_into_another_string": {
+      "qno": "1153",
+      "title": "String Transforms Into Another String",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 35
+    },
+    "alphabet_board_path": {
+      "qno": "1138",
+      "title": "Alphabet Board Path",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.7
+    },
+    "maximum_number_of_words_you_can_type": {
+      "qno": "1935",
+      "title": "Maximum Number of Words You Can Type",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 73.4
+    },
+    "count_artifacts_that_can_be_extracted": {
+      "qno": "2201",
+      "title": "Count Artifacts That Can Be Extracted",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Simulation"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.4
+    },
+    "unique_number_of_occurrences": {
+      "qno": "1207",
+      "title": "Unique Number of Occurrences",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 77.3
+    },
+    "maximum_equal_frequency": {
+      "qno": "1224",
+      "title": "Maximum Equal Frequency",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 37.1
+    },
+    "counting_elements": {
+      "qno": "1426",
+      "title": "Counting Elements",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 60.2
+    },
+    "find_the_difference_of_two_arrays": {
+      "qno": "2215",
+      "title": "Find the Difference of Two Arrays",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 79
+    },
+    "group_the_people_given_the_group_size_they_belong_to": {
+      "qno": "1282",
+      "title": "Group the People Given the Group Size They Belong To",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 87.4
+    },
+    "html_entity_parser": {
+      "qno": "1410",
+      "title": "HTML Entity Parser",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.9
+    },
+    "destination_city": {
+      "qno": "1436",
+      "title": "Destination City",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 79.5
+    },
+    "people_whose_list_of_favorite_companies_is_not_a_subset_of_another_list": {
+      "qno": "1452",
+      "title": "People Whose List of Favorite Companies Is Not a Subset of Another List",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.9
+    },
+    "making_file_names_unique": {
+      "qno": "1487",
+      "title": "Making File Names Unique",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 37.1
+    },
+    "path_crossing": {
+      "qno": "1496",
+      "title": "Path Crossing",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 62.4
+    },
+    "can_convert_string_in_k_moves": {
+      "qno": "1540",
+      "title": "Can Convert String in K Moves",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 35
+    },
+    "largest_substring_between_two_equal_characters": {
+      "qno": "1624",
+      "title": "Largest Substring Between Two Equal Characters",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 68.6
+    },
+    "check_array_formation_through_concatenation": {
+      "qno": "1640",
+      "title": "Check Array Formation Through Concatenation",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 56.6
+    },
+    "count_good_meals": {
+      "qno": "1711",
+      "title": "Count Good Meals",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 30.4
+    },
+    "restore_the_array_from_adjacent_pairs": {
+      "qno": "1743",
+      "title": "Restore the Array From Adjacent Pairs",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 74.8
+    },
+    "second_largest_digit_in_a_string": {
+      "qno": "1796",
+      "title": "Second Largest Digit in a String",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 50.5
+    },
+    "number_of_different_integers_in_a_string": {
+      "qno": "1805",
+      "title": "Number of Different Integers in a String",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 38
+    },
+    "evaluate_the_bracket_pairs_of_a_string": {
+      "qno": "1807",
+      "title": "Evaluate the Bracket Pairs of a String",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.9
+    },
+    "finding_the_users_active_minutes": {
+      "qno": "1817",
+      "title": "Finding the Users Active Minutes",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 80.5
+    },
+    "check_if_the_sentence_is_pangram": {
+      "qno": "1832",
+      "title": "Check if the Sentence Is Pangram",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 83.3
+    },
+    "minimum_absolute_difference_queries": {
+      "qno": "1906",
+      "title": "Minimum Absolute Difference Queries",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.4
+    },
+    "count_vowel_substrings_of_a_string": {
+      "qno": "2062",
+      "title": "Count Vowel Substrings of a String",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 68
+    },
+    "rings_and_rods": {
+      "qno": "2103",
+      "title": "Rings and Rods",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 80.8
+    },
+    "replace_elements_in_an_array": {
+      "qno": "2295",
+      "title": "Replace Elements in an Array",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Simulation"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58
+    },
+    "decode_the_message": {
+      "qno": "2325",
+      "title": "Decode the Message",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 84.5
+    },
+    "count_number_of_bad_pairs": {
+      "qno": "2364",
+      "title": "Count Number of Bad Pairs",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41.8
+    },
+    "check_distances_between_same_letters": {
+      "qno": "2399",
+      "title": "Check Distances Between Same Letters",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 70.6
+    },
+    "find_subarrays_with_equal_sum": {
+      "qno": "2395",
+      "title": "Find Subarrays With Equal Sum",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 65.2
+    },
+    "task_scheduler_ii": {
+      "qno": "2365",
+      "title": "Task Scheduler II",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Simulation"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52.4
+    },
+    "odd_string_difference": {
+      "qno": "2451",
+      "title": "Odd String Difference",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 59.2
+    },
+    "convert_an_array_into_a_2d_array_with_conditions": {
+      "qno": "2610",
+      "title": "Convert an Array Into a 2D Array With Conditions",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 87.2
+    },
+    "find_the_distinct_difference_array": {
+      "qno": "2670",
+      "title": "Find the Distinct Difference Array",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 77.6
+    },
+    "find_the_losers_of_the_circular_game": {
+      "qno": "2682",
+      "title": "Find the Losers of the Circular Game",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Simulation"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 49.1
+    },
+    "minimize_string_length": {
+      "qno": "2716",
+      "title": "Minimize String Length",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 75.9
+    },
+    "sum_of_matrix_after_queries": {
+      "qno": "2718",
+      "title": "Sum of Matrix After Queries",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 30.8
+    },
+    "find_maximum_number_of_string_pairs": {
+      "qno": "2744",
+      "title": "Find Maximum Number of String Pairs",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Simulation"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 81.4
+    },
+    "max_pair_sum_in_an_array": {
+      "qno": "2815",
+      "title": "Max Pair Sum in an Array",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 58
+    },
+    "minimum_seconds_to_equalize_a_circular_array": {
+      "qno": "2808",
+      "title": "Minimum Seconds to Equalize a Circular Array",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 26.8
+    },
+    "subarrays_distinct_element_sum_of_squares_i": {
+      "qno": "2913",
+      "title": "Subarrays Distinct Element Sum of Squares I",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 82.8
+    },
+    "maximum_linear_stock_score": {
+      "qno": "2898",
+      "title": "Maximum Linear Stock Score",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68
+    },
+    "find_common_elements_between_two_arrays": {
+      "qno": "2956",
+      "title": "Find Common Elements Between Two Arrays",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 83.4
+    },
+    "number_of_divisible_triplet_sums": {
+      "qno": "2964",
+      "title": "Number of Divisible Triplet Sums",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67
+    },
+    "existence_of_a_substring_in_a_string_and_its_reverse": {
+      "qno": "3083",
+      "title": "Existence of a Substring in a String and Its Reverse",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 66
+    },
+    "count_the_number_of_special_characters_ii": {
+      "qno": "3121",
+      "title": "Count the Number of Special Characters II",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41.2
+    },
+    "count_the_number_of_special_characters_i": {
+      "qno": "3120",
+      "title": "Count the Number of Special Characters I",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 65.2
+    },
+    "permutation_difference_between_two_strings": {
+      "qno": "3146",
+      "title": "Permutation Difference between Two Strings",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 88.8
+    },
+    "find_occurrences_of_an_element_in_an_array": {
+      "qno": "3159",
+      "title": "Find Occurrences of an Element in an Array",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 73.7
+    },
+    "find_the_number_of_distinct_colors_among_the_balls": {
+      "qno": "3160",
+      "title": "Find the Number of Distinct Colors Among the Balls",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Simulation"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41
+    },
+    "find_the_number_of_good_pairs_ii": {
+      "qno": "3164",
+      "title": "Find the Number of Good Pairs II",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 25.5
+    },
+    "find_the_number_of_good_pairs_i": {
+      "qno": "3162",
+      "title": "Find the Number of Good Pairs I",
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 86.4
+    },
+    "clear_digits": {
+      "qno": "3174",
+      "title": "Clear Digits",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Simulation"
+      ],
+      "default": "Hash Table",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 72.2
     }
 }
