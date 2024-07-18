@@ -22376,7 +22376,8 @@
         "Array",
         "Dynamic Programming",
         "Backtracking",
-        "Sorting"
+        "Sorting",
+        "Hash Table"
       ],
       "default": "Dynamic Programming",
       "difficulty": "Medium",
