@@ -38846,5 +38846,1075 @@
       "difficulty": "Easy",
       "language": "Java",
       "acceptance": 72.2
+    },
+    "zigzag_conversion": {
+      "qno": "6",
+      "title": "Zigzag Conversion",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.7
+    },
+    "string_to_integer_(atoi)": {
+      "qno": "8",
+      "title": "String to Integer (atoi)",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 17.6
+    },
+    "count_and_say": {
+      "qno": "38",
+      "title": "Count and Say",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.8
+    },
+    "length_of_last_word": {
+      "qno": "58",
+      "title": "Length of Last Word",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 52.7
+    },
+    "valid_number": {
+      "qno": "65",
+      "title": "Valid Number",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 20.1
+    },
+    "text_justification": {
+      "qno": "68",
+      "title": "Text Justification",
+      "tags": [
+        "Array",
+        "String",
+        "Simulation"
+      ],
+      "default": "String",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 44.3
+    },
+    "shortest_word_distance": {
+      "qno": "243",
+      "title": "Shortest Word Distance",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 65.4
+    },
+    "shortest_word_distance_iii": {
+      "qno": "245",
+      "title": "Shortest Word Distance III",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.5
+    },
+    "flip_game": {
+      "qno": "293",
+      "title": "Flip Game",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 64.6
+    },
+    "number_of_segments_in_a_string": {
+      "qno": "434",
+      "title": "Number of Segments in a String",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 36.4
+    },
+    "validate_ip_address": {
+      "qno": "468",
+      "title": "Validate IP Address",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 27.2
+    },
+    "license_key_formatting": {
+      "qno": "482",
+      "title": "License Key Formatting",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 43.9
+    },
+    "detect_capital": {
+      "qno": "520",
+      "title": "Detect Capital",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 56.4
+    },
+    "longest_uncommon_subsequence_i": {
+      "qno": "521",
+      "title": "Longest Uncommon Subsequence I",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 60.8
+    },
+    "student_attendance_record_i": {
+      "qno": "551",
+      "title": "Student Attendance Record I",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 49.2
+    },
+    "robot_return_to_origin": {
+      "qno": "657",
+      "title": "Robot Return to Origin",
+      "tags": [
+        "String",
+        "Simulation"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 75.9
+    },
+    "remove_comments": {
+      "qno": "722",
+      "title": "Remove Comments",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38.9
+    },
+    "to_lower_case": {
+      "qno": "709",
+      "title": "To Lower Case",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 83.5
+    },
+    "number_of_lines_to_write_string": {
+      "qno": "806",
+      "title": "Number of Lines To Write String",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 68.7
+    },
+    "goat_latin": {
+      "qno": "824",
+      "title": "Goat Latin",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 68.4
+    },
+    "positions_of_large_groups": {
+      "qno": "830",
+      "title": "Positions of Large Groups",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 52.3
+    },
+    "masking_personal_information": {
+      "qno": "831",
+      "title": "Masking Personal Information",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49
+    },
+    "delete_columns_to_make_sorted": {
+      "qno": "944",
+      "title": "Delete Columns to Make Sorted",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 74.6
+    },
+    "binary_string_with_substrings_representing_1_to_n": {
+      "qno": "1016",
+      "title": "Binary String With Substrings Representing 1 To N",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.4
+    },
+    "remove_vowels_from_a_string": {
+      "qno": "1119",
+      "title": "Remove Vowels from a String",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 91.2
+    },
+    "occurrences_after_bigram": {
+      "qno": "1078",
+      "title": "Occurrences After Bigram",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 63.5
+    },
+    "defanging_an_ip_address": {
+      "qno": "1108",
+      "title": "Defanging an IP Address",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 89.2
+    },
+    "reformat_date": {
+      "qno": "1507",
+      "title": "Reformat Date",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 66.3
+    },
+    "delete_characters_to_make_fancy_string": {
+      "qno": "1957",
+      "title": "Delete Characters to Make Fancy String",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 58.2
+    },
+    "decrypt_string_from_alphabet_to_integer_mapping": {
+      "qno": "1309",
+      "title": "Decrypt String from Alphabet to Integer Mapping",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 79.8
+    },
+    "print_words_vertically": {
+      "qno": "1324",
+      "title": "Print Words Vertically",
+      "tags": [
+        "Array",
+        "String",
+        "Simulation"
+      ],
+      "default": "String",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.2
+    },
+    "generate_a_string_with_characters_that_have_odd_counts": {
+      "qno": "1374",
+      "title": "Generate a String With Characters That Have Odd Counts",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 77.9
+    },
+    "reformat_the_string": {
+      "qno": "1417",
+      "title": "Reformat The String",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 52.7
+    },
+    "consecutive_characters": {
+      "qno": "1446",
+      "title": "Consecutive Characters",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 60.4
+    },
+    "shuffle_string": {
+      "qno": "1528",
+      "title": "Shuffle String",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 84.8
+    },
+    "thousand_separator": {
+      "qno": "1556",
+      "title": "Thousand Separator",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 53.7
+    },
+    "replace_all_?'s_to_avoid_consecutive_repeating_characters": {
+      "qno": "1576",
+      "title": "Replace All ?'s to Avoid Consecutive Repeating Characters",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 46.3
+    },
+    "rearrange_spaces_between_words": {
+      "qno": "1592",
+      "title": "Rearrange Spaces Between Words",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 43.3
+    },
+    "slowest_key": {
+      "qno": "1629",
+      "title": "Slowest Key",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 59.1
+    },
+    "check_if_two_string_arrays_are_equivalent": {
+      "qno": "1662",
+      "title": "Check If Two String Arrays are Equivalent",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 85.5
+    },
+    "goal_parser_interpretation": {
+      "qno": "1678",
+      "title": "Goal Parser Interpretation",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 87.3
+    },
+    "reformat_phone_number": {
+      "qno": "1694",
+      "title": "Reformat Phone Number",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 65.8
+    },
+    "minimum_changes_to_make_alternating_binary_string": {
+      "qno": "1758",
+      "title": "Minimum Changes To Make Alternating Binary String",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 63.8
+    },
+    "minimum_number_of_operations_to_move_all_balls_to_each_box": {
+      "qno": "1769",
+      "title": "Minimum Number of Operations to Move All Balls to Each Box",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 85.9
+    },
+    "count_items_matching_a_rule": {
+      "qno": "1773",
+      "title": "Count Items Matching a Rule",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 85
+    },
+    "check_if_binary_string_has_at_most_one_segment_of_ones": {
+      "qno": "1784",
+      "title": "Check if Binary String Has at Most One Segment of Ones",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 39.2
+    },
+    "truncate_sentence": {
+      "qno": "1816",
+      "title": "Truncate Sentence",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 85.3
+    },
+    "replace_all_digits_with_characters": {
+      "qno": "1844",
+      "title": "Replace All Digits with Characters",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 81.4
+    },
+    "longer_contiguous_segments_of_ones_than_zeros": {
+      "qno": "1869",
+      "title": "Longer Contiguous Segments of Ones than Zeros",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 61.1
+    },
+    "check_if_word_equals_summation_of_two_words": {
+      "qno": "1880",
+      "title": "Check if Word Equals Summation of Two Words",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 74.2
+    },
+    "remove_all_occurrences_of_a_substring": {
+      "qno": "1910",
+      "title": "Remove All Occurrences of a Substring",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 77.6
+    },
+    "check_if_string_is_decomposable_into_value-equal_substrings": {
+      "qno": "1933",
+      "title": "Check if String Is Decomposable Into Value-Equal Substrings",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 50.6
+    },
+    "sum_of_digits_of_string_after_convert": {
+      "qno": "1945",
+      "title": "Sum of Digits of String After Convert",
+      "tags": [
+        "String",
+        "Simulation"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 62.7
+    },
+    "number_of_strings_that_appear_as_substrings_in_word": {
+      "qno": "1967",
+      "title": "Number of Strings That Appear as Substrings in Word",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 80.9
+    },
+    "final_value_of_variable_after_performing_operations": {
+      "qno": "2011",
+      "title": "Final Value of Variable After Performing Operations",
+      "tags": [
+        "Array",
+        "String",
+        "Simulation"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 89.2
+    },
+    "check_if_numbers_are_ascending_in_a_sentence": {
+      "qno": "2042",
+      "title": "Check if Numbers Are Ascending in a Sentence",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 69.7
+    },
+    "number_of_valid_words_in_a_sentence": {
+      "qno": "2047",
+      "title": "Number of Valid Words in a Sentence",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 29.1
+    },
+    "decode_the_slanted_ciphertext": {
+      "qno": "2075",
+      "title": "Decode the Slanted Ciphertext",
+      "tags": [
+        "String",
+        "Simulation"
+      ],
+      "default": "String",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49
+    },
+    "maximum_number_of_words_found_in_sentences": {
+      "qno": "2114",
+      "title": "Maximum Number of Words Found in Sentences",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 86.5
+    },
+    "capitalize_the_title": {
+      "qno": "2129",
+      "title": "Capitalize the Title",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 64.5
+    },
+    "execution_of_all_suffix_instructions_staying_in_a_grid": {
+      "qno": "2120",
+      "title": "Execution of All Suffix Instructions Staying in a Grid",
+      "tags": [
+        "String",
+        "Simulation"
+      ],
+      "default": "String",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 82.7
+    },
+    "check_if_all_a's_appears_before_all_b's": {
+      "qno": "2124",
+      "title": "Check if All A's Appears Before All B's",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 71.6
+    },
+    "divide_a_string_into_groups_of_size_k": {
+      "qno": "2138",
+      "title": "Divide a String Into Groups of Size k",
+      "tags": [
+        "String",
+        "Simulation"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 66.7
+    },
+    "cells_in_a_range_on_an_excel_sheet": {
+      "qno": "2194",
+      "title": "Cells in a Range on an Excel Sheet",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 84.1
+    },
+    "count_prefixes_of_a_given_string": {
+      "qno": "2255",
+      "title": "Count Prefixes of a Given String",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 72.6
+    },
+    "largest_3-same-digit_number_in_string": {
+      "qno": "2264",
+      "title": "Largest 3-Same-Digit Number in String",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 69
+    },
+    "calculate_digit_sum_of_a_string": {
+      "qno": "2243",
+      "title": "Calculate Digit Sum of a String",
+      "tags": [
+        "String",
+        "Simulation"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 66.1
+    },
+    "percentage_of_letter_in_string": {
+      "qno": "2278",
+      "title": "Percentage of Letter in String",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 74.1
+    },
+    "apply_discount_to_prices": {
+      "qno": "2288",
+      "title": "Apply Discount to Prices",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 31
+    },
+    "strong_password_checker_ii": {
+      "qno": "2299",
+      "title": "Strong Password Checker II",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 54.8
+    },
+    "count_asterisks": {
+      "qno": "2315",
+      "title": "Count Asterisks",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 82.4
+    },
+    "length_of_the_longest_alphabetical_continuous_substring": {
+      "qno": "2414",
+      "title": "Length of the Longest Alphabetical Continuous Substring",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.3
+    },
+    "determine_if_two_events_have_conflict": {
+      "qno": "2446",
+      "title": "Determine if Two Events Have Conflict",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 51
+    },
+    "words_within_two_edits_of_dictionary": {
+      "qno": "2452",
+      "title": "Words Within Two Edits of Dictionary",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.7
+    },
+    "circular_sentence": {
+      "qno": "2490",
+      "title": "Circular Sentence",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 62.8
+    },
+    "maximum_value_of_a_string_in_an_array": {
+      "qno": "2496",
+      "title": "Maximum Value of a String in an Array",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 72.3
+    },
+    "shortest_distance_to_target_string_in_a_circular_array": {
+      "qno": "2515",
+      "title": "Shortest Distance to Target String in a Circular Array",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 49.3
+    },
+    "count_the_number_of_vowel_strings_in_range": {
+      "qno": "2586",
+      "title": "Count the Number of Vowel Strings in Range",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 74.1
+    },
+    "find_the_longest_balanced_substring_of_a_binary_string": {
+      "qno": "2609",
+      "title": "Find the Longest Balanced Substring of a Binary String",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 46.4
+    },
+    "number_of_senior_citizens": {
+      "qno": "2678",
+      "title": "Number of Senior Citizens",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 76.7
+    },
+    "remove_trailing_zeros_from_a_string": {
+      "qno": "2710",
+      "title": "Remove Trailing Zeros From a String",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 78.7
+    },
+    "split_strings_by_separator": {
+      "qno": "2788",
+      "title": "Split Strings by Separator",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 74.1
+    },
+    "faulty_keyboard": {
+      "qno": "2810",
+      "title": "Faulty Keyboard",
+      "tags": [
+        "String",
+        "Simulation"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 83.7
+    },
+    "check_if_a_string_is_an_acronym_of_words": {
+      "qno": "2828",
+      "title": "Check if a String Is an Acronym of Words",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 83
+    },
+    "check_if_strings_can_be_made_equal_with_operations_i": {
+      "qno": "2839",
+      "title": "Check if Strings Can be Made Equal With Operations I",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 47.1
+    },
+    "minimum_number_of_changes_to_make_binary_string_beautiful": {
+      "qno": "2914",
+      "title": "Minimum Number of Changes to Make Binary String Beautiful",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 59.9
+    },
+    "find_words_containing_character": {
+      "qno": "2942",
+      "title": "Find Words Containing Character",
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 88.6
+    },
+    "make_three_strings_equal": {
+      "qno": "2937",
+      "title": "Make Three Strings Equal",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 43.1
+    },
+    "number_of_changing_keys": {
+      "qno": "3019",
+      "title": "Number of Changing Keys",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 80.8
+    },
+    "score_of_a_string": {
+      "qno": "3110",
+      "title": "Score of a String",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 93.5
+    },
+    "valid_word": {
+      "qno": "3136",
+      "title": "Valid Word",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 37.2
+    },
+    "minimum_number_of_chairs_in_a_waiting_room": {
+      "qno": "3168",
+      "title": "Minimum Number of Chairs in a Waiting Room",
+      "tags": [
+        "String",
+        "Simulation"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 80.2
+    },
+    "string_compression_iii": {
+      "qno": "3163",
+      "title": "String Compression III",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.6
+    },
+    "find_the_encrypted_string": {
+      "qno": "3210",
+      "title": "Find the Encrypted String",
+      "tags": [
+        "String"
+      ],
+      "default": "String",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 69.5
     }
 }
