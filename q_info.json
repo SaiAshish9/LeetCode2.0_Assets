@@ -33695,5 +33695,14 @@
       "difficulty": "Medium",
       "language": "Java",
       "acceptance": 49.3
+    },
+    "array_nesting": {
+      "qno": "565",
+      "title": "Array Nesting",
+      "tags": [],
+      "default": "Depth-First Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.3
     }
 }
