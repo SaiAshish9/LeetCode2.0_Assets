@@ -4280,7 +4280,8 @@
         "Sorting",
         "Heap (Priority Queue)",
         "Bucket Sort",
-        "Counting"
+        "Counting",
+        "Hash Table"
       ],
       "default": "Heap (Priority Queue)",
       "difficulty": "Medium",
