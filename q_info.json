@@ -36351,5 +36351,1412 @@
       "difficulty": "Medium",
       "language": "Java",
       "acceptance": 33.5
+    },
+    "reverse_integer": {
+      "qno": "7",
+      "title": "Reverse Integer",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 28.9
+    },
+    "palindrome_number": {
+      "qno": "9",
+      "title": "Palindrome Number",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 57
+    },
+    "integer_to_roman": {
+      "qno": "12",
+      "title": "Integer to Roman",
+      "tags": [
+        "Hash Table",
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.5
+    },
+    "roman_to_integer": {
+      "qno": "13",
+      "title": "Roman to Integer",
+      "tags": [
+        "Hash Table",
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 61.9
+    },
+    "multiply_strings": {
+      "qno": "43",
+      "title": "Multiply Strings",
+      "tags": [
+        "Math",
+        "String",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 40.7
+    },
+    "plus_one": {
+      "qno": "66",
+      "title": "Plus One",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 45.7
+    },
+    "fraction_to_recurring_decimal": {
+      "qno": "166",
+      "title": "Fraction to Recurring Decimal",
+      "tags": [
+        "Hash Table",
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 25.2
+    },
+    "excel_sheet_column_title": {
+      "qno": "168",
+      "title": "Excel Sheet Column Title",
+      "tags": [
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 41.1
+    },
+    "excel_sheet_column_number": {
+      "qno": "171",
+      "title": "Excel Sheet Column Number",
+      "tags": [
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 64.1
+    },
+    "factorial_trailing_zeroes": {
+      "qno": "172",
+      "title": "Factorial Trailing Zeroes",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.6
+    },
+    "ugly_number": {
+      "qno": "263",
+      "title": "Ugly Number",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 42
+    },
+    "line_reflection": {
+      "qno": "356",
+      "title": "Line Reflection",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 35.7
+    },
+    "fizz_buzz": {
+      "qno": "412",
+      "title": "Fizz Buzz",
+      "tags": [
+        "Math",
+        "String",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 72.6
+    },
+    "add_strings": {
+      "qno": "415",
+      "title": "Add Strings",
+      "tags": [
+        "Math",
+        "String",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 51.7
+    },
+    "reconstruct_original_digits_from_english": {
+      "qno": "423",
+      "title": "Reconstruct Original Digits from English",
+      "tags": [
+        "Hash Table",
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.2
+    },
+    "number_of_boomerangs": {
+      "qno": "447",
+      "title": "Number of Boomerangs",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.6
+    },
+    "minimum_moves_to_equal_array_elements": {
+      "qno": "453",
+      "title": "Minimum Moves to Equal Array Elements",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.9
+    },
+    "construct_the_rectangle": {
+      "qno": "492",
+      "title": "Construct the Rectangle",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 58.2
+    },
+    "base_7": {
+      "qno": "504",
+      "title": "Base 7",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 50.4
+    },
+    "perfect_number": {
+      "qno": "507",
+      "title": "Perfect Number",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 41.3
+    },
+    "complex_number_multiplication": {
+      "qno": "537",
+      "title": "Complex Number Multiplication",
+      "tags": [
+        "Math",
+        "String",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.9
+    },
+    "find_the_closest_palindrome": {
+      "qno": "564",
+      "title": "Find the Closest Palindrome",
+      "tags": [
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 22.5
+    },
+    "squirrel_simulation": {
+      "qno": "573",
+      "title": "Squirrel Simulation",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.2
+    },
+    "fraction_addition_and_subtraction": {
+      "qno": "592",
+      "title": "Fraction Addition and Subtraction",
+      "tags": [
+        "Math",
+        "String",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.5
+    },
+    "range_addition_ii": {
+      "qno": "598",
+      "title": "Range Addition II",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 56.3
+    },
+    "solve_the_equation": {
+      "qno": "640",
+      "title": "Solve the Equation",
+      "tags": [
+        "Math",
+        "String",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.9
+    },
+    "remove_9": {
+      "qno": "660",
+      "title": "Remove 9",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 57.4
+    },
+    "beautiful_arrangement_ii": {
+      "qno": "667",
+      "title": "Beautiful Arrangement II",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.2
+    },
+    "self_dividing_numbers": {
+      "qno": "728",
+      "title": "Self Dividing Numbers",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 78.8
+    },
+    "global_and_local_inversions": {
+      "qno": "775",
+      "title": "Global and Local Inversions",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 42.5
+    },
+    "reaching_points": {
+      "qno": "780",
+      "title": "Reaching Points",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 33.3
+    },
+    "escape_the_ghosts": {
+      "qno": "789",
+      "title": "Escape The Ghosts",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.9
+    },
+    "smallest_range_i": {
+      "qno": "908",
+      "title": "Smallest Range I",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 70.3
+    },
+    "three_equal_parts": {
+      "qno": "927",
+      "title": "Three Equal Parts",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 39.9
+    },
+    "equal_rational_numbers": {
+      "qno": "972",
+      "title": "Equal Rational Numbers",
+      "tags": [
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 44.2
+    },
+    "add_to_array-form_of_integer": {
+      "qno": "989",
+      "title": "Add to Array-Form of Integer",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 45.2
+    },
+    "smallest_integer_divisible_by_k": {
+      "qno": "1015",
+      "title": "Smallest Integer Divisible by K",
+      "tags": [
+        "Hash Table",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46.6
+    },
+    "confusing_number": {
+      "qno": "1056",
+      "title": "Confusing Number",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 48.8
+    },
+    "convert_to_base_-2": {
+      "qno": "1017",
+      "title": "Convert to Base -2",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.8
+    },
+    "sum_of_digits_in_the_minimum_number": {
+      "qno": "1085",
+      "title": "Sum of Digits in the Minimum Number",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 76.4
+    },
+    "number_of_days_in_a_month": {
+      "qno": "1118",
+      "title": "Number of Days in a Month",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 58.3
+    },
+    "armstrong_number": {
+      "qno": "1134",
+      "title": "Armstrong Number",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 77.8
+    },
+    "robot_bounded_in_circle": {
+      "qno": "1041",
+      "title": "Robot Bounded In Circle",
+      "tags": [
+        "Math",
+        "String",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.8
+    },
+    "count_substrings_with_only_one_distinct_letter": {
+      "qno": "1180",
+      "title": "Count Substrings with Only One Distinct Letter",
+      "tags": [
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 80
+    },
+    "greatest_common_divisor_of_strings": {
+      "qno": "1071",
+      "title": "Greatest Common Divisor of Strings",
+      "tags": [
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 51.5
+    },
+    "adding_two_negabinary_numbers": {
+      "qno": "1073",
+      "title": "Adding Two Negabinary Numbers",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.9
+    },
+    "missing_number_in_arithmetic_progression": {
+      "qno": "1228",
+      "title": "Missing Number In Arithmetic Progression",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 51.9
+    },
+    "distribute_candies_to_people": {
+      "qno": "1103",
+      "title": "Distribute Candies to People",
+      "tags": [
+        "Math",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 65.4
+    },
+    "hexspeak": {
+      "qno": "1271",
+      "title": "Hexspeak",
+      "tags": [
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 58
+    },
+    "maximum_of_absolute_value_expression": {
+      "qno": "1131",
+      "title": "Maximum of Absolute Value Expression",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.4
+    },
+    "day_of_the_year": {
+      "qno": "1154",
+      "title": "Day of the Year",
+      "tags": [
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 48.9
+    },
+    "number_of_days_between_two_dates": {
+      "qno": "1360",
+      "title": "Number of Days Between Two Dates",
+      "tags": [
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 50
+    },
+    "closest_divisors": {
+      "qno": "1362",
+      "title": "Closest Divisors",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.8
+    },
+    "prime_arrangements": {
+      "qno": "1175",
+      "title": "Prime Arrangements",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 57.5
+    },
+    "four_divisors": {
+      "qno": "1390",
+      "title": "Four Divisors",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 42.9
+    },
+    "day_of_the_week": {
+      "qno": "1185",
+      "title": "Day of the Week",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 57.6
+    },
+    "perform_string_shifts": {
+      "qno": "1427",
+      "title": "Perform String Shifts",
+      "tags": [
+        "Array",
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 54.8
+    },
+    "find_palindrome_with_fixed_length": {
+      "qno": "2217",
+      "title": "Find Palindrome With Fixed Length",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 37.1
+    },
+    "cells_with_odd_values_in_a_matrix": {
+      "qno": "1252",
+      "title": "Cells with Odd Values in a Matrix",
+      "tags": [
+        "Array",
+        "Math",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 78.7
+    },
+    "number_of_single_divisor_triplets": {
+      "qno": "2198",
+      "title": "Number of Single Divisor Triplets",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.7
+    },
+    "number_of_burgers_with_no_waste_of_ingredients": {
+      "qno": "1276",
+      "title": "Number of Burgers with No Waste of Ingredients",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.1
+    },
+    "subtract_the_product_and_sum_of_digits_of_an_integer": {
+      "qno": "1281",
+      "title": "Subtract the Product and Sum of Digits of an Integer",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 86.5
+    },
+    "find_n_unique_integers_sum_up_to_zero": {
+      "qno": "1304",
+      "title": "Find N Unique Integers Sum up to Zero",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 76.2
+    },
+    "convert_integer_to_the_sum_of_two_no-zero_integers": {
+      "qno": "1317",
+      "title": "Convert Integer to the Sum of Two No-Zero Integers",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 54
+    },
+    "angle_between_hands_of_a_clock": {
+      "qno": "1344",
+      "title": "Angle Between Hands of a Clock",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63.8
+    },
+    "count_largest_group": {
+      "qno": "1399",
+      "title": "Count Largest Group",
+      "tags": [
+        "Hash Table",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 66.4
+    },
+    "count_odd_numbers_in_an_interval_range": {
+      "qno": "1523",
+      "title": "Count Odd Numbers in an Interval Range",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 49.9
+    },
+    "number_of_substrings_with_only_1s": {
+      "qno": "1513",
+      "title": "Number of Substrings With Only 1s",
+      "tags": [
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46.9
+    },
+    "water_bottles": {
+      "qno": "1518",
+      "title": "Water Bottles",
+      "tags": [
+        "Math",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 71
+    },
+    "minimum_operations_to_make_array_equal": {
+      "qno": "1551",
+      "title": "Minimum Operations to Make Array Equal",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 82.3
+    },
+    "number_of_ways_to_split_a_string": {
+      "qno": "1573",
+      "title": "Number of Ways to Split a String",
+      "tags": [
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 33.4
+    },
+    "count_of_matches_in_tournament": {
+      "qno": "1688",
+      "title": "Count of Matches in Tournament",
+      "tags": [
+        "Math",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 85.7
+    },
+    "calculate_money_in_leetcode_bank": {
+      "qno": "1716",
+      "title": "Calculate Money in Leetcode Bank",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 78.3
+    },
+    "count_number_of_homogenous_substrings": {
+      "qno": "1759",
+      "title": "Count Number of Homogenous Substrings",
+      "tags": [
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.7
+    },
+    "check_if_number_is_a_sum_of_powers_of_three": {
+      "qno": "1780",
+      "title": "Check if Number is a Sum of Powers of Three",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.9
+    },
+    "determine_color_of_a_chessboard_square": {
+      "qno": "1812",
+      "title": "Determine Color of a Chessboard Square",
+      "tags": [
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 78.5
+    },
+    "minimum_number_of_operations_to_reinitialize_a_permutation": {
+      "qno": "1806",
+      "title": "Minimum Number of Operations to Reinitialize a Permutation",
+      "tags": [
+        "Array",
+        "Math",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 72.7
+    },
+    "sign_of_the_product_of_an_array": {
+      "qno": "1822",
+      "title": "Sign of the Product of an Array",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 65.3
+    },
+    "sum_of_digits_in_base_k": {
+      "qno": "1837",
+      "title": "Sum of Digits in Base K",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 77.6
+    },
+    "incremental_memory_leak": {
+      "qno": "1860",
+      "title": "Incremental Memory Leak",
+      "tags": [
+        "Math",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 72.1
+    },
+    "the_number_of_full_rounds_you_have_played": {
+      "qno": "1904",
+      "title": "The Number of Full Rounds You Have Played",
+      "tags": [
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.9
+    },
+    "find_missing_observations": {
+      "qno": "2028",
+      "title": "Find Missing Observations",
+      "tags": [
+        "Array",
+        "Math",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46.7
+    },
+    "abbreviating_the_product_of_a_range": {
+      "qno": "2117",
+      "title": "Abbreviating the Product of a Range",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 26.2
+    },
+    "a_number_after_a_double_reversal": {
+      "qno": "2119",
+      "title": "A Number After a Double Reversal",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 80.1
+    },
+    "find_three_consecutive_integers_that_sum_to_a_given_number": {
+      "qno": "2177",
+      "title": "Find Three Consecutive Integers That Sum to a Given Number",
+      "tags": [
+        "Math",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.5
+    },
+    "count_operations_to_obtain_zero": {
+      "qno": "2169",
+      "title": "Count Operations to Obtain Zero",
+      "tags": [
+        "Math",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 74.5
+    },
+    "count_integers_with_even_digit_sum": {
+      "qno": "2180",
+      "title": "Count Integers With Even Digit Sum",
+      "tags": [
+        "Math",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 67.1
+    },
+    "add_two_integers": {
+      "qno": "2235",
+      "title": "Add Two Integers",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 87.8
+    },
+    "number_of_zero-filled_subarrays": {
+      "qno": "2348",
+      "title": "Number of Zero-Filled Subarrays",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.7
+    },
+    "count_days_spent_together": {
+      "qno": "2409",
+      "title": "Count Days Spent Together",
+      "tags": [
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 45.1
+    },
+    "count_number_of_distinct_integers_after_reverse_operations": {
+      "qno": "2442",
+      "title": "Count Number of Distinct Integers After Reverse Operations",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 79.6
+    },
+    "color_the_triangle_red": {
+      "qno": "2647",
+      "title": "Color the Triangle Red",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 66.2
+    },
+    "average_value_of_even_numbers_that_are_divisible_by_three": {
+      "qno": "2455",
+      "title": "Average Value of Even Numbers That Are Divisible by Three",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 60.5
+    },
+    "convert_the_temperature": {
+      "qno": "2469",
+      "title": "Convert the Temperature",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 89.6
+    },
+    "number_of_distinct_binary_strings_after_applying_operations": {
+      "qno": "2450",
+      "title": "Number of Distinct Binary Strings After Applying Operations",
+      "tags": [
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63
+    },
+    "count_the_digits_that_divide_a_number": {
+      "qno": "2520",
+      "title": "Count the Digits That Divide a Number",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 84.6
+    },
+    "categorize_box_according_to_criteria": {
+      "qno": "2525",
+      "title": "Categorize Box According to Criteria",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 35.7
+    },
+    "difference_between_element_sum_and_digit_sum_of_an_array": {
+      "qno": "2535",
+      "title": "Difference Between Element Sum and Digit Sum of an Array",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 84.4
+    },
+    "alternating_digit_sum": {
+      "qno": "2544",
+      "title": "Alternating Digit Sum",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 68.2
+    },
+    "pass_the_pillow": {
+      "qno": "2582",
+      "title": "Pass the Pillow",
+      "tags": [
+        "Math",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 57.1
+    },
+    "count_total_number_of_colored_cells": {
+      "qno": "2579",
+      "title": "Count Total Number of Colored Cells",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57.7
+    },
+    "count_distinct_numbers_on_board": {
+      "qno": "2549",
+      "title": "Count Distinct Numbers on Board",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Math",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 60.3
+    },
+    "find_the_divisibility_array_of_a_string": {
+      "qno": "2575",
+      "title": "Find the Divisibility Array of a String",
+      "tags": [
+        "Array",
+        "Math",
+        "String"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 32.8
+    },
+    "calculate_delayed_arrival_time": {
+      "qno": "2651",
+      "title": "Calculate Delayed Arrival Time",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 78.5
+    },
+    "sum_multiples": {
+      "qno": "2652",
+      "title": "Sum Multiples",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 85.6
+    },
+    "find_the_maximum_achievable_number": {
+      "qno": "2769",
+      "title": "Find the Maximum Achievable Number",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 90.4
+    },
+    "check_if_the_number_is_fascinating": {
+      "qno": "2729",
+      "title": "Check if The Number is Fascinating",
+      "tags": [
+        "Hash Table",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 52.1
+    },
+    "total_distance_traveled": {
+      "qno": "2739",
+      "title": "Total Distance Traveled",
+      "tags": [
+        "Math",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 39.3
+    },
+    "account_balance_after_rounded_purchase": {
+      "qno": "2806",
+      "title": "Account Balance After Rounded Purchase",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 52.5
+    },
+    "determine_if_a_cell_is_reachable_at_a_given_time": {
+      "qno": "2849",
+      "title": "Determine if a Cell Is Reachable at a Given Time",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 35.7
+    },
+    "divisible_and_non-divisible_sums_difference": {
+      "qno": "2894",
+      "title": "Divisible and Non-divisible Sums Difference",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 89
+    },
+    "double_modular_exponentiation": {
+      "qno": "2961",
+      "title": "Double Modular Exponentiation",
+      "tags": [
+        "Array",
+        "Math",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.9
+    },
+    "alice_and_bob_playing_flower_game": {
+      "qno": "3021",
+      "title": "Alice and Bob Playing Flower Game",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.7
+    },
+    "water_bottles_ii": {
+      "qno": "3100",
+      "title": "Water Bottles II",
+      "tags": [
+        "Math",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63.6
+    },
+    "find_the_sum_of_encrypted_integers": {
+      "qno": "3079",
+      "title": "Find the Sum of Encrypted Integers",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 74.2
+    },
+    "harshad_number": {
+      "qno": "3099",
+      "title": "Harshad Number",
+      "tags": [
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 82.9
+    },
+    "count_alternating_subarrays": {
+      "qno": "3101",
+      "title": "Count Alternating Subarrays",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57
+    },
+    "find_the_child_who_has_the_ball_after_k_seconds": {
+      "qno": "3178",
+      "title": "Find the Child Who Has the Ball After K Seconds",
+      "tags": [
+        "Math",
+        "Simulation"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 61.8
+    },
+    "find_minimum_operations_to_make_all_elements_divisible_by_three": {
+      "qno": "3190",
+      "title": "Find Minimum Operations to Make All Elements Divisible by Three",
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "default": "Math",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 89.4
     }
 }
