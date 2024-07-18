@@ -24,9 +24,19 @@
         "two-pointers": "class Solution {\n\n    public String longestPalindrome(String s) {\n        if (s == null || s.length() == 0) {\n            return \"\";\n        }\n        int n = s.length();\n        int start = 0;\n        int maxLen = 1; \n        for (int i = 0; i < n; i++) {\n            int len1 = expandAroundCenter(s, i, i); // odd-length palindromes           \n            int len2 = expandAroundCenter(s, i, i + 1); // even-length palindromes\n            int maxLenCurr = Math.max(len1, len2);\n            if (maxLenCurr > maxLen) {\n                maxLen = maxLenCurr;\n                start = i - (maxLen - 1) / 2;\n            }\n        }\n        \n        return s.substring(start, start + maxLen);\n    }\n    \n    private int expandAroundCenter(String s, int left, int right) {\n        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {\n            left--;\n            right++;\n        }\n        return right - left - 1;\n    }\n}\n"
       }
     },
+    "6": {
+      "java": {
+        "string": ""
+      }
+    },
     "7": {
       "java": {
         "math": ""
+      }
+    },
+    "8": {
+      "java": {
+        "string": ""
       }
     },
     "9": {
@@ -160,6 +170,11 @@
         "backtracking": "public class Solution {\n\n   public boolean isSafe(int[][] board, int row, int col, int num, int n) {\n        for (int j = 0; j < n; j++)\n            if (board[row][j] == num)\n                return false;\n\n        for (int i = 0; i < n; i++)\n            if (board[i][col] == num)\n                return false;\n\n        int startRow = row - row % 3,\n                startCol = col - col % 3;\n\n        // check within the section (3 * 3)(n = 3)\n        for (int i = 0; i < 3; i++) {\n            for (int j = 0; j < 3; j++) {\n                if (board[i + startRow][j + startCol] == num)\n                    return false;\n            }\n        }\n\n        return true;\n    }\n\n    boolean solve(int[][] board, int row, int col, int n) {\n        // avoid further tracking if all cells are explored\n        if (row == n - 1 && col == n)\n            return true;\n\n        // move to next row\n        if (col == n) {\n            row++;\n            col = 0;\n        }\n\n        // check for next element horizontally if element is\n        // already present\n        if (board[row][col] != 0)\n            return solve(board, row, col + 1, n);\n\n        // if present value is 0, replace it with values from 0-9\n        for (int num = 1; num < n + 1; num++) {\n            if (isSafe(board, row, col, num, n)) {\n                board[row][col] = num;\n        // check for next column\n                if (solve(board, row, col + 1, n)) {\n                    return true;\n                }\n            }\n            board[row][col] = 0;\n        }\n\n        return false;\n    }\n\n    public void solveSudoku(char[][] board) {\n        int n = board[0].length;\n        int grid[][] = new int[n][n];\n        for (int i = 0; i < n; i++) {\n            for (int j = 0; j < n; j++) {\n                if (board[i][j] == '.') {\n                    grid[i][j] = 0;\n                } else {\n                    grid[i][j] = Integer.parseInt(String.valueOf(board[i][j]));\n                }\n            }\n        }\n        solve(grid, 0, 0, n);\n        for (int i = 0; i < n; i++) {\n            for (int j = 0; j < n; j++) {\n                if (grid[i][j] == 0) {\n                    board[i][j] = '.';\n                } else {\n                    board[i][j] = (char) (grid[i][j] + '0');\n                }\n            }\n        }\n    }\n\n}\n"
       }
     },
+    "38": {
+      "java": {
+        "string": ""
+      }
+    },
     "39": {
       "java": {
         "backtracking": ""
@@ -251,6 +266,11 @@
         "sorting": ""
       }
     },
+    "58": {
+      "java": {
+        "string": ""
+      }
+    },
     "59": {
       "java": {
         "matrix": "public class Solution {\n\n    private static final int[] dr = {0, 1, 0, -1}; \n    private static final int[] dc = {1, 0, -1, 0}; \n\n    public int[][] generateMatrix(int n) {\n        int[][] matrix = new int[n][n];\n        boolean[][] visited = new boolean[n][n];\n        int row = 0, col = 0, dir = 0;\n        for (int i = 1; i <= n * n; i++) {\n            matrix[row][col] = i;\n            visited[row][col] = true;\n\n            int nextRow = row + dr[dir];\n            int nextCol = col + dc[dir];\n\n            if (nextRow < 0 || nextRow >= n || nextCol < 0 || nextCol >= n || visited[nextRow][nextCol]) {\n                dir = (dir + 1) % 4; // change direction\n                nextRow = row + dr[dir];\n                nextCol = col + dc[dir];\n            }\n\n            row = nextRow;\n            col = nextCol;\n        }\n        return matrix;\n    }\n\n}\n"
@@ -281,6 +301,11 @@
         "matrix": ""
       }
     },
+    "65": {
+      "java": {
+        "string": ""
+      }
+    },
     "66": {
       "java": {
         "math": ""
@@ -289,6 +314,11 @@
     "67": {
       "java": {
         "bit-manipulation": ""
+      }
+    },
+    "68": {
+      "java": {
+        "string": ""
       }
     },
     "69": {
@@ -1135,9 +1165,19 @@
         "sorting": ""
       }
     },
+    "243": {
+      "java": {
+        "string": ""
+      }
+    },
     "244": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "245": {
+      "java": {
+        "string": ""
       }
     },
     "246": {
@@ -1368,6 +1408,11 @@
     "292": {
       "java": {
         "brainteaser": "class Solution {\n    public boolean canWinNim(int n) {\n        return n % 4 != 0;\n    }\n}\n"
+      }
+    },
+    "293": {
+      "java": {
+        "string": ""
       }
     },
     "294": {
@@ -2074,6 +2119,11 @@
         "breadth-first-search": ""
       }
     },
+    "434": {
+      "java": {
+        "string": ""
+      }
+    },
     "435": {
       "java": {
         "dynamic-programming": ""
@@ -2239,6 +2289,11 @@
         "dynamic-programming": ""
       }
     },
+    "468": {
+      "java": {
+        "string": ""
+      }
+    },
     "469": {
       "java": {
         "geometry": ""
@@ -2302,6 +2357,11 @@
     "481": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "482": {
+      "java": {
+        "string": ""
       }
     },
     "483": {
@@ -2484,6 +2544,16 @@
         "reservoir-sampling": "import java.util.HashMap;\nimport java.util.Map;\nimport java.util.Random;\n\npublic class Solution {\n    private int m, n, totalCells;\n    private Map<Integer, Integer> map;\n    private Random rand;\n\n    public Solution(int m, int n) {\n        this.m = m;\n        this.n = n;\n        this.totalCells = m * n;\n        this.map = new HashMap<>();\n        this.rand = new Random();\n    }\n\n    public int[] flip() {\n        int randomCell = rand.nextInt(totalCells);\n        totalCells--;\n\n        // Use map to get the actual position or the random position\n        int position = map.getOrDefault(randomCell, randomCell);\n\n        // Map the selected position to the last available cell position\n        map.put(randomCell, map.getOrDefault(totalCells, totalCells));\n\n        return new int[]{position / n, position % n};\n    }\n\n    public void reset() {\n        map.clear();\n        totalCells = m * n;\n    }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution obj = new Solution(m, n);\n * int[] param_1 = obj.flip();\n * obj.reset();\n */"
       }
     },
+    "520": {
+      "java": {
+        "string": ""
+      }
+    },
+    "521": {
+      "java": {
+        "string": ""
+      }
+    },
     "522": {
       "java": {
         "two-pointers": ""
@@ -2622,6 +2692,11 @@
     "550": {
       "java": {
         "database": ""
+      }
+    },
+    "551": {
+      "java": {
+        "string": ""
       }
     },
     "552": {
@@ -3150,6 +3225,11 @@
         "dynamic-programming": ""
       }
     },
+    "657": {
+      "java": {
+        "string": ""
+      }
+    },
     "658": {
       "java": {
         "two-pointers": "class Solution {\n    public List<Integer> findClosestElements(int[] arr, int k, int x) {\n        int left = 0;\n        int right = arr.length - k;\n\n        while (left < right) {\n            int mid = left + (right - left) / 2;\n            if (x - arr[mid] <= arr[mid + k] - x) {\n                right = mid;\n            } else {\n                left = mid + 1;\n            }\n        }\n\n        List<Integer> result = new ArrayList<>();\n        for (int i = left; i < left + k; i++) {\n            result.add(arr[i]);\n        }\n\n        return result;\n    }\n}\n"
@@ -3391,6 +3471,11 @@
         "linked-list": ""
       }
     },
+    "709": {
+      "java": {
+        "string": ""
+      }
+    },
     "710": {
       "java": {
         "randomized": ""
@@ -3444,6 +3529,11 @@
     "721": {
       "java": {
         "union-find": ""
+      }
+    },
+    "722": {
+      "java": {
+        "string": ""
       }
     },
     "723": {
@@ -3846,6 +3936,11 @@
         "dynamic-programming": ""
       }
     },
+    "806": {
+      "java": {
+        "string": ""
+      }
+    },
     "807": {
       "java": {
         "matrix": ""
@@ -3931,6 +4026,11 @@
         "dynamic-programming": ""
       }
     },
+    "824": {
+      "java": {
+        "string": ""
+      }
+    },
     "825": {
       "java": {
         "two-pointers": ""
@@ -3954,6 +4054,16 @@
     "829": {
       "java": {
         "enumeration": ""
+      }
+    },
+    "830": {
+      "java": {
+        "string": ""
+      }
+    },
+    "831": {
+      "java": {
+        "string": ""
       }
     },
     "832": {
@@ -4488,6 +4598,11 @@
         "dynamic-programming": ""
       }
     },
+    "944": {
+      "java": {
+        "string": ""
+      }
+    },
     "945": {
       "java": {
         "counting": ""
@@ -4834,6 +4949,11 @@
         "math": ""
       }
     },
+    "1016": {
+      "java": {
+        "string": ""
+      }
+    },
     "1017": {
       "java": {
         "math": ""
@@ -5131,6 +5251,11 @@
         "database": ""
       }
     },
+    "1078": {
+      "java": {
+        "string": ""
+      }
+    },
     "1079": {
       "java": {
         "backtracking": ""
@@ -5276,6 +5401,11 @@
         "database": ""
       }
     },
+    "1108": {
+      "java": {
+        "string": ""
+      }
+    },
     "1109": {
       "java": {
         "prefix-sum": ""
@@ -5324,6 +5454,11 @@
     "1118": {
       "java": {
         "math": ""
+      }
+    },
+    "1119": {
+      "java": {
+        "string": ""
       }
     },
     "1120": {
@@ -6229,6 +6364,11 @@
         "database": ""
       }
     },
+    "1309": {
+      "java": {
+        "string": ""
+      }
+    },
     "1310": {
       "java": {
         "prefix-sum": ""
@@ -6292,6 +6432,11 @@
     "1323": {
       "java": {
         "greedy": ""
+      }
+    },
+    "1324": {
+      "java": {
+        "string": ""
       }
     },
     "1325": {
@@ -6539,6 +6684,11 @@
         "binary-search-tree": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n * int val;\n * TreeNode left;\n * TreeNode right;\n * TreeNode() {}\n * TreeNode(int val) { this.val = val; }\n * TreeNode(int val, TreeNode left, TreeNode right) {\n * this.val = val;\n * this.left = left;\n * this.right = right;\n * }\n * }\n */\nclass Solution {\n    private int maxSum = 0;\n\n    public int maxSumBST(TreeNode root) {\n        dfs(root);\n        return maxSum;\n    }\n\n    private int[] dfs(TreeNode node) {\n        if (node == null) {\n            return new int[] { 1, Integer.MAX_VALUE, Integer.MIN_VALUE, 0 }; // isBST, min, max, sum\n        }\n\n        int[] left = dfs(node.left);\n        int[] right = dfs(node.right);\n\n        if (left[0] == 1 && right[0] == 1 && node.val > left[2] && node.val < right[1]) {\n            int sum = left[3] + right[3] + node.val;\n            maxSum = Math.max(maxSum, sum);\n            int min = Math.min(left[1], node.val);\n            int max = Math.max(right[2], node.val);\n            return new int[] { 1, min, max, sum };\n        } else {\n            return new int[] { 0, 0, 0, 0 }; // not a BST\n        }\n    }\n}\n"
       }
     },
+    "1374": {
+      "java": {
+        "string": ""
+      }
+    },
     "1376": {
       "java": {
         "tree": ""
@@ -6734,6 +6884,11 @@
         "dynamic-programming": ""
       }
     },
+    "1417": {
+      "java": {
+        "string": ""
+      }
+    },
     "1418": {
       "java": {
         "ordered-set": ""
@@ -6862,6 +7017,11 @@
     "1445": {
       "java": {
         "database": ""
+      }
+    },
+    "1446": {
+      "java": {
+        "string": ""
       }
     },
     "1447": {
@@ -7149,6 +7309,11 @@
         "tree": ""
       }
     },
+    "1507": {
+      "java": {
+        "string": ""
+      }
+    },
     "1508": {
       "java": {
         "two-pointers": ""
@@ -7247,6 +7412,11 @@
     "1527": {
       "java": {
         "database": ""
+      }
+    },
+    "1528": {
+      "java": {
+        "string": ""
       }
     },
     "1529": {
@@ -7369,6 +7539,11 @@
         "database": ""
       }
     },
+    "1556": {
+      "java": {
+        "string": ""
+      }
+    },
     "1557": {
       "java": {
         "graph": ""
@@ -7454,6 +7629,11 @@
         "dynamic-programming": ""
       }
     },
+    "1576": {
+      "java": {
+        "string": ""
+      }
+    },
     "1577": {
       "java": {
         "two-pointers": ""
@@ -7522,6 +7702,11 @@
     "1591": {
       "java": {
         "matrix": ""
+      }
+    },
+    "1592": {
+      "java": {
+        "string": ""
       }
     },
     "1593": {
@@ -7699,6 +7884,11 @@
         "stack": ""
       }
     },
+    "1629": {
+      "java": {
+        "string": ""
+      }
+    },
     "1630": {
       "java": {
         "sorting": ""
@@ -7854,6 +8044,11 @@
         "database": ""
       }
     },
+    "1662": {
+      "java": {
+        "string": ""
+      }
+    },
     "1663": {
       "java": {
         "greedy": ""
@@ -7929,6 +8124,11 @@
         "database": ""
       }
     },
+    "1678": {
+      "java": {
+        "string": ""
+      }
+    },
     "1679": {
       "java": {
         "two-pointers": ""
@@ -8002,6 +8202,11 @@
     "1693": {
       "java": {
         "database": ""
+      }
+    },
+    "1694": {
+      "java": {
+        "string": ""
       }
     },
     "1695": {
@@ -8304,6 +8509,11 @@
         "database": ""
       }
     },
+    "1758": {
+      "java": {
+        "string": ""
+      }
+    },
     "1759": {
       "java": {
         "math": ""
@@ -8349,6 +8559,11 @@
         "two-pointers": ""
       }
     },
+    "1769": {
+      "java": {
+        "string": ""
+      }
+    },
     "1770": {
       "java": {
         "dynamic-programming": ""
@@ -8362,6 +8577,11 @@
     "1772": {
       "java": {
         "sorting": ""
+      }
+    },
+    "1773": {
+      "java": {
+        "string": ""
       }
     },
     "1774": {
@@ -8407,6 +8627,11 @@
     "1783": {
       "java": {
         "database": ""
+      }
+    },
+    "1784": {
+      "java": {
+        "string": ""
       }
     },
     "1785": {
@@ -8559,6 +8784,11 @@
         "dynamic-programming": ""
       }
     },
+    "1816": {
+      "java": {
+        "string": ""
+      }
+    },
     "1817": {
       "java": {
         "hash-table": ""
@@ -8694,6 +8924,11 @@
         "database": ""
       }
     },
+    "1844": {
+      "java": {
+        "string": ""
+      }
+    },
     "1845": {
       "java": {
         "heap-(priority-queue)": ""
@@ -8809,6 +9044,11 @@
         "two-pointers": ""
       }
     },
+    "1869": {
+      "java": {
+        "string": ""
+      }
+    },
     "1871": {
       "java": {
         "sliding-window": "class Solution {\n  public boolean canReach(String s, int minJump, int maxJump) {\n    int count = 0;\n    boolean dp[] = new boolean[s.length()];\n    dp[0] = true;\n\n    for (int i = minJump; i < s.length(); ++i) {\n      count += dp[i - minJump] ? 1 : 0;\n      if (i - maxJump > 0)\n        count -= dp[i - maxJump - 1] ? 1 : 0;\n      dp[i] = count > 0 && s.charAt(i) == '0';\n    }\n\n    return dp[dp.length - 1];\n  }\n}"
@@ -8852,6 +9092,11 @@
     "1879": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1880": {
+      "java": {
+        "string": ""
       }
     },
     "1881": {
@@ -8989,6 +9234,11 @@
         "brainteaser": "class Solution {\n    public boolean nimGame(int[] piles) {\n        int xor = 0;\n        for (int pile : piles)\n            xor ^= pile;\n        return xor != 0;\n    }\n}"
       }
     },
+    "1910": {
+      "java": {
+        "string": ""
+      }
+    },
     "1911": {
       "java": {
         "dynamic-programming": ""
@@ -9089,6 +9339,11 @@
         "tree": ""
       }
     },
+    "1933": {
+      "java": {
+        "string": ""
+      }
+    },
     "1934": {
       "java": {
         "database": ""
@@ -9142,6 +9397,11 @@
     "1944": {
       "java": {
         "monotonic-stack": "import java.util.ArrayDeque;\nimport java.util.Deque;\n\nclass Solution {\n    public int[] canSeePersonsCount(int[] heights) {\n        int n = heights.length;\n        int[] result = new int[n];\n        Deque<Integer> stack = new ArrayDeque<>();\n\n        for (int i = 0; i < n; i++) {\n            while (!stack.isEmpty() && heights[stack.peek()] <= heights[i]) {\n                result[stack.pop()]++;\n            }\n            if (!stack.isEmpty()) {\n                result[stack.peek()]++; \n            }\n            stack.push(i);\n        }\n\n        return result;\n    }\n}\n"
+      }
+    },
+    "1945": {
+      "java": {
+        "string": ""
       }
     },
     "1946": {
@@ -9199,6 +9459,11 @@
         "geometry": ""
       }
     },
+    "1957": {
+      "java": {
+        "string": ""
+      }
+    },
     "1958": {
       "java": {
         "matrix": ""
@@ -9232,6 +9497,11 @@
     "1965": {
       "java": {
         "database": ""
+      }
+    },
+    "1967": {
+      "java": {
+        "string": ""
       }
     },
     "1968": {
@@ -9450,6 +9720,11 @@
         "database": ""
       }
     },
+    "2011": {
+      "java": {
+        "string": ""
+      }
+    },
     "2013": {
       "java": {
         "counting": ""
@@ -9585,6 +9860,11 @@
         "database": ""
       }
     },
+    "2042": {
+      "java": {
+        "string": ""
+      }
+    },
     "2043": {
       "java": {
         "design": ""
@@ -9603,6 +9883,11 @@
     "2046": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "2047": {
+      "java": {
+        "string": ""
       }
     },
     "2048": {
@@ -9728,6 +10013,11 @@
     "2074": {
       "java": {
         "linked-list": ""
+      }
+    },
+    "2075": {
+      "java": {
+        "string": ""
       }
     },
     "2076": {
@@ -9905,6 +10195,11 @@
         "database": ""
       }
     },
+    "2114": {
+      "java": {
+        "string": ""
+      }
+    },
     "2115": {
       "java": {
         "topological-sort": ""
@@ -9930,6 +10225,11 @@
         "math": ""
       }
     },
+    "2120": {
+      "java": {
+        "string": ""
+      }
+    },
     "2121": {
       "java": {
         "prefix-sum": ""
@@ -9943,6 +10243,11 @@
     "2123": {
       "java": {
         "matrix": ""
+      }
+    },
+    "2124": {
+      "java": {
+        "string": ""
       }
     },
     "2125": {
@@ -9963,6 +10268,11 @@
     "2128": {
       "java": {
         "matrix": ""
+      }
+    },
+    "2129": {
+      "java": {
+        "string": ""
       }
     },
     "2130": {
@@ -9998,6 +10308,11 @@
     "2136": {
       "java": {
         "greedy": ""
+      }
+    },
+    "2138": {
+      "java": {
+        "string": ""
       }
     },
     "2139": {
@@ -10260,6 +10575,11 @@
         "two-pointers": ""
       }
     },
+    "2194": {
+      "java": {
+        "string": ""
+      }
+    },
     "2195": {
       "java": {
         "greedy": ""
@@ -10485,6 +10805,11 @@
         "enumeration": ""
       }
     },
+    "2243": {
+      "java": {
+        "string": ""
+      }
+    },
     "2244": {
       "java": {
         "counting": ""
@@ -10540,6 +10865,11 @@
         "stack": ""
       }
     },
+    "2255": {
+      "java": {
+        "string": ""
+      }
+    },
     "2256": {
       "java": {
         "prefix-sum": ""
@@ -10578,6 +10908,11 @@
     "2263": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "2264": {
+      "java": {
+        "string": ""
       }
     },
     "2265": {
@@ -10645,6 +10980,11 @@
         "tree": ""
       }
     },
+    "2278": {
+      "java": {
+        "string": ""
+      }
+    },
     "2279": {
       "java": {
         "greedy": ""
@@ -10690,6 +11030,11 @@
         "counting": ""
       }
     },
+    "2288": {
+      "java": {
+        "string": ""
+      }
+    },
     "2289": {
       "java": {
         "monotonic-stack": ""
@@ -10733,6 +11078,11 @@
     "2298": {
       "java": {
         "database": ""
+      }
+    },
+    "2299": {
+      "java": {
+        "string": ""
       }
     },
     "2300": {
@@ -10803,6 +11153,11 @@
     "2314": {
       "java": {
         "database": ""
+      }
+    },
+    "2315": {
+      "java": {
+        "string": ""
       }
     },
     "2316": {
@@ -11296,6 +11651,11 @@
         "number-theory": ""
       }
     },
+    "2414": {
+      "java": {
+        "string": ""
+      }
+    },
     "2415": {
       "java": {
         "tree": ""
@@ -11446,6 +11806,11 @@
         "tree": ""
       }
     },
+    "2446": {
+      "java": {
+        "string": ""
+      }
+    },
     "2447": {
       "java": {
         "number-theory": ""
@@ -11469,6 +11834,11 @@
     "2451": {
       "java": {
         "hash-table": ""
+      }
+    },
+    "2452": {
+      "java": {
+        "string": ""
       }
     },
     "2453": {
@@ -11544,6 +11914,11 @@
     "2467": {
       "java": {
         "tree": ""
+      }
+    },
+    "2468": {
+      "java": {
+        "string": ""
       }
     },
     "2469": {
@@ -11651,6 +12026,11 @@
         "prefix-sum": ""
       }
     },
+    "2490": {
+      "java": {
+        "string": ""
+      }
+    },
     "2491": {
       "java": {
         "two-pointers": ""
@@ -11674,6 +12054,11 @@
     "2495": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "2496": {
+      "java": {
+        "string": ""
       }
     },
     "2497": {
@@ -11764,6 +12149,11 @@
     "2514": {
       "java": {
         "combinatorics": ""
+      }
+    },
+    "2515": {
+      "java": {
+        "string": ""
       }
     },
     "2516": {
@@ -12106,6 +12496,11 @@
         "dynamic-programming": ""
       }
     },
+    "2586": {
+      "java": {
+        "string": ""
+      }
+    },
     "2587": {
       "java": {
         "prefix-sum": ""
@@ -12209,6 +12604,11 @@
     "2608": {
       "java": {
         "graph": ""
+      }
+    },
+    "2609": {
+      "java": {
+        "string": ""
       }
     },
     "2610": {
@@ -12391,6 +12791,11 @@
         "two-pointers": ""
       }
     },
+    "2678": {
+      "java": {
+        "string": ""
+      }
+    },
     "2679": {
       "java": {
         "matrix": ""
@@ -12489,6 +12894,11 @@
     "2709": {
       "java": {
         "union-find": ""
+      }
+    },
+    "2710": {
+      "java": {
+        "string": ""
       }
     },
     "2711": {
@@ -12776,6 +13186,11 @@
         "dynamic-programming": ""
       }
     },
+    "2788": {
+      "java": {
+        "string": ""
+      }
+    },
     "2789": {
       "java": {
         "greedy": ""
@@ -12834,6 +13249,11 @@
     "2809": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "2810": {
+      "java": {
+        "string": ""
       }
     },
     "2811": {
@@ -12901,6 +13321,11 @@
         "dynamic-programming": ""
       }
     },
+    "2828": {
+      "java": {
+        "string": ""
+      }
+    },
     "2829": {
       "java": {
         "greedy": ""
@@ -12949,6 +13374,11 @@
     "2838": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "2839": {
+      "java": {
+        "string": ""
       }
     },
     "2840": {
@@ -13206,6 +13636,11 @@
         "hash-table": ""
       }
     },
+    "2914": {
+      "java": {
+        "string": ""
+      }
+    },
     "2915": {
       "java": {
         "dynamic-programming": ""
@@ -13311,6 +13746,11 @@
         "interactive": ""
       }
     },
+    "2937": {
+      "java": {
+        "string": ""
+      }
+    },
     "2938": {
       "java": {
         "two-pointers": ""
@@ -13329,6 +13769,11 @@
     "2941": {
       "java": {
         "number-theory": ""
+      }
+    },
+    "2942": {
+      "java": {
+        "string": ""
       }
     },
     "2943": {
@@ -13699,6 +14144,11 @@
     "3018": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "3019": {
+      "java": {
+        "string": ""
       }
     },
     "3020": {
@@ -14121,6 +14571,11 @@
         "merge-sort": "class FenwickTree {\n  public FenwickTree(int n) {\n    sums = new int[n + 1];\n  }\n\n  public void add(int i, int delta) {\n    while (i < sums.length) {\n      sums[i] += delta;\n      i += lowbit(i);\n    }\n  }\n\n  public int get(int i) {\n    int sum = 0;\n    while (i > 0) {\n      sum += sums[i];\n      i -= lowbit(i);\n    }\n    return sum;\n  }\n\n  private int[] sums;\n\n  private static int lowbit(int i) {\n    return i & -i;\n  }\n}\n\nclass Solution {\n  public int getPermutationIndex(int[] perm) {\n  int kMod = 1_000_000_007;\n  int n = perm.length;\n    int ans = 0;\n    FenwickTree tree = new FenwickTree(n);\n    int[] fact = new int[n + 1]; \n    Arrays.fill(fact, 1);\n\n    for (int i = 2; i <= n; ++i)\n      fact[i] = (int) ((fact[i - 1] * (long) i) % kMod);\n\n    for (int i = 0; i < n; ++i) {\n    int num = perm[i];\n    int unusedNums = num - 1 - tree.get(num - 1);\n    int suffixLength = fact[n - 1 - i];\n      ans = (int) ((ans + unusedNums * (long) suffixLength) % kMod);\n      tree.add(num, 1);\n    }\n\n    return ans;\n  }\n}"
       }
     },
+    "3110": {
+      "java": {
+        "string": ""
+      }
+    },
     "3111": {
       "java": {
         "greedy": ""
@@ -14239,6 +14694,11 @@
     "3135": {
       "java": {
         "sliding-window": "class Solution {\n    public int minOperations(String initial, String target) {\n        int m = initial.length(), n = target.length();\n        int[][] dp = new int[m + 1][n + 1];\n        int mx = 0;\n        for (int i = 1; i <= m; ++i) {\n            for (int j = 1; j <= n; ++j) {\n                if (initial.charAt(i - 1) == target.charAt(j - 1)) {\n                    dp[i][j] = dp[i - 1][j - 1] + 1;\n                    mx = Math.max(mx, dp[i][j]);\n                }\n            }\n        }\n        return m + n - 2 * mx;\n    }\n}"
+      }
+    },
+    "3136": {
+      "java": {
+        "string": ""
       }
     },
     "3137": {
@@ -14362,6 +14822,11 @@
         "hash-table": ""
       }
     },
+    "3163": {
+      "java": {
+        "string": ""
+      }
+    },
     "3164": {
       "java": {
         "hash-table": ""
@@ -14380,6 +14845,11 @@
     "3167": {
       "java": {
         "counting": ""
+      }
+    },
+    "3168": {
+      "java": {
+        "string": ""
       }
     },
     "3169": {
@@ -14565,6 +15035,11 @@
     "3209": {
       "java": {
         "bit-manipulation": ""
+      }
+    },
+    "3210": {
+      "java": {
+        "string": ""
       }
     },
     "3211": {
