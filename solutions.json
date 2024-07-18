@@ -546,6 +546,11 @@
         "dynamic-programming": ""
       }
     },
+    "133": {
+      "java": {
+        "graph": ""
+      }
+    },
     "136": {
       "java": {
         "bit-manipulation": ""
@@ -3261,6 +3266,11 @@
         "matrix": ""
       }
     },
+    "841": {
+      "java": {
+        "graph": ""
+      }
+    },
     "842": {
       "java": {
         "backtracking": ""
@@ -3849,6 +3859,11 @@
         "dynamic-programming": ""
       }
     },
+    "997": {
+      "java": {
+        "graph": ""
+      }
+    },
     "998": {
       "java": {
         "tree": ""
@@ -4007,6 +4022,11 @@
     "1040": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "1042": {
+      "java": {
+        "graph": ""
       }
     },
     "1043": {
@@ -4279,6 +4299,11 @@
     "1128": {
       "java": {
         "counting": ""
+      }
+    },
+    "1129": {
+      "java": {
+        "graph": ""
       }
     },
     "1130": {
@@ -4789,6 +4814,11 @@
         "sliding-window": "import java.util.HashMap;\nimport java.util.Map;\n\nclass Solution {\n    public int maxFreq(String s, int maxLetters, int minSize, int maxSize) {\n        int n = s.length();\n        int maxCount = 0;\n        Map<String, Integer> substringCount = new HashMap<>();\n        \n        for (int i = 0; i <= n - minSize; ++i) {\n            String sub = s.substring(i, i + minSize);\n            if (isValid(sub, maxLetters)) {\n                substringCount.put(sub, substringCount.getOrDefault(sub, 0) + 1);\n                maxCount = Math.max(maxCount, substringCount.get(sub));\n            }\n        }\n        \n        return maxCount;\n    }\n    \n    private boolean isValid(String sub, int maxLetters) {\n        int[] count = new int[26];\n        int uniqueLetters = 0;\n        for (char c : sub.toCharArray()) {\n            if (count[c - 'a'] == 0) {\n                uniqueLetters++;\n            }\n            count[c - 'a']++;\n        }\n        return uniqueLetters <= maxLetters;\n    }\n}\n"
       }
     },
+    "1298": {
+      "java": {
+        "graph": ""
+      }
+    },
     "1301": {
       "java": {
         "matrix": ""
@@ -4812,6 +4842,11 @@
     "1310": {
       "java": {
         "prefix-sum": ""
+      }
+    },
+    "1311": {
+      "java": {
+        "graph": ""
       }
     },
     "1312": {
@@ -5294,6 +5329,11 @@
         "heap-(priority-queue)": ""
       }
     },
+    "1466": {
+      "java": {
+        "graph": ""
+      }
+    },
     "1467": {
       "java": {
         "probability-and-statistics": "enum BoxCase {\n    kEqualBalls, kEqualDistantBalls\n}\n\nclass Solution {\n    public double getProbability(int[] balls) {\n      int n = Arrays.stream(balls).sum() / 2;\n        return cases(balls, 0, 0, 0, 0, 0, n, BoxCase.kEqualDistantBalls) /\n                cases(balls, 0, 0, 0, 0, 0, n, BoxCase.kEqualBalls);\n    }\n\n    private int[] fact = { 1, 1, 2, 6, 24, 120, 720 };\n\n    double cases(int[] balls, int i, int ballsCountA, int ballsCountB, int colorsCountA,\n            int colorsCountB, int n, BoxCase boxCase) {\n        if (ballsCountA > n || ballsCountB > n)\n            return 0;\n        if (i == balls.length)\n            return boxCase == BoxCase.kEqualBalls ? 1 : (colorsCountA == colorsCountB ? 1 : 0);\n\n        double ans = 0;\n\n        for (int ballsTakenA = 0; ballsTakenA <= balls[i]; ++ballsTakenA) {\n          int ballsTakenB = balls[i] - ballsTakenA;\n          int newcolorsCountA = colorsCountA + (ballsTakenA > 0 ? 1 : 0);\n          int newcolorsCountB = colorsCountB + (ballsTakenB > 0 ? 1 : 0);\n            ans += cases(balls, i + 1, ballsCountA + ballsTakenA, ballsCountB + ballsTakenB,\n                    newcolorsCountA, newcolorsCountB, n, boxCase) /\n                    (fact[ballsTakenA] * fact[ballsTakenB]);\n        }\n\n        return ans;\n    }\n}"
@@ -5574,6 +5614,11 @@
         "rolling-hash": ""
       }
     },
+    "1557": {
+      "java": {
+        "graph": ""
+      }
+    },
     "1558": {
       "java": {
         "bit-manipulation": ""
@@ -5762,6 +5807,11 @@
     "1614": {
       "java": {
         "stack": ""
+      }
+    },
+    "1615": {
+      "java": {
+        "graph": ""
       }
     },
     "1616": {
@@ -6234,6 +6284,11 @@
         "stack": ""
       }
     },
+    "1761": {
+      "java": {
+        "graph": ""
+      }
+    },
     "1762": {
       "java": {
         "monotonic-stack": ""
@@ -6322,6 +6377,11 @@
     "1790": {
       "java": {
         "counting": ""
+      }
+    },
+    "1791": {
+      "java": {
+        "graph": ""
       }
     },
     "1792": {
@@ -7100,6 +7160,11 @@
         "game-theory": ""
       }
     },
+    "2039": {
+      "java": {
+        "graph": ""
+      }
+    },
     "2044": {
       "java": {
         "backtracking": ""
@@ -7208,6 +7273,11 @@
     "2076": {
       "java": {
         "union-find": ""
+      }
+    },
+    "2077": {
+      "java": {
+        "graph": ""
       }
     },
     "2081": {
@@ -8126,6 +8196,11 @@
         "heap-(priority-queue)": ""
       }
     },
+    "2359": {
+      "java": {
+        "graph": ""
+      }
+    },
     "2360": {
       "java": {
         "topological-sort": ""
@@ -8169,6 +8244,11 @@
     "2373": {
       "java": {
         "matrix": ""
+      }
+    },
+    "2374": {
+      "java": {
+        "graph": ""
       }
     },
     "2375": {
@@ -8671,6 +8751,11 @@
         "number-theory": ""
       }
     },
+    "2508": {
+      "java": {
+        "graph": ""
+      }
+    },
     "2509": {
       "java": {
         "tree": ""
@@ -9031,6 +9116,11 @@
         "number-theory": ""
       }
     },
+    "2608": {
+      "java": {
+        "graph": ""
+      }
+    },
     "2611": {
       "java": {
         "heap-(priority-queue)": ""
@@ -9174,6 +9264,11 @@
     "2684": {
       "java": {
         "matrix": ""
+      }
+    },
+    "2685": {
+      "java": {
+        "graph": ""
       }
     },
     "2689": {
@@ -9769,6 +9864,11 @@
     "2923": {
       "java": {
         "matrix": ""
+      }
+    },
+    "2924": {
+      "java": {
+        "graph": ""
       }
     },
     "2925": {
@@ -10712,4 +10812,4 @@
         "linked-list": ""
       }
     }
-  }
+}
