@@ -15497,7 +15497,8 @@
         "Array",
         "Dynamic Programming",
         "Stack",
-        "Monotonic Stack"
+        "Monotonic Stack",
+        "Greedy"
       ],
       "default": "Monotonic Stack",
       "difficulty": "Medium",
