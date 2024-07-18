@@ -6177,7 +6177,8 @@
         "Hash Table",
         "Two Pointers",
         "String",
-        "Dynamic Programming"
+        "Dynamic Programming",
+        "Sorting"
       ],
       "default": "Two Pointers",
       "difficulty": "Medium",
