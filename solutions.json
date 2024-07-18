@@ -556,6 +556,16 @@
         "graph": ""
       }
     },
+    "134": {
+      "java": {
+        "greedy": ""
+      }
+    },
+    "135": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "136": {
       "java": {
         "bit-manipulation": ""
@@ -731,6 +741,11 @@
     "178": {
       "java": {
         "database": ""
+      }
+    },
+    "179": {
+      "java": {
+        "greedy": ""
       }
     },
     "180": {
@@ -1185,6 +1200,11 @@
         "dynamic-programming": ""
       }
     },
+    "280": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "281": {
       "java": {
         "iterator": "public class ZigzagIterator {\n    private int curr;\n    private int size;\n    private List<Integer> indexes = new ArrayList<>();\n    private List<List<Integer>> vectors = new ArrayList<>();\n\n    public ZigzagIterator(List<Integer> v1, List<Integer> v2) {\n        curr = 0;\n        size = 2;\n        indexes.add(0);\n        indexes.add(0);\n        vectors.add(v1);\n        vectors.add(v2);\n    }\n\n    public int next() {\n        List<Integer> vector = vectors.get(curr);\n        int index = indexes.get(curr);\n        int res = vector.get(index);\n        indexes.set(curr, index + 1);\n        curr = (curr + 1) % size;\n        return res;\n    }\n\n    public boolean hasNext() {\n        int start = curr;\n        while (indexes.get(curr) == vectors.get(curr).size()) {\n            curr = (curr + 1) % size;\n            if (start == curr) {\n                return false;\n            }\n        }\n        return true;\n    }\n}\n\n/**\n * Your ZigzagIterator object will be instantiated and called as such:\n * ZigzagIterator i = new ZigzagIterator(v1, v2);\n * while (i.hasNext()) v[dp()] = i.next();\n */"
@@ -1421,6 +1441,11 @@
         "matrix": ""
       }
     },
+    "330": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "331": {
       "java": {
         "stack": ""
@@ -1434,6 +1459,11 @@
     "333": {
       "java": {
         "binary-search-tree": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    private int ans;\n\n    public int largestBSTSubtree(TreeNode root) {\n        ans = 0;\n        dfs(root);\n        return ans;\n    }\n\n    private int[] dfs(TreeNode root) {\n        if (root == null) {\n            return new int[] {Integer.MAX_VALUE, Integer.MIN_VALUE, 0};\n        }\n        int[] left = dfs(root.left);\n        int[] right = dfs(root.right);\n        if (left[1] < root.val && root.val < right[0]) {\n            ans = Math.max(ans, left[2] + right[2] + 1);\n            return new int[] {\n                Math.min(root.val, left[0]), Math.max(root.val, right[1]), left[2] + right[2] + 1};\n        }\n        return new int[] {Integer.MIN_VALUE, Integer.MAX_VALUE, 0};\n    }\n}"
+      }
+    },
+    "334": {
+      "java": {
+        "greedy": ""
       }
     },
     "335": {
@@ -1788,6 +1818,11 @@
         "two-pointers": ""
       }
     },
+    "409": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "410": {
       "java": {
         "prefix-sum": ""
@@ -1947,6 +1982,11 @@
     "451": {
       "java": {
         "bucket-sort": "import java.util.*;\n\npublic class Solution {\n    public String frequencySort(String s) {\n        Map<Character, Integer> frequencyMap = new HashMap<>();\n        for (char c : s.toCharArray()) {\n            frequencyMap.put(c, frequencyMap.getOrDefault(c, 0) + 1);\n        }\n\n        List<Character>[] buckets = new List[s.length() + 1];\n        for (char key : frequencyMap.keySet()) {\n            int frequency = frequencyMap.get(key);\n            if (buckets[frequency] == null) {\n                buckets[frequency] = new ArrayList<>();\n            }\n            buckets[frequency].add(key);\n        }\n\n        StringBuilder result = new StringBuilder();\n        for (int i = buckets.length - 1; i >= 0; i--) {\n            if (buckets[i] != null) {\n                for (char c : buckets[i]) {\n                    for (int j = 0; j < i; j++) {\n                        result.append(c);\n                    }\n                }\n            }\n        }\n\n        return result.toString();\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        System.out.println(solution.frequencySort(\"tree\")); // Output: \"eert\" or \"rtee\"\n        System.out.println(solution.frequencySort(\"cccaaa\")); // Output: \"cccaaa\" or \"aaaccc\"\n        System.out.println(solution.frequencySort(\"Aabb\")); // Output: \"bbAa\" or \"bbaA\"\n    }\n}\n"
+      }
+    },
+    "452": {
+      "java": {
+        "greedy": ""
       }
     },
     "455": {
@@ -2214,6 +2254,11 @@
         "dynamic-programming": ""
       }
     },
+    "517": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "518": {
       "java": {
         "dynamic-programming": ""
@@ -2362,6 +2407,11 @@
     "553": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "555": {
+      "java": {
+        "greedy": ""
       }
     },
     "556": {
@@ -2580,6 +2630,11 @@
         "iterator": "class StringIterator {\n    private List<Node> d = new ArrayList<>();\n    private int p;\n\n    public StringIterator(String compressedString) {\n        int n = compressedString.length();\n        int i = 0;\n        while (i < n) {\n            char c = compressedString.charAt(i);\n            int x = 0;\n            while (++i < n && Character.isDigit(compressedString.charAt(i))) {\n                x = x * 10 + (compressedString.charAt(i) - '0');\n            }\n            d.add(new Node(c, x));\n        }\n    }\n\n    public char next() {\n        if (!hasNext()) {\n            return ' ';\n        }\n        char ans = d.get(p).c;\n        if (--d.get(p).x == 0) {\n            ++p;\n        }\n        return ans;\n    }\n\n    public boolean hasNext() {\n        return p < d.size() && d.get(p).x > 0;\n    }\n}\n\nclass Node {\n    char c;\n    int x;\n\n    Node(char c, int x) {\n        this.c = c;\n        this.x = x;\n    }\n}\n\n/**\n * Your StringIterator object will be instantiated and called as such:\n * StringIterator obj = new StringIterator(compressedString);\n * char param_1 = obj.next();\n * boolean param_2 = obj.hasNext();\n */"
       }
     },
+    "605": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "606": {
       "java": {
         "tree": ""
@@ -2663,6 +2718,16 @@
     "623": {
       "java": {
         "tree": ""
+      }
+    },
+    "624": {
+      "java": {
+        "greedy": ""
+      }
+    },
+    "625": {
+      "java": {
+        "greedy": ""
       }
     },
     "626": {
@@ -2848,6 +2913,11 @@
     "669": {
       "java": {
         "binary-search-tree": ""
+      }
+    },
+    "670": {
+      "java": {
+        "greedy": ""
       }
     },
     "671": {
@@ -3146,6 +3216,11 @@
         "union-find": ""
       }
     },
+    "738": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "739": {
       "java": {
         "monotonic-stack": ""
@@ -3209,6 +3284,11 @@
     "756": {
       "java": {
         "bit-manipulation": ""
+      }
+    },
+    "757": {
+      "java": {
+        "greedy": ""
       }
     },
     "758": {
@@ -3299,6 +3379,11 @@
     "779": {
       "java": {
         "recursion": ""
+      }
+    },
+    "781": {
+      "java": {
+        "greedy": ""
       }
     },
     "782": {
@@ -3571,6 +3656,11 @@
         "two-pointers": ""
       }
     },
+    "846": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "847": {
       "java": {
         "dynamic-programming": ""
@@ -3619,6 +3709,11 @@
     "858": {
       "java": {
         "geometry": ""
+      }
+    },
+    "860": {
+      "java": {
+        "greedy": ""
       }
     },
     "861": {
@@ -3811,6 +3906,11 @@
         "matrix": ""
       }
     },
+    "910": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "911": {
       "java": {
         "design": ""
@@ -3988,6 +4088,16 @@
         "union-find": ""
       }
     },
+    "954": {
+      "java": {
+        "greedy": ""
+      }
+    },
+    "955": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "956": {
       "java": {
         "dynamic-programming": ""
@@ -4074,6 +4184,11 @@
         "monotonic-stack": ""
       }
     },
+    "976": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "977": {
       "java": {
         "two-pointers": "import java.util.Arrays;\n\npublic class Solution {\n    public int[] sortedSquares(int[] nums) {\n        int n = nums.length;\n        int[] result = new int[n];\n        int left = 0, right = n - 1;\n\n        for (int i = n - 1; i >= 0; i--) {\n            if (Math.abs(nums[left]) > Math.abs(nums[right])) {\n                result[i] = nums[left] * nums[left];\n                left++;\n            } else {\n                result[i] = nums[right] * nums[right];\n                right--;\n            }\n        }\n\n        return result;\n    }\n}\n"
@@ -4109,6 +4224,11 @@
         "dynamic-programming": ""
       }
     },
+    "984": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "986": {
       "java": {
         "two-pointers": ""
@@ -4127,6 +4247,11 @@
     "990": {
       "java": {
         "union-find": ""
+      }
+    },
+    "991": {
+      "java": {
+        "greedy": ""
       }
     },
     "992": {
@@ -4184,9 +4309,19 @@
         "sliding-window": "public class Solution {\n    public int longestOnes(int[] nums, int k) {\n        int left = 0;\n        int right = 0;\n        int maxOnes = 0;\n        int zerosCount = 0;\n\n        for (right = 0; right < nums.length; right++) {\n            if (nums[right] == 0) {\n                zerosCount++;\n            }\n\n            while (zerosCount > k) {\n                if (nums[left] == 0) {\n                    zerosCount--;\n                }\n                left++;\n            }\n\n            maxOnes = Math.max(maxOnes, right - left + 1);\n        }\n\n        return maxOnes;\n    }\n\n// /**\n//  * @param {number[]} nums\n//  * @param {number} k\n//  * @return {number}\n//  */\n// var longestOnes = function(nums, k) {\n//     let ans = 0;\n//     for (let l = 0, r = 0; r < nums.length; ++r) {\n//         if (nums[r] == 0)\n//             --k;\n//         while (k < 0)\n//             if (nums[l++] == 0)\n//                 ++k;\n//         ans = Math.max(ans, r - l + 1);\n//     }\n//     return ans;\n// };\n// console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2))\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums = {1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0};\n        int k = 2;\n        System.out.println(solution.longestOnes(nums, k)); // Output: 6\n    }\n}"
       }
     },
+    "1005": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1006": {
       "java": {
         "stack": ""
+      }
+    },
+    "1007": {
+      "java": {
+        "greedy": ""
       }
     },
     "1008": {
@@ -4207,6 +4342,11 @@
     "1012": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1013": {
+      "java": {
+        "greedy": ""
       }
     },
     "1014": {
@@ -4267,6 +4407,11 @@
     "1028": {
       "java": {
         "tree": ""
+      }
+    },
+    "1029": {
+      "java": {
+        "greedy": ""
       }
     },
     "1030": {
@@ -4380,6 +4525,11 @@
         "sliding-window": "public class Solution {\n    public int maxSatisfied(int[] customers, int[] grumpy, int X) {\n        int n = customers.length;\n        int totalSatisfied = 0;\n\n        for (int i = 0; i < n; i++) {\n            if (grumpy[i] == 0) {\n                totalSatisfied += customers[i];\n            }\n        }\n\n        int maxAdditionalSatisfied = 0;\n        int currentAdditionalSatisfied = 0;\n\n        for (int i = 0; i < n; i++) {\n            if (grumpy[i] == 1) {\n                currentAdditionalSatisfied += customers[i];\n            }\n            if (i >= X) {\n                if (grumpy[i - X] == 1) {\n                    currentAdditionalSatisfied -= customers[i - X];\n                }\n            }\n\n            maxAdditionalSatisfied = Math.max(maxAdditionalSatisfied, currentAdditionalSatisfied);\n        }\n\n        return totalSatisfied + maxAdditionalSatisfied;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] customers = {1, 0, 1, 2, 1, 1, 7, 5};\n        int[] grumpy = {0, 1, 0, 1, 0, 1, 0, 1};\n        int X = 3;\n        System.out.println(solution.maxSatisfied(customers, grumpy, X)); \n    }\n}\n"
       }
     },
+    "1053": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1054": {
       "java": {
         "heap-(priority-queue)": ""
@@ -4388,6 +4538,16 @@
     "1055": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "1057": {
+      "java": {
+        "greedy": ""
+      }
+    },
+    "1058": {
+      "java": {
+        "greedy": ""
       }
     },
     "1059": {
@@ -4747,6 +4907,11 @@
         "dynamic-programming": ""
       }
     },
+    "1144": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1145": {
       "java": {
         "tree": ""
@@ -4939,6 +5104,11 @@
         "concurrency": "import java.util.function.IntConsumer;\n\npublic class FizzBuzz {\n    private int n;\n    private int current = 1;\n\n    public FizzBuzz(int n) {\n        this.n = n;\n    }\n\n    public synchronized void fizz(Runnable printFizz) throws InterruptedException {\n        while (current <= n) {\n            while (current <= n && (current % 3 != 0 || current % 5 == 0)) {\n                wait();\n            }\n            if (current <= n) {\n                printFizz.run();\n                current++;\n                notifyAll();\n            }\n        }\n    }\n\n    public synchronized void buzz(Runnable printBuzz) throws InterruptedException {\n        while (current <= n) {\n            while (current <= n && (current % 5 != 0 || current % 3 == 0)) {\n                wait();\n            }\n            if (current <= n) {\n                printBuzz.run();\n                current++;\n                notifyAll();\n            }\n        }\n    }\n\n    public synchronized void fizzbuzz(Runnable printFizzBuzz) throws InterruptedException {\n        while (current <= n) {\n            while (current <= n && (current % 3 != 0 || current % 5 != 0)) {\n                wait();\n            }\n            if (current <= n) {\n                printFizzBuzz.run();\n                current++;\n                notifyAll();\n            }\n        }\n    }\n\n    public synchronized void number(IntConsumer printNumber) throws InterruptedException {\n        while (current <= n) {\n            while (current <= n && (current % 3 == 0 || current % 5 == 0)) {\n                wait();\n            }\n            if (current <= n) {\n                printNumber.accept(current);\n                current++;\n                notifyAll();\n            }\n        }\n    }\n}\n"
       }
     },
+    "1196": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1197": {
       "java": {
         "breadth-first-search": ""
@@ -5027,6 +5197,11 @@
     "1216": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1217": {
+      "java": {
+        "greedy": ""
       }
     },
     "1218": {
@@ -5152,6 +5327,11 @@
     "1246": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1247": {
+      "java": {
+        "greedy": ""
       }
     },
     "1248": {
@@ -5344,6 +5524,11 @@
         "database": ""
       }
     },
+    "1296": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1297": {
       "java": {
         "sliding-window": "import java.util.HashMap;\nimport java.util.Map;\n\nclass Solution {\n    public int maxFreq(String s, int maxLetters, int minSize, int maxSize) {\n        int n = s.length();\n        int maxCount = 0;\n        Map<String, Integer> substringCount = new HashMap<>();\n        \n        for (int i = 0; i <= n - minSize; ++i) {\n            String sub = s.substring(i, i + minSize);\n            if (isValid(sub, maxLetters)) {\n                substringCount.put(sub, substringCount.getOrDefault(sub, 0) + 1);\n                maxCount = Math.max(maxCount, substringCount.get(sub));\n            }\n        }\n        \n        return maxCount;\n    }\n    \n    private boolean isValid(String sub, int maxLetters) {\n        int[] count = new int[26];\n        int uniqueLetters = 0;\n        for (char c : sub.toCharArray()) {\n            if (count[c - 'a'] == 0) {\n                uniqueLetters++;\n            }\n            count[c - 'a']++;\n        }\n        return uniqueLetters <= maxLetters;\n    }\n}\n"
@@ -5444,6 +5629,11 @@
         "database": ""
       }
     },
+    "1323": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1325": {
       "java": {
         "tree": ""
@@ -5459,9 +5649,19 @@
         "database": ""
       }
     },
+    "1328": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1329": {
       "java": {
         "matrix": ""
+      }
+    },
+    "1330": {
+      "java": {
+        "greedy": ""
       }
     },
     "1332": {
@@ -5774,6 +5974,11 @@
         "dynamic-programming": ""
       }
     },
+    "1403": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1404": {
       "java": {
         "bit-manipulation": ""
@@ -5812,6 +6017,11 @@
     "1413": {
       "java": {
         "prefix-sum": ""
+      }
+    },
+    "1414": {
+      "java": {
+        "greedy": ""
       }
     },
     "1415": {
@@ -5877,6 +6087,16 @@
     "1430": {
       "java": {
         "tree": ""
+      }
+    },
+    "1432": {
+      "java": {
+        "greedy": ""
+      }
+    },
+    "1433": {
+      "java": {
+        "greedy": ""
       }
     },
     "1434": {
@@ -5997,6 +6217,11 @@
     "1464": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "1465": {
+      "java": {
+        "greedy": ""
       }
     },
     "1466": {
@@ -6164,6 +6389,11 @@
         "matrix": "class Solution {\n    public int numSubmat(int[][] mat) {\n        int m = mat.length;\n        int n = mat[0].length;\n        int ans = 0;\n        int[] hist = new int[n];\n\n        for (int[] row : mat) {\n            for (int i = 0; i < row.length; ++i)\n                hist[i] = row[i] == 0 ? 0 : hist[i] + 1;\n            ans += count(hist);\n        }\n\n        return ans;\n    }\n\n    private int count(int[] nums) {\n        int[] submatrices = new int[nums.length];\n        Deque<Integer> stack = new ArrayDeque<>();\n\n        for (int i = 0; i < nums.length; ++i) {\n            while (!stack.isEmpty() && nums[stack.peek()] >= nums[i])\n                stack.pop();\n            if (!stack.isEmpty()) {\n                int prevIndex = stack.peek();\n                submatrices[i] = submatrices[prevIndex] + nums[i] * (i - prevIndex);\n            } else {\n                submatrices[i] = nums[i] * (i + 1);\n            }\n            stack.push(i);\n        }\n\n        return Arrays.stream(submatrices).sum();\n    }\n}"
       }
     },
+    "1505": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1506": {
       "java": {
         "tree": ""
@@ -6172,6 +6402,11 @@
     "1508": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "1509": {
+      "java": {
+        "greedy": ""
       }
     },
     "1510": {
@@ -6214,6 +6449,11 @@
         "tree": ""
       }
     },
+    "1520": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1521": {
       "java": {
         "bit-manipulation": ""
@@ -6242,6 +6482,11 @@
     "1527": {
       "java": {
         "database": ""
+      }
+    },
+    "1529": {
+      "java": {
+        "greedy": ""
       }
     },
     "1530": {
@@ -6369,6 +6614,11 @@
         "game-theory": ""
       }
     },
+    "1564": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1565": {
       "java": {
         "database": ""
@@ -6434,6 +6684,11 @@
         "union-find": ""
       }
     },
+    "1580": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1581": {
       "java": {
         "database": ""
@@ -6447,6 +6702,11 @@
     "1584": {
       "java": {
         "union-find": ""
+      }
+    },
+    "1585": {
+      "java": {
+        "greedy": ""
       }
     },
     "1586": {
@@ -6694,6 +6954,11 @@
         "database": ""
       }
     },
+    "1647": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1648": {
       "java": {
         "heap-(priority-queue)": ""
@@ -6764,9 +7029,19 @@
         "database": ""
       }
     },
+    "1663": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1664": {
       "java": {
         "prefix-sum": ""
+      }
+    },
+    "1665": {
+      "java": {
+        "greedy": ""
       }
     },
     "1666": {
@@ -6874,6 +7149,11 @@
         "monotonic-queue": "class Solution {\n    public int boxDelivering(int[][] boxes, int portsCount, int maxBoxes, int maxWeight) {\n        int length = boxes.length;\n        int[] ports = new int[length + 1];\n        int[] weights = new int[length + 1];\n        int[] differences = new int[length + 1];\n        long[] prefixWeights = new long[length + 1];\n        for (int i = 1; i <= length; i++) {\n            ports[i] = boxes[i - 1][0];\n            weights[i] = boxes[i - 1][1];\n            if (i > 1)\n                differences[i] = differences[i - 1] + (ports[i - 1] != ports[i] ? 1 : 0);\n            prefixWeights[i] = prefixWeights[i - 1] + weights[i];\n        }\n        Deque<Integer> deque = new LinkedList<Integer>();\n        deque.offerLast(0);\n        int[] dp = new int[length + 1];\n        int[] remain = new int[length + 1];\n        for (int i = 1; i <= length; i++) {\n            while (!deque.isEmpty() && (i - deque.peekFirst() > maxBoxes || prefixWeights[i] - prefixWeights[deque.peekFirst()] > maxWeight))\n                deque.pollFirst();\n            dp[i] = remain[deque.peekFirst()] + differences[i] + 2;\n            if (i != length) {\n                remain[i] = dp[i] - differences[i + 1];\n                while (!deque.isEmpty() && remain[i] <= remain[deque.peekLast()])\n                    deque.pollLast();\n                deque.offerLast(i);\n            }\n        }\n        return dp[length];\n    }\n}"
       }
     },
+    "1689": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1690": {
       "java": {
         "game-theory": ""
@@ -6924,6 +7204,11 @@
         "queue": ""
       }
     },
+    "1702": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1703": {
       "java": {
         "sliding-window": "class Solution {\n    public int minMoves(int[] nums, int k) {\n        List<Integer> ones = new ArrayList<>();\n\n        for (int i = 0; i < nums.length; ++i)\n            if (nums[i] == 1)\n                ones.add(i);\n\n      int median = ones.get(getMedIndex(0, k));\n        int moves = 0;\n        for (int i = 0; i < k; ++i)\n            moves += Math.abs(ones.get(i) - median);\n\n        int ans = moves;\n\n        for (int i = 1; i <= ones.size() - k; ++i) {\n          int oldMedianIndex = ones.get(getMedIndex(i - 1, k));\n          int newMedianIndex = ones.get(getMedIndex(i, k));\n            if (k % 2 == 1)\n                moves += newMedianIndex - oldMedianIndex;\n            moves -= newMedianIndex - ones.get(i - 1);\n            moves += ones.get(i + k - 1) - newMedianIndex;\n            ans = Math.min(ans, moves);\n        }\n\n        return ans - nThSum((k - 1) / 2) - nThSum(k / 2);\n    }\n\n    private int getMedIndex(int i, int k) {\n        return (i + (i + k - 1)) / 2;\n    }\n\n    private int nThSum(int n) {\n        return n * (n + 1) / 2;\n    }\n}"
@@ -6949,14 +7234,29 @@
         "trie": ""
       }
     },
+    "1708": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1709": {
       "java": {
         "database": ""
       }
     },
+    "1710": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1712": {
       "java": {
         "two-pointers": "class Solution {\n    public int waysToSplit(int[] nums) {\n        int kMod = 1_000_000_007;\n        int n = nums.length;\n        int ans = 0;\n        int[] prefix = nums.clone();\n\n        for (int i = 1; i < n; ++i)\n            prefix[i] += prefix[i - 1];\n\n        for (int i = 0; i < n - 2; ++i) {\n            int j = firstGreaterEqual(prefix, i);\n            if (j == n - 1)\n                break;\n            int mid = prefix[j] - prefix[i];\n            int right = prefix[prefix.length - 1] - prefix[j];\n            if (mid > right)\n                continue;\n            int k = firstGreater(prefix, i);\n            ans = (ans + k - j) % kMod;\n        }\n\n        return ans;\n    }\n\n    private int firstGreaterEqual(int[] prefix, int i) {\n        int left = i + 1;\n        int right = prefix.length - 1;\n        while (left < right) {\n            int mid = (left + right) / 2;\n            if (prefix[mid] - prefix[i] >= prefix[i])\n                right = mid;\n            else\n                left = mid + 1;\n        }\n        return left;\n    };\n\n    private int firstGreater(int[] prefix, int i) {\n        int left = i + 1;\n        int right = prefix.length - 1;\n        while (left < right) {\n            int mid = (left + right) / 2;\n            if (prefix[mid] - prefix[i] > prefix[prefix.length - 1] - prefix[mid])\n                right = mid;\n            else\n                left = mid + 1;\n        }\n        return left;\n    };\n}"
+      }
+    },
+    "1713": {
+      "java": {
+        "greedy": ""
       }
     },
     "1714": {
@@ -7044,6 +7344,11 @@
         "prefix-sum": ""
       }
     },
+    "1733": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1734": {
       "java": {
         "bit-manipulation": ""
@@ -7054,6 +7359,11 @@
         "dynamic-programming": ""
       }
     },
+    "1736": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1737": {
       "java": {
         "prefix-sum": ""
@@ -7062,6 +7372,11 @@
     "1738": {
       "java": {
         "quickselect": "import java.util.*;\n\npublic class Solution {\n    public int kthLargestValue(int[][] matrix, int k) {\n        int m = matrix.length;\n        int n = matrix[0].length;\n        \n        int[][] xorMatrix = new int[m][n];\n        List<Integer> xorValues = new ArrayList<>();\n        \n        for (int i = 0; i < m; i++) {\n            for (int j = 0; j < n; j++) {\n                int xor = matrix[i][j];\n                if (i > 0) xor ^= xorMatrix[i - 1][j];\n                if (j > 0) xor ^= xorMatrix[i][j - 1];\n                if (i > 0 && j > 0) xor ^= xorMatrix[i - 1][j - 1];\n                xorMatrix[i][j] = xor;\n                xorValues.add(xor);\n            }\n        }\n        \n        int[] xorArray = xorValues.stream().mapToInt(Integer::intValue).toArray();\n        int kthLargestXOR = quickselect(xorArray, 0, xorArray.length - 1, xorArray.length - k);\n        \n        return kthLargestXOR;\n    }\n    \n    private int quickselect(int[] nums, int left, int right, int k) {\n        while (left < right) {\n            int pivotIndex = partition(nums, left, right);\n            if (pivotIndex == k) {\n                return nums[k];\n            } else if (pivotIndex < k) {\n                left = pivotIndex + 1;\n            } else {\n                right = pivotIndex - 1;\n            }\n        }\n        return nums[left];\n    }\n    \n    private int partition(int[] nums, int left, int right) {\n        int pivot = nums[right];\n        int i = left;\n        for (int j = left; j < right; j++) {\n            if (nums[j] < pivot) {\n                swap(nums, i++, j);\n            }\n        }\n        swap(nums, i, right);\n        return i;\n    }\n    \n    private void swap(int[] nums, int i, int j) {\n        int temp = nums[i];\n        nums[i] = nums[j];\n        nums[j] = temp;\n    }\n}\n"
+      }
+    },
+    "1739": {
+      "java": {
+        "greedy": ""
       }
     },
     "1740": {
@@ -7234,6 +7549,11 @@
         "database": ""
       }
     },
+    "1785": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1786": {
       "java": {
         "heap-(priority-queue)": ""
@@ -7274,6 +7594,11 @@
         "two-pointers": "class Solution {\n    public int maximumScore(int[] nums, int k) {\n        int ans = 0;\n        Deque<Integer> stack = new ArrayDeque<>();\n\n        for (int i = 0; i <= nums.length; ++i) {\n            while (!stack.isEmpty() && (i == nums.length || nums[stack.peek()] > nums[i])) {\n                int h = nums[stack.pop()];\n                int w = stack.isEmpty() ? i : i - stack.peek() - 1;\n                if ((stack.isEmpty() || stack.peek() + 1 <= k) && i - 1 >= k)\n                    ans = Math.max(ans, h * w);\n            }\n            stack.push(i);\n        }\n\n        return ans;\n    }\n}"
       }
     },
+    "1794": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1795": {
       "java": {
         "database": ""
@@ -7284,6 +7609,11 @@
         "linked-list": ""
       }
     },
+    "1798": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1799": {
       "java": {
         "dynamic-programming": ""
@@ -7292,6 +7622,11 @@
     "1801": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "1802": {
+      "java": {
+        "greedy": ""
       }
     },
     "1803": {
@@ -7379,6 +7714,11 @@
         "two-pointers": ""
       }
     },
+    "1827": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1828": {
       "java": {
         "geometry": ""
@@ -7397,6 +7737,11 @@
     "1831": {
       "java": {
         "database": ""
+      }
+    },
+    "1833": {
+      "java": {
+        "greedy": ""
       }
     },
     "1834": {
@@ -7442,6 +7787,11 @@
     "1845": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "1846": {
+      "java": {
+        "greedy": ""
       }
     },
     "1849": {
@@ -7509,6 +7859,11 @@
         "combinatorics": ""
       }
     },
+    "1864": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1865": {
       "java": {
         "design": ""
@@ -7544,6 +7899,11 @@
         "database": ""
       }
     },
+    "1874": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1875": {
       "java": {
         "database": ""
@@ -7567,6 +7927,11 @@
     "1879": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1881": {
+      "java": {
+        "greedy": ""
       }
     },
     "1882": {
@@ -7644,6 +8009,11 @@
         "two-pointers": ""
       }
     },
+    "1899": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1900": {
       "java": {
         "dynamic-programming": ""
@@ -7657,6 +8027,11 @@
     "1902": {
       "java": {
         "binary-search-tree": "class Solution {\n    public int maxDepthBST(int[] order) {\n        TreeMap<Integer, Integer> map = new TreeMap<>();\n        map.put(0, 0);\n        map.put(Integer.MAX_VALUE, 0);\n        map.put(order[0], 1);\n        int ans = 1;\n        for (int i = 1; i < order.length; ++i) {\n            int v = order[i];\n            Map.Entry<Integer, Integer> lower = map.lowerEntry(v);\n            Map.Entry<Integer, Integer> higher = map.higherEntry(v);\n            int depth = 1 + Math.max(lower.getValue(), higher.getValue());\n            ans = Math.max(ans, depth);\n            map.put(v, depth);\n        }\n        return ans;\n    }\n}"
+      }
+    },
+    "1903": {
+      "java": {
+        "greedy": ""
       }
     },
     "1905": {
@@ -7714,6 +8089,11 @@
         "database": ""
       }
     },
+    "1921": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1922": {
       "java": {
         "recursion": ""
@@ -7769,6 +8149,11 @@
         "database": ""
       }
     },
+    "1936": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1937": {
       "java": {
         "dynamic-programming": ""
@@ -7809,6 +8194,11 @@
         "monotonic-stack": "import java.util.ArrayDeque;\nimport java.util.Deque;\n\nclass Solution {\n    public int[] canSeePersonsCount(int[] heights) {\n        int n = heights.length;\n        int[] result = new int[n];\n        Deque<Integer> stack = new ArrayDeque<>();\n\n        for (int i = 0; i < n; i++) {\n            while (!stack.isEmpty() && heights[stack.peek()] <= heights[i]) {\n                result[stack.pop()]++;\n            }\n            if (!stack.isEmpty()) {\n                result[stack.peek()]++; \n            }\n            stack.push(i);\n        }\n\n        return result;\n    }\n}\n"
       }
     },
+    "1946": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1947": {
       "java": {
         "dynamic-programming": ""
@@ -7837,6 +8227,11 @@
     "1952": {
       "java": {
         "number-theory": ""
+      }
+    },
+    "1953": {
+      "java": {
+        "greedy": ""
       }
     },
     "1955": {
@@ -7884,6 +8279,11 @@
         "database": ""
       }
     },
+    "1968": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "1969": {
       "java": {
         "recursion": ""
@@ -7907,6 +8307,11 @@
     "1973": {
       "java": {
         "tree": ""
+      }
+    },
+    "1974": {
+      "java": {
+        "greedy": ""
       }
     },
     "1975": {
@@ -7978,6 +8383,11 @@
     "1988": {
       "java": {
         "database": ""
+      }
+    },
+    "1989": {
+      "java": {
+        "greedy": ""
       }
     },
     "1990": {
@@ -8065,6 +8475,11 @@
         "counting": ""
       }
     },
+    "2007": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2008": {
       "java": {
         "dynamic-programming": ""
@@ -8145,6 +8560,11 @@
         "database": ""
       }
     },
+    "2027": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2029": {
       "java": {
         "game-theory": ""
@@ -8183,6 +8603,11 @@
     "2036": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "2037": {
+      "java": {
+        "greedy": ""
       }
     },
     "2038": {
@@ -8345,6 +8770,11 @@
         "graph": ""
       }
     },
+    "2078": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2080": {
       "java": {
         "design": ""
@@ -8380,6 +8810,11 @@
         "dynamic-programming": ""
       }
     },
+    "2087": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2088": {
       "java": {
         "matrix": ""
@@ -8388,6 +8823,11 @@
     "2090": {
       "java": {
         "sliding-window": "class Solution {\n    public int[] getAverages(int[] nums, int k) {\n        int n = nums.length;\n        int[] result = new int[n];\n        Arrays.fill(result, -1);\n\n        if (2 * k + 1 > n) return result;  \n        long windowSum = 0;\n        int windowSize = 2 * k + 1;\n        for (int i = 0; i < windowSize; i++) {\n            windowSum += nums[i];\n        }\n        result[k] = (int)(windowSum / windowSize);\n        for (int i = k + 1; i < n - k; i++) {\n            windowSum = windowSum - nums[i - k - 1] + nums[i + k];\n            result[i] = (int)(windowSum / windowSize);\n        }\n\n        return result;\n    }\n}\n"
+      }
+    },
+    "2091": {
+      "java": {
+        "greedy": ""
       }
     },
     "2092": {
@@ -8418,6 +8858,11 @@
     "2097": {
       "java": {
         "eulerian-circuit": "class Solution {\n    public int[][] validArrangement(int[][] pairs) {\n        List<int[]> ans = new ArrayList<>();\n        Map<Integer, Stack<Integer>> graph = new HashMap<>();\n        Map<Integer, Integer> outDegree = new HashMap<>();\n        Map<Integer, Integer> inDegrees = new HashMap<>();\n\n        for (int[] pair : pairs) {\n          int start = pair[0];\n          int end = pair[1];\n            graph.putIfAbsent(start, new Stack<>());\n            graph.get(start).push(end);\n            outDegree.merge(start, 1, Integer::sum);\n            inDegrees.merge(end, 1, Integer::sum);\n        }\n\n      int startNode = getStartNode(graph, outDegree, inDegrees, pairs);\n        eulerDFS(graph, startNode, ans);\n        Collections.reverse(ans);\n        return ans.stream().toArray(int[][]::new);\n    }\n\n    private int getStartNode(Map<Integer, Stack<Integer>> graph, Map<Integer, Integer> outDegree,\n            Map<Integer, Integer> inDegrees, int[][] pairs) {\n        for (final int u : graph.keySet())\n            if (outDegree.getOrDefault(u, 0) - inDegrees.getOrDefault(u, 0) == 1)\n                return u;\n        return pairs[0][0];\n    }\n\n    private void eulerDFS(Map<Integer, Stack<Integer>> graph, int u, List<int[]> ans) {\n        Stack<Integer> stack = graph.get(u);\n        while (stack != null && !stack.isEmpty()) {\n          int v = stack.pop();\n            eulerDFS(graph, v, ans);\n            ans.add(new int[] { u, v });\n        }\n    }\n}"
+      }
+    },
+    "2098": {
+      "java": {
+        "greedy": ""
       }
     },
     "2099": {
@@ -8515,6 +8960,11 @@
         "matrix": ""
       }
     },
+    "2126": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2127": {
       "java": {
         "topological-sort": ""
@@ -8555,9 +9005,24 @@
         "bit-manipulation": ""
       }
     },
+    "2136": {
+      "java": {
+        "greedy": ""
+      }
+    },
+    "2139": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2140": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "2141": {
+      "java": {
+        "greedy": ""
       }
     },
     "2142": {
@@ -8568,6 +9033,11 @@
     "2143": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "2144": {
+      "java": {
+        "greedy": ""
       }
     },
     "2145": {
@@ -8628,6 +9098,11 @@
     "2159": {
       "java": {
         "database": ""
+      }
+    },
+    "2160": {
+      "java": {
+        "greedy": ""
       }
     },
     "2161": {
@@ -8755,6 +9230,11 @@
         "two-pointers": ""
       }
     },
+    "2195": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2196": {
       "java": {
         "tree": ""
@@ -8773,6 +9253,11 @@
     "2200": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "2202": {
+      "java": {
+        "greedy": ""
       }
     },
     "2203": {
@@ -8825,6 +9310,11 @@
         "ordered-set": ""
       }
     },
+    "2214": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2216": {
       "java": {
         "stack": ""
@@ -8858,6 +9348,11 @@
     "2223": {
       "java": {
         "suffix-array": "class Solution {\n    public long sumScores(String s) {\n      int n = s.length();\n        // https://cp-algorithms.com/string/z-function.html#implementation\n        int[] z = new int[n];\n        // [left, right] := the indices of the rightmost segment match\n        int left = 0;\n        int right = 0;\n\n        for (int i = 1; i < n; ++i) {\n            if (i < right)\n                z[i] = Math.min(right - i, z[i - left]);\n            while (i + z[i] < n && s.charAt(z[i]) == s.charAt(i + z[i]))\n                ++z[i];\n            if (i + z[i] > right) {\n                left = i;\n                right = i + z[i];\n            }\n        }\n\n        return Arrays.stream(z).asLongStream().sum() + n;\n    }\n}"
+      }
+    },
+    "2224": {
+      "java": {
+        "greedy": ""
       }
     },
     "2225": {
@@ -9075,6 +9570,11 @@
         "tree": ""
       }
     },
+    "2279": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2280": {
       "java": {
         "geometry": ""
@@ -9133,6 +9633,11 @@
     "2292": {
       "java": {
         "database": ""
+      }
+    },
+    "2294": {
+      "java": {
+        "greedy": ""
       }
     },
     "2296": {
@@ -9255,6 +9760,11 @@
         "tree": ""
       }
     },
+    "2323": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2324": {
       "java": {
         "database": ""
@@ -9330,6 +9840,11 @@
         "database": ""
       }
     },
+    "2340": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2341": {
       "java": {
         "counting": ""
@@ -9371,6 +9886,11 @@
         "heap-(priority-queue)": ""
       }
     },
+    "2350": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2351": {
       "java": {
         "bit-manipulation": ""
@@ -9406,6 +9926,11 @@
         "heap-(priority-queue)": ""
       }
     },
+    "2358": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2359": {
       "java": {
         "graph": ""
@@ -9429,6 +9954,11 @@
     "2363": {
       "java": {
         "ordered-set": ""
+      }
+    },
+    "2366": {
+      "java": {
+        "greedy": ""
       }
     },
     "2367": {
@@ -9509,6 +10039,11 @@
     "2382": {
       "java": {
         "union-find": ""
+      }
+    },
+    "2383": {
+      "java": {
+        "greedy": ""
       }
     },
     "2384": {
@@ -9606,6 +10141,11 @@
         "counting": ""
       }
     },
+    "2405": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2406": {
       "java": {
         "two-pointers": ""
@@ -9629,6 +10169,11 @@
     "2411": {
       "java": {
         "sliding-window": "class Solution {\n  public int[] smallestSubarrays(int[] nums) {\n  int kMaxBit = 30;\n    int[] ans = new int[nums.length];\n    int[] closest = new int[kMaxBit];\n\n    Arrays.fill(ans, 1);\n\n    for (int i = nums.length - 1; i >= 0; --i)\n      for (int j = 0; j < kMaxBit; ++j) {\n        if ((nums[i] >> j & 1) == 1)\n          closest[j] = i;\n        ans[i] = Math.max(ans[i], closest[j] - i + 1);\n      }\n\n    return ans;\n  }\n}"
+      }
+    },
+    "2412": {
+      "java": {
+        "greedy": ""
       }
     },
     "2413": {
@@ -9786,6 +10331,11 @@
         "prefix-sum": ""
       }
     },
+    "2449": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2453": {
       "java": {
         "counting": ""
@@ -9801,9 +10351,19 @@
         "heap-(priority-queue)": ""
       }
     },
+    "2457": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2458": {
       "java": {
         "tree": ""
+      }
+    },
+    "2459": {
+      "java": {
+        "greedy": ""
       }
     },
     "2460": {
@@ -9971,6 +10531,11 @@
         "heap-(priority-queue)": ""
       }
     },
+    "2498": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2499": {
       "java": {
         "counting": ""
@@ -10054,6 +10619,11 @@
     "2516": {
       "java": {
         "sliding-window": "class Solution {\n    public int takeCharacters(String s, int k) {\n      int n = s.length();\n        int ans = n;\n        int[] count = new int[3];\n\n        for (final char c : s.toCharArray())\n            ++count[c - 'a'];\n\n        if (count[0] < k || count[1] < k || count[2] < k)\n            return -1;\n\n        for (int left = 0, right = 0; right < n; ++right) {\n            --count[s.charAt(right) - 'a'];\n            while (count[s.charAt(right) - 'a'] < k)\n                ++count[s.charAt(left++) - 'a'];\n            ans = Math.min(ans, n - (right - left + 1));\n        }\n\n        return ans;\n    }\n}"
+      }
+    },
+    "2517": {
+      "java": {
+        "greedy": ""
       }
     },
     "2518": {
@@ -10156,6 +10726,11 @@
         "two-pointers": ""
       }
     },
+    "2541": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2542": {
       "java": {
         "heap-(priority-queue)": ""
@@ -10181,6 +10756,11 @@
         "dynamic-programming": ""
       }
     },
+    "2548": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2550": {
       "java": {
         "recursion": ""
@@ -10196,6 +10776,11 @@
         "prefix-sum": ""
       }
     },
+    "2554": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2555": {
       "java": {
         "sliding-window": "class Solution {\n    public int maximizeWin(int[] prizePositions, int k) {\n        int ans = 0;\n        int[] dp = new int[prizePositions.length + 1];\n\n        for (int i = 0, j = 0; i < prizePositions.length; ++i) {\n            while (prizePositions[i] - prizePositions[j] > k)\n                ++j;\n          int covered = i - j + 1;\n            dp[i + 1] = Math.max(dp[i], covered);\n            ans = Math.max(ans, dp[j] + covered);\n        }\n\n        return ans;\n    }\n}"
@@ -10206,6 +10791,11 @@
         "matrix": ""
       }
     },
+    "2557": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2558": {
       "java": {
         "heap-(priority-queue)": ""
@@ -10214,6 +10804,11 @@
     "2559": {
       "java": {
         "prefix-sum": ""
+      }
+    },
+    "2561": {
+      "java": {
+        "greedy": ""
       }
     },
     "2562": {
@@ -10234,6 +10829,16 @@
     "2565": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "2566": {
+      "java": {
+        "greedy": ""
+      }
+    },
+    "2567": {
+      "java": {
+        "greedy": ""
       }
     },
     "2568": {
@@ -10281,6 +10886,11 @@
         "matrix": ""
       }
     },
+    "2578": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2581": {
       "java": {
         "dynamic-programming": ""
@@ -10321,6 +10931,11 @@
         "design": ""
       }
     },
+    "2591": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2592": {
       "java": {
         "two-pointers": ""
@@ -10346,9 +10961,19 @@
         "dynamic-programming": ""
       }
     },
+    "2598": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2599": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "2600": {
+      "java": {
+        "greedy": ""
       }
     },
     "2601": {
@@ -10416,6 +11041,11 @@
         "prefix-sum": ""
       }
     },
+    "2616": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2617": {
       "java": {
         "union-find": ""
@@ -10471,6 +11101,11 @@
         "number-theory": ""
       }
     },
+    "2656": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2657": {
       "java": {
         "bit-manipulation": ""
@@ -10494,6 +11129,11 @@
     "2662": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "2663": {
+      "java": {
+        "greedy": ""
       }
     },
     "2664": {
@@ -10666,6 +11306,11 @@
         "matrix": ""
       }
     },
+    "2734": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2735": {
       "java": {
         "enumeration": ""
@@ -10836,6 +11481,16 @@
         "dynamic-programming": ""
       }
     },
+    "2789": {
+      "java": {
+        "greedy": ""
+      }
+    },
+    "2790": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2791": {
       "java": {
         "dynamic-programming": ""
@@ -10936,6 +11591,11 @@
         "dynamic-programming": ""
       }
     },
+    "2829": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2830": {
       "java": {
         "dynamic-programming": ""
@@ -10954,6 +11614,11 @@
     "2833": {
       "java": {
         "counting": ""
+      }
+    },
+    "2834": {
+      "java": {
+        "greedy": ""
       }
     },
     "2835": {
@@ -11004,6 +11669,11 @@
     "2846": {
       "java": {
         "strongly-connected-component": "class Solution {\n  public int[] minOperationsQueries(int n, int[][] edges, int[][] queries) {\n  int kMax = 26;\n  int m = (int) (Math.log(n) / Math.log(2)) + 1;\n    int[] ans = new int[queries.length];\n    List<Pair<Integer, Integer>>[] graph = new List[n];\n    int[][] jump = new int[n][m];\n    int[][] count = new int[n][];\n    int[] depth = new int[n];\n\n    for (int i = 0; i < n; ++i)\n      graph[i] = new ArrayList<>();\n\n    for (int[] edge : edges) {\n    int u = edge[0];\n    int v = edge[1];\n    int w = edge[2];\n      graph[u].add(new Pair<>(v, w));\n      graph[v].add(new Pair<>(u, w));\n    }\n\n    count[0] = new int[kMax + 1];\n    dfs(graph, 0, -1, 0, jump, count, depth);\n\n    for (int j = 1; j < m; ++j)\n      for (int i = 0; i < n; ++i)\n        jump[i][j] = jump[jump[i][j - 1]][j - 1];\n\n    for (int i = 0; i < queries.length; ++i) {\n    int u = queries[i][0];\n    int v = queries[i][1];\n    int lca = getLCA(u, v, jump, depth);\n    int numEdges = depth[u] + depth[v] - 2 * depth[lca];\n      int maxFreq = 0;\n      for (int j = 1; j <= kMax; ++j)\n        maxFreq = Math.max(maxFreq, count[u][j] + count[v][j] - 2 * count[lca][j]);\n      ans[i] = numEdges - maxFreq;\n    }\n\n    return ans;\n  }\n\n  private void dfs(List<Pair<Integer, Integer>>[] graph, int u, int prev, int d, int[][] jump,\n                   int[][] count, int[] depth) {\n    if (prev != -1)\n      jump[u][0] = prev;\n    depth[u] = d;\n    for (Pair<Integer, Integer> pair : graph[u]) {\n    int v = pair.getKey();\n    int w = pair.getValue();\n      if (v == prev)\n        continue;\n      count[v] = count[u].clone();\n      ++count[v][w];\n      dfs(graph, v, u, d + 1, jump, count, depth);\n    }\n  }\n\n  private int getLCA(int u, int v, int[][] jump, int[] depth) {\n    if (depth[u] > depth[v])\n      return getLCA(v, u, jump, depth);\n    for (int j = 0; j < jump[0].length; ++j)\n      if ((depth[v] - depth[u] >> j & 1) == 1)\n        v = jump[v][j];\n    if (u == v)\n      return u;\n    for (int j = jump[0].length - 1; j >= 0; --j)\n      if (jump[u][j] != jump[v][j]) {\n        u = jump[u][j];\n        v = jump[v][j];\n      }\n    return jump[v][0];\n  }\n}\n"
+      }
+    },
+    "2847": {
+      "java": {
+        "greedy": ""
       }
     },
     "2848": {
@@ -11066,6 +11736,11 @@
         "number-theory": ""
       }
     },
+    "2864": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2865": {
       "java": {
         "monotonic-stack": "import java.util.*;\n\nclass Solution {\n    public long maximumSumOfHeights(int[] heights) {\n        int n = heights.length;\n        long[] maxSum = new long[n];\n        Deque<Integer> stack = new ArrayDeque<>(Arrays.asList(-1));\n        long sum = 0;\n\n        for (int i = 0; i < n; ++i) {\n            sum = process(stack, heights, i, sum);\n            maxSum[i] = sum;\n        }\n\n        stack = new ArrayDeque<>(Arrays.asList(n));\n        sum = 0;\n\n        for (int i = n - 1; i >= 0; --i) {\n            sum = process(stack, heights, i, sum);\n            maxSum[i] += sum - heights[i];\n        }\n\n        return Arrays.stream(maxSum).max().getAsLong();\n    }\n\n    private long process(Deque<Integer> stack, int[] heights, int i, long sum) {\n        while (stack.size() > 1 && heights[stack.peek()] > heights[i]) {\n            int j = stack.pop();\n            sum -= Math.abs(j - stack.peek()) * (long) heights[j];\n        }\n        sum += Math.abs(i - stack.peek()) * (long) heights[i];\n        stack.push(i);\n        return sum;\n    }\n}\n"
@@ -11126,6 +11801,11 @@
         "database": ""
       }
     },
+    "2895": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2896": {
       "java": {
         "dynamic-programming": ""
@@ -11171,6 +11851,11 @@
         "matrix": ""
       }
     },
+    "2910": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2911": {
       "java": {
         "two-pointers": ""
@@ -11194,6 +11879,11 @@
     "2917": {
       "java": {
         "bit-manipulation": ""
+      }
+    },
+    "2918": {
+      "java": {
+        "greedy": ""
       }
     },
     "2919": {
@@ -11336,6 +12026,11 @@
         "enumeration": ""
       }
     },
+    "2952": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "2953": {
       "java": {
         "sliding-window": "class Solution {\n    public int countCompleteSubstrings(String word, int k) {\n      int uniqueLetters = word.chars().boxed().collect(Collectors.toSet()).size();\n        int ans = 0;\n\n        for (int windowSize = k; windowSize <= k * uniqueLetters && windowSize <= word.length(); windowSize += k) {\n            ans += countCompleteStrings(word, k, windowSize);\n        }\n\n        return ans;\n    }\n\n    private int countCompleteStrings(final String word, int k, int windowSize) {\n        int res = 0;\n        int countLetters = 0;\n        int[] count = new int[26];\n\n        for (int i = 0; i < word.length(); ++i) {\n            ++count[word.charAt(i) - 'a'];\n            ++countLetters;\n            if (i > 0 && Math.abs(word.charAt(i) - word.charAt(i - 1)) > 2) {\n                count = new int[26];\n                ++count[word.charAt(i) - 'a'];\n                countLetters = 1;\n            }\n            if (countLetters == windowSize + 1) {\n                --count[word.charAt(i - windowSize) - 'a'];\n                --countLetters;\n            }\n            if (countLetters == windowSize)\n                res += Arrays.stream(count).allMatch(freq -> freq == 0 || freq == k) ? 1 : 0;\n        }\n\n        return res;\n    }\n}"
@@ -11379,6 +12074,16 @@
     "2965": {
       "java": {
         "matrix": ""
+      }
+    },
+    "2966": {
+      "java": {
+        "greedy": ""
+      }
+    },
+    "2967": {
+      "java": {
+        "greedy": ""
       }
     },
     "2968": {
@@ -11541,6 +12246,11 @@
         "enumeration": ""
       }
     },
+    "3002": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "3003": {
       "java": {
         "dynamic-programming": ""
@@ -11594,6 +12304,11 @@
     "3013": {
       "java": {
         "sliding-window": "class Multiset {\n    public void add(int num) {\n        map.merge(num, 1, Integer::sum);\n        ++sz;\n    }\n\n    public void remove(int num) {\n        map.merge(num, -1, Integer::sum);\n        if (map.get(num) == 0)\n            map.remove(num);\n        --sz;\n    }\n\n    public int min() {\n        return map.firstEntry().getKey();\n    }\n\n    public int max() {\n        return map.lastEntry().getKey();\n    }\n\n    public int size() {\n        return sz;\n    }\n\n    public boolean contains(int num) {\n        return map.containsKey(num);\n    }\n\n    private TreeMap<Integer, Integer> map = new TreeMap<>();\n    private int sz = 0;\n}\n\nclass Solution {\n    public long minimumCost(int[] nums, int k, int dist) {\n        long windowSum = 0;\n        Multiset selected = new Multiset();\n        Multiset candidates = new Multiset();\n\n        for (int i = 1; i <= dist + 1; ++i) {\n            windowSum += nums[i];\n            selected.add(nums[i]);\n        }\n\n        windowSum = balance(windowSum, selected, candidates, k);\n        long minWindowSum = windowSum;\n\n        for (int i = dist + 2; i < nums.length; ++i) {\n          int outOfScope = nums[i - dist - 1];\n            if (selected.contains(outOfScope)) {\n                windowSum -= outOfScope;\n                selected.remove(outOfScope);\n            } else {\n                candidates.remove(outOfScope);\n            }\n            if (nums[i] < selected.max()) {\n                windowSum += nums[i];\n                selected.add(nums[i]);\n            } else {\n                candidates.add(nums[i]);\n            }\n            windowSum = balance(windowSum, selected, candidates, k);\n            minWindowSum = Math.min(minWindowSum, windowSum);\n        }\n\n        return nums[0] + minWindowSum;\n    }\n\n    private long balance(long windowSum, Multiset selected, Multiset candidates, int k) {\n        while (selected.size() < k - 1) {\n          int minCandidate = candidates.min();\n            windowSum += minCandidate;\n            selected.add(minCandidate);\n            candidates.remove(minCandidate);\n        }\n        while (selected.size() > k - 1) {\n          int maxSelected = selected.max();\n            windowSum -= maxSelected;\n            selected.remove(maxSelected);\n            candidates.add(maxSelected);\n        }\n        return windowSum;\n    }\n}"
+      }
+    },
+    "3014": {
+      "java": {
+        "greedy": ""
       }
     },
     "3015": {
@@ -11851,6 +12566,16 @@
         "ordered-set": ""
       }
     },
+    "3074": {
+      "java": {
+        "greedy": ""
+      }
+    },
+    "3075": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "3076": {
       "java": {
         "trie": ""
@@ -11899,6 +12624,11 @@
     "3087": {
       "java": {
         "database": ""
+      }
+    },
+    "3088": {
+      "java": {
+        "greedy": ""
       }
     },
     "3089": {
@@ -11966,6 +12696,16 @@
         "prefix-sum": ""
       }
     },
+    "3106": {
+      "java": {
+        "greedy": ""
+      }
+    },
+    "3107": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "3108": {
       "java": {
         "union-find": ""
@@ -11974,6 +12714,11 @@
     "3109": {
       "java": {
         "merge-sort": "class FenwickTree {\n  public FenwickTree(int n) {\n    sums = new int[n + 1];\n  }\n\n  public void add(int i, int delta) {\n    while (i < sums.length) {\n      sums[i] += delta;\n      i += lowbit(i);\n    }\n  }\n\n  public int get(int i) {\n    int sum = 0;\n    while (i > 0) {\n      sum += sums[i];\n      i -= lowbit(i);\n    }\n    return sum;\n  }\n\n  private int[] sums;\n\n  private static int lowbit(int i) {\n    return i & -i;\n  }\n}\n\nclass Solution {\n  public int getPermutationIndex(int[] perm) {\n  int kMod = 1_000_000_007;\n  int n = perm.length;\n    int ans = 0;\n    FenwickTree tree = new FenwickTree(n);\n    int[] fact = new int[n + 1]; \n    Arrays.fill(fact, 1);\n\n    for (int i = 2; i <= n; ++i)\n      fact[i] = (int) ((fact[i - 1] * (long) i) % kMod);\n\n    for (int i = 0; i < n; ++i) {\n    int num = perm[i];\n    int unusedNums = num - 1 - tree.get(num - 1);\n    int suffixLength = fact[n - 1 - i];\n      ans = (int) ((ans + unusedNums * (long) suffixLength) % kMod);\n      tree.add(num, 1);\n    }\n\n    return ans;\n  }\n}"
+      }
+    },
+    "3111": {
+      "java": {
+        "greedy": ""
       }
     },
     "3112": {
@@ -12011,6 +12756,11 @@
         "database": ""
       }
     },
+    "3119": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "3122": {
       "java": {
         "matrix": ""
@@ -12024,6 +12774,11 @@
     "3124": {
       "java": {
         "database": ""
+      }
+    },
+    "3125": {
+      "java": {
+        "greedy": ""
       }
     },
     "3126": {
@@ -12252,6 +13007,11 @@
         "database": ""
       }
     },
+    "3189": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "3191": {
       "java": {
         "sliding-window": "class Solution {\n    public int minOperations(int[] nums) {\n        int n = nums.length;\n        int ans = 0;\n\n        for (int i = 0; i + 2 < n; ++i)\n            if (nums[i] == 0) {\n                nums[i + 1] ^= 1;\n                nums[i + 2] ^= 1;\n                ++ans;\n            }\n\n        return nums[n - 1] == 0 || nums[n - 2] == 0 ? -1 : ans;\n    }\n}"
@@ -12327,6 +13087,11 @@
         "monotonic-stack": ""
       }
     },
+    "3207": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "3209": {
       "java": {
         "bit-manipulation": ""
@@ -12357,9 +13122,24 @@
         "bit-manipulation": ""
       }
     },
+    "3216": {
+      "java": {
+        "greedy": ""
+      }
+    },
     "3217": {
       "java": {
         "linked-list": ""
+      }
+    },
+    "3218": {
+      "java": {
+        "greedy": ""
+      }
+    },
+    "3219": {
+      "java": {
+        "greedy": ""
       }
     }
 }
