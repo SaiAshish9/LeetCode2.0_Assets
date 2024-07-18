@@ -39916,5 +39916,867 @@
       "difficulty": "Easy",
       "language": "Java",
       "acceptance": 69.5
+    },
+    "insert_interval": {
+      "qno": "57",
+      "title": "Insert Interval",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41.9
+    },
+    "missing_ranges": {
+      "qno": "163",
+      "title": "Missing Ranges",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 34
+    },
+    "summary_ranges": {
+      "qno": "228",
+      "title": "Summary Ranges",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 51.1
+    },
+    "teemo_attacking": {
+      "qno": "495",
+      "title": "Teemo Attacking",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 56.7
+    },
+    "non-decreasing_array": {
+      "qno": "665",
+      "title": "Non-decreasing Array",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 24.8
+    },
+    "longest_continuous_increasing_subsequence": {
+      "qno": "674",
+      "title": "Longest Continuous Increasing Subsequence",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 50.4
+    },
+    "1-bit_and_2-bit_characters": {
+      "qno": "717",
+      "title": "1-bit and 2-bit Characters",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 45.2
+    },
+    "pour_water": {
+      "qno": "755",
+      "title": "Pour Water",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47
+    },
+    "maximize_distance_to_closest_person": {
+      "qno": "849",
+      "title": "Maximize Distance to Closest Person",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.2
+    },
+    "monotonic_array": {
+      "qno": "896",
+      "title": "Monotonic Array",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 61.2
+    },
+    "partition_array_into_disjoint_intervals": {
+      "qno": "915",
+      "title": "Partition Array into Disjoint Intervals",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.8
+    },
+    "valid_mountain_array": {
+      "qno": "941",
+      "title": "Valid Mountain Array",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 33.5
+    },
+    "sum_of_even_numbers_after_queries": {
+      "qno": "985",
+      "title": "Sum of Even Numbers After Queries",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 68.2
+    },
+    "array_transformation": {
+      "qno": "1243",
+      "title": "Array Transformation",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 52.3
+    },
+    "remove_interval": {
+      "qno": "1272",
+      "title": "Remove Interval",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.1
+    },
+    "element_appearing_more_than_25%_in_sorted_array": {
+      "qno": "1287",
+      "title": "Element Appearing More Than 25% In Sorted Array",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 61
+    },
+    "replace_elements_with_greatest_element_on_right_side": {
+      "qno": "1299",
+      "title": "Replace Elements with Greatest Element on Right Side",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 71.2
+    },
+    "decompress_run-length_encoded_list": {
+      "qno": "1313",
+      "title": "Decompress Run-Length Encoded List",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 85.8
+    },
+    "distance_between_bus_stops": {
+      "qno": "1184",
+      "title": "Distance Between Bus Stops",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 54.1
+    },
+    "three_consecutive_odds": {
+      "qno": "1550",
+      "title": "Three Consecutive Odds",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 68.5
+    },
+    "watering_plants": {
+      "qno": "2079",
+      "title": "Watering Plants",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 79.7
+    },
+    "calculate_amount_paid_in_taxes": {
+      "qno": "2303",
+      "title": "Calculate Amount Paid in Taxes",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 65.7
+    },
+    "find_numbers_with_even_number_of_digits": {
+      "qno": "1295",
+      "title": "Find Numbers with Even Number of Digits",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 77.3
+    },
+    "number_of_times_binary_string_is_prefix-aligned": {
+      "qno": "1375",
+      "title": "Number of Times Binary String Is Prefix-Aligned",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.8
+    },
+    "create_target_array_in_the_given_order": {
+      "qno": "1389",
+      "title": "Create Target Array in the Given Order",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 85.9
+    },
+    "kids_with_the_greatest_number_of_candies": {
+      "qno": "1431",
+      "title": "Kids With the Greatest Number of Candies",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 87.6
+    },
+    "check_if_all_1's_are_at_least_length_k_places_away": {
+      "qno": "1437",
+      "title": "Check If All 1's Are at Least Length K Places Away",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 58
+    },
+    "number_of_students_doing_homework_at_a_given_time": {
+      "qno": "1450",
+      "title": "Number of Students Doing Homework at a Given Time",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 75.7
+    },
+    "shuffle_the_array": {
+      "qno": "1470",
+      "title": "Shuffle the Array",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 88.6
+    },
+    "find_the_winner_of_an_array_game": {
+      "qno": "1535",
+      "title": "Find the Winner of an Array Game",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 57
+    },
+    "most_visited_sector_in_a_circular_track": {
+      "qno": "1560",
+      "title": "Most Visited Sector in a Circular Track",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 58.9
+    },
+    "count_unhappy_friends": {
+      "qno": "1583",
+      "title": "Count Unhappy Friends",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.6
+    },
+    "maximum_profit_of_operating_a_centennial_wheel": {
+      "qno": "1599",
+      "title": "Maximum Profit of Operating a Centennial Wheel",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.1
+    },
+    "get_maximum_in_generated_array": {
+      "qno": "1646",
+      "title": "Get Maximum in Generated Array",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 50.5
+    },
+    "average_waiting_time": {
+      "qno": "1701",
+      "title": "Average Waiting Time",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 73.1
+    },
+    "number_of_rectangles_that_can_form_the_largest_square": {
+      "qno": "1725",
+      "title": "Number Of Rectangles That Can Form The Largest Square",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 78.8
+    },
+    "check_if_array_is_sorted_and_rotated": {
+      "qno": "1752",
+      "title": "Check if Array Is Sorted and Rotated",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 51.2
+    },
+    "find_nearest_point_that_has_the_same_x_or_y_coordinate": {
+      "qno": "1779",
+      "title": "Find Nearest Point That Has the Same X or Y Coordinate",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 68.6
+    },
+    "maximum_ascending_subarray_sum": {
+      "qno": "1800",
+      "title": "Maximum Ascending Subarray Sum",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 62
+    },
+    "minimum_distance_to_the_target_element": {
+      "qno": "1848",
+      "title": "Minimum Distance to the Target Element",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 54.5
+    },
+    "remove_one_element_to_make_the_array_strictly_increasing": {
+      "qno": "1909",
+      "title": "Remove One Element to Make the Array Strictly Increasing",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 27.6
+    },
+    "build_array_from_permutation": {
+      "qno": "1920",
+      "title": "Build Array from Permutation",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 89.9
+    },
+    "concatenation_of_array": {
+      "qno": "1929",
+      "title": "Concatenation of Array",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 90
+    },
+    "sum_of_beauty_in_the_array": {
+      "qno": "2012",
+      "title": "Sum of Beauty in the Array",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.2
+    },
+    "maximum_difference_between_increasing_elements": {
+      "qno": "2016",
+      "title": "Maximum Difference Between Increasing Elements",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 56.4
+    },
+    "smallest_index_with_equal_value": {
+      "qno": "2057",
+      "title": "Smallest Index With Equal Value",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 73
+    },
+    "elements_in_array_after_removing_and_replacing_elements": {
+      "qno": "2113",
+      "title": "Elements in Array After Removing and Replacing Elements",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 73.7
+    },
+    "all_divisions_with_the_highest_score_of_a_binary_array": {
+      "qno": "2155",
+      "title": "All Divisions With the Highest Score of a Binary Array",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.2
+    },
+    "count_equal_and_divisible_pairs_in_an_array": {
+      "qno": "2176",
+      "title": "Count Equal and Divisible Pairs in an Array",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 79.5
+    },
+    "count_hills_and_valleys_in_an_array": {
+      "qno": "2210",
+      "title": "Count Hills and Valleys in an Array",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 60.9
+    },
+    "find_closest_number_to_zero": {
+      "qno": "2239",
+      "title": "Find Closest Number to Zero",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 45
+    },
+    "min_max_game": {
+      "qno": "2293",
+      "title": "Min Max Game",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 63.1
+    },
+    "the_employee_that_worked_on_the_longest_task": {
+      "qno": "2432",
+      "title": "The Employee That Worked on the Longest Task",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 50.1
+    },
+    "separate_the_digits_in_an_array": {
+      "qno": "2553",
+      "title": "Separate the Digits in an Array",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 79.4
+    },
+    "determine_the_winner_of_a_bowling_game": {
+      "qno": "2660",
+      "title": "Determine the Winner of a Bowling Game",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 33.9
+    },
+    "find_the_maximum_divisibility_score": {
+      "qno": "2644",
+      "title": "Find the Maximum Divisibility Score",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 49.2
+    },
+    "number_of_adjacent_elements_with_the_same_color": {
+      "qno": "2672",
+      "title": "Number of Adjacent Elements With the Same Color",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.8
+    },
+    "semi-ordered_permutation": {
+      "qno": "2717",
+      "title": "Semi-Ordered Permutation",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 63.8
+    },
+    "number_of_employees_who_met_the_target": {
+      "qno": "2798",
+      "title": "Number of Employees Who Met the Target",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 87.7
+    },
+    "minimum_right_shifts_to_sort_the_array": {
+      "qno": "2855",
+      "title": "Minimum Right Shifts to Sort the Array",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 58
+    },
+    "maximum_value_of_an_ordered_triplet_ii": {
+      "qno": "2874",
+      "title": "Maximum Value of an Ordered Triplet II",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41.4
+    },
+    "maximum_value_of_an_ordered_triplet_i": {
+      "qno": "2873",
+      "title": "Maximum Value of an Ordered Triplet I",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 45.7
+    },
+    "last_visited_integers": {
+      "qno": "2899",
+      "title": "Last Visited Integers",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 66
+    },
+    "minimum_sum_of_mountain_triplets_i": {
+      "qno": "2908",
+      "title": "Minimum Sum of Mountain Triplets I",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 64.9
+    },
+    "minimum_sum_of_mountain_triplets_ii": {
+      "qno": "2909",
+      "title": "Minimum Sum of Mountain Triplets II",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.1
+    },
+    "count_tested_devices_after_test_operations": {
+      "qno": "2960",
+      "title": "Count Tested Devices After Test Operations",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 80.7
+    },
+    "maximum_area_of_longest_diagonal_rectangle": {
+      "qno": "3000",
+      "title": "Maximum Area of Longest Diagonal Rectangle",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 36
+    },
+    "maximum_number_of_operations_with_the_same_score_i": {
+      "qno": "3038",
+      "title": "Maximum Number of Operations With the Same Score I",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 51.9
+    },
+    "minimum_operations_to_exceed_threshold_value_i": {
+      "qno": "3065",
+      "title": "Minimum Operations to Exceed Threshold Value I",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 85.9
+    },
+    "distribute_elements_into_two_arrays_i": {
+      "qno": "3069",
+      "title": "Distribute Elements Into Two Arrays I",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 72.4
+    },
+    "longest_strictly_increasing_or_strictly_decreasing_subarray": {
+      "qno": "3105",
+      "title": "Longest Strictly Increasing or Strictly Decreasing Subarray",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 56.8
+    },
+    "find_the_integer_added_to_array_i": {
+      "qno": "3131",
+      "title": "Find the Integer Added to Array I",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 81.9
+    },
+    "find_the_first_player_to_win_k_games_in_a_row": {
+      "qno": "3175",
+      "title": "Find The First Player to win K Games in a Row",
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "default": "Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 39.3
+    },
+    "special_array_i": {
+      "qno": "3151",
+      "title": "Special Array I",
+      "tags": [
+        "Array"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 75.5
+    },
+    "alternating_groups_i": {
+      "qno": "3206",
+      "title": "Alternating Groups I",
+      "tags": [
+        "Array",
+        "Sliding Window"
+      ],
+      "default": "Array",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 66.3
+    },
+    "alternating_groups_ii": {
+      "qno": "3208",
+      "title": "Alternating Groups II",
+      "tags": [
+        "Array",
+        "Sliding Window"
+      ],
+      "default": "Array",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 39.2
     }
 }
