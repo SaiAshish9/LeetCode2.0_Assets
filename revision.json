@@ -434,6 +434,10 @@
         2560,
         2861
     ],
+    "Graph": [
+        1494,
+        133
+    ],
     "Topological Sort": [
         207,
         210,
@@ -814,10 +818,6 @@
     "Database": [],
     "Breadth-First Search": [],
     "Simulation": [],
-    "Graph": [
-        1494,
-        133
-    ],
     "Design": [
         173,
         1586,
