@@ -19,6 +19,16 @@
         "two-pointers": "class Solution {\n\n    public String longestPalindrome(String s) {\n        if (s == null || s.length() == 0) {\n            return \"\";\n        }\n        int n = s.length();\n        int start = 0;\n        int maxLen = 1; \n        for (int i = 0; i < n; i++) {\n            int len1 = expandAroundCenter(s, i, i); // odd-length palindromes           \n            int len2 = expandAroundCenter(s, i, i + 1); // even-length palindromes\n            int maxLenCurr = Math.max(len1, len2);\n            if (maxLenCurr > maxLen) {\n                maxLen = maxLenCurr;\n                start = i - (maxLen - 1) / 2;\n            }\n        }\n        \n        return s.substring(start, start + maxLen);\n    }\n    \n    private int expandAroundCenter(String s, int left, int right) {\n        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {\n            left--;\n            right++;\n        }\n        return right - left - 1;\n    }\n}\n"
       }
     },
+    "7": {
+      "java": {
+        "math": ""
+      }
+    },
+    "9": {
+      "java": {
+        "math": ""
+      }
+    },
     "10": {
       "java": {
         "dynamic-programming": ""
@@ -27,6 +37,16 @@
     "11": {
       "java": {
         "two-pointers": "public class Solution {\n    public int maxArea(int[] height) {\n        int max = 0;\n        int left = 0;\n        int right = height.length - 1;\n\n        while (left < right) {\n            int currentArea = Math.min(height[left], height[right]) * (right - left);\n            max = Math.max(max, currentArea);\n\n            if (height[left] < height[right]) {\n                left++;\n            } else {\n                right--;\n            }\n        }\n\n        return max;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] heights = {1, 2, 1};\n        System.out.println(solution.maxArea(heights)); // Output: 2\n    }\n}\n"
+      }
+    },
+    "12": {
+      "java": {
+        "math": ""
+      }
+    },
+    "13": {
+      "java": {
+        "math": ""
       }
     },
     "14": {
@@ -150,6 +170,11 @@
         "two-pointers": "class Solution {\n    public int trap(int[] height) {\n        if (height == null || height.length == 0) return 0;\n\n        int left = 0, right = height.length - 1;\n        int left_max = 0, right_max = 0;\n        int waterTrapped = 0;\n\n        while (left < right) {\n            if (height[left] < height[right]) {\n                if (height[left] >= left_max) {\n                    left_max = height[left];\n                } else {\n                    waterTrapped += left_max - height[left];\n                }\n                left++;\n            } else {\n                if (height[right] >= right_max) {\n                    right_max = height[right];\n                } else {\n                    waterTrapped += right_max - height[right];\n                }\n                right--;\n            }\n        }\n\n        return waterTrapped;\n    }\n\n    public static void main(String[] args) {\n        Solution sol = new Solution();\n        int[] height = {0,1,0,2,1,0,1,3,2,1,2,1};\n        System.out.println(sol.trap(height)); // Output: 6\n    }\n}\n"
       }
     },
+    "43": {
+      "java": {
+        "math": ""
+      }
+    },
     "44": {
       "java": {
         "dynamic-programming": ""
@@ -246,9 +271,19 @@
         "matrix": ""
       }
     },
+    "66": {
+      "java": {
+        "math": ""
+      }
+    },
     "67": {
       "java": {
         "bit-manipulation": ""
+      }
+    },
+    "69": {
+      "java": {
+        "math": ""
       }
     },
     "70": {
@@ -707,9 +742,19 @@
         "two-pointers": ""
       }
     },
+    "166": {
+      "java": {
+        "math": ""
+      }
+    },
     "167": {
       "java": {
         "two-pointers": "class Solution {\n    public int[] twoSum(int[] numbers, int target) {\n        int left = 0;\n        int right = numbers.length - 1;\n\n        while (left < right) {\n            int sum = numbers[left] + numbers[right];\n            if (sum == target) {\n                return new int[] { left + 1, right + 1 };\n            } else if (sum < target) {\n                left++;\n            } else {\n                right--;\n            }\n        }\n        \n        return new int[] {};\n    }\n}"
+      }
+    },
+    "168": {
+      "java": {
+        "math": ""
       }
     },
     "169": {
@@ -721,6 +766,16 @@
     "170": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "171": {
+      "java": {
+        "math": ""
+      }
+    },
+    "172": {
+      "java": {
+        "math": ""
       }
     },
     "173": {
@@ -1148,6 +1203,11 @@
     "262": {
       "java": {
         "database": ""
+      }
+    },
+    "263": {
+      "java": {
+        "math": ""
       }
     },
     "264": {
@@ -1598,6 +1658,11 @@
         "heap-(priority-queue)": ""
       }
     },
+    "356": {
+      "java": {
+        "math": ""
+      }
+    },
     "357": {
       "java": {
         "dynamic-programming": ""
@@ -1646,6 +1711,11 @@
     "366": {
       "java": {
         "tree": ""
+      }
+    },
+    "367": {
+      "java": {
+        "math": ""
       }
     },
     "368": {
@@ -1808,6 +1878,11 @@
         "union-find": ""
       }
     },
+    "400": {
+      "java": {
+        "math": ""
+      }
+    },
     "401": {
       "java": {
         "backtracking": ""
@@ -1863,6 +1938,11 @@
         "backtracking": ""
       }
     },
+    "412": {
+      "java": {
+        "math": ""
+      }
+    },
     "413": {
       "java": {
         "dynamic-programming": ""
@@ -1871,6 +1951,11 @@
     "414": {
       "java": {
         "sorting": ""
+      }
+    },
+    "415": {
+      "java": {
+        "math": ""
       }
     },
     "416": {
@@ -1906,6 +1991,11 @@
     "422": {
       "java": {
         "matrix": ""
+      }
+    },
+    "423": {
+      "java": {
+        "math": ""
       }
     },
     "424": {
@@ -1989,6 +2079,11 @@
         "trie": ""
       }
     },
+    "441": {
+      "java": {
+        "math": ""
+      }
+    },
     "443": {
       "java": {
         "two-pointers": ""
@@ -2009,6 +2104,11 @@
         "dynamic-programming": ""
       }
     },
+    "447": {
+      "java": {
+        "math": ""
+      }
+    },
     "449": {
       "java": {
         "binary-search-tree": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n * int val;\n * TreeNode left;\n * TreeNode right;\n * TreeNode(int x) { val = x; }\n * }\n */\nimport java.util.*;\n\npublic class Codec {\n\n    public String serialize(TreeNode root) {\n        StringBuilder sb = new StringBuilder();\n        serializeHelper(root, sb);\n        return sb.toString();\n    }\n\n    private void serializeHelper(TreeNode node, StringBuilder sb) {\n        if (node == null) {\n            sb.append(\"null\").append(\",\");\n            return;\n        }\n\n        sb.append(node.val).append(\",\");\n        serializeHelper(node.left, sb);\n        serializeHelper(node.right, sb);\n    }\n\n    public TreeNode deserialize(String data) {\n        if (data == null || data.isEmpty()) {\n            return null;\n        }\n\n        String[] nodes = data.split(\",\");\n        Queue<String> queue = new LinkedList<>(Arrays.asList(nodes));\n        return deserializeHelper(queue);\n    }\n\n    private TreeNode deserializeHelper(Queue<String> queue) {\n        String val = queue.poll();\n        if (val.equals(\"null\")) {\n            return null;\n        }\n\n        TreeNode node = new TreeNode(Integer.parseInt(val));\n        node.left = deserializeHelper(queue);\n        node.right = deserializeHelper(queue);\n\n        return node;\n    }\n}\n\n// Your Codec object will be instantiated and called as such:\n// Codec ser = new Codec();\n// Codec deser = new Codec();\n// String tree = ser.serialize(root);\n// TreeNode ans = deser.deserialize(tree);\n// return ans;"
@@ -2027,6 +2127,11 @@
     "452": {
       "java": {
         "greedy": ""
+      }
+    },
+    "453": {
+      "java": {
+        "math": ""
       }
     },
     "455": {
@@ -2159,6 +2264,11 @@
         "two-pointers": ""
       }
     },
+    "483": {
+      "java": {
+        "math": ""
+      }
+    },
     "484": {
       "java": {
         "stack": ""
@@ -2197,6 +2307,11 @@
     "491": {
       "java": {
         "backtracking": ""
+      }
+    },
+    "492": {
+      "java": {
+        "math": ""
       }
     },
     "493": {
@@ -2244,6 +2359,11 @@
         "monotonic-stack": "class Solution {\n    public int[] nextGreaterElements(int[] nums) {\n        int n = nums.length;\n        int[] result = new int[n];\n        Stack<Integer> stack = new Stack<>();\n\n        for (int i = 2 * n - 1; i >= 0; i--) {\n            while (!stack.isEmpty() && stack.peek() <= nums[i % n]) {\n                stack.pop();\n            }\n            result[i % n] = stack.isEmpty() ? -1 : stack.peek();\n            stack.push(nums[i % n]);\n        }\n\n        return result;\n    }\n}\n"
       }
     },
+    "504": {
+      "java": {
+        "math": ""
+      }
+    },
     "505": {
       "java": {
         "matrix": "class Solution {\n    public int shortestDistance(int[][] maze, int[] start, int[] destination) {\n        int m = maze.length, n = maze[0].length;\n        int inf = 1 << 30;\n        int[][] dist = new int[m][n];\n        for (var row : dist) {\n            Arrays.fill(row, inf);\n        }\n        int si = start[0], sj = start[1];\n        int di = destination[0], dj = destination[1];\n        dist[si][sj] = 0;\n        Deque<int[]> q = new ArrayDeque<>();\n        q.offer(new int[] {si, sj});\n        int[] dirs = {-1, 0, 1, 0, -1};\n        while (!q.isEmpty()) {\n            var p = q.poll();\n            int i = p[0], j = p[1];\n            for (int d = 0; d < 4; ++d) {\n                int x = i, y = j, k = dist[i][j];\n                int a = dirs[d], b = dirs[d + 1];\n                while (\n                    x + a >= 0 && x + a < m && y + b >= 0 && y + b < n && maze[x + a][y + b] == 0) {\n                    x += a;\n                    y += b;\n                    ++k;\n                }\n                if (k < dist[x][y]) {\n                    dist[x][y] = k;\n                    q.offer(new int[] {x, y});\n                }\n            }\n        }\n        return dist[di][dj] == inf ? -1 : dist[di][dj];\n    }\n}"
@@ -2252,6 +2372,11 @@
     "506": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "507": {
+      "java": {
+        "math": ""
       }
     },
     "508": {
@@ -2389,6 +2514,11 @@
         "stack": ""
       }
     },
+    "537": {
+      "java": {
+        "math": ""
+      }
+    },
     "538": {
       "java": {
         "binary-search-tree": ""
@@ -2504,6 +2634,11 @@
         "tree": ""
       }
     },
+    "564": {
+      "java": {
+        "math": ""
+      }
+    },
     "565": {
       "java": {
         "depth-first-search": ""
@@ -2543,6 +2678,11 @@
     "572": {
       "java": {
         "hash-function": ""
+      }
+    },
+    "573": {
+      "java": {
+        "math": ""
       }
     },
     "574": {
@@ -2630,6 +2770,11 @@
         "stack": ""
       }
     },
+    "592": {
+      "java": {
+        "math": ""
+      }
+    },
     "593": {
       "java": {
         "geometry": ""
@@ -2653,6 +2798,11 @@
     "597": {
       "java": {
         "database": ""
+      }
+    },
+    "598": {
+      "java": {
+        "math": ""
       }
     },
     "600": {
@@ -2850,6 +3000,11 @@
         "dynamic-programming": ""
       }
     },
+    "640": {
+      "java": {
+        "math": ""
+      }
+    },
     "641": {
       "java": {
         "queue": ""
@@ -2940,6 +3095,11 @@
         "heap-(priority-queue)": ""
       }
     },
+    "660": {
+      "java": {
+        "math": ""
+      }
+    },
     "661": {
       "java": {
         "matrix": ""
@@ -2963,6 +3123,16 @@
     "666": {
       "java": {
         "tree": ""
+      }
+    },
+    "667": {
+      "java": {
+        "math": ""
+      }
+    },
+    "668": {
+      "java": {
+        "math": ""
       }
     },
     "669": {
@@ -3231,6 +3401,11 @@
         "sliding-window": "class Solution {\n  public String minWindow(String s1, String s2) {\n  int m = s2.length();\n  int n = s1.length();\n    int[][] dp = new int[m + 1][n + 1];\n\n    for (int j = 0; j <= n; ++j)\n      dp[0][j] = j + 1;\n\n    for (int i = 1; i <= m; ++i)\n      for (int j = 1; j <= n; ++j)\n        if (s2.charAt(i - 1) == s1.charAt(j - 1))\n          dp[i][j] = dp[i - 1][j - 1];\n        else\n          dp[i][j] = dp[i][j - 1];\n\n    int bestLeft = 0;\n    int minLength = Integer.MAX_VALUE;\n\n    for (int j = 1; j <= n; ++j)\n      if (dp[m][j] > 0 && j - dp[m][j] + 1 < minLength) {\n        bestLeft = dp[m][j] - 1;\n        minLength = j - dp[m][j] + 1;\n      }\n\n    return minLength == Integer.MAX_VALUE ? \"\" : s1.substring(bestLeft, bestLeft + minLength);\n  }\n}"
       }
     },
+    "728": {
+      "java": {
+        "math": ""
+      }
+    },
     "729": {
       "java": {
         "ordered-set": ""
@@ -3341,6 +3516,11 @@
         "eulerian-circuit": "class Solution {\n\n    public String crackSafe(int n, int k) {\n        if (n == 1) {\n            StringBuilder sb = new StringBuilder();\n            for (int i = 0; i < k; i++) {\n                sb.append(i);\n            }\n            return sb.toString();\n        }\n\n        StringBuilder result = new StringBuilder();\n        Set<String> visited = new HashSet<>();\n        Stack<String> stack = new Stack<>();\n        String start = String.join('', Collections.nCopies(n - 1, '0'));\n        stack.push(start);\n\n        while (!stack.isEmpty()) {\n            String node = stack.peek();\n            boolean hasUnvisitedEdge = false;\n\n            // Try all possible edges from this node by appending each digit from 0 to k-1\n            for (int i = 0; i < k; i++) {\n                String next = node + i;\n                if (!visited.contains(next)) {\n                    visited.add(next);\n                    stack.push(next.substring(1));\n                    hasUnvisitedEdge = true;\n                    break;\n                }\n            }\n\n            // If all edges from this node are visited, backtrack and append the last\n            // character to the result\n            if (!hasUnvisitedEdge) {\n                result.append(stack.pop().charAt(node.length() - 1));\n            }\n        }\n\n        result.append(start.substring(0, start.length() - 1));\n        return result.toString();\n    }\n\n    // public String crackSafe(int n, int k) {\n    // StringBuilder result = new StringBuilder();\n    // Set<String> visited = new HashSet<>();\n    // String start = String.join('', Collections.nCopies(n - 1, '0'));\n    // dfs(start, k, visited, result, n);\n    // result.append(start);\n    // return result.toString();\n    // }\n    // private void dfs(String node, int k, Set<String> visited, StringBuilder\n    // result, int n) {\n    // for (int i = 0; i < k; i++) {\n    // String next = node + i;\n    // if (!visited.contains(next)) {\n    // visited.add(next);\n    // dfs(next.substring(1), k, visited, result, n);\n    // result.append(i);\n    // }\n    // }\n    // }\n\n}"
       }
     },
+    "754": {
+      "java": {
+        "math": ""
+      }
+    },
     "756": {
       "java": {
         "bit-manipulation": ""
@@ -3421,6 +3601,11 @@
         "matrix": ""
       }
     },
+    "775": {
+      "java": {
+        "math": ""
+      }
+    },
     "776": {
       "java": {
         "binary-search-tree": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    private int t;\n\n    public TreeNode[] splitBST(TreeNode root, int target) {\n        t = target;\n        return dfs(root);\n    }\n\n    private TreeNode[] dfs(TreeNode root) {\n        if (root == null) {\n            return new TreeNode[] {null, null};\n        }\n        if (root.val <= t) {\n            TreeNode[] ans = dfs(root.right);\n            root.right = ans[0];\n            ans[0] = root;\n            return ans;\n        } else {\n            TreeNode[] ans = dfs(root.left);\n            root.left = ans[1];\n            ans[1] = root;\n            return ans;\n        }\n    }\n}"
@@ -3439,6 +3624,11 @@
     "779": {
       "java": {
         "recursion": ""
+      }
+    },
+    "780": {
+      "java": {
+        "math": ""
       }
     },
     "781": {
@@ -3481,6 +3671,11 @@
         "dynamic-programming": ""
       }
     },
+    "789": {
+      "java": {
+        "math": ""
+      }
+    },
     "790": {
       "java": {
         "dynamic-programming": ""
@@ -3494,6 +3689,11 @@
     "792": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "793": {
+      "java": {
+        "math": ""
       }
     },
     "794": {
@@ -3861,6 +4061,11 @@
         "game-theory": ""
       }
     },
+    "878": {
+      "java": {
+        "math": ""
+      }
+    },
     "879": {
       "java": {
         "dynamic-programming": ""
@@ -3991,6 +4196,11 @@
         "monotonic-stack": "import java.util.Stack;\n\npublic class Solution {\n    public int sumSubarrayMins(int[] arr) {\n        int MOD = 1_000_000_007;\n        int n = arr.length;\n        \n        Stack<Integer> stack = new Stack<>();        \n        int[] prevLess = new int[n];\n        int[] nextLess = new int[n];\n        \n        for (int i = 0; i < n; i++) {\n            while (!stack.isEmpty() && arr[stack.peek()] >= arr[i]) {\n                stack.pop();\n            }\n            prevLess[i] = stack.isEmpty() ? -1 : stack.peek();\n            stack.push(i);\n        }\n        \n        stack.clear();\n        \n        for (int i = n - 1; i >= 0; i--) {\n            while (!stack.isEmpty() && arr[stack.peek()] > arr[i]) {\n                stack.pop();\n            }\n            nextLess[i] = stack.isEmpty() ? n : stack.peek();\n            stack.push(i);\n        }\n        \n        long result = 0;\n        \n        for (int i = 0; i < n; i++) {\n            int leftCount = i - prevLess[i];\n            int rightCount = nextLess[i] - i;\n            result = (result + (long) arr[i] * leftCount * rightCount) % MOD;\n        }\n        \n        return (int) result;\n    }\n}\n"
       }
     },
+    "908": {
+      "java": {
+        "math": ""
+      }
+    },
     "909": {
       "java": {
         "matrix": ""
@@ -4071,6 +4281,11 @@
     "926": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "927": {
+      "java": {
+        "math": ""
       }
     },
     "928": {
@@ -4263,6 +4478,11 @@
         "tree": ""
       }
     },
+    "972": {
+      "java": {
+        "math": ""
+      }
+    },
     "973": {
       "java": {
         "quickselect": "import java.util.*;\n\npublic class Solution {\n    public int[][] kClosest(int[][] points, int k) {\n        int left = 0, right = points.length - 1;\n        while (left <= right) {\n            int pivotIndex = partition(points, left, right);\n            if (pivotIndex == k - 1) {\n                break;\n            } else if (pivotIndex < k - 1) {\n                left = pivotIndex + 1;\n            } else {\n                right = pivotIndex - 1;\n            }\n        }\n        \n        int[][] result = new int[k][2];\n        for (int i = 0; i < k; i++) {\n            result[i] = points[i];\n        }\n        \n        return result;\n    }\n    \n    private int partition(int[][] points, int left, int right) {\n        int pivotIndex = left + (right - left) / 2;\n        int[] pivot = points[pivotIndex];\n        int pivotDist = distance(pivot);\n        swap(points, pivotIndex, right);\n        int storeIndex = left;\n        for (int i = left; i < right; i++) {\n            if (distance(points[i]) < pivotDist) {\n                swap(points, storeIndex++, i);\n            }\n        }\n        swap(points, storeIndex, right);\n        return storeIndex;\n    }\n    \n    private int distance(int[] point) {\n        return point[0] * point[0] + point[1] * point[1];\n    }\n    \n    private void swap(int[][] points, int i, int j) {\n        int[] temp = points[i];\n        points[i] = points[j];\n        points[j] = temp;\n    }\n}\n",
@@ -4337,6 +4557,11 @@
     "988": {
       "java": {
         "tree": ""
+      }
+    },
+    "989": {
+      "java": {
+        "math": ""
       }
     },
     "990": {
@@ -4447,6 +4672,16 @@
     "1014": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1015": {
+      "java": {
+        "math": ""
+      }
+    },
+    "1017": {
+      "java": {
+        "math": ""
       }
     },
     "1018": {
@@ -4564,6 +4799,11 @@
         "two-pointers": ""
       }
     },
+    "1041": {
+      "java": {
+        "math": ""
+      }
+    },
     "1042": {
       "java": {
         "graph": ""
@@ -4635,6 +4875,11 @@
         "two-pointers": ""
       }
     },
+    "1056": {
+      "java": {
+        "math": ""
+      }
+    },
     "1057": {
       "java": {
         "greedy": ""
@@ -4696,9 +4941,19 @@
         "database": ""
       }
     },
+    "1071": {
+      "java": {
+        "math": ""
+      }
+    },
     "1072": {
       "java": {
         "matrix": ""
+      }
+    },
+    "1073": {
+      "java": {
+        "math": ""
       }
     },
     "1074": {
@@ -4749,6 +5004,11 @@
     "1084": {
       "java": {
         "database": ""
+      }
+    },
+    "1085": {
+      "java": {
+        "math": ""
       }
     },
     "1086": {
@@ -4836,6 +5096,11 @@
         "union-find": ""
       }
     },
+    "1103": {
+      "java": {
+        "math": ""
+      }
+    },
     "1104": {
       "java": {
         "tree": ""
@@ -4901,6 +5166,11 @@
         "concurrency": "import java.util.concurrent.Semaphore;\n\nclass H2O {\n    private Semaphore hydrogenSemaphore;\n    private Semaphore oxygenSemaphore;\n    private int hydrogenCount;\n\n    public H2O() {\n        hydrogenSemaphore = new Semaphore(2); // Allow up to 2 hydrogen atoms\n        oxygenSemaphore = new Semaphore(1); // Allow up to 1 oxygen atom\n        hydrogenCount = 0;\n    }\n\n    public void hydrogen(Runnable releaseHydrogen) throws InterruptedException {\n        hydrogenSemaphore.acquire();\n        synchronized (this) {\n            hydrogenCount++;\n            releaseHydrogen.run();\n            if (hydrogenCount == 2) {\n                oxygenSemaphore.release();            }\n        }\n    }\n\n    public void oxygen(Runnable releaseOxygen) throws InterruptedException {\n        oxygenSemaphore.acquire();\n        synchronized (this) {\n            releaseOxygen.run();\n            hydrogenCount = 0;\n            hydrogenSemaphore.release(2);\n        }\n    }\n}\n"
       }
     },
+    "1118": {
+      "java": {
+        "math": ""
+      }
+    },
     "1120": {
       "java": {
         "tree": ""
@@ -4956,6 +5226,11 @@
         "monotonic-stack": "class Solution {\n  public int mctFromLeafValues(int[] arr) {\n    int ans = 0;\n    Deque<Integer> stack = new ArrayDeque<>();\n    stack.push(Integer.MAX_VALUE);\n\n    for (int a : arr) {\n      while (stack.peek() <= a) {\n        int mid = stack.pop();\n        ans += Math.min(stack.peek(), a) * mid;\n      }\n      stack.push(a);\n    }\n\n    while (stack.size() > 2)\n      ans += stack.pop() * stack.peek();\n\n    return ans;\n  }\n}"
       }
     },
+    "1131": {
+      "java": {
+        "math": ""
+      }
+    },
     "1132": {
       "java": {
         "database": ""
@@ -4964,6 +5239,11 @@
     "1133": {
       "java": {
         "sorting": ""
+      }
+    },
+    "1134": {
+      "java": {
+        "math": ""
       }
     },
     "1135": {
@@ -5045,6 +5325,11 @@
     "1152": {
       "java": {
         "sorting": ""
+      }
+    },
+    "1154": {
+      "java": {
+        "math": ""
       }
     },
     "1155": {
@@ -5137,6 +5422,11 @@
         "database": ""
       }
     },
+    "1175": {
+      "java": {
+        "math": ""
+      }
+    },
     "1176": {
       "java": {
         "sliding-window": "class Solution {\n    public int dietPlanPerformance(int[] calories, int k, int lower, int upper) {\n        int n = calories.length;\n        int[] s = new int[n + 1];\n        for (int i = 0; i < n; ++i) {\n            s[i + 1] = s[i] + calories[i];\n        }\n        int ans = 0;\n        for (int i = 0; i < n - k + 1; ++i) {\n            int t = s[i + k] - s[i];\n            if (t < lower) {\n                --ans;\n            } else if (t > upper) {\n                ++ans;\n            }\n        }\n        return ans;\n    }\n}"
@@ -5157,6 +5447,11 @@
         "database": ""
       }
     },
+    "1180": {
+      "java": {
+        "math": ""
+      }
+    },
     "1181": {
       "java": {
         "sorting": ""
@@ -5170,6 +5465,11 @@
     "1183": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "1185": {
+      "java": {
+        "math": ""
       }
     },
     "1186": {
@@ -5374,6 +5674,11 @@
         "probability-and-statistics": "class Solution {\n  public double nthPersonGetsNthSeat(int n) {\n    return n == 1 ? 1 : 0.5;\n  }\n}"
       }
     },
+    "1228": {
+      "java": {
+        "math": ""
+      }
+    },
     "1229": {
       "java": {
         "two-pointers": ""
@@ -5479,6 +5784,11 @@
         "database": ""
       }
     },
+    "1252": {
+      "java": {
+        "math": ""
+      }
+    },
     "1253": {
       "java": {
         "matrix": ""
@@ -5569,6 +5879,11 @@
         "database": ""
       }
     },
+    "1271": {
+      "java": {
+        "math": ""
+      }
+    },
     "1273": {
       "java": {
         "tree": ""
@@ -5582,6 +5897,11 @@
     "1275": {
       "java": {
         "matrix": ""
+      }
+    },
+    "1276": {
+      "java": {
+        "math": ""
       }
     },
     "1277": {
@@ -5602,6 +5922,11 @@
     "1280": {
       "java": {
         "database": ""
+      }
+    },
+    "1281": {
+      "java": {
+        "math": ""
       }
     },
     "1284": {
@@ -5689,6 +6014,11 @@
         "database": ""
       }
     },
+    "1304": {
+      "java": {
+        "math": ""
+      }
+    },
     "1305": {
       "java": {
         "binary-search-tree": ""
@@ -5737,6 +6067,11 @@
     "1316": {
       "java": {
         "rolling-hash": ""
+      }
+    },
+    "1317": {
+      "java": {
+        "math": ""
       }
     },
     "1318": {
@@ -5864,6 +6199,11 @@
         "sliding-window": "class Solution {\n    public int numOfSubarrays(int[] arr, int k, int threshold) {\n        int count = 0;\n        int windowSum = 0;\n        int n = arr.length;\n        int targetSum = k * threshold;\n\n        for (int i = 0; i < k; i++) {\n            windowSum += arr[i];\n        }\n\n        if (windowSum >= targetSum) {\n            count++;\n        }\n\n        for (int i = k; i < n; i++) {\n            windowSum += arr[i] - arr[i - k];\n            if (windowSum >= targetSum) {\n                count++;\n            }\n        }\n\n        return count;\n    }\n}\n"
       }
     },
+    "1344": {
+      "java": {
+        "math": ""
+      }
+    },
     "1345": {
       "java": {
         "breadth-first-search": ""
@@ -5939,9 +6279,19 @@
         "dynamic-programming": ""
       }
     },
+    "1360": {
+      "java": {
+        "math": ""
+      }
+    },
     "1361": {
       "java": {
         "union-find": ""
+      }
+    },
+    "1362": {
+      "java": {
+        "math": ""
       }
     },
     "1363": {
@@ -6064,6 +6414,11 @@
         "heap-(priority-queue)": ""
       }
     },
+    "1390": {
+      "java": {
+        "math": ""
+      }
+    },
     "1391": {
       "java": {
         "union-find": ""
@@ -6102,6 +6457,11 @@
     "1398": {
       "java": {
         "database": ""
+      }
+    },
+    "1399": {
+      "java": {
+        "math": ""
       }
     },
     "1400": {
@@ -6217,6 +6577,11 @@
     "1425": {
       "java": {
         "monotonic-queue": "import java.util.Deque;\nimport java.util.LinkedList;\n\npublic class Solution {\n    public int constrainedSubsetSum(int[] nums, int k) {\n        int n = nums.length;\n        int[] dp = new int[n];\n        Deque<Integer> deque = new LinkedList<>();\n        int maxSum = nums[0];\n\n        for (int i = 0; i < n; i++) {\n            dp[i] = nums[i];\n            if (!deque.isEmpty()) {\n                dp[i] = Math.max(dp[i], nums[i] + dp[deque.peekFirst()]);\n            }\n            maxSum = Math.max(maxSum, dp[i]);\n\n            while (!deque.isEmpty() && dp[i] >= dp[deque.peekLast()]) {\n                deque.pollLast();\n            }\n\n            deque.addLast(i);\n            \n            if (i - deque.peekFirst() >= k) {\n                deque.pollFirst();\n            }\n        }\n\n        return maxSum;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums = {10, 2, -10, 5, 20};\n        int k = 2;\n        System.out.println(solution.constrainedSubsetSum(nums, k));  // Output: 37\n    }\n}\n"
+      }
+    },
+    "1427": {
+      "java": {
+        "math": ""
       }
     },
     "1428": {
@@ -6589,6 +6954,11 @@
         "counting": ""
       }
     },
+    "1513": {
+      "java": {
+        "math": ""
+      }
+    },
     "1514": {
       "java": {
         "heap-(priority-queue)": ""
@@ -6609,6 +6979,11 @@
         "database": ""
       }
     },
+    "1518": {
+      "java": {
+        "math": ""
+      }
+    },
     "1519": {
       "java": {
         "tree": ""
@@ -6627,6 +7002,11 @@
     "1522": {
       "java": {
         "tree": ""
+      }
+    },
+    "1523": {
+      "java": {
+        "math": ""
       }
     },
     "1524": {
@@ -6739,6 +7119,11 @@
         "database": ""
       }
     },
+    "1551": {
+      "java": {
+        "math": ""
+      }
+    },
     "1552": {
       "java": {
         "sorting": ""
@@ -6827,6 +7212,11 @@
     "1572": {
       "java": {
         "matrix": ""
+      }
+    },
+    "1573": {
+      "java": {
+        "math": ""
       }
     },
     "1574": {
@@ -7349,6 +7739,11 @@
         "monotonic-queue": "class Solution {\n    public int boxDelivering(int[][] boxes, int portsCount, int maxBoxes, int maxWeight) {\n        int length = boxes.length;\n        int[] ports = new int[length + 1];\n        int[] weights = new int[length + 1];\n        int[] differences = new int[length + 1];\n        long[] prefixWeights = new long[length + 1];\n        for (int i = 1; i <= length; i++) {\n            ports[i] = boxes[i - 1][0];\n            weights[i] = boxes[i - 1][1];\n            if (i > 1)\n                differences[i] = differences[i - 1] + (ports[i - 1] != ports[i] ? 1 : 0);\n            prefixWeights[i] = prefixWeights[i - 1] + weights[i];\n        }\n        Deque<Integer> deque = new LinkedList<Integer>();\n        deque.offerLast(0);\n        int[] dp = new int[length + 1];\n        int[] remain = new int[length + 1];\n        for (int i = 1; i <= length; i++) {\n            while (!deque.isEmpty() && (i - deque.peekFirst() > maxBoxes || prefixWeights[i] - prefixWeights[deque.peekFirst()] > maxWeight))\n                deque.pollFirst();\n            dp[i] = remain[deque.peekFirst()] + differences[i] + 2;\n            if (i != length) {\n                remain[i] = dp[i] - differences[i + 1];\n                while (!deque.isEmpty() && remain[i] <= remain[deque.peekLast()])\n                    deque.pollLast();\n                deque.offerLast(i);\n            }\n        }\n        return dp[length];\n    }\n}"
       }
     },
+    "1688": {
+      "java": {
+        "math": ""
+      }
+    },
     "1689": {
       "java": {
         "greedy": ""
@@ -7467,6 +7862,11 @@
     "1715": {
       "java": {
         "database": ""
+      }
+    },
+    "1716": {
+      "java": {
+        "math": ""
       }
     },
     "1717": {
@@ -7659,6 +8059,11 @@
         "database": ""
       }
     },
+    "1759": {
+      "java": {
+        "math": ""
+      }
+    },
     "1761": {
       "java": {
         "graph": ""
@@ -7737,6 +8142,11 @@
     "1778": {
       "java": {
         "interactive": ""
+      }
+    },
+    "1780": {
+      "java": {
+        "math": ""
       }
     },
     "1781": {
@@ -7844,6 +8254,11 @@
         "trie": ""
       }
     },
+    "1806": {
+      "java": {
+        "math": ""
+      }
+    },
     "1808": {
       "java": {
         "recursion": ""
@@ -7862,6 +8277,11 @@
     "1811": {
       "java": {
         "database": ""
+      }
+    },
+    "1812": {
+      "java": {
+        "math": ""
       }
     },
     "1813": {
@@ -7897,6 +8317,11 @@
     "1821": {
       "java": {
         "database": ""
+      }
+    },
+    "1822": {
+      "java": {
+        "math": ""
       }
     },
     "1823": {
@@ -7962,6 +8387,11 @@
     "1836": {
       "java": {
         "linked-list": ""
+      }
+    },
+    "1837": {
+      "java": {
+        "math": ""
       }
     },
     "1838": {
@@ -8062,6 +8492,11 @@
     "1859": {
       "java": {
         "sorting": ""
+      }
+    },
+    "1860": {
+      "java": {
+        "math": ""
       }
     },
     "1861": {
@@ -8257,6 +8692,11 @@
     "1903": {
       "java": {
         "greedy": ""
+      }
+    },
+    "1904": {
+      "java": {
+        "math": ""
       }
     },
     "1905": {
@@ -8462,6 +8902,11 @@
     "1953": {
       "java": {
         "greedy": ""
+      }
+    },
+    "1954": {
+      "java": {
+        "math": ""
       }
     },
     "1955": {
@@ -8793,6 +9238,11 @@
     "2027": {
       "java": {
         "greedy": ""
+      }
+    },
+    "2028": {
+      "java": {
+        "math": ""
       }
     },
     "2029": {
@@ -9175,9 +9625,19 @@
         "stack": ""
       }
     },
+    "2117": {
+      "java": {
+        "math": ""
+      }
+    },
     "2118": {
       "java": {
         "database": ""
+      }
+    },
+    "2119": {
+      "java": {
+        "math": ""
       }
     },
     "2121": {
@@ -9395,6 +9855,11 @@
         "rolling-hash": ""
       }
     },
+    "2169": {
+      "java": {
+        "math": ""
+      }
+    },
     "2170": {
       "java": {
         "counting": ""
@@ -9425,6 +9890,11 @@
         "database": ""
       }
     },
+    "2177": {
+      "java": {
+        "math": ""
+      }
+    },
     "2178": {
       "java": {
         "backtracking": ""
@@ -9433,6 +9903,11 @@
     "2179": {
       "java": {
         "merge-sort": "class FenwickTree {\n  public FenwickTree(int n) {\n    sums = new int[n + 1];\n  }\n\n  public void add(int i, int delta) {\n    while (i < sums.length) {\n      sums[i] += delta;\n      i += lowbit(i);\n    }\n  }\n\n  public int get(int i) {\n    int sum = 0;\n    while (i > 0) {\n      sum += sums[i];\n      i -= lowbit(i);\n    }\n    return sum;\n  }\n\n  private int[] sums;\n\n  private static int lowbit(int i) {\n    return i & -i;\n  }\n}\n\nclass Solution {\n  public long goodTriplets(int[] nums1, int[] nums2) {\n  int n = nums1.length;\n    long ans = 0;\n    Map<Integer, Integer> numToIndex = new HashMap<>();\n    int[] nums = new int[n];\n    int[] leftSmaller = new int[n];\n    int[] rightLarger = new int[n];\n    FenwickTree tree1 = new FenwickTree(n);\n    FenwickTree tree2 = new FenwickTree(n);\n\n    for (int i = 0; i < n; ++i)\n      numToIndex.put(nums1[i], i);\n    for (int i = 0; i < n; ++i)\n      nums[i] = numToIndex.get(nums2[i]);\n\n    for (int i = 0; i < n; ++i) {\n      leftSmaller[i] = tree1.get(nums[i]);\n      tree1.add(nums[i] + 1, 1);\n    }\n\n    for (int i = n - 1; i >= 0; --i) {\n      rightLarger[i] = tree2.get(n) - tree2.get(nums[i]);\n      tree2.add(nums[i] + 1, 1);\n    }\n\n    for (int i = 0; i < n; ++i)\n      ans += (long) leftSmaller[i] * rightLarger[i];\n\n    return ans;\n  }\n}"
+      }
+    },
+    "2180": {
+      "java": {
+        "math": ""
       }
     },
     "2181": {
@@ -9510,6 +9985,11 @@
         "stack": ""
       }
     },
+    "2198": {
+      "java": {
+        "math": ""
+      }
+    },
     "2199": {
       "java": {
         "database": ""
@@ -9583,6 +10063,11 @@
     "2216": {
       "java": {
         "stack": ""
+      }
+    },
+    "2217": {
+      "java": {
+        "math": ""
       }
     },
     "2218": {
@@ -9663,6 +10148,11 @@
     "2234": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "2235": {
+      "java": {
+        "math": ""
       }
     },
     "2236": {
@@ -10166,6 +10656,11 @@
         "counting": ""
       }
     },
+    "2348": {
+      "java": {
+        "math": ""
+      }
+    },
     "2349": {
       "java": {
         "heap-(priority-queue)": ""
@@ -10446,6 +10941,11 @@
         "design": ""
       }
     },
+    "2409": {
+      "java": {
+        "math": ""
+      }
+    },
     "2410": {
       "java": {
         "two-pointers": ""
@@ -10596,6 +11096,11 @@
         "two-pointers": ""
       }
     },
+    "2442": {
+      "java": {
+        "math": ""
+      }
+    },
     "2443": {
       "java": {
         "enumeration": ""
@@ -10626,6 +11131,11 @@
         "greedy": ""
       }
     },
+    "2450": {
+      "java": {
+        "math": ""
+      }
+    },
     "2453": {
       "java": {
         "counting": ""
@@ -10634,6 +11144,11 @@
     "2454": {
       "java": {
         "monotonic-stack": "class Solution {\n    public int[] secondGreaterElement(int[] nums) {\n        int[] ans = new int[nums.length];\n        Arrays.fill(ans, -1);\n        // a decreasing stack that stores indices that met the first greater number\n        Deque<Integer> prevStack = new ArrayDeque<>();\n        // a decreasing stack that stores indices\n        Deque<Integer> currStack = new ArrayDeque<>();\n\n        for (int i = 0; i < nums.length; ++i) {\n            while (!prevStack.isEmpty() && nums[prevStack.peek()] < nums[i])\n                ans[prevStack.poll()] = nums[i];\n            Deque<Integer> decreasingIndices = new ArrayDeque<>();\n            while (!currStack.isEmpty() && nums[currStack.peek()] < nums[i])\n                decreasingIndices.push(currStack.poll());\n            while (!decreasingIndices.isEmpty())\n                prevStack.push(decreasingIndices.poll());\n            currStack.push(i);\n        }\n\n        return ans;\n    }\n}"
+      }
+    },
+    "2455": {
+      "java": {
+        "math": ""
       }
     },
     "2456": {
@@ -10694,6 +11209,11 @@
     "2467": {
       "java": {
         "tree": ""
+      }
+    },
+    "2469": {
+      "java": {
+        "math": ""
       }
     },
     "2470": {
@@ -10931,6 +11451,11 @@
         "merge-sort": "class FenwickTree {\n  public FenwickTree(int n) {\n    sums = new int[n + 1];\n  }\n\n  public void add(int i, int delta) {\n    while (i < sums.length) {\n      sums[i] += delta;\n      i += lowbit(i);\n    }\n  }\n\n  public int get(int i) {\n    int sum = 0;\n    while (i > 0) {\n      sum += sums[i];\n      i -= lowbit(i);\n    }\n    return sum;\n  }\n\n  private int[] sums;\n\n  private static int lowbit(int i) {\n    return i & -i;\n  }\n}\n\nclass Solution {\n  public int kBigIndices(int[] nums, int k) {\n  int n = nums.length;\n    int ans = 0;\n    FenwickTree leftTree = new FenwickTree(n);\n    FenwickTree rightTree = new FenwickTree(n);\n    int[] left = new int[n];\n    int[] right = new int[n];\n\n    for (int i = 0; i < n; ++i) {\n      left[i] = leftTree.get(nums[i] - 1);\n      leftTree.add(nums[i], 1);\n    }\n\n    for (int i = n - 1; i >= 0; --i) {\n      right[i] = rightTree.get(nums[i] - 1);\n      rightTree.add(nums[i], 1);\n    }\n\n    for (int i = 0; i < n; ++i)\n      if (left[i] >= k && right[i] >= k)\n        ++ans;\n\n    return ans;\n  }\n}"
       }
     },
+    "2520": {
+      "java": {
+        "math": ""
+      }
+    },
     "2521": {
       "java": {
         "number-theory": ""
@@ -10949,6 +11474,11 @@
     "2524": {
       "java": {
         "sliding-window": "class Solution {\n    public int maxFrequencyScore(int[] nums, int k) {\n      int mod = (int) 1e9 + 7;\n        Map<Integer, Integer> count = new HashMap<>();\n        for (int i = 0; i < k; ++i) {\n            count.put(nums[i], count.getOrDefault(nums[i], 0) + 1);\n        }\n        long curr = 0;\n        for (var e : count.entrySet()) {\n            curr = (curr + qmi(e.getKey(), e.getValue(), mod)) % mod;\n        }\n        long ans = curr;\n        for (int i = k; i < nums.length; ++i) {\n            int a = nums[i - k];\n            int b = nums[i];\n            if (a != b) {\n                if (count.getOrDefault(b, 0) > 0) {\n                    curr += (b - 1) * qmi(b, count.get(b), mod) % mod;\n                } else {\n                    curr += b;\n                }\n                if (count.getOrDefault(a, 0) > 1) {\n                    curr -= (a - 1) * qmi(a, count.get(a) - 1, mod) % mod;\n                } else {\n                    curr -= a;\n                }\n                curr = (curr + mod) % mod;\n                count.put(b, count.getOrDefault(b, 0) + 1);\n                count.put(a, count.getOrDefault(a, 0) - 1);\n                ans = Math.max(ans, curr);\n            }\n        }\n        return (int) ans;\n    }\n\n    long qmi(long a, long k, long p) {\n        long res = 1;\n        while (k != 0) {\n            if ((k & 1) == 1) {\n                res = res * a % p;\n            }\n            k >>= 1;\n            a = a * a % p;\n        }\n        return res;\n    }\n}"
+      }
+    },
+    "2525": {
+      "java": {
+        "math": ""
       }
     },
     "2526": {
@@ -10996,6 +11526,11 @@
         "queue": ""
       }
     },
+    "2535": {
+      "java": {
+        "math": ""
+      }
+    },
     "2536": {
       "java": {
         "matrix": ""
@@ -11036,6 +11571,11 @@
         "number-theory": ""
       }
     },
+    "2544": {
+      "java": {
+        "math": ""
+      }
+    },
     "2545": {
       "java": {
         "matrix": ""
@@ -11054,6 +11594,11 @@
     "2548": {
       "java": {
         "greedy": ""
+      }
+    },
+    "2549": {
+      "java": {
+        "math": ""
       }
     },
     "2550": {
@@ -11171,6 +11716,11 @@
         "prefix-sum": ""
       }
     },
+    "2575": {
+      "java": {
+        "math": ""
+      }
+    },
     "2576": {
       "java": {
         "two-pointers": ""
@@ -11186,6 +11736,11 @@
         "greedy": ""
       }
     },
+    "2579": {
+      "java": {
+        "math": ""
+      }
+    },
     "2580": {
       "java": {
         "sorting": ""
@@ -11194,6 +11749,11 @@
     "2581": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "2582": {
+      "java": {
+        "math": ""
       }
     },
     "2583": {
@@ -11389,6 +11949,21 @@
     "2646": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "2647": {
+      "java": {
+        "math": ""
+      }
+    },
+    "2651": {
+      "java": {
+        "math": ""
+      }
+    },
+    "2652": {
+      "java": {
+        "math": ""
       }
     },
     "2653": {
@@ -11601,6 +12176,11 @@
         "interactive": ""
       }
     },
+    "2729": {
+      "java": {
+        "math": ""
+      }
+    },
     "2730": {
       "java": {
         "sliding-window": "class Solution {\n  public int longestSemiRepetitiveSubstring(String s) {\n    int ans = 1;\n    int prevStart = 0;\n    int start = 0;\n\n    for (int i = 1; i < s.length(); ++i) {\n      if (s.charAt(i) == s.charAt(i - 1)) {\n        if (prevStart > 0)\n          start = prevStart;\n        prevStart = i;\n      }\n      ans = Math.max(ans, i - start + 1);\n    }\n\n    return ans;\n  }\n}"
@@ -11644,6 +12224,11 @@
     "2738": {
       "java": {
         "database": ""
+      }
+    },
+    "2739": {
+      "java": {
+        "math": ""
       }
     },
     "2740": {
@@ -11749,6 +12334,11 @@
     "2768": {
       "java": {
         "enumeration": ""
+      }
+    },
+    "2769": {
+      "java": {
+        "math": ""
       }
     },
     "2770": {
@@ -11859,6 +12449,11 @@
     "2802": {
       "java": {
         "bit-manipulation": ""
+      }
+    },
+    "2806": {
+      "java": {
+        "math": ""
       }
     },
     "2807": {
@@ -12026,6 +12621,11 @@
         "prefix-sum": ""
       }
     },
+    "2849": {
+      "java": {
+        "math": ""
+      }
+    },
     "2850": {
       "java": {
         "matrix": ""
@@ -12149,6 +12749,11 @@
     "2893": {
       "java": {
         "database": ""
+      }
+    },
+    "2894": {
+      "java": {
+        "math": ""
       }
     },
     "2895": {
@@ -12419,6 +13024,11 @@
     "2959": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "2961": {
+      "java": {
+        "math": ""
       }
     },
     "2962": {
@@ -12701,6 +13311,11 @@
         "enumeration": ""
       }
     },
+    "3021": {
+      "java": {
+        "math": ""
+      }
+    },
     "3022": {
       "java": {
         "bit-manipulation": ""
@@ -12961,6 +13576,11 @@
         "matrix": ""
       }
     },
+    "3079": {
+      "java": {
+        "math": ""
+      }
+    },
     "3080": {
       "java": {
         "heap-(priority-queue)": ""
@@ -13049,6 +13669,21 @@
     "3098": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "3099": {
+      "java": {
+        "math": ""
+      }
+    },
+    "3100": {
+      "java": {
+        "math": ""
+      }
+    },
+    "3101": {
+      "java": {
+        "math": ""
       }
     },
     "3102": {
@@ -13277,6 +13912,11 @@
         "memoization": "class Solution {\n    HashMap<String, Integer> memoizeMap = new HashMap<>();\n    int K;\n\n    public int waysToReachStair(int k) {\n\n        K = k;\n        int index = 1;\n        int jump = 0;\n        boolean canJumpBack = true;\n\n        return solve(index, jump, canJumpBack);\n    }\n\n    public int solve(int index, int jump, boolean canJumpBack) {\n\n        if (index > K + 1) {\n            return 0;\n        }\n\n        String str = String.valueOf(index) + \"_\" + String.valueOf(jump) + \"_\" + String.valueOf(canJumpBack);\n\n        if (memoizeMap.containsKey(str)) {\n\n            return memoizeMap.get(str);\n        }\n\n        int totalWays = 0;\n\n        if (index == K) {\n            totalWays++;\n        }\n\n        if (canJumpBack == true) {\n\n            totalWays += solve(index - 1, jump, false);\n        }\n        totalWays += solve(index + (int) Math.pow(2, jump), jump + 1, true);\n        memoizeMap.put(str, totalWays);\n\n        return totalWays;\n    }\n}"
       }
     },
+    "3155": {
+      "java": {
+        "math": ""
+      }
+    },
     "3156": {
       "java": {
         "database": ""
@@ -13342,6 +13982,11 @@
         "dynamic-programming": ""
       }
     },
+    "3178": {
+      "java": {
+        "math": ""
+      }
+    },
     "3179": {
       "java": {
         "prefix-sum": ""
@@ -13390,6 +14035,11 @@
     "3189": {
       "java": {
         "greedy": ""
+      }
+    },
+    "3190": {
+      "java": {
+        "math": ""
       }
     },
     "3191": {
