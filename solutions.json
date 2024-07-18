@@ -175,6 +175,11 @@
         "matrix": "public class RotateImage {\n\n    public void rotate(int[][] matrix) {\n        if (matrix == null || matrix.length == 0) return;\n        \n        int n = matrix.length;\n        transpose(matrix, n);\n        \n        for (int i = 0; i < n; i++) {\n            reverseRow(matrix[i], n);\n        }\n    }\n    \n    private void transpose(int[][] matrix, int n) {\n        for (int i = 0; i < n; i++) {\n            for (int j = i + 1; j < n; j++) {\n                swap(matrix, i, j, j, i);\n            }\n        }\n    }\n    \n    private void reverseRow(int[] row, int n) {\n        int left = 0, right = n - 1;\n        while (left < right) {\n            int temp = row[left];\n            row[left] = row[right];\n            row[right] = temp;\n            left++;\n            right--;\n        }\n    }\n    \n    private void swap(int[][] matrix, int i, int j, int x, int y) {\n        int temp = matrix[i][j];\n        matrix[i][j] = matrix[x][y];\n        matrix[x][y] = temp;\n    }\n\n    public static void main(String[] args) {\n        RotateImage ri = new RotateImage();\n        int[][] matrix = {\n            {1, 2, 3},\n            {4, 5, 6},\n            {7, 8, 9}\n        };\n        \n        ri.rotate(matrix);\n        \n        for (int i = 0; i < matrix.length; i++) {\n            for (int j = 0; j < matrix[i].length; j++) {\n                System.out.print(matrix[i][j] + \" \");\n            }\n            System.out.println();\n        }\n    }\n}\n"
       }
     },
+    "49": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "50": {
       "java": {
         "recursion": ""
@@ -204,6 +209,11 @@
     "55": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "56": {
+      "java": {
+        "sorting": ""
       }
     },
     "59": {
@@ -929,6 +939,11 @@
         "backtracking": ""
       }
     },
+    "217": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "218": {
       "java": {
         "line-sweep": "import java.util.*;\n\nclass Solution {\n    public List<List<Integer>> getSkyline(int[][] buildings) {\n        List<List<Integer>> result = new ArrayList<>();\n        List<int[]> heights = new ArrayList<>();\n        \n        // Step 1: Collect Events\n        for (int[] building : buildings) {\n            heights.add(new int[]{building[0], -building[2]}); // start event\n            heights.add(new int[]{building[1], building[2]});  // end event\n        }\n        \n        // Step 2: Sort Events\n        Collections.sort(heights, (a, b) -> {\n            if (a[0] != b[0]) {\n                return a[0] - b[0];\n            }\n            return a[1] - b[1];\n        });\n        \n        // Step 3: Process Events\n        PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> b - a);\n        pq.offer(0);\n        int prevHeight = 0;\n        \n        for (int[] h : heights) {\n            if (h[1] < 0) {\n                pq.offer(-h[1]); // start event\n            } else {\n                pq.remove(h[1]); // end event\n            }\n            int currHeight = pq.peek();\n            if (prevHeight != currHeight) {\n                result.add(Arrays.asList(h[0], currHeight));\n                prevHeight = currHeight;\n            }\n        }\n        \n        return result;\n    }\n}\n"
@@ -1045,6 +1060,11 @@
         "dynamic-programming": ""
       }
     },
+    "242": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "244": {
       "java": {
         "two-pointers": ""
@@ -1073,6 +1093,11 @@
     "251": {
       "java": {
         "iterator": "class Vector2D {\n    private int i;\n    private int j;\n    private int[][] vec;\n\n    public Vector2D(int[][] vec) {\n        this.vec = vec;\n    }\n\n    public int next() {\n        forward();\n        return vec[i][j++];\n    }\n\n    public boolean hasNext() {\n        forward();\n        return i < vec.length;\n    }\n\n    private void forward() {\n        while (i < vec.length && j >= vec[i].length) {\n            ++i;\n            j = 0;\n        }\n    }\n}\n\n/**\n * Your Vector2D object will be instantiated and called as such:\n * Vector2D obj = new Vector2D(vec);\n * int param_1 = obj.next();\n * boolean param_2 = obj.hasNext();\n */"
+      }
+    },
+    "252": {
+      "java": {
+        "sorting": ""
       }
     },
     "253": {
@@ -1808,6 +1833,11 @@
         "bit-manipulation": ""
       }
     },
+    "406": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "407": {
       "java": {
         "matrix": ""
@@ -1836,6 +1866,11 @@
     "413": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "414": {
+      "java": {
+        "sorting": ""
       }
     },
     "416": {
@@ -1927,6 +1962,11 @@
     "435": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "436": {
+      "java": {
+        "sorting": ""
       }
     },
     "437": {
@@ -2022,6 +2062,11 @@
     "461": {
       "java": {
         "bit-manipulation": ""
+      }
+    },
+    "462": {
+      "java": {
+        "sorting": ""
       }
     },
     "463": {
@@ -2347,6 +2392,11 @@
     "538": {
       "java": {
         "binary-search-tree": ""
+      }
+    },
+    "539": {
+      "java": {
+        "sorting": ""
       }
     },
     "541": {
@@ -2738,6 +2788,11 @@
     "627": {
       "java": {
         "database": ""
+      }
+    },
+    "628": {
+      "java": {
+        "sorting": ""
       }
     },
     "629": {
@@ -3256,6 +3311,11 @@
         "dynamic-programming": ""
       }
     },
+    "747": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "749": {
       "java": {
         "matrix": ""
@@ -3426,6 +3486,11 @@
         "dynamic-programming": ""
       }
     },
+    "791": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "792": {
       "java": {
         "dynamic-programming": ""
@@ -3594,6 +3659,11 @@
     "832": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "833": {
+      "java": {
+        "sorting": ""
       }
     },
     "834": {
@@ -3831,14 +3901,29 @@
         "dynamic-programming": ""
       }
     },
+    "888": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "889": {
       "java": {
         "tree": ""
       }
     },
+    "891": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "892": {
       "java": {
         "matrix": ""
+      }
+    },
+    "893": {
+      "java": {
+        "sorting": ""
       }
     },
     "894": {
@@ -3859,6 +3944,11 @@
     "898": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "899": {
+      "java": {
+        "sorting": ""
       }
     },
     "900": {
@@ -4021,6 +4111,11 @@
     "936": {
       "java": {
         "queue": ""
+      }
+    },
+    "937": {
+      "java": {
+        "sorting": ""
       }
     },
     "938": {
@@ -4866,6 +4961,11 @@
         "database": ""
       }
     },
+    "1133": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "1135": {
       "java": {
         "union-find": ""
@@ -4942,6 +5042,11 @@
         "sliding-window": "class Solution {\n  public int minSwaps(int[] data) {\n      int sum = 0;\n      for (int v : data) {\n          sum += v;\n      }\n      int sumK = 0;\n      for (int i = 0; i < sum; ++i) {\n          sumK += data[i];\n      }\n      int max = sumK;\n      for (int i = sum; i < data.length; ++i) {\n          sumK += data[i];\n          sumK -= data[i - sum];\n          max = Math.max(max, sumK);\n      }\n      return sum - max;\n  }\n}"
       }
     },
+    "1152": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "1155": {
       "java": {
         "dynamic-programming": ""
@@ -5002,6 +5107,16 @@
         "union-find": ""
       }
     },
+    "1169": {
+      "java": {
+        "sorting": ""
+      }
+    },
+    "1170": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "1171": {
       "java": {
         "linked-list": ""
@@ -5040,6 +5155,11 @@
     "1179": {
       "java": {
         "database": ""
+      }
+    },
+    "1181": {
+      "java": {
+        "sorting": ""
       }
     },
     "1182": {
@@ -5122,6 +5242,11 @@
     "1199": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "1200": {
+      "java": {
+        "sorting": ""
       }
     },
     "1201": {
@@ -5494,6 +5619,11 @@
         "iterator": "class CombinationIterator {\n    private List<String> combinations;\n    private int currentIndex;\n\n    public CombinationIterator(String characters, int combinationLength) {\n        combinations = new ArrayList<>();\n        generateCombinations(characters, combinationLength, 0, new StringBuilder());\n        currentIndex = 0;\n    }\n\n    private void generateCombinations(String characters, int length, int start, StringBuilder sb) {\n        if (sb.length() == length) {\n            combinations.add(sb.toString());\n            return;\n        }\n\n        for (int i = start; i < characters.length(); i++) {\n            sb.append(characters.charAt(i));\n            generateCombinations(characters, length, i + 1, sb);\n            sb.deleteCharAt(sb.length() - 1);\n        }\n    }\n\n    public String next() {\n        return combinations.get(currentIndex++);\n    }\n\n    public boolean hasNext() {\n        return currentIndex < combinations.size();\n    }\n}\n\n/**\n * Your CombinationIterator object will be instantiated and called as such:\n * CombinationIterator obj = new CombinationIterator(characters,\n * combinationLength);\n * String param_1 = obj.next();\n * boolean param_2 = obj.hasNext();\n */"
       }
     },
+    "1288": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "1289": {
       "java": {
         "matrix": ""
@@ -5537,6 +5667,11 @@
     "1298": {
       "java": {
         "graph": ""
+      }
+    },
+    "1300": {
+      "java": {
+        "sorting": ""
       }
     },
     "1301": {
@@ -5664,9 +5799,19 @@
         "greedy": ""
       }
     },
+    "1331": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "1332": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "1333": {
+      "java": {
+        "sorting": ""
       }
     },
     "1334": {
@@ -6164,6 +6309,11 @@
         "dynamic-programming": ""
       }
     },
+    "1451": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "1453": {
       "java": {
         "geometry": ""
@@ -6197,6 +6347,11 @@
     "1459": {
       "java": {
         "database": ""
+      }
+    },
+    "1460": {
+      "java": {
+        "sorting": ""
       }
     },
     "1461": {
@@ -6334,6 +6489,11 @@
         "tree": ""
       }
     },
+    "1491": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "1492": {
       "java": {
         "number-theory": ""
@@ -6377,6 +6537,11 @@
     "1501": {
       "java": {
         "database": ""
+      }
+    },
+    "1502": {
+      "java": {
+        "sorting": ""
       }
     },
     "1503": {
@@ -6572,6 +6737,11 @@
     "1549": {
       "java": {
         "database": ""
+      }
+    },
+    "1552": {
+      "java": {
+        "sorting": ""
       }
     },
     "1553": {
@@ -6789,6 +6959,11 @@
         "counting": ""
       }
     },
+    "1604": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "1605": {
       "java": {
         "matrix": ""
@@ -6802,6 +6977,11 @@
     "1607": {
       "java": {
         "database": ""
+      }
+    },
+    "1608": {
+      "java": {
+        "sorting": ""
       }
     },
     "1609": {
@@ -6854,6 +7034,11 @@
         "interactive": ""
       }
     },
+    "1619": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "1620": {
       "java": {
         "enumeration": ""
@@ -6894,6 +7079,11 @@
         "stack": ""
       }
     },
+    "1630": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "1631": {
       "java": {
         "union-find": ""
@@ -6917,6 +7107,16 @@
     "1635": {
       "java": {
         "database": ""
+      }
+    },
+    "1636": {
+      "java": {
+        "sorting": ""
+      }
+    },
+    "1637": {
+      "java": {
+        "sorting": ""
       }
     },
     "1638": {
@@ -7509,6 +7709,11 @@
         "dynamic-programming": ""
       }
     },
+    "1772": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "1774": {
       "java": {
         "dynamic-programming": ""
@@ -7769,6 +7974,11 @@
         "sliding-window": "class Solution {\n  public int longestBeautifulSubstring(String word) {\n    int ans = 0;\n    int count = 1;\n\n    for (int left = 0, right = 1; right < word.length(); ++right) {\n    char curr = word.charAt(right);\n    char prev = word.charAt(right - 1);\n      if (curr >= prev) {\n        if (curr > prev)\n          ++count;\n        if (count == 5)\n          ans = Math.max(ans, right - left + 1);\n      } else {\n        count = 1;\n        left = right;\n      }\n    }\n\n    return ans;\n  }\n}"
       }
     },
+    "1840": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "1841": {
       "java": {
         "database": ""
@@ -7792,6 +8002,11 @@
     "1846": {
       "java": {
         "greedy": ""
+      }
+    },
+    "1847": {
+      "java": {
+        "sorting": ""
       }
     },
     "1849": {
@@ -7842,6 +8057,11 @@
     "1858": {
       "java": {
         "trie": ""
+      }
+    },
+    "1859": {
+      "java": {
+        "sorting": ""
       }
     },
     "1861": {
@@ -7959,6 +8179,11 @@
         "matrix": ""
       }
     },
+    "1887": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "1888": {
       "java": {
         "sliding-window": "class Solution {\n  public int minFlips(String s) {\n  int n = s.length();\n    int[][] count = new int[2][2];\n\n    for (int i = 0; i < n; ++i)\n      ++count[s.charAt(i) - '0'][i % 2];\n\n    int ans = Math.min(count[1][0] + count[0][1], count[0][0] + count[1][1]);\n\n    for (int i = 0; i < n; ++i) {\n      --count[s.charAt(i) - '0'][i % 2];\n      ++count[s.charAt(i) - '0'][(n + i) % 2];\n      ans = Math.min(ans, Math.min(count[1][0] + count[0][1], count[0][0] + count[1][1]));\n    }\n\n    return ans;\n  }\n}"
@@ -8057,6 +8282,11 @@
     "1912": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "1913": {
+      "java": {
+        "sorting": ""
       }
     },
     "1914": {
@@ -8740,6 +8970,11 @@
         "design": ""
       }
     },
+    "2070": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "2071": {
       "java": {
         "monotonic-queue": "import java.util.Arrays;\nimport java.util.ArrayDeque;\nimport java.util.Deque;\n\nclass Solution {\n    private int[] tasks;\n    private int[] workers;\n    private int strength;\n    private int pills;\n    private int taskCount;\n    private int workerCount;\n\n    public int maxTaskAssign(int[] tasks, int[] workers, int pills, int strength) {\n        Arrays.sort(tasks);\n        Arrays.sort(workers);\n        this.tasks = tasks;\n        this.workers = workers;\n        this.strength = strength;\n        this.pills = pills;\n        taskCount = tasks.length; \n        workerCount = workers.length; \n\n        int left = 0, right = Math.min(workerCount, taskCount);\n        while (left < right) {\n            int mid = (left + right + 1) / 2; \n            if (check(mid)) {\n                left = mid; \n            } else {\n                right = mid - 1;\n            }\n        }\n\n        return left; \n    }\n\n    private boolean check(int x) {\n        int taskIdx = 0;\n        Deque<Integer> taskQueue = new ArrayDeque<>();\n        int remainingPills = pills;\n\n        for (int workerIdx = workerCount - x; workerIdx < workerCount; ++workerIdx) {\n            while (taskIdx < x && tasks[taskIdx] <= workers[workerIdx] + strength) {\n                taskQueue.offer(tasks[taskIdx++]); \n            }\n            if (taskQueue.isEmpty()) {\n                return false;\n            }\n            if (taskQueue.peekFirst() <= workers[workerIdx]) {\n                taskQueue.pollFirst(); \n            } else if (remainingPills == 0) {\n                return false; \n            } else {\n                --remainingPills; \n                taskQueue.pollLast();\n            }\n        }\n      \n        return true; \n    }\n}"
@@ -8818,6 +9053,11 @@
     "2088": {
       "java": {
         "matrix": ""
+      }
+    },
+    "2089": {
+      "java": {
+        "sorting": ""
       }
     },
     "2090": {
@@ -9055,6 +9295,11 @@
         "dynamic-programming": ""
       }
     },
+    "2148": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "2149": {
       "java": {
         "two-pointers": ""
@@ -9078,6 +9323,11 @@
     "2153": {
       "java": {
         "database": ""
+      }
+    },
+    "2154": {
+      "java": {
+        "sorting": ""
       }
     },
     "2156": {
@@ -9118,6 +9368,16 @@
     "2163": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "2164": {
+      "java": {
+        "sorting": ""
+      }
+    },
+    "2165": {
+      "java": {
+        "sorting": ""
       }
     },
     "2166": {
@@ -9218,6 +9478,11 @@
     "2190": {
       "java": {
         "counting": ""
+      }
+    },
+    "2191": {
+      "java": {
+        "sorting": ""
       }
     },
     "2192": {
@@ -9370,6 +9635,11 @@
         "database": ""
       }
     },
+    "2229": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "2230": {
       "java": {
         "database": ""
@@ -9453,6 +9723,11 @@
     "2249": {
       "java": {
         "geometry": ""
+      }
+    },
+    "2250": {
+      "java": {
+        "sorting": ""
       }
     },
     "2251": {
@@ -9553,6 +9828,16 @@
     "2272": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "2273": {
+      "java": {
+        "sorting": ""
+      }
+    },
+    "2274": {
+      "java": {
+        "sorting": ""
       }
     },
     "2275": {
@@ -10196,6 +10481,11 @@
         "enumeration": ""
       }
     },
+    "2418": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "2419": {
       "java": {
         "brainteaser": "class Solution {\n    public int longestSubarray(int[] nums) {\n        int max = 0;\n        for (int num : nums) {\n            max = Math.max(max, num);\n        }\n\n        int maxLength = 0;\n        int currentLength = 0;\n        for (int num : nums) {\n            if (num == max) {\n                currentLength++;\n                maxLength = Math.max(maxLength, currentLength);\n            } else {\n                currentLength = 0;\n            }\n        }\n        return maxLength;\n    }\n}\n"
@@ -10429,6 +10719,11 @@
     "2474": {
       "java": {
         "database": ""
+      }
+    },
+    "2475": {
+      "java": {
+        "sorting": ""
       }
     },
     "2476": {
@@ -10891,6 +11186,11 @@
         "greedy": ""
       }
     },
+    "2580": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "2581": {
       "java": {
         "dynamic-programming": ""
@@ -11101,6 +11401,11 @@
         "number-theory": ""
       }
     },
+    "2655": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "2656": {
       "java": {
         "greedy": ""
@@ -11241,6 +11546,11 @@
         "database": ""
       }
     },
+    "2706": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "2707": {
       "java": {
         "dynamic-programming": ""
@@ -11306,6 +11616,11 @@
         "matrix": ""
       }
     },
+    "2733": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "2734": {
       "java": {
         "greedy": ""
@@ -11329,6 +11644,11 @@
     "2738": {
       "java": {
         "database": ""
+      }
+    },
+    "2740": {
+      "java": {
+        "sorting": ""
       }
     },
     "2741": {
@@ -11416,6 +11736,11 @@
         "enumeration": ""
       }
     },
+    "2766": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "2767": {
       "java": {
         "dynamic-programming": ""
@@ -11456,6 +11781,11 @@
         "sliding-window": "class Solution {\n    public int maximumBeauty(int[] nums, int k) {\n        int ans = 0;\n\n        Arrays.sort(nums);\n\n        for (int left = 0, right = 0; right < nums.length; ++right) {\n            while (nums[right] - nums[left] > 2 * k)\n                ++left;\n            ans = Math.max(ans, right - left + 1);\n        }\n\n        return ans;\n    }\n}"
       }
     },
+    "2780": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "2781": {
       "java": {
         "sliding-window": "class Solution {\n    public int longestValidSubstring(String word, List<String> forbidden) {\n        int ans = 0;\n        Set<String> forbiddenSet = new HashSet<>(forbidden);\n\n        int right = word.length() - 1;\n        for (int left = word.length() - 1; left >= 0; --left) {\n            for (int end = left; end < Math.min(left + 10, right + 1); ++end)\n                if (forbiddenSet.contains(word.substring(left, end + 1))) {\n                    right = end - 1;\n                    break;\n                }\n            ans = Math.max(ans, right - left + 1);\n        }\n\n        return ans;\n    }\n}"
@@ -11469,6 +11799,16 @@
     "2783": {
       "java": {
         "database": ""
+      }
+    },
+    "2784": {
+      "java": {
+        "sorting": ""
+      }
+    },
+    "2785": {
+      "java": {
+        "sorting": ""
       }
     },
     "2786": {
@@ -11641,6 +11981,11 @@
         "two-pointers": ""
       }
     },
+    "2840": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "2841": {
       "java": {
         "sliding-window": "public class Solution {\n    public long maxSum(List<Integer> nums, int m, int k) {\n        long ans = 0;\n        long sum = 0;\n        Map<Integer, Integer> count = new HashMap<>();\n\n        for (int i = 0; i < nums.size(); ++i) {\n            sum += nums.get(i);\n            count.merge(nums.get(i), 1, Integer::sum);\n            if (i >= k) {\n              int numToRemove = nums.get(i - k);\n                sum -= numToRemove;\n                count.merge(numToRemove, -1, Integer::sum);\n                if (count.get(numToRemove) == 0)\n                    count.remove(numToRemove);\n            }\n            if (count.size() >= m)\n                ans = Math.max(ans, sum);\n        }\n\n        return ans;\n    }\n}"
@@ -11734,6 +12079,11 @@
     "2862": {
       "java": {
         "number-theory": ""
+      }
+    },
+    "2863": {
+      "java": {
+        "sorting": ""
       }
     },
     "2864": {
@@ -11951,6 +12301,11 @@
         "sliding-window": "class TrieNode {\n    public TrieNode[] children = new TrieNode[2];\n    public int min = Integer.MAX_VALUE;\n    public int max = Integer.MIN_VALUE;\n}\n\nclass BitTrie {\n    public BitTrie(int maxBit) {\n        this.maxBit = maxBit;\n    }\n\n    public void insert(int num) {\n        TrieNode node = root;\n        for (int i = maxBit; i >= 0; --i) {\n            int bit = (int) (num >> i & 1);\n            if (node.children[bit] == null)\n                node.children[bit] = new TrieNode();\n            node = node.children[bit];\n            node.min = Math.min(node.min, num);\n            node.max = Math.max(node.max, num);\n        }\n    }\n\n    public int getMaxXor(int x) {\n        int maxXor = 0;\n        TrieNode node = root;\n        for (int i = maxBit; i >= 0; --i) {\n            int bit = (int) (x >> i & 1);\n            int toggleBit = bit ^ 1;\n            if (node.children[toggleBit] != null && node.children[toggleBit].max > x &&\n                    node.children[toggleBit].min <= 2 * x) {\n                maxXor = maxXor | 1 << i;\n                node = node.children[toggleBit];\n            } else if (node.children[bit] != null) {\n                node = node.children[bit];\n            } else {\n                return 0;\n            }\n        }\n        return maxXor;\n    }\n\n    private int maxBit;\n    private TrieNode root = new TrieNode();\n}\n\nclass Solution {\n    public int maximumStrongPairXor(int[] nums) {\n        int maxNum = Arrays.stream(nums).max().getAsInt();\n        int maxBit = (int) (Math.log(maxNum) / Math.log(2));\n        int ans = 0;\n        BitTrie bitTrie = new BitTrie(maxBit);\n\n        for (int num : nums)\n            bitTrie.insert(num);\n\n        for (int num : nums)\n            ans = Math.max(ans, bitTrie.getMaxXor(num));\n\n        return ans;\n    }\n}"
       }
     },
+    "2933": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "2934": {
       "java": {
         "enumeration": ""
@@ -11984,6 +12339,11 @@
     "2941": {
       "java": {
         "number-theory": ""
+      }
+    },
+    "2943": {
+      "java": {
+        "sorting": ""
       }
     },
     "2944": {
@@ -12226,6 +12586,11 @@
         "database": ""
       }
     },
+    "2996": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "2997": {
       "java": {
         "bit-manipulation": ""
@@ -12344,6 +12709,11 @@
     "3023": {
       "java": {
         "sliding-window": "**\n * Definition for an infinite stream.\n * class InfiniteStream {\n *     public InfiniteStream(int[] bits);\n *     public int next();\n * }\n */\nclass Solution {\n    public int findPattern(InfiniteStream infiniteStream, int[] pattern) {\n        long a = 0, b = 0;\n        int m = pattern.length;\n        int half = m >> 1;\n        long mask1 = (1L << half) - 1;\n        long mask2 = (1L << (m - half)) - 1;\n        for (int i = 0; i < half; ++i) {\n            a |= (long) pattern[i] << (half - 1 - i);\n        }\n        for (int i = half; i < m; ++i) {\n            b |= (long) pattern[i] << (m - 1 - i);\n        }\n        long x = 0, y = 0;\n        for (int i = 1;; ++i) {\n            int v = infiniteStream.next();\n            y = y << 1 | v;\n            v = (int) ((y >> (m - half)) & 1);\n            y &= mask2;\n            x = x << 1 | v;\n            x &= mask1;\n            if (i >= m && a == x && b == y) {\n                return i - m;\n            }\n        }\n    }\n}"
+      }
+    },
+    "3024": {
+      "java": {
+        "sorting": ""
       }
     },
     "3025": {
@@ -12856,6 +13226,11 @@
         "matrix": ""
       }
     },
+    "3143": {
+      "java": {
+        "sorting": ""
+      }
+    },
     "3144": {
       "java": {
         "dynamic-programming": ""
@@ -12930,6 +13305,11 @@
     "3167": {
       "java": {
         "counting": ""
+      }
+    },
+    "3169": {
+      "java": {
+        "sorting": ""
       }
     },
     "3170": {
