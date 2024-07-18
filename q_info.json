@@ -35534,5 +35534,821 @@
       "difficulty": "Medium",
       "language": "Java",
       "acceptance": 74.3
+    },
+    "group_anagrams": {
+      "qno": "49",
+      "title": "Group Anagrams",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 69
+    },
+    "merge_intervals": {
+      "qno": "56",
+      "title": "Merge Intervals",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.7
+    },
+    "contains_duplicate": {
+      "qno": "217",
+      "title": "Contains Duplicate",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 62
+    },
+    "valid_anagram": {
+      "qno": "242",
+      "title": "Valid Anagram",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 64.9
+    },
+    "meeting_rooms": {
+      "qno": "252",
+      "title": "Meeting Rooms",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 58.2
+    },
+    "third_maximum_number": {
+      "qno": "414",
+      "title": "Third Maximum Number",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 35.3
+    },
+    "minimum_moves_to_equal_array_elements_ii": {
+      "qno": "462",
+      "title": "Minimum Moves to Equal Array Elements II",
+      "tags": [
+        "Array",
+        "Math",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.2
+    },
+    "minimum_time_difference": {
+      "qno": "539",
+      "title": "Minimum Time Difference",
+      "tags": [
+        "Array",
+        "Math",
+        "String",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.9
+    },
+    "maximum_product_of_three_numbers": {
+      "qno": "628",
+      "title": "Maximum Product of Three Numbers",
+      "tags": [
+        "Array",
+        "Math",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 45.2
+    },
+    "largest_number_at_least_twice_of_others": {
+      "qno": "747",
+      "title": "Largest Number At Least Twice of Others",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 49.1
+    },
+    "custom_sort_string": {
+      "qno": "791",
+      "title": "Custom Sort String",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 70.9
+    },
+    "find_and_replace_in_string": {
+      "qno": "833",
+      "title": "Find And Replace in String",
+      "tags": [
+        "Array",
+        "String",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52.4
+    },
+    "sum_of_subsequence_widths": {
+      "qno": "891",
+      "title": "Sum of Subsequence Widths",
+      "tags": [
+        "Array",
+        "Math",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 38
+    },
+    "groups_of_special-equivalent_strings": {
+      "qno": "893",
+      "title": "Groups of Special-Equivalent Strings",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.9
+    },
+    "orderly_queue": {
+      "qno": "899",
+      "title": "Orderly Queue",
+      "tags": [
+        "Math",
+        "String",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 65.9
+    },
+    "reorder_data_in_log_files": {
+      "qno": "937",
+      "title": "Reorder Data in Log Files",
+      "tags": [
+        "Array",
+        "String",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.5
+    },
+    "largest_unique_number": {
+      "qno": "1133",
+      "title": "Largest Unique Number",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 69.1
+    },
+    "analyze_user_website_visit_pattern": {
+      "qno": "1152",
+      "title": "Analyze User Website Visit Pattern",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 42.7
+    },
+    "before_and_after_puzzle": {
+      "qno": "1181",
+      "title": "Before and After Puzzle",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.9
+    },
+    "mean_of_array_after_removing_some_elements": {
+      "qno": "1619",
+      "title": "Mean of Array After Removing Some Elements",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 68.6
+    },
+    "remove_covered_intervals": {
+      "qno": "1288",
+      "title": "Remove Covered Intervals",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.3
+    },
+    "rank_transform_of_an_array": {
+      "qno": "1331",
+      "title": "Rank Transform of an Array",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 62.4
+    },
+    "invalid_transactions": {
+      "qno": "1169",
+      "title": "Invalid Transactions",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 31.1
+    },
+    "minimum_absolute_difference": {
+      "qno": "1200",
+      "title": "Minimum Absolute Difference",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 69.6
+    },
+    "sort_the_jumbled_numbers": {
+      "qno": "2191",
+      "title": "Sort the Jumbled Numbers",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 46.9
+    },
+    "find_resultant_array_after_removing_anagrams": {
+      "qno": "2273",
+      "title": "Find Resultant Array After Removing Anagrams",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 58.3
+    },
+    "check_if_an_array_is_consecutive": {
+      "qno": "2229",
+      "title": "Check if an Array Is Consecutive",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 61.1
+    },
+    "filter_restaurants_by_vegan-friendly,_price_and_distance": {
+      "qno": "1333",
+      "title": "Filter Restaurants by Vegan-Friendly, Price and Distance",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.5
+    },
+    "make_two_arrays_equal_by_reversing_subarrays": {
+      "qno": "1460",
+      "title": "Make Two Arrays Equal by Reversing Subarrays",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 72.1
+    },
+    "rearrange_words_in_a_sentence": {
+      "qno": "1451",
+      "title": "Rearrange Words in a Sentence",
+      "tags": [
+        "String",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.7
+    },
+    "average_salary_excluding_the_minimum_and_maximum_salary": {
+      "qno": "1491",
+      "title": "Average Salary Excluding the Minimum and Maximum Salary",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 63.5
+    },
+    "can_make_arithmetic_progression_from_sequence": {
+      "qno": "1502",
+      "title": "Can Make Arithmetic Progression From Sequence",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 69.6
+    },
+    "alert_using_same_key-card_three_or_more_times_in_a_one_hour_period": {
+      "qno": "1604",
+      "title": "Alert Using Same Key-Card Three or More Times in a One Hour Period",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.9
+    },
+    "sort_array_by_increasing_frequency": {
+      "qno": "1636",
+      "title": "Sort Array by Increasing Frequency",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 71.9
+    },
+    "widest_vertical_area_between_two_points_containing_no_points": {
+      "qno": "1637",
+      "title": "Widest Vertical Area Between Two Points Containing No Points",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 87.4
+    },
+    "arithmetic_subarrays": {
+      "qno": "1630",
+      "title": "Arithmetic Subarrays",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 83.8
+    },
+    "sort_features_by_popularity": {
+      "qno": "1772",
+      "title": "Sort Features by Popularity",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.7
+    },
+    "maximum_building_height": {
+      "qno": "1840",
+      "title": "Maximum Building Height",
+      "tags": [
+        "Array",
+        "Math",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 36.2
+    },
+    "sorting_the_sentence": {
+      "qno": "1859",
+      "title": "Sorting the Sentence",
+      "tags": [
+        "String",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 83.2
+    },
+    "reduction_operations_to_make_the_array_elements_equal": {
+      "qno": "1887",
+      "title": "Reduction Operations to Make the Array Elements Equal",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 72.9
+    },
+    "maximum_product_difference_between_two_pairs": {
+      "qno": "1913",
+      "title": "Maximum Product Difference Between Two Pairs",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 82.8
+    },
+    "count_elements_with_strictly_smaller_and_greater_elements": {
+      "qno": "2148",
+      "title": "Count Elements With Strictly Smaller and Greater Elements",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 59.4
+    },
+    "keep_multiplying_found_values_by_two": {
+      "qno": "2154",
+      "title": "Keep Multiplying Found Values by Two",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting",
+        "Simulation"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 71.3
+    },
+    "sort_even_and_odd_indices_independently": {
+      "qno": "2164",
+      "title": "Sort Even and Odd Indices Independently",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 62.6
+    },
+    "smallest_value_of_the_rearranged_number": {
+      "qno": "2165",
+      "title": "Smallest Value of the Rearranged Number",
+      "tags": [
+        "Math",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52.1
+    },
+    "maximum_consecutive_floors_without_special_floors": {
+      "qno": "2274",
+      "title": "Maximum Consecutive Floors Without Special Floors",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.8
+    },
+    "sort_the_people": {
+      "qno": "2418",
+      "title": "Sort the People",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 80.2
+    },
+    "number_of_unequal_triplets_in_array": {
+      "qno": "2475",
+      "title": "Number of Unequal Triplets in Array",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 71.5
+    },
+    "count_ways_to_group_overlapping_ranges": {
+      "qno": "2580",
+      "title": "Count Ways to Group Overlapping Ranges",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.1
+    },
+    "buy_two_chocolates": {
+      "qno": "2706",
+      "title": "Buy Two Chocolates",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 69.2
+    },
+    "find_maximal_uncovered_ranges": {
+      "qno": "2655",
+      "title": "Find Maximal Uncovered Ranges",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52.2
+    },
+    "relocate_marbles": {
+      "qno": "2766",
+      "title": "Relocate Marbles",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting",
+        "Simulation"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.7
+    },
+    "neither_minimum_nor_maximum": {
+      "qno": "2733",
+      "title": "Neither Minimum nor Maximum",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 76.6
+    },
+    "find_the_value_of_the_partition": {
+      "qno": "2740",
+      "title": "Find the Value of the Partition",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.3
+    },
+    "sort_vowels_in_a_string": {
+      "qno": "2785",
+      "title": "Sort Vowels in a String",
+      "tags": [
+        "String",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 81.3
+    },
+    "minimum_index_of_a_valid_split": {
+      "qno": "2780",
+      "title": "Minimum Index of a Valid Split",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.1
+    },
+    "check_if_array_is_good": {
+      "qno": "2784",
+      "title": "Check if Array is Good",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 49.3
+    },
+    "check_if_strings_can_be_made_equal_with_operations_ii": {
+      "qno": "2840",
+      "title": "Check if Strings Can be Made Equal With Operations II",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.7
+    },
+    "maximum_length_of_semi-decreasing_subarrays": {
+      "qno": "2863",
+      "title": "Maximum Length of Semi-Decreasing Subarrays",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 70.9
+    },
+    "high-access_employees": {
+      "qno": "2933",
+      "title": "High-Access Employees",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 44.2
+    },
+    "maximize_area_of_square_hole_in_grid": {
+      "qno": "2943",
+      "title": "Maximize Area of Square Hole in Grid",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 36.6
+    },
+    "smallest_missing_integer_greater_than_sequential_prefix_sum": {
+      "qno": "2996",
+      "title": "Smallest Missing Integer Greater Than Sequential Prefix Sum",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 32.5
+    },
+    "type_of_triangle": {
+      "qno": "3024",
+      "title": "Type of Triangle",
+      "tags": [
+        "Array",
+        "Math",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 38.2
+    },
+    "count_days_without_meetings": {
+      "qno": "3169",
+      "title": "Count Days Without Meetings",
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "default": "Sorting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 33.5
     }
 }
