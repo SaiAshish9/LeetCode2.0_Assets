@@ -33699,7 +33699,10 @@
     "array_nesting": {
       "qno": "565",
       "title": "Array Nesting",
-      "tags": [],
+      "tags": [
+        "Array",
+        "Depth-First Search"
+      ],
       "default": "Depth-First Search",
       "difficulty": "Medium",
       "language": "Java",
