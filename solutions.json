@@ -1075,6 +1075,11 @@
         "binary-search-tree": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public int closestValue(TreeNode root, double target) {\n        int ans = root.val;\n        double max = Double.MAX_VALUE;\n        while (root != null) {\n            double t = Math.abs(root.val - target);\n            if (t < max || (t == max && root.val < ans)) {\n                max = t;\n                ans = root.val;\n            }\n            if (root.val > target) {\n                root = root.left;\n            } else {\n                root = root.right;\n            }\n        }\n        return ans;\n    }\n}"
       }
     },
+    "271": {
+      "java": {
+        "design": ""
+      }
+    },
     "272": {
       "java": {
         "two-pointers": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    private List<Integer> ans;\n    private double target;\n    private int k;\n\n    public List<Integer> closestKValues(TreeNode root, double target, int k) {\n        ans = new LinkedList<>();\n        this.target = target;\n        this.k = k;\n        dfs(root);\n        return ans;\n    }\n\n    private void dfs(TreeNode root) {\n        if (root == null) {\n            return;\n        }\n        dfs(root.left);\n        if (ans.size() < k) {\n            ans.add(root.val);\n        } else {\n            if (Math.abs(root.val - target) >= Math.abs(ans.get(0) - target)) {\n                return;\n            }\n            ans.remove(0);\n            ans.add(root.val);\n        }\n        dfs(root.right);\n    }\n}"
@@ -1143,6 +1148,11 @@
     "287": {
       "java": {
         "two-pointers": "public class Solution {\n    public int findDuplicate(int[] nums) {\n        int slow = nums[0];\n        int fast = nums[nums[0]];\n        \n        while (slow != fast) {\n            slow = nums[slow];\n            fast = nums[nums[fast]];\n        }\n        \n        fast = 0;\n        while (slow != fast) {\n            slow = nums[slow];\n            fast = nums[fast];\n        }\n        \n        return slow;\n    }\n}\n"
+      }
+    },
+    "288": {
+      "java": {
+        "design": ""
       }
     },
     "289": {
@@ -1223,6 +1233,11 @@
     "306": {
       "java": {
         "backtracking": ""
+      }
+    },
+    "307": {
+      "java": {
+        "design": ""
       }
     },
     "308": {
@@ -3526,6 +3541,11 @@
         "matrix": ""
       }
     },
+    "911": {
+      "java": {
+        "design": ""
+      }
+    },
     "912": {
       "java": {
         "radix-sort": "import java.util.Arrays;\n\nclass Solution {\n    public int[] sortArray(int[] nums) {\n        if (nums == null || nums.length < 2) {\n            return nums;\n        }\n\n        // Find the maximum absolute value to handle negative numbers\n        int max = Arrays.stream(nums).map(Math::abs).max().getAsInt();\n        int exp = 1;\n\n        while (max / exp > 0) {\n            countingSort(nums, exp);\n            exp *= 10;\n        }\n\n        return nums;\n    }\n\n    private void countingSort(int[] nums, int exp) {\n        int n = nums.length;\n        int[] output = new int[n];\n        int[] count = new int[19]; // 19 because the range of values is [-9, 9]\n\n        for (int num : nums) {\n            int index = (num / exp) % 10 + 9; // Shifting by 9 to handle negative numbers\n            count[index]++;\n        }\n\n        for (int i = 1; i < 19; i++) {\n            count[i] += count[i - 1];\n        }\n\n        for (int i = n - 1; i >= 0; i--) {\n            int index = (nums[i] / exp) % 10 + 9;\n            output[count[index] - 1] = nums[i];\n            count[index]--;\n        }\n\n        System.arraycopy(output, 0, nums, 0, n);\n    }\n}\n",
@@ -3802,6 +3822,11 @@
     "980": {
       "java": {
         "matrix": ""
+      }
+    },
+    "981": {
+      "java": {
+        "design": ""
       }
     },
     "982": {
@@ -4347,6 +4372,11 @@
         "tree": ""
       }
     },
+    "1146": {
+      "java": {
+        "design": ""
+      }
+    },
     "1147": {
       "java": {
         "two-pointers": ""
@@ -4365,6 +4395,11 @@
     "1156": {
       "java": {
         "sliding-window": "public class Solution {\n    public int maxRepOpt1(String text) {\n        int[] count = new int[26];\n        for (char c : text.toCharArray()) {\n            count[c - 'a']++;\n        }\n        int maxLen = 0;\n        for (int i = 0; i < text.length(); ) {\n            char currentChar = text.charAt(i);\n            int start = i;            \n            while (i < text.length() && text.charAt(i) == currentChar) {\n                i++;\n            }\n            int blockLen = i - start;            \n            int nextBlockStart = i + 1;\n            while (nextBlockStart < text.length() && text.charAt(nextBlockStart) == currentChar) {\n                nextBlockStart++;\n            }\n            int totalLen = blockLen + (nextBlockStart - i - 1);            \n            maxLen = Math.max(maxLen, Math.min(totalLen + 1, count[currentChar - 'a']));            \n            i = start + blockLen;\n        }\n\n        return maxLen;\n    }\n}\n"
+      }
+    },
+    "1157": {
+      "java": {
+        "design": ""
       }
     },
     "1161": {
@@ -4637,6 +4672,11 @@
     "1242": {
       "java": {
         "concurrency": "import java.net.URI;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\nimport java.util.Set;\nimport java.util.concurrent.ConcurrentHashMap;\nimport java.util.concurrent.ConcurrentSkipListSet;\nimport java.util.stream.Collectors;\nimport java.util.stream.Stream;\n\npublic class Web_Crawler_Multithreaded {\n\n    class Solution_1_synchronizedList {\n        private final Set<String> set = Collections.newSetFromMap(new ConcurrentHashMap<String, Boolean>());\n        private final List<String> result = Collections.synchronizedList(new ArrayList<String>());\n        private String HOSTNAME = null;\n\n        public List<String> crawl(String startUrl, HtmlParser htmlParser) {\n            initHostName(startUrl);\n            set.add(startUrl);\n            getUrlDfs(startUrl, htmlParser);\n            return result;\n        }\n\n        private boolean judgeHostname(String url) {\n            int idx = url.indexOf('/', 7);\n            String hostName = (idx != -1) ? url.substring(0, idx) : url;\n            return hostName.equals(HOSTNAME);\n        }\n\n        private void initHostName(String url) {\n            int idx = url.indexOf('/', 7);\n            HOSTNAME = (idx != -1) ? url.substring(0, idx) : url;\n        }\n\n        private void getUrlDfs(String startUrl, HtmlParser htmlParser) {\n            result.add(startUrl);\n            List<String> res = htmlParser.getUrls(startUrl);\n            List<Thread> threads = new ArrayList<>();\n            for (String url : res) {\n                if (judgeHostname(url) && !set.contains(url)) {\n                    set.add(url);\n                    threads.add(new Thread(() -> {\n                        getUrlDfs(url, htmlParser);\n                    }));\n                }\n            }\n            for (Thread thread : threads) {\n                thread.start();\n            }\n            try {\n                for (Thread thread : threads) {\n                    thread.join(); \n                }\n            } catch (InterruptedException e) {\n                e.printStackTrace();\n            }\n        }\n\n    }\n\n    class Solution_2_ConcurrentSkipListSet {\n\n        public List<String> crawl(String startUrl, HtmlParser htmlParser) {\n            Set<String> visited = new ConcurrentSkipListSet<>();\n            String hostname = getHostname(startUrl);\n            visited.add(startUrl);\n\n            return crawlDfs(startUrl, htmlParser, hostname, visited).collect(Collectors.toList());\n        }\n\n        private Stream<String> crawlDfs(String startUrl, HtmlParser htmlParser, String hostname,\n                                     Set<String> visited) {\n            try (Stream<String> stream = htmlParser.getUrls(startUrl)\n                .parallelStream()\n                .filter(url -> isSameHostname(url, hostname))\n                .filter(visited::add)\n                .flatMap(url -> crawlDfs(url, htmlParser, hostname, visited))) {\n\n                return Stream.concat(Stream.of(startUrl), stream);\n            }\n        }\n\n        private String getHostname(String url) {\n            int idx = url.indexOf('/', 7);\n            return (idx != -1) ? url.substring(0, idx) : url;\n        }\n\n        private boolean isSameHostname(String url, String hostname) {\n            return url.startsWith(hostname) && (url.length() == hostname.length()\n                || url.charAt(hostname.length()) == '/');\n        }\n    }\n\n    interface HtmlParser {\n        List<String> getUrls(String str);\n    }\n\n\n    class Solution_CrawlerClass {\n        public List<String> crawl(String startUrl, HtmlParser htmlParser) {\n            String host = URI.create(startUrl).getHost();\n            Crawler crawler = new Crawler(startUrl, host, htmlParser);\n            crawler.res = new ArrayList<>();\n            crawler.start();\n            Crawler.joinThread(crawler);\n            return crawler.res;\n        }\n    }\n\n    static class Crawler extends Thread {\n        String startUrl;\n        String hostname;\n        HtmlParser htmlParser;\n        public volatile List<String> res = new ArrayList<>();\n\n        public Crawler(String startUrl, String hostname, HtmlParser htmlParser) {\n            this.startUrl = startUrl;\n            this.hostname = hostname;\n            this.htmlParser = htmlParser;\n        }\n\n        @Override\n        public void run() {\n            String host = URI.create(startUrl).getHost();\n            if (!host.equals(hostname) || res.contains(startUrl)) {\n                return;\n            }\n            res.add(startUrl);\n            List<Thread> threads = new ArrayList<>();\n            for (String s : htmlParser.getUrls(startUrl)) {\n                Crawler crawler = new Crawler(s, hostname, htmlParser);\n                crawler.start();\n                threads.add(crawler);\n            }\n            for (Thread t : threads) {\n                joinThread(t);\n            }\n        }\n\n        public static void joinThread(Thread thread) {\n            try {\n                thread.join();\n            } catch (InterruptedException e) {\n            }\n        }\n\n    }\n}"
+      }
+    },
+    "1244": {
+      "java": {
+        "design": ""
       }
     },
     "1245": {
@@ -4989,6 +5029,11 @@
         "bit-manipulation": ""
       }
     },
+    "1357": {
+      "java": {
+        "design": ""
+      }
+    },
     "1358": {
       "java": {
         "sliding-window": "class Solution {\n    public int numberOfSubstrings(String s) {\n        int[] count = new int[3]; \n        int left = 0;\n        int result = 0;\n        \n        for (int right = 0; right < s.length(); right++) {\n            count[s.charAt(right) - 'a']++;\n            \n            while (count[0] > 0 && count[1] > 0 && count[2] > 0) {\n                result += s.length() - right; \n                count[s.charAt(left) - 'a']--;\n                left++;\n            }\n        }\n        \n        return result;\n    }\n}\n"
@@ -5122,6 +5167,11 @@
     "1395": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1396": {
+      "java": {
+        "design": ""
       }
     },
     "1397": {
@@ -5837,6 +5887,11 @@
     "1621": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1622": {
+      "java": {
+        "design": ""
       }
     },
     "1625": {
@@ -6589,6 +6644,11 @@
         "combinatorics": ""
       }
     },
+    "1865": {
+      "java": {
+        "design": ""
+      }
+    },
     "1866": {
       "java": {
         "dynamic-programming": ""
@@ -7165,6 +7225,11 @@
         "graph": ""
       }
     },
+    "2043": {
+      "java": {
+        "design": ""
+      }
+    },
     "2044": {
       "java": {
         "backtracking": ""
@@ -7255,6 +7320,11 @@
         "counting": ""
       }
     },
+    "2069": {
+      "java": {
+        "design": ""
+      }
+    },
     "2071": {
       "java": {
         "monotonic-queue": "import java.util.Arrays;\nimport java.util.ArrayDeque;\nimport java.util.Deque;\n\nclass Solution {\n    private int[] tasks;\n    private int[] workers;\n    private int strength;\n    private int pills;\n    private int taskCount;\n    private int workerCount;\n\n    public int maxTaskAssign(int[] tasks, int[] workers, int pills, int strength) {\n        Arrays.sort(tasks);\n        Arrays.sort(workers);\n        this.tasks = tasks;\n        this.workers = workers;\n        this.strength = strength;\n        this.pills = pills;\n        taskCount = tasks.length; \n        workerCount = workers.length; \n\n        int left = 0, right = Math.min(workerCount, taskCount);\n        while (left < right) {\n            int mid = (left + right + 1) / 2; \n            if (check(mid)) {\n                left = mid; \n            } else {\n                right = mid - 1;\n            }\n        }\n\n        return left; \n    }\n\n    private boolean check(int x) {\n        int taskIdx = 0;\n        Deque<Integer> taskQueue = new ArrayDeque<>();\n        int remainingPills = pills;\n\n        for (int workerIdx = workerCount - x; workerIdx < workerCount; ++workerIdx) {\n            while (taskIdx < x && tasks[taskIdx] <= workers[workerIdx] + strength) {\n                taskQueue.offer(tasks[taskIdx++]); \n            }\n            if (taskQueue.isEmpty()) {\n                return false;\n            }\n            if (taskQueue.peekFirst() <= workers[workerIdx]) {\n                taskQueue.pollFirst(); \n            } else if (remainingPills == 0) {\n                return false; \n            } else {\n                --remainingPills; \n                taskQueue.pollLast();\n            }\n        }\n      \n        return true; \n    }\n}"
@@ -7278,6 +7348,11 @@
     "2077": {
       "java": {
         "graph": ""
+      }
+    },
+    "2080": {
+      "java": {
+        "design": ""
       }
     },
     "2081": {
@@ -7540,6 +7615,11 @@
         "heap-(priority-queue)": ""
       }
     },
+    "2166": {
+      "java": {
+        "design": ""
+      }
+    },
     "2167": {
       "java": {
         "dynamic-programming": ""
@@ -7775,6 +7855,11 @@
         "enumeration": ""
       }
     },
+    "2241": {
+      "java": {
+        "design": ""
+      }
+    },
     "2242": {
       "java": {
         "enumeration": ""
@@ -7943,6 +8028,11 @@
     "2285": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "2286": {
+      "java": {
+        "design": ""
       }
     },
     "2287": {
@@ -8381,6 +8471,11 @@
         "monotonic-queue": "class Solution {\n    public int lengthOfLIS(int[] nums, int k) {\n        SegmentTree root = new SegmentTree(1, 100000);\n        int res = 0;\n        for (int num : nums) {\n            int preMax = root.rangeMaxQuery(root, num - k, num - 1);\n            root.update(root, num, preMax + 1);\n            res = Math.max(res, preMax + 1);\n        }\n        return res;\n    }\n}\n\nclass SegmentTree {\n    SegmentTree left, right;\n    int start, end, val;\n    public SegmentTree(int start, int end) {\n        this.start = start;\n        this.end = end;\n        setup(this, start, end);\n    }\n    public void setup(SegmentTree node, int start, int end) {\n        if (start == end) return;\n        int mid = start + (end - start) / 2;\n        if (node.left == null) {\n            node.left = new SegmentTree(start, mid);\n            node.right = new SegmentTree(mid + 1, end);\n        }\n        setup(node.left, start, mid);\n        setup(node.right, mid + 1, end);\n        node.val = Math.max(node.left.val, node.right.val);\n    }\n    \n    public void update(SegmentTree node, int index, int val) {\n        if (index < node.start || index > node.end) return;\n        if (node.start == node.end && node.start == index) {\n            node.val = val;\n            return;\n        }\n        update(node.left, index, val);\n        update(node.right, index, val);\n        node.val = Math.max(node.left.val, node.right.val);\n    }\n    \n    public int rangeMaxQuery(SegmentTree node, int start, int end) {\n        if (node.start > end || node.end < start) return 0;\n        if (node.start >= start && node.end <= end) return node.val;\n        return Math.max(rangeMaxQuery(node.left, start, end), rangeMaxQuery(node.right, start, end));\n    }\n}"
       }
     },
+    "2408": {
+      "java": {
+        "design": ""
+      }
+    },
     "2410": {
       "java": {
         "two-pointers": ""
@@ -8731,6 +8826,11 @@
         "dynamic-programming": ""
       }
     },
+    "2502": {
+      "java": {
+        "design": ""
+      }
+    },
     "2503": {
       "java": {
         "union-find": ""
@@ -9051,6 +9151,11 @@
         "stack": ""
       }
     },
+    "2590": {
+      "java": {
+        "design": ""
+      }
+    },
     "2592": {
       "java": {
         "two-pointers": ""
@@ -9229,6 +9334,11 @@
     "2664": {
       "java": {
         "matrix": ""
+      }
+    },
+    "2671": {
+      "java": {
+        "design": ""
       }
     },
     "2673": {
