@@ -160,6 +160,21 @@
         "stack": "import java.util.*;\n\nclass Solution {\n    public int longestValidParentheses(String s) {\n        Deque<Integer> stack = new ArrayDeque<>();\n        stack.push(-1);\n        int maxLength = 0;\n\n        for (int i = 0; i < s.length(); i++) {\n            char ch = s.charAt(i);\n            if (ch == '(') {\n                stack.push(i);\n            } else {\n                stack.pop();\n                if (stack.isEmpty()) {\n                    stack.push(i);\n                } else {\n                    maxLength = Math.max(maxLength, i - stack.peek());\n                }\n            }\n        }\n\n        return maxLength;\n    }\n}\n"
       }
     },
+    "33": {
+      "java": {
+        "array": ""
+      }
+    },
+    "34": {
+      "java": {
+        "array": ""
+      }
+    },
+    "35": {
+      "java": {
+        "array": ""
+      }
+    },
     "36": {
       "java": {
         "matrix": "public class Solution {\n\n    public boolean isSafe(char[][] board, int row, int col, char num) {\n        for (int j = 0; j < 9; j++) {\n            if (board[row][j] == num) {\n                return false;\n            }\n        }\n\n        for (int i = 0; i < 9; i++) {\n            if (board[i][col] == num) {\n                return false;\n            }\n        }\n\n        int startRow = row - row % 3;\n        int startCol = col - col % 3;\n        for (int i = 0; i < 3; i++) {\n            for (int j = 0; j < 3; j++) {\n                if (board[i + startRow][j + startCol] == num) {\n                    return false;\n                }\n            }\n        }\n\n        return true;\n    }\n\n    public boolean isValidSudoku(char[][] board) {\n        for (int i = 0; i < 9; i++) {\n            for (int j = 0; j < 9; j++) {\n                char num = board[i][j];                \n                if (num == '.') continue;\n\n                board[i][j] = '.';\n                if (!isSafe(board, i, j, num)) {\n                    return false; \n                }\n                board[i][j] = num;\n            }\n        }\n\n        return true;\n    }\n}\n"
@@ -264,6 +279,11 @@
     "56": {
       "java": {
         "sorting": ""
+      }
+    },
+    "57": {
+      "java": {
+        "array": ""
       }
     },
     "58": {
@@ -379,6 +399,11 @@
     "80": {
       "java": {
         "two-pointers": "class Solution {\n    public int removeDuplicates(int[] nums) {\n        int n = nums.length;\n        if (n <= 2) {\n            return n;\n        }\n        int slow = 2;\n        for (int fast = 2; fast < n; fast++) {\n            if (nums[fast] != nums[slow - 2]) {\n                nums[slow] = nums[fast];\n                slow++;\n            }\n        }\n\n        return slow;\n    }\n}"
+      }
+    },
+    "81": {
+      "java": {
+        "array": ""
       }
     },
     "82": {
@@ -736,6 +761,16 @@
         "dynamic-programming": ""
       }
     },
+    "153": {
+      "java": {
+        "array": ""
+      }
+    },
+    "154": {
+      "java": {
+        "array": ""
+      }
+    },
     "155": {
       "java": {
         "stack": "import java.util.Stack;\n\nclass MinStack {\n    private Stack<Integer> stack;\n    private Stack<Integer> minStack;\n\n    public MinStack() {\n        stack = new Stack<>();\n        minStack = new Stack<>();\n    }\n\n    public void push(int val) {\n        stack.push(val);\n        if (minStack.isEmpty() || val <= minStack.peek()) {\n            minStack.push(val);\n        }\n    }\n\n    public void pop() {\n        if (stack.peek().equals(minStack.peek())) {\n            minStack.pop();\n        }\n        stack.pop();\n    }\n\n    public int top() {\n        return stack.peek();\n    }\n\n    public int getMin() {\n        return minStack.peek();\n    }\n}"
@@ -769,6 +804,16 @@
     "161": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "162": {
+      "java": {
+        "array": ""
+      }
+    },
+    "163": {
+      "java": {
+        "array": ""
       }
     },
     "164": {
@@ -1095,6 +1140,11 @@
         "stack": ""
       }
     },
+    "228": {
+      "java": {
+        "array": ""
+      }
+    },
     "229": {
       "java": {
         "counting": "class Solution {\n  public List<Integer> majorityElement(int[] nums) {\n    List<Integer> ans = new ArrayList<>();\n    int candidate1 = 0;\n    int candidate2 = 1;  \n    int countSoFar1 = 0;\n    int countSoFar2 = 0; \n\n    for (final int num : nums)\n      if (num == candidate1) {\n        ++countSoFar1;\n      } else if (num == candidate2) {\n        ++countSoFar2;\n      } else if (countSoFar1 == 0) { \n        candidate1 = num;\n        ++countSoFar1;\n      } else if (countSoFar2 == 0) {\n        candidate2 = num;\n        ++countSoFar2;\n      } else { \n        --countSoFar1;\n        --countSoFar2;\n      }\n\n    int count1 = 0;\n    int count2 = 0;\n\n    for (final int num : nums)\n      if (num == candidate1)\n        ++count1;\n      else if (num == candidate2)\n        ++count2;\n\n    if (count1 > nums.length / 3)\n      ans.add(candidate1);\n    if (count2 > nums.length / 3)\n      ans.add(candidate2);\n    return ans;\n  }\n}"
@@ -1323,6 +1373,11 @@
     "274": {
       "java": {
         "counting-sort": "class Solution {\n    public int hIndex(int[] citations) {\n        int n = citations.length;\n        int[] count = new int[n + 1];\n        \n        for (int c : citations) {\n            if (c >= n) {\n                count[n]++;\n            } else {\n                count[c]++;\n            }\n        }\n        \n        // Calculate the H-Index\n        int total = 0;\n        for (int i = n; i >= 0; i--) {\n            total += count[i];\n            if (total >= i) {\n                return i;\n            }\n        }\n        \n        return 0;\n    }\n}\n"
+      }
+    },
+    "275": {
+      "java": {
+        "array": ""
       }
     },
     "276": {
@@ -2424,6 +2479,11 @@
         "dynamic-programming": ""
       }
     },
+    "495": {
+      "java": {
+        "array": ""
+      }
+    },
     "496": {
       "java": {
         "monotonic-stack": "class Solution {\n    public int[] nextGreaterElement(int[] nums1, int[] nums2) {\n        Map<Integer, Integer> map = new HashMap<>();\n        int m = nums1.length;\n        int n = nums2.length;\n        int[] nums = nextGreaterElement(nums2);\n\n        for (int i = 0; i < n; i++) {\n            map.put(nums2[i], nums[i]);\n        }\n\n        int[] result = new int[m];\n\n        for (int i = 0; i < m; i++) {\n            result[i] = map.get(nums1[i]);\n        }\n\n        return result;\n    }\n\n    public int[] nextGreaterElement(int[] nums) {\n        int[] result = new int[nums.length];\n        Stack<Integer> stack = new Stack<>();\n\n        for (int i = nums.length - 1; i >= 0; i--) {\n            while (!stack.isEmpty() && stack.peek() <= nums[i]) {\n                stack.pop();\n            }\n            result[i] = stack.isEmpty() ? -1 : stack.peek();\n            stack.push(nums[i]);\n        }\n\n        return result;\n    }\n\n}\n\n// class Solution {\n//     public int[] nextGreaterElement(int[] nums1, int[] nums2) {\n//         Map<Integer, Integer> map = new HashMap<>();\n//         Stack<Integer> stack = new Stack<>();\n//         for (int num : nums2) {\n//             while (!stack.isEmpty() && stack.peek() < num) {\n//                 map.put(stack.pop(), num);\n//             }\n//             stack.push(num);\n//         }\n//         for (int i = 0; i < nums1.length; i++) {\n//             nums1[i] = map.getOrDefault(nums1[i], -1);\n//         }\n//         return nums1;\n//     }\n// }"
@@ -2642,6 +2702,11 @@
     "539": {
       "java": {
         "sorting": ""
+      }
+    },
+    "540": {
+      "java": {
+        "array": ""
       }
     },
     "541": {
@@ -3265,6 +3330,11 @@
         "dynamic-programming": ""
       }
     },
+    "665": {
+      "java": {
+        "array": ""
+      }
+    },
     "666": {
       "java": {
         "tree": ""
@@ -3303,6 +3373,11 @@
     "673": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "674": {
+      "java": {
+        "array": ""
       }
     },
     "675": {
@@ -3451,6 +3526,11 @@
         "binary-search-tree": "import java.util.PriorityQueue;\n\nclass KthLargest {\n    private PriorityQueue<Integer> minHeap;\n    private int k;\n\n    public KthLargest(int k, int[] nums) {\n        this.k = k;\n        this.minHeap = new PriorityQueue<>(k);\n        \n        for (int num : nums) {\n            add(num);\n        }\n    }\n    \n    public int add(int val) {\n        if (minHeap.size() < k) {\n            minHeap.offer(val);\n        } else if (val > minHeap.peek()) {\n            minHeap.poll();\n            minHeap.offer(val);\n        }\n        return minHeap.peek();\n    }\n}\n"
       }
     },
+    "704": {
+      "java": {
+        "array": ""
+      }
+    },
     "705": {
       "java": {
         "hash-function": ""
@@ -3509,6 +3589,11 @@
     "716": {
       "java": {
         "doubly-linked-list": "class Node {\n    public int val;\n    public Node prev, next;\n\n    public Node() {\n    }\n\n    public Node(int val) {\n        this.val = val;\n    }\n}\n\nclass DoubleLinkedList {\n    private final Node head = new Node();\n    private final Node tail = new Node();\n\n    public DoubleLinkedList() {\n        head.next = tail;\n        tail.prev = head;\n    }\n\n    public Node append(int val) {\n        Node node = new Node(val);\n        node.next = tail;\n        node.prev = tail.prev;\n        tail.prev = node;\n        node.prev.next = node;\n        return node;\n    }\n\n    public static Node remove(Node node) {\n        node.prev.next = node.next;\n        node.next.prev = node.prev;\n        return node;\n    }\n\n    public Node pop() {\n        return remove(tail.prev);\n    }\n\n    public int peek() {\n        return tail.prev.val;\n    }\n}\n\nclass MaxStack {\n    private DoubleLinkedList stack = new DoubleLinkedList();\n    private TreeMap<Integer, List<Node>> map = new TreeMap<>();\n\n    public MaxStack() {\n    }\n\n    public void push(int x) {\n        Node node = stack.append(x);\n        map.computeIfAbsent(x, k -> new ArrayList<>()).add(node);\n    }\n\n    public int pop() {\n        Node node = stack.pop();\n        List<Node> nodes = map.get(node.val);\n        int x = nodes.remove(nodes.size() - 1).val;\n        if (nodes.isEmpty()) {\n            map.remove(node.val);\n        }\n        return x;\n    }\n\n    public int top() {\n        return stack.peek();\n    }\n\n    public int peekMax() {\n        return map.lastackey();\n    }\n\n    public int popMax() {\n        int x = peekMax();\n        List<Node> nodes = map.get(x);\n        Node node = nodes.remove(nodes.size() - 1);\n        if (nodes.isEmpty()) {\n            map.remove(x);\n        }\n        DoubleLinkedList.remove(node);\n        return x;\n    }\n}\n\n/**\n * Your MaxStack object will be instantiated and called as such:\n * MaxStack obj = new MaxStack();\n * obj.push(x);\n * int param_2 = obj.pop();\n * int param_3 = obj.top();\n * int param_4 = obj.peekMax();\n * int param_5 = obj.popMax();\n */"
+      }
+    },
+    "717": {
+      "java": {
+        "array": ""
       }
     },
     "718": {
@@ -3641,6 +3726,11 @@
         "heap-(priority-queue)": ""
       }
     },
+    "744": {
+      "java": {
+        "array": ""
+      }
+    },
     "745": {
       "java": {
         "trie": ""
@@ -3689,6 +3779,11 @@
     "754": {
       "java": {
         "math": ""
+      }
+    },
+    "755": {
+      "java": {
+        "array": ""
       }
     },
     "756": {
@@ -3779,6 +3874,11 @@
     "773": {
       "java": {
         "matrix": ""
+      }
+    },
+    "774": {
+      "java": {
+        "array": ""
       }
     },
     "775": {
@@ -4151,6 +4251,11 @@
         "prefix-sum": ""
       }
     },
+    "849": {
+      "java": {
+        "array": ""
+      }
+    },
     "850": {
       "java": {
         "line-sweep": "class Event {\n  public int x;\n  public int y1;\n  public int y2;\n  public char type;\n  public Event(int x, int y1, int y2, char type) {\n    this.x = x;\n    this.y1 = y1;\n    this.y2 = y2;\n    this.type = type;\n  }\n}\n\nclass Solution {\n  public int rectangleArea(int[][] rectangles) {\n  int kMod = 1_000_000_007;\n    List<Event> events = new ArrayList<>();\n\n    for (int[] right : rectangles) {\n      events.add(new Event(right[0], right[1], right[3], 's'));\n      events.add(new Event(right[2], right[1], right[3], 'e'));\n    }\n\n    Collections.sort(events, (a, b) -> a.x - b.x);\n\n    long ans = 0;\n    int prevX = 0;\n    List<Pair<Integer, Integer>> yPairs = new ArrayList<>();\n\n    for (Event e : events) {\n      if (e.x > prevX) {\n      int width = e.x - prevX;\n        ans = (ans + width * getHeight(yPairs)) % kMod;\n        prevX = e.x;\n      }\n      if (e.type == 's') {\n        yPairs.add(new Pair<>(e.y1, e.y2));\n        Collections.sort(yPairs, Comparator.comparing(Pair::getKey));\n      } else { // type == 'e'\n        yPairs.remove(new Pair<>(e.y1, e.y2));\n      }\n    }\n\n    return (int) (ans % kMod);\n  }\n\n  private long getHeight(List<Pair<Integer, Integer>> yPairs) {\n    int height = 0;\n    int prevY = 0;\n\n    for (Pair<Integer, Integer> pair : yPairs) {\n    int y1 = pair.getKey();\n    int y2 = pair.getValue();\n      prevY = Math.max(prevY, y1);\n      if (y2 > prevY) {\n        height += y2 - prevY;\n        prevY = y2;\n      }\n    }\n\n    return height;\n  }\n}"
@@ -4159,6 +4264,11 @@
     "851": {
       "java": {
         "topological-sort": ""
+      }
+    },
+    "852": {
+      "java": {
+        "array": ""
       }
     },
     "853": {
@@ -4271,6 +4381,11 @@
         "hash-table": ""
       }
     },
+    "875": {
+      "java": {
+        "array": ""
+      }
+    },
     "876": {
       "java": {
         "two-pointers": ""
@@ -4371,6 +4486,11 @@
         "stack": "class FreqStack {\n  public void push(int val) {\n    count.merge(val, 1, Integer::sum);\n    countToStack.putIfAbsent(count.get(val), new ArrayDeque<>());\n    countToStack.get(count.get(val)).push(val);\n    maxFreq = Math.max(maxFreq, count.get(val));\n  }\n\n  public int pop() {\n    final int val = countToStack.get(maxFreq).pop();\n    count.merge(val, -1, Integer::sum);\n    if (countToStack.get(maxFreq).isEmpty())\n      --maxFreq;\n    return val;\n  }\n\n  private int maxFreq = 0;\n  private Map<Integer, Integer> count = new HashMap<>();\n  private Map<Integer, Deque<Integer>> countToStack = new HashMap<>();\n}\n\n/**\n * Your FreqStack object will be instantiated and called as such:\n * FreqStack obj = new FreqStack();\n * obj.push(val);\n * int param_2 = obj.pop();\n */"
       }
     },
+    "896": {
+      "java": {
+        "array": ""
+      }
+    },
     "897": {
       "java": {
         "binary-search-tree": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    private TreeNode result;\n\n    public TreeNode increasingBST(TreeNode root) {\n        TreeNode dummy = new TreeNode();\n        result = dummy;\n        inorder(root);\n        return dummy.right;\n    }\n    \n    private void inorder(TreeNode node) {\n        if (node == null) {\n            return;\n        }\n        \n        inorder(node.left);\n        \n        result.right = new TreeNode(node.val);\n        result = result.right;\n        \n        inorder(node.right);\n    }\n}\n"
@@ -4461,6 +4581,11 @@
     "914": {
       "java": {
         "number-theory": ""
+      }
+    },
+    "915": {
+      "java": {
+        "array": ""
       }
     },
     "916": {
@@ -4586,6 +4711,11 @@
     "940": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "941": {
+      "java": {
+        "array": ""
       }
     },
     "942": {
@@ -4804,6 +4934,11 @@
         "greedy": ""
       }
     },
+    "985": {
+      "java": {
+        "array": ""
+      }
+    },
     "986": {
       "java": {
         "two-pointers": ""
@@ -4927,6 +5062,11 @@
     "1010": {
       "java": {
         "counting": ""
+      }
+    },
+    "1011": {
+      "java": {
+        "array": ""
       }
     },
     "1012": {
@@ -5170,6 +5310,11 @@
         "topological-sort": ""
       }
     },
+    "1060": {
+      "java": {
+        "array": ""
+      }
+    },
     "1061": {
       "java": {
         "union-find": ""
@@ -5184,6 +5329,11 @@
     "1063": {
       "java": {
         "monotonic-stack": "class Solution {\n    public int validSubarrays(int[] nums) {\n        int n = nums.length;\n        int[] right = new int[n];\n        Arrays.fill(right, n);\n        Deque<Integer> stack = new ArrayDeque<>();\n        for (int i = n - 1; i >= 0; --i) {\n            while (!stack.isEmpty() && nums[stack.peek()] >= nums[i]) {\n                stack.pop();\n            }\n            if (!stack.isEmpty()) {\n                right[i] = stack.peek();\n            }\n            stack.push(i);\n        }\n        int ans = 0;\n        for (int i = 0; i < n; ++i) {\n            ans += right[i] - i;\n        }\n        return ans;\n    }\n}"
+      }
+    },
+    "1064": {
+      "java": {
+        "array": ""
       }
     },
     "1065": {
@@ -5612,6 +5762,11 @@
         "database": ""
       }
     },
+    "1150": {
+      "java": {
+        "array": ""
+      }
+    },
     "1151": {
       "java": {
         "sliding-window": "class Solution {\n  public int minSwaps(int[] data) {\n      int sum = 0;\n      for (int v : data) {\n          sum += v;\n      }\n      int sumK = 0;\n      for (int i = 0; i < sum; ++i) {\n          sumK += data[i];\n      }\n      int max = sumK;\n      for (int i = sum; i < data.length; ++i) {\n          sumK += data[i];\n          sumK -= data[i - sum];\n          max = Math.max(max, sumK);\n      }\n      return sum - max;\n  }\n}"
@@ -5775,6 +5930,11 @@
     "1183": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "1184": {
+      "java": {
+        "array": ""
       }
     },
     "1185": {
@@ -6009,6 +6169,11 @@
         "probability-and-statistics": "class Solution {\n    public double probabilityOfHeads(double[] prob, int target) {\n        int n = prob.length;\n        double[][] dp = new double[n + 1][target + 1];\n        dp[0][0] = 1;\n        for (int i = 1; i <= n; ++i) {\n            for (int j = 0; j <= Math.min(i, target); ++j) {\n                dp[i][j] = (1 - prob[i - 1]) * dp[i - 1][j];\n                if (j > 0) {\n                    dp[i][j] += prob[i - 1] * dp[i - 1][j - 1];\n                }\n            }\n        }\n        return dp[n][target];\n    }\n}"
       }
     },
+    "1231": {
+      "java": {
+        "array": ""
+      }
+    },
     "1232": {
       "java": {
         "geometry": ""
@@ -6062,6 +6227,11 @@
     "1242": {
       "java": {
         "concurrency": "import java.net.URI;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\nimport java.util.Set;\nimport java.util.concurrent.ConcurrentHashMap;\nimport java.util.concurrent.ConcurrentSkipListSet;\nimport java.util.stream.Collectors;\nimport java.util.stream.Stream;\n\npublic class Web_Crawler_Multithreaded {\n\n    class Solution_1_synchronizedList {\n        private final Set<String> set = Collections.newSetFromMap(new ConcurrentHashMap<String, Boolean>());\n        private final List<String> result = Collections.synchronizedList(new ArrayList<String>());\n        private String HOSTNAME = null;\n\n        public List<String> crawl(String startUrl, HtmlParser htmlParser) {\n            initHostName(startUrl);\n            set.add(startUrl);\n            getUrlDfs(startUrl, htmlParser);\n            return result;\n        }\n\n        private boolean judgeHostname(String url) {\n            int idx = url.indexOf('/', 7);\n            String hostName = (idx != -1) ? url.substring(0, idx) : url;\n            return hostName.equals(HOSTNAME);\n        }\n\n        private void initHostName(String url) {\n            int idx = url.indexOf('/', 7);\n            HOSTNAME = (idx != -1) ? url.substring(0, idx) : url;\n        }\n\n        private void getUrlDfs(String startUrl, HtmlParser htmlParser) {\n            result.add(startUrl);\n            List<String> res = htmlParser.getUrls(startUrl);\n            List<Thread> threads = new ArrayList<>();\n            for (String url : res) {\n                if (judgeHostname(url) && !set.contains(url)) {\n                    set.add(url);\n                    threads.add(new Thread(() -> {\n                        getUrlDfs(url, htmlParser);\n                    }));\n                }\n            }\n            for (Thread thread : threads) {\n                thread.start();\n            }\n            try {\n                for (Thread thread : threads) {\n                    thread.join(); \n                }\n            } catch (InterruptedException e) {\n                e.printStackTrace();\n            }\n        }\n\n    }\n\n    class Solution_2_ConcurrentSkipListSet {\n\n        public List<String> crawl(String startUrl, HtmlParser htmlParser) {\n            Set<String> visited = new ConcurrentSkipListSet<>();\n            String hostname = getHostname(startUrl);\n            visited.add(startUrl);\n\n            return crawlDfs(startUrl, htmlParser, hostname, visited).collect(Collectors.toList());\n        }\n\n        private Stream<String> crawlDfs(String startUrl, HtmlParser htmlParser, String hostname,\n                                     Set<String> visited) {\n            try (Stream<String> stream = htmlParser.getUrls(startUrl)\n                .parallelStream()\n                .filter(url -> isSameHostname(url, hostname))\n                .filter(visited::add)\n                .flatMap(url -> crawlDfs(url, htmlParser, hostname, visited))) {\n\n                return Stream.concat(Stream.of(startUrl), stream);\n            }\n        }\n\n        private String getHostname(String url) {\n            int idx = url.indexOf('/', 7);\n            return (idx != -1) ? url.substring(0, idx) : url;\n        }\n\n        private boolean isSameHostname(String url, String hostname) {\n            return url.startsWith(hostname) && (url.length() == hostname.length()\n                || url.charAt(hostname.length()) == '/');\n        }\n    }\n\n    interface HtmlParser {\n        List<String> getUrls(String str);\n    }\n\n\n    class Solution_CrawlerClass {\n        public List<String> crawl(String startUrl, HtmlParser htmlParser) {\n            String host = URI.create(startUrl).getHost();\n            Crawler crawler = new Crawler(startUrl, host, htmlParser);\n            crawler.res = new ArrayList<>();\n            crawler.start();\n            Crawler.joinThread(crawler);\n            return crawler.res;\n        }\n    }\n\n    static class Crawler extends Thread {\n        String startUrl;\n        String hostname;\n        HtmlParser htmlParser;\n        public volatile List<String> res = new ArrayList<>();\n\n        public Crawler(String startUrl, String hostname, HtmlParser htmlParser) {\n            this.startUrl = startUrl;\n            this.hostname = hostname;\n            this.htmlParser = htmlParser;\n        }\n\n        @Override\n        public void run() {\n            String host = URI.create(startUrl).getHost();\n            if (!host.equals(hostname) || res.contains(startUrl)) {\n                return;\n            }\n            res.add(startUrl);\n            List<Thread> threads = new ArrayList<>();\n            for (String s : htmlParser.getUrls(startUrl)) {\n                Crawler crawler = new Crawler(s, hostname, htmlParser);\n                crawler.start();\n                threads.add(crawler);\n            }\n            for (Thread t : threads) {\n                joinThread(t);\n            }\n        }\n\n        public static void joinThread(Thread thread) {\n            try {\n                thread.join();\n            } catch (InterruptedException e) {\n            }\n        }\n\n    }\n}"
+      }
+    },
+    "1243": {
+      "java": {
+        "array": ""
       }
     },
     "1244": {
@@ -6204,6 +6374,11 @@
         "math": ""
       }
     },
+    "1272": {
+      "java": {
+        "array": ""
+      }
+    },
     "1273": {
       "java": {
         "tree": ""
@@ -6254,6 +6429,11 @@
         "hash-table": ""
       }
     },
+    "1283": {
+      "java": {
+        "array": ""
+      }
+    },
     "1284": {
       "java": {
         "matrix": ""
@@ -6267,6 +6447,11 @@
     "1286": {
       "java": {
         "iterator": "class CombinationIterator {\n    private List<String> combinations;\n    private int currentIndex;\n\n    public CombinationIterator(String characters, int combinationLength) {\n        combinations = new ArrayList<>();\n        generateCombinations(characters, combinationLength, 0, new StringBuilder());\n        currentIndex = 0;\n    }\n\n    private void generateCombinations(String characters, int length, int start, StringBuilder sb) {\n        if (sb.length() == length) {\n            combinations.add(sb.toString());\n            return;\n        }\n\n        for (int i = start; i < characters.length(); i++) {\n            sb.append(characters.charAt(i));\n            generateCombinations(characters, length, i + 1, sb);\n            sb.deleteCharAt(sb.length() - 1);\n        }\n    }\n\n    public String next() {\n        return combinations.get(currentIndex++);\n    }\n\n    public boolean hasNext() {\n        return currentIndex < combinations.size();\n    }\n}\n\n/**\n * Your CombinationIterator object will be instantiated and called as such:\n * CombinationIterator obj = new CombinationIterator(characters,\n * combinationLength);\n * String param_1 = obj.next();\n * boolean param_2 = obj.hasNext();\n */"
+      }
+    },
+    "1287": {
+      "java": {
+        "array": ""
       }
     },
     "1288": {
@@ -6304,6 +6489,11 @@
         "database": ""
       }
     },
+    "1295": {
+      "java": {
+        "array": ""
+      }
+    },
     "1296": {
       "java": {
         "greedy": ""
@@ -6317,6 +6507,11 @@
     "1298": {
       "java": {
         "graph": ""
+      }
+    },
+    "1299": {
+      "java": {
+        "array": ""
       }
     },
     "1300": {
@@ -6382,6 +6577,11 @@
     "1312": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1313": {
+      "java": {
+        "array": ""
       }
     },
     "1314": {
@@ -6689,6 +6889,11 @@
         "string": ""
       }
     },
+    "1375": {
+      "java": {
+        "array": ""
+      }
+    },
     "1376": {
       "java": {
         "tree": ""
@@ -6752,6 +6957,11 @@
     "1388": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "1389": {
+      "java": {
+        "array": ""
       }
     },
     "1390": {
@@ -6847,6 +7057,11 @@
     "1408": {
       "java": {
         "string-matching": ""
+      }
+    },
+    "1409": {
+      "java": {
+        "array": ""
       }
     },
     "1410": {
@@ -6954,6 +7169,11 @@
         "tree": ""
       }
     },
+    "1431": {
+      "java": {
+        "array": ""
+      }
+    },
     "1432": {
       "java": {
         "greedy": ""
@@ -6977,6 +7197,11 @@
     "1436": {
       "java": {
         "hash-table": ""
+      }
+    },
+    "1437": {
+      "java": {
+        "array": ""
       }
     },
     "1438": {
@@ -7037,6 +7262,11 @@
     "1449": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1450": {
+      "java": {
+        "array": ""
       }
     },
     "1451": {
@@ -7134,6 +7364,11 @@
         "tree": ""
       }
     },
+    "1470": {
+      "java": {
+        "array": ""
+      }
+    },
     "1471": {
       "java": {
         "two-pointers": ""
@@ -7187,6 +7422,11 @@
     "1481": {
       "java": {
         "counting": ""
+      }
+    },
+    "1482": {
+      "java": {
+        "array": ""
       }
     },
     "1483": {
@@ -7449,6 +7689,11 @@
         "enumeration": ""
       }
     },
+    "1535": {
+      "java": {
+        "array": ""
+      }
+    },
     "1536": {
       "java": {
         "matrix": ""
@@ -7462,6 +7707,11 @@
     "1538": {
       "java": {
         "interactive": ""
+      }
+    },
+    "1539": {
+      "java": {
+        "array": ""
       }
     },
     "1540": {
@@ -7514,6 +7764,11 @@
         "database": ""
       }
     },
+    "1550": {
+      "java": {
+        "array": ""
+      }
+    },
     "1551": {
       "java": {
         "math": ""
@@ -7559,9 +7814,19 @@
         "union-find": ""
       }
     },
+    "1560": {
+      "java": {
+        "array": ""
+      }
+    },
     "1561": {
       "java": {
         "game-theory": ""
+      }
+    },
+    "1562": {
+      "java": {
+        "array": ""
       }
     },
     "1563": {
@@ -7664,6 +7929,11 @@
         "matrix": ""
       }
     },
+    "1583": {
+      "java": {
+        "array": ""
+      }
+    },
     "1584": {
       "java": {
         "union-find": ""
@@ -7737,6 +8007,11 @@
     "1598": {
       "java": {
         "stack": ""
+      }
+    },
+    "1599": {
+      "java": {
+        "array": ""
       }
     },
     "1600": {
@@ -7967,6 +8242,11 @@
     "1645": {
       "java": {
         "database": ""
+      }
+    },
+    "1646": {
+      "java": {
+        "array": ""
       }
     },
     "1647": {
@@ -8239,6 +8519,11 @@
         "queue": ""
       }
     },
+    "1701": {
+      "java": {
+        "array": ""
+      }
+    },
     "1702": {
       "java": {
         "greedy": ""
@@ -8352,6 +8637,11 @@
     "1724": {
       "java": {
         "union-find": ""
+      }
+    },
+    "1725": {
+      "java": {
+        "array": ""
       }
     },
     "1726": {
@@ -8484,6 +8774,11 @@
         "dynamic-programming": ""
       }
     },
+    "1752": {
+      "java": {
+        "array": ""
+      }
+    },
     "1753": {
       "java": {
         "heap-(priority-queue)": ""
@@ -8517,6 +8812,11 @@
     "1759": {
       "java": {
         "math": ""
+      }
+    },
+    "1760": {
+      "java": {
+        "array": ""
       }
     },
     "1761": {
@@ -8607,6 +8907,11 @@
     "1778": {
       "java": {
         "interactive": ""
+      }
+    },
+    "1779": {
+      "java": {
+        "array": ""
       }
     },
     "1780": {
@@ -8707,6 +9012,11 @@
     "1799": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1800": {
+      "java": {
+        "array": ""
       }
     },
     "1801": {
@@ -8944,6 +9254,11 @@
         "sorting": ""
       }
     },
+    "1848": {
+      "java": {
+        "array": ""
+      }
+    },
     "1849": {
       "java": {
         "backtracking": ""
@@ -9049,6 +9364,11 @@
         "string": ""
       }
     },
+    "1870": {
+      "java": {
+        "array": ""
+      }
+    },
     "1871": {
       "java": {
         "sliding-window": "class Solution {\n  public boolean canReach(String s, int minJump, int maxJump) {\n    int count = 0;\n    boolean dp[] = new boolean[s.length()];\n    dp[0] = true;\n\n    for (int i = minJump; i < s.length(); ++i) {\n      count += dp[i - minJump] ? 1 : 0;\n      if (i - maxJump > 0)\n        count -= dp[i - maxJump - 1] ? 1 : 0;\n      dp[i] = count > 0 && s.charAt(i) == '0';\n    }\n\n    return dp[dp.length - 1];\n  }\n}"
@@ -9149,6 +9469,11 @@
         "database": ""
       }
     },
+    "1891": {
+      "java": {
+        "array": ""
+      }
+    },
     "1892": {
       "java": {
         "database": ""
@@ -9234,6 +9559,11 @@
         "brainteaser": "class Solution {\n    public boolean nimGame(int[] piles) {\n        int xor = 0;\n        for (int pile : piles)\n            xor ^= pile;\n        return xor != 0;\n    }\n}"
       }
     },
+    "1909": {
+      "java": {
+        "array": ""
+      }
+    },
     "1910": {
       "java": {
         "string": ""
@@ -9284,6 +9614,11 @@
         "database": ""
       }
     },
+    "1920": {
+      "java": {
+        "array": ""
+      }
+    },
     "1921": {
       "java": {
         "greedy": ""
@@ -9322,6 +9657,11 @@
     "1928": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1929": {
+      "java": {
+        "array": ""
       }
     },
     "1930": {
@@ -9494,9 +9834,19 @@
         "two-pointers": ""
       }
     },
+    "1964": {
+      "java": {
+        "array": ""
+      }
+    },
     "1965": {
       "java": {
         "database": ""
+      }
+    },
+    "1966": {
+      "java": {
+        "array": ""
       }
     },
     "1967": {
@@ -9725,6 +10075,11 @@
         "string": ""
       }
     },
+    "2012": {
+      "java": {
+        "array": ""
+      }
+    },
     "2013": {
       "java": {
         "counting": ""
@@ -9738,6 +10093,11 @@
     "2015": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "2016": {
+      "java": {
+        "array": ""
       }
     },
     "2017": {
@@ -9855,6 +10215,11 @@
         "graph": ""
       }
     },
+    "2040": {
+      "java": {
+        "array": ""
+      }
+    },
     "2041": {
       "java": {
         "database": ""
@@ -9935,6 +10300,11 @@
         "backtracking": ""
       }
     },
+    "2057": {
+      "java": {
+        "array": ""
+      }
+    },
     "2058": {
       "java": {
         "linked-list": ""
@@ -9963,6 +10333,11 @@
     "2063": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "2064": {
+      "java": {
+        "array": ""
       }
     },
     "2065": {
@@ -10033,6 +10408,11 @@
     "2078": {
       "java": {
         "greedy": ""
+      }
+    },
+    "2079": {
+      "java": {
+        "array": ""
       }
     },
     "2080": {
@@ -10190,9 +10570,19 @@
         "dynamic-programming": ""
       }
     },
+    "2111": {
+      "java": {
+        "array": ""
+      }
+    },
     "2112": {
       "java": {
         "database": ""
+      }
+    },
+    "2113": {
+      "java": {
+        "array": ""
       }
     },
     "2114": {
@@ -10310,6 +10700,11 @@
         "greedy": ""
       }
     },
+    "2137": {
+      "java": {
+        "array": ""
+      }
+    },
     "2138": {
       "java": {
         "string": ""
@@ -10393,6 +10788,11 @@
     "2154": {
       "java": {
         "sorting": ""
+      }
+    },
+    "2155": {
+      "java": {
+        "array": ""
       }
     },
     "2156": {
@@ -10495,6 +10895,11 @@
         "database": ""
       }
     },
+    "2176": {
+      "java": {
+        "array": ""
+      }
+    },
     "2177": {
       "java": {
         "math": ""
@@ -10543,6 +10948,11 @@
     "2186": {
       "java": {
         "counting": ""
+      }
+    },
+    "2187": {
+      "java": {
+        "array": ""
       }
     },
     "2188": {
@@ -10655,6 +11065,11 @@
         "prefix-sum": ""
       }
     },
+    "2210": {
+      "java": {
+        "array": ""
+      }
+    },
     "2211": {
       "java": {
         "stack": ""
@@ -10730,6 +11145,11 @@
         "counting": ""
       }
     },
+    "2226": {
+      "java": {
+        "array": ""
+      }
+    },
     "2227": {
       "java": {
         "trie": ""
@@ -10788,6 +11208,11 @@
     "2238": {
       "java": {
         "database": ""
+      }
+    },
+    "2239": {
+      "java": {
+        "array": ""
       }
     },
     "2240": {
@@ -11055,6 +11480,11 @@
         "database": ""
       }
     },
+    "2293": {
+      "java": {
+        "array": ""
+      }
+    },
     "2294": {
       "java": {
         "greedy": ""
@@ -11098,6 +11528,11 @@
     "2302": {
       "java": {
         "sliding-window": "class Solution {\n    public long countSubarrays(int[] nums, long k) {\n        long ans = 0;\n        long sum = 0;\n\n        for (int left = 0, right = 0; right < nums.length; ++right) {\n            sum += nums[right];\n            while (sum * (right - left + 1) >= k)\n                sum -= nums[left++];\n            ans += right - left + 1;\n        }\n\n        return ans;\n    }\n}"
+      }
+    },
+    "2303": {
+      "java": {
+        "array": ""
       }
     },
     "2304": {
@@ -11741,6 +12176,11 @@
         "dynamic-programming": ""
       }
     },
+    "2432": {
+      "java": {
+        "array": ""
+      }
+    },
     "2433": {
       "java": {
         "bit-manipulation": ""
@@ -12341,6 +12781,11 @@
         "prefix-sum": ""
       }
     },
+    "2553": {
+      "java": {
+        "array": ""
+      }
+    },
     "2554": {
       "java": {
         "greedy": ""
@@ -12369,6 +12814,11 @@
     "2559": {
       "java": {
         "prefix-sum": ""
+      }
+    },
+    "2560": {
+      "java": {
+        "array": ""
       }
     },
     "2561": {
@@ -12536,6 +12986,11 @@
         "heap-(priority-queue)": ""
       }
     },
+    "2594": {
+      "java": {
+        "array": ""
+      }
+    },
     "2595": {
       "java": {
         "bit-manipulation": ""
@@ -12681,6 +13136,11 @@
         "matrix": ""
       }
     },
+    "2644": {
+      "java": {
+        "array": ""
+      }
+    },
     "2645": {
       "java": {
         "stack": ""
@@ -12741,6 +13201,11 @@
         "ordered-set": ""
       }
     },
+    "2660": {
+      "java": {
+        "array": ""
+      }
+    },
     "2661": {
       "java": {
         "matrix": ""
@@ -12779,6 +13244,11 @@
     "2671": {
       "java": {
         "design": ""
+      }
+    },
+    "2672": {
+      "java": {
+        "array": ""
       }
     },
     "2673": {
@@ -12876,6 +13346,11 @@
         "database": ""
       }
     },
+    "2702": {
+      "java": {
+        "array": ""
+      }
+    },
     "2706": {
       "java": {
         "sorting": ""
@@ -12924,6 +13399,11 @@
     "2716": {
       "java": {
         "hash-table": ""
+      }
+    },
+    "2717": {
+      "java": {
+        "array": ""
       }
     },
     "2718": {
@@ -13211,6 +13691,11 @@
         "tree": ""
       }
     },
+    "2798": {
+      "java": {
+        "array": ""
+      }
+    },
     "2799": {
       "java": {
         "sliding-window": "import java.util.HashSet;\nimport java.util.HashMap;\nimport java.util.Set;\n\nclass Solution {\n    public int countCompleteSubarrays(int[] nums) {\n        Set<Integer> uniqueElements = new HashSet<>();\n        for (int num : nums) {\n            uniqueElements.add(num);\n        }\n        int uniqueCount = uniqueElements.size();\n        int result = 0;\n        HashMap<Integer, Integer> windowCounts = new HashMap<>();\n        int left = 0;\n        \n        for (int right = 0; right < nums.length; right++) {\n            windowCounts.put(nums[right], windowCounts.getOrDefault(nums[right], 0) + 1);\n            \n            while (windowCounts.size() == uniqueCount) {\n                result += nums.length - right;\n                int leftNum = nums[left];\n                windowCounts.put(leftNum, windowCounts.get(leftNum) - 1);\n                if (windowCounts.get(leftNum) == 0) {\n                    windowCounts.remove(leftNum);\n                }\n                left++;\n            }\n        }\n        \n        return result;\n    }\n}\n"
@@ -13456,6 +13941,11 @@
         "database": ""
       }
     },
+    "2855": {
+      "java": {
+        "array": ""
+      }
+    },
     "2856": {
       "java": {
         "two-pointers": "class Solution {\n    public int minLengthAfterRemovals(List<Integer> nums) {\n        Map<Integer, Integer> count = new HashMap<>();\n        for (int x : nums) {\n            count.merge(x, 1, Integer::sum);\n        }\n        PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.reverseOrder());\n        for (int x : count.values()) {\n            pq.offer(x);\n        }\n        int ans = nums.size();\n        while (pq.size() > 1) {\n            int x = pq.poll();\n            int y = pq.poll();\n            x--;\n            y--;\n            if (x > 0) {\n                pq.offer(x);\n            }\n            if (y > 0) {\n                pq.offer(y);\n            }\n            ans -= 2;\n        }\n        return ans;\n    }\n}"
@@ -13479,6 +13969,11 @@
     "2860": {
       "java": {
         "enumeration": ""
+      }
+    },
+    "2861": {
+      "java": {
+        "array": ""
       }
     },
     "2862": {
@@ -13536,6 +14031,16 @@
         "tree": ""
       }
     },
+    "2873": {
+      "java": {
+        "array": ""
+      }
+    },
+    "2874": {
+      "java": {
+        "array": ""
+      }
+    },
     "2875": {
       "java": {
         "sliding-window": "class Solution {\n    public int minSizeSubarray(int[] nums, int target) {\n      long sum = Arrays.stream(nums).asLongStream().sum();\n      int n = nums.length;\n      int remainingTarget = (int) (target % sum);\n      int repeatLength = (int) (target / sum) * n;\n        if (remainingTarget == 0)\n            return repeatLength;\n\n        int suffixPlusPrefixLength = n;\n        long prefix = 0;\n        HashMap<Long, Integer> prefixToIndex = new HashMap<>();\n        prefixToIndex.put(0L, -1);\n\n        for (int i = 0; i < 2 * n; ++i) {\n            prefix += nums[i % n];\n            if (prefixToIndex.containsKey(prefix - remainingTarget))\n                suffixPlusPrefixLength = Math.min(suffixPlusPrefixLength,\n                        i - prefixToIndex.get(prefix - remainingTarget));\n            prefixToIndex.put(prefix, i);\n        }\n\n        return suffixPlusPrefixLength == n ? -1 : repeatLength + suffixPlusPrefixLength;\n    }\n}"
@@ -13581,6 +14086,11 @@
         "hash-table": ""
       }
     },
+    "2899": {
+      "java": {
+        "array": ""
+      }
+    },
     "2900": {
       "java": {
         "dynamic-programming": ""
@@ -13614,6 +14124,21 @@
     "2906": {
       "java": {
         "matrix": ""
+      }
+    },
+    "2907": {
+      "java": {
+        "array": ""
+      }
+    },
+    "2908": {
+      "java": {
+        "array": ""
+      }
+    },
+    "2909": {
+      "java": {
+        "array": ""
       }
     },
     "2910": {
@@ -13669,6 +14194,11 @@
     "2920": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "2921": {
+      "java": {
+        "array": ""
       }
     },
     "2922": {
@@ -13859,6 +14389,11 @@
     "2959": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "2960": {
+      "java": {
+        "array": ""
       }
     },
     "2961": {
@@ -14056,6 +14591,11 @@
         "dynamic-programming": ""
       }
     },
+    "3000": {
+      "java": {
+        "array": ""
+      }
+    },
     "3001": {
       "java": {
         "enumeration": ""
@@ -14241,6 +14781,11 @@
         "sliding-window": "/**\n * Definition for an infinite stream.\n * class InfiniteStream {\n *   public InfiniteStream(int[] bits);\n *   public int next();\n * }\n */\n\nclass Solution {\n  public int findPattern(InfiniteStream stream, int[] pattern) {\n    int[] lps = getLPS(pattern);\n    int i = 0;  \n    int j = 0;   \n    int bit = 0;\n    boolean readNext = false;\n    while (true) {\n      if (!readNext) {\n        bit = stream.next();\n        readNext = true;\n      }\n      if (bit == pattern[j]) {\n        ++i;\n        readNext = false;\n        ++j;\n        if (j == pattern.length)\n          return i - j;\n      }\n      else if (j > 0) {\n        j = lps[j - 1];\n      } else {\n        ++i;\n        readNext = false;\n      }\n    }\n  }\n\n\n  private int[] getLPS(int[] pattern) {\n    int[] lps = new int[pattern.length];\n    int j = 0;\n    for (int i = 1; i < pattern.length; ++i) {\n      while (j > 0 && pattern[j] != pattern[i])\n        j = lps[j - 1];\n      if (pattern[i] == pattern[j])\n        lps[i] = ++j;\n    }\n    return lps;\n  }\n}"
       }
     },
+    "3038": {
+      "java": {
+        "array": ""
+      }
+    },
     "3039": {
       "java": {
         "counting": ""
@@ -14284,6 +14829,11 @@
     "3047": {
       "java": {
         "geometry": ""
+      }
+    },
+    "3048": {
+      "java": {
+        "array": ""
       }
     },
     "3049": {
@@ -14366,6 +14916,11 @@
         "interactive": ""
       }
     },
+    "3065": {
+      "java": {
+        "array": ""
+      }
+    },
     "3066": {
       "java": {
         "heap-(priority-queue)": ""
@@ -14381,6 +14936,11 @@
         "dynamic-programming": ""
       }
     },
+    "3069": {
+      "java": {
+        "array": ""
+      }
+    },
     "3070": {
       "java": {
         "matrix": ""
@@ -14389,6 +14949,11 @@
     "3071": {
       "java": {
         "matrix": ""
+      }
+    },
+    "3072": {
+      "java": {
+        "array": ""
       }
     },
     "3073": {
@@ -14551,6 +15116,11 @@
         "prefix-sum": ""
       }
     },
+    "3105": {
+      "java": {
+        "array": ""
+      }
+    },
     "3106": {
       "java": {
         "greedy": ""
@@ -14676,6 +15246,11 @@
         "prefix-sum": ""
       }
     },
+    "3131": {
+      "java": {
+        "array": ""
+      }
+    },
     "3132": {
       "java": {
         "two-pointers": ""
@@ -14771,6 +15346,11 @@
         "database": ""
       }
     },
+    "3151": {
+      "java": {
+        "array": ""
+      }
+    },
     "3152": {
       "java": {
         "prefix-sum": ""
@@ -14815,6 +15395,11 @@
     "3160": {
       "java": {
         "hash-table": ""
+      }
+    },
+    "3161": {
+      "java": {
+        "array": ""
       }
     },
     "3162": {
@@ -14882,6 +15467,11 @@
         "hash-table": ""
       }
     },
+    "3175": {
+      "java": {
+        "array": ""
+      }
+    },
     "3176": {
       "java": {
         "dynamic-programming": ""
@@ -14935,6 +15525,11 @@
     "3186": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "3187": {
+      "java": {
+        "array": ""
       }
     },
     "3188": {
@@ -15027,9 +15622,19 @@
         "monotonic-stack": ""
       }
     },
+    "3206": {
+      "java": {
+        "array": ""
+      }
+    },
     "3207": {
       "java": {
         "greedy": ""
+      }
+    },
+    "3208": {
+      "java": {
+        "array": ""
       }
     },
     "3209": {
