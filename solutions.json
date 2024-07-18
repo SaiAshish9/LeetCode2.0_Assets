@@ -708,6 +708,56 @@
         "matrix": ""
       }
     },
+    "175": {
+      "java": {
+        "database": ""
+      }
+    },
+    "176": {
+      "java": {
+        "database": ""
+      }
+    },
+    "177": {
+      "java": {
+        "database": ""
+      }
+    },
+    "178": {
+      "java": {
+        "database": ""
+      }
+    },
+    "180": {
+      "java": {
+        "database": ""
+      }
+    },
+    "181": {
+      "java": {
+        "database": ""
+      }
+    },
+    "182": {
+      "java": {
+        "database": ""
+      }
+    },
+    "183": {
+      "java": {
+        "database": ""
+      }
+    },
+    "184": {
+      "java": {
+        "database": ""
+      }
+    },
+    "185": {
+      "java": {
+        "database": ""
+      }
+    },
     "186": {
       "java": {
         "two-pointers": ""
@@ -756,6 +806,16 @@
     "195": {
       "java": {
         "shell": "#!/bin/bash\nsed '10q;d' file.txt"
+      }
+    },
+    "196": {
+      "java": {
+        "database": ""
+      }
+    },
+    "197": {
+      "java": {
+        "database": ""
       }
     },
     "198": {
@@ -1038,6 +1098,11 @@
     "261": {
       "java": {
         "union-find": ""
+      }
+    },
+    "262": {
+      "java": {
+        "database": ""
       }
     },
     "264": {
@@ -2099,6 +2164,16 @@
         "binary-search-tree": ""
       }
     },
+    "511": {
+      "java": {
+        "database": ""
+      }
+    },
+    "512": {
+      "java": {
+        "database": ""
+      }
+    },
     "513": {
       "java": {
         "tree": ""
@@ -2189,6 +2264,11 @@
         "matrix": ""
       }
     },
+    "534": {
+      "java": {
+        "database": ""
+      }
+    },
     "535": {
       "java": {
         "hash-function": "import java.util.HashMap;\nimport java.util.Map;\n\npublic class Codec {\n    private static final String BASE_URL = \"http://tinyurl.com/\";\n    private Map<String, String> shortToLongMap = new HashMap<>();\n    private Map<String, String> longToShortMap = new HashMap<>();\n    \n    private String getHash(String url) {\n        return Integer.toHexString(url.hashCode());\n    }\n\n    public String encode(String longUrl) {\n        if (longToShortMap.containsKey(longUrl)) {\n            return BASE_URL + longToShortMap.get(longUrl);\n        }\n\n        String shortKey = getHash(longUrl);\n        while (shortToLongMap.containsKey(shortKey)) {\n            longUrl += \" \";\n            shortKey = getHash(longUrl);\n        }\n        \n        shortToLongMap.put(shortKey, longUrl);\n        longToShortMap.put(longUrl, shortKey);\n        \n        return BASE_URL + shortKey;\n    }\n\n    public String decode(String shortUrl) {\n        String shortKey = shortUrl.replace(BASE_URL, \"\");\n        return shortToLongMap.get(shortKey);\n    }\n\n}\n"
@@ -2247,6 +2327,11 @@
     "549": {
       "java": {
         "tree": ""
+      }
+    },
+    "550": {
+      "java": {
+        "database": ""
       }
     },
     "552": {
@@ -2315,14 +2400,54 @@
         "matrix": ""
       }
     },
+    "569": {
+      "java": {
+        "database": ""
+      }
+    },
+    "570": {
+      "java": {
+        "database": ""
+      }
+    },
+    "571": {
+      "java": {
+        "database": ""
+      }
+    },
     "572": {
       "java": {
         "hash-function": ""
       }
     },
+    "574": {
+      "java": {
+        "database": ""
+      }
+    },
     "576": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "577": {
+      "java": {
+        "database": ""
+      }
+    },
+    "578": {
+      "java": {
+        "database": ""
+      }
+    },
+    "579": {
+      "java": {
+        "database": ""
+      }
+    },
+    "580": {
+      "java": {
+        "database": ""
       }
     },
     "581": {
@@ -2338,6 +2463,21 @@
     "583": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "584": {
+      "java": {
+        "database": ""
+      }
+    },
+    "585": {
+      "java": {
+        "database": ""
+      }
+    },
+    "586": {
+      "java": {
+        "database": ""
       }
     },
     "587": {
@@ -2375,9 +2515,39 @@
         "sliding-window": "import java.util.HashMap;\nimport java.util.Map;\n\npublic class Solution {\n    public int findLHS(int[] nums) {\n        Map<Integer, Integer> frequencyMap = new HashMap<>();\n        int maxLen = 0;\n        \n        for (int num : nums) {\n            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);\n        }\n        \n        for (int num : frequencyMap.keySet()) {\n            if (frequencyMap.containsKey(num + 1)) {\n                int currentLen = frequencyMap.get(num) + frequencyMap.get(num + 1);\n                maxLen = Math.max(maxLen, currentLen);\n            }\n        }\n        \n        return maxLen;\n    }\n}\n"
       }
     },
+    "595": {
+      "java": {
+        "database": ""
+      }
+    },
+    "596": {
+      "java": {
+        "database": ""
+      }
+    },
+    "597": {
+      "java": {
+        "database": ""
+      }
+    },
     "600": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "601": {
+      "java": {
+        "database": ""
+      }
+    },
+    "602": {
+      "java": {
+        "database": ""
+      }
+    },
+    "603": {
+      "java": {
+        "database": ""
       }
     },
     "604": {
@@ -2390,9 +2560,44 @@
         "tree": ""
       }
     },
+    "607": {
+      "java": {
+        "database": ""
+      }
+    },
+    "608": {
+      "java": {
+        "database": ""
+      }
+    },
+    "610": {
+      "java": {
+        "database": ""
+      }
+    },
     "611": {
       "java": {
         "two-pointers": "import java.util.Arrays;\n\npublic class Solution {\n    public int triangleNumber(int[] nums) {\n        Arrays.sort(nums);\n        int count = 0;\n        for (int i = nums.length - 1; i >= 2; i--) {\n            int left = 0, right = i - 1;\n            while (left < right) {\n                if (nums[left] + nums[right] > nums[i]) {\n                    count += right - left;\n                    right--;\n                } else {\n                    left++;\n                }\n            }\n        }\n        return count;\n    }\n}\n"
+      }
+    },
+    "612": {
+      "java": {
+        "database": ""
+      }
+    },
+    "613": {
+      "java": {
+        "database": ""
+      }
+    },
+    "614": {
+      "java": {
+        "database": ""
+      }
+    },
+    "615": {
+      "java": {
+        "database": ""
       }
     },
     "616": {
@@ -2403,6 +2608,21 @@
     "617": {
       "java": {
         "tree": ""
+      }
+    },
+    "618": {
+      "java": {
+        "database": ""
+      }
+    },
+    "619": {
+      "java": {
+        "database": ""
+      }
+    },
+    "620": {
+      "java": {
+        "database": ""
       }
     },
     "621": {
@@ -2418,6 +2638,16 @@
     "623": {
       "java": {
         "tree": ""
+      }
+    },
+    "626": {
+      "java": {
+        "database": ""
+      }
+    },
+    "627": {
+      "java": {
+        "database": ""
       }
     },
     "629": {
@@ -4065,6 +4295,11 @@
         "rolling-hash": "class Solution {\n    public String longestDupSubstring(String s) {\n        int kMod = 1_000_000_007;\n        int n = s.length();\n        int[] pows = new int[n];\n        int bestStart = -1;\n        int left = 1;\n        int right = n;\n\n        pows[0] = 1;\n        for (int i = 1; i < n; ++i)\n            pows[i] = (int) ((pows[i - 1] * 26L) % (long) kMod);\n\n        while (left < right) {\n            int mid = (left + right) / 2;\n            int start = getStart(s, mid, pows, kMod);\n            if (start == -1) {\n                right = mid;\n            } else {\n                bestStart = start;\n                left = mid + 1;\n            }\n        }\n\n        if (bestStart == -1)\n            return \"\";\n        if (getStart(s, left, pows, kMod) == -1)\n            return s.substring(bestStart, bestStart + left - 1);\n        return s.substring(bestStart, bestStart + left);\n    }\n\n    private int getStart(String s, int k, int[] pows, int kMod) {\n        Map<Long, List<Integer>> hashToStarts = new HashMap<>();\n        long hash = 0;\n\n        for (int i = 0; i < k; ++i)\n            hash = ((hash * 26) % kMod + val(s.charAt(i))) % kMod;\n        hashToStarts.put(hash, new ArrayList<>());\n        hashToStarts.get(hash).add(0);\n\n        for (int i = k; i < s.length(); ++i) {\n            int startIndex = i - k + 1;\n            hash = ((hash - (long) (pows[k - 1]) * val(s.charAt(i - k))) % kMod + kMod) % kMod;\n            hash = (hash * 26 + val(s.charAt(i))) % kMod;\n            if (hashToStarts.containsKey(hash)) {\n                String currSub = s.substring(startIndex, startIndex + k);\n                for (int start : hashToStarts.get(hash))\n                    if (s.substring(start, start + k).equals(currSub))\n                        return startIndex;\n            }\n            hashToStarts.put(hash, new ArrayList<>());\n            hashToStarts.get(hash).add(startIndex);\n        }\n\n        return -1;\n    }\n\n    private int val(char c) {\n        return c - 'a';\n    }\n}"
       }
     },
+    "1045": {
+      "java": {
+        "database": ""
+      }
+    },
     "1046": {
       "java": {
         "heap-(priority-queue)": ""
@@ -4083,6 +4318,11 @@
     "1049": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1050": {
+      "java": {
+        "database": ""
       }
     },
     "1051": {
@@ -4141,6 +4381,21 @@
         "dynamic-programming": ""
       }
     },
+    "1068": {
+      "java": {
+        "database": ""
+      }
+    },
+    "1069": {
+      "java": {
+        "database": ""
+      }
+    },
+    "1070": {
+      "java": {
+        "database": ""
+      }
+    },
     "1072": {
       "java": {
         "matrix": ""
@@ -4149,6 +4404,21 @@
     "1074": {
       "java": {
         "matrix": ""
+      }
+    },
+    "1075": {
+      "java": {
+        "database": ""
+      }
+    },
+    "1076": {
+      "java": {
+        "database": ""
+      }
+    },
+    "1077": {
+      "java": {
+        "database": ""
       }
     },
     "1079": {
@@ -4164,6 +4434,21 @@
     "1081": {
       "java": {
         "monotonic-stack": ""
+      }
+    },
+    "1082": {
+      "java": {
+        "database": ""
+      }
+    },
+    "1083": {
+      "java": {
+        "database": ""
+      }
+    },
+    "1084": {
+      "java": {
+        "database": ""
       }
     },
     "1086": {
@@ -4221,6 +4506,16 @@
         "stack": ""
       }
     },
+    "1097": {
+      "java": {
+        "database": ""
+      }
+    },
+    "1098": {
+      "java": {
+        "database": ""
+      }
+    },
     "1099": {
       "java": {
         "two-pointers": "class Solution {\n    public int twoSumLessThanK(int[] nums, int k) {\n        Arrays.sort(nums);\n        int ans = -1;\n        int n = nums.length;\n        for (int i = 0; i < n; ++i) {\n            int j = search(nums, k - nums[i], i + 1, n) - 1;\n            if (i < j) {\n                ans = Math.max(ans, nums[i] + nums[j]);\n            }\n        }\n        return ans;\n    }\n\n    private int search(int[] nums, int x, int left, int right) {\n        while (left < right) {\n            int mid = (left + right) >> 1;\n            if (nums[mid] >= x) {\n                right = mid;\n            } else {\n                left = mid + 1;\n            }\n        }\n        return left;\n    }\n}\n"
@@ -4256,6 +4551,11 @@
         "stack": ""
       }
     },
+    "1107": {
+      "java": {
+        "database": ""
+      }
+    },
     "1109": {
       "java": {
         "prefix-sum": ""
@@ -4269,6 +4569,16 @@
     "1111": {
       "java": {
         "stack": ""
+      }
+    },
+    "1112": {
+      "java": {
+        "database": ""
+      }
+    },
+    "1113": {
+      "java": {
+        "database": ""
       }
     },
     "1114": {
@@ -4321,6 +4631,16 @@
         "dynamic-programming": ""
       }
     },
+    "1126": {
+      "java": {
+        "database": ""
+      }
+    },
+    "1127": {
+      "java": {
+        "database": ""
+      }
+    },
     "1128": {
       "java": {
         "counting": ""
@@ -4334,6 +4654,11 @@
     "1130": {
       "java": {
         "monotonic-stack": "class Solution {\n  public int mctFromLeafValues(int[] arr) {\n    int ans = 0;\n    Deque<Integer> stack = new ArrayDeque<>();\n    stack.push(Integer.MAX_VALUE);\n\n    for (int a : arr) {\n      while (stack.peek() <= a) {\n        int mid = stack.pop();\n        ans += Math.min(stack.peek(), a) * mid;\n      }\n      stack.push(a);\n    }\n\n    while (stack.size() > 2)\n      ans += stack.pop() * stack.peek();\n\n    return ans;\n  }\n}"
+      }
+    },
+    "1132": {
+      "java": {
+        "database": ""
       }
     },
     "1135": {
@@ -4362,6 +4687,16 @@
         "prefix-sum": ""
       }
     },
+    "1141": {
+      "java": {
+        "database": ""
+      }
+    },
+    "1142": {
+      "java": {
+        "database": ""
+      }
+    },
     "1143": {
       "java": {
         "dynamic-programming": ""
@@ -4380,6 +4715,16 @@
     "1147": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "1148": {
+      "java": {
+        "database": ""
+      }
+    },
+    "1149": {
+      "java": {
+        "database": ""
       }
     },
     "1151": {
@@ -4402,6 +4747,16 @@
         "design": ""
       }
     },
+    "1158": {
+      "java": {
+        "database": ""
+      }
+    },
+    "1159": {
+      "java": {
+        "database": ""
+      }
+    },
     "1161": {
       "java": {
         "tree": ""
@@ -4415,6 +4770,11 @@
     "1163": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "1164": {
+      "java": {
+        "database": ""
       }
     },
     "1166": {
@@ -4442,6 +4802,16 @@
         "heap-(priority-queue)": ""
       }
     },
+    "1173": {
+      "java": {
+        "database": ""
+      }
+    },
+    "1174": {
+      "java": {
+        "database": ""
+      }
+    },
     "1176": {
       "java": {
         "sliding-window": "class Solution {\n    public int dietPlanPerformance(int[] calories, int k, int lower, int upper) {\n        int n = calories.length;\n        int[] s = new int[n + 1];\n        for (int i = 0; i < n; ++i) {\n            s[i + 1] = s[i] + calories[i];\n        }\n        int ans = 0;\n        for (int i = 0; i < n - k + 1; ++i) {\n            int t = s[i + k] - s[i];\n            if (t < lower) {\n                --ans;\n            } else if (t > upper) {\n                ++ans;\n            }\n        }\n        return ans;\n    }\n}"
@@ -4455,6 +4825,11 @@
     "1178": {
       "java": {
         "trie": ""
+      }
+    },
+    "1179": {
+      "java": {
+        "database": ""
       }
     },
     "1182": {
@@ -4504,6 +4879,16 @@
         "depth-first-search": "import java.util.*;\n\nclass Solution {\n    List<List<Integer>> graph;\n    int[] low;\n    int[] disc;\n    int time;\n    List<List<Integer>> result;\n    \n    public List<List<Integer>> criticalConnections(int n, List<List<Integer>> connections) {\n        graph = new ArrayList<>();\n        low = new int[n];\n        disc = new int[n];\n        result = new ArrayList<>();\n        time = 0;\n        \n        for (int i = 0; i < n; i++) {\n            graph.add(new ArrayList<>());\n        }\n        \n        for (List<Integer> conn : connections) {\n            int u = conn.get(0);\n            int v = conn.get(1);\n            graph.get(u).add(v);\n            graph.get(v).add(u);\n        }\n        \n        dfs(0, -1);\n        \n        return result;\n    }\n    \n    private void dfs(int u, int parent) {\n        low[u] = disc[u] = ++time;\n        \n        for (int v : graph.get(u)) {\n            if (v == parent) continue;\n            \n            if (disc[v] == 0) { // If v is not visited\n                dfs(v, u);\n                low[u] = Math.min(low[u], low[v]);\n                if (low[v] > disc[u]) {\n                    // (u, v) is a critical connection\n                    result.add(Arrays.asList(u, v));\n                }\n            } else {\n                low[u] = Math.min(low[u], disc[v]);\n            }\n        }\n    }\n}"
       }
     },
+    "1193": {
+      "java": {
+        "database": ""
+      }
+    },
+    "1194": {
+      "java": {
+        "database": ""
+      }
+    },
     "1195": {
       "java": {
         "concurrency": "import java.util.function.IntConsumer;\n\npublic class FizzBuzz {\n    private int n;\n    private int current = 1;\n\n    public FizzBuzz(int n) {\n        this.n = n;\n    }\n\n    public synchronized void fizz(Runnable printFizz) throws InterruptedException {\n        while (current <= n) {\n            while (current <= n && (current % 3 != 0 || current % 5 == 0)) {\n                wait();\n            }\n            if (current <= n) {\n                printFizz.run();\n                current++;\n                notifyAll();\n            }\n        }\n    }\n\n    public synchronized void buzz(Runnable printBuzz) throws InterruptedException {\n        while (current <= n) {\n            while (current <= n && (current % 5 != 0 || current % 3 == 0)) {\n                wait();\n            }\n            if (current <= n) {\n                printBuzz.run();\n                current++;\n                notifyAll();\n            }\n        }\n    }\n\n    public synchronized void fizzbuzz(Runnable printFizzBuzz) throws InterruptedException {\n        while (current <= n) {\n            while (current <= n && (current % 3 != 0 || current % 5 != 0)) {\n                wait();\n            }\n            if (current <= n) {\n                printFizzBuzz.run();\n                current++;\n                notifyAll();\n            }\n        }\n    }\n\n    public synchronized void number(IntConsumer printNumber) throws InterruptedException {\n        while (current <= n) {\n            while (current <= n && (current % 3 == 0 || current % 5 == 0)) {\n                wait();\n            }\n            if (current <= n) {\n                printNumber.accept(current);\n                current++;\n                notifyAll();\n            }\n        }\n    }\n}\n"
@@ -4534,6 +4919,16 @@
         "topological-sort": ""
       }
     },
+    "1204": {
+      "java": {
+        "database": ""
+      }
+    },
+    "1205": {
+      "java": {
+        "database": ""
+      }
+    },
     "1206": {
       "java": {
         "linked-list": ""
@@ -4552,6 +4947,16 @@
     "1210": {
       "java": {
         "matrix": ""
+      }
+    },
+    "1211": {
+      "java": {
+        "database": ""
+      }
+    },
+    "1212": {
+      "java": {
+        "database": ""
       }
     },
     "1213": {
@@ -4602,6 +5007,11 @@
     "1223": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1225": {
+      "java": {
+        "database": ""
       }
     },
     "1226": {
@@ -4669,6 +5079,11 @@
         "backtracking": ""
       }
     },
+    "1241": {
+      "java": {
+        "database": ""
+      }
+    },
     "1242": {
       "java": {
         "concurrency": "import java.net.URI;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\nimport java.util.Set;\nimport java.util.concurrent.ConcurrentHashMap;\nimport java.util.concurrent.ConcurrentSkipListSet;\nimport java.util.stream.Collectors;\nimport java.util.stream.Stream;\n\npublic class Web_Crawler_Multithreaded {\n\n    class Solution_1_synchronizedList {\n        private final Set<String> set = Collections.newSetFromMap(new ConcurrentHashMap<String, Boolean>());\n        private final List<String> result = Collections.synchronizedList(new ArrayList<String>());\n        private String HOSTNAME = null;\n\n        public List<String> crawl(String startUrl, HtmlParser htmlParser) {\n            initHostName(startUrl);\n            set.add(startUrl);\n            getUrlDfs(startUrl, htmlParser);\n            return result;\n        }\n\n        private boolean judgeHostname(String url) {\n            int idx = url.indexOf('/', 7);\n            String hostName = (idx != -1) ? url.substring(0, idx) : url;\n            return hostName.equals(HOSTNAME);\n        }\n\n        private void initHostName(String url) {\n            int idx = url.indexOf('/', 7);\n            HOSTNAME = (idx != -1) ? url.substring(0, idx) : url;\n        }\n\n        private void getUrlDfs(String startUrl, HtmlParser htmlParser) {\n            result.add(startUrl);\n            List<String> res = htmlParser.getUrls(startUrl);\n            List<Thread> threads = new ArrayList<>();\n            for (String url : res) {\n                if (judgeHostname(url) && !set.contains(url)) {\n                    set.add(url);\n                    threads.add(new Thread(() -> {\n                        getUrlDfs(url, htmlParser);\n                    }));\n                }\n            }\n            for (Thread thread : threads) {\n                thread.start();\n            }\n            try {\n                for (Thread thread : threads) {\n                    thread.join(); \n                }\n            } catch (InterruptedException e) {\n                e.printStackTrace();\n            }\n        }\n\n    }\n\n    class Solution_2_ConcurrentSkipListSet {\n\n        public List<String> crawl(String startUrl, HtmlParser htmlParser) {\n            Set<String> visited = new ConcurrentSkipListSet<>();\n            String hostname = getHostname(startUrl);\n            visited.add(startUrl);\n\n            return crawlDfs(startUrl, htmlParser, hostname, visited).collect(Collectors.toList());\n        }\n\n        private Stream<String> crawlDfs(String startUrl, HtmlParser htmlParser, String hostname,\n                                     Set<String> visited) {\n            try (Stream<String> stream = htmlParser.getUrls(startUrl)\n                .parallelStream()\n                .filter(url -> isSameHostname(url, hostname))\n                .filter(visited::add)\n                .flatMap(url -> crawlDfs(url, htmlParser, hostname, visited))) {\n\n                return Stream.concat(Stream.of(startUrl), stream);\n            }\n        }\n\n        private String getHostname(String url) {\n            int idx = url.indexOf('/', 7);\n            return (idx != -1) ? url.substring(0, idx) : url;\n        }\n\n        private boolean isSameHostname(String url, String hostname) {\n            return url.startsWith(hostname) && (url.length() == hostname.length()\n                || url.charAt(hostname.length()) == '/');\n        }\n    }\n\n    interface HtmlParser {\n        List<String> getUrls(String str);\n    }\n\n\n    class Solution_CrawlerClass {\n        public List<String> crawl(String startUrl, HtmlParser htmlParser) {\n            String host = URI.create(startUrl).getHost();\n            Crawler crawler = new Crawler(startUrl, host, htmlParser);\n            crawler.res = new ArrayList<>();\n            crawler.start();\n            Crawler.joinThread(crawler);\n            return crawler.res;\n        }\n    }\n\n    static class Crawler extends Thread {\n        String startUrl;\n        String hostname;\n        HtmlParser htmlParser;\n        public volatile List<String> res = new ArrayList<>();\n\n        public Crawler(String startUrl, String hostname, HtmlParser htmlParser) {\n            this.startUrl = startUrl;\n            this.hostname = hostname;\n            this.htmlParser = htmlParser;\n        }\n\n        @Override\n        public void run() {\n            String host = URI.create(startUrl).getHost();\n            if (!host.equals(hostname) || res.contains(startUrl)) {\n                return;\n            }\n            res.add(startUrl);\n            List<Thread> threads = new ArrayList<>();\n            for (String s : htmlParser.getUrls(startUrl)) {\n                Crawler crawler = new Crawler(s, hostname, htmlParser);\n                crawler.start();\n                threads.add(crawler);\n            }\n            for (Thread t : threads) {\n                joinThread(t);\n            }\n        }\n\n        public static void joinThread(Thread thread) {\n            try {\n                thread.join();\n            } catch (InterruptedException e) {\n            }\n        }\n\n    }\n}"
@@ -4702,6 +5117,11 @@
     "1250": {
       "java": {
         "number-theory": ""
+      }
+    },
+    "1251": {
+      "java": {
+        "database": ""
       }
     },
     "1253": {
@@ -4759,6 +5179,11 @@
         "matrix": ""
       }
     },
+    "1264": {
+      "java": {
+        "database": ""
+      }
+    },
     "1265": {
       "java": {
         "two-pointers": ""
@@ -4782,6 +5207,11 @@
     "1269": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1270": {
+      "java": {
+        "database": ""
       }
     },
     "1273": {
@@ -4814,9 +5244,19 @@
         "concurrency": "class TrafficLight {\n  private int road = 1;\n\n  public TrafficLight() {\n  }\n\n  public synchronized void carArrived(\n      int carId, \n      int roadId,\n      int direction, \n      Runnable turnGreen, \n      Runnable crossCar \n  ) {\n      if (roadId != road) {\n          turnGreen.run();\n          road = roadId;\n      }\n      crossCar.run();\n  }\n}"
       }
     },
+    "1280": {
+      "java": {
+        "database": ""
+      }
+    },
     "1284": {
       "java": {
         "matrix": ""
+      }
+    },
+    "1285": {
+      "java": {
+        "database": ""
       }
     },
     "1286": {
@@ -4849,6 +5289,11 @@
         "matrix": ""
       }
     },
+    "1294": {
+      "java": {
+        "database": ""
+      }
+    },
     "1297": {
       "java": {
         "sliding-window": "import java.util.HashMap;\nimport java.util.Map;\n\nclass Solution {\n    public int maxFreq(String s, int maxLetters, int minSize, int maxSize) {\n        int n = s.length();\n        int maxCount = 0;\n        Map<String, Integer> substringCount = new HashMap<>();\n        \n        for (int i = 0; i <= n - minSize; ++i) {\n            String sub = s.substring(i, i + minSize);\n            if (isValid(sub, maxLetters)) {\n                substringCount.put(sub, substringCount.getOrDefault(sub, 0) + 1);\n                maxCount = Math.max(maxCount, substringCount.get(sub));\n            }\n        }\n        \n        return maxCount;\n    }\n    \n    private boolean isValid(String sub, int maxLetters) {\n        int[] count = new int[26];\n        int uniqueLetters = 0;\n        for (char c : sub.toCharArray()) {\n            if (count[c - 'a'] == 0) {\n                uniqueLetters++;\n            }\n            count[c - 'a']++;\n        }\n        return uniqueLetters <= maxLetters;\n    }\n}\n"
@@ -4869,6 +5314,11 @@
         "tree": ""
       }
     },
+    "1303": {
+      "java": {
+        "database": ""
+      }
+    },
     "1305": {
       "java": {
         "binary-search-tree": ""
@@ -4877,6 +5327,11 @@
     "1307": {
       "java": {
         "backtracking": ""
+      }
+    },
+    "1308": {
+      "java": {
+        "database": ""
       }
     },
     "1310": {
@@ -4924,6 +5379,16 @@
         "dynamic-programming": ""
       }
     },
+    "1321": {
+      "java": {
+        "database": ""
+      }
+    },
+    "1322": {
+      "java": {
+        "database": ""
+      }
+    },
     "1325": {
       "java": {
         "tree": ""
@@ -4932,6 +5397,11 @@
     "1326": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1327": {
+      "java": {
+        "database": ""
       }
     },
     "1329": {
@@ -4954,6 +5424,11 @@
         "dynamic-programming": ""
       }
     },
+    "1336": {
+      "java": {
+        "database": ""
+      }
+    },
     "1337": {
       "java": {
         "matrix": "import java.util.*;\n\nclass Solution {\n    public int[] kWeakestRows(int[][] mat, int k) {\n        int m = mat.length;\n        int n = mat[0].length;\n        \n        PriorityQueue<int[]> pq = new PriorityQueue<>(\n            (a, b) -> a[1] == b[1] ? a[0] - b[0] : a[1] - b[1]\n        );\n        \n        for (int i = 0; i < m; i++) {\n            int soldiers = countSoldiers(mat[i]);\n            pq.offer(new int[]{i, soldiers});\n        }\n        \n        int[] result = new int[k];\n        for (int i = 0; i < k; i++) {\n            result[i] = pq.poll()[0];\n        }\n        \n        return result;\n    }\n    \n    private int countSoldiers(int[] row) {\n        int count = 0;\n        for (int num : row) {\n            if (num == 1) {\n                count++;\n            }\n        }\n        return count;\n    }\n}\n"
@@ -4972,6 +5447,11 @@
     "1340": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1341": {
+      "java": {
+        "database": ""
       }
     },
     "1342": {
@@ -5004,6 +5484,11 @@
         "matrix": ""
       }
     },
+    "1350": {
+      "java": {
+        "database": ""
+      }
+    },
     "1351": {
       "java": {
         "matrix": ""
@@ -5022,6 +5507,11 @@
     "1354": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "1355": {
+      "java": {
+        "database": ""
       }
     },
     "1356": {
@@ -5054,6 +5544,11 @@
         "dynamic-programming": ""
       }
     },
+    "1364": {
+      "java": {
+        "database": ""
+      }
+    },
     "1365": {
       "java": {
         "counting": ""
@@ -5072,6 +5567,11 @@
     "1368": {
       "java": {
         "matrix": ""
+      }
+    },
+    "1369": {
+      "java": {
+        "database": ""
       }
     },
     "1370": {
@@ -5104,6 +5604,11 @@
         "tree": ""
       }
     },
+    "1378": {
+      "java": {
+        "database": ""
+      }
+    },
     "1379": {
       "java": {
         "tree": ""
@@ -5127,6 +5632,11 @@
     "1383": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "1384": {
+      "java": {
+        "database": ""
       }
     },
     "1385": {
@@ -5159,6 +5669,11 @@
         "rolling-hash": ""
       }
     },
+    "1393": {
+      "java": {
+        "database": ""
+      }
+    },
     "1394": {
       "java": {
         "counting": ""
@@ -5177,6 +5692,11 @@
     "1397": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1398": {
+      "java": {
+        "database": ""
       }
     },
     "1400": {
@@ -5209,6 +5729,11 @@
         "game-theory": ""
       }
     },
+    "1407": {
+      "java": {
+        "database": ""
+      }
+    },
     "1408": {
       "java": {
         "string-matching": ""
@@ -5217,6 +5742,11 @@
     "1411": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1412": {
+      "java": {
+        "database": ""
       }
     },
     "1413": {
@@ -5247,6 +5777,11 @@
     "1420": {
       "java": {
         "prefix-sum": ""
+      }
+    },
+    "1421": {
+      "java": {
+        "database": ""
       }
     },
     "1422": {
@@ -5289,6 +5824,11 @@
         "dynamic-programming": ""
       }
     },
+    "1435": {
+      "java": {
+        "database": ""
+      }
+    },
     "1438": {
       "java": {
         "monotonic-queue": "import java.util.Deque;\nimport java.util.LinkedList;\n\npublic class Solution {\n    public int longestSubarray(int[] nums, int limit) {\n        int left = 0, right = 0;\n        int maxLength = 0;\n        Deque<Integer> maxDeque = new LinkedList<>();\n        Deque<Integer> minDeque = new LinkedList<>();\n\n        while (right < nums.length) {\n            while (!maxDeque.isEmpty() && maxDeque.peekLast() < nums[right]) {\n                maxDeque.pollLast();\n            }\n            maxDeque.addLast(nums[right]);\n\n            while (!minDeque.isEmpty() && minDeque.peekLast() > nums[right]) {\n                minDeque.pollLast();\n            }\n            minDeque.addLast(nums[right]);\n\n            while (maxDeque.peekFirst() - minDeque.peekFirst() > limit) {\n                if (maxDeque.peekFirst() == nums[left]) {\n                    maxDeque.pollFirst();\n                }\n                if (minDeque.peekFirst() == nums[left]) {\n                    minDeque.pollFirst();\n                }\n                left++;\n            }\n\n            maxLength = Math.max(maxLength, right - left + 1);\n            right++;\n        }\n\n        return maxLength;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums = {8, 2, 4, 7};\n        int limit = 4;\n        System.out.println(solution.longestSubarray(nums, limit));  // Output: 2\n    }\n}\n"
@@ -5297,6 +5837,11 @@
     "1439": {
       "java": {
         "matrix": "class T {\n    public int i;\n    public int j;\n    public int sum; // nums1[i] + nums2[j]\n\n    public T(int i, int j, int sum) {\n        this.i = i;\n        this.j = j;\n        this.sum = sum;\n    }\n}\n\nclass Solution {\n    public int kthSmallest(int[][] mat, int k) {\n        int[] row = mat[0];\n\n        for (int i = 1; i < mat.length; ++i)\n            row = kSmallestPairSums(row, mat[i], k);\n\n        return row[k - 1];\n    }\n\n    private int[] kSmallestPairSums(int[] nums1, int[] nums2, int k) {\n        List<Integer> ans = new ArrayList<>();\n        Queue<T> minHeap = new PriorityQueue<>((a, b) -> a.sum - b.sum);\n\n        for (int i = 0; i < k && i < nums1.length; ++i)\n            minHeap.offer(new T(i, 0, nums1[i] + nums2[0]));\n\n        while (!minHeap.isEmpty() && ans.size() < k) {\n            int i = minHeap.peek().i;\n            int j = minHeap.poll().j;\n            ans.add(nums1[i] + nums2[j]);\n            if (j + 1 < nums2.length)\n                minHeap.offer(new T(i, j + 1, nums1[i] + nums2[j + 1]));\n        }\n\n        return ans.stream().mapToInt(Integer::intValue).toArray();\n    }\n}"
+      }
+    },
+    "1440": {
+      "java": {
+        "database": ""
       }
     },
     "1441": {
@@ -5319,6 +5864,11 @@
         "matrix": ""
       }
     },
+    "1445": {
+      "java": {
+        "database": ""
+      }
+    },
     "1447": {
       "java": {
         "number-theory": ""
@@ -5339,6 +5889,11 @@
         "geometry": ""
       }
     },
+    "1454": {
+      "java": {
+        "database": ""
+      }
+    },
     "1455": {
       "java": {
         "two-pointers": ""
@@ -5357,6 +5912,11 @@
     "1458": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1459": {
+      "java": {
+        "database": ""
       }
     },
     "1461": {
@@ -5387,6 +5947,11 @@
     "1467": {
       "java": {
         "probability-and-statistics": "enum BoxCase {\n    kEqualBalls, kEqualDistantBalls\n}\n\nclass Solution {\n    public double getProbability(int[] balls) {\n      int n = Arrays.stream(balls).sum() / 2;\n        return cases(balls, 0, 0, 0, 0, 0, n, BoxCase.kEqualDistantBalls) /\n                cases(balls, 0, 0, 0, 0, 0, n, BoxCase.kEqualBalls);\n    }\n\n    private int[] fact = { 1, 1, 2, 6, 24, 120, 720 };\n\n    double cases(int[] balls, int i, int ballsCountA, int ballsCountB, int colorsCountA,\n            int colorsCountB, int n, BoxCase boxCase) {\n        if (ballsCountA > n || ballsCountB > n)\n            return 0;\n        if (i == balls.length)\n            return boxCase == BoxCase.kEqualBalls ? 1 : (colorsCountA == colorsCountB ? 1 : 0);\n\n        double ans = 0;\n\n        for (int ballsTakenA = 0; ballsTakenA <= balls[i]; ++ballsTakenA) {\n          int ballsTakenB = balls[i] - ballsTakenA;\n          int newcolorsCountA = colorsCountA + (ballsTakenA > 0 ? 1 : 0);\n          int newcolorsCountB = colorsCountB + (ballsTakenB > 0 ? 1 : 0);\n            ans += cases(balls, i + 1, ballsCountA + ballsTakenA, ballsCountB + ballsTakenB,\n                    newcolorsCountA, newcolorsCountB, n, boxCase) /\n                    (fact[ballsTakenA] * fact[ballsTakenB]);\n        }\n\n        return ans;\n    }\n}"
+      }
+    },
+    "1468": {
+      "java": {
+        "database": ""
       }
     },
     "1469": {
@@ -5434,6 +5999,11 @@
         "dynamic-programming": ""
       }
     },
+    "1479": {
+      "java": {
+        "database": ""
+      }
+    },
     "1480": {
       "java": {
         "prefix-sum": ""
@@ -5447,6 +6017,11 @@
     "1483": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1484": {
+      "java": {
+        "database": ""
       }
     },
     "1485": {
@@ -5489,6 +6064,11 @@
         "dynamic-programming": ""
       }
     },
+    "1495": {
+      "java": {
+        "database": ""
+      }
+    },
     "1497": {
       "java": {
         "counting": ""
@@ -5507,6 +6087,11 @@
     "1500": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "1501": {
+      "java": {
+        "database": ""
       }
     },
     "1503": {
@@ -5534,6 +6119,11 @@
         "game-theory": ""
       }
     },
+    "1511": {
+      "java": {
+        "database": ""
+      }
+    },
     "1512": {
       "java": {
         "counting": ""
@@ -5552,6 +6142,11 @@
     "1516": {
       "java": {
         "tree": ""
+      }
+    },
+    "1517": {
+      "java": {
+        "database": ""
       }
     },
     "1519": {
@@ -5584,6 +6179,11 @@
         "monotonic-stack": ""
       }
     },
+    "1527": {
+      "java": {
+        "database": ""
+      }
+    },
     "1530": {
       "java": {
         "tree": ""
@@ -5592,6 +6192,11 @@
     "1531": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1532": {
+      "java": {
+        "database": ""
       }
     },
     "1533": {
@@ -5629,6 +6234,11 @@
         "bit-manipulation": ""
       }
     },
+    "1543": {
+      "java": {
+        "database": ""
+      }
+    },
     "1544": {
       "java": {
         "stack": ""
@@ -5654,6 +6264,11 @@
         "dynamic-programming": ""
       }
     },
+    "1549": {
+      "java": {
+        "database": ""
+      }
+    },
     "1553": {
       "java": {
         "dynamic-programming": ""
@@ -5662,6 +6277,11 @@
     "1554": {
       "java": {
         "rolling-hash": ""
+      }
+    },
+    "1555": {
+      "java": {
+        "database": ""
       }
     },
     "1557": {
@@ -5689,6 +6309,11 @@
         "game-theory": ""
       }
     },
+    "1565": {
+      "java": {
+        "database": ""
+      }
+    },
     "1566": {
       "java": {
         "enumeration": ""
@@ -5712,6 +6337,11 @@
     "1570": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "1571": {
+      "java": {
+        "database": ""
       }
     },
     "1572": {
@@ -5744,6 +6374,11 @@
         "union-find": ""
       }
     },
+    "1581": {
+      "java": {
+        "database": ""
+      }
+    },
     "1582": {
       "java": {
         "matrix": ""
@@ -5757,6 +6392,11 @@
     "1586": {
       "java": {
         "iterator": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass BSTIterator {\n    private List<Integer> nums = new ArrayList<>();\n    private int i = -1;\n\n    public BSTIterator(TreeNode root) {\n        dfs(root);\n    }\n\n    public boolean hasNext() {\n        return i < nums.size() - 1;\n    }\n\n    public int next() {\n        return nums.get(++i);\n    }\n\n    public boolean hasPrev() {\n        return i > 0;\n    }\n\n    public int prev() {\n        return nums.get(--i);\n    }\n\n    private void dfs(TreeNode root) {\n        if (root == null) {\n            return;\n        }\n        dfs(root.left);\n        nums.add(root.val);\n        dfs(root.right);\n    }\n}\n\n/**\n * Your BSTIterator object will be instantiated and called as such:\n * BSTIterator obj = new BSTIterator(root);\n * boolean param_1 = obj.hasNext();\n * int param_2 = obj.next();\n * boolean param_3 = obj.hasPrev();\n * int param_4 = obj.prev();\n */"
+      }
+    },
+    "1587": {
+      "java": {
+        "database": ""
       }
     },
     "1588": {
@@ -5792,6 +6432,11 @@
     "1595": {
       "java": {
         "matrix": ""
+      }
+    },
+    "1596": {
+      "java": {
+        "database": ""
       }
     },
     "1597": {
@@ -5834,6 +6479,11 @@
         "heap-(priority-queue)": ""
       }
     },
+    "1607": {
+      "java": {
+        "database": ""
+      }
+    },
     "1609": {
       "java": {
         "tree": ""
@@ -5852,6 +6502,11 @@
     "1612": {
       "java": {
         "tree": ""
+      }
+    },
+    "1613": {
+      "java": {
+        "database": ""
       }
     },
     "1614": {
@@ -5894,6 +6549,11 @@
         "design": ""
       }
     },
+    "1623": {
+      "java": {
+        "database": ""
+      }
+    },
     "1625": {
       "java": {
         "enumeration": ""
@@ -5924,9 +6584,19 @@
         "union-find": ""
       }
     },
+    "1633": {
+      "java": {
+        "database": ""
+      }
+    },
     "1634": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "1635": {
+      "java": {
+        "database": ""
       }
     },
     "1638": {
@@ -5959,6 +6629,11 @@
         "tree": ""
       }
     },
+    "1645": {
+      "java": {
+        "database": ""
+      }
+    },
     "1648": {
       "java": {
         "heap-(priority-queue)": ""
@@ -5972,6 +6647,11 @@
     "1650": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "1651": {
+      "java": {
+        "database": ""
       }
     },
     "1652": {
@@ -6019,6 +6699,11 @@
         "tree": ""
       }
     },
+    "1661": {
+      "java": {
+        "database": ""
+      }
+    },
     "1664": {
       "java": {
         "prefix-sum": ""
@@ -6027,6 +6712,11 @@
     "1666": {
       "java": {
         "tree": ""
+      }
+    },
+    "1667": {
+      "java": {
+        "database": ""
       }
     },
     "1668": {
@@ -6074,6 +6764,11 @@
         "tree": ""
       }
     },
+    "1677": {
+      "java": {
+        "database": ""
+      }
+    },
     "1679": {
       "java": {
         "two-pointers": ""
@@ -6092,6 +6787,11 @@
     "1682": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1683": {
+      "java": {
+        "database": ""
       }
     },
     "1684": {
@@ -6129,6 +6829,11 @@
         "dynamic-programming": ""
       }
     },
+    "1693": {
+      "java": {
+        "database": ""
+      }
+    },
     "1695": {
       "java": {
         "sliding-window": "import java.util.*;\n\nclass Solution {\n    public int maximumUniqueSubarray(int[] nums) {\n        int n = nums.length;\n        Set<Integer> set = new HashSet<>();\n        int left = 0, right = 0;\n        int maxSum = 0, currentSum = 0;\n        \n        while (right < n) {\n            if (!set.contains(nums[right])) {\n                set.add(nums[right]);\n                currentSum += nums[right];\n                maxSum = Math.max(maxSum, currentSum);\n                right++;\n            } else {\n                set.remove(nums[left]);\n                currentSum -= nums[left];\n                left++;\n            }\n        }\n        \n        return maxSum;\n    }\n}\n"
@@ -6147,6 +6852,11 @@
     "1698": {
       "java": {
         "suffix-array": "import java.util.Arrays;\n\npublic class Solution {\n\n    public int countDistinct(String s) {\n        int n = s.length();\n        int[] suffixArray = buildSuffixArray(s);\n        int[] lcpArray = buildLCPArray(s, suffixArray);\n\n        int count = 0;\n        for (int i = 0; i < n; i++) {\n            int suffixLength = n - suffixArray[i];\n            count += suffixLength - (i > 0 ? lcpArray[i] : 0);\n        }\n\n        return count;\n    }\n\n    private int[] buildSuffixArray(String s) {\n        int n = s.length();\n        Suffix[] suffixes = new Suffix[n];\n\n        for (int i = 0; i < n; i++) {\n            suffixes[i] = new Suffix(i, s.substring(i));\n        }\n\n        Arrays.sort(suffixes);\n\n        int[] suffixArray = new int[n];\n        for (int i = 0; i < n; i++) {\n            suffixArray[i] = suffixes[i].index;\n        }\n\n        return suffixArray;\n    }\n\n    private int[] buildLCPArray(String s, int[] suffixArray) {\n        int n = s.length();\n        int[] rank = new int[n];\n        int[] lcpArray = new int[n];\n\n        for (int i = 0; i < n; i++) {\n            rank[suffixArray[i]] = i;\n        }\n\n        int h = 0;\n        for (int i = 0; i < n; i++) {\n            if (rank[i] > 0) {\n                int j = suffixArray[rank[i] - 1];\n                while (i + h < n && j + h < n && s.charAt(i + h) == s.charAt(j + h)) {\n                    h++;\n                }\n                lcpArray[rank[i]] = h;\n                if (h > 0) {\n                    h--;\n                }\n            }\n        }\n\n        return lcpArray;\n    }\n\n    class Suffix implements Comparable<Suffix> {\n        int index;\n        String suffix;\n\n        Suffix(int index, String suffix) {\n            this.index = index;\n            this.suffix = suffix;\n        }\n\n        @Override\n        public int compareTo(Suffix other) {\n            return this.suffix.compareTo(other.suffix);\n        }\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        String s = \"aabbaba\";\n        int distinctSubstrings = solution.countDistinct(s);\n        System.out.println(\"Number of distinct substrings: \" + distinctSubstrings); // Output: 21\n    }\n}\n"
+      }
+    },
+    "1699": {
+      "java": {
+        "database": ""
       }
     },
     "1700": {
@@ -6179,6 +6889,11 @@
         "trie": ""
       }
     },
+    "1709": {
+      "java": {
+        "database": ""
+      }
+    },
     "1712": {
       "java": {
         "two-pointers": "class Solution {\n    public int waysToSplit(int[] nums) {\n        int kMod = 1_000_000_007;\n        int n = nums.length;\n        int ans = 0;\n        int[] prefix = nums.clone();\n\n        for (int i = 1; i < n; ++i)\n            prefix[i] += prefix[i - 1];\n\n        for (int i = 0; i < n - 2; ++i) {\n            int j = firstGreaterEqual(prefix, i);\n            if (j == n - 1)\n                break;\n            int mid = prefix[j] - prefix[i];\n            int right = prefix[prefix.length - 1] - prefix[j];\n            if (mid > right)\n                continue;\n            int k = firstGreater(prefix, i);\n            ans = (ans + k - j) % kMod;\n        }\n\n        return ans;\n    }\n\n    private int firstGreaterEqual(int[] prefix, int i) {\n        int left = i + 1;\n        int right = prefix.length - 1;\n        while (left < right) {\n            int mid = (left + right) / 2;\n            if (prefix[mid] - prefix[i] >= prefix[i])\n                right = mid;\n            else\n                left = mid + 1;\n        }\n        return left;\n    };\n\n    private int firstGreater(int[] prefix, int i) {\n        int left = i + 1;\n        int right = prefix.length - 1;\n        while (left < right) {\n            int mid = (left + right) / 2;\n            if (prefix[mid] - prefix[i] > prefix[prefix.length - 1] - prefix[mid])\n                right = mid;\n            else\n                left = mid + 1;\n        }\n        return left;\n    };\n}"
@@ -6187,6 +6902,11 @@
     "1714": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1715": {
+      "java": {
+        "database": ""
       }
     },
     "1717": {
@@ -6244,9 +6964,19 @@
         "matrix": ""
       }
     },
+    "1729": {
+      "java": {
+        "database": ""
+      }
+    },
     "1730": {
       "java": {
         "matrix": ""
+      }
+    },
+    "1731": {
+      "java": {
+        "database": ""
       }
     },
     "1732": {
@@ -6279,6 +7009,11 @@
         "tree": ""
       }
     },
+    "1741": {
+      "java": {
+        "database": ""
+      }
+    },
     "1742": {
       "java": {
         "counting": ""
@@ -6297,6 +7032,11 @@
     "1746": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1747": {
+      "java": {
+        "database": ""
       }
     },
     "1748": {
@@ -6339,6 +7079,11 @@
         "stack": ""
       }
     },
+    "1757": {
+      "java": {
+        "database": ""
+      }
+    },
     "1761": {
       "java": {
         "graph": ""
@@ -6367,6 +7112,11 @@
     "1766": {
       "java": {
         "tree": ""
+      }
+    },
+    "1767": {
+      "java": {
+        "database": ""
       }
     },
     "1768": {
@@ -6399,6 +7149,11 @@
         "heap-(priority-queue)": ""
       }
     },
+    "1777": {
+      "java": {
+        "database": ""
+      }
+    },
     "1778": {
       "java": {
         "interactive": ""
@@ -6414,6 +7169,11 @@
         "two-pointers": ""
       }
     },
+    "1783": {
+      "java": {
+        "database": ""
+      }
+    },
     "1786": {
       "java": {
         "heap-(priority-queue)": ""
@@ -6427,6 +7187,11 @@
     "1788": {
       "java": {
         "prefix-sum": ""
+      }
+    },
+    "1789": {
+      "java": {
+        "database": ""
       }
     },
     "1790": {
@@ -6447,6 +7212,11 @@
     "1793": {
       "java": {
         "two-pointers": "class Solution {\n    public int maximumScore(int[] nums, int k) {\n        int ans = 0;\n        Deque<Integer> stack = new ArrayDeque<>();\n\n        for (int i = 0; i <= nums.length; ++i) {\n            while (!stack.isEmpty() && (i == nums.length || nums[stack.peek()] > nums[i])) {\n                int h = nums[stack.pop()];\n                int w = stack.isEmpty() ? i : i - stack.peek() - 1;\n                if ((stack.isEmpty() || stack.peek() + 1 <= k) && i - 1 >= k)\n                    ans = Math.max(ans, h * w);\n            }\n            stack.push(i);\n        }\n\n        return ans;\n    }\n}"
+      }
+    },
+    "1795": {
+      "java": {
+        "database": ""
       }
     },
     "1797": {
@@ -6479,9 +7249,19 @@
         "recursion": ""
       }
     },
+    "1809": {
+      "java": {
+        "database": ""
+      }
+    },
     "1810": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "1811": {
+      "java": {
+        "database": ""
       }
     },
     "1813": {
@@ -6512,6 +7292,11 @@
     "1820": {
       "java": {
         "matrix": ""
+      }
+    },
+    "1821": {
+      "java": {
+        "database": ""
       }
     },
     "1823": {
@@ -6549,6 +7334,11 @@
         "combinatorics": ""
       }
     },
+    "1831": {
+      "java": {
+        "database": ""
+      }
+    },
     "1834": {
       "java": {
         "heap-(priority-queue)": ""
@@ -6574,9 +7364,19 @@
         "sliding-window": "class Solution {\n  public int longestBeautifulSubstring(String word) {\n    int ans = 0;\n    int count = 1;\n\n    for (int left = 0, right = 1; right < word.length(); ++right) {\n    char curr = word.charAt(right);\n    char prev = word.charAt(right - 1);\n      if (curr >= prev) {\n        if (curr > prev)\n          ++count;\n        if (count == 5)\n          ans = Math.max(ans, right - left + 1);\n      } else {\n        count = 1;\n        left = right;\n      }\n    }\n\n    return ans;\n  }\n}"
       }
     },
+    "1841": {
+      "java": {
+        "database": ""
+      }
+    },
     "1842": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "1843": {
+      "java": {
+        "database": ""
       }
     },
     "1845": {
@@ -6602,6 +7402,11 @@
     "1852": {
       "java": {
         "sliding-window": "class Solution {\n    public int[] distinctNumbers(int[] nums, int k) {\n        Map<Integer, Integer> count = new HashMap<>();\n        for (int i = 0; i < k; ++i) {\n            count.merge(nums[i], 1, Integer::sum);\n        }\n        int n = nums.length;\n        int[] ans = new int[n - k + 1];\n        ans[0] = count.size();\n        for (int i = k; i < n; ++i) {\n            count.merge(nums[i], 1, Integer::sum);\n            if (count.merge(nums[i - k], -1, Integer::sum) == 0) {\n                count.remove(nums[i - k]);\n            }\n            ans[i - k + 1] = count.size();\n        }\n        return ans;\n    }\n}"
+      }
+    },
+    "1853": {
+      "java": {
+        "database": ""
       }
     },
     "1854": {
@@ -6654,6 +7459,11 @@
         "dynamic-programming": ""
       }
     },
+    "1867": {
+      "java": {
+        "database": ""
+      }
+    },
     "1868": {
       "java": {
         "two-pointers": ""
@@ -6667,6 +7477,16 @@
     "1872": {
       "java": {
         "prefix-sum": ""
+      }
+    },
+    "1873": {
+      "java": {
+        "database": ""
+      }
+    },
+    "1875": {
+      "java": {
+        "database": ""
       }
     },
     "1876": {
@@ -6724,6 +7544,16 @@
         "prefix-sum": ""
       }
     },
+    "1890": {
+      "java": {
+        "database": ""
+      }
+    },
+    "1892": {
+      "java": {
+        "database": ""
+      }
+    },
     "1893": {
       "java": {
         "prefix-sum": ""
@@ -6774,6 +7604,11 @@
         "union-find": ""
       }
     },
+    "1907": {
+      "java": {
+        "database": ""
+      }
+    },
     "1908": {
       "java": {
         "brainteaser": "class Solution {\n    public boolean nimGame(int[] piles) {\n        int xor = 0;\n        for (int pile : piles)\n            xor ^= pile;\n        return xor != 0;\n    }\n}"
@@ -6804,9 +7639,19 @@
         "topological-sort": ""
       }
     },
+    "1917": {
+      "java": {
+        "database": ""
+      }
+    },
     "1918": {
       "java": {
         "sliding-window": "class Solution {\n    public int kthSmallestSubarraySum(int[] nums, int k) {\n        int min = Integer.MAX_VALUE, sum = 0;\n        for (int num : nums) {\n            min = Math.min(min, num);\n            sum += num;\n        }\n        int low = min, high = sum;\n        while (low < high) {\n            int mid = (high - low) / 2 + low;\n            int count = countSubarrays(nums, mid);\n            if (count < k)\n                low = mid + 1;\n            else\n                high = mid;\n        }\n        return low;\n    }\n\n    public int countSubarrays(int[] nums, int threshold) {\n        int count = 0;\n        int sum = 0;\n        int length = nums.length;\n        int left = 0, right = 0;\n        while (right < length) {\n            sum += nums[right];\n            while (sum > threshold) {\n                sum -= nums[left];\n                left++;\n            }\n            count += right - left + 1;\n            right++;\n        }\n        return count;\n    }\n}"
+      }
+    },
+    "1919": {
+      "java": {
+        "database": ""
       }
     },
     "1922": {
@@ -6859,6 +7704,11 @@
         "tree": ""
       }
     },
+    "1934": {
+      "java": {
+        "database": ""
+      }
+    },
     "1937": {
       "java": {
         "dynamic-programming": ""
@@ -6867,6 +7717,11 @@
     "1938": {
       "java": {
         "trie": ""
+      }
+    },
+    "1939": {
+      "java": {
+        "database": ""
       }
     },
     "1940": {
@@ -6904,9 +7759,19 @@
         "hash-function": ""
       }
     },
+    "1949": {
+      "java": {
+        "database": ""
+      }
+    },
     "1950": {
       "java": {
         "monotonic-stack": ""
+      }
+    },
+    "1951": {
+      "java": {
+        "database": ""
       }
     },
     "1952": {
@@ -6954,6 +7819,11 @@
         "two-pointers": ""
       }
     },
+    "1965": {
+      "java": {
+        "database": ""
+      }
+    },
     "1969": {
       "java": {
         "recursion": ""
@@ -6967,6 +7837,11 @@
     "1971": {
       "java": {
         "union-find": ""
+      }
+    },
+    "1972": {
+      "java": {
+        "database": ""
       }
     },
     "1973": {
@@ -6987,6 +7862,11 @@
     "1977": {
       "java": {
         "suffix-array": "class Solution {\n    public int numberOfCombinations(String num) {\n        if (num.charAt(0) == '0')\n            return 0;\n\n      int kMod = 1_000_000_007;\n      int n = num.length();\n        // dp[i][k] := the number of possible lists of integers ending in num[i] with\n        // the length of the last number being 1..k\n        long[][] dp = new long[n][n + 1];\n        // lcs[i][j] := the number of the same digits in num[i..n) and num[j..n)\n        int[][] lcs = new int[n + 1][n + 1];\n\n        // Step 1: Compute LCS array\n        for (int i = n - 1; i >= 0; --i)\n            for (int j = i + 1; j < n; ++j)\n                if (num.charAt(i) == num.charAt(j))\n                    lcs[i][j] = lcs[i + 1][j + 1] + 1;\n\n        // Step 2: Dynamic programming to count number of combinations\n        for (int i = 0; i < n; ++i)\n            for (int k = 1; k <= i + 1; ++k) {\n                dp[i][k] += dp[i][k - 1];\n                dp[i][k] %= kMod;\n                // The last number is num[s..i].\n              int s = i - k + 1;\n                if (num.charAt(s) == '0')\n                    // If the number starts with '0', skip it as it's invalid\n                    continue;\n                if (s == 0) {\n                    // If the whole string is considered, increment the count by 1\n                    dp[i][k] += 1;\n                    continue;\n                }\n                if (s < k) {\n                    // If the length k is not enough, add counts from num[0..s - 1]\n                    dp[i][k] += dp[s - 1][s];\n                    continue;\n                }\n              int left = lcs[s - k][s];\n                if (left >= k || num.charAt(s - k + left) <= num.charAt(s + left))\n                    // If num[s - k..s - 1] <= num[s..i], add counts from dp[s - 1][k]\n                    dp[i][k] += dp[s - 1][k];\n                else\n                    // Otherwise, add counts from dp[s - 1][k - 1]\n                    dp[i][k] += dp[s - 1][k - 1];\n                \n                dp[i][k] %= kMod;\n            }\n\n        return (int) dp[n - 1][n] % kMod;\n    }\n}\n"
+      }
+    },
+    "1978": {
+      "java": {
+        "database": ""
       }
     },
     "1979": {
@@ -7033,6 +7913,16 @@
     "1987": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "1988": {
+      "java": {
+        "database": ""
+      }
+    },
+    "1990": {
+      "java": {
+        "database": ""
       }
     },
     "1991": {
@@ -7100,6 +7990,11 @@
         "union-find": ""
       }
     },
+    "2004": {
+      "java": {
+        "database": ""
+      }
+    },
     "2005": {
       "java": {
         "game-theory": ""
@@ -7118,6 +8013,11 @@
     "2009": {
       "java": {
         "sliding-window": "import java.util.Arrays;\nimport java.util.HashSet;\nimport java.util.Set;\n\nclass Solution {\n    public int minOperations(int[] nums) {\n        Set<Integer> set = new HashSet<>();\n        for (int num : nums) {\n            set.add(num);\n        }\n        int[] uniqueNums = new int[set.size()];\n        int index = 0;\n        for (int num : set) {\n            uniqueNums[index++] = num;\n        }\n        Arrays.sort(uniqueNums);\n\n        int maxLength = 0;\n        int left = 0;\n        for (int right = 0; right < uniqueNums.length; ++right) {\n            while (uniqueNums[right] - uniqueNums[left] >= nums.length) {\n                left++;\n            }\n            maxLength = Math.max(maxLength, right - left + 1);\n        }\n\n        return nums.length - maxLength;\n    }\n}\n"
+      }
+    },
+    "2010": {
+      "java": {
+        "database": ""
       }
     },
     "2013": {
@@ -7150,6 +8050,11 @@
         "stack": ""
       }
     },
+    "2020": {
+      "java": {
+        "database": ""
+      }
+    },
     "2021": {
       "java": {
         "prefix-sum": ""
@@ -7173,6 +8078,11 @@
     "2025": {
       "java": {
         "prefix-sum": ""
+      }
+    },
+    "2026": {
+      "java": {
+        "database": ""
       }
     },
     "2029": {
@@ -7225,6 +8135,11 @@
         "graph": ""
       }
     },
+    "2041": {
+      "java": {
+        "database": ""
+      }
+    },
     "2043": {
       "java": {
         "design": ""
@@ -7258,6 +8173,11 @@
     "2050": {
       "java": {
         "topological-sort": ""
+      }
+    },
+    "2051": {
+      "java": {
+        "database": ""
       }
     },
     "2052": {
@@ -7310,6 +8230,11 @@
         "backtracking": ""
       }
     },
+    "2066": {
+      "java": {
+        "database": ""
+      }
+    },
     "2067": {
       "java": {
         "prefix-sum": ""
@@ -7328,6 +8253,11 @@
     "2071": {
       "java": {
         "monotonic-queue": "import java.util.Arrays;\nimport java.util.ArrayDeque;\nimport java.util.Deque;\n\nclass Solution {\n    private int[] tasks;\n    private int[] workers;\n    private int strength;\n    private int pills;\n    private int taskCount;\n    private int workerCount;\n\n    public int maxTaskAssign(int[] tasks, int[] workers, int pills, int strength) {\n        Arrays.sort(tasks);\n        Arrays.sort(workers);\n        this.tasks = tasks;\n        this.workers = workers;\n        this.strength = strength;\n        this.pills = pills;\n        taskCount = tasks.length; \n        workerCount = workers.length; \n\n        int left = 0, right = Math.min(workerCount, taskCount);\n        while (left < right) {\n            int mid = (left + right + 1) / 2; \n            if (check(mid)) {\n                left = mid; \n            } else {\n                right = mid - 1;\n            }\n        }\n\n        return left; \n    }\n\n    private boolean check(int x) {\n        int taskIdx = 0;\n        Deque<Integer> taskQueue = new ArrayDeque<>();\n        int remainingPills = pills;\n\n        for (int workerIdx = workerCount - x; workerIdx < workerCount; ++workerIdx) {\n            while (taskIdx < x && tasks[taskIdx] <= workers[workerIdx] + strength) {\n                taskQueue.offer(tasks[taskIdx++]); \n            }\n            if (taskQueue.isEmpty()) {\n                return false;\n            }\n            if (taskQueue.peekFirst() <= workers[workerIdx]) {\n                taskQueue.pollFirst(); \n            } else if (remainingPills == 0) {\n                return false; \n            } else {\n                --remainingPills; \n                taskQueue.pollLast();\n            }\n        }\n      \n        return true; \n    }\n}"
+      }
+    },
+    "2072": {
+      "java": {
+        "database": ""
       }
     },
     "2073": {
@@ -7360,9 +8290,19 @@
         "enumeration": ""
       }
     },
+    "2082": {
+      "java": {
+        "database": ""
+      }
+    },
     "2083": {
       "java": {
         "prefix-sum": ""
+      }
+    },
+    "2084": {
+      "java": {
+        "database": ""
       }
     },
     "2085": {
@@ -7470,6 +8410,11 @@
         "dynamic-programming": ""
       }
     },
+    "2112": {
+      "java": {
+        "database": ""
+      }
+    },
     "2115": {
       "java": {
         "topological-sort": ""
@@ -7478,6 +8423,11 @@
     "2116": {
       "java": {
         "stack": ""
+      }
+    },
+    "2118": {
+      "java": {
+        "database": ""
       }
     },
     "2121": {
@@ -7545,6 +8495,11 @@
         "dynamic-programming": ""
       }
     },
+    "2142": {
+      "java": {
+        "database": ""
+      }
+    },
     "2143": {
       "java": {
         "dynamic-programming": ""
@@ -7585,6 +8540,11 @@
         "dynamic-programming": ""
       }
     },
+    "2153": {
+      "java": {
+        "database": ""
+      }
+    },
     "2156": {
       "java": {
         "sliding-window": "class Solution {\n    public String subStrHash(String s, int power, int modulo, int k, int hashValue) {\n        long maxPower = 1;\n        long hash = 0;\n        int bestLeft = -1;\n\n        for (int i = s.length() - 1; i >= 0; --i) {\n            hash = (hash * power + val(s.charAt(i))) % modulo;\n            if (i + k < s.length())\n                hash = (hash - val(s.charAt(i + k)) * maxPower % modulo + modulo) % modulo;\n            else\n                maxPower = maxPower * power % modulo;\n            if (hash == hashValue)\n                bestLeft = i;\n        }\n\n        return s.substring(bestLeft, bestLeft + k);\n    }\n\n    private int val(char c) {\n        return c - 'a' + 1;\n    }\n}"
@@ -7598,6 +8558,11 @@
     "2158": {
       "java": {
         "ordered-set": ""
+      }
+    },
+    "2159": {
+      "java": {
+        "database": ""
       }
     },
     "2161": {
@@ -7645,9 +8610,19 @@
         "dynamic-programming": ""
       }
     },
+    "2173": {
+      "java": {
+        "database": ""
+      }
+    },
     "2174": {
       "java": {
         "matrix": ""
+      }
+    },
+    "2175": {
+      "java": {
+        "database": ""
       }
     },
     "2178": {
@@ -7725,6 +8700,11 @@
         "stack": ""
       }
     },
+    "2199": {
+      "java": {
+        "database": ""
+      }
+    },
     "2200": {
       "java": {
         "two-pointers": ""
@@ -7738,6 +8718,11 @@
     "2204": {
       "java": {
         "union-find": ""
+      }
+    },
+    "2205": {
+      "java": {
+        "database": ""
       }
     },
     "2206": {
@@ -7820,6 +8805,16 @@
         "trie": ""
       }
     },
+    "2228": {
+      "java": {
+        "database": ""
+      }
+    },
+    "2230": {
+      "java": {
+        "database": ""
+      }
+    },
     "2231": {
       "java": {
         "heap-(priority-queue)": "class Solution {\n    public int largestInteger(int num) {\n        String s = String.valueOf(num);\n        int ans = 0;\n        // maxHeap[0] := the odd digits\n        // maxHeap[1] := the even digits\n        Queue<Integer>[] maxHeap = new Queue[2];\n\n        for (int i = 0; i < 2; ++i)\n            maxHeap[i] = new PriorityQueue<>(Comparator.reverseOrder());\n\n        for (char c : s.toCharArray()) {\n            int digit = c - '0';\n            maxHeap[digit & 1].offer(digit);\n        }\n\n        for (char c : s.toCharArray()) {\n            int i = c - '0' & 1;\n            ans = (ans * 10 + maxHeap[i].poll());\n        }\n\n        return ans;\n    }\n}"
@@ -7848,6 +8843,11 @@
     "2237": {
       "java": {
         "prefix-sum": ""
+      }
+    },
+    "2238": {
+      "java": {
+        "database": ""
       }
     },
     "2240": {
@@ -7898,6 +8898,16 @@
     "2251": {
       "java": {
         "prefix-sum": ""
+      }
+    },
+    "2252": {
+      "java": {
+        "database": ""
+      }
+    },
+    "2253": {
+      "java": {
+        "database": ""
       }
     },
     "2254": {
@@ -8055,6 +9065,11 @@
         "dynamic-programming": ""
       }
     },
+    "2292": {
+      "java": {
+        "database": ""
+      }
+    },
     "2296": {
       "java": {
         "doubly-linked-list": "class TextEditor {\n    private class Node {\n        char c;\n        Node prev, next;\n\n        Node(char c) {\n            this.c = c;\n        }\n    }\n\n    private Node head, tail, cursor;\n\n    public TextEditor() {\n        head = new Node('0');\n        tail = new Node('0');\n        head.next = tail;\n        tail.prev = head;\n        cursor = tail;\n    }\n\n    public void addText(String text) {\n        for (char c : text.toCharArray()) {\n            Node newNode = new Node(c);\n            Node prev = cursor.prev;\n            prev.next = newNode;\n            newNode.prev = prev;\n            newNode.next = cursor;\n            cursor.prev = newNode;\n        }\n    }\n\n    public int deleteText(int k) {\n        int deleted = 0;\n        while (k > 0 && cursor.prev != head) {\n            Node prev = cursor.prev;\n            prev.prev.next = cursor;\n            cursor.prev = prev.prev;\n            k--;\n            deleted++;\n        }\n        return deleted;\n    }\n\n    public String cursorLeft(int k) {\n        while (k > 0 && cursor.prev != head) {\n            cursor = cursor.prev;\n            k--;\n        }\n        return getText();\n    }\n\n    public String cursorRight(int k) {\n        while (k > 0 && cursor != tail) {\n            cursor = cursor.next;\n            k--;\n        }\n        return getText();\n    }\n\n    private String getText() {\n        StringBuilder sb = new StringBuilder();\n        Node temp = cursor.prev;\n        for (int i = 0; i < 10 && temp != head; i++) {\n            sb.append(temp.c);\n            temp = temp.prev;\n        }\n        return sb.reverse().toString();\n    }\n}\n"
@@ -8063,6 +9078,11 @@
     "2297": {
       "java": {
         "monotonic-stack": ""
+      }
+    },
+    "2298": {
+      "java": {
+        "database": ""
       }
     },
     "2300": {
@@ -8100,6 +9120,11 @@
         "union-find": ""
       }
     },
+    "2308": {
+      "java": {
+        "database": ""
+      }
+    },
     "2309": {
       "java": {
         "enumeration": ""
@@ -8123,6 +9148,11 @@
     "2313": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "2314": {
+      "java": {
+        "database": ""
       }
     },
     "2316": {
@@ -8160,6 +9190,11 @@
         "tree": ""
       }
     },
+    "2324": {
+      "java": {
+        "database": ""
+      }
+    },
     "2326": {
       "java": {
         "matrix": ""
@@ -8173,6 +9208,11 @@
     "2328": {
       "java": {
         "matrix": ""
+      }
+    },
+    "2329": {
+      "java": {
+        "database": ""
       }
     },
     "2330": {
@@ -8220,6 +9260,11 @@
         "dynamic-programming": ""
       }
     },
+    "2339": {
+      "java": {
+        "database": ""
+      }
+    },
     "2341": {
       "java": {
         "counting": ""
@@ -8244,6 +9289,11 @@
     "2345": {
       "java": {
         "monotonic-stack": ""
+      }
+    },
+    "2346": {
+      "java": {
+        "database": ""
       }
     },
     "2347": {
@@ -8281,6 +9331,11 @@
         "monotonic-stack": ""
       }
     },
+    "2356": {
+      "java": {
+        "database": ""
+      }
+    },
     "2357": {
       "java": {
         "heap-(priority-queue)": ""
@@ -8299,6 +9354,11 @@
     "2361": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "2362": {
+      "java": {
+        "database": ""
       }
     },
     "2363": {
@@ -8331,6 +9391,11 @@
         "union-find": ""
       }
     },
+    "2372": {
+      "java": {
+        "database": ""
+      }
+    },
     "2373": {
       "java": {
         "matrix": ""
@@ -8349,6 +9414,11 @@
     "2376": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "2377": {
+      "java": {
+        "database": ""
       }
     },
     "2378": {
@@ -8396,6 +9466,11 @@
         "matrix": ""
       }
     },
+    "2388": {
+      "java": {
+        "database": ""
+      }
+    },
     "2389": {
       "java": {
         "prefix-sum": ""
@@ -8419,6 +9494,11 @@
     "2393": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "2394": {
+      "java": {
+        "database": ""
       }
     },
     "2396": {
@@ -8721,6 +9801,11 @@
         "heap-(priority-queue)": ""
       }
     },
+    "2474": {
+      "java": {
+        "database": ""
+      }
+    },
     "2476": {
       "java": {
         "binary-search-tree": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    private List<Integer> nums = new ArrayList<>();\n\n    public List<List<Integer>> closestNodes(TreeNode root, List<Integer> queries) {\n        inorder(root);\n        List<List<Integer>> ans = new ArrayList<>();\n        for (int x : queries) {\n            int i = Collections.binarySearch(nums, x + 1);\n            int j = Collections.binarySearch(nums, x);\n            i = i < 0 ? -i - 2 : i - 1;\n            j = j < 0 ? -j - 1 : j;\n            int mi = i >= 0 && i < nums.size() ? nums.get(i) : -1;\n            int mx = j >= 0 && j < nums.size() ? nums.get(j) : -1;\n            ans.add(List.of(mi, mx));\n        }\n        return ans;\n    }\n\n    private void inorder(TreeNode root) {\n        if (root == null) {\n            return;\n        }\n        inorder(root.left);\n        nums.add(root.val);\n        inorder(root.right);\n    }\n}\n"
@@ -8739,6 +9824,11 @@
     "2479": {
       "java": {
         "tree": ""
+      }
+    },
+    "2480": {
+      "java": {
+        "database": ""
       }
     },
     "2481": {
@@ -8801,6 +9891,11 @@
         "union-find": ""
       }
     },
+    "2494": {
+      "java": {
+        "database": ""
+      }
+    },
     "2495": {
       "java": {
         "dynamic-programming": ""
@@ -8834,6 +9929,11 @@
     "2503": {
       "java": {
         "union-find": ""
+      }
+    },
+    "2504": {
+      "java": {
+        "database": ""
       }
     },
     "2505": {
@@ -9336,6 +10436,16 @@
         "matrix": ""
       }
     },
+    "2668": {
+      "java": {
+        "database": ""
+      }
+    },
+    "2669": {
+      "java": {
+        "database": ""
+      }
+    },
     "2671": {
       "java": {
         "design": ""
@@ -9381,6 +10491,21 @@
         "graph": ""
       }
     },
+    "2686": {
+      "java": {
+        "database": ""
+      }
+    },
+    "2687": {
+      "java": {
+        "database": ""
+      }
+    },
+    "2688": {
+      "java": {
+        "database": ""
+      }
+    },
     "2689": {
       "java": {
         "tree": ""
@@ -9404,6 +10529,11 @@
     "2699": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "2701": {
+      "java": {
+        "database": ""
       }
     },
     "2707": {
@@ -9446,6 +10576,11 @@
         "dynamic-programming": ""
       }
     },
+    "2720": {
+      "java": {
+        "database": ""
+      }
+    },
     "2728": {
       "java": {
         "interactive": ""
@@ -9479,6 +10614,11 @@
     "2737": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "2738": {
+      "java": {
+        "database": ""
       }
     },
     "2741": {
@@ -9529,6 +10669,11 @@
     "2751": {
       "java": {
         "stack": "class Robot {\n    public int index;\n    public int position;\n    public int health;\n    public char direction;\n\n    public Robot(int index, int position, int health, char direction) {\n        this.index = index;\n        this.position = position;\n        this.health = health;\n        this.direction = direction;\n    }\n}\n\nclass Solution {\n    public List<Integer> survivedRobotsHealths(int[] positions, int[] healths,\n            String directions) {\n        List<Integer> ans = new ArrayList<>();\n        Robot[] robots = new Robot[positions.length];\n        List<Robot> stack = new ArrayList<>();\n        for (int i = 0; i < positions.length; ++i)\n            robots[i] = new Robot(i, positions[i], healths[i], directions.charAt(i));\n\n        Arrays.sort(robots, (a, b) -> a.position - b.position);\n\n        for (Robot robot : robots) {\n            if (robot.direction == 'R') {\n                stack.add(robot);\n                continue;\n            }\n            while (!stack.isEmpty() && stack.get(stack.size() - 1).direction == 'R'\n                    && robot.health > 0) {\n                if (stack.get(stack.size() - 1).health == robot.health) {\n                    stack.remove(stack.size() - 1);\n                    robot.health = 0;\n                } else if (stack.get(stack.size() - 1).health < robot.health) {\n                    stack.remove(stack.size() - 1);\n                    robot.health -= 1;\n                } else {\n                    stack.get(stack.size() - 1).health -= 1;\n                    robot.health = 0;\n                }\n            }\n            if (robot.health > 0)\n                stack.add(robot);\n        }\n\n        stack.sort((a, b) -> a.index - b.index);\n\n        for (Robot robot : stack)\n            ans.add(robot.health);\n\n        return ans;\n    }\n}"
+      }
+    },
+    "2752": {
+      "java": {
+        "database": ""
       }
     },
     "2760": {
@@ -9609,6 +10754,11 @@
     "2782": {
       "java": {
         "union-find": ""
+      }
+    },
+    "2783": {
+      "java": {
+        "database": ""
       }
     },
     "2786": {
@@ -9751,6 +10901,11 @@
         "dynamic-programming": ""
       }
     },
+    "2837": {
+      "java": {
+        "database": ""
+      }
+    },
     "2838": {
       "java": {
         "two-pointers": ""
@@ -9804,6 +10959,16 @@
     "2852": {
       "java": {
         "union-find": ""
+      }
+    },
+    "2853": {
+      "java": {
+        "database": ""
+      }
+    },
+    "2854": {
+      "java": {
+        "database": ""
       }
     },
     "2856": {
@@ -9891,6 +11056,11 @@
         "dynamic-programming": ""
       }
     },
+    "2893": {
+      "java": {
+        "database": ""
+      }
+    },
     "2896": {
       "java": {
         "dynamic-programming": ""
@@ -9969,6 +11139,11 @@
     "2920": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "2922": {
+      "java": {
+        "database": ""
       }
     },
     "2923": {
@@ -10191,6 +11366,11 @@
         "dynamic-programming": ""
       }
     },
+    "2978": {
+      "java": {
+        "database": ""
+      }
+    },
     "2979": {
       "java": {
         "dynamic-programming": ""
@@ -10216,9 +11396,64 @@
         "prefix-sum": ""
       }
     },
+    "2984": {
+      "java": {
+        "database": ""
+      }
+    },
+    "2985": {
+      "java": {
+        "database": ""
+      }
+    },
+    "2986": {
+      "java": {
+        "database": ""
+      }
+    },
+    "2987": {
+      "java": {
+        "database": ""
+      }
+    },
+    "2988": {
+      "java": {
+        "database": ""
+      }
+    },
+    "2989": {
+      "java": {
+        "database": ""
+      }
+    },
+    "2990": {
+      "java": {
+        "database": ""
+      }
+    },
+    "2991": {
+      "java": {
+        "database": ""
+      }
+    },
     "2992": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "2993": {
+      "java": {
+        "database": ""
+      }
+    },
+    "2994": {
+      "java": {
+        "database": ""
+      }
+    },
+    "2995": {
+      "java": {
+        "database": ""
       }
     },
     "2997": {
@@ -10446,6 +11681,66 @@
         "heap-(priority-queue)": ""
       }
     },
+    "3050": {
+      "java": {
+        "database": ""
+      }
+    },
+    "3051": {
+      "java": {
+        "database": ""
+      }
+    },
+    "3052": {
+      "java": {
+        "database": ""
+      }
+    },
+    "3053": {
+      "java": {
+        "database": ""
+      }
+    },
+    "3054": {
+      "java": {
+        "database": ""
+      }
+    },
+    "3055": {
+      "java": {
+        "database": ""
+      }
+    },
+    "3056": {
+      "java": {
+        "database": ""
+      }
+    },
+    "3057": {
+      "java": {
+        "database": ""
+      }
+    },
+    "3058": {
+      "java": {
+        "database": ""
+      }
+    },
+    "3059": {
+      "java": {
+        "database": ""
+      }
+    },
+    "3060": {
+      "java": {
+        "database": ""
+      }
+    },
+    "3061": {
+      "java": {
+        "database": ""
+      }
+    },
     "3062": {
       "java": {
         "linked-list": ""
@@ -10536,6 +11831,16 @@
         "sliding-window": "class Solution {\n  public long minimumMoves(int[] nums, int k, int maxChanges) {\n    int kNumOfIndicesWithinOneDistance = 3;\n    long ans = Long.MAX_VALUE;\n    List<Integer> oneIndices = new ArrayList<>(); \n    List<Long> prefix = new ArrayList<>();       \n    prefix.add(0L);\n\n    for (int i = 0; i < nums.length; ++i)\n      if (nums[i] == 1)\n        oneIndices.add(i);\n\n    for (int oneIndex : oneIndices)\n      prefix.add(prefix.get(prefix.size() - 1) + oneIndex);\n\n    int minOnesByTwo = Math.max(0, k - maxChanges);\n    int maxOnesByTwo =\n        Math.min(k, Math.min(minOnesByTwo + kNumOfIndicesWithinOneDistance, oneIndices.size()));\n\n    for (int onesByTwo = minOnesByTwo; onesByTwo <= maxOnesByTwo; ++onesByTwo)\n      for (int left = 0; left + onesByTwo < prefix.size(); ++left) {\n        int right = left + onesByTwo;\n        long cost1 = (k - onesByTwo) * 2;\n        long cost2 = (prefix.get(right) - prefix.get((left + right) / 2)) -\n                           (prefix.get((left + right + 1) / 2) - prefix.get(left));\n        ans = Math.min(ans, cost1 + cost2);\n      }\n\n    return ans;\n  }\n}"
       }
     },
+    "3087": {
+      "java": {
+        "database": ""
+      }
+    },
+    "3089": {
+      "java": {
+        "database": ""
+      }
+    },
     "3090": {
       "java": {
         "sliding-window": "class Solution {\n    public int maximumLengthSubstring(String s) {\n        int ans = 0;\n        int[] count = new int[26];\n\n        for (int left = 0, right = 0; right < s.length(); ++right) {\n            ++count[s.charAt(right) - 'a'];\n            while (count[s.charAt(right) - 'a'] > 2)\n                --count[s.charAt(left++) - 'a'];\n            ans = Math.max(ans, right - left + 1);\n        }\n\n        return ans;\n    }\n}"
@@ -10586,6 +11891,11 @@
         "ordered-set": ""
       }
     },
+    "3103": {
+      "java": {
+        "database": ""
+      }
+    },
     "3104": {
       "java": {
         "prefix-sum": ""
@@ -10631,6 +11941,11 @@
         "queue": ""
       }
     },
+    "3118": {
+      "java": {
+        "database": ""
+      }
+    },
     "3122": {
       "java": {
         "matrix": ""
@@ -10639,6 +11954,16 @@
     "3123": {
       "java": {
         "heap-(priority-queue)": ""
+      }
+    },
+    "3124": {
+      "java": {
+        "database": ""
+      }
+    },
+    "3126": {
+      "java": {
+        "database": ""
       }
     },
     "3127": {
@@ -10696,6 +12021,11 @@
         "enumeration": ""
       }
     },
+    "3140": {
+      "java": {
+        "database": ""
+      }
+    },
     "3141": {
       "java": {
         "bit-manipulation": ""
@@ -10731,6 +12061,11 @@
         "dynamic-programming": ""
       }
     },
+    "3150": {
+      "java": {
+        "database": ""
+      }
+    },
     "3152": {
       "java": {
         "prefix-sum": ""
@@ -10745,6 +12080,11 @@
       "java": {
         "dynamic-programming": "",
         "memoization": "class Solution {\n    HashMap<String, Integer> memoizeMap = new HashMap<>();\n    int K;\n\n    public int waysToReachStair(int k) {\n\n        K = k;\n        int index = 1;\n        int jump = 0;\n        boolean canJumpBack = true;\n\n        return solve(index, jump, canJumpBack);\n    }\n\n    public int solve(int index, int jump, boolean canJumpBack) {\n\n        if (index > K + 1) {\n            return 0;\n        }\n\n        String str = String.valueOf(index) + \"_\" + String.valueOf(jump) + \"_\" + String.valueOf(canJumpBack);\n\n        if (memoizeMap.containsKey(str)) {\n\n            return memoizeMap.get(str);\n        }\n\n        int totalWays = 0;\n\n        if (index == K) {\n            totalWays++;\n        }\n\n        if (canJumpBack == true) {\n\n            totalWays += solve(index - 1, jump, false);\n        }\n        totalWays += solve(index + (int) Math.pow(2, jump), jump + 1, true);\n        memoizeMap.put(str, totalWays);\n\n        return totalWays;\n    }\n}"
+      }
+    },
+    "3156": {
+      "java": {
+        "database": ""
       }
     },
     "3157": {
@@ -10762,6 +12102,11 @@
         "dynamic-programming": ""
       }
     },
+    "3166": {
+      "java": {
+        "database": ""
+      }
+    },
     "3167": {
       "java": {
         "counting": ""
@@ -10775,6 +12120,11 @@
     "3171": {
       "java": {
         "bit-manipulation": ""
+      }
+    },
+    "3172": {
+      "java": {
+        "database": ""
       }
     },
     "3173": {
@@ -10807,6 +12157,11 @@
         "dynamic-programming": ""
       }
     },
+    "3182": {
+      "java": {
+        "database": ""
+      }
+    },
     "3183": {
       "java": {
         "dynamic-programming": ""
@@ -10825,6 +12180,11 @@
     "3186": {
       "java": {
         "two-pointers": ""
+      }
+    },
+    "3188": {
+      "java": {
+        "database": ""
       }
     },
     "3191": {
@@ -10862,6 +12222,11 @@
         "matrix": ""
       }
     },
+    "3198": {
+      "java": {
+        "database": ""
+      }
+    },
     "3199": {
       "java": {
         "bit-manipulation": ""
@@ -10887,6 +12252,11 @@
         "tree": ""
       }
     },
+    "3204": {
+      "java": {
+        "database": ""
+      }
+    },
     "3205": {
       "java": {
         "monotonic-stack": ""
@@ -10910,6 +12280,11 @@
     "3213": {
       "java": {
         "dynamic-programming": ""
+      }
+    },
+    "3214": {
+      "java": {
+        "database": ""
       }
     },
     "3215": {
