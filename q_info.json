@@ -30071,5 +30071,251 @@
       "difficulty": "Medium",
       "language": "Java",
       "acceptance": 79.9
+    },
+    "clone_graph": {
+      "qno": "133",
+      "title": "Clone Graph",
+      "tags": [
+        "Hash Table",
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Graph"
+      ],
+      "default": "Graph",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.2
+    },
+    "keys_and_rooms": {
+      "qno": "841",
+      "title": "Keys and Rooms",
+      "tags": [
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Graph"
+      ],
+      "default": "Graph",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 73.3
+    },
+    "find_the_town_judge": {
+      "qno": "997",
+      "title": "Find the Town Judge",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Graph"
+      ],
+      "default": "Graph",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 49.8
+    },
+    "flower_planting_with_no_adjacent": {
+      "qno": "1042",
+      "title": "Flower Planting With No Adjacent",
+      "tags": [
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Graph"
+      ],
+      "default": "Graph",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.4
+    },
+    "shortest_path_with_alternating_colors": {
+      "qno": "1129",
+      "title": "Shortest Path with Alternating Colors",
+      "tags": [
+        "Breadth-First Search",
+        "Graph"
+      ],
+      "default": "Graph",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.1
+    },
+    "maximum_candies_you_can_get_from_boxes": {
+      "qno": "1298",
+      "title": "Maximum Candies You Can Get from Boxes",
+      "tags": [
+        "Array",
+        "Breadth-First Search",
+        "Graph"
+      ],
+      "default": "Graph",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 57.9
+    },
+    "get_watched_videos_by_your_friends": {
+      "qno": "1311",
+      "title": "Get Watched Videos by Your Friends",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Breadth-First Search",
+        "Graph",
+        "Sorting"
+      ],
+      "default": "Graph",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.4
+    },
+    "reorder_routes_to_make_all_paths_lead_to_the_city_zero": {
+      "qno": "1466",
+      "title": "Reorder Routes to Make All Paths Lead to the City Zero",
+      "tags": [
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Graph"
+      ],
+      "default": "Graph",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64.4
+    },
+    "minimum_number_of_vertices_to_reach_all_nodes": {
+      "qno": "1557",
+      "title": "Minimum Number of Vertices to Reach All Nodes",
+      "tags": [
+        "Graph"
+      ],
+      "default": "Graph",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 81
+    },
+    "maximal_network_rank": {
+      "qno": "1615",
+      "title": "Maximal Network Rank",
+      "tags": [
+        "Graph"
+      ],
+      "default": "Graph",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.1
+    },
+    "minimum_degree_of_a_connected_trio_in_a_graph": {
+      "qno": "1761",
+      "title": "Minimum Degree of a Connected Trio in a Graph",
+      "tags": [
+        "Graph"
+      ],
+      "default": "Graph",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 42.4
+    },
+    "find_center_of_star_graph": {
+      "qno": "1791",
+      "title": "Find Center of Star Graph",
+      "tags": [
+        "Graph"
+      ],
+      "default": "Graph",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 86.7
+    },
+    "the_time_when_the_network_becomes_idle": {
+      "qno": "2039",
+      "title": "The Time When the Network Becomes Idle",
+      "tags": [
+        "Array",
+        "Breadth-First Search",
+        "Graph"
+      ],
+      "default": "Graph",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.9
+    },
+    "paths_in_maze_that_lead_to_same_room": {
+      "qno": "2077",
+      "title": "Paths in Maze That Lead to Same Room",
+      "tags": [
+        "Graph"
+      ],
+      "default": "Graph",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 55.2
+    },
+    "find_closest_node_to_given_two_nodes": {
+      "qno": "2359",
+      "title": "Find Closest Node to Given Two Nodes",
+      "tags": [
+        "Depth-First Search",
+        "Graph"
+      ],
+      "default": "Graph",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 45.5
+    },
+    "node_with_highest_edge_score": {
+      "qno": "2374",
+      "title": "Node With Highest Edge Score",
+      "tags": [
+        "Hash Table",
+        "Graph"
+      ],
+      "default": "Graph",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.6
+    },
+    "add_edges_to_make_degrees_of_all_nodes_even": {
+      "qno": "2508",
+      "title": "Add Edges to Make Degrees of All Nodes Even",
+      "tags": [
+        "Hash Table",
+        "Graph"
+      ],
+      "default": "Graph",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 32.2
+    },
+    "shortest_cycle_in_a_graph": {
+      "qno": "2608",
+      "title": "Shortest Cycle in a Graph",
+      "tags": [
+        "Breadth-First Search",
+        "Graph"
+      ],
+      "default": "Graph",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 36.3
+    },
+    "count_the_number_of_complete_components": {
+      "qno": "2685",
+      "title": "Count the Number of Complete Components",
+      "tags": [
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Graph"
+      ],
+      "default": "Graph",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65.9
+    },
+    "find_champion_ii": {
+      "qno": "2924",
+      "title": "Find Champion II",
+      "tags": [
+        "Graph"
+      ],
+      "default": "Graph",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.2
     }
-  }
+}
