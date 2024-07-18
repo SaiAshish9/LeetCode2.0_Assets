@@ -29045,5 +29045,1031 @@
       "difficulty": "Medium",
       "language": "Java",
       "acceptance": 61.5
+    },
+    "majority_element_ii": {
+      "qno": "229",
+      "title": "Majority Element II",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 52.1
+    },
+    "bulls_and_cows": {
+      "qno": "299",
+      "title": "Bulls and Cows",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.5
+    },
+    "ransom_note": {
+      "qno": "383",
+      "title": "Ransom Note",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 62
+    },
+    "subdomain_visit_count": {
+      "qno": "811",
+      "title": "Subdomain Visit Count",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 76.3
+    },
+    "most_common_word": {
+      "qno": "819",
+      "title": "Most Common Word",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 44.3
+    },
+    "minimum_increment_to_make_array_unique": {
+      "qno": "945",
+      "title": "Minimum Increment to Make Array Unique",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Sorting",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60
+    },
+    "pairs_of_songs_with_total_durations_divisible_by_60": {
+      "qno": "1010",
+      "title": "Pairs of Songs With Total Durations Divisible by 60",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53
+    },
+    "divide_array_into_increasing_sequences": {
+      "qno": "1121",
+      "title": "Divide Array Into Increasing Sequences",
+      "tags": [
+        "Array",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 61.4
+    },
+    "largest_values_from_labels": {
+      "qno": "1090",
+      "title": "Largest Values From Labels",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Greedy",
+        "Sorting",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.3
+    },
+    "number_of_equivalent_domino_pairs": {
+      "qno": "1128",
+      "title": "Number of Equivalent Domino Pairs",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 48.3
+    },
+    "maximum_number_of_balloons": {
+      "qno": "1189",
+      "title": "Maximum Number of Balloons",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 59.7
+    },
+    "split_a_string_in_balanced_strings": {
+      "qno": "1221",
+      "title": "Split a String in Balanced Strings",
+      "tags": [
+        "String",
+        "Greedy",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 86.2
+    },
+    "find_players_with_zero_or_one_losses": {
+      "qno": "2225",
+      "title": "Find Players With Zero or One Losses",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 73.3
+    },
+    "tuple_with_same_product": {
+      "qno": "1726",
+      "title": "Tuple with Same Product",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 61.2
+    },
+    "minimum_number_of_steps_to_make_two_strings_anagram": {
+      "qno": "1347",
+      "title": "Minimum Number of Steps to Make Two Strings Anagram",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 82
+    },
+    "increasing_decreasing_string": {
+      "qno": "1370",
+      "title": "Increasing Decreasing String",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 76.5
+    },
+    "how_many_numbers_are_smaller_than_the_current_number": {
+      "qno": "1365",
+      "title": "How Many Numbers Are Smaller Than the Current Number",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 86.8
+    },
+    "rank_teams_by_votes": {
+      "qno": "1366",
+      "title": "Rank Teams by Votes",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Sorting",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.5
+    },
+    "construct_k_palindrome_strings": {
+      "qno": "1400",
+      "title": "Construct K Palindrome Strings",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Greedy",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.2
+    },
+    "find_lucky_integer_in_an_array": {
+      "qno": "1394",
+      "title": "Find Lucky Integer in an Array",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 67.4
+    },
+    "minimum_number_of_frogs_croaking": {
+      "qno": "1419",
+      "title": "Minimum Number of Frogs Croaking",
+      "tags": [
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 50.3
+    },
+    "least_number_of_unique_integers_after_k_removals": {
+      "qno": "1481",
+      "title": "Least Number of Unique Integers after K Removals",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Greedy",
+        "Sorting",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 63
+    },
+    "check_if_array_pairs_are_divisible_by_k": {
+      "qno": "1497",
+      "title": "Check If Array Pairs Are Divisible by k",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 38.5
+    },
+    "number_of_good_pairs": {
+      "qno": "1512",
+      "title": "Number of Good Pairs",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Math",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 89.2
+    },
+    "design_parking_system": {
+      "qno": "1603",
+      "title": "Design Parking System",
+      "tags": [
+        "Design",
+        "Simulation",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 88
+    },
+    "determine_if_two_strings_are_close": {
+      "qno": "1657",
+      "title": "Determine if Two Strings Are Close",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Sorting",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.6
+    },
+    "determine_if_string_halves_are_alike": {
+      "qno": "1704",
+      "title": "Determine if String Halves Are Alike",
+      "tags": [
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 78.7
+    },
+    "maximum_number_of_balls_in_a_box": {
+      "qno": "1742",
+      "title": "Maximum Number of Balls in a Box",
+      "tags": [
+        "Hash Table",
+        "Math",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 73.5
+    },
+    "sum_of_unique_elements": {
+      "qno": "1748",
+      "title": "Sum of Unique Elements",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 77.9
+    },
+    "sum_of_beauty_of_all_substrings": {
+      "qno": "1781",
+      "title": "Sum of Beauty of All Substrings",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 66.5
+    },
+    "equal_sum_arrays_with_minimum_number_of_operations": {
+      "qno": "1775",
+      "title": "Equal Sum Arrays With Minimum Number of Operations",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Greedy",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.7
+    },
+    "check_if_one_string_swap_can_make_strings_equal": {
+      "qno": "1790",
+      "title": "Check if One String Swap Can Make Strings Equal",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 45.7
+    },
+    "count_nice_pairs_in_an_array": {
+      "qno": "1814",
+      "title": "Count Nice Pairs in an Array",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Math",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.8
+    },
+    "redistribute_characters_to_make_all_strings_equal": {
+      "qno": "1897",
+      "title": "Redistribute Characters to Make All Strings Equal",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 67.3
+    },
+    "check_if_all_characters_have_equal_number_of_occurrences": {
+      "qno": "1941",
+      "title": "Check if All Characters Have Equal Number of Occurrences",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 77.6
+    },
+    "longest_common_subsequence_between_sorted_arrays": {
+      "qno": "1940",
+      "title": "Longest Common Subsequence Between Sorted Arrays",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 81.2
+    },
+    "count_number_of_pairs_with_absolute_difference_k": {
+      "qno": "2006",
+      "title": "Count Number of Pairs With Absolute Difference K",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 84
+    },
+    "number_of_pairs_of_strings_with_concatenation_equal_to_target": {
+      "qno": "2023",
+      "title": "Number of Pairs of Strings With Concatenation Equal to Target",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 74.9
+    },
+    "detect_squares": {
+      "qno": "2013",
+      "title": "Detect Squares",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Design",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51.1
+    },
+    "kth_distinct_string_in_an_array": {
+      "qno": "2053",
+      "title": "Kth Distinct String in an Array",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 73
+    },
+    "check_whether_two_strings_are_almost_equivalent": {
+      "qno": "2068",
+      "title": "Check Whether Two Strings are Almost Equivalent",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 63.8
+    },
+    "count_common_words_with_one_occurrence": {
+      "qno": "2085",
+      "title": "Count Common Words With One Occurrence",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 70.5
+    },
+    "longest_palindrome_by_concatenating_two_letter_words": {
+      "qno": "2131",
+      "title": "Longest Palindrome by Concatenating Two Letter Words",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Greedy",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.1
+    },
+    "find_all_lonely_numbers_in_the_array": {
+      "qno": "2150",
+      "title": "Find All Lonely Numbers in the Array",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.8
+    },
+    "minimum_operations_to_make_the_array_alternating": {
+      "qno": "2170",
+      "title": "Minimum Operations to Make the Array Alternating",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Greedy",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 33.3
+    },
+    "minimum_number_of_steps_to_make_two_strings_anagram_ii": {
+      "qno": "2186",
+      "title": "Minimum Number of Steps to Make Two Strings Anagram II",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 72.6
+    },
+    "most_frequent_number_following_key_in_an_array": {
+      "qno": "2190",
+      "title": "Most Frequent Number Following Key In an Array",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 59
+    },
+    "intersection_of_multiple_arrays": {
+      "qno": "2248",
+      "title": "Intersection of Multiple Arrays",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 68.2
+    },
+    "minimum_rounds_to_complete_all_tasks": {
+      "qno": "2244",
+      "title": "Minimum Rounds to Complete All Tasks",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Greedy",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.9
+    },
+    "rearrange_characters_to_make_target_string": {
+      "qno": "2287",
+      "title": "Rearrange Characters to Make Target String",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 59.2
+    },
+    "check_if_number_has_equal_digit_count_and_digit_value": {
+      "qno": "2283",
+      "title": "Check if Number Has Equal Digit Count and Digit Value",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 72.3
+    },
+    "sender_with_largest_word_count": {
+      "qno": "2284",
+      "title": "Sender With Largest Word Count",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.9
+    },
+    "minimum_number_of_keypresses": {
+      "qno": "2268",
+      "title": "Minimum Number of Keypresses",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Greedy",
+        "Sorting",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.3
+    },
+    "maximum_number_of_pairs_in_array": {
+      "qno": "2341",
+      "title": "Maximum Number of Pairs in Array",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 75.2
+    },
+    "best_poker_hand": {
+      "qno": "2347",
+      "title": "Best Poker Hand",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 60.6
+    },
+    "largest_palindromic_number": {
+      "qno": "2384",
+      "title": "Largest Palindromic Number",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Greedy",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 35.3
+    },
+    "most_frequent_even_element": {
+      "qno": "2404",
+      "title": "Most Frequent Even Element",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 50.6
+    },
+    "remove_letter_to_equalize_frequency": {
+      "qno": "2423",
+      "title": "Remove Letter To Equalize Frequency",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 17.4
+    },
+    "destroy_sequential_targets": {
+      "qno": "2453",
+      "title": "Destroy Sequential Targets",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 39.3
+    },
+    "minimum_total_cost_to_make_arrays_unequal": {
+      "qno": "2499",
+      "title": "Minimum Total Cost to Make Arrays Unequal",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Greedy",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 43.1
+    },
+    "make_number_of_distinct_characters_equal": {
+      "qno": "2531",
+      "title": "Make Number of Distinct Characters Equal",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 26.4
+    },
+    "furthest_point_from_origin": {
+      "qno": "2833",
+      "title": "Furthest Point From Origin",
+      "tags": [
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 64.7
+    },
+    "minimum_number_of_operations_to_make_array_empty": {
+      "qno": "2870",
+      "title": "Minimum Number of Operations to Make Array Empty",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Greedy",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62
+    },
+    "count_elements_with_maximum_frequency": {
+      "qno": "3005",
+      "title": "Count Elements With Maximum Frequency",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 78.9
+    },
+    "minimum_number_of_pushes_to_type_word_ii": {
+      "qno": "3016",
+      "title": "Minimum Number of Pushes to Type Word II",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Greedy",
+        "Sorting",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 70.9
+    },
+    "apply_operations_to_make_string_empty": {
+      "qno": "3039",
+      "title": "Apply Operations to Make String Empty",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 56.7
+    },
+    "maximum_palindromes_after_operations": {
+      "qno": "3035",
+      "title": "Maximum Palindromes After Operations",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Greedy",
+        "Sorting",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 42.5
+    },
+    "split_the_array": {
+      "qno": "3046",
+      "title": "Split the Array",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 58.4
+    },
+    "count_substrings_starting_and_ending_with_given_character": {
+      "qno": "3084",
+      "title": "Count Substrings Starting and Ending with Given Character",
+      "tags": [
+        "Math",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 48.7
+    },
+    "minimum_deletions_to_make_string_k-special": {
+      "qno": "3085",
+      "title": "Minimum Deletions to Make String K-Special",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Greedy",
+        "Sorting",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.8
+    },
+    "minimum_number_of_operations_to_make_word_k-periodic": {
+      "qno": "3137",
+      "title": "Minimum Number of Operations to Make Word K-Periodic",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 62.4
+    },
+    "minimum_length_of_anagram_concatenation": {
+      "qno": "3138",
+      "title": "Minimum Length of Anagram Concatenation",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 42.1
+    },
+    "sum_of_digit_differences_of_all_pairs": {
+      "qno": "3153",
+      "title": "Sum of Digit Differences of All Pairs",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Math",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 43.9
+    },
+    "count_pairs_that_form_a_complete_day_ii": {
+      "qno": "3185",
+      "title": "Count Pairs That Form a Complete Day II",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 42.7
+    },
+    "count_pairs_that_form_a_complete_day_i": {
+      "qno": "3184",
+      "title": "Count Pairs That Form a Complete Day I",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Easy",
+      "language": "Java",
+      "acceptance": 79.1
+    },
+    "better_compression_of_string": {
+      "qno": "3167",
+      "title": "Better Compression of String",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Sorting",
+        "Counting"
+      ],
+      "default": "Counting",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 79.9
     }
   }
