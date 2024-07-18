@@ -897,7 +897,7 @@
     },
     "229": {
       "java": {
-        "counting": ""
+        "counting": "class Solution {\n  public List<Integer> majorityElement(int[] nums) {\n    List<Integer> ans = new ArrayList<>();\n    int candidate1 = 0;\n    int candidate2 = 1;  \n    int countSoFar1 = 0;\n    int countSoFar2 = 0; \n\n    for (final int num : nums)\n      if (num == candidate1) {\n        ++countSoFar1;\n      } else if (num == candidate2) {\n        ++countSoFar2;\n      } else if (countSoFar1 == 0) { \n        candidate1 = num;\n        ++countSoFar1;\n      } else if (countSoFar2 == 0) {\n        candidate2 = num;\n        ++countSoFar2;\n      } else { \n        --countSoFar1;\n        --countSoFar2;\n      }\n\n    int count1 = 0;\n    int count2 = 0;\n\n    for (final int num : nums)\n      if (num == candidate1)\n        ++count1;\n      else if (num == candidate2)\n        ++count2;\n\n    if (count1 > nums.length / 3)\n      ans.add(candidate1);\n    if (count2 > nums.length / 3)\n      ans.add(candidate2);\n    return ans;\n  }\n}"
       }
     },
     "230": {
