@@ -33542,5 +33542,158 @@
       "difficulty": "Hard",
       "language": "Java",
       "acceptance": 63.7
+    },
+    "word_ladder": {
+      "qno": "127",
+      "title": "Word Ladder",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Breadth-First Search"
+      ],
+      "default": "Breadth-First Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 39.8
+    },
+    "nested_list_weight_sum": {
+      "qno": "339",
+      "title": "Nested List Weight Sum",
+      "tags": [
+        "Depth-First Search",
+        "Breadth-First Search"
+      ],
+      "default": "Breadth-First Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 84
+    },
+    "water_and_jug_problem": {
+      "qno": "365",
+      "title": "Water and Jug Problem",
+      "tags": [
+        "Math",
+        "Depth-First Search",
+        "Breadth-First Search"
+      ],
+      "default": "Breadth-First Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41.1
+    },
+    "minimum_genetic_mutation": {
+      "qno": "433",
+      "title": "Minimum Genetic Mutation",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Breadth-First Search"
+      ],
+      "default": "Breadth-First Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 54.1
+    },
+    "open_the_lock": {
+      "qno": "752",
+      "title": "Open the Lock",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Breadth-First Search"
+      ],
+      "default": "Breadth-First Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 60.3
+    },
+    "bus_routes": {
+      "qno": "815",
+      "title": "Bus Routes",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Breadth-First Search"
+      ],
+      "default": "Breadth-First Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 47.7
+    },
+    "k-similar_strings": {
+      "qno": "854",
+      "title": "K-Similar Strings",
+      "tags": [
+        "String",
+        "Breadth-First Search"
+      ],
+      "default": "Breadth-First Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 40
+    },
+    "escape_a_large_maze": {
+      "qno": "1036",
+      "title": "Escape a Large Maze",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Depth-First Search",
+        "Breadth-First Search"
+      ],
+      "default": "Breadth-First Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 34.7
+    },
+    "minimum_knight_moves": {
+      "qno": "1197",
+      "title": "Minimum Knight Moves",
+      "tags": [
+        "Breadth-First Search"
+      ],
+      "default": "Breadth-First Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 40.6
+    },
+    "jump_game_iii": {
+      "qno": "1306",
+      "title": "Jump Game III",
+      "tags": [
+        "Array",
+        "Depth-First Search",
+        "Breadth-First Search"
+      ],
+      "default": "Breadth-First Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 65
+    },
+    "jump_game_iv": {
+      "qno": "1345",
+      "title": "Jump Game IV",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Breadth-First Search"
+      ],
+      "default": "Breadth-First Search",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 46.2
+    },
+    "minimum_operations_to_convert_number": {
+      "qno": "2059",
+      "title": "Minimum Operations to Convert Number",
+      "tags": [
+        "Array",
+        "Breadth-First Search"
+      ],
+      "default": "Breadth-First Search",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 49.3
     }
 }
