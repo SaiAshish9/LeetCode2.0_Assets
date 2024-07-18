@@ -30317,5 +30317,205 @@
       "difficulty": "Medium",
       "language": "Java",
       "acceptance": 58.2
+    },
+    "encode_and_decode_strings": {
+      "qno": "271",
+      "title": "Encode and Decode Strings",
+      "tags": [
+        "Array",
+        "String",
+        "Design"
+      ],
+      "default": "Design",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 47.1
+    },
+    "unique_word_abbreviation": {
+      "qno": "288",
+      "title": "Unique Word Abbreviation",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Design"
+      ],
+      "default": "Design",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 26.4
+    },
+    "design_a_leaderboard": {
+      "qno": "1244",
+      "title": "Design A Leaderboard",
+      "tags": [
+        "Hash Table",
+        "Design",
+        "Sorting"
+      ],
+      "default": "Design",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 67.9
+    },
+    "apply_discount_every_n_orders": {
+      "qno": "1357",
+      "title": "Apply Discount Every n Orders",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Design"
+      ],
+      "default": "Design",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 71.1
+    },
+    "design_underground_system": {
+      "qno": "1396",
+      "title": "Design Underground System",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Design"
+      ],
+      "default": "Design",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 74.7
+    },
+    "fancy_sequence": {
+      "qno": "1622",
+      "title": "Fancy Sequence",
+      "tags": [
+        "Math",
+        "Design",
+        "Segment Tree"
+      ],
+      "default": "Design",
+      "difficulty": "Hard",
+      "language": "Java",
+      "acceptance": 17.4
+    },
+    "finding_pairs_with_a_certain_sum": {
+      "qno": "1865",
+      "title": "Finding Pairs With a Certain Sum",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Design"
+      ],
+      "default": "Design",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 51
+    },
+    "simple_bank_system": {
+      "qno": "2043",
+      "title": "Simple Bank System",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Design",
+        "Simulation"
+      ],
+      "default": "Design",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 64
+    },
+    "walking_robot_simulation_ii": {
+      "qno": "2069",
+      "title": "Walking Robot Simulation II",
+      "tags": [
+        "Design",
+        "Simulation"
+      ],
+      "default": "Design",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 26.3
+    },
+    "design_bitset": {
+      "qno": "2166",
+      "title": "Design Bitset",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Design"
+      ],
+      "default": "Design",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 32.5
+    },
+    "design_an_atm_machine": {
+      "qno": "2241",
+      "title": "Design an ATM Machine",
+      "tags": [
+        "Array",
+        "Greedy",
+        "Design"
+      ],
+      "default": "Design",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 41.8
+    },
+    "design_sql": {
+      "qno": "2408",
+      "title": "Design SQL",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Design"
+      ],
+      "default": "Design",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 78.4
+    },
+    "design_memory_allocator": {
+      "qno": "2502",
+      "title": "Design Memory Allocator",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Design",
+        "Simulation"
+      ],
+      "default": "Design",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 53.2
+    },
+    "design_a_todo_list": {
+      "qno": "2590",
+      "title": "Design a Todo List",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Design",
+        "Sorting"
+      ],
+      "default": "Design",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 58.8
+    },
+    "frequency_tracker": {
+      "qno": "2671",
+      "title": "Frequency Tracker",
+      "tags": [
+        "Hash Table",
+        "Design"
+      ],
+      "default": "Design",
+      "difficulty": "Medium",
+      "language": "Java",
+      "acceptance": 29.8
     }
 }
