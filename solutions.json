@@ -521,6 +521,11 @@
         "backtracking": ""
       }
     },
+    "127": {
+      "java": {
+        "breadth-first-search": ""
+      }
+    },
     "128": {
       "java": {
         "union-find": ""
@@ -1451,6 +1456,11 @@
         "dynamic-programming": ""
       }
     },
+    "339": {
+      "java": {
+        "breadth-first-search": ""
+      }
+    },
     "340": {
       "java": {
         "sliding-window": "import java.util.HashMap;\n\npublic class Solution {\n    public int lengthOfLongestSubstringKDistinct(String s, int k) {\n        if (s == null || s.length() == 0 || k == 0) {\n            return 0;\n        }\n        \n        HashMap<Character, Integer> map = new HashMap<>();\n        int left = 0;\n        int maxLength = 0;\n        \n        for (int right = 0; right < s.length(); right++) {\n            char rightChar = s.charAt(right);\n            map.put(rightChar, map.getOrDefault(rightChar, 0) + 1);\n            \n            while (map.size() > k) {\n                char leftChar = s.charAt(left);\n                map.put(leftChar, map.get(leftChar) - 1);\n                if (map.get(leftChar) == 0) {\n                    map.remove(leftChar);\n                }\n                left++;\n            }\n            \n            maxLength = Math.max(maxLength, right - left + 1);\n        }\n        \n        return maxLength;\n    }\n}\n"
@@ -1571,6 +1581,11 @@
     "364": {
       "java": {
         "stack": ""
+      }
+    },
+    "365": {
+      "java": {
+        "breadth-first-search": ""
       }
     },
     "366": {
@@ -1867,6 +1882,11 @@
       "java": {
         "doubly-linked-list": "class AllOne {\n\n    class Node {\n        int freq;\n        Set<String> keys;\n        Node prev;\n        Node next;\n\n        Node(int freq) {\n            this.freq = freq;\n            keys = new HashSet<>();\n        }\n    }\n\n    private Node head;\n    private Node tail;\n    private Map<String, Node> keyToNode;\n\n    public AllOne() {\n        head = new Node(0);\n        tail = new Node(0);\n        head.next = tail;\n        tail.prev = head;\n        keyToNode = new HashMap<>();\n    }\n\n    public void inc(String key) {\n        if (keyToNode.containsKey(key)) {\n            Node node = keyToNode.get(key);\n            moveKeyToNextFreq(node, key);\n        } else {\n            if (head.next.freq != 1) {\n                addNodeAfter(new Node(1), head);\n            }\n            head.next.keys.add(key);\n            keyToNode.put(key, head.next);\n        }\n    }\n\n    public void dec(String key) {\n        if (!keyToNode.containsKey(key)) return;\n        Node node = keyToNode.get(key);\n        if (node.freq == 1) {\n            node.keys.remove(key);\n            keyToNode.remove(key);\n        } else {\n            moveKeyToPrevFreq(node, key);\n        }\n        if (node.keys.isEmpty()) removeNode(node);\n    }\n\n    public String getMaxKey() {\n        return tail.prev == head ? ",
         " : tail.prev.keys.iterator().next();\n    }\n\n    public String getMinKey() {\n        return head.next == tail ? ": " : head.next.keys.iterator().next();\n    }\n\n    private void moveKeyToNextFreq(Node node, String key) {\n        int nextFreq = node.freq + 1;\n        Node nextNode = node.next;\n        if (nextNode.freq != nextFreq) {\n            nextNode = new Node(nextFreq);\n            addNodeAfter(nextNode, node);\n        }\n        node.keys.remove(key);\n        nextNode.keys.add(key);\n        keyToNode.put(key, nextNode);\n        if (node.keys.isEmpty()) removeNode(node);\n    }\n\n    private void moveKeyToPrevFreq(Node node, String key) {\n        int prevFreq = node.freq - 1;\n        Node prevNode = node.prev;\n        if (prevNode.freq != prevFreq) {\n            prevNode = new Node(prevFreq);\n            addNodeAfter(prevNode, node.prev);\n        }\n        node.keys.remove(key);\n        prevNode.keys.add(key);\n        keyToNode.put(key, prevNode);\n        if (node.keys.isEmpty()) removeNode(node);\n    }\n\n    private void addNodeAfter(Node newNode, Node prevNode) {\n        newNode.next = prevNode.next;\n        newNode.prev = prevNode;\n        prevNode.next.prev = newNode;\n        prevNode.next = newNode;\n    }\n\n    private void removeNode(Node node) {\n        node.prev.next = node.next;\n        node.next.prev = node.prev;\n    }\n}\n"
+      }
+    },
+    "433": {
+      "java": {
+        "breadth-first-search": ""
       }
     },
     "435": {
@@ -3171,6 +3191,11 @@
         "bit-manipulation": ""
       }
     },
+    "752": {
+      "java": {
+        "breadth-first-search": ""
+      }
+    },
     "753": {
       "java": {
         "eulerian-circuit": "class Solution {\n\n    public String crackSafe(int n, int k) {\n        if (n == 1) {\n            StringBuilder sb = new StringBuilder();\n            for (int i = 0; i < k; i++) {\n                sb.append(i);\n            }\n            return sb.toString();\n        }\n\n        StringBuilder result = new StringBuilder();\n        Set<String> visited = new HashSet<>();\n        Stack<String> stack = new Stack<>();\n        String start = String.join('', Collections.nCopies(n - 1, '0'));\n        stack.push(start);\n\n        while (!stack.isEmpty()) {\n            String node = stack.peek();\n            boolean hasUnvisitedEdge = false;\n\n            // Try all possible edges from this node by appending each digit from 0 to k-1\n            for (int i = 0; i < k; i++) {\n                String next = node + i;\n                if (!visited.contains(next)) {\n                    visited.add(next);\n                    stack.push(next.substring(1));\n                    hasUnvisitedEdge = true;\n                    break;\n                }\n            }\n\n            // If all edges from this node are visited, backtrack and append the last\n            // character to the result\n            if (!hasUnvisitedEdge) {\n                result.append(stack.pop().charAt(node.length() - 1));\n            }\n        }\n\n        result.append(start.substring(0, start.length() - 1));\n        return result.toString();\n    }\n\n    // public String crackSafe(int n, int k) {\n    // StringBuilder result = new StringBuilder();\n    // Set<String> visited = new HashSet<>();\n    // String start = String.join('', Collections.nCopies(n - 1, '0'));\n    // dfs(start, k, visited, result, n);\n    // result.append(start);\n    // return result.toString();\n    // }\n    // private void dfs(String node, int k, Set<String> visited, StringBuilder\n    // result, int n) {\n    // for (int i = 0; i < k; i++) {\n    // String next = node + i;\n    // if (!visited.contains(next)) {\n    // visited.add(next);\n    // dfs(next.substring(1), k, visited, result, n);\n    // result.append(i);\n    // }\n    // }\n    // }\n\n}"
@@ -3411,6 +3436,11 @@
         "tree": ""
       }
     },
+    "815": {
+      "java": {
+        "breadth-first-search": ""
+      }
+    },
     "816": {
       "java": {
         "backtracking": ""
@@ -3559,6 +3589,11 @@
     "853": {
       "java": {
         "monotonic-stack": ""
+      }
+    },
+    "854": {
+      "java": {
+        "breadth-first-search": ""
       }
     },
     "855": {
@@ -4259,6 +4294,11 @@
         "dynamic-programming": ""
       }
     },
+    "1036": {
+      "java": {
+        "breadth-first-search": ""
+      }
+    },
     "1037": {
       "java": {
         "geometry": ""
@@ -4894,6 +4934,11 @@
         "concurrency": "import java.util.function.IntConsumer;\n\npublic class FizzBuzz {\n    private int n;\n    private int current = 1;\n\n    public FizzBuzz(int n) {\n        this.n = n;\n    }\n\n    public synchronized void fizz(Runnable printFizz) throws InterruptedException {\n        while (current <= n) {\n            while (current <= n && (current % 3 != 0 || current % 5 == 0)) {\n                wait();\n            }\n            if (current <= n) {\n                printFizz.run();\n                current++;\n                notifyAll();\n            }\n        }\n    }\n\n    public synchronized void buzz(Runnable printBuzz) throws InterruptedException {\n        while (current <= n) {\n            while (current <= n && (current % 5 != 0 || current % 3 == 0)) {\n                wait();\n            }\n            if (current <= n) {\n                printBuzz.run();\n                current++;\n                notifyAll();\n            }\n        }\n    }\n\n    public synchronized void fizzbuzz(Runnable printFizzBuzz) throws InterruptedException {\n        while (current <= n) {\n            while (current <= n && (current % 3 != 0 || current % 5 != 0)) {\n                wait();\n            }\n            if (current <= n) {\n                printFizzBuzz.run();\n                current++;\n                notifyAll();\n            }\n        }\n    }\n\n    public synchronized void number(IntConsumer printNumber) throws InterruptedException {\n        while (current <= n) {\n            while (current <= n && (current % 3 == 0 || current % 5 == 0)) {\n                wait();\n            }\n            if (current <= n) {\n                printNumber.accept(current);\n                current++;\n                notifyAll();\n            }\n        }\n    }\n}\n"
       }
     },
+    "1197": {
+      "java": {
+        "breadth-first-search": ""
+      }
+    },
     "1198": {
       "java": {
         "matrix": ""
@@ -5324,6 +5369,11 @@
         "binary-search-tree": ""
       }
     },
+    "1306": {
+      "java": {
+        "breadth-first-search": ""
+      }
+    },
     "1307": {
       "java": {
         "backtracking": ""
@@ -5462,6 +5512,11 @@
     "1343": {
       "java": {
         "sliding-window": "class Solution {\n    public int numOfSubarrays(int[] arr, int k, int threshold) {\n        int count = 0;\n        int windowSum = 0;\n        int n = arr.length;\n        int targetSum = k * threshold;\n\n        for (int i = 0; i < k; i++) {\n            windowSum += arr[i];\n        }\n\n        if (windowSum >= targetSum) {\n            count++;\n        }\n\n        for (int i = k; i < n; i++) {\n            windowSum += arr[i] - arr[i - k];\n            if (windowSum >= targetSum) {\n                count++;\n            }\n        }\n\n        return count;\n    }\n}\n"
+      }
+    },
+    "1345": {
+      "java": {
+        "breadth-first-search": ""
       }
     },
     "1346": {
@@ -8208,6 +8263,11 @@
     "2058": {
       "java": {
         "linked-list": ""
+      }
+    },
+    "2059": {
+      "java": {
+        "breadth-first-search": ""
       }
     },
     "2060": {
