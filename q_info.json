@@ -17168,7 +17168,8 @@
       "tags": [
         "Array",
         "Greedy",
-        "Prefix Sum"
+        "Prefix Sum",
+        "Hash Table"
       ],
       "default": "Prefix Sum",
       "difficulty": "Hard",
