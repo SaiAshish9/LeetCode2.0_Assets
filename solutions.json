@@ -393,7 +393,7 @@
   },
   "79": {
     "java": {
-      "matrix": ""
+      "backtracking": "class Solution {\n    private static final int[][] DIRECTIONS = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};\n\n    public boolean exist(char[][] board, String word) {\n        int rows = board.length;\n        int cols = board[0].length;\n\n        for (int row = 0; row < rows; row++) {\n            for (int col = 0; col < cols; col++) {\n                if (dfs(board, word, row, col, 0)) {\n                    return true;\n                }\n            }\n        }\n\n        return false;\n    }\n\n    private boolean dfs(char[][] board, String word, int row, int col, int index) {\n        if (index == word.length()) {\n            return true;\n        }\n        if (row < 0 || row >= board.length || col < 0 || col >= board[0].length ||\n                board[row][col] != word.charAt(index)) {\n            return false;\n        }\n        char temp = board[row][col];\n        board[row][col] = '#';\n        for (int[] direction : DIRECTIONS) {\n            int newRow = row + direction[0];\n            int newCol = col + direction[1];\n            if (dfs(board, word, newRow, newCol, index + 1)) {\n                return true;\n            }\n        }\n        board[row][col] = temp;\n        return false;\n    }\n}"
     }
   },
   "80": {
