@@ -13273,7 +13273,7 @@
   },
   "2679": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n    public int matrixSum(int[][] nums) {\n        int ans = 0;\n\n        for (int[] row : nums)\n            Arrays.sort(row);\n\n        for (int j = 0; j < nums[0].length; ++j) {\n            int max = 0;\n            for (int i = 0; i < nums.length; ++i)\n                max = Math.max(max, nums[i][j]);\n            ans += max;\n        }\n\n        return ans;\n    }\n}"
     }
   },
   "2680": {
