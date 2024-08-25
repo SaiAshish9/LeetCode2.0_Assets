@@ -193,7 +193,7 @@
   },
   "39": {
     "java": {
-      "backtracking": ""
+      "backtracking": "import java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.List;\n\nclass Solution {\n\n    public List<List<Integer>> combinationSum(int[] candidates, int target) {\n        List<List<Integer>> res = new ArrayList<>();\n        Arrays.sort(candidates);\n        dfs(0, candidates, target, res, new ArrayList<>());\n        return res;\n    }\n\n    private void dfs(int s, int[] candidates, int target, List<List<Integer>> res, List<Integer> curr) {\n        if (target < 0)\n            return;\n        if (target == 0) {\n            res.add(new ArrayList<>(curr));\n            return;\n        }\n        for (int i = s; i < candidates.length; ++i) {\n            curr.add(candidates[i]);\n            dfs(i, candidates, target - candidates[i], res, curr);\n            curr.remove(curr.size() - 1);\n        }\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] candidates = { 2, 3, 6, 7 };\n        int target = 7;\n        List<List<Integer>> combinations = solution.combinationSum(candidates, target);\n        System.out.println(combinations); // Output: [[2, 2, 3], [7]]\n    }\n}\n"
     }
   },
   "40": {
