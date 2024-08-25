@@ -2479,7 +2479,8 @@
   },
   "494": {
     "java": {
-      "dynamic-programming": ""
+      "dynamic-programming": "",
+      "backtracking":"import java.util.HashMap;\nimport java.util.Map;\n\nclass Solution {\n    public int findTargetSumWays(int[] nums, int target) {\n        return dfs(nums, 0, 0, target, new HashMap<>());\n    }\n\n    private int dfs(int[] nums, int index, int currentSum, int target, Map<String, Integer> memo) {\n        if (index == nums.length) {\n            return currentSum == target ? 1 : 0;\n        }        \n        String key = index + \",\" + currentSum;\n        if (memo.containsKey(key)) {\n            return memo.get(key);\n        }        \n        int add = dfs(nums, index + 1, currentSum + nums[index], target, memo);\n        int subtract = dfs(nums, index + 1, currentSum - nums[index], target, memo);        \n        memo.put(key, add + subtract);\n        return add + subtract;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums = {1, 1, 1, 1, 1};\n        int target = 3;\n        System.out.println(solution.findTargetSumWays(nums, target));  // Output: 5\n    }\n}\n"
     }
   },
   "495": {
