@@ -368,7 +368,7 @@
   },
   "74": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {\n            return false;\n        }\n\n        int m = matrix.length;\n        int n = matrix[0].length;\n\n        int left = 0;\n        int right = m * n - 1;\n\n        while (left <= right) {\n            int mid = left + (right - left) / 2;\n            int midValue = matrix[mid / n][mid % n];\n\n            if (midValue == target) {\n                return true;\n            } else if (midValue < target) {\n                left = mid + 1;\n            } else {\n                right = mid - 1;\n            }\n        }\n\n        return false;\n    }\n}"
     }
   },
   "75": {
