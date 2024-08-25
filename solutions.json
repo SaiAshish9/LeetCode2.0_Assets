@@ -1001,7 +1001,8 @@
   },
   "200": {
     "java": {
-      "union-find": ""
+      "union-find": "",
+      "matrix":"class Solution {\n    public int numIslands(char[][] grid) {\n        if (grid == null || grid.length == 0) {\n            return 0;\n        }\n\n        int m = grid.length;\n        int n = grid[0].length;\n        int numIslands = 0;\n\n        for (int i = 0; i < m; i++) {\n            for (int j = 0; j < n; j++) {\n                if (grid[i][j] == '1') {\n                    numIslands++;\n                    dfs(grid, i, j);\n                }\n            }\n        }\n\n        return numIslands;\n    }\n\n    private void dfs(char[][] grid, int i, int j) {\n        int m = grid.length;\n        int n = grid[0].length;\n\n        if (i < 0 || i >= m || j < 0 || j >= n || grid[i][j] != '1') {\n            return;\n        }\n        grid[i][j] = '0';\n        dfs(grid, i + 1, j); \n        dfs(grid, i - 1, j);\n        dfs(grid, i, j + 1); \n        dfs(grid, i, j - 1);\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        char[][] grid = {\n            {'1', '1', '1', '1', '0'},\n            {'1', '1', '0', '1', '0'},\n            {'1', '1', '0', '0', '0'},\n            {'0', '0', '0', '0', '0'}\n        };\n\n        int result = solution.numIslands(grid);\n        System.out.println(\"Number of Islands: \" + result); // Output: 1\n    }\n}\n"
     }
   },
   "201": {
