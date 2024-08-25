@@ -1650,7 +1650,7 @@
   },
   "329": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n    private int[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};\n    private int[][] memo;\n    private int m, n;\n\n    public int longestIncreasingPath(int[][] matrix) {\n        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {\n            return 0;\n        }\n\n        m = matrix.length;\n        n = matrix[0].length;\n        memo = new int[m][n];\n        int maxPath = 0;\n\n        for (int i = 0; i < m; i++) {\n            for (int j = 0; j < n; j++) {\n                maxPath = Math.max(maxPath, dfs(matrix, i, j));\n            }\n        }\n\n        return maxPath;\n    }\n\n    private int dfs(int[][] matrix, int i, int j) {\n        if (memo[i][j] != 0) {\n            return memo[i][j];\n        }\n\n        int maxLength = 1; \n        for (int[] direction : directions) {\n            int x = i + direction[0];\n            int y = j + direction[1];\n\n            if (x >= 0 && x < m && y >= 0 && y < n && matrix[x][y] > matrix[i][j]) {\n                maxLength = Math.max(maxLength, 1 + dfs(matrix, x, y));\n            }\n        }\n\n        memo[i][j] = maxLength;\n        return maxLength;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[][] matrix = {\n            {9, 9, 4},\n            {6, 6, 8},\n            {2, 1, 1}\n        };\n\n        int result = solution.longestIncreasingPath(matrix);\n        System.out.println(\"Longest Increasing Path: \" + result); // Output: 4\n    }\n}\n"
     }
   },
   "330": {
