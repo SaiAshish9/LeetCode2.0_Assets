@@ -81,7 +81,7 @@
   },
   "17": {
     "java": {
-      "backtracking": ""
+      "backtracking": "import java.util.ArrayList;\nimport java.util.List;\n\nclass Solution {\n    private static final String[] KEYPAD = {\n        \"\",     // 0\n        \"\",     // 1\n        \"abc\",  // 2\n        \"def\",  // 3\n        \"ghi\",  // 4\n        \"jkl\",  // 5\n        \"mno\",  // 6\n        \"pqrs\", // 7\n        \"tuv\",  // 8\n        \"wxyz\"  // 9\n    };\n\n    public List<String> letterCombinations(String digits) {\n        List<String> result = new ArrayList<>();\n        if (digits == null || digits.length() == 0) {\n            return result;\n        }\n        dfs(result, new StringBuilder(), digits, 0);\n        return result;\n    }\n\n    private void dfs(List<String> result, StringBuilder current, String digits, int index) {\n        if (index == digits.length()) {\n            result.add(current.toString());\n            return;\n        }\n\n        String letters = KEYPAD[digits.charAt(index) - '0'];\n        for (char letter : letters.toCharArray()) {\n            current.append(letter);\n            dfs(result, current, digits, index + 1);\n            current.deleteCharAt(current.length() - 1); // Backtrack\n        }\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        String digits = \"23\";\n        List<String> combinations = solution.letterCombinations(digits);\n        System.out.println(combinations); // Output: [ad, ae, af, bd, be, bf, cd, ce, cf]\n    }\n}\n"
     }
   },
   "18": {
