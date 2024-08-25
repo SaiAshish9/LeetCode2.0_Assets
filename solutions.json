@@ -700,7 +700,8 @@
   },
   "140": {
     "java": {
-      "dynamic-programming": ""
+      "dynamic-programming": "",
+      "backtracking": "import java.util.ArrayList;\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\n\nclass Solution {\n\n    public List<String> wordBreak(String s, List<String> wordDict) {\n        return dfs(s, wordDict, new HashMap<>());\n    }\n\n    private List<String> dfs(String s, List<String> wordDict, Map<String, List<String>> memo) {\n        if (memo.containsKey(s)) {\n            return memo.get(s);\n        }\n        if (s.length() == 0) {\n            List<String> baseResult = new ArrayList<>();\n            baseResult.add(\"\");\n            return baseResult;\n        }\n\n        List<String> res = new ArrayList<>();\n        for (String word : wordDict) {\n            if (s.startsWith(word)) {\n                List<String> sublist = dfs(s.substring(word.length()), wordDict, memo);\n                for (String sub : sublist) {\n                    res.add(word + (sub.isEmpty() ? \"\" : \" \") + sub);\n                }\n            }\n        }\n        memo.put(s, res);\n        return res;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        String s = \"catsanddog\";\n        List<String> wordDict = new ArrayList<>();\n        wordDict.add(\"cat\");\n        wordDict.add(\"cats\");\n        wordDict.add(\"and\");\n        wordDict.add(\"sand\");\n        wordDict.add(\"dog\");\n\n        List<String> result = solution.wordBreak(s, wordDict);\n        for (String sentence : result) {\n            System.out.println(sentence);\n        }\n    }\n}\n"
     }
   },
   "141": {
