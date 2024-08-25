@@ -106,7 +106,8 @@
   },
   "22": {
     "java": {
-      "dynamic-programming": ""
+      "dynamic-programming": "",
+      "backtracking":"import java.util.ArrayList;\nimport java.util.List;\n\nclass Solution {\n    public List<String> generateParenthesis(int n) {\n        List<String> result = new ArrayList<>();\n        dfs(\"\", n, n, result);\n        return result;\n    }\n\n    private void dfs(String prefix, int l, int r, List<String> result) {\n        if (l == 0 && r == 0) {\n            result.add(prefix);\n            return;\n        }\n        if (l > 0) {\n            dfs(prefix + \"(\", l - 1, r, result);\n        }\n        if (l < r) {\n            dfs(prefix + \")\", l, r - 1, result);\n        }\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        List<String> combinations = solution.generateParenthesis(3);\n        System.out.println(combinations); // Output: [((())),(()()),(())(),()(()),()()()]\n    }\n}\n"
     }
   },
   "23": {
