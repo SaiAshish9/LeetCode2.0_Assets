@@ -233,7 +233,7 @@
   },
   "47": {
     "java": {
-      "backtracking": ""
+      "backtracking": "import java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.List;\n\nclass Solution {\n\n    public List<List<Integer>> permuteUnique(int[] nums) {\n        List<List<Integer>> res = new ArrayList<>();\n        boolean[] visited = new boolean[nums.length];\n        if (nums == null || nums.length == 0) {\n            return res;\n        }\n        Arrays.sort(nums); // Sort the array to handle duplicates\n        dfs(nums, res, new ArrayList<>(), visited);\n        return res;\n    }\n\n    private void dfs(int[] nums, List<List<Integer>> res, List<Integer> curr, boolean[] visited) {\n        if (curr.size() == nums.length) {\n            res.add(new ArrayList<>(curr));\n            return;\n        }\n        for (int i = 0; i < nums.length; i++) {\n            if (visited[i]) {\n                continue;\n            }\n            if (i == 0 || nums[i] != nums[i - 1] || (nums[i] == nums[i - 1] && visited[i - 1])) {\n                visited[i] = true;\n                curr.add(nums[i]);\n                dfs(nums, res, curr, visited);\n                curr.remove(curr.size() - 1); // Backtrack\n                visited[i] = false;\n            }\n        }\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums = {1, 1, 2};\n        List<List<Integer>> permutations = solution.permuteUnique(nums);\n        System.out.println(permutations); // Output: [[1, 1, 2], [1, 2, 1], [2, 1, 1]]\n    }\n}\n"
     }
   },
   "48": {
