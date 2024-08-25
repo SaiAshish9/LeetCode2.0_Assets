@@ -198,7 +198,7 @@
   },
   "40": {
     "java": {
-      "backtracking": ""
+      "backtracking": "import java.util.*;\n\nclass Solution {\n    public List<List<Integer>> combinationSum2(int[] candidates, int target) {\n        List<List<Integer>> result = new ArrayList<List<Integer>>();\n        if (candidates == null || candidates.length == 0)\n            return result;\n        ArrayList<Integer> current = new ArrayList<Integer>();\n        Arrays.sort(candidates);\n        combinationSum(candidates, target, 0, current, result);\n        return result;\n    }\n\n    public void combinationSum(int[] candidates, int target, int j, ArrayList<Integer> curr,\n            List<List<Integer>> result) {\n        if (target == 0) {\n            ArrayList<Integer> temp = new ArrayList<Integer>(curr);\n            result.add(temp);\n            return;\n        }\n        for (int i = j; i < candidates.length; i++) {\n            if (target < candidates[i]) {\n                return;\n            }\n            if (i == j || candidates[i] != candidates[i - 1]) {\n                curr.add(candidates[i]);\n                combinationSum(candidates, target - candidates[i], i + 1, curr, result);\n                curr.remove(curr.size() - 1);\n            }\n        }\n    }\n}"
     }
   },
   "41": {
