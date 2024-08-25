@@ -3486,7 +3486,7 @@
   "695": {
     "java": {
       "union-find": "",
-      "matrix":"class Solution {\n    private final int[][] DIRECTIONS = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};\n\n    public int maxAreaOfIsland(int[][] grid) {\n        if (grid == null || grid.length == 0 || grid[0].length == 0) {\n            return 0;\n        }\n\n        int m = grid.length;\n        int n = grid[0].length;\n        int maxArea = 0;\n\n        for (int i = 0; i < m; i++) {\n            for (int j = 0; j < n; j++) {\n                if (grid[i][j] == 1) {\n                    int area = dfs(grid, i, j);\n                    maxArea = Math.max(maxArea, area);\n                }\n            }\n        }\n\n        return maxArea;\n    }\n\n    private int dfs(int[][] grid, int i, int j) {\n        if (i < 0 || i >= grid.length || j < 0 || j >= grid[0].length || grid[i][j] == 0) {\n            return 0;\n        }\n\n        grid[i][j] = 0;\n        int area = 1;\n\n        for (int[] direction : DIRECTIONS) {\n            int newI = i + direction[0];\n            int newJ = j + direction[1];\n            area += dfs(grid, newI, newJ);\n        }\n\n        return area;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[][] grid = {\n            {0, 1, 0, 0},\n            {1, 1, 1, 0},\n            {0, 1, 0, 0},\n            {0, 0, 1, 1}\n        };\n\n        int result = solution.maxAreaOfIsland(grid);\n        System.out.println(\"Max Area of Island: \" + result); // Output: 6\n    }\n}\n"
+      "matrix": "class Solution {\n    private final int[][] DIRECTIONS = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};\n\n    public int maxAreaOfIsland(int[][] grid) {\n        if (grid == null || grid.length == 0 || grid[0].length == 0) {\n            return 0;\n        }\n\n        int m = grid.length;\n        int n = grid[0].length;\n        int maxArea = 0;\n\n        for (int i = 0; i < m; i++) {\n            for (int j = 0; j < n; j++) {\n                if (grid[i][j] == 1) {\n                    int area = dfs(grid, i, j);\n                    maxArea = Math.max(maxArea, area);\n                }\n            }\n        }\n\n        return maxArea;\n    }\n\n    private int dfs(int[][] grid, int i, int j) {\n        if (i < 0 || i >= grid.length || j < 0 || j >= grid[0].length || grid[i][j] == 0) {\n            return 0;\n        }\n\n        grid[i][j] = 0;\n        int area = 1;\n\n        for (int[] direction : DIRECTIONS) {\n            int newI = i + direction[0];\n            int newJ = j + direction[1];\n            area += dfs(grid, newI, newJ);\n        }\n\n        return area;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[][] grid = {\n            {0, 1, 0, 0},\n            {1, 1, 1, 0},\n            {0, 1, 0, 0},\n            {0, 0, 1, 1}\n        };\n\n        int result = solution.maxAreaOfIsland(grid);\n        System.out.println(\"Max Area of Island: \" + result); // Output: 6\n    }\n}\n"
     }
   },
   "696": {
@@ -4346,7 +4346,7 @@
   },
   "867": {
     "java": {
-      "matrix": "class Solution {\n    public int[][] transpose(int[][] matrix) {\n        int m = matrix.length;\n        int n = matrix[0].length;\n        int[][] result = new int[n][m];\n\n        for (int i = 0; i < m; i++) {\n            for (int j = 0; j < n; j++) {\n                result[j][i] = matrix[i][j];\n            }\n        }\n\n        return result;\n    }\n}"
+      "matrix": ""
     }
   },
   "868": {
@@ -5712,7 +5712,7 @@
   },
   "1139": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n    public int largest1BorderedSquare(int[][] grid) {\n        int m = grid.length, n = grid[0].length;\n        int[][] down = new int[m][n];\n        int[][] right = new int[m][n];\n        for (int i = m - 1; i >= 0; --i) {\n            for (int j = n - 1; j >= 0; --j) {\n                if (grid[i][j] == 1) {\n                    down[i][j] = i + 1 < m ? down[i + 1][j] + 1 : 1;\n                    right[i][j] = j + 1 < n ? right[i][j + 1] + 1 : 1;\n                }\n            }\n        }\n        for (int k = Math.min(m, n); k > 0; --k) {\n            for (int i = 0; i <= m - k; ++i) {\n                for (int j = 0; j <= n - k; ++j) {\n                    if (down[i][j] >= k && right[i][j] >= k && right[i + k - 1][j] >= k\n                        && down[i][j + k - 1] >= k) {\n                        return k * k;\n                    }\n                }\n            }\n        }\n        return 0;\n    }\n}"
     }
   },
   "1140": {
@@ -6289,7 +6289,8 @@
   },
   "1254": {
     "java": {
-      "union-find": ""
+      "union-find": "",
+      "matrix": "class Solution {\n    public int closedIsland(int[][] grid) {\n        int m = grid.length;\n        int n = grid[0].length;\n        int closedIslands = 0;\n\n        // Mark all `0`s connected to the boundary as `1`s\n        for (int i = 0; i < m; i++) {\n            if (grid[i][0] == 0) dfs(grid, i, 0);\n            if (grid[i][n - 1] == 0) dfs(grid, i, n - 1);\n        }\n        for (int j = 0; j < n; j++) {\n            if (grid[0][j] == 0) dfs(grid, 0, j);\n            if (grid[m - 1][j] == 0) dfs(grid, m - 1, j);\n        }\n\n        for (int i = 0; i < m; i++) {\n            for (int j = 0; j < n; j++) {\n                if (grid[i][j] == 0) {\n                    dfs(grid, i, j);\n                    closedIslands++;\n                }\n            }\n        }\n\n        return closedIslands;\n    }\n\n    private void dfs(int[][] grid, int i, int j) {\n        if (i < 0 || i >= grid.length || j < 0 || j >= grid[0].length || grid[i][j] == 1) {\n            return;\n        }\n\n        grid[i][j] = 1; \n        dfs(grid, i + 1, j);\n        dfs(grid, i - 1, j);\n        dfs(grid, i, j + 1);\n        dfs(grid, i, j - 1);\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[][] grid = {\n            {1, 1, 1, 1, 0, 1},\n            {1, 0, 1, 0, 1, 1},\n            {1, 0, 1, 0, 0, 1},\n            {1, 1, 1, 1, 1, 1}\n        };\n\n        int result = solution.closedIsland(grid);\n        System.out.println(\"Number of Closed Islands: \" + result); // Output: 1\n    }\n}\n"
     }
   },
   "1255": {
@@ -7159,7 +7160,7 @@
   },
   "1428": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n  public int leftMostColumnWithOne(BinaryMatrix binaryMatrix) {\n    List<Integer> dimensions = binaryMatrix.dimensions();\n    int m = dimensions.get(0);\n    int n = dimensions.get(1);\n    int ans = -1;\n    int l = 0;\n    int r = n - 1;\n\n    while (l <= r) {\n      int mid = (l + r) / 2;\n      if (existOne(binaryMatrix, m, mid)) {\n        ans = mid;\n        r = mid - 1;\n      } else {\n        l = mid + 1;\n      }\n    }\n\n    return ans;\n  }\n\n  private boolean existOne(BinaryMatrix binaryMatrix, int m, int col) {\n    for (int i = 0; i < m; ++i)\n      if (binaryMatrix.get(i, col) == 1)\n        return true;\n    return false;\n  }\n}"
     }
   },
   "1429": {
@@ -9544,7 +9545,8 @@
   },
   "1905": {
     "java": {
-      "union-find": ""
+      "union-find": "",
+      "matrix": "class Solution {\n    public int countSubIslands(int[][] grid1, int[][] grid2) {\n        int m = grid1.length;\n        int n = grid1[0].length;\n        int count = 0;\n\n        for (int i = 0; i < m; i++) {\n            for (int j = 0; j < n; j++) {\n                if (grid2[i][j] == 1) {\n                    if (isSubIsland(grid1, grid2, i, j)) {\n                        count++;\n                    }\n                }\n            }\n        }\n\n        return count;\n    }\n\n    private boolean isSubIsland(int[][] grid1, int[][] grid2, int i, int j) {\n        boolean isSubIsland = true;\n        isSubIsland = dfs(grid1, grid2, i, j, isSubIsland);\n        return isSubIsland;\n    }\n\n    private boolean dfs(int[][] grid1, int[][] grid2, int i, int j, boolean isSubIsland) {\n        if (i < 0 || i >= grid1.length || j < 0 || j >= grid1[0].length || grid2[i][j] == 0) {\n            return isSubIsland;\n        }\n        if (grid1[i][j] != 1) {\n            isSubIsland = false;\n        }\n        grid2[i][j] = 0;\n        isSubIsland = dfs(grid1, grid2, i + 1, j, isSubIsland);\n        isSubIsland = dfs(grid1, grid2, i - 1, j, isSubIsland);\n        isSubIsland = dfs(grid1, grid2, i, j + 1, isSubIsland);\n        isSubIsland = dfs(grid1, grid2, i, j - 1, isSubIsland);\n        return isSubIsland;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[][] grid1 = {\n            {1, 1, 0, 0, 0},\n            {1, 1, 0, 0, 0},\n            {0, 0, 1, 0, 0},\n            {0, 0, 0, 1, 1}\n        };\n        int[][] grid2 = {\n            {1, 1, 0, 0, 0},\n            {0, 1, 0, 0, 0},\n            {0, 0, 1, 0, 0},\n            {0, 0, 0, 1, 0}\n        };\n\n        int result = solution.countSubIslands(grid1, grid2);\n        System.out.println(\"Number of Sub-Islands: \" + result); // Output will depend on grid1 and grid2\n    }\n}\n"
     }
   },
   "1906": {
