@@ -3485,7 +3485,8 @@
   },
   "695": {
     "java": {
-      "union-find": ""
+      "union-find": "",
+      "matrix":"class Solution {\n    private final int[][] DIRECTIONS = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};\n\n    public int maxAreaOfIsland(int[][] grid) {\n        if (grid == null || grid.length == 0 || grid[0].length == 0) {\n            return 0;\n        }\n\n        int m = grid.length;\n        int n = grid[0].length;\n        int maxArea = 0;\n\n        for (int i = 0; i < m; i++) {\n            for (int j = 0; j < n; j++) {\n                if (grid[i][j] == 1) {\n                    int area = dfs(grid, i, j);\n                    maxArea = Math.max(maxArea, area);\n                }\n            }\n        }\n\n        return maxArea;\n    }\n\n    private int dfs(int[][] grid, int i, int j) {\n        if (i < 0 || i >= grid.length || j < 0 || j >= grid[0].length || grid[i][j] == 0) {\n            return 0;\n        }\n\n        grid[i][j] = 0;\n        int area = 1;\n\n        for (int[] direction : DIRECTIONS) {\n            int newI = i + direction[0];\n            int newJ = j + direction[1];\n            area += dfs(grid, newI, newJ);\n        }\n\n        return area;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[][] grid = {\n            {0, 1, 0, 0},\n            {1, 1, 1, 0},\n            {0, 1, 0, 0},\n            {0, 0, 1, 1}\n        };\n\n        int result = solution.maxAreaOfIsland(grid);\n        System.out.println(\"Max Area of Island: \" + result); // Output: 6\n    }\n}\n"
     }
   },
   "696": {
