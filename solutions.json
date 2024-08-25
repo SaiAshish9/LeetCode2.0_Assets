@@ -4346,7 +4346,7 @@
   },
   "867": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n    public int[][] transpose(int[][] matrix) {\n        int m = matrix.length;\n        int n = matrix[0].length;\n        int[][] result = new int[n][m];\n\n        for (int i = 0; i < m; i++) {\n            for (int j = 0; j < n; j++) {\n                result[j][i] = matrix[i][j];\n            }\n        }\n\n        return result;\n    }\n}"
     }
   },
   "868": {
