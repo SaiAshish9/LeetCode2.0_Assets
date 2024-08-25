@@ -228,7 +228,7 @@
   },
   "46": {
     "java": {
-      "backtracking": ""
+      "backtracking": "import java.util.ArrayList;\nimport java.util.List;\n\nclass Solution {\n\n    public List<List<Integer>> permute(int[] nums) {\n        List<List<Integer>> res = new ArrayList<>();\n        boolean[] visited = new boolean[nums.length];\n        dfs(nums, res, new ArrayList<>(), visited);\n        return res;\n    }\n\n    private void dfs(int[] nums, List<List<Integer>> res, List<Integer> curr, boolean[] visited) {\n        if (curr.size() == nums.length) {\n            res.add(new ArrayList<>(curr));\n            return;\n        }\n        for (int i = 0; i < nums.length; i++) {\n            if (!visited[i]) {\n                visited[i] = true;\n                curr.add(nums[i]);\n                dfs(nums, res, curr, visited);\n                curr.remove(curr.size() - 1);\n                visited[i] = false;\n            }\n        }\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums = {1, 2, 3};\n        List<List<Integer>> permutations = solution.permute(nums);\n        System.out.println(permutations); // Output: [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]\n    }\n}\n"
     }
   },
   "47": {
