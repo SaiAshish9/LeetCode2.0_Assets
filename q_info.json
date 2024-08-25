@@ -834,7 +834,7 @@
         "Sorting",
         "Heap (Priority Queue)"
       ],
-      "default": "Binary Search",
+      "default": "Heap (Priority Queue)",
       "difficulty": "Medium",
       "language": "Java",
       "acceptance": 68.1
