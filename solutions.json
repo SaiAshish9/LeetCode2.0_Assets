@@ -1290,7 +1290,8 @@
   },
   "257": {
     "java": {
-      "tree": ""
+      "tree": "",
+      "backtracking":"/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nimport java.util.ArrayList;\nimport java.util.List;\n\nclass Solution {\n    public List<String> binaryTreePaths(TreeNode root) {\n        List<String> result = new ArrayList<>();\n        dfs(root, result, \"\");\n        return result;\n    }\n\n    private void dfs(TreeNode root, List<String> res, String path) {\n        if (root == null) return;\n        if (root.left == null && root.right == null) {\n            res.add(path + root.val);\n            return;\n        }\n        if (root.left != null) {\n            dfs(root.left, res, path + root.val + \"->\");\n        }\n        if (root.right != null) {\n            dfs(root.right, res, path + root.val + \"->\");\n        }\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n\n        TreeNode t = new TreeNode(1);\n        t.left = new TreeNode(2);\n        t.left.right = new TreeNode(5);\n        t.right = new TreeNode(3);\n\n        List<String> paths = solution.binaryTreePaths(t);\n        for (String path : paths) {\n            System.out.println(path);\n        }\n    }\n}\n"
     }
   },
   "258": {
