@@ -442,7 +442,7 @@
         "Heap (Priority Queue)",
         "Matrix"
       ],
-      "default": "Binary Search",
+      "default": "Matrix",
       "difficulty": "Medium",
       "language": "Java",
       "acceptance": 62.6
