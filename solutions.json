@@ -648,7 +648,8 @@
   },
   "130": {
     "java": {
-      "union-find": ""
+      "union-find": "",
+      "matrix": "class Solution {\n    public void solve(char[][] board) {\n        if (board == null || board.length == 0 || board[0].length == 0) {\n            return;\n        }\n\n        int m = board.length;\n        int n = board[0].length;\n\n        for (int i = 0; i < m; i++) {\n            if (board[i][0] == 'O') {\n                dfs(board, i, 0);\n            }\n            if (board[i][n - 1] == 'O') {\n                dfs(board, i, n - 1);\n            }\n        }\n\n        for (int j = 0; j < n; j++) {\n            if (board[0][j] == 'O') {\n                dfs(board, 0, j);\n            }\n            if (board[m - 1][j] == 'O') {\n                dfs(board, m - 1, j);\n            }\n        }\n\n        for (int i = 0; i < m; i++) {\n            for (int j = 0; j < n; j++) {\n                if (board[i][j] == 'O') {\n                    board[i][j] = 'X';\n                } else if (board[i][j] == '*') {\n                    board[i][j] = 'O';\n                }\n            }\n        }\n    }\n\n    private void dfs(char[][] board, int i, int j) {\n        int m = board.length;\n        int n = board[0].length;\n\n        if (i < 0 || i >= m || j < 0 || j >= n || board[i][j] != 'O') {\n            return;\n        }\n        board[i][j] = '*';\n        dfs(board, i, j + 1);\n        dfs(board, i + 1, j);\n        dfs(board, i, j - 1);\n        dfs(board, i - 1, j);\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        char[][] board = {\n            {'X', 'X', 'X', 'X'},\n            {'X', 'O', 'O', 'X'},\n            {'X', 'X', 'O', 'X'},\n            {'X', 'O', 'X', 'X'}\n        };\n\n        solution.solve(board);\n\n        for (char[] row : board) {\n            System.out.println(new String(row));\n        }\n    }\n}\n"
     }
   },
   "131": {
