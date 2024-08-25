@@ -3932,7 +3932,7 @@
   },
   "784": {
     "java": {
-      "backtracking": ""
+      "backtracking": "class Solution {\n    public List<String> letterCasePermutation(String S) {\n        List<String> ans = new ArrayList<>();\n        dfs(new StringBuilder(S), 0, ans);\n        return ans;\n    }\n\n    private void dfs(StringBuilder sb, int i, List<String> ans) {\n        if (i == sb.length()) {\n            ans.add(sb.toString());\n            return;\n        }\n        if (Character.isDigit(sb.charAt(i))) {\n            dfs(sb, i + 1, ans);\n            return;\n        }\n        sb.setCharAt(i, Character.toLowerCase(sb.charAt(i)));\n        dfs(sb, i + 1, ans);\n        sb.setCharAt(i, Character.toUpperCase(sb.charAt(i)));\n        dfs(sb, i + 1, ans);\n    }\n}\n"
     }
   },
   "785": {
