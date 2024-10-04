@@ -3680,7 +3680,7 @@
   },
   "733": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n    // Directions: right, down, left, up\n    private static final int[][] DIRECTIONS = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};\n    \n    public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {\n        int originalColor = image[sr][sc];\n        \n        // If the original color is the same as the new color, no need to proceed\n        if (originalColor != newColor) {\n            dfs(image, sr, sc, newColor, originalColor);\n        }\n        \n        return image;\n    }\n    \n    private void dfs(int[][] image, int i, int j, int newColor, int originalColor) {\n        if (i < 0 || i >= image.length || j < 0 || j >= image[0].length || image[i][j] != originalColor) {\n            return;\n        }\n        \n        image[i][j] = newColor;\n\n        for (int[] direction : DIRECTIONS) {\n            int newRow = i + direction[0];\n            int newCol = j + direction[1];\n            dfs(image, newRow, newCol, newColor, originalColor);\n        }\n    }\n}\n"
     }
   },
   "734": {
