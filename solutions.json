@@ -294,8 +294,7 @@
   },
   "59": {
     "java": {
-      "matrix": "public class Solution {\n\n    private static final int[] dr = {0, 1, 0, -1}; \n    private static final int[] dc = {1, 0, -1, 0}; \n\n    public int[][] generateMatrix(int n) {\n        int[][] matrix = new int[n][n];\n        boolean[][] visited = new boolean[n][n];\n        int row = 0, col = 0, dir = 0;\n        for (int i = 1; i <= n * n; i++) {\n            matrix[row][col] = i;\n            visited[row][col] = true;\n\n            int nextRow = row + dr[dir];\n            int nextCol = col + dc[dir];\n\n            if (nextRow < 0 || nextRow >= n || nextCol < 0 || nextCol >= n || visited[nextRow][nextCol]) {\n                dir = (dir + 1) % 4; // change direction\n                nextRow = row + dr[dir];\n                nextCol = col + dc[dir];\n            }\n\n            row = nextRow;\n            col = nextCol;\n        }\n        return matrix;\n    }\n\n}\n"
-    }
+      "matrix": "public class Solution {\n\n    private static final int[][] DIRECTIONS = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};\n\n    public int[][] generateMatrix(int n) {\n        int[][] matrix = new int[n][n];\n        boolean[][] visited = new boolean[n][n];\n        int row = 0, col = 0, dir = 0;\n        for (int i = 1; i <= n * n; i++) {\n            matrix[row][col] = i;\n            visited[row][col] = true;\n\n            int nextRow = row + DIRECTIONS[dir][0];\n            int nextCol = col + DIRECTIONS[dir][1];\n\n            if (nextRow < 0 || nextRow >= n || nextCol < 0 || nextCol >= n || visited[nextRow][nextCol]) {\n                dir = (dir + 1) % 4; \n                nextRow = row + DIRECTIONS[dir][0];\n                nextCol = col + DIRECTIONS[dir][1];\n            }\n\n            row = nextRow;\n            col = nextCol;\n        }\n        return matrix;\n    }\n\n}\n"    }
   },
   "60": {
     "java": {
