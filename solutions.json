@@ -1207,7 +1207,7 @@
   },
   "240": {
     "java": {
-      "matrix": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {\n            return false;\n        }\n\n        int m = matrix.length;\n        int n = matrix[0].length;\n        int row = 0;\n        int col = n - 1;\n\n        while (row < m && col >= 0) {\n            if (matrix[row][col] == target) {\n                return true;\n            } else if (matrix[row][col] > target) {\n                col--;\n            } else {\n                row++;\n            }\n        }\n\n        return false;\n    }\n}"
+      "matrix": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {\n            return false;\n        }\n        \n        int rows = matrix.length;\n        int cols = matrix[0].length;\n        \n        int row = 0;\n        int col = cols - 1;\n        \n        while (row < rows && col >= 0) {\n            if (matrix[row][col] == target) {\n                return true;\n            } else if (matrix[row][col] > target) {\n                col--;  // Moving left (reduce column)\n            } else {\n                row++;  // Moving down (increase row)\n            }\n        }\n        \n        return false;\n    }\n}\n"
     }
   },
   "241": {
