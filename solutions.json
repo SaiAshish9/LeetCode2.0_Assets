@@ -875,7 +875,7 @@
   },
   "174": {
     "java": {
-      "matrix": ""
+      "matrix": "public class Solution {\n    private static final int[][] DIRECTIONS = {{0, 1}, {1, 0}};\n    \n    public int calculateMinimumHP(int[][] dungeon) {\n        int m = dungeon.length;\n        int n = dungeon[0].length;\n        Integer[][] memo = new Integer[m][n]; // Memoization table to store minimum health needed\n        return dfs(dungeon, 0, 0, m, n, memo);\n    }\n    \n    private int dfs(int[][] dungeon, int i, int j, int m, int n, Integer[][] memo) {\n        // Base case: if at the princess's cell, calculate minimum health to survive\n        if (i == m - 1 && j == n - 1) {\n            return Math.max(1, 1 - dungeon[i][j]);\n        }\n        \n        if (memo[i][j] != null) {\n            return memo[i][j];\n        }\n        \n        int minHealth = Integer.MAX_VALUE;\n        \n        // Explore right and down directions\n        for (int[] dir : DIRECTIONS) {\n            int ni = i + dir[0];\n            int nj = j + dir[1];\n            \n            if (ni < m && nj < n) {\n                minHealth = Math.min(minHealth, dfs(dungeon, ni, nj, m, n, memo));\n            }\n        }\n        \n        int healthRequired = Math.max(1, minHealth - dungeon[i][j]);        \n        memo[i][j] = healthRequired;\n        \n        return healthRequired;\n    }\n}\n"
     }
   },
   "175": {
