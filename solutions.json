@@ -2843,7 +2843,7 @@
   },
   "566": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n  public int[][] matrixReshape(int[][] nums, int r, int c) {\n    if (nums.length == 0 || r * c != nums.length * nums[0].length)\n      return nums;\n\n    int[][] ans = new int[r][c];\n    int k = 0;\n\n    for (int[] row : nums)\n      for (int num : row) {\n        ans[k / c][k % c] = num;\n        ++k;\n      }\n\n    return ans;\n  }\n}"
     }
   },
   "567": {
