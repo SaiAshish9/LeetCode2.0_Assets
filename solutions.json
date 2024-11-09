@@ -2724,7 +2724,7 @@
   },
   "542": {
     "java": {
-      "matrix": ""
+      "matrix": "public class Solution {\n    private static final int[][] DIRECTIONS = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};\n    \n    public int[][] updateMatrix(int[][] matrix) {\n        int rows = matrix.length;\n        int cols = matrix[0].length;\n        int[][] distances = new int[rows][cols];\n\n        for (int i = 0; i < rows; i++) {\n            for (int j = 0; j < cols; j++) {\n                if (matrix[i][j] == 1) {\n                    distances[i][j] = Integer.MAX_VALUE;\n                }\n            }\n        }\n\n        for (int i = 0; i < rows; i++) {\n            for (int j = 0; j < cols; j++) {\n                if (matrix[i][j] == 0) {\n                    dfs(matrix, distances, i, j);\n                }\n            }\n        }\n\n        return distances;\n    }\n\n    private void dfs(int[][] matrix, int[][] distances, int row, int col) {\n        for (int[] dir : DIRECTIONS) {\n            int newRow = row + dir[0];\n            int newCol = col + dir[1];\n\n            if (newRow >= 0 && newRow < matrix.length && newCol >= 0 && newCol < matrix[0].length) {\n                if (distances[newRow][newCol] > distances[row][col] + 1) {\n                    distances[newRow][newCol] = distances[row][col] + 1;\n                    dfs(matrix, distances, newRow, newCol);\n                }\n            }\n        }\n    }\n}\n"
     }
   },
   "543": {
