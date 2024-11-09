@@ -2463,7 +2463,7 @@
   },
   "490": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n\n  private static final int[][] dirs = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};\n\n  public boolean hasPath(int[][] maze, int[] start, int[] destination) {\n    boolean[][] seen = new boolean[maze.length][maze[0].length];\n    return dfs(maze, seen, start[0], start[1], destination);\n  }\n\n  private boolean dfs(int[][] maze, boolean[][] seen, int i, int j, int[] destination) {\n    if (i == destination[0] && j == destination[1])\n      return true;\n    if (seen[i][j])\n      return false;\n\n    seen[i][j] = true;\n\n    for (int[] dir : dirs) {\n      int x = i;\n      int y = j;\n      while (isValid(maze, x + dir[0], y + dir[1])) {\n        x += dir[0];\n        y += dir[1];\n      }\n      if (dfs(maze, seen, x, y, destination))\n        return true;\n    }\n\n    return false;\n  }\n\n  private boolean isValid(int[][] maze, int x, int y) {\n    return 0 <= x && x < maze.length && 0 <= y && y < maze[0].length && maze[x][y] == 0;\n  }\n}"
     }
   },
   "491": {
