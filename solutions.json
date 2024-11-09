@@ -1489,7 +1489,7 @@
   },
   "296": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n  public int minTotalDistance(int[][] grid) {\n    int m = grid.length;\n    int n = grid[0].length;\n    List<Integer> rows = new ArrayList<>(); // i indices s.t. grid[i][j] == 1\n    List<Integer> cols = new ArrayList<>(); // j indices s.t. grid[i][j] == 1\n\n    for (int i = 0; i < m; ++i)\n      for (int j = 0; j < n; ++j)\n        if (grid[i][j] == 1)\n          rows.add(i);\n\n    for (int j = 0; j < n; ++j)\n      for (int i = 0; i < m; ++i)\n        if (grid[i][j] == 1)\n          cols.add(j);\n\n    // sum(i - median(rows)) + sum(j - median(cols))\n    return minTotalDistance(rows) + minTotalDistance(cols);\n  }\n\n  private int minTotalDistance(List<Integer> grid) {\n    int sum = 0;\n    int i = 0;\n    int j = grid.size() - 1;\n    while (i < j)\n      sum += grid.get(j--) - grid.get(i++);\n    return sum;\n  }\n}"
     }
   },
   "297": {
