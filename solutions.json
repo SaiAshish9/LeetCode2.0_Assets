@@ -3926,7 +3926,7 @@
   },
   "782": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n  public int movesToChessboard(int[][] board) {\n    final int n = board.length;\n    int rowSum = 0;\n    int colSum = 0;\n    int rowSwaps = 0;\n    int colSwaps = 0;\n\n    for (int i = 0; i < n; ++i)\n      for (int j = 0; j < n; ++j)\n        if ((board[0][0] ^ board[i][0] ^ board[0][j] ^ board[i][j]) == 1)\n          return -1;\n\n    for (int i = 0; i < n; ++i) {\n      rowSum += board[0][i];\n      colSum += board[i][0];\n    }\n\n    if (rowSum != n / 2 && rowSum != (n + 1) / 2)\n      return -1;\n    if (colSum != n / 2 && colSum != (n + 1) / 2)\n      return -1;\n\n    for (int i = 0; i < n; ++i) {\n      if (board[i][0] == (i & 1))\n        ++rowSwaps;\n      if (board[0][i] == (i & 1))\n        ++colSwaps;\n    }\n\n    if (n % 2 == 1) {\n      if (rowSwaps % 2 == 1)\n        rowSwaps = n - rowSwaps;\n      if (colSwaps % 2 == 1)\n        colSwaps = n - colSwaps;\n    } else {\n      rowSwaps = Math.min(rowSwaps, n - rowSwaps);\n      colSwaps = Math.min(colSwaps, n - colSwaps);\n    }\n\n    return (rowSwaps + colSwaps) / 2;\n  }\n}"
     }
   },
   "783": {
