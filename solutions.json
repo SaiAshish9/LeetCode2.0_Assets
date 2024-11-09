@@ -2122,7 +2122,7 @@
   },
   "422": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n    public boolean validWordSquare(List<String> words) {\n        int m = words.size();\n        for (int i = 0; i < m; ++i) {\n            int n = words.get(i).length();\n            for (int j = 0; j < n; ++j) {\n                if (j >= m || i >= words.get(j).length()) {\n                    return false;\n                }\n                if (words.get(i).charAt(j) != words.get(j).charAt(i)) {\n                    return false;\n                }\n            }\n        }\n        return true;\n    }\n}"
     }
   },
   "423": {
