@@ -1564,7 +1564,7 @@
   },
   "311": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n  public int[][] multiply(int[][] mat1, int[][] mat2) {\n    int m = mat1.length;\n    int n = mat2.length;\n    int l = mat2[0].length;\n    int[][] ans = new int[m][l];\n\n    for (int i = 0; i < m; ++i)\n      for (int j = 0; j < l; ++j)\n        for (int k = 0; k < n; ++k)\n          ans[i][j] += mat1[i][k] * mat2[k][j];\n\n    return ans;\n  }\n}"
     }
   },
   "312": {
