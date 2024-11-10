@@ -6488,7 +6488,7 @@
   },
   "1292": {
     "java": {
-      "matrix": ""
+      "matrix": "public class Solution {\n    public int maxSideLength(int[][] grid, int threshold) {\n        int rows = grid.length, cols = grid[0].length;\n        int[][] prefix = new int[rows + 1][cols + 1];\n\n        for (int i = 1; i <= rows; i++) {\n            for (int j = 1; j <= cols; j++) {\n                prefix[i][j] = grid[i - 1][j - 1] \n                    + prefix[i - 1][j] \n                    + prefix[i][j - 1] \n                    - prefix[i - 1][j - 1];\n            }\n        }\n\n        int left = 0, right = Math.min(rows, cols);\n        int maxLen = 0;\n\n        while (left <= right) {\n            int mid = left + (right - left) / 2;\n\n            if (canFindSquareOfSize(prefix, mid, threshold)) {\n                maxLen = mid;  // mid is a valid side length\n                left = mid + 1;  // try to find a larger square\n            } else {\n                right = mid - 1;  // try to find a smaller square\n            }\n        }\n\n        return maxLen;\n    }\n\n    private boolean canFindSquareOfSize(int[][] prefix, int size, int threshold) {\n        for (int i = size; i < prefix.length; i++) {\n            for (int j = size; j < prefix[0].length; j++) {\n                int sum = prefix[i][j] \n                        - prefix[i - size][j] \n                        - prefix[i][j - size] \n                        + prefix[i - size][j - size];\n                if (sum <= threshold) {\n                    return true;\n                }\n            }\n        }\n        return false;\n    }\n}\n"
     }
   },
   "1293": {
