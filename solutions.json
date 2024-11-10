@@ -4218,7 +4218,7 @@
   },
   "840": {
     "java": {
-      "matrix": ""
+      "matrix": "public class Solution {\n    public int numMagicSquaresInside(int[][] grid) {\n        int count = 0;\n        \n        for (int r = 0; r < grid.length - 2; r++) {\n            for (int c = 0; c < grid[0].length - 2; c++) {\n                if (isMagicSquare(grid, r, c)) {\n                    count++;\n                }\n            }\n        }\n        \n        return count;\n    }\n\n    private boolean isMagicSquare(int[][] grid, int r, int c) {\n        if (grid[r + 1][c + 1] != 5) return false;\n\n        boolean[] seen = new boolean[10];\n        for (int i = 0; i < 3; i++) {\n            for (int j = 0; j < 3; j++) {\n                int num = grid[r + i][c + j];\n                if (num < 1 || num > 9 || seen[num]) return false;\n                seen[num] = true;\n            }\n        }\n\n        return (grid[r][c] + grid[r][c + 1] + grid[r][c + 2] == 15) &&  // Row 1\n               (grid[r + 1][c] + grid[r + 1][c + 1] + grid[r + 1][c + 2] == 15) &&  // Row 2\n               (grid[r + 2][c] + grid[r + 2][c + 1] + grid[r + 2][c + 2] == 15) &&  // Row 3\n               (grid[r][c] + grid[r + 1][c] + grid[r + 2][c] == 15) &&  // Column 1\n               (grid[r][c + 1] + grid[r + 1][c + 1] + grid[r + 2][c + 1] == 15) &&  // Column 2\n               (grid[r][c + 2] + grid[r + 1][c + 2] + grid[r + 2][c + 2] == 15) &&  // Column 3\n               (grid[r][c] + grid[r + 1][c + 1] + grid[r + 2][c + 2] == 15) &&  // Diagonal 1\n               (grid[r][c + 2] + grid[r + 1][c + 1] + grid[r + 2][c] == 15);    // Diagonal 2\n    }\n}\n"
     }
   },
   "841": {
