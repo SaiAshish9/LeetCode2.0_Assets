@@ -4193,7 +4193,7 @@
   },
   "835": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n  public int largestOverlap(int[][] A, int[][] B) {\n    int n = A.length;\n    int magic = 100;\n    int ans = 0;\n    List<int[]> onesA = new ArrayList<>();\n    List<int[]> onesB = new ArrayList<>();\n    Map<Integer, Integer> map = new HashMap<>();\n\n    for (int i = 0; i < n; ++i)\n      for (int j = 0; j < n; ++j) {\n        if (A[i][j] == 1)\n          onesA.add(new int[] {i, j});\n        if (B[i][j] == 1)\n          onesB.add(new int[] {i, j});\n      }\n\n    for (int[] a : onesA)\n      for (int[] b : onesB) {\n        final int key = (a[0] - b[0]) * magic + a[1] - b[1];\n        map.put(key, map.getOrDefault(key, 0) + 1);\n      }\n\n    for (final int value : map.values())\n      ans = Math.max(ans, value);\n\n    return ans;\n  }\n}\n"
     }
   },
   "836": {
