@@ -3986,7 +3986,7 @@
   },
   "794": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n  public boolean validTicTacToe(String[] board) {\n    final int countX = sum(board, 'X');\n    final int countO = sum(board, 'O');\n\n    if (countX < countO || countX - countO > 1)\n      return false;\n    if (isWinned(board, 'X') && countX == countO ||\n        isWinned(board, 'O') && countX != countO)\n      return false;\n\n    return true;\n  }\n\n  private int sum(final String[] board, char c) {\n    int ans = 0;\n\n    for (String row : board)\n      ans += row.chars().filter(i -> i == c).count();\n\n    return ans;\n  }\n\n  private boolean isWinned(final String[] board, char c) {\n    String[] rotated = rotate(board);\n\n    return Arrays.stream(board).anyMatch(row -> row.chars().filter(i -> i == c).count() == 3)\n        || Arrays.stream(rotated).anyMatch(row -> row.chars().filter(i -> i == c).count() == 3)\n        || board[0].charAt(0) == c && board[1].charAt(1) == c && board[2].charAt(2) == c\n        || board[0].charAt(2) == c && board[1].charAt(1) == c && board[2].charAt(0) == c;\n  }\n\n  private String[] rotate(final String[] board) {\n    String[] rotated = new String[3];\n\n    for (final String row : board)\n      for (int i = 0; i < 3; ++i)\n        rotated[i] += row.charAt(i);\n\n    return rotated;\n  }\n}"
     }
   },
   "795": {
