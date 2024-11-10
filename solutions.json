@@ -4921,7 +4921,7 @@
   },
   "980": {
     "java": {
-      "matrix": ""
+      "matrix": "public class Solution {\n    private static final int[][] DIRECTIONS = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};\n    private int emptyCells = 0;\n    private int uniquePaths = 0;\n\n    public int uniquePathsIII(int[][] grid) {\n        int startRow = 0, startCol = 0;\n        \n        for (int r = 0; r < grid.length; r++) {\n            for (int c = 0; c < grid[0].length; c++) {\n                if (grid[r][c] == 1) {  \n                    startRow = r;\n                    startCol = c;\n                }\n                if (grid[r][c] != -1) {  \n                    emptyCells++;\n                }\n            }\n        }\n        \n        dfs(grid, startRow, startCol, 1);  \n        return uniquePaths;\n    }\n\n    private void dfs(int[][] grid, int row, int col, int visitedCells) {\n        if (row < 0 || row >= grid.length || col < 0 || col >= grid[0].length || grid[row][col] == -1) {\n            return;\n        }\n        \n        if (grid[row][col] == 2) {\n            if (visitedCells == emptyCells) {\n                uniquePaths++;\n            }\n            return;\n        }\n        \n        int temp = grid[row][col];\n        grid[row][col] = -1;  \n\n        for (int[] direction : DIRECTIONS) {\n            int newRow = row + direction[0];\n            int newCol = col + direction[1];\n            dfs(grid, newRow, newCol, visitedCells + 1);\n        }\n        \n        grid[row][col] = temp;\n    }\n}\n"
     }
   },
   "981": {
