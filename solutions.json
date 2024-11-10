@@ -6403,7 +6403,7 @@
   },
   "1275": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n    public String tictactoe(int[][] moves) {\n        int[][] board = new int[3][3];\n\n        for (int i = 0; i < moves.length; i++) {\n            int player = (i % 2 == 0) ? 1 : -1;\n            int row = moves[i][0];\n            int col = moves[i][1];\n            board[row][col] = player;\n        }\n\n        if (checkForWin(board, 1)) {\n            return \"A\";\n        } else if (checkForWin(board, -1)) {\n            return \"B\";\n        } else if (moves.length == 9) {\n            return \"Draw\";\n        } else {\n            return \"Pending\";\n        }\n    }\n\n    private boolean checkForWin(int[][] board, int player) {\n        for (int i = 0; i < 3; i++) {\n            if (board[i][0] == player && board[i][1] == player && board[i][2] == player) {\n                return true;\n            }\n            if (board[0][i] == player && board[1][i] == player && board[2][i] == player) {\n                return true;\n            }\n        }\n\n        if (board[0][0] == player && board[1][1] == player && board[2][2] == player) {\n            return true;\n        }\n        if (board[0][2] == player && board[1][1] == player && board[2][0] == player) {\n            return true;\n        }\n\n        return false;\n    }\n\n}"
     }
   },
   "1276": {
