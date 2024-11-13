@@ -7343,7 +7343,7 @@
   },
   "1463": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n    public int cherryPickup(int[][] grid) {\n        int rows = grid.length;\n        int cols = grid[0].length;\n        Integer[][][] memo = new Integer[rows][cols][cols];\n        \n        return dfs(grid, 0, 0, cols - 1, memo);\n    }\n    \n    private int dfs(int[][] grid, int row, int col1, int col2, Integer[][][] memo) {\n        int rows = grid.length;\n        int cols = grid[0].length;\n        \n        if (col1 < 0 || col1 >= cols || col2 < 0 || col2 >= cols) {\n            return 0;\n        }\n        \n        if (memo[row][col1][col2] != null) {\n            return memo[row][col1][col2];\n        }\n        \n        int result = grid[row][col1];\n        if (col1 != col2) {\n            result += grid[row][col2];\n        }\n        \n        if (row < rows - 1) {\n            int maxCherries = 0;\n            for (int newCol1 = col1 - 1; newCol1 <= col1 + 1; newCol1++) {\n                for (int newCol2 = col2 - 1; newCol2 <= col2 + 1; newCol2++) {\n                    maxCherries = Math.max(maxCherries, dfs(grid, row + 1, newCol1, newCol2, memo));\n                }\n            }\n            result += maxCherries;\n        }\n        \n        memo[row][col1][col2] = result;\n        return result;\n    }\n}\n"
     }
   },
   "1464": {
