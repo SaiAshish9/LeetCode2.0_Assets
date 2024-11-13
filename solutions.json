@@ -6783,7 +6783,7 @@
   },
   "1351": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n    public int countNegatives(int[][] grid) {\n        int m = grid.length, n = grid[0].length;\n        int ans = 0;\n        for (int i = m - 1, j = 0; i >= 0 && j < n;) {\n            if (grid[i][j] < 0) {\n                ans += n - j;\n                --i;\n            } else {\n                ++j;\n            }\n        }\n        return ans;\n    }\n}"
     }
   },
   "1352": {
