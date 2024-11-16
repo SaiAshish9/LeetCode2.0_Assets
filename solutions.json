@@ -11886,7 +11886,7 @@
   },
   "2371": {
     "java": {
-      "union-find": ""
+      "matrix": "class Solution {\n    public int[][] minScore(int[][] grid) {\n        int m = grid.length, n = grid[0].length;\n        List<int[]> nums = new ArrayList<>();\n        for (int i = 0; i < m; ++i) {\n            for (int j = 0; j < n; ++j) {\n                nums.add(new int[] {grid[i][j], i, j});\n            }\n        }\n        Collections.sort(nums, (a, b) -> a[0] - b[0]);\n        int[] rowMax = new int[m];\n        int[] colMax = new int[n];\n        int[][] ans = new int[m][n];\n        for (int[] num : nums) {\n            int i = num[1], j = num[2];\n            ans[i][j] = Math.max(rowMax[i], colMax[j]) + 1;\n            rowMax[i] = ans[i][j];\n            colMax[j] = ans[i][j];\n        }\n        return ans;\n    }\n}"
     }
   },
   "2372": {
