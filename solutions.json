@@ -12811,7 +12811,7 @@
   },
   "2556": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n    public boolean isPossibleToCutPath(int[][] grid) {\n        if (!dfs(grid, 0, 0))\n            return true;\n        // Reassign (0, 0) as 1.\n        grid[0][0] = 1;\n        return !dfs(grid, 0, 0);\n    }\n\n    // Returns true is there's a path from (0, 0) to (m - 1, n - 1).\n    // Also marks the visited path as 0 except (m - 1, n - 1).\n    private boolean dfs(int[][] grid, int i, int j) {\n        if (i == grid.length || j == grid[0].length)\n            return false;\n        if (i == grid.length - 1 && j == grid[0].length - 1)\n            return true;\n        if (grid[i][j] == 0)\n            return false;\n\n        grid[i][j] = 0;\n        return dfs(grid, i + 1, j) || dfs(grid, i, j + 1);\n    }\n}"
     }
   },
   "2557": {
