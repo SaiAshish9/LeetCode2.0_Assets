@@ -15667,7 +15667,7 @@
   },
   "3212": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n  public int numberOfSubmatrices(char[][] grid) {\n    int m = grid.length;\n    int n = grid[0].length;\n    int ans = 0;\n    // x[i][j] := the number of 'X' in grid[0..i)[0..j)\n    int[][] x = new int[m + 1][n + 1];\n    // y[i][j] := the number of 'Y' in grid[0..i)[0..j)\n    int[][] y = new int[m + 1][n + 1];\n\n    for (int i = 0; i < m; ++i)\n      for (int j = 0; j < n; ++j) {\n        x[i + 1][j + 1] = (grid[i][j] == 'X' ? 1 : 0) + x[i][j + 1] + x[i + 1][j] - x[i][j];\n        y[i + 1][j + 1] = (grid[i][j] == 'Y' ? 1 : 0) + y[i][j + 1] + y[i + 1][j] - y[i][j];\n        if (x[i + 1][j + 1] > 0 && x[i + 1][j + 1] == y[i + 1][j + 1])\n          ++ans;\n      }\n\n    return ans;\n  }\n}"
     }
   },
   "3213": {
