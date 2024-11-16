@@ -10670,7 +10670,7 @@
   },
   "2128": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n    public boolean removeOnes(int[][] grid) {\n        Set<String> s = new HashSet<>();\n        int n = grid[0].length;\n        for (var row : grid) {\n            var cs = new char[n];\n            for (int i = 0; i < n; ++i) {\n                cs[i] = (char) (row[0] ^ row[i]);\n            }\n            s.add(String.valueOf(cs));\n        }\n        return s.size() == 1;\n    }\n}"
     }
   },
   "2129": {
