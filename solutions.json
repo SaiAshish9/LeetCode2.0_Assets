@@ -9934,7 +9934,7 @@
   },
   "1981": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n    private static final int[][] DIRECTIONS = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};\n    private Integer[][] memo;\n\n    public int minimizeTheDifference(int[][] mat, int target) {\n        int rows = mat.length;\n        int cols = mat[0].length;\n        memo = new Integer[rows][5000]; \n\n        for (int[] row : mat) {\n            Arrays.sort(row);\n        }\n\n        return dfs(mat, target, 0, 0);\n    }\n\n    private int dfs(int[][] mat, int target, int row, int currentSum) {\n        if (row == mat.length) {\n            return Math.abs(currentSum - target);\n        }\n\n        // Memoization check\n        if (memo[row][currentSum] != null) {\n            return memo[row][currentSum];\n        }\n\n        int minDiff = Integer.MAX_VALUE;\n\n        // Explore each element in the current row\n        for (int num : mat[row]) {\n            int newSum = currentSum + num;\n            if (newSum - target > minDiff) break; // Prune if new sum exceeds current minDiff\n            \n            minDiff = Math.min(minDiff, dfs(mat, target, row + 1, newSum));\n        }\n\n        return memo[row][currentSum] = minDiff;\n    }\n}\n"
     }
   },
   "1982": {
