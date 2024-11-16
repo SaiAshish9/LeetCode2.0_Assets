@@ -12206,7 +12206,7 @@
   },
   "2435": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n  public int numberOfPaths(int[][] grid, int k) {\n    final int kMod = 1_000_000_007;\n    final int m = grid.length;\n    final int n = grid[0].length;\n    // dp[i][j][sum] : = the number of paths to(i, j), where the sum / k == sum\n    int[][][] dp = new int[m][n][k];\n    dp[0][0][grid[0][0] % k] = 1;\n\n    for (int i = 0; i < m; ++i)\n      for (int j = 0; j < n; ++j)\n        for (int sum = 0; sum < k; ++sum) {\n          final int newSum = (sum + grid[i][j]) % k;\n          if (i > 0)\n            dp[i][j][newSum] += dp[i - 1][j][sum];\n          if (j > 0)\n            dp[i][j][newSum] += dp[i][j - 1][sum];\n          dp[i][j][newSum] %= kMod;\n        }\n\n    return dp[m - 1][n - 1][0];\n  }\n}"
     }
   },
   "2436": {
