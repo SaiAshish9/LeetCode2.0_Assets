@@ -12581,7 +12581,7 @@
   },
   "2510": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n  public boolean isThereAPath(int[][] grid) {\n    int m = grid.length;\n    int n = grid[0].length;\n    // Map negative (the number of 0s - the number of 1s) to non-negative one.\n    int cells = m + n - 1;\n    if (cells % 2 == 1)\n      return false;\n    Boolean[][][] mem = new Boolean[m][n][cells * 2 + 1];\n    return isThereAPath(grid, 0, 0, 0, cells, mem);\n  }\n\n  // Returns 1 if there's a path to grid[i][j]\n  // s.t. `sum` = (the number of 0s - the number of 1s).\n  private boolean isThereAPath(int[][] grid, int i, int j, int sum, final int cells,\n                               Boolean[][][] mem) {\n    if (i == grid.length || j == grid[0].length)\n      return false;\n    sum += grid[i][j] == 0 ? 1 : -1;\n    if (i == grid.length - 1 && j == grid[0].length - 1)\n      return sum == 0;\n    final int k = cells + sum;\n    if (mem[i][j][k] != null)\n      return mem[i][j][k];\n    return mem[i][j][k] = isThereAPath(grid, i + 1, j, sum, cells, mem) ||\n                          isThereAPath(grid, i, j + 1, sum, cells, mem);\n  }\n}"
     }
   },
   "2511": {
