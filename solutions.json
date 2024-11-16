@@ -9333,7 +9333,7 @@
   },
   "1861": {
     "java": {
-      "two-pointers": ""
+      "matrix": "class Solution {\n    private static final int[][] DIRECTIONS = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};\n    \n    public char[][] rotateTheBox(char[][] box) {\n        int rows = box.length;\n        int cols = box[0].length;\n        \n        // Simulate gravity for each row\n        for (int i = 0; i < rows; i++) {\n            applyGravity(box, i, cols);\n        }\n        \n        // Rotate the box 90 degrees clockwise\n        char[][] rotatedBox = new char[cols][rows];\n        for (int i = 0; i < rows; i++) {\n            for (int j = 0; j < cols; j++) {\n                rotatedBox[j][rows - 1 - i] = box[i][j];\n            }\n        }\n        \n        return rotatedBox;\n    }\n    \n    private void applyGravity(char[][] box, int row, int cols) {\n        // Start from the rightmost column and process stones\n        int emptySpace = cols - 1; // Pointer to the last empty space\n        for (int col = cols - 1; col >= 0; col--) {\n            if (box[row][col] == '#') {\n                // Place stone at the empty space\n                box[row][col] = '.';\n                box[row][emptySpace] = '#';\n                emptySpace--;\n            } else if (box[row][col] == '*') {\n                // Reset empty space pointer due to obstacle\n                emptySpace = col - 1;\n            }\n        }\n    }\n}\n"
     }
   },
   "1862": {
