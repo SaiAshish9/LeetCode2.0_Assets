@@ -11791,7 +11791,7 @@
   },
   "2352": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n    private static final int[][] DIRECTIONS = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};\n    private int n;\n\n    public int equalPairs(int[][] grid) {\n        n = grid.length;\n        int count = 0;\n\n        for (int row = 0; row < n; row++) {\n            for (int col = 0; col < n; col++) {\n                if (checkEquality(grid, row, col)) {\n                    count++;\n                }\n            }\n        }\n\n        return count;\n    }\n\n    private boolean checkEquality(int[][] grid, int row, int col) {\n        for (int i = 0; i < n; i++) {\n            if (grid[row][i] != grid[i][col]) {\n                return false; \n            }\n        }\n        return true;\n    }\n}\n"
     }
   },
   "2353": {
