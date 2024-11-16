@@ -13146,7 +13146,7 @@
   },
   "2643": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n  public int[] rowAndMaximumOnes(int[][] mat) {\n    int[] ans = new int[2];\n\n    for (int i = 0; i < mat.length; ++i) {\n      int ones = (int) Arrays.stream(mat[i]).filter(a -> a == 1).count();\n      if (ones > ans[1]) {\n        ans[0] = i;\n        ans[1] = ones;\n      }\n    }\n\n    return ans;\n  }\n}"
     }
   },
   "2644": {
