@@ -10695,7 +10695,7 @@
   },
   "2133": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n  public boolean checkValid(int[][] matrix) {\n    final int n = matrix.length;\n\n    for (int i = 0; i < n; ++i) {\n      Set<Integer> row = new HashSet<>();\n      Set<Integer> col = new HashSet<>();\n      for (int j = 0; j < n; ++j) {\n        row.add(matrix[i][j]);\n        col.add(matrix[j][i]);\n      }\n      if (Math.min(row.size(), col.size()) < n)\n        return false;\n    }\n\n    return true;\n  }\n}"
     }
   },
   "2134": {
