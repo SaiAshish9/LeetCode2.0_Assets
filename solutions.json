@@ -8053,7 +8053,7 @@
   },
   "1605": {
     "java": {
-      "matrix": ""
+      "matrix": "import java.util.Arrays;\n\npublic class Solution {\n    private static final int[][] DIRECTIONS = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};\n    \n    public int[][] restoreMatrix(int[] rowSum, int[] colSum) {\n        int rows = rowSum.length;\n        int cols = colSum.length;\n        int[][] matrix = new int[rows][cols];\n        boolean[][] visited = new boolean[rows][cols];\n        \n        dfs(matrix, rowSum, colSum, visited, 0, 0, rows, cols);\n        return matrix;\n    }\n\n    private boolean dfs(int[][] matrix, int[] rowSum, int[] colSum, boolean[][] visited, int i, int j, int rows, int cols) {\n        if (i >= rows || j >= cols || visited[i][j]) return true;\n\n        visited[i][j] = true;\n\n        int fillValue = Math.min(rowSum[i], colSum[j]);\n        matrix[i][j] = fillValue;\n        rowSum[i] -= fillValue;\n        colSum[j] -= fillValue;\n\n        for (int[] direction : DIRECTIONS) {\n            int ni = i + direction[0];\n            int nj = j + direction[1];\n\n            if (ni >= 0 && nj >= 0 && ni < rows && nj < cols && !visited[ni][nj]) {\n                if (!dfs(matrix, rowSum, colSum, visited, ni, nj, rows, cols)) {\n                    return false;\n                }\n            }\n        }\n\n        return true;\n    }\n\n    public static void main(String[] args) {\n        Solution solver = new Solution();\n        int[] rowSum = {3, 8};\n        int[] colSum = {4, 7};\n        \n        int[][] result = solver.restoreMatrix(rowSum, colSum);\n        for (int[] row : result) {\n            System.out.println(Arrays.toString(row));\n        }\n    }\n}\n"
     }
   },
   "1606": {
