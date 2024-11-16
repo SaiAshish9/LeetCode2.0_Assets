@@ -12441,7 +12441,7 @@
   },
   "2482": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n    public int[][] onesMinusZeros(int[][] grid) {\n        int m = grid.length, n = grid[0].length;\n        int[] rows = new int[m];\n        int[] cols = new int[n];\n        for (int i = 0; i < m; ++i) {\n            for (int j = 0; j < n; ++j) {\n                int v = grid[i][j];\n                rows[i] += v;\n                cols[j] += v;\n            }\n        }\n        int[][] diff = new int[m][n];\n        for (int i = 0; i < m; ++i) {\n            for (int j = 0; j < n; ++j) {\n                diff[i][j] = rows[i] + cols[j] - (n - rows[i]) - (m - cols[j]);\n            }\n        }\n        return diff;\n    }\n}"
     }
   },
   "2483": {
