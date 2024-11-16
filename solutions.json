@@ -14431,7 +14431,7 @@
   },
   "2965": {
     "java": {
-      "matrix": ""
+      "matrix": "class Solution {\n  public int[] findMissingAndRepeatedValues(int[][] grid) {\n    int n = grid.length;\n    int nSquared = n * n;\n    int[] count = new int[nSquared + 1];\n\n    for (int[] row : grid)\n      for (final int num : row)\n        ++count[num];\n\n    int repeated = -1;\n    int missing = -1;\n\n    for (int i = 1; i <= nSquared; ++i) {\n      if (count[i] == 2)\n        repeated = i;\n      if (count[i] == 0)\n        missing = i;\n    }\n\n    return new int[] {repeated, missing};\n  }\n}"
     }
   },
   "2966": {
