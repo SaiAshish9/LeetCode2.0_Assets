@@ -15552,7 +15552,7 @@
         "Stack",
         "Monotonic Stack"
       ],
-      "default": "Stack",
+      "default": "Monotonic Stack",
       "difficulty": "Hard",
       "language": "Java",
       "acceptance": 44.9
