@@ -11310,7 +11310,7 @@
   },
   "2256": {
     "java": {
-      "prefix-sum": ""
+      "prefix-sum": "class Solution {\n    public int minimumAverageDifference(int[] nums) {\n        int n = nums.length;\n        long totalSum = 0;\n        \n        for (int num : nums) {\n            totalSum += num;\n        }\n        \n        long leftSum = 0;  // Sum of elements to the left of the current index\n        long minDiff = Long.MAX_VALUE;\n        int resultIndex = -1;\n\n        for (int i = 0; i < n; i++) {\n            // Update leftSum (sum of elements from 0 to i)\n            leftSum += nums[i];\n            \n            // Calculate rightSum (totalSum - leftSum)\n            long rightSum = totalSum - leftSum;\n            \n            // Calculate the average difference\n            long leftAvg = leftSum / (i + 1);\n            long rightAvg = (i == n - 1) ? 0 : rightSum / (n - i - 1);  // Avoid division by zero for the last element\n            \n            // Calculate the absolute difference in averages\n            long diff = Math.abs(leftAvg - rightAvg);\n            \n            // Update resultIndex if a new minimum difference is found\n            if (diff < minDiff) {\n                minDiff = diff;\n                resultIndex = i;\n            }\n        }\n        \n        return resultIndex;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        System.out.println(solution.minimumAverageDifference(new int[]{2, 4, 1, 3, 2})); // Output: 2\n        System.out.println(solution.minimumAverageDifference(new int[]{0, 0, 0, 0})); // Output: 0\n    }\n}\n"
     }
   },
   "2257": {
@@ -12456,7 +12456,7 @@
   },
   "2485": {
     "java": {
-      "prefix-sum": ""
+      "prefix-sum": "class Solution {\n    public int pivotInteger(int n) {\n        int totalSum = n * (n + 1) / 2;\n        \n        int leftSum = 0;\n        \n        for (int x = 1; x <= n; x++) {\n            leftSum += x;\n            \n            // Right sum can be calculated as the total sum minus the left sum\n            int rightSum = totalSum - leftSum;\n            \n            // Check if left sum equals right sum\n            if (leftSum == rightSum) {\n                return x;\n            }\n        }\n        \n        // Return -1 if no valid x is found\n        return -1;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        System.out.println(solution.pivotInteger(8)); // Output: 6\n        System.out.println(solution.pivotInteger(1)); // Output: 1\n        System.out.println(solution.pivotInteger(5)); // Output: -1\n    }\n}\n"
     }
   },
   "2486": {
