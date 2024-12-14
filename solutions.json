@@ -2814,7 +2814,7 @@
   },
   "560": {
     "java": {
-      "prefix-sum": ""
+      "prefix-sum": "import java.util.HashMap;\n\npublic class Solution {\n    public int subarraySum(int[] nums, int k) {\n        HashMap<Integer, Integer> prefixSumMap = new HashMap<>();\n        \n        // Initialize with the base case: prefix sum of 0 appears once\n        prefixSumMap.put(0, 1);\n        \n        int prefixSum = 0;  \n        int count = 0;      \n\n        for (int num : nums) {\n            prefixSum += num;\n            \n            if (prefixSumMap.containsKey(prefixSum - k)) {\n                count += prefixSumMap.get(prefixSum - k);\n            }\n            \n            prefixSumMap.put(prefixSum, prefixSumMap.getOrDefault(prefixSum, 0) + 1);\n        }\n        \n        return count;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums = {1, 1, 1};\n        int k = 2;\n        System.out.println(solution.subarraySum(nums, k)); // Output: 2\n    }\n}\n"
     }
   },
   "561": {
