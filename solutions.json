@@ -1524,7 +1524,7 @@
   },
   "303": {
     "java": {
-      "prefix-sum": ""
+      "prefix-sum": "class NumArray {\n    private int[] prefixSum;\n\n    public NumArray(int[] nums) {\n        int n = nums.length;\n        prefixSum = new int[n + 1]; // One extra space for convenience\n        prefixSum[0] = 0; // Base case: sum of no elements is 0\n\n        for (int i = 0; i < n; i++) {\n            prefixSum[i + 1] = prefixSum[i] + nums[i];\n        }\n    }\n\n    // Query: Compute the sum of the range [left, right]\n    public int sumRange(int left, int right) {\n        return prefixSum[right + 1] - prefixSum[left];\n    }\n}\n\n/**\n * Your NumArray object will be instantiated and called as such:\n * NumArray obj = new NumArray(nums);\n * int param_1 = obj.sumRange(left,right);\n */"
     }
   },
   "304": {
