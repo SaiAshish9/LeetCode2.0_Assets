@@ -8688,7 +8688,7 @@
   },
   "1732": {
     "java": {
-      "prefix-sum": ""
+      "prefix-sum": "class Solution {\n    public int largestAltitude(int[] gain) {\n        int n = gain.length;\n        int maxAltitude = 0;\n        int currentAltitude = 0;\n\n        for (int i = 0; i < n; i++) {\n            currentAltitude += gain[i]; // Compute prefix sum as current altitude\n            maxAltitude = Math.max(maxAltitude, currentAltitude); // Update max altitude\n        }\n\n        return maxAltitude;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        \n        System.out.println(solution.largestAltitude(new int[]{-5, 1, 5, 0, -7})); // Output: 1\n        System.out.println(solution.largestAltitude(new int[]{-4, -3, -2, -1, 4, 3, 2})); // Output: 0\n        System.out.println(solution.largestAltitude(new int[]{1, 2, 3, -2, -1})); // Output: 6\n    }\n}\n"
     }
   },
   "1733": {
