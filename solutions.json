@@ -7968,7 +7968,7 @@
   },
   "1588": {
     "java": {
-      "prefix-sum": ""
+      "prefix-sum": "class Solution {\n    public int sumOddLengthSubarrays(int[] arr) {\n        int n = arr.length;\n        int[] prefixSum = new int[n + 1];\n        int totalSum = 0;\n        \n        for (int i = 0; i < n; i++) {\n            prefixSum[i + 1] = prefixSum[i] + arr[i];\n        }\n        \n        for (int start = 0; start < n; start++) {\n            for (int end = start; end < n; end++) {\n                int length = end - start + 1;\n                if (length % 2 == 1) {\n                    totalSum += prefixSum[end + 1] - prefixSum[start];\n                }\n            }\n        }\n        \n        return totalSum;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        \n        // Test cases\n        System.out.println(solution.sumOddLengthSubarrays(new int[]{1, 4, 2, 5, 3})); // Output: 58\n        System.out.println(solution.sumOddLengthSubarrays(new int[]{1, 2}));          // Output: 3\n        System.out.println(solution.sumOddLengthSubarrays(new int[]{10, 11, 12}));    // Output: 66\n    }\n}\n"
     }
   },
   "1589": {
