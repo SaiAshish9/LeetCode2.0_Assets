@@ -2639,7 +2639,7 @@
   },
   "525": {
     "java": {
-      "prefix-sum": ""
+      "prefix-sum": "import java.util.HashMap;\n\npublic class Solution {\n    public int findMaxLength(int[] nums) {\n        HashMap<Integer, Integer> prefixSumMap = new HashMap<>();\n        \n        // Initialize with the base case: sum 0 at index -1\n        prefixSumMap.put(0, -1);\n        \n        int prefixSum = 0;\n        int maxLength = 0;\n        \n        for (int i = 0; i < nums.length; i++) {\n            prefixSum += (nums[i] == 1) ? 1 : -1;\n            \n            if (prefixSumMap.containsKey(prefixSum)) {\n                maxLength = Math.max(maxLength, i - prefixSumMap.get(prefixSum));\n            } else {\n                prefixSumMap.put(prefixSum, i);\n            }\n        }\n        \n        return maxLength;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums = {0, 1, 0, 1, 1, 0};\n        System.out.println(solution.findMaxLength(nums)); // Output: 6\n    }\n}\n"
     }
   },
   "526": {
