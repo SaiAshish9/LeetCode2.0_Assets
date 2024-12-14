@@ -2754,7 +2754,7 @@
   },
   "548": {
     "java": {
-      "prefix-sum": ""
+      "prefix-sum": "class Solution {\n  public boolean splitArray(int[] nums) {\n    int n = nums.length;\n    if (n < 7)\n      return false;\n\n    int[] prefix = new int[n];\n\n    for (int i = 0; i < n; ++i)\n      prefix[i] = i == 0 ? nums[0] : prefix[i - 1] + nums[i];\n\n    for (int j = 3; j < n - 3; ++j) {\n      HashSet<Integer> seen = new HashSet<>();\n      for (int i = 1; i < j - 1; ++i)\n        if (prefix[i - 1] == prefix[j - 1] - prefix[i])\n          seen.add(prefix[i - 1]);\n      for (int k = j + 2; k < n - 1; ++k)\n        if (prefix[n - 1] - prefix[k] == prefix[k - 1] - prefix[j] &&\n            seen.contains(prefix[k - 1] - prefix[j]))\n          return true;\n    }\n\n    return false;\n  }\n}"
     }
   },
   "549": {
