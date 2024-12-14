@@ -1198,7 +1198,7 @@
   },
   "238": {
     "java": {
-      "prefix-sum": ""
+      "prefix-sum": "public class Solution {\n    public int[] productExceptSelf(int[] nums) {\n        int n = nums.length;\n        \n        int[] answer = new int[n];\n        \n        for (int i = 0; i < n; i++) {\n            answer[i] = 1;\n        }\n        \n        int prefix = 1;\n        for (int i = 0; i < n; i++) {\n            answer[i] = prefix;\n            prefix *= nums[i];\n        }\n        \n        int postfix = 1;\n        for (int i = n - 1; i >= 0; i--) {\n            answer[i] *= postfix;\n            postfix *= nums[i];\n        }\n        \n        return answer;\n    }\n}\n"
     }
   },
   "239": {
