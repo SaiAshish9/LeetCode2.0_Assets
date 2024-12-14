@@ -2629,7 +2629,7 @@
   },
   "523": {
     "java": {
-      "prefix-sum": ""
+      "prefix-sum": "import java.util.HashMap;\n\npublic class Solution {\n    public boolean checkSubarraySum(int[] nums, int k) {\n        HashMap<Integer, Integer> remainderMap = new HashMap<>();\n        remainderMap.put(0, -1); // Base case: remainder 0 at index -1\n        \n        int prefixSum = 0;\n        for (int i = 0; i < nums.length; i++) {\n            prefixSum += nums[i];\n            \n            // Compute remainder\n            int remainder = k == 0 ? prefixSum : (prefixSum % k + k) % k; // Handle negative remainders\n            \n            // Check if the remainder is already seen\n            if (remainderMap.containsKey(remainder)) {\n                // Ensure subarray length is at least 2\n                if (i - remainderMap.get(remainder) > 1) {\n                    return true;\n                }\n            } else {\n                remainderMap.put(remainder, i);\n            }\n        }\n        \n        return false;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        int[] nums = {23, 2, 4, 6, 7};\n        int k = 6;\n        System.out.println(solution.checkSubarraySum(nums, k)); // Output: true\n    }\n}\n"
     }
   },
   "524": {
