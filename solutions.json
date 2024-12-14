@@ -1529,7 +1529,7 @@
   },
   "304": {
     "java": {
-      "matrix": ""
+      "matrix": "class NumMatrix {\n  public NumMatrix(int[][] matrix) {\n    if (matrix.length == 0)\n      return;\n\n    int m = matrix.length;\n    int n = matrix[0].length;\n\n    // prefix[i][j] := sum of matrix[0..i)[0..j)\n    prefix = new int[m + 1][n + 1];\n\n    for (int i = 0; i < m; ++i)\n      for (int j = 0; j < n; ++j)\n        prefix[i + 1][j + 1] = matrix[i][j] + prefix[i][j + 1] + prefix[i + 1][j] - prefix[i][j];\n  }\n\n  public int sumRegion(int row1, int col1, int row2, int col2) {\n    return prefix[row2 + 1][col2 + 1] - prefix[row1][col2 + 1]\n         - prefix[row2 + 1][col1] + prefix[row1][col1];\n  }\n\n  private int[][] prefix;\n}\n"
     }
   },
   "305": {
