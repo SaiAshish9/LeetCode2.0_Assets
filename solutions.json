@@ -7238,7 +7238,7 @@
   },
   "1442": {
     "java": {
-      "prefix-sum": ""
+      "prefix-sum": "class Solution {\n    public int countTriplets(int[] arr) {\n        int ans = 0;\n        int n = arr.length;\n        \n        // Create a prefix XOR array\n        int[] xors = new int[n + 1];\n        xors[0] = 0;\n        \n        for (int i = 0; i < n; i++) {\n            xors[i + 1] = xors[i] ^ arr[i];\n        }\n        \n        // Iterate over all possible triplets\n        for (int j = 1; j < n; j++) {\n            for (int i = 0; i < j; i++) {\n                int xors_i = xors[j] ^ xors[i];\n                for (int k = j; k < n; k++) {\n                    int xors_k = xors[k + 1] ^ xors[j];\n                    if (xors_i == xors_k) {\n                        ans++;\n                    }\n                }\n            }\n        }\n        \n        return ans;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        System.out.println(solution.countTriplets(new int[]{2, 3, 1, 6, 7})); // Output: 4\n        System.out.println(solution.countTriplets(new int[]{1, 1, 1, 1, 1})); // Output: 10\n        System.out.println(solution.countTriplets(new int[]{2, 3}));          // Output: 0\n    }\n}\n"
     }
   },
   "1443": {
