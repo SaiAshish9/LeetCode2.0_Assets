@@ -7093,7 +7093,7 @@
   },
   "1413": {
     "java": {
-      "prefix-sum": ""
+      "prefix-sum": "public class Solution {\n    public int minStartValue(int[] nums) {\n        int runningSum = 0;\n        int minPrefixSum = Integer.MAX_VALUE;\n        \n        for (int num : nums) {\n            runningSum += num;\n            minPrefixSum = Math.min(minPrefixSum, runningSum);\n        }\n        \n        return (minPrefixSum < 0) ? 1 - minPrefixSum : 1;\n    }\n\n    public static void main(String[] args) {\n        Solution solution = new Solution();\n        \n        int[] nums = {-3, 2, -3, 4, 2};\n        System.out.println(solution.minStartValue(nums)); // Output: 5\n    }\n}\n"
     }
   },
   "1414": {
