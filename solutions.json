@@ -10979,7 +10979,8 @@
   },
   "2187": {
     "solution": {
-      "array": ""
+      "array": "",
+      "binary-search": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool canCompleteTrips(const vector<int>& buses, long long time, int trips) {\n        long long completedTrips = 0;\n        for (int bus : buses) {\n            completedTrips += time / bus;\n            if (completedTrips >= trips) {\n                return true;\n            }\n        }\n        return completedTrips >= trips;\n    }\n    \n    long long minimumTime(vector<int>& buses, int trips) {\n        long long left = 1, right = (long long) *min_element(buses.begin(), buses.end()) * trips;\n        \n        while (left < right) {\n            long long mid = left + (right - left) / 2;\n            \n            if (canCompleteTrips(buses, mid, trips)) {\n                right = mid; \n            } else {\n                left = mid + 1; \n            }\n        }\n        \n        return left; \n    }\n};\n"
     }
   },
   "2188": {
