@@ -175,7 +175,8 @@
   },
   "35": {
     "solution": {
-      "array": ""
+      "array": "",
+      "binary-search": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int searchInsert(vector<int>& nums, int target) {\n        int low = 0, high = nums.size() - 1;\n\n        while (low <= high) {\n            int mid = low + (high - low) / 2;\n\n            if (nums[mid] == target) {\n                return mid; \n            } else if (nums[mid] < target) {\n                low = mid + 1;\n            } else {\n                high = mid - 1; \n            }\n        }\n\n        return low; \n    }\n};"
     }
   },
   "36": {
