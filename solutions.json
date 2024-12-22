@@ -3547,7 +3547,7 @@
   "704": {
     "solution": {
       "array": "",
-      "binary-search":"#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int search(vector<int>& nums, int target) {\n        int low = 0, high = nums.size() - 1;\n\n        while (low <= high) {\n            int mid = low + (high - low) / 2;\n\n            if (nums[mid] == target) {\n                return mid; \n            } else if (nums[mid] < target) {\n                low = mid + 1;\n            } else {\n                high = mid - 1; \n            }\n        }\n\n        return -1; \n    }\n};\n" 
+      "binary-search": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int search(vector<int>& nums, int target) {\n        int low = 0, high = nums.size() - 1;\n\n        while (low <= high) {\n            int mid = low + (high - low) / 2;\n\n            if (nums[mid] == target) {\n                return mid; \n            } else if (nums[mid] < target) {\n                low = mid + 1;\n            } else {\n                high = mid - 1; \n            }\n        }\n\n        return -1; \n    }\n};\n"
     }
   },
   "705": {
@@ -6044,7 +6044,7 @@
   "1201": {
     "solution": {
       "combinatorics": "",
-      "binary-search": "#include <algorithm>\n#include <numeric>\nusing namespace std;\n\nclass Solution {\npublic:\n    int nthUglyNumber(int n, int a, int b, int c) {\n        auto lcm = [](int x, int y) {\n            return x / gcd(x, y) * y;\n        };\n\n        long long low = 1, high = 2e9, ans = 0;\n        int ab = lcm(a, b), bc = lcm(b, c), ac = lcm(a, c), abc = lcm(a, bc);\n\n        while (low <= high) {\n            long long mid = low + (high - low) / 2;\n            long long count = mid / a + mid / b + mid / c\n                            - mid / ab - mid / bc - mid / ac\n                            + mid / abc;\n\n            if (count >= n) {\n                ans = mid; \n                high = mid - 1; \n            } else {\n                low = mid + 1; \n            }\n        }\n\n        return ans;\n    }\n};\n"
+      "binary-search": "class Solution {\npublic:\n    int nthUglyNumber(int n, int a, int b, int c) {\n        long long ab = lcm(a, b);\n        long long bc = lcm(b, c);\n        long long ac = lcm(a, c);\n        long long abc = lcm(ab, c);\n        long long l = 1, r = 2000000000;\n        while (l < r) {\n            long long mid = (l + r) >> 1;\n            if (mid / a + mid / b + mid / c - mid / ab - mid / bc - mid / ac + mid / abc >= n) {\n                r = mid;\n            } else {\n                l = mid + 1;\n            }\n        }\n        return l;\n    }\n\n    long long lcm(long long a, long long b) {\n        return a * b / gcd(a, b);\n    }\n\n    long long gcd(long long a, long long b) {\n        return b == 0 ? a : gcd(b, a % b);\n    }\n};"
     }
   },
   "1202": {
