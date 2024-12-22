@@ -1311,7 +1311,8 @@
   },
   "259": {
     "solution": {
-      "two-pointers": ""
+      "two-pointers": "",
+      "binary-search": "class Solution {\npublic:\n    int threeSumSmaller(vector<int>& nums, int target) {\n        sort(nums.begin(), nums.end());\n        int ans = 0;\n        for (int i = 0, n = nums.size(); i < n; ++i) {\n            int j = i + 1, k = n - 1;\n            while (j < k) {\n                int s = nums[i] + nums[j] + nums[k];\n                if (s >= target)\n                    --k;\n                else {\n                    ans += k - j;\n                    ++j;\n                }\n            }\n        }\n        return ans;\n    }\n};"
     }
   },
   "260": {
