@@ -409,7 +409,8 @@
   },
   "81": {
     "solution": {
-      "array": ""
+      "array": "",
+      "binary-search": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool search(vector<int>& nums, int target) {\n        int low = 0, high = nums.size() - 1;\n\n        while (low <= high) {\n            int mid = low + (high - low) / 2;\n\n            if (nums[mid] == target) {\n                return true; \n            }\n\n            if (nums[low] == nums[mid] && nums[mid] == nums[high]) {\n                ++low;\n                --high;\n            }\n            else if (nums[low] <= nums[mid]) {\n                if (nums[low] <= target && target < nums[mid]) {\n                    high = mid - 1; \n                } else {\n                    low = mid + 1; \n                }\n            }\n            else {\n                if (nums[mid] < target && target <= nums[high]) {\n                    low = mid + 1;\n                } else {\n                    high = mid - 1; \n                }\n            }\n        }\n        return false; \n    }\n};\n"
     }
   },
   "82": {
