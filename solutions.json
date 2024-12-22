@@ -2020,7 +2020,8 @@
   },
   "400": {
     "solution": {
-      "math": ""
+      "math": "",
+      "binary-search": "#include <iostream>\n#include <cmath>\nusing namespace std;\n\nclass Solution {\npublic:\n    int findNthDigit(int n) {\n        long long digitLength = 1; \n        long long count = 9;       \n        long long start = 1;      \n\n        while (n > digitLength * count) {\n            n -= digitLength * count; // Skip all digits from this range\n            ++digitLength;            // Move to the next range (2-digits, 3-digits, etc.)\n            count *= 10;              // Update the count of numbers in the current range\n            start *= 10;              // Update the start of the current range\n        }\n\n        long long targetNumber = start + (n - 1) / digitLength; // Zero-indexed position\n\n        string targetStr = to_string(targetNumber); \n        int digitIndex = (n - 1) % digitLength;     \n        return targetStr[digitIndex] - '0';        \n    }\n};"
     }
   },
   "401": {
