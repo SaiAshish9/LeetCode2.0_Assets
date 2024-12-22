@@ -7736,7 +7736,7 @@
   "1539": {
     "solution": {
       "array": "",
-      "binary-search": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int findKthPositive(vector<int>& arr, int k) {\n        int left = 0, right = arr.size(), ans = 0;\n\n        while (left < right) {\n            int mid = left + (right - left) / 2;\n            \n            int missingCount = arr[mid] - (mid + 1);\n\n            if (missingCount < k) {\n                left = mid + 1;\n            } else {\n                right = mid;  \n            }\n        }\n\n        if (left == arr.size()) {\n            ans = arr.back() + (k - (arr.size() - arr[0]));\n        } else {\n            ans = left + k;\n        }\n        \n        return ans;\n    }\n};\n"
+      "binary-search": "class Solution {\npublic:\n  int findKthPositive(vector<int>& nums, int k) {\n    int left = 0;\n    int right = nums.size();\n\n    while (left < right) {\n      const int mid = (left + right) / 2;\n      if (nums[mid] - mid - 1 >= k)\n        right = mid;\n      else\n        left = mid + 1;\n    }\n\n    // The k-th missing positive number\n    // = nums[left - 1] + k - nMissing(left - 1)\n    // = nums[left - 1] + k - (nums[left - 1] - (left - 1) - 1)\n    // = nums[left - 1] + k - (nums[left - 1] - left)\n    // = left + k\n    return left + k;\n  }\n};\n"
     }
   },
   "1540": {
