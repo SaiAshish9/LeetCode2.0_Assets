@@ -10490,8 +10490,7 @@
   "2089": {
     "solution": {
       "sorting": "",
-      "binary-search": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> targetIndices(vector<int>& nums, int target) {\n        sort(nums.begin(), nums.end());        \n        int left = 0, right = nums.size() - 1;\n        vector<int> result;\n        \n        while (left <= right) {\n            int mid = left + (right - left) / 2;\n            \n            if (nums[mid] == target) {\n                int start = mid;\n                while (start >= 0 && nums[start] == target) {\n                    result.push_back(start);\n                    start--;\n                }\n                break;\n            } else if (nums[mid] < target) {\n                left = mid + 1;\n            } else {\n                right = mid - 1;\n            }\n        }\n        \n        return result;\n    }\n};\n"
-    }
+      "binary-search": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> targetIndices(vector<int>& nums, int target) {\n        sort(nums.begin(), nums.end());\n        \n        vector<int> result;\n        int n = nums.size();\n        \n        int left = lower_bound(nums.begin(), nums.end(), target) - nums.begin();\n        if (left == n || nums[left] != target) return result;\n        while (left < n && nums[left] == target) {\n            result.push_back(left);\n            left++;\n        }\n        \n        return result;\n    }\n};\n"    }
   },
   "2090": {
     "solution": {
