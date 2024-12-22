@@ -169,7 +169,8 @@
   },
   "34": {
     "solution": {
-      "array": ""
+      "array": "",
+      "binary-search": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int binarySearchFirst(const vector<int>& nums, int target) {\n        int low = 0, high = nums.size() - 1;\n        int firstPos = -1;\n\n        while (low <= high) {\n            int mid = low + (high - low) / 2;\n            if (nums[mid] == target) {\n                firstPos = mid; \n                high = mid - 1;\n            } else if (nums[mid] < target) {\n                low = mid + 1;\n            } else {\n                high = mid - 1;\n            }\n        }\n\n        return firstPos;\n    }\n\n    int binarySearchLast(const vector<int>& nums, int target) {\n        int low = 0, high = nums.size() - 1;\n        int lastPos = -1;\n\n        while (low <= high) {\n            int mid = low + (high - low) / 2;\n            if (nums[mid] == target) {\n                lastPos = mid;\n                low = mid + 1;\n            } else if (nums[mid] < target) {\n                low = mid + 1;\n            } else {\n                high = mid - 1;\n            }\n        }\n\n        return lastPos;\n    }\n\n    vector<int> searchRange(vector<int>& nums, int target) {\n        int first = binarySearchFirst(nums, target);\n        int last = binarySearchLast(nums, target);\n        return {first, last};\n    }\n};"
     }
   },
   "35": {
