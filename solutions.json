@@ -4289,7 +4289,8 @@
   },
   "852": {
     "solution": {
-      "array": ""
+      "array": "",
+      "binary-search": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int peakIndexInMountainArray(vector<int>& arr) {\n        int low = 0, high = arr.size() - 1;\n\n        while (low < high) {\n            int mid = low + (high - low) / 2;\n\n            if (arr[mid] < arr[mid + 1]) {\n                low = mid + 1;\n            } else {\n                high = mid;\n            }\n        }\n\n        return low; \n    }\n};\n"
     }
   },
   "853": {
