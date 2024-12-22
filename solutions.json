@@ -347,7 +347,8 @@
   },
   "69": {
     "solution": {
-      "math": ""
+      "math": "",
+      "binary-search":"#include <iostream>\nusing namespace std;\n\nclass Solution {\npublic:\n    int mySqrt(int x) {\n        if (x == 0 || x == 1) return x; \n\n        int low = 0, high = x, ans = 0;\n        while (low <= high) {\n            int mid = low + (high - low) / 2;\n            \n            if (mid <= x / mid) { \n                ans = mid;\n                low = mid + 1;\n            } else {\n                high = mid - 1; \n            }\n        }\n        return ans;\n    }\n};\n"
     }
   },
   "70": {
