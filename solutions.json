@@ -9546,7 +9546,8 @@
   },
   "1901": {
     "solution": {
-      "matrix": ""
+      "matrix": "",
+      "binary-search": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> findPeakGrid(vector<vector<int>>& mat) {\n        int rows = mat.size();\n        int cols = mat[0].size();\n\n        int left = 0, right = cols - 1;\n\n        while (left <= right) {\n            int mid = left + (right - left) / 2;\n\n            int maxRow = 0;\n            for (int i = 1; i < rows; ++i) {\n                if (mat[i][mid] > mat[maxRow][mid]) {\n                    maxRow = i;\n                }\n            }\n\n            if ((mid == 0 || mat[maxRow][mid] > mat[maxRow][mid - 1]) &&\n                (mid == cols - 1 || mat[maxRow][mid] > mat[maxRow][mid + 1])) {\n                return {maxRow, mid};\n            }\n            else if (mid > 0 && mat[maxRow][mid - 1] > mat[maxRow][mid]) {\n                right = mid - 1;\n            }\n            else {\n                left = mid + 1;\n            }\n        }\n\n        return {};\n    }\n};\n"
     }
   },
   "1902": {
