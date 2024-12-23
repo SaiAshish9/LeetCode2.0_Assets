@@ -12749,7 +12749,8 @@
   },
   "2540": {
     "solution": {
-      "two-pointers": ""
+      "two-pointers": "",
+      "binary-search": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int getCommon(vector<int>& nums1, vector<int>& nums2) {\n        for (int num : nums1) {\n            if (binary_search(nums2.begin(), nums2.end(), num)) {\n                return num;\n            }\n        }\n        return -1; \n    }\n};\n"
     }
   },
   "2541": {
