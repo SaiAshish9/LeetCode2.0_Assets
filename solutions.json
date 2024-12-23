@@ -12693,7 +12693,8 @@
   },
   "2529": {
     "solution": {
-      "counting": ""
+      "counting": "",
+      "binary-search": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int maximumCount(vector<int>& nums) {\n        int n = nums.size();\n        \n        // Find the first non-negative index\n        int firstNonNegative = lower_bound(nums.begin(), nums.end(), 0) - nums.begin();\n        \n        // Find the first positive index\n        int firstPositive = upper_bound(nums.begin(), nums.end(), 0) - nums.begin();\n        \n        // Count negatives and positives\n        int negativeCount = firstNonNegative; // All elements before the first non-negative are negative\n        int positiveCount = n - firstPositive; // All elements from firstPositive to the end are positive\n        \n        return max(negativeCount, positiveCount);\n    }\n};\n"
     }
   },
   "2530": {
