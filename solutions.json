@@ -11991,7 +11991,8 @@
   },
   "2389": {
     "solution": {
-      "prefix-sum": ""
+      "prefix-sum": "",
+      "binary-search": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> answerQueries(vector<int>& nums, vector<int>& queries) {\n        sort(nums.begin(), nums.end());\n\n        vector<int> prefixSum(nums.size());\n        prefixSum[0] = nums[0];\n        for (int i = 1; i < nums.size(); ++i) {\n            prefixSum[i] = prefixSum[i - 1] + nums[i];\n        }\n\n        vector<int> result;\n        for (int query : queries) {\n            int idx = upper_bound(prefixSum.begin(), prefixSum.end(), query) - prefixSum.begin();\n            result.push_back(idx); \n        }\n\n        return result;\n    }\n};\n"
     }
   },
   "2390": {
