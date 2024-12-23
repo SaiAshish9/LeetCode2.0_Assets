@@ -14006,7 +14006,8 @@
   },
   "2861": {
     "solution": {
-      "array": ""
+      "array": "",
+      "binary-search":"#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int maxNumberOfAlloys(int n, int k, int budget, vector<vector<int>>& composition, vector<int>& stock, vector<int>& cost) {\n        int left = 0, right = 1e9, result = 0;\n\n        auto canProduce = [&](int x, vector<int>& recipe) -> bool {\n            long long totalCost = 0;\n            for (int i = 0; i < n; ++i) {\n                // Calculate the additional units needed for material i\n                long long required = 1LL * recipe[i] * x;\n                long long needed = max(0LL, required - stock[i]);\n                totalCost += needed * cost[i];\n                if (totalCost > budget) return false; // Exceeds budget\n            }\n            return totalCost <= budget;\n        };\n\n        // Binary search to find the maximum number of alloys\n        while (left <= right) {\n            int mid = left + (right - left) / 2;\n            bool possible = false;\n\n            // Check all machines to see if producing `mid` alloys is feasible\n            for (int i = 0; i < k; ++i) {\n                if (canProduce(mid, composition[i])) {\n                    possible = true;\n                    break;\n                }\n            }\n\n            if (possible) {\n                result = mid; // Update result to the maximum feasible `mid`\n                left = mid + 1; // Try for a larger number of alloys\n            } else {\n                right = mid - 1; // Try for a smaller number of alloys\n            }\n        }\n\n        return result;\n    }\n};\n"
     }
   },
   "2862": {
