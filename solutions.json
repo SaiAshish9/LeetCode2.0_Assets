@@ -12850,7 +12850,8 @@
   },
   "2560": {
     "solution": {
-      "array": ""
+      "array": "",
+      "binary-search": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int minCapability(vector<int>& nums, int k) {\n        int left = *min_element(nums.begin(), nums.end());\n        int right = *max_element(nums.begin(), nums.end());\n        int result = right;\n\n        auto canRob = [&](int maxCapability) -> bool {\n            int count = 0;\n            int i = 0;\n            while (i < nums.size()) {\n                if (nums[i] <= maxCapability) {\n                    count++;\n                    i += 2;\n                } else {\n                    i++;\n                }\n                if (count >= k) return true; \n            }\n            return count >= k;\n        };\n\n        while (left <= right) {\n            int mid = left + (right - left) / 2;\n            if (canRob(mid)) {\n                result = mid;\n                right = mid - 1;\n            } else {\n                left = mid + 1;\n            }\n        }\n\n        return result;\n    }\n};\n"
     }
   },
   "2561": {
