@@ -12684,7 +12684,8 @@
   },
   "2526": {
     "solution": {
-      "queue": ""
+      "queue": "",
+      "ordered-set": "class DataStream {\npublic:\n    DataStream(int value, int k) : targetValue(value), requiredCount(k), currentCount(0) {}\n\n    bool consec(int num) {\n        if (num == targetValue) {\n            currentCount++;\n        } else {\n            currentCount = 0;\n        }\n        return currentCount >= requiredCount;\n    }\n\nprivate:\n    int targetValue;  // The target value to check for\n    int requiredCount;  // The required number of consecutive occurrences\n    int currentCount;  // The current number of consecutive occurrences\n};\n\n/**\n * Your DataStream object will be instantiated and called as such:\n * DataStream* obj = new DataStream(value, k);\n * bool param_1 = obj->consec(num);\n */\n"
     }
   },
   "2527": {
