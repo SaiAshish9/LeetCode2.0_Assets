@@ -9961,7 +9961,7 @@
   },
   "1982": {
     "solution": {
-      "divide-and-conquer": ""
+      "divide-and-conquer": "class Solution {\npublic:\n    vector<int> recoverArray(int n, vector<int>& sums) {\n        ranges::sort(sums);\n        return recover(sums);\n    }\n\nprivate:\n    vector<int> recover(const vector<int>& sums) {\n        if (sums.size() == 1) // sums[0] must be 0.\n            return {};\n\n        // Either num or -num must be in the final array.\n        //  num + sumsExcludingNum = sumsIncludingNum\n        // -num + sumsIncludingNum = sumsExcludingNum\n        unordered_map<int, int> count;\n        for (const int sum : sums)\n            ++count[sum];\n\n        const int num = sums[1] - sums[0];\n        vector<int> sumsExcludingNum;\n        vector<int> sumsIncludingNum;\n        bool chooseSumsIncludingNum = false;\n\n        for (const int sum : sums) {\n            if (count[sum] == 0)\n                continue;\n            --count[sum];\n            --count[sum + num];\n            sumsExcludingNum.push_back(sum);\n            sumsIncludingNum.push_back(sum + num);\n            if (sum + num == 0)\n                chooseSumsIncludingNum = true;\n        }\n\n        vector<int> recovered = recover(\n            chooseSumsIncludingNum ? sumsIncludingNum : sumsExcludingNum);\n        recovered.push_back(chooseSumsIncludingNum ? -num : num);\n        return recovered;\n    }\n};"
     }
   },
   "1983": {
