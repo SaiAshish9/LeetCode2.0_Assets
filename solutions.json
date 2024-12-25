@@ -13812,7 +13812,7 @@
   },
   "2817": {
     "solution": {
-      "ordered-set": ""
+      "ordered-set": "#include <cmath>\n#include <limits>\n#include <set>\n#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int minAbsoluteDifference(vector<int>& nums, int x) {\n        if (x == 0)\n            return 0; // Edge case: x cannot be zero as |i - j| >= x\n\n        int n = nums.size();\n        set<int> orderedSet;\n        int minDiff = numeric_limits<int>::max();\n\n        for (int i = x; i < n; ++i) {\n            orderedSet.insert(nums[i - x]);\n\n            // Find the closest numbers in the set\n            auto it = orderedSet.lower_bound(nums[i]);\n\n            // Check the number >= nums[i]\n            if (it != orderedSet.end()) {\n                minDiff = min(minDiff, abs(*it - nums[i]));\n            }\n\n            // Check the number < nums[i]\n            if (it != orderedSet.begin()) {\n                minDiff = min(minDiff, abs(*prev(it) - nums[i]));\n            }\n        }\n\n        return minDiff;\n    }\n};\n"
     }
   },
   "2818": {
