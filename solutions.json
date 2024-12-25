@@ -3564,7 +3564,7 @@
   },
   "706": {
     "solution": {
-      "hash-function": ""
+      "hash-function": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nclass MyHashMap {\npublic:\n    MyHashMap() {\n        size = 1000;  \n        table.resize(size);  \n    }\n\n    int hash(int key) {\n        return key % size;\n    }\n\n    void put(int key, int value) {\n        int index = hash(key);  \n        for (auto& pair : table[index]) {\n            if (pair.first == key) { \n                pair.second = value;\n                return;\n            }\n        }\n        table[index].push_back({key, value});\n    }\n\n    int get(int key) {\n        int index = hash(key); \n        for (auto& pair : table[index]) {\n            if (pair.first == key) { \n                return pair.second;\n            }\n        }\n        return -1;  \n    }\n\n    void remove(int key) {\n        int index = hash(key); \n        for (auto it = table[index].begin(); it != table[index].end(); ++it) {\n            if (it->first == key) {  \n                table[index].erase(it);\n                return;\n            }\n        }\n    }\n\nprivate:\n    int size; \n    vector<vector<pair<int, int>>> table;  \n};\n\n\n/**\n * Your MyHashMap object will be instantiated and called as such:\n * MyHashMap obj = new MyHashMap();\n * obj.put(key,value);\n * int param_2 = obj.get(key);\n * obj.remove(key);\n */"
     }
   },
   "707": {
