@@ -1084,7 +1084,7 @@
   "214": {
     "solution": {
       "rolling-hash": "",
-      "hash-table":"class Solution {\npublic:\n    string shortestPalindrome(string s) {\n        string rev = s;\n        reverse(rev.begin(), rev.end());\n\n        string combined = s + \"#\" + rev;\n\n        vector<int> prefix(combined.size(), 0);\n        for (int i = 1; i < combined.size(); i++) {\n            int j = prefix[i - 1];\n            while (j > 0 && combined[i] != combined[j]) {\n                j = prefix[j - 1];\n            }\n            if (combined[i] == combined[j]) {\n                j++;\n            }\n            prefix[i] = j;\n        }\n\n        int longest_palindrome_prefix_len = prefix.back();\n\n        return rev.substr(0, s.size() - longest_palindrome_prefix_len) + s;\n    }\n};\n"
+      "hash-function":"class Solution {\npublic:\n    string shortestPalindrome(string s) {\n        string rev = s;\n        reverse(rev.begin(), rev.end());\n\n        string combined = s + \"#\" + rev;\n\n        vector<int> prefix(combined.size(), 0);\n        for (int i = 1; i < combined.size(); i++) {\n            int j = prefix[i - 1];\n            while (j > 0 && combined[i] != combined[j]) {\n                j = prefix[j - 1];\n            }\n            if (combined[i] == combined[j]) {\n                j++;\n            }\n            prefix[i] = j;\n        }\n\n        int longest_palindrome_prefix_len = prefix.back();\n\n        return rev.substr(0, s.size() - longest_palindrome_prefix_len) + s;\n    }\n};\n"
     }
   },
   "215": {
