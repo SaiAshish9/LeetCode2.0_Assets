@@ -14998,7 +14998,7 @@
   },
   "3073": {
     "solution": {
-      "ordered-set": ""
+      "ordered-set": "class Solution {\npublic:\n    int maximumTripletValue(vector<int>& nums) {\n        int n = nums.size();\n        vector<int> right(n, nums.back());\n        for (int i = n - 2; ~i; --i) {\n            right[i] = max(nums[i], right[i + 1]);\n        }\n        set<int> ts;\n        ts.insert(nums[0]);\n        int ans = 0;\n        for (int j = 1; j < n - 1; ++j) {\n            if (right[j + 1] > nums[j]) {\n                auto it = ts.lower_bound(nums[j]);\n                if (it != ts.begin()) {\n                    --it;\n                    ans = max(ans, *it - nums[j] + right[j + 1]);\n                }\n            }\n            ts.insert(nums[j]);\n        }\n        return ans;\n    }\n};"
     }
   },
   "3074": {
