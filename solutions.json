@@ -1403,7 +1403,8 @@
   },
   "277": {
     "solution": {
-      "two-pointers": ""
+      "two-pointers": "",
+      "interactive": "/* The knows API is defined for you.\n      bool knows(int a, int b); */\n\nclass Solution {\npublic:\n    int findCelebrity(int n) {\n        int ans = 0;\n        for (int i = 1; i < n; ++i) {\n            if (knows(ans, i)) {\n                ans = i;\n            }\n        }\n        for (int i = 0; i < n; ++i) {\n            if (ans != i) {\n                if (knows(ans, i) || !knows(i, ans)) {\n                    return -1;\n                }\n            }\n        }\n        return ans;\n    }\n};"
     }
   },
   "278": {
