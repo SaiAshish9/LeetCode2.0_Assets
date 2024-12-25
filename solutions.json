@@ -15535,7 +15535,7 @@
   },
   "3179": {
     "solution": {
-      "dynamic-programming": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int valueAfterKSeconds(int n, int k) {\n        const int MOD = 1e9 + 7;\n        vector<int> dp(n, 1); \n        \n        for (int second = 0; second < k; ++second) {\n            for (int i = 1; i < n; ++i) {\n                dp[i] = (dp[i] + dp[i - 1]) % MOD; /\n            }\n        }\n        \n        return dp[n - 1]; \n    }\n};\n"
+      "array": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int valueAfterKSeconds(int n, int k) {\n        const int MOD = 1e9 + 7;\n        vector<int> dp(n, 1); \n        \n        for (int second = 0; second < k; ++second) {\n            for (int i = 1; i < n; ++i) {\n                dp[i] = (dp[i] + dp[i - 1]) % MOD; /\n            }\n        }\n        \n        return dp[n - 1]; \n    }\n};\n"
     }
   },
   "3180": {
