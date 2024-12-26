@@ -8670,7 +8670,7 @@
   },
   "1724": {
     "solution": {
-      "union-find": ""
+      "minimum-spanning-tree": "class UnionFind {\n public:\n  UnionFind() {}\n  UnionFind(int n) {\n    id.resize(n);\n\n    for (int i = 0; i < n; ++i)\n      id[i][0] = i;\n  }\n\n  void union_(int u, int v, int limit) {\n    const int i = find(u, limit);\n    const int j = find(v, limit);\n    if (i == j)\n      return;\n    id[i][limit] = j;\n  }\n\n  int find(int u, int limit) {\n    const auto it = id[u].upper_bound(limit);\n    const int i = prev(it)->second;\n    if (i == u)\n      return u;\n    const int j = find(i, limit);\n    id[u][limit] = j;\n    return j;\n  }\n\n private:\n  // id[i]'s (key, value) := (limit, id of node i <= limit)\n  vector<map<int, int>> id;\n};\n\nclass DistanceLimitedPathsExist {\n public:\n  DistanceLimitedPathsExist(int n, vector<vector<int>>& edgeList) {\n    uf = UnionFind(n);\n\n    ranges::sort(edgeList, ranges::less{},\n                 [](const vector<int>& edge) { return edge[2]; });\n\n    for (const vector<int>& edge : edgeList) {\n      const int u = edge[0];\n      const int v = edge[1];\n      const int d = edge[2];\n      uf.union_(u, v, d);\n    }\n  }\n\n  bool query(int p, int q, int limit) {\n    return uf.find(p, limit - 1) == uf.find(q, limit - 1);\n  }\n\n private:\n  UnionFind uf;\n};"
     }
   },
   "1725": {
