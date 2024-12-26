@@ -14599,7 +14599,7 @@
   },
   "2992": {
     "solution": {
-      "dynamic-programming": ""
+      "bitmap": "class Solution {\n    private int n;\n    private Integer[] f;\n\n    public int selfDivisiblePermutationCount(int n) {\n        this.n = n;\n        f = new Integer[1 << (n + 1)];\n        return dfs(0);\n    }\n\n    private int dfs(int mask) {\n        if (f[mask] != null) {\n            return f[mask];\n        }\n        int i = Integer.bitCount(mask) + 1;\n        if (i > n) {\n            return 1;\n        }\n        f[mask] = 0;\n        for (int j = 1; j <= n; ++j) {\n            if ((mask >> j & 1) == 0 && (i % j == 0 || j % i == 0)) {\n                f[mask] += dfs(mask | 1 << j);\n            }\n        }\n        return f[mask];\n    }\n}"
     }
   },
   "2993": {
