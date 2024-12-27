@@ -2575,7 +2575,7 @@
   },
   "509": {
     "solution": {
-      "dynamic-programming": ""
+      "memoization": "class Solution {\npublic:\n    int fib(int n) {\n        vector<int> memo(n + 1, -1); \n        return fibHelper(n, memo);\n    }\n    \nprivate:\n    int fibHelper(int n, vector<int>& memo) {\n        if (n <= 1) return n; // Base cases: fib(0) = 0, fib(1) = 1\n        \n        if (memo[n] != -1) return memo[n];\n                \n        memo[n] = fibHelper(n - 1, memo) + fibHelper(n - 2, memo);\n        return memo[n];\n    }\n};\n"
     }
   },
   "510": {
