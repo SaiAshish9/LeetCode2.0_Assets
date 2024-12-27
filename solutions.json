@@ -14808,7 +14808,7 @@
   },
   "3034": {
     "solution": {
-      "rolling-hash": ""
+      "rolling-hash": "class Solution {\npublic:\n    int countMatchingSubarrays(vector<int>& nums, vector<int>& pattern) {\n        const vector<int> numsPattern = getNumsPattern(nums);\n        return kmp(numsPattern, pattern);\n    }\n\nprivate:\n    int getNum(int a, int b) {\n        if (a < b)\n            return 1;\n        if (a > b)\n            return -1;\n        return 0;\n    }\n\n    vector<int> getNumsPattern(const vector<int>& nums) {\n        vector<int> numsPattern;\n        for (int i = 1; i < nums.size(); ++i)\n            numsPattern.push_back(getNum(nums[i - 1], nums[i]));\n        return numsPattern;\n    }\n\n    int kmp(const vector<int>& nums, const vector<int>& pattern) {\n        const vector<int> lps = getLPS(pattern);\n        int res = 0;\n        int i = 0; \n        int j = 0; \n        while (i < nums.size()) {\n            if (nums[i] == pattern[j]) {\n                ++i;\n                ++j;\n                if (j == pattern.size()) {\n                    ++res;\n                    j = lps[j - 1];\n                }\n            }\n            else if (j > 0) {\n                j = lps[j - 1];\n            } else {\n                ++i;\n            }\n        }\n        return res;\n    }\n\n    vector<int> getLPS(const vector<int>& pattern) {\n        vector<int> lps(pattern.size());\n        for (int i = 1, j = 0; i < pattern.size(); ++i) {\n            while (j > 0 && pattern[j] != pattern[i])\n                j = lps[j - 1];\n            if (pattern[i] == pattern[j])\n                lps[i] = ++j;\n        }\n        return lps;\n    }\n};"
     }
   },
   "3035": {
