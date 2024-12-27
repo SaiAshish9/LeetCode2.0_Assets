@@ -7925,7 +7925,7 @@
   },
   "1575": {
     "solution": {
-      "dynamic-programming": ""
+      "memoization": "class Solution {\npublic:\n    int countRoutes(vector<int>& locations, int start, int finish, int fuel) {\n        int n = locations.size();\n        vector<vector<int>> dp(n,\n                               vector<int>(fuel + 1, -1)); // Memoization table\n        return helper(locations, start, finish, fuel, dp);\n    }\n\nprivate:\n    const int MOD = 1e9 + 7;\n\n    int helper(vector<int>& locations, int current, int finish, int fuel,\n               vector<vector<int>>& dp) {\n        if (fuel < 0)\n            return 0; // If fuel is exhausted, no routes possible\n\n        if (dp[current][fuel] != -1)\n            return dp[current][fuel]; // Return cached result\n\n        int routes =\n            (current == finish)\n                ? 1\n                : 0; // Include current as a valid route if it's the finish\n\n        for (int next = 0; next < locations.size(); ++next) {\n            if (next != current) {\n                int cost = abs(locations[current] -\n                               locations[next]); // Fuel cost to travel\n                if (fuel >= cost) {              // Travel if enough fuel\n                    routes = (routes + helper(locations, next, finish,\n                                              fuel - cost, dp)) %\n                             MOD;\n                }\n            }\n        }\n\n        return dp[current][fuel] = routes; // Cache and return the result\n    }\n};\n"
     }
   },
   "1576": {
