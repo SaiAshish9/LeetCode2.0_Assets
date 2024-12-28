@@ -4855,7 +4855,7 @@
   },
   "963": {
     "solution": {
-      "geometry": ""
+      "geometry": "class Solution {\npublic:\n    double minAreaFreeRect(vector<vector<int>>& points) {\n        long ans = LONG_MAX;\n        // For each A, B pair points, {hash(A, B): (ax, ay, bx, by)}.\n        unordered_map<int, vector<tuple<int, int, int, int>>> centerToPoints;\n\n        for (const vector<int>& A : points)\n            for (const vector<int>& B : points) {\n                const int center = hash(A, B);\n                centerToPoints[center].emplace_back(A[0], A[1], B[0], B[1]);\n            }\n\n        // For all pair points \"that share the same center\".\n        for (const auto& [_, points] : centerToPoints)\n            for (const auto& [ax, ay, bx, by] : points)\n                for (const auto& [cx, cy, dx, dy] : points)\n                    // AC is perpendicular to AD.\n                    // AC dot AD = (cx - ax, cy - ay) dot (dx - ax, dy - ay) ==\n                    // 0.\n                    if ((cx - ax) * (dx - ax) + (cy - ay) * (dy - ay) == 0) {\n                        const long squaredArea =\n                            dist(ax, ay, cx, cy) * dist(ax, ay, dx, dy);\n                        if (squaredArea > 0)\n                            ans = min(ans, squaredArea);\n                    }\n\n        return ans == LONG_MAX ? 0 : sqrt(ans);\n    }\n\nprivate:\n    int hash(const vector<int>& p, const vector<int>& q) {\n        return ((long)(p[0] + q[0]) << 16) + (p[1] + q[1]);\n    }\n\n    long dist(int px, int py, int qx, int qy) {\n        return (px - qx) * (px - qx) + (py - qy) * (py - qy);\n    }\n};"
     }
   },
   "964": {
