@@ -5156,7 +5156,7 @@
   },
   "1023": {
     "solution": {
-      "two-pointers": ""
+      "string-matching": "class Solution {\npublic:\n    vector<bool> camelMatch(vector<string>& queries, string pattern) {\n        vector<bool> result;\n\n        auto matches = [](const string& query, const string& pattern) {\n            int i = 0, j = 0;\n            int n = query.size(), m = pattern.size();\n\n            while (i < n && j < m) {\n                if (query[i] == pattern[j]) {\n                    i++;\n                    j++;\n                }\n                // If the characters match, continue\n                else if (isupper(query[i])) {\n                    return false; // Query has an uppercase letter where pattern\n                                  // has a lowercase or doesn't match\n                } else {\n                    i++;\n                }\n            }\n\n            // After traversal, check if the rest of pattern is fully matched\n            if (j == m) {\n                // Check that the remaining query is entirely lowercase (as\n                // pattern ends with lowercase or uppercase)\n                while (i < n) {\n                    if (isupper(query[i])) {\n                        return false;\n                    }\n                    i++;\n                }\n                return true;\n            }\n            return false;\n        };\n\n        for (const string& query : queries) {\n            result.push_back(matches(query, pattern));\n        }\n\n        return result;\n    }\n};\n"
     }
   },
   "1024": {
