@@ -12462,7 +12462,7 @@
   },
   "2481": {
     "solution": {
-      "geometry": ""
+      "geometry": "class Solution {\npublic:\n    int numberOfCuts(int n) {\n        if (n == 1)\n            return 0;                  // No cuts needed for one part\n        return n % 2 == 0 ? n / 2 : n; // Even: n/2 cuts, Odd: n cuts\n    }\n};\n"
     }
   },
   "2482": {
