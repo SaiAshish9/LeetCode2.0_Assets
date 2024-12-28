@@ -7054,7 +7054,7 @@
   },
   "1401": {
     "solution": {
-      "geometry": ""
+      "geometry": "class Solution {\npublic:\n    bool checkOverlap(int radius, int xCenter, int yCenter, int x1, int y1,\n                      int x2, int y2) {\n        int nearestX = clamp(xCenter, x1, x2);\n        int nearestY = clamp(yCenter, y1, y2);\n\n        int dx = nearestX - xCenter;\n        int dy = nearestY - yCenter;\n        int distanceSquared = dx * dx + dy * dy;\n\n        return distanceSquared <= radius * radius;\n    }\n\nprivate:\n    int clamp(int value, int minVal, int maxVal) {\n        if (value < minVal)\n            return minVal;\n        if (value > maxVal)\n            return maxVal;\n        return value;\n    }\n};\n"
     }
   },
   "1402": {
