@@ -8390,7 +8390,7 @@
   },
   "1668": {
     "solution": {
-      "dynamic-programming": ""
+      "string-matching": "class Solution {\n public:\n  int maxRepeating(string sequence, string word) {\n    int ans = 1;\n    string repeating = word;\n    while (sequence.find(repeating) != string::npos) {\n      ++ans;\n      repeating += word;\n    }\n    return ans - 1;\n  }\n};"
     }
   },
   "1669": {
