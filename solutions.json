@@ -4498,7 +4498,7 @@
   },
   "892": {
     "solution": {
-      "matrix": ""
+      "geometry": "class Solution {\npublic:\n    int surfaceArea(vector<vector<int>>& grid) {\n        int n = grid.size();\n        int totalSurfaceArea = 0;\n\n        for (int i = 0; i < n; ++i) {\n            for (int j = 0; j < n; ++j) {\n                if (grid[i][j] > 0) {\n                    // Add the top and bottom surface areas\n                    totalSurfaceArea += 2;\n                    // Add the side areas\n                    totalSurfaceArea += grid[i][j] * 4;\n\n                    // Subtract overlap with the cell above\n                    if (i > 0)\n                        totalSurfaceArea -= 2 * min(grid[i][j], grid[i - 1][j]);\n\n                    // Subtract overlap with the cell to the left\n                    if (j > 0)\n                        totalSurfaceArea -= 2 * min(grid[i][j], grid[i][j - 1]);\n                }\n            }\n        }\n\n        return totalSurfaceArea;\n    }\n};\n"
     }
   },
   "893": {
