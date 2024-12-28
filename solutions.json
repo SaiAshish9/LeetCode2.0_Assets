@@ -14974,7 +14974,7 @@
   },
   "3067": {
     "solution": {
-      "tree": ""
+      "tree": "class Solution {\npublic:\n    vector<int> countPairsOfConnectableServers(vector<vector<int>>& edges,\n                                               int signalSpeed) {\n        const int n = edges.size() + 1;\n        vector<int> ans;\n        vector<vector<pair<int, int>>> tree(n);\n\n        for (const vector<int>& edge : edges) {\n            const int u = edge[0];\n            const int v = edge[1];\n            const int w = edge[2];\n            tree[u].emplace_back(v, w);\n            tree[v].emplace_back(u, w);\n        }\n\n        for (int i = 0; i < n; ++i)\n            ans.push_back(connectablePairsRootedAt(tree, i, signalSpeed));\n\n        return ans;\n    }\n\nprivate:\n    int connectablePairsRootedAt(const vector<vector<pair<int, int>>>& tree,\n                                 int u, int signalSpeed) {\n        int pairs = 0;\n        int count = 0;\n        for (const auto& [v, w] : tree[u]) {\n            const int childCount = dfs(tree, v, u, w, signalSpeed);\n            pairs += count * childCount;\n            count += childCount;\n        }\n        return pairs;\n    }\n\n    int dfs(const vector<vector<pair<int, int>>>& tree, int u, int prev,\n            int dist, int signalSpeed) {\n        int count = 0;\n        for (const auto& [v, w] : tree[u])\n            if (v != prev)\n                count += dfs(tree, v, u, dist + w, signalSpeed);\n        return (dist % signalSpeed == 0 ? 1 : 0) + count;\n    }\n};"
     }
   },
   "3068": {
