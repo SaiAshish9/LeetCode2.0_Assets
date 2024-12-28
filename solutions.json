@@ -2966,7 +2966,7 @@
   },
   "587": {
     "solution": {
-      "geometry": ""
+      "geometry": "class Solution {\npublic:\n    vector<vector<int>> outerTrees(vector<vector<int>>& trees) {\n        auto cross = [](const vector<int>& O, const vector<int>& A,\n                        const vector<int>& B) -> int {\n            return (A[0] - O[0]) * (B[1] - O[1]) -\n                   (A[1] - O[1]) * (B[0] - O[0]);\n        };\n\n        int n = trees.size();\n        if (n <= 3)\n            return trees; // All points form the convex hull\n\n        // Sort points lexicographically\n        sort(trees.begin(), trees.end());\n\n        vector<vector<int>> hull;\n\n        // Build lower hull\n        for (const auto& point : trees) {\n            while (hull.size() >= 2 &&\n                   cross(hull[hull.size() - 2], hull[hull.size() - 1], point) <\n                       0) {\n                hull.pop_back();\n            }\n            hull.push_back(point);\n        }\n\n        // Build upper hull\n        int lowerSize = hull.size();\n        for (int i = n - 1; i >= 0; --i) {\n            while (hull.size() > lowerSize &&\n                   cross(hull[hull.size() - 2], hull[hull.size() - 1],\n                         trees[i]) < 0) {\n                hull.pop_back();\n            }\n            hull.push_back(trees[i]);\n        }\n\n        hull.pop_back();\n\n        // Remove duplicates\n        sort(hull.begin(), hull.end());\n        hull.erase(unique(hull.begin(), hull.end()), hull.end());\n\n        return hull;\n    }\n};\n"
     }
   },
   "588": {
