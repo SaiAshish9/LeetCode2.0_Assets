@@ -2324,7 +2324,7 @@
   },
   "459": {
     "solution": {
-      "string-matching": ""
+      "string-matching": "class Solution {\npublic:\n    bool repeatedSubstringPattern(string s) {\n        string doubled = s + s;        \n        return doubled.substr(1, doubled.size() - 2).find(s) != string::npos;\n    }\n};\n"
     }
   },
   "460": {
