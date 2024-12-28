@@ -2172,7 +2172,7 @@
   },
   "429": {
     "solution": {
-      "tree": ""
+      "tree": "/*\n// Definition for a Node.\nclass Node {\npublic:\n    int val;\n    vector<Node*> children;\n\n    Node() {}\n\n    Node(int _val) {\n        val = _val;\n    }\n\n    Node(int _val, vector<Node*> _children) {\n        val = _val;\n        children = _children;\n    }\n};\n*/\n\nclass Solution {\npublic:\n    vector<vector<int>> levelOrder(Node* root) {\n        vector<vector<int>> result; \n        if (root == nullptr) return result;\n        \n        queue<Node*> q; \n        q.push(root);\n\n        while (!q.empty()) {\n            int levelSize = q.size();\n            vector<int> currentLevel;\n            \n            for (int i = 0; i < levelSize; i++) {\n                Node* node = q.front(); \n                q.pop(); \n                \n                currentLevel.push_back(node->val); \n                \n                for (Node* child : node->children) {\n                    q.push(child);\n                }\n            }\n            \n            result.push_back(currentLevel);\n        }\n        \n        return result;\n    }\n};\n"
     }
   },
   "430": {
