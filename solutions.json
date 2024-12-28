@@ -14269,7 +14269,7 @@
   },
   "2926": {
     "solution": {
-      "dynamic-programming": ""
+      "binary-indexed-tree": "class FenwickTree {\n public:\n  FenwickTree(int n) : vals(n + 1) {}\n\n    void maximize(int i, long val) {\n        while (i < vals.size()) {\n            vals[i] = max(vals[i], val);\n            i += lowbit(i);\n        }\n    }\n\n  long get(int i) const {\n    long res = 0;\n    while (i > 0) {\n      res = max(res, vals[i]);\n      i -= lowbit(i);\n    }\n    return res;\n  }\n\n private:\n  vector<long> vals;\n\n    static int lowbit(int i) {\n        return i & -i;\n    }\n};\n\nclass Solution {\n public:\n  long long maxBalancedSubsequenceSum(vector<int>& nums) {\n    long ans = LONG_MIN;\n\n    FenwickTree tree(nums.size());\n\n    for (const auto& [_, i] : getPairs(nums)) {\n      const long subseqSum = tree.get(i) + nums[i];\n      tree.maximize(i + 1, subseqSum);\n      ans = max(ans, subseqSum);\n    }\n\n    return ans;\n  }\n\n private:\n  vector<pair<int, int>> getPairs(const vector<int>& nums) {\n    vector<pair<int, int>> pairs;\n    for (int i = 0; i < nums.size(); ++i)\n      pairs.emplace_back(nums[i] - i, i);\n    ranges::sort(pairs);\n    return pairs;\n  }\n}\n;"
     }
   },
   "2927": {
