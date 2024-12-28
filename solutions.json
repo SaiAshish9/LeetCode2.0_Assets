@@ -7659,7 +7659,7 @@
   },
   "1522": {
     "solution": {
-      "tree": ""
+      "tree": "/*\n// Definition for a Node.\nclass Node {\npublic:\n    int val;\n    vector<Node*> children;\n\n    Node() {}\n\n    Node(int _val) {\n        val = _val;\n    }\n\n    Node(int _val, vector<Node*> _children) {\n        val = _val;\n        children = _children;\n    }\n};\n*/\n\nclass Solution {\npublic:\n    int ans;\n\n    int diameter(Node* root) {\n        ans = 0;\n        dfs(root);\n        return ans;\n    }\n\n    int dfs(Node* root) {\n        if (!root) return 0;\n        int m1 = 0, m2 = 0;\n        for (Node* child : root->children) {\n            int t = dfs(child);\n            if (t > m1) {\n                m2 = m1;\n                m1 = t;\n            } else if (t > m2)\n                m2 = t;\n        }\n        ans = max(ans, m1 + m2);\n        return 1 + m1;\n    }\n};"
     }
   },
   "1523": {
