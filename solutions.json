@@ -15104,7 +15104,7 @@
   },
   "3093": {
     "solution": {
-      "trie": ""
+      "trie": "struct TrieNode {\n  vector<shared_ptr<TrieNode>> children;\n  TrieNode() : children(26) {}\n  int length = INT_MAX;\n  int index = -1;\n};\n\nclass Solution {\n public:\n  vector<int> stringIndices(vector<string>& wordsContainer,\n                            vector<string>& wordsQuery) {\n    vector<int> ans;\n    int minIndex = 0;\n\n    for (int i = 0; i < wordsContainer.size(); ++i) {\n      insert(wordsContainer[i], i);\n      if (wordsContainer[i].length() < wordsContainer[minIndex].length())\n        minIndex = i;\n    }\n\n    for (const string& query : wordsQuery) {\n      const int index = search(query);\n      ans.push_back(index == -1 ? minIndex : index);\n    }\n\n    return ans;\n  }\n\n private:\n  shared_ptr<TrieNode> root = make_shared<TrieNode>();\n\n  void insert(const string& word, int index) {\n    shared_ptr<TrieNode> node = root;\n    for (int i = word.length() - 1; i >= 0; --i) {\n      const int j = word[i] - 'a';\n      if (node->children[j] == nullptr)\n        node->children[j] = make_shared<TrieNode>();\n      node = node->children[j];\n      if (node->length > word.length()) {\n        node->length = word.length();\n        node->index = index;\n      }\n    }\n  }\n\n  int search(const string& word) {\n    shared_ptr<TrieNode> node = root;\n    for (int i = word.length() - 1; i >= 0; --i) {\n      const int j = word[i] - 'a';\n      if (node->children[j] == nullptr)\n        return node->index;\n      node = node->children[j];\n    }\n    return node->index;\n  }\n};"
     }
   },
   "3094": {
