@@ -14174,7 +14174,7 @@
   },
   "2907": {
     "solution": {
-      "array": ""
+      "binary-indexed-tree": "class FenwickTree {\n public:\n  FenwickTree(int n) : vals(n + 1) {}\n\n  void maximize(int i, int val) {\n    while (i < vals.size()) {\n      vals[i] = max(vals[i], val);\n      i += lowbit(i);\n    }\n  }\n\n  int get(int i) const {\n    int res = 0;\n    while (i > 0) {\n      res = max(res, vals[i]);\n      i -= lowbit(i);\n    }\n    return res;\n  }\n\n private:\n  vector<int> vals;\n\n  static int lowbit(int i) {\n    return i & -i;\n  }\n};\n\nclass Solution {\n public:\n  int maxProfit(vector<int>& prices, vector<int>& profits) {\n    const int maxPrice = ranges::max(prices);\n    int ans = -1;\n    FenwickTree maxProfitTree1(maxPrice);\n    FenwickTree maxProfitTree2(maxPrice);\n\n    for (int i = 0; i < prices.size(); ++i) {\n      const int price = prices[i];\n      const int profit = profits[i];\n      // max(proftis[i])\n      const int maxProfit1 = maxProfitTree1.get(price - 1);\n      // max(proftis[i]) + max(profits[j])\n      const int maxProfit2 = maxProfitTree2.get(price - 1);\n      maxProfitTree1.maximize(price, profit);\n      if (maxProfit1 > 0)\n        maxProfitTree2.maximize(price, profit + maxProfit1);\n      if (maxProfit2 > 0)\n        ans = max(ans, profit + maxProfit2);\n    }\n\n    return ans;\n  }\n};"
     }
   },
   "2908": {
