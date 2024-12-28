@@ -7579,7 +7579,7 @@
   },
   "1506": {
     "solution": {
-      "tree": ""
+      "tree": "*\n// Definition for a Node.\nclass Node {\npublic:\n    int val;\n    vector<Node*> children;\n\n    Node() {}\n\n    Node(int _val) {\n        val = _val;\n    }\n\n    Node(int _val, vector<Node*> _children) {\n        val = _val;\n        children = _children;\n    }\n};\n*/\n\nclass Solution {\npublic:\n    Node* findRoot(vector<Node*> tree) {\n        int x = 0;\n        for (Node* node : tree) {\n            x ^= node->val;\n            for (Node* child : node->children) {\n                x ^= child->val;\n            }\n        }\n        for (int i = 0;; ++i) {\n            if (tree[i]->val == x) {\n                return tree[i];\n            }\n        }\n    }\n};"
     }
   },
   "1507": {
