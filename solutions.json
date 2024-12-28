@@ -2168,7 +2168,8 @@
   },
   "428": {
     "solution": {
-      "tree": "class Codec {\npublic:\n\n    // Encodes a tree to a single string.\n    string serialize(Node* root) {\n        string res;\n        serializeHelper(root, res);\n        return res;\n    }\n    \n    void serializeHelper(Node* node, string& res) {\n        if (!node) res += \"#\";\n        else {\n            res += to_string(node->val) + \" \" + to_string(node->children.size()) + \" \";\n            for (auto child : node->children) {\n                serializeHelper(child, res);\n            }\n        }\n    }\n\n    // Decodes your encoded data to tree.\n    Node* deserialize(string data) {\n        istringstream iss(data);\n        return deserializeHelper(iss);\n    }\n    \n    Node* deserializeHelper(istringstream& iss) {\n        string val = \",\", size = \":\";\n        iss >> val;\n        if (val == \"#\") return NULL;\n        iss >> size;\n        Node *node = new Node(stoi(val), {});\n        for (int i = 0; i < stoi(size); ++i) {\n            node->children.push_back(deserializeHelper(iss));\n        }\n        return node;\n    }\n};"    }
+      "tree": "class Codec {\npublic:\n\n    // Encodes a tree to a single string.\n    string serialize(Node* root) {\n        string res;\n        serializeHelper(root, res);\n        return res;\n    }\n    \n    void serializeHelper(Node* node, string& res) {\n        if (!node) res += \"#\";\n        else {\n            res += to_string(node->val) + \" \" + to_string(node->children.size()) + \" \";\n            for (auto child : node->children) {\n                serializeHelper(child, res);\n            }\n        }\n    }\n\n    // Decodes your encoded data to tree.\n    Node* deserialize(string data) {\n        istringstream iss(data);\n        return deserializeHelper(iss);\n    }\n    \n    Node* deserializeHelper(istringstream& iss) {\n        string val = \",\", size = \":\";\n        iss >> val;\n        if (val == \"#\") return NULL;\n        iss >> size;\n        Node *node = new Node(stoi(val), {});\n        for (int i = 0; i < stoi(size); ++i) {\n            node->children.push_back(deserializeHelper(iss));\n        }\n        return node;\n    }\n};"
+    }
   },
   "429": {
     "solution": {
@@ -6272,7 +6273,7 @@
   },
   "1245": {
     "solution": {
-      "topological-sort": ""
+      "tree": "class Solution {\npublic:\n    unordered_map<int, unordered_set<int>> g;\n    vector<bool> vis;\n    int ans;\n    int next;\n\n    int treeDiameter(vector<vector<int>>& edges) {\n        for (auto& e : edges) {\n            g[e[0]].insert(e[1]);\n            g[e[1]].insert(e[0]);\n        }\n        int n = edges.size();\n        ans = 0;\n        vis.resize(n + 1);\n        next = edges[0][0];\n        dfs(next, 0);\n        vis.assign(vis.size(), false);\n        dfs(next, 0);\n        return ans;\n    }\n\n    void dfs(int u, int t) {\n        if (vis[u]) return;\n        vis[u] = true;\n        if (ans < t) {\n            ans = t;\n            next = u;\n        }\n        for (int v : g[u]) dfs(v, t + 1);\n    }\n};"
     }
   },
   "1246": {
