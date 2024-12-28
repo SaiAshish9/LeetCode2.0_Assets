@@ -2168,7 +2168,7 @@
   },
   "428": {
     "solution": {
-      "tree": ""
+      "tree": "class Codec {\npublic:\n\n    string serialize(Node* root) {\n        string res;\n        serializeHelper(root, res);\n        return res;\n    }\n    \n    void serializeHelper(Node* node, string& res) {\n        if (!node) res += \"#\";\n        else {\n            res += to_string(node->val) + \" \" + to_string(node->children.size()) + \" \";\n            for (auto child : node->children) {\n                serializeHelper(child, res);\n            }\n        }\n    }\n\n    Node* deserialize(string data) {\n        istringstream iss(data);\n        return deserializeHelper(iss);\n    }\n    \n    Node* deserializeHelper(istringstream& iss) {\n        string val = ",", size = ":";\n        iss >> val;\n        if (val == \"#\") return NULL;\n        iss >> size;\n        Node *node = new Node(stoi(val), {});\n        for (int i = 0; i < stoi(size); ++i) {\n            node->children.push_back(deserializeHelper(iss));\n        }\n        return node;\n    }\n};"
     }
   },
   "429": {
