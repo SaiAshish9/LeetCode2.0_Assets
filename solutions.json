@@ -14764,7 +14764,7 @@
   },
   "3025": {
     "solution": {
-      "geometry": ""
+      "geometry": "class Solution {\n public:\n  int numberOfPairs(vector<vector<int>>& points) {\n    int ans = 0;\n\n    ranges::sort(points, [](const vector<int>& a, const vector<int>& b) {\n      return a[0] < b[0] || (a[0] == b[0] && a[1] > b[1]);\n    });\n\n    for (int i = 0; i < points.size(); ++i) {\n      int maxY = INT_MIN;\n      for (int j = i + 1; j < points.size(); ++j)\n        if (points[i][1] >= points[j][1] && points[j][1] > maxY) {\n          ++ans;\n          maxY = points[j][1];\n        }\n    }\n\n    return ans;\n  }\n};"
     }
   },
   "3026": {
