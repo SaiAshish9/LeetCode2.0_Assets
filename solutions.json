@@ -4015,7 +4015,7 @@
   },
   "796": {
     "solution": {
-      "string-matching": ""
+      "string-matching": "class Solution {\npublic:\n    bool rotateString(string s, string goal) {\n        return s.length() == goal.length() &&\n               (s + s).find(goal) != string::npos;\n    }\n};"
     }
   },
   "797": {
