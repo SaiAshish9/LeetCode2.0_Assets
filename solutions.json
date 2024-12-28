@@ -15655,7 +15655,7 @@
   },
   "3203": {
     "solution": {
-      "tree": ""
+      "tree": "class Solution {\npublic:\n    int minimumDiameterAfterMerge(vector<vector<int>>& edges1,\n                                  vector<vector<int>>& edges2) {\n        const int diameter1 = getDiameter(edges1);\n        const int diameter2 = getDiameter(edges2);\n        const int combinedDiameter =\n            (diameter1 + 1) / 2 + (diameter2 + 1) / 2 + 1;\n        return max({diameter1, diameter2, combinedDiameter});\n    }\n\nprivate:\n    int getDiameter(const vector<vector<int>>& edges) {\n        const int n = edges.size() + 1;\n        vector<vector<int>> graph(n);\n\n        for (const vector<int>& edge : edges) {\n            const int u = edge[0];\n            const int v = edge[1];\n            graph[u].push_back(v);\n            graph[v].push_back(u);\n        }\n\n        int maxDiameter = 0;\n        maxDepth(graph, 0, -1, maxDiameter);\n        return maxDiameter;\n    }\n\n    int maxDepth(const vector<vector<int>>& graph, int u, int prev,\n                 int& maxDiameter) {\n        int maxSubDepth1 = 0;\n        int maxSubDepth2 = 0;\n        for (const int v : graph[u]) {\n            if (v == prev)\n                continue;\n            const int maxSubDepth = maxDepth(graph, v, u, maxDiameter);\n            if (maxSubDepth > maxSubDepth1) {\n                maxSubDepth2 = maxSubDepth1;\n                maxSubDepth1 = maxSubDepth;\n            } else if (maxSubDepth > maxSubDepth2) {\n                maxSubDepth2 = maxSubDepth;\n            }\n        }\n        maxDiameter = max(maxDiameter, maxSubDepth1 + maxSubDepth2);\n        return 1 + maxSubDepth1;\n    }\n};"
     }
   },
   "3204": {
