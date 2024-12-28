@@ -12137,7 +12137,7 @@
   },
   "2416": {
     "solution": {
-      "trie": ""
+      "trie": "class Solution {\npublic:\n    vector<int> sumPrefixScores(vector<string>& words) {\n        struct TrieNode {\n            unordered_map<char, TrieNode*> children;\n            int count = 0;  \n        };\n\n        TrieNode* root = new TrieNode();\n\n        auto insert = [&](const string& word) {\n            TrieNode* node = root;\n            for (char c : word) {\n                if (!node->children.count(c))\n                    node->children[c] = new TrieNode();\n                node = node->children[c];\n                ++node->count; \n            }\n        };\n\n        auto getPrefixScore = [&](const string& word) -> int {\n            TrieNode* node = root;\n            int score = 0;\n            for (char c : word) {\n                node = node->children[c];\n                score += node->count;  \n            }\n            return score;\n        };\n\n        for (const string& word : words)\n            insert(word);\n\n        vector<int> result;\n        for (const string& word : words)\n            result.push_back(getPrefixScore(word));\n\n        return result;\n    }\n};\n"
     }
   },
   "2417": {
