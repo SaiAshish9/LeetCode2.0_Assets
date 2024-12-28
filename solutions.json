@@ -9340,7 +9340,7 @@
   },
   "1858": {
     "solution": {
-      "trie": ""
+      "trie": "struct TrieNode {\n    TrieNode *next[26] = {};\n    bool word = false;\n};\nclass Solution {\n    void addWord(TrieNode *node, string &s) {\n        for (char c : s) {\n            if (!node->next[c - 'a']) node->next[c - 'a'] = new TrieNode();\n            node = node->next[c - 'a'];\n        }\n        node->word = true;\n    }\n    string ans, path;\n    void dfs(TrieNode *node) {\n        for (int i = 0; i < 26; ++i) {\n            if (!node->next[i] || !node->next[i]->word) continue;\n            path += 'a' + i;\n            if (path.size() > ans.size()) ans = path;\n            dfs(node->next[i]);\n            path.pop_back();\n        }\n    }\npublic:\n    string longestWord(vector<string>& A) {\n        TrieNode root;\n        for (auto &s : A) addWord(&root, s);\n        dfs(&root);\n        return ans;\n    }\n};"
     }
   },
   "1859": {
