@@ -3461,7 +3461,7 @@
   },
   "686": {
     "solution": {
-      "string-matching": ""
+      "string-matching": "class Solution {\npublic:\n    int repeatedStringMatch(string a, string b) {\n        int repeatCount = 1; \n        string repeatedA = a;\n\n        while (repeatedA.size() < b.size()) {\n            repeatedA += a;\n            repeatCount++;\n        }\n\n        if (repeatedA.find(b) != string::npos) {\n            return repeatCount;\n        }\n\n        repeatedA += a;\n        repeatCount++;\n\n        if (repeatedA.find(b) != string::npos) {\n            return repeatCount;\n        }\n\n        return -1;\n    }\n};\n"
     }
   },
   "687": {
