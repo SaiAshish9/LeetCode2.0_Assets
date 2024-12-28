@@ -11360,7 +11360,7 @@
   },
   "2261": {
     "solution": {
-      "rolling-hash": ""
+      "trie": "class Solution {\npublic:\n    int countDistinct(vector<int>& nums, int k, int p) {\n        struct TrieNode {\n            unordered_map<int, TrieNode*> children;\n        };\n\n        TrieNode* root = new TrieNode();\n        int distinctCount = 0;\n\n        for (int i = 0; i < nums.size(); ++i) {\n            TrieNode* node = root;\n            int divisibleCount = 0;\n\n            for (int j = i; j < nums.size(); ++j) {\n                if (nums[j] % p == 0)\n                    ++divisibleCount;\n\n                // Stop adding subarrays if divisible count exceeds k\n                if (divisibleCount > k)\n                    break;\n\n                // If the current number is not in the trie, add it\n                if (!node->children.count(nums[j])) {\n                    node->children[nums[j]] = new TrieNode();\n                    ++distinctCount; // Each new node represents a new subarray\n                }\n\n                node = node->children[nums[j]];\n            }\n        }\n\n        return distinctCount;\n    }\n};\n"
     }
   },
   "2262": {
