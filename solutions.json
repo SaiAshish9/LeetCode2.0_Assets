@@ -14849,7 +14849,7 @@
   },
   "3042": {
     "solution": {
-      "rolling-hash": ""
+      "trie": "struct TrieNode {\n    unordered_map<int, shared_ptr<TrieNode>> children;\n    int count = 0;\n};\n\nclass Trie {\npublic:\n    int insert(const string& word) {\n        const int n = word.length();\n        int count = 0;\n        shared_ptr<TrieNode> node = root;\n        for (int i = 0; i < n; ++i) {\n            const int j = hash(word[i], word[n - 1 - i]);\n            if (node->children[j] == nullptr)\n                node->children[j] = make_shared<TrieNode>();\n            node = node->children[j];\n            count += node->count;\n        }\n        ++node->count;\n        return count;\n    }\n\nprivate:\n    shared_ptr<TrieNode> root = make_shared<TrieNode>();\n\n    static int hash(char prefix, char suffix) {\n        return 26 * (prefix - 'a') + (suffix - 'a');\n    }\n};\n\nclass Solution {\npublic:\n    long long countPrefixSuffixPairs(vector<string>& words) {\n        long ans = 0;\n        Trie trie;\n\n        for (const string& word : words)\n            ans += trie.insert(word);\n\n        return ans;\n    }\n};"
     }
   },
   "3043": {
