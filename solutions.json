@@ -2249,7 +2249,7 @@
   },
   "444": {
     "solution": {
-      "topological-sort": ""
+      "topological-sort": "class Solution {\npublic:\n    bool sequenceReconstruction(vector<int>& nums, vector<vector<int>>& sequences) {\n        int n = nums.size();\n        vector<vector<int>> g(n);\n        vector<int> indeg(n);\n        for (auto& seq : sequences) {\n            for (int i = 1; i < seq.size(); ++i) {\n                int a = seq[i - 1] - 1, b = seq[i] - 1;\n                g[a].push_back(b);\n                ++indeg[b];\n            }\n        }\n        queue<int> q;\n        for (int i = 0; i < n; ++i)\n            if (indeg[i] == 0) q.push(i);\n        while (!q.empty()) {\n            if (q.size() > 1) return false;\n            int i = q.front();\n            q.pop();\n            for (int j : g[i])\n                if (--indeg[j] == 0) q.push(j);\n        }\n        return true;\n    }\n};"
     }
   },
   "445": {
