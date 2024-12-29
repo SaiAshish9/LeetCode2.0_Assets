@@ -9335,7 +9335,7 @@
   },
   "1857": {
     "solution": {
-      "topological-sort": ""
+      "topological-sort": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int largestPathValue(string colors, vector<vector<int>>& edges) {\n        int n = colors.size();\n        vector<vector<int>> graph(n);\n        vector<int> inDegree(n, 0);\n        \n        for (auto& edge : edges) {\n            graph[edge[0]].push_back(edge[1]);\n            inDegree[edge[1]]++;\n        }\n        \n        vector<vector<int>> count(n, vector<int>(26, 0));\n        \n        queue<int> q;\n        for (int i = 0; i < n; i++) {\n            if (inDegree[i] == 0) {\n                q.push(i);\n            }\n        }\n        \n        int processedNodes = 0, maxColorValue = 0;\n        while (!q.empty()) {\n            int node = q.front();\n            q.pop();\n            processedNodes++;\n            \n            count[node][colors[node] - 'a']++;\n            maxColorValue = max(maxColorValue, count[node][colors[node] - 'a']);\n            \n            for (int neighbor : graph[node]) {\n                for (int c = 0; c < 26; c++) {\n                    count[neighbor][c] = max(count[neighbor][c], count[node][c]);\n                }\n                \n                inDegree[neighbor]--;\n                if (inDegree[neighbor] == 0) {\n                    q.push(neighbor);\n                }\n            }\n        }\n        \n        if (processedNodes < n) {\n            return -1;\n        }\n        \n        return maxColorValue;\n    }\n};\n"
     }
   },
   "1858": {
