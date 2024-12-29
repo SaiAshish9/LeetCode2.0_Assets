@@ -11856,7 +11856,7 @@
   },
   "2360": {
     "solution": {
-      "topological-sort": ""
+      "topological-sort": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int longestCycle(vector<int>& edges) {\n        int n = edges.size();\n        vector<int> inDegree(n, 0);\n\n        for (int i = 0; i < n; i++) {\n            if (edges[i] != -1) {\n                inDegree[edges[i]]++;\n            }\n        }\n\n        queue<int> q;\n        for (int i = 0; i < n; i++) {\n            if (inDegree[i] == 0) {\n                q.push(i);\n            }\n        }\n\n        while (!q.empty()) {\n            int node = q.front();\n            q.pop();\n\n            int neighbor = edges[node];\n            if (neighbor != -1) {\n                inDegree[neighbor]--;\n                if (inDegree[neighbor] == 0) {\n                    q.push(neighbor);\n                }\n            }\n        }\n\n        int longestCycle = -1;\n        vector<bool> visited(n, false);\n\n        for (int i = 0; i < n; i++) {\n            if (inDegree[i] > 0 && !visited[i]) {\n                int current = i, length = 0;\n                while (!visited[current]) {\n                    visited[current] = true;\n                    current = edges[current];\n                    length++;\n                }\n                longestCycle = max(longestCycle, length);\n            }\n        }\n\n        return longestCycle;\n    }\n};\n"
     }
   },
   "2361": {
