@@ -7359,7 +7359,7 @@
   },
   "1462": {
     "solution": {
-      "topological-sort": ""
+      "topological-sort": "import java.util.*;\n\nclass Solution {\n    public List<Boolean> checkIfPrerequisite(int numCourses, int[][] prerequisites, int[][] queries) {\n        List<List<Integer>> graph = new ArrayList<>();\n        for (int i = 0; i < numCourses; i++) {\n            graph.add(new ArrayList<>());\n        }\n        \n        int[] inDegree = new int[numCourses];\n        boolean[][] prerequisite = new boolean[numCourses][numCourses];\n\n        for (int[] edge : prerequisites) {\n            graph.get(edge[0]).add(edge[1]);\n            inDegree[edge[1]]++;\n        }\n\n        Queue<Integer> queue = new LinkedList<>();\n        for (int i = 0; i < numCourses; i++) {\n            if (inDegree[i] == 0) {\n                queue.offer(i);\n            }\n        }\n\n        while (!queue.isEmpty()) {\n            int current = queue.poll();\n            for (int neighbor : graph.get(current)) {\n                prerequisite[current][neighbor] = true;\n                \n                for (int i = 0; i < numCourses; i++) {\n                    if (prerequisite[i][current]) {\n                        prerequisite[i][neighbor] = true;\n                    }\n                }\n                \n                inDegree[neighbor]--;\n                if (inDegree[neighbor] == 0) {\n                    queue.offer(neighbor);\n                }\n            }\n        }\n\n        List<Boolean> result = new ArrayList<>();\n        for (int[] query : queries) {\n            result.add(prerequisite[query[0]][query[1]]);\n        }\n\n        return result;\n    }\n}\n"
     }
   },
   "1463": {
