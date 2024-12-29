@@ -5337,7 +5337,7 @@
   },
   "1059": {
     "solution": {
-      "topological-sort": ""
+      "topological-sort": "import java.util.List;\n\nclass Solution {\n    private List<Integer>[] g;\n    private int[] f;\n    private boolean[] vis;\n    private int k;\n\n    public boolean leadsToDestination(int n, int[][] edges, int source, int destination) {\n        Set<Integer>[] graph = new Set[n]; // node => set of its next nodes\n\n        for (int i = 0; i < n; i++) {\n            graph[i] = new HashSet<Integer>();\n        }\n\n        int[] inDegrees = new int[n];\n        for (int[] edge : edges) {\n            graph[edge[0]].add(edge[1]);\n            inDegrees[edge[1]]++;\n        }\n\n        LinkedList<Integer> q = new LinkedList<Integer>();\n        q.add(source);\n\n        while (!q.isEmpty()) {\n            int cur = q.poll();\n            if (graph[cur].size() == 0 && cur != destination) {\n                return false;\n            }\n\n            for (int nei : graph[cur]) {\n                if (inDegrees[nei] < 0) {\n                    return false;\n                }\n\n                inDegrees[nei]--;\n\n                q.add(nei);\n            }\n        }\n\n        return true;\n    }\n}"
     }
   },
   "1060": {
