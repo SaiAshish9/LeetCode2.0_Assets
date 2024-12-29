@@ -5723,7 +5723,7 @@
   },
   "1136": {
     "solution": {
-      "topological-sort": ""
+      "topological-sort": "class Solution {\n    public int minimumSemesters(int n, int[][] relations) {\n        List<Integer>[] g = new List[n];\n        Arrays.setAll(g, k -> new ArrayList<>());\n        int[] indeg = new int[n];\n        for (var r : relations) {\n            int prev = r[0] - 1, nxt = r[1] - 1;\n            g[prev].add(nxt);\n            ++indeg[nxt];\n        }\n        Deque<Integer> q = new ArrayDeque<>();\n        for (int i = 0; i < n; ++i) {\n            if (indeg[i] == 0) {\n                q.offer(i);\n            }\n        }\n        int ans = 0;\n        while (!q.isEmpty()) {\n            ++ans;\n            for (int k = q.size(); k > 0; --k) {\n                int i = q.poll();\n                --n;\n                for (int j : g[i]) {\n                    if (--indeg[j] == 0) {\n                        q.offer(j);\n                    }\n                }\n            }\n        }\n        return n == 0 ? ans : -1;\n    }\n}"
     }
   },
   "1137": {
