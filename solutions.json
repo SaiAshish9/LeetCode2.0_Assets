@@ -1048,7 +1048,7 @@
   },
   "207": {
     "solution": {
-      "topological-sort": ""
+      "topological-sort": "class Solution {\n    public boolean canFinish(int numCourses, int[][] prerequisites) {\n        List<List<Integer>> adjList = new ArrayList<>();\n\n        for (int i = 0; i < numCourses; i++) {\n            adjList.add(new ArrayList<>());\n        }\n\n        int[] indegree = new int[numCourses];\n\n        for (int[] prerequisite : prerequisites) {\n            int course = prerequisite[0];\n            int prerequisiteCourse = prerequisite[1];\n\n            adjList.get(prerequisiteCourse).add(course);\n            indegree[course]++;\n        }\n\n        Queue<Integer> queue = new LinkedList<>();\n        for (int i = 0; i < numCourses; i++) {\n            if (indegree[i] == 0) {\n                queue.offer(i);\n            }\n        }\n\n        int visitedCount = 0;\n        \n        while (!queue.isEmpty()) {\n            int course = queue.poll();\n            visitedCount++;\n\n            for (int neighbor : adjList.get(course)) {\n                indegree[neighbor]--;\n                if (indegree[neighbor] == 0) {\n                    queue.offer(neighbor);\n                }\n            }\n        }\n\n        return visitedCount == numCourses;\n    }\n}"
     }
   },
   "208": {
@@ -1063,7 +1063,7 @@
   },
   "210": {
     "solution": {
-      "topological-sort": ""
+      "topological-sort": "class Solution {\n    public int[] findOrder(int numCourses, int[][] prerequisites) {\n        List<List<Integer>> adjList = new ArrayList<>();\n        Queue<Integer> queue = new LinkedList<>();\n        List<Integer> result = new ArrayList<>();\n\n        for (int i = 0; i < numCourses; i++) {\n            adjList.add(new ArrayList<>());\n        }\n\n        int[] in_degree = new int[numCourses];\n        int visitedCount = 0;\n\n        for (int[] prerequisite : prerequisites) {\n            int course = prerequisite[0];\n            int preRequisiteCourse = prerequisite[1];\n            adjList.get(preRequisiteCourse).add(course);\n            in_degree[course]++;\n        }\n\n        for (int i = 0; i < numCourses; i++) {\n            if (in_degree[i] == 0) {\n                queue.offer(i);\n            }\n        }\n\n        while (!queue.isEmpty()) {\n            int course = queue.poll();\n            result.add(course);\n            visitedCount++;\n            for (int neighbor : adjList.get(course)) {\n                if (--in_degree[neighbor] == 0) {\n                    queue.offer(neighbor);\n                }\n            }\n        }\n\n        if (visitedCount == numCourses) {\n            return result.stream().mapToInt(Integer::intValue).toArray();\n        }\n\n        return new int[0];\n    }\n}"
     }
   },
   "211": {
