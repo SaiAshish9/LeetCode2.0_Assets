@@ -3930,7 +3930,7 @@
   },
   "779": {
     "solution": {
-      "recursion": ""
+      "recursion": "class Solution {\npublic:\n    int kthGrammar(int n, int k) {\n        if (n == 1 && k == 1) {\n            return 0;\n        }\n\n        int mid = (1 << (n - 1)) / 2;\n        if (k <= mid) {\n            return kthGrammar(n - 1, k);\n        } else {\n            return 1 - kthGrammar(n - 1, k - mid);\n        }\n    }\n};\n"
     }
   },
   "780": {
