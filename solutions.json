@@ -809,7 +809,7 @@
   },
   "160": {
     "solution": {
-      "two-pointers": ""
+      "linked-list": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode(int x) : val(x), next(NULL) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* getIntersectionNode(ListNode* headA, ListNode* headB) {\n        if (headA == nullptr || headB == nullptr)\n            return nullptr;\n\n        int lenA = getLength(headA);\n        int lenB = getLength(headB);\n\n        while (lenA > lenB) {\n            headA = headA->next;\n            lenA--;\n        }\n        while (lenB > lenA) {\n            headB = headB->next;\n            lenB--;\n        }\n\n        while (headA != headB) {\n            headA = headA->next;\n            headB = headB->next;\n        }\n\n        return headA;\n    }\n\nprivate:\n    int getLength(ListNode* head) {\n        int length = 0;\n        while (head != nullptr) {\n            length++;\n            head = head->next;\n        }\n        return length;\n    }\n};\n"
     }
   },
   "161": {
