@@ -118,7 +118,7 @@
   },
   "24": {
     "solution": {
-      "recursion": ""
+      "linked-list": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* swapPairs(ListNode* head) {\n        ListNode* dummy = new ListNode(0, head);\n        ListNode* prev = dummy;\n\n        while (prev->next != nullptr && prev->next->next != nullptr) {\n            ListNode* first = prev->next;\n            ListNode* second = prev->next->next;\n\n            first->next = second->next;\n            second->next = first;\n            prev->next = second;\n\n            prev = first;\n        }\n\n        return dummy->next; \n    }\n};\n"
     }
   },
   "25": {
