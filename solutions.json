@@ -123,7 +123,7 @@
   },
   "25": {
     "solution": {
-      "recursion": ""
+      "recursion": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* reverseKNodes(ListNode* head, int k) {\n        ListNode* prev = nullptr;\n        ListNode* curr = head;\n        ListNode* next = nullptr;\n        int count = 0;\n\n        while (curr && count < k) {\n            next = curr->next;\n            curr->next = prev;\n            prev = curr;\n            curr = next;\n            count++;\n        }\n        return prev; \n    }\n\n    ListNode* reverseKGroup(ListNode* head, int k) {\n        if (!head || k == 1) return head; \n\n        ListNode* temp = head;\n        int count = 0;\n        while (temp && count < k) {\n            temp = temp->next;\n            count++;\n        }\n        if (count < k) return head; \n        ListNode* newHead = reverseKNodes(head, k);\n        head->next = reverseKGroup(temp, k);\n        return newHead;\n    }\n};\n"
     }
   },
   "26": {
