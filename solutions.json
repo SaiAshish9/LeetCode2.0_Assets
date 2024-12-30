@@ -12811,7 +12811,7 @@
   },
   "2550": {
     "solution": {
-      "recursion": ""
+      "recursion": "class Solution {\npublic:\n    const int MOD = 1e9 + 7;\n\n    int monkeyMove(int n) {\n        // We need to calculate 2^n - 2, because we can choose to move\n        // the monkeys in either clockwise or counter-clockwise direction\n        // for each of the n monkeys, but the two configurations (all clockwise\n        // and all counter-clockwise) don't result in any collision. Thus, the\n        // total number of collisions is 2^n - 2.\n\n        return (modExp(2, n, MOD) - 2 + MOD) % MOD;\n    }\n\nprivate:\n    long long modExp(long long base, long long exp, int mod) {\n        if (exp == 0)\n            return 1;\n        long long half = modExp(base, exp / 2, mod);\n        half = (half * half) % mod;\n        if (exp % 2 != 0) {\n            half = (half * base) % mod;\n        }\n        return half;\n    }\n};\n"
     }
   },
   "2551": {
