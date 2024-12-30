@@ -1384,7 +1384,7 @@
   },
   "273": {
     "solution": {
-      "recursion": ""
+      "recursion": "class Solution {\npublic:\n    string numberToWords(int num) {\n        if (num == 0) return \"Zero\";\n\n        vector<string> scales = {\"\", \"Thousand\", \"Million\", \"Billion\"};\n        string result = \"\";\n\n        int scaleIndex = 0;\n        while (num > 0) {\n            if (num % 1000 != 0) {\n                result = helper(num % 1000) + (scales[scaleIndex].empty() ? \"\" : \" \" + scales[scaleIndex]) + \n                         (result.empty() ? \"\" : \" \" + result);\n            }\n            num /= 1000;\n            scaleIndex++;\n        }\n\n        return result;\n    }\n\nprivate:\n    vector<string> belowTwenty = {\"\", \"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\", \"Ten\",\n                                  \"Eleven\", \"Twelve\", \"Thirteen\", \"Fourteen\", \"Fifteen\", \"Sixteen\", \"Seventeen\", \n                                  \"Eighteen\", \"Nineteen\"};\n\n    vector<string> tens = {\"\", \"\", \"Twenty\", \"Thirty\", \"Forty\", \"Fifty\", \"Sixty\", \"Seventy\", \"Eighty\", \"Ninety\"};\n\n    string helper(int num) {\n        if (num == 0) return \"\";\n\n        if (num < 20) {\n            return belowTwenty[num];\n        } else if (num < 100) {\n            return tens[num / 10] + (num % 10 == 0 ? \"\" : \" \" + belowTwenty[num % 10]);\n        } else {\n            return belowTwenty[num / 100] + \" Hundred\" + (num % 100 == 0 ? "," : ": " + helper(num % 100));\n        }\n    }\n};\n"
     }
   },
   "274": {
