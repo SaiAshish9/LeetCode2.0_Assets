@@ -9947,7 +9947,7 @@
   },
   "1979": {
     "solution": {
-      "number-theory": ""
+      "number-theory": "#include <algorithm>\n#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int gcd(int a, int b) {\n        while (b != 0) {\n            int temp = b;\n            b = a % b;\n            a = temp;\n        }\n        return a;\n    }\n\n    int findGCD(vector<int>& nums) {\n        int minNum = *min_element(nums.begin(), nums.end());\n        int maxNum = *max_element(nums.begin(), nums.end());\n\n        return gcd(minNum, maxNum);\n    }\n};\n"
     }
   },
   "1980": {
