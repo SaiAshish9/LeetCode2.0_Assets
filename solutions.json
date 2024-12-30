@@ -7419,7 +7419,7 @@
   },
   "1474": {
     "solution": {
-      "linked-list": ""
+      "linked-list": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode deleteNodes(ListNode head, int m, int n) {\n        ListNode pre = head;\n        while (pre != null) {\n            for (int i = 0; i < m - 1 && pre != null; ++i) {\n                pre = pre.next;\n            }\n            if (pre == null) {\n                return head;\n            }\n            ListNode cur = pre;\n            for (int i = 0; i < n && cur != null; ++i) {\n                cur = cur.next;\n            }\n            pre.next = cur == null ? null : cur.next;\n            pre = pre.next;\n        }\n        return head;\n    }\n}"
     }
   },
   "1475": {
