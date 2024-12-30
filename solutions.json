@@ -15725,7 +15725,7 @@
   },
   "3217": {
     "solution": {
-      "linked-list": ""
+      "linked-list": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* modifiedList(vector<int>& nums, ListNode* head) {\n        ListNode dummy(0, head);\n        unordered_set<int> numsSet{nums.begin(), nums.end()};\n\n        for (ListNode* curr = &dummy; curr->next != nullptr;)\n            if (numsSet.contains(curr->next->val))\n                curr->next = curr->next->next;\n            else\n                curr = curr->next;\n\n        return dummy.next;\n    }\n};"
     }
   },
   "3218": {
