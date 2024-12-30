@@ -1977,7 +1977,7 @@
   },
   "390": {
     "solution": {
-      "recursion": ""
+      "recursion": "class Solution {\npublic:\n    int lastRemaining(int n) { return helper(n, true); }\n\nprivate:\n    int helper(int n, bool leftToRight) {\n        if (n == 1) {\n            return 1;\n        }\n\n        if (leftToRight || n % 2 == 1) {\n            return 2 * helper(n / 2, !leftToRight);\n        } else {\n            return 2 * helper(n / 2, !leftToRight) - 1;\n        }\n    }\n};\n"
     }
   },
   "391": {
