@@ -10343,7 +10343,7 @@
   },
   "2058": {
     "solution": {
-      "linked-list": ""
+      "linked-list": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    vector<int> nodesBetweenCriticalPoints(ListNode* head) {\n        if (!head || !head->next || !head->next->next)\n            return {-1, -1};\n\n        vector<int> criticalIndices;\n        ListNode* prev = head;\n        ListNode* curr = head->next;\n        int index = 1;\n\n        while (curr->next) {\n            if ((curr->val > prev->val && curr->val > curr->next->val) ||\n                (curr->val < prev->val && curr->val < curr->next->val)) {\n                criticalIndices.push_back(index);\n            }\n            prev = curr;\n            curr = curr->next;\n            index++;\n        }\n\n        if (criticalIndices.size() < 2)\n            return {-1, -1};\n\n        int minDist = INT_MAX;\n        for (int i = 1; i < criticalIndices.size(); ++i) {\n            minDist = min(minDist, criticalIndices[i] - criticalIndices[i - 1]);\n        }\n\n        int maxDist = criticalIndices.back() - criticalIndices.front();\n        return {minDist, maxDist};\n    }\n};\n"
     }
   },
   "2059": {
