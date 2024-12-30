@@ -9907,7 +9907,7 @@
   },
   "1971": {
     "solution": {
-      "union-find": ""
+      "union-find": "#include <iostream>\n#include <vector>\n\nusing namespace std;\n\nclass Solution {\nprivate:\n    vector<int> parent;\n\n    int find(int x) {\n        if (parent[x] != x) {\n            parent[x] = find(parent[x]);\n        }\n        return parent[x];\n    }\n\n    void unionSets(int x, int y) {\n        int rootX = find(x);\n        int rootY = find(y);\n        if (rootX != rootY) {\n            parent[rootY] = rootX;\n        }\n    }\n\npublic:\n    bool validPath(int n, vector<vector<int>>& edges, int source,\n                   int destination) {\n        parent.resize(n);\n        for (int i = 0; i < n; ++i) {\n            parent[i] = i;\n        }\n\n        for (const auto& edge : edges) {\n            unionSets(edge[0], edge[1]);\n        }\n\n        return find(source) == find(destination);\n    }\n};\n"
     }
   },
   "1972": {
