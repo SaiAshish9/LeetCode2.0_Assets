@@ -14024,7 +14024,7 @@
   },
   "2862": {
     "solution": {
-      "number-theory": ""
+      "number-theory": "class Solution {\n public:\n  long long maximumSum(vector<int>& nums) {\n    long ans = 0;\n\n    for (int oddPower = 1; oddPower <= nums.size(); ++oddPower) {\n      long sum = 0;\n      for (int num = 1; num * num * oddPower <= nums.size(); ++num)\n        sum += nums[oddPower * num * num - 1];\n      ans = max(ans, sum);\n    }\n\n    return ans;\n  }\n};"
     }
   },
   "2863": {
