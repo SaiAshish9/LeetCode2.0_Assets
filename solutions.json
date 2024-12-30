@@ -14699,7 +14699,7 @@
   },
   "3012": {
     "solution": {
-      "number-theory": ""
+      "number-theory": "class Solution {\npublic:\n    int minimumArrayLength(vector<int>& nums) {\n        // Let the minimum number in the array `nums` be x.\n        // * If there exists any element nums[i] where nums[i] % x > 0, a new\n        //   minimum can be generated and all other numbers can be removed.\n        // * If not, count the frequency of x in `nums`. For each pair of x, a 0\n        // is\n        //   generated which cannot be removed. Therefore, the result will be\n        //   (frequency of x + 1) / 2.\n        const int minNum = ranges::min(nums);\n        if (ranges::any_of(nums,\n                           [minNum](int num) { return num % minNum > 0; }))\n            return 1;\n        return (ranges::count(nums, minNum) + 1) / 2;\n    }\n};"
     }
   },
   "3013": {
