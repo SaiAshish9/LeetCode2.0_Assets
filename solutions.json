@@ -697,7 +697,7 @@
   },
   "138": {
     "solution": {
-      "linked-list": ""
+      "linked-list": "/*\n// Definition for a Node.\nclass Node {\npublic:\n    int val;\n    Node* next;\n    Node* random;\n\n    Node(int _val) {\n        val = _val;\n        next = NULL;\n        random = NULL;\n    }\n};\n*/\n\nclass Solution {\npublic:\n    Node* copyRandomList(Node* head) {\n        if (head == nullptr)\n            return nullptr;\n\n        Node* current = head;\n        while (current != nullptr) {\n            Node* newNode = new Node(current->val);\n            newNode->next = current->next;\n            current->next = newNode;\n            current = newNode->next;\n        }\n\n        current = head;\n        while (current != nullptr) {\n            if (current->random != nullptr) {\n                current->next->random = current->random->next;\n            }\n            current = current->next->next;\n        }\n\n        Node* dummy = new Node(0);\n        Node* copy = dummy;\n        current = head;\n\n        while (current != nullptr) {\n            Node* temp = current->next;\n            current->next = temp->next;\n            copy->next = temp;\n            copy = copy->next;\n            current = current->next;\n        }\n\n        return dummy->next;\n    }\n};\n"
     }
   },
   "139": {
