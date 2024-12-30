@@ -4660,7 +4660,7 @@
   },
   "924": {
     "solution": {
-      "union-find": ""
+      "union-find": "// Input: graph = [[1,1,0],[1,1,0],[0,0,1]], initial = [0,1]\nclass UF {\n    public UF(int n) {\n        id = new int[n];\n        for (int i = 0; i < n; ++i)\n            id[i] = i;\n    }\n\n    public void union(int u, int v) {\n        id[find(u)] = find(v);\n    }\n\n    public int find(int u) {\n        return id[u] == u ? u : (id[u] = find(id[u]));\n    }\n\n    private int[] id;\n}\n\nclass Solution {\n    public int minMalwareSpread(int[][] graph, int[] initial) {\n        final int n = graph.length;\n        UF uf = new UF(n);\n        int[] ufSize = new int[n];\n        int[] malwareCount = new int[n];\n        for (int i = 0; i < n; ++i)\n            for (int j = i + 1; j < n; ++j)\n                if (graph[i][j] == 1)\n                    uf.union(i, j);\n        for (int i = 0; i < n; ++i)\n            ++ufSize[uf.find(i)];\n        for (final int i : initial)\n            ++malwareCount[uf.find(i)];\n        Arrays.sort(initial);\n        int ans = initial[0];\n        int maxUfSize = 0;\n        for (final int i : initial) {\n            final int id = uf.find(i);\n            if (ufSize[id] > maxUfSize && malwareCount[id] == 1) {\n                maxUfSize = ufSize[id];\n                ans = i;\n            }\n        }\n\n        return ans;\n    }\n}"
     }
   },
   "925": {
