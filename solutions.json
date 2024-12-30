@@ -9662,7 +9662,7 @@
   },
   "1922": {
     "solution": {
-      "recursion": ""
+      "recursion": "class Solution {\npublic:\n    const int MOD = 1e9 + 7;\n\n    int countGoodNumbers(long long n) {\n        long long evenCount = (n + 1) / 2;\n        long long oddCount = n / 2;\n\n        long long evenPower = modExp(5, evenCount, MOD);\n        long long oddPower = modExp(4, oddCount, MOD);\n\n        return (evenPower * oddPower) % MOD;\n    }\n\nprivate:\n    long long modExp(long long base, long long exp, int mod) {\n        if (exp == 0)\n            return 1;\n        long long half = modExp(base, exp / 2, mod);\n        half = (half * half) % mod;\n        if (exp % 2 != 0) {\n            half = (half * base) % mod;\n        }\n        return half;\n    }\n};\n"
     }
   },
   "1923": {
