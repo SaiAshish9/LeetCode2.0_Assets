@@ -251,7 +251,7 @@
   },
   "50": {
     "solution": {
-      "recursion": ""
+      "recursion": "class Solution {\npublic:\n    double myPow(double x, int n) {\n        long long power = n;\n        if (power < 0) {\n            x = 1 / x;\n            power = -power;\n        }\n\n        return fastPow(x, power);\n    }\n\nprivate:\n    double fastPow(double x, long long n) {\n        if (n == 0)\n            return 1.0;\n        double half = fastPow(x, n / 2);\n\n        if (n % 2 == 0) {\n            return half * half;\n        } else {\n            return half * half * x;\n        }\n    }\n};\n"
     }
   },
   "51": {
