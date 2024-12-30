@@ -1187,7 +1187,7 @@
   },
   "234": {
     "solution": {
-      "two-pointers": ""
+      "linked-list": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n\n    public boolean isPalindrome(ListNode head) {\n        if (head == null || head.next == null)\n            return true;\n\n        ListNode slow = head, fast = head;\n        while (fast.next != null && fast.next.next != null) {\n            slow = slow.next;\n            fast = fast.next.next;\n        }\n\n        ListNode secondHalf = reverseLinkedList(slow.next);\n        \n        ListNode p1 = head;\n        ListNode p2 = secondHalf;\n        while (p2 != null) {\n            if (p1.val != p2.val)\n                return false;\n            p1 = p1.next;\n            p2 = p2.next;\n        }\n        \n        reverseLinkedList(secondHalf);\n\n        return true;\n    }\n\n    private ListNode reverseLinkedList(ListNode head) {\n        ListNode prev = null;\n        ListNode curr = head;\n        while (curr != null) {\n            ListNode nextNode = curr.next;\n            curr.next = prev;\n            prev = curr;\n            curr = nextNode;\n        }\n        return prev;\n    }\n\n}"
     }
   },
   "235": {
