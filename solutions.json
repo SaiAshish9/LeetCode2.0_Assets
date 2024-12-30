@@ -13302,7 +13302,7 @@
   },
   "2674": {
     "solution": {
-      "two-pointers": ""
+      "linked-list": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode[] splitCircularLinkedList(ListNode list) {\n        ListNode a = list, b = list;\n        while (b.next != list && b.next.next != list) {\n            a = a.next;\n            b = b.next.next;\n        }\n        if (b.next != list) {\n            b = b.next;\n        }\n        ListNode list2 = a.next;\n        b.next = list2;\n        a.next = list;\n        return new ListNode[] {list, list2};\n    }\n}"
     }
   },
   "2678": {
