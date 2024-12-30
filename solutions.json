@@ -5573,7 +5573,7 @@
   },
   "1106": {
     "solution": {
-      "stack": ""
+      "recursion": "class Solution {\npublic:\n    bool parseBoolExpr(string expression) {\n        return evaluate(expression, 0, expression.size() - 1);\n    }\n\nprivate:\n    bool evaluate(const string& expr, int start, int end) {\n        char op = expr[start];\n\n        if (op == 't')\n            return true;\n        if (op == 'f')\n            return false;\n\n        if (op == '!') {\n            return !evaluate(expr, start + 2, end - 1);\n        } else if (op == '&') {\n            bool result = true;\n            for (int i = start + 2; i < end;) {\n                int nextPos = findNext(expr, i, end);\n                result &= evaluate(expr, i, nextPos - 1);\n                i = nextPos + 1;\n            }\n            return result;\n        } else if (op == '|') {\n            bool result = false;\n            for (int i = start + 2; i < end;) {\n                int nextPos = findNext(expr, i, end);\n                result |= evaluate(expr, i, nextPos - 1);\n                i = nextPos + 1;\n            }\n            return result;\n        }\n        return false;\n    }\n\n    int findNext(const string& expr, int start, int end) {\n        int balance = 0;\n        for (int i = start; i <= end; ++i) {\n            if (expr[i] == '(')\n                ++balance;\n            else if (expr[i] == ')')\n                --balance;\n            else if (expr[i] == ',' && balance == 0)\n                return i;\n        }\n        return end + 1;\n    }\n};\n"
     }
   },
   "1107": {
