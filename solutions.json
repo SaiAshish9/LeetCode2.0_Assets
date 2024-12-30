@@ -2765,7 +2765,7 @@
   },
   "547": {
     "solution": {
-      "union-find": ""
+      "union-find": "class UF {\n  public UF(int n) {\n    size = n;\n    id = new int[n];\n    for (int i = 0; i < n; ++i)\n      id[i] = i;\n  }\n\n  public void union(int u, int v) {\n    final int i = find(u);\n    final int j = find(v);\n    if (i == j)\n      return;\n    id[i] = j;\n    --size;\n  }\n\n  public int getSize() {\n    return size;\n  }\n\n  private int size;\n  private int[] id;\n\n  private int find(int u) {\n    return id[u] == u ? u : (id[u] = find(id[u]));\n  }\n}\n\nclass Solution {\n  public int findCircleNum(int[][] M) {\n    final int n = M.length;\n    UF uf = new UF(n);\n\n    for (int i = 0; i < n; ++i)\n      for (int j = i; j < n; ++j)\n        if (M[i][j] == 1)\n          uf.union(i, j);\n\n    return uf.getSize();\n  }\n}\n"
     }
   },
   "548": {
