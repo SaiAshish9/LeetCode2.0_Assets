@@ -7509,7 +7509,7 @@
   },
   "1492": {
     "solution": {
-      "number-theory": ""
+      "number-theory": "#include <vector>\n#include <cmath>\nusing namespace std;\n\nclass Solution {\npublic:\n    int kthFactor(int n, int k) {\n        vector<int> factors;\n        \n        for (int i = 1; i <= sqrt(n); ++i) {\n            if (n % i == 0) {\n                factors.push_back(i); \n                if (i != n / i) {  \n                    factors.push_back(n / i);  // n/i is also a factor\n                }\n            }\n        }\n        \n        sort(factors.begin(), factors.end());\n        \n        if (k > factors.size()) {\n            return -1;\n        }\n        \n        return factors[k - 1];\n    }\n};\n"
     }
   },
   "1493": {
