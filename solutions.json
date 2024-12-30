@@ -3451,7 +3451,7 @@
   },
   "684": {
     "solution": {
-      "union-find": ""
+      "union-find": "class Solution {\npublic:\n    vector<int> parent;\n\n    int find(int x) {\n        if (parent[x] != x) {\n            parent[x] = find(parent[x]); // Path compression\n        }\n        return parent[x];\n    }\n\n    bool unionSets(int x, int y) {\n        int rootX = find(x);\n        int rootY = find(y);\n        if (rootX == rootY) {\n            return false; // Cycle detected\n        }\n        parent[rootX] = rootY; // Union operation\n        return true;\n    }\n\n    vector<int> findRedundantConnection(vector<vector<int>>& edges) {\n        int n = edges.size();\n        parent.resize(n + 1);\n        for (int i = 1; i <= n; ++i) {\n            parent[i] = i;\n        }\n\n        for (const auto& edge : edges) {\n            if (!unionSets(edge[0], edge[1])) {\n                return edge;\n            }\n        }\n        return {};\n    }\n};\n"
     }
   },
   "685": {
