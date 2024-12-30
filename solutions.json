@@ -9812,7 +9812,7 @@
   },
   "1952": {
     "solution": {
-      "number-theory": ""
+      "number-theory": "#include <cmath>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool isPrime(int num) {\n        if (num <= 1) return false;\n        for (int i = 2; i <= sqrt(num); ++i) {\n            if (num % i == 0) return false;\n        }\n        return true;\n    }\n\n    bool isThree(int n) {\n        int root = sqrt(n);\n        \n        return root * root == n && isPrime(root);\n    }\n};\n"
     }
   },
   "1953": {
