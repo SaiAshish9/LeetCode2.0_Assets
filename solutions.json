@@ -12517,7 +12517,7 @@
   },
   "2492": {
     "solution": {
-      "union-find": ""
+      "breadth-first-search": "class Solution {\npublic:\n    int minScore(int n, vector<vector<int>>& roads) {\n        vector<vector<pair<int, int>>> graph(n + 1);\n        \n        for (auto& road : roads) {\n            int u = road[0], v = road[1], score = road[2];\n            graph[u].push_back({v, score});\n            graph[v].push_back({u, score});\n        }\n        \n        vector<bool> visited(n + 1, false);\n        queue<int> q;\n        q.push(1);\n        visited[1] = true;\n        int minScore = INT_MAX;\n        \n        while (!q.empty()) {\n            int node = q.front();\n            q.pop();\n            \n            for (auto& neighbor : graph[node]) {\n                int nextCity = neighbor.first;\n                int roadScore = neighbor.second;\n                \n                minScore = min(minScore, roadScore);\n                \n                if (!visited[nextCity]) {\n                    visited[nextCity] = true;\n                    q.push(nextCity);\n                }\n            }\n        }\n        \n        return minScore;\n    }\n};\n"
     }
   },
   "2493": {
