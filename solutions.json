@@ -540,7 +540,7 @@
   },
   "107": {
     "solution": {
-      "tree": ""
+      "breadth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<vector<int>> levelOrderBottom(TreeNode* root) {\n        vector<vector<int>> result;\n        if (!root) return result; \n        queue<TreeNode*> q;\n        q.push(root);\n\n        while (!q.empty()) {\n            int size = q.size();\n            vector<int> currentLevel;\n\n            for (int i = 0; i < size; ++i) {\n                TreeNode* currentNode = q.front();\n                q.pop();\n                currentLevel.push_back(currentNode->val);\n\n                if (currentNode->left) q.push(currentNode->left);\n                if (currentNode->right) q.push(currentNode->right);\n            }\n\n            result.push_back(currentLevel);\n        }\n\n        reverse(result.begin(), result.end());\n        return result;\n    }\n};\n"
     }
   },
   "108": {
