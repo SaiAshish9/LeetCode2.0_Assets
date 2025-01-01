@@ -1450,7 +1450,7 @@
   },
   "286": {
     "solution": {
-      "matrix": ""
+      "breadth-first-search": "class Solution {\npublic:\n    void wallsAndGates(vector<vector<int>>& rooms) {\n        int m = rooms.size();\n        int n = rooms[0].size();\n        queue<pair<int, int>> q;\n        for (int i = 0; i < m; ++i)\n            for (int j = 0; j < n; ++j)\n                if (rooms[i][j] == 0)\n                    q.emplace(i, j);\n        int d = 0;\n        vector<int> dirs = {-1, 0, 1, 0, -1};\n        while (!q.empty()) {\n            ++d;\n            for (int i = q.size(); i > 0; --i) {\n                auto p = q.front();\n                q.pop();\n                for (int j = 0; j < 4; ++j) {\n                    int x = p.first + dirs[j];\n                    int y = p.second + dirs[j + 1];\n                    if (x >= 0 && x < m && y >= 0 && y < n && rooms[x][y] == INT_MAX) {\n                        rooms[x][y] = d;\n                        q.emplace(x, y);\n                    }\n                }\n            }\n        }\n    }\n};"
     }
   },
   "287": {
