@@ -8205,7 +8205,7 @@
   },
   "1631": {
     "solution": {
-      "union-find": ""
+      "breadth-first-search": "class Solution {\npublic:\n    bool bfs(vector<vector<int>>& heights, int maxEffort) {\n        int m = heights.size(), n = heights[0].size();\n        vector<vector<bool>> visited(m, vector<bool>(n, false));\n        queue<pair<int, int>> q;\n        q.push({0, 0});\n        visited[0][0] = true;\n        \n        vector<pair<int, int>> directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};\n        \n        while (!q.empty()) {\n            auto [x, y] = q.front();\n            q.pop();\n            \n            if (x == m - 1 && y == n - 1) return true;\n            \n            for (auto [dx, dy] : directions) {\n                int nx = x + dx, ny = y + dy;\n                if (nx >= 0 && nx < m && ny >= 0 && ny < n && !visited[nx][ny]) {\n                    if (abs(heights[x][y] - heights[nx][ny]) <= maxEffort) {\n                        visited[nx][ny] = true;\n                        q.push({nx, ny});\n                    }\n                }\n            }\n        }\n        \n        return false;\n    }\n    \n    int minimumEffortPath(vector<vector<int>>& heights) {\n        int left = 0, right = INT_MAX;\n        int m = heights.size(), n = heights[0].size();\n        \n        while (left < right) {\n            int mid = left + (right - left) / 2;\n            if (bfs(heights, mid)) {\n                right = mid; \n            } else {\n                left = mid + 1;\n            }\n        }\n        \n        return left;\n    }\n};\n"
     }
   },
   "1632": {
