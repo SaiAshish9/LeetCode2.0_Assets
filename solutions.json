@@ -520,7 +520,7 @@
   },
   "103": {
     "solution": {
-      "tree": ""
+      "breadth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),\n * right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<vector<int>> zigzagLevelOrder(TreeNode* root) {\n        if (!root)\n            return {};\n\n        vector<vector<int>> ans;\n        deque<TreeNode*> q{{root}};\n        bool isLeftToRight = true;\n\n        while (!q.empty()) {\n            vector<int> currLevel;\n            for (int size = q.size(); size > 0; --size)\n                if (isLeftToRight) {\n                    TreeNode* node = q.front();\n                    q.pop_front();\n                    currLevel.push_back(node->val);\n                    if (node->left)\n                        q.push_back(node->left);\n                    if (node->right)\n                        q.push_back(node->right);\n                } else {\n                    TreeNode* node = q.back();\n                    q.pop_back();\n                    currLevel.push_back(node->val);\n                    if (node->right)\n                        q.push_front(node->right);\n                    if (node->left)\n                        q.push_front(node->left);\n                }\n            ans.push_back(currLevel);\n            isLeftToRight = !isLeftToRight;\n        }\n\n        return ans;\n    }\n};\n"
     }
   },
   "104": {
