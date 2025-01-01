@@ -8095,7 +8095,7 @@
   },
   "1609": {
     "solution": {
-      "tree": ""
+      "breadth-first-search": "class Solution {\npublic:\n    bool isEvenOddTree(TreeNode* root) {\n        if (!root) return true;\n        \n        queue<TreeNode*> q;\n        q.push(root);\n        int level = 0; \n        \n        while (!q.empty()) {\n            int size = q.size();\n            int prevVal = (level % 2 == 0) ? INT_MIN : INT_MAX; // Initial value based on level\n            \n            for (int i = 0; i < size; ++i) {\n                TreeNode* node = q.front();\n                q.pop();\n                \n                int val = node->val;\n                \n                if (level % 2 == 0) {\n                    if (val % 2 == 0 || val <= prevVal) return false; // Odd values, strictly increasing\n                } \n                else {\n                    if (val % 2 != 0 || val >= prevVal) return false; // Even values, strictly decreasing\n                }\n                \n                prevVal = val; \n\n                if (node->left) q.push(node->left);\n                if (node->right) q.push(node->right);\n            }\n            \n            level++;\n        }\n        \n        return true;\n    }\n};\n"
     }
   },
   "1610": {
