@@ -5688,7 +5688,7 @@
   },
   "1129": {
     "solution": {
-      "graph": ""
+      "breadth-first-search": "class Solution {\npublic:\n    vector<int> shortestAlternatingPaths(int n, vector<vector<int>>& redEdges, vector<vector<int>>& blueEdges) {\n        vector<vector<pair<int, int>>> graph(n); // {neighbor, color}\n        for (const auto& edge : redEdges) {\n            graph[edge[0]].emplace_back(edge[1], 0); // Red edge (color = 0)\n        }\n        for (const auto& edge : blueEdges) {\n            graph[edge[0]].emplace_back(edge[1], 1); // Blue edge (color = 1)\n        }\n\n        vector<vector<int>> dist(n, vector<int>(2, INT_MAX));\n        dist[0][0] = dist[0][1] = 0; \n\n        queue<tuple<int, int, int>> q;\n        q.emplace(0, 0, 0); \n        q.emplace(0, 1, 0); \n\n        while (!q.empty()) {\n            auto [node, color, d] = q.front();\n            q.pop();\n\n            for (const auto& [neighbor, edgeColor] : graph[node]) {\n                if (edgeColor != color && d + 1 < dist[neighbor][edgeColor]) {\n                    dist[neighbor][edgeColor] = d + 1;\n                    q.emplace(neighbor, edgeColor, d + 1);\n                }\n            }\n        }\n\n        vector<int> result(n, -1);\n        for (int i = 0; i < n; ++i) {\n            int minDist = min(dist[i][0], dist[i][1]);\n            result[i] = (minDist == INT_MAX) ? -1 : minDist;\n        }\n\n        return result;\n    }\n};\n"
     }
   },
   "1130": {
