@@ -560,7 +560,7 @@
   },
   "111": {
     "solution": {
-      "tree": ""
+      "breadth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),\n * right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int minDepth(TreeNode* root) {\n        if (!root)\n            return 0;\n\n        queue<pair<TreeNode*, int>> q;\n        q.push({root, 1});\n\n        while (!q.empty()) {\n            auto [node, depth] = q.front();\n            q.pop();\n\n            if (!node->left && !node->right) {\n                return depth;\n            }\n\n            if (node->left)\n                q.push({node->left, depth + 1});\n            if (node->right)\n                q.push({node->right, depth + 1});\n        }\n\n        return 0;\n    }\n};\n"
     }
   },
   "112": {
