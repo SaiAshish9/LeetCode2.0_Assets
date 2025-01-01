@@ -15425,7 +15425,7 @@
   },
   "3157": {
     "solution": {
-      "tree": ""
+      "breadth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int minimumLevel(TreeNode* root) {\n        queue<TreeNode*> q{{root}};\n        int ans = 0;\n        long long s = 1LL << 60;\n        for (int level = 1; q.size(); ++level) {\n            long long t = 0;\n            for (int m = q.size(); m; --m) {\n                TreeNode* node = q.front();\n                q.pop();\n                t += node->val;\n                if (node->left) {\n                    q.push(node->left);\n                }\n                if (node->right) {\n                    q.push(node->right);\n                }\n            }\n            if (s > t) {\n                s = t;\n                ans = level;\n            }\n        }\n        return ans;\n    }\n};"
     }
   },
   "3158": {
