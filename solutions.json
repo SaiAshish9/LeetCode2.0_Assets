@@ -6227,7 +6227,7 @@
   },
   "1236": {
     "solution": {
-      "interactive": ""
+      "breadth-first-search": "class Solution {\npublic:\n    vector<string> ans;\n    unordered_set<string> vis;\n\n    vector<string> crawl(string startUrl, HtmlParser htmlParser) {\n        dfs(startUrl, htmlParser);\n        return ans;\n    }\n\n    void dfs(string& url, HtmlParser& htmlParser) {\n        if (vis.count(url)) return;\n        vis.insert(url);\n        ans.push_back(url);\n        for (string next : htmlParser.getUrls(url))\n            if (host(url) == host(next))\n                dfs(next, htmlParser);\n    }\n\n    string host(string url) {\n        int i = 7;\n        string res;\n        for (; i < url.size(); ++i) {\n            if (url[i] == '/') break;\n            res += url[i];\n        }\n        return res;\n    }\n};"
     }
   },
   "1237": {
