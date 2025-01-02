@@ -9410,7 +9410,7 @@
   },
   "1872": {
     "solution": {
-      "prefix-sum": ""
+      "breadth-first-search": "class Solution {\n public:\n  int stoneGameVIII(vector<int>& stones) {\n    const int n = stones.size();\n    vector<int> prefix(n);\n    // dp[i] := the maximum score difference the current player can get when the\n    // game starts at i, i.e. stones[0..i] are merged into the value prefix[i]\n    vector<int> dp(n, INT_MIN);\n\n    partial_sum(stones.begin(), stones.end(), prefix.begin());\n\n    // Must take all when there're only two stones left.\n    dp[n - 2] = prefix.back();\n\n    for (int i = n - 3; i >= 0; --i)\n      dp[i] = max(dp[i + 1], prefix[i + 1] - dp[i + 1]);\n\n    return dp[0];\n  }\n};"
     }
   },
   "1873": {
