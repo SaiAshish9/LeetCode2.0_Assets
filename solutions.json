@@ -10198,7 +10198,7 @@
   },
   "2029": {
     "solution": {
-      "game-theory": ""
+      "game-theory": "class Solution {\npublic:\n    bool stoneGameIX(vector<int>& stones) {\n        vector<int> count(3);\n\n        for (const int stone : stones)\n            ++count[stone % 3];\n\n        if (count[0] % 2 == 0)\n            return min(count[1], count[2]) > 0;\n        return abs(count[1] - count[2]) > 2;\n    }\n};"
     }
   },
   "2030": {
