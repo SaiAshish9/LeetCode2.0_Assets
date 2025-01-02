@@ -7079,7 +7079,7 @@
   },
   "1406": {
     "solution": {
-      "game-theory": ""
+      "game-theory": "class Solution {\npublic:\n    string stoneGameIII(vector<int>& stoneValue) {\n        int n = stoneValue.size();\n        vector<int> dp(n + 1, 0); // dp[i] stores the maximum score difference\n                                  // Alice can achieve starting from i\n        vector<int> suffixSum(n + 1, 0);\n\n        for (int i = n - 1; i >= 0; --i) {\n            suffixSum[i] = suffixSum[i + 1] + stoneValue[i];\n        }\n\n        for (int i = n - 1; i >= 0; --i) {\n            dp[i] = INT_MIN;\n            for (int k = 1; k <= 3 && i + k <= n; ++k) {\n                int currentSum = suffixSum[i] - suffixSum[i + k];\n                dp[i] = max(dp[i], currentSum - dp[i + k]);\n            }\n        }\n\n        if (dp[0] > 0)\n            return \"Alice\";\n        else if (dp[0] < 0)\n            return \"Bob\";\n        else\n            return \"Tie\";\n    }\n};\n"
     }
   },
   "1407": {
