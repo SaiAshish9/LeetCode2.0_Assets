@@ -8480,7 +8480,7 @@
   },
   "1686": {
     "solution": {
-      "heap-(priority-queue)": ""
+      "breadth-first-search": "class Solution {\npublic:\n    int stoneGameVI(vector<int>& aliceValues, vector<int>& bobValues) {\n        int n = aliceValues.size();\n        vector<tuple<int, int, int>> stones;\n\n        // Create a combined array of (a[i] + b[i], a[i], b[i])\n        for (int i = 0; i < n; ++i) {\n            stones.emplace_back(aliceValues[i] + bobValues[i], aliceValues[i],\n                                bobValues[i]);\n        }\n\n        // Sort stones by combined value in descending order\n        sort(stones.rbegin(), stones.rend());\n\n        int aliceScore = 0, bobScore = 0;\n\n        // Alternate picking stones\n        for (int i = 0; i < n; ++i) {\n            if (i % 2 == 0) { // Alice's turn\n                aliceScore += get<1>(stones[i]);\n            } else { // Bob's turn\n                bobScore += get<2>(stones[i]);\n            }\n        }\n\n        // Compare scores to determine the result\n        if (aliceScore > bobScore) {\n            return 1; // Alice wins\n        } else if (bobScore > aliceScore) {\n            return -1; // Bob wins\n        } else {\n            return 0; // Tie\n        }\n    }\n};\n"
     }
   },
   "1687": {
