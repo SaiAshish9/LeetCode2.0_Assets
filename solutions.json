@@ -2459,7 +2459,7 @@
   },
   "486": {
     "solution": {
-      "game-theory": ""
+      "game-theory": "class Solution {\npublic:\n    bool predictTheWinner(vector<int>& nums) {\n        int n = nums.size();\n        vector<vector<int>> dp(n, vector<int>(n, 0));\n\n        // Base case: When the range is a single element\n        for (int i = 0; i < n; ++i) {\n            dp[i][i] = nums[i];\n        }\n\n        // Fill the DP table for ranges of increasing lengths\n        for (int len = 2; len <= n; ++len) {\n            for (int i = 0; i <= n - len; ++i) {\n                int j = i + len - 1;\n                dp[i][j] = max(nums[i] - dp[i+1][j], nums[j] - dp[i][j-1]);\n            }\n        }\n\n        // If dp[0][n-1] >= 0, Player 1 can win or tie\n        return dp[0][n-1] >= 0;\n    }\n};\n"
     }
   },
   "487": {
