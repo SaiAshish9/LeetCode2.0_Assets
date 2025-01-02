@@ -7599,7 +7599,7 @@
   },
   "1510": {
     "solution": {
-      "game-theory": ""
+      "game-theory": "class Solution {\npublic:\n    bool winnerSquareGame(int n) {\n        vector<bool> dp(n + 1, false); // dp[i] represents if Alice can win with i stones\n        \n        for (int i = 1; i <= n; ++i) {\n            for (int k = 1; k * k <= i; ++k) {\n                if (!dp[i - k * k]) {\n                    dp[i] = true;\n                    break;\n                }\n            }\n        }\n        \n        return dp[n];\n    }\n};\n"
     }
   },
   "1511": {
