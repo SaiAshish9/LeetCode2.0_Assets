@@ -5744,7 +5744,7 @@
   },
   "1140": {
     "solution": {
-      "prefix-sum": ""
+      "breadth-first-search": "class Solution {\npublic:\n    int stoneGameII(vector<int>& piles) {\n        int n = piles.size();\n        vector<vector<int>> dp(n + 1, vector<int>(n + 1, 0));\n        vector<int> suffixSum(n + 1, 0);\n\n        for (int i = n - 1; i >= 0; --i) {\n            suffixSum[i] = suffixSum[i + 1] + piles[i];\n        }\n\n        for (int i = n - 1; i >= 0; --i) {\n            for (int M = 1; M <= n; ++M) {\n                for (int X = 1; X <= 2 * M && i + X <= n; ++X) {\n                    dp[i][M] =\n                        max(dp[i][M], suffixSum[i] - dp[i + X][max(M, X)]);\n                }\n            }\n        }\n\n        return dp[0][1];\n    }\n};\n"
     }
   },
   "1141": {
