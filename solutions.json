@@ -11295,7 +11295,7 @@
   },
   "2248": {
     "solution": {
-      "counting": ""
+      "counting": "class Solution {\npublic:\n    vector<int> intersection(vector<vector<int>>& nums) {\n        unordered_map<int, int> freq;\n        int n = nums.size();\n\n        // Count the frequency of each element across all arrays\n        for (const auto& arr : nums) {\n            unordered_set<int>\n                seen; // To avoid counting duplicates within the same array\n            for (int num : arr) {\n                if (seen.find(num) == seen.end()) {\n                    freq[num]++;\n                    seen.insert(num);\n                }\n            }\n        }\n\n        // Collect the elements that appear in every array\n        vector<int> result;\n        for (const auto& [num, count] : freq) {\n            if (count == n) {\n                result.push_back(num);\n            }\n        }\n\n        // Sort the result\n        sort(result.begin(), result.end());\n\n        return result;\n    }\n};\n"
     }
   },
   "2249": {
