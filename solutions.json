@@ -15560,7 +15560,7 @@
   },
   "3184": {
     "solution": {
-      "counting": ""
+      "counting": "class Solution {\n public:\n  int countCompleteDayPairs(vector<int>& hours) {\n    int ans = 0;\n    vector<int> count(24);\n\n    for (const int hour : hours) {\n      ans += count[(24 - hour % 24) % 24];\n      ++count[hour % 24];\n    }\n\n    return ans;\n  }\n};"
     }
   },
   "3185": {
