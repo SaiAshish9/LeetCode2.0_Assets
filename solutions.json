@@ -3750,7 +3750,7 @@
   },
   "743": {
     "solution": {
-      "heap-(priority-queue)": ""
+      "shortest-path": "class T {\n  public int u;\n  public int d;\n  public T(int u, int d) {\n    this.u = u;\n    this.d = d;\n  }\n}\n\nclass Solution {\n  public int networkDelayTime(int[][] times, int n, int k) {\n    List<Pair<Integer, Integer>>[] graph = new List[n];\n    PriorityQueue<T> minHeap = new PriorityQueue<>((a, b) -> a.d - b.d);\n    boolean[] seen = new boolean[n];\n\n    for (int i = 0; i < n; ++i)\n      graph[i] = new ArrayList<>();\n\n    for (int[] t : times) {\n      final int u = t[0] - 1;\n      final int v = t[1] - 1;\n      final int w = t[2];\n      graph[u].add(new Pair<>(v, w));\n    }\n\n    minHeap.offer(new T(k - 1, 0));\n\n    while (!minHeap.isEmpty()) {\n      final int u = minHeap.peek().u;\n      final int d = minHeap.poll().d;\n      if (seen[u])\n        continue;\n      seen[u] = true;\n      if (--n == 0)\n        return d;\n      for (var node : graph[u]) {\n        final int v = node.getKey();\n        final int w = node.getValue();\n        minHeap.offer(new T(v, d + w));\n      }\n    }\n\n    return -1;\n  }\n}\n"
     }
   },
   "744": {
