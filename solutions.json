@@ -12947,7 +12947,7 @@
   },
   "2577": {
     "solution": {
-      "matrix": ""
+      "shortest-path": "class Solution {\n public:\n  int minimumTime(vector<vector<int>>& grid) {\n    if (grid[0][1] > 1 && grid[1][0] > 1)\n      return -1;\n\n    constexpr int dirs[4][2] = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};\n    const int m = grid.size();\n    const int n = grid[0].size();\n    using T = tuple<int, int, int>;  // (time, i, j)\n    priority_queue<T, vector<T>, greater<>> minHeap;\n    vector<vector<bool>> seen(m, vector<bool>(n));\n\n    minHeap.emplace(0, 0, 0);\n    seen[0][0] = true;\n\n    while (!minHeap.empty()) {\n      const auto [time, i, j] = minHeap.top();\n      minHeap.pop();\n      if (i == m - 1 && j == n - 1)\n        return time;\n      for (const auto& [dx, dy] : dirs) {\n        const int x = i + dx;\n        const int y = j + dy;\n        if (x < 0 || x == m || y < 0 || y == n)\n          continue;\n        if (seen[x][y])\n          continue;\n        const int extraWait = (grid[x][y] - time) % 2 == 0 ? 1 : 0;\n        const int nextTime = max(time + 1, grid[x][y] + extraWait);\n        minHeap.emplace(nextTime, x, y);\n        seen[x][y] = true;\n      }\n    }\n\n    throw;\n  }\n};"
     }
   },
   "2578": {
