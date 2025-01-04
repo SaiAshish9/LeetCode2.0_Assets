@@ -7609,7 +7609,7 @@
   },
   "1512": {
     "solution": {
-      "counting": ""
+      "counting": "class Solution {\npublic:\n    int numIdenticalPairs(vector<int>& nums) {\n        unordered_map<int, int> freq; \n        int count = 0;\n\n        for (int num : nums) {\n            count += freq[num];\n            ++freq[num];     \n        }\n\n        return count;\n    }\n};\n"
     }
   },
   "1513": {
