@@ -10393,7 +10393,7 @@
   },
   "2068": {
     "solution": {
-      "counting": ""
+      "counting": "class Solution {\npublic:\n    bool checkAlmostEquivalent(string word1, string word2) {\n        unordered_map<char, int> freq1, freq2;\n        \n        for (char c : word1) {\n            freq1[c]++;\n        }\n        for (char c : word2) {\n            freq2[c]++;\n        }\n        \n        int diffCount = 0;\n        for (auto& [c, count] : freq1) {\n            if (freq2.find(c) == freq2.end()) {\n                // If character is missing in word2, it must appear only once in word1\n                if (count != 1) {\n                    return false;\n                }\n                diffCount++;\n            } else if (count != freq2[c]) {\n                // If counts differ, the difference must be exactly 1\n                if (abs(count - freq2[c]) != 1) {\n                    return false;\n                }\n                diffCount++;\n            }\n        }\n\n        for (auto& [c, count] : freq2) {\n            if (freq1.find(c) == freq1.end()) {\n                // If character is missing in word1, it must appear only once in word2\n                if (count != 1) {\n                    return false;\n                }\n                diffCount++;\n            }\n        }\n\n        // If there are more than two differences, return false\n        return diffCount == 2;\n    }\n};\n"
     }
   },
   "2069": {
