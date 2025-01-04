@@ -10278,7 +10278,7 @@
   },
   "2045": {
     "solution": {
-      "shortest-path": ""
+      "shortest-path": "class Solution {\npublic:\n    int secondMinimum(int n, vector<vector<int>>& edges, int time, int change) {\n        vector<vector<int>> graph(n + 1);\n        queue<pair<int, int>> q{{{1, 0}}};\n        // minTime[u][0] := the first minimum time to reach the node u\n        // minTime[u][1] := the second minimum time to reach the node u\n        vector<vector<int>> minTime(n + 1, vector<int>(2, INT_MAX));\n        minTime[1][0] = 0;\n\n        for (const vector<int>& edge : edges) {\n            const int u = edge[0];\n            const int v = edge[1];\n            graph[u].push_back(v);\n            graph[v].push_back(u);\n        }\n\n        while (!q.empty()) {\n            const auto [u, prevTime] = q.front();\n            q.pop();\n            // Start from green.\n            // If `numChangeSignal` is odd, now red.\n            // If `numChangeSignal` is even, now green.\n            const int numChangeSignal = prevTime / change;\n            const int waitTime =\n                numChangeSignal % 2 == 0 ? 0 : change - prevTime % change;\n            const int newTime = prevTime + waitTime + time;\n            for (const int v : graph[u])\n                if (newTime < minTime[v][0]) {\n                    minTime[v][0] = newTime;\n                    q.emplace(v, newTime);\n                } else if (minTime[v][0] < newTime && newTime < minTime[v][1]) {\n                    if (v == n)\n                        return newTime;\n                    minTime[v][1] = newTime;\n                    q.emplace(v, newTime);\n                }\n        }\n\n        throw;\n    }\n};"
     }
   },
   "2046": {
