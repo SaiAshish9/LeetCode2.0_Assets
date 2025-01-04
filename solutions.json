@@ -11505,7 +11505,7 @@
   },
   "2290": {
     "solution": {
-      "matrix": ""
+      "shortest-path": "class Solution {\n public:\n  int minimumObstacles(vector<vector<int>>& grid) {\n    const int m = grid.size();\n    const int n = grid[0].size();\n    constexpr int dirs[4][2] = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};\n    using T = tuple<int, int, int>;  // (d, i, j)\n    priority_queue<T, vector<T>, greater<>> minHeap;\n    vector<vector<int>> dist(m, vector<int>(n, INT_MAX));\n\n    minHeap.emplace(grid[0][0], 0, 0);\n    dist[0][0] = grid[0][0];\n\n    while (!minHeap.empty()) {\n      const auto [d, i, j] = minHeap.top();\n      minHeap.pop();\n      if (i == m - 1 && j == n - 1)\n        return d;\n      for (const auto& [dx, dy] : dirs) {\n        const int x = i + dx;\n        const int y = j + dy;\n        if (x < 0 || x == m || y < 0 || y == n)\n          continue;\n        const int newDist = d + grid[i][j];\n        if (newDist < dist[x][y]) {\n          dist[x][y] = newDist;\n          minHeap.emplace(newDist, x, y);\n        }\n      }\n    }\n\n    return dist[m - 1][n - 1];\n  }\n};"
     }
   },
   "2291": {
