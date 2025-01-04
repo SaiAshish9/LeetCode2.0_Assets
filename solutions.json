@@ -4448,7 +4448,7 @@
   },
   "882": {
     "solution": {
-      "heap-(priority-queue)": ""
+      "shortest-path": "class Solution {\n  public int reachableNodes(int[][] edges, int maxMoves, int n) {\n    List<Pair<Integer, Integer>>[] graph = new List[n];\n    Queue<int[]> minHeap = new PriorityQueue<>((a, b) -> a[0] - b[0]); // (d, u)\n    int[] dist = new int[n];\n    Arrays.fill(dist, maxMoves + 1);\n\n    for (int i = 0; i < n; ++i)\n      graph[i] = new ArrayList<>();\n\n    for (int[] e : edges) {\n      final int u = e[0];\n      final int v = e[1];\n      final int cnt = e[2];\n      graph[u].add(new Pair<>(v, cnt));\n      graph[v].add(new Pair<>(u, cnt));\n    }\n\n    minHeap.offer(new int[] {0, 0});\n    dist[0] = 0;\n\n    while (!minHeap.isEmpty()) {\n      final int d = minHeap.peek()[0];\n      final int u = minHeap.poll()[1];\n      if (d >= maxMoves)\n        break;\n      for (var node : graph[u]) {\n        final int v = node.getKey();\n        final int w = node.getValue();\n        final int newDist = d + w + 1;\n        if (newDist < dist[v]) {\n          dist[v] = newDist;\n          minHeap.offer(new int[] {newDist, v});\n        }\n      }\n    }\n\n    final int reachableNodes = (int) Arrays.stream(dist).filter(d -> d <= maxMoves).count();\n    int reachableSubnodes = 0;\n\n    for (int[] e : edges) {\n      final int u = e[0];\n      final int v = e[1];\n      final int cnt = e[2];\n      final int a = dist[u] > maxMoves ? 0 : Math.min(maxMoves - dist[u], cnt);\n      final int b = dist[v] > maxMoves ? 0 : Math.min(maxMoves - dist[v], cnt);\n      reachableSubnodes += Math.min(a + b, cnt);\n    }\n\n    return reachableNodes + reachableSubnodes;\n  }\n}"
     }
   },
   "883": {
