@@ -10318,7 +10318,7 @@
   },
   "2053": {
     "solution": {
-      "counting": ""
+      "counting": "class Solution {\npublic:\n    string kthDistinct(vector<string>& arr, int k) {\n        unordered_map<string, int> freq; \n        \n        for (const string& str : arr) {\n            ++freq[str];\n        }\n\n        vector<string> distinctStrings;\n        for (const string& str : arr) {\n            if (freq[str] == 1) {\n                distinctStrings.push_back(str);\n            }\n        }\n\n        // Return the k-th distinct string if it exists\n        return (k <= distinctStrings.size()) ? distinctStrings[k - 1] : \"\";\n    }\n};\n"
     }
   },
   "2054": {
