@@ -1942,7 +1942,7 @@
   },
   "383": {
     "solution": {
-      "counting": ""
+      "counting": "class Solution {\npublic:\n    bool canConstruct(string ransomNote, string magazine) {\n        vector<int> count(26);\n\n        for (const char c : magazine)\n            ++count[c - 'a'];\n\n        for (const char c : ransomNote) {\n            if (count[c - 'a'] == 0)\n                return false;\n            --count[c - 'a'];\n        }\n\n        return true;\n    }\n};"
     }
   },
   "384": {
