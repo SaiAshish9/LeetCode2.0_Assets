@@ -10519,7 +10519,7 @@
   },
   "2093": {
     "solution": {
-      "heap-(priority-queue)": ""
+      "shortest-path": "class Solution {\npublic:\n    int minimumCost(int n, vector<vector<int>>& E, int d) {\n        vector<unordered_map<int, int>> G(n);\n        for (auto &e : E) {\n            int u = e[0], v = e[1], w = e[2];\n            G[u][v] = w;\n            G[v][u] = w;\n        }\n        vector<vector<int>> dist(d + 1, vector<int>(n, INT_MAX));\n        auto dijkstra = [&](int i) {\n            priority_queue<pair<int, int>, vector<pair<int, int>>, greater<>> pq;\n            pq.emplace(0, 0);\n            dist[i][0] = 0;\n            while (pq.size()) {\n                auto [cost, u] = pq.top();\n                pq.pop();\n                if (cost > dist[i][u]) continue;\n                for (auto &[v, w] : G[u]) {\n                    int keep = cost + w, use = i > 0 ? dist[i - 1][u] + w / 2 : INT_MAX, newCost = min(use, keep);\n                    if (dist[i][v] > newCost) {\n                        dist[i][v] = newCost;\n                        pq.emplace(dist[i][v], v);\n                    }\n                }\n            }\n        };\n        for (int i = 0; i <= d; ++i) dijkstra(i);\n        return dist[d][n - 1] == INT_MAX ? -1 : dist[d][n - 1];\n    }\n};"
     }
   },
   "2094": {
