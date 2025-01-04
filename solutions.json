@@ -15475,7 +15475,7 @@
   },
   "3167": {
     "solution": {
-      "counting": ""
+      "counting": "class Solution {\n public:\n  string betterCompression(string compressed) {\n    string ans;\n    vector<int> count(26);\n\n    for (int i = 0; i < compressed.length();) {\n      const char c = compressed[i++];\n      int freq = 0;\n      while (i < compressed.length() && isdigit(compressed[i]))\n        freq = freq * 10 + (compressed[i++] - '0');\n      count[c - 'a'] += freq;\n    }\n\n    for (char c = 'a'; c <= 'z'; ++c)\n      if (count[c - 'a'] > 0)\n        ans += c + to_string(count[c - 'a']);\n\n    return ans;\n  }\n};"
     }
   },
   "3168": {
