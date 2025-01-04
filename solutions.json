@@ -9932,7 +9932,7 @@
   },
   "1976": {
     "solution": {
-      "topological-sort": ""
+      "shortest-path": "class Solution {\npublic:\n    int countPaths(int n, vector<vector<int>>& roads) {\n        vector<vector<pair<int, int>>> graph(n);\n\n        for (const vector<int>& road : roads) {\n            const int u = road[0];\n            const int v = road[1];\n            const int w = road[2];\n            graph[u].emplace_back(v, w);\n            graph[v].emplace_back(u, w);\n        }\n\n        return dijkstra(graph, 0, n - 1);\n    }\n\nprivate:\n    int dijkstra(const vector<vector<pair<int, int>>>& graph, int src,\n                 int dst) {\n        constexpr int kMod = 1'000'000'007;\n        vector<long> ways(graph.size());\n        vector<long> dist(graph.size(), LONG_MAX);\n\n        ways[src] = 1;\n        dist[src] = 0;\n        using P = pair<long, int>; // (d, u)\n        priority_queue<P, vector<P>, greater<>> minHeap;\n        minHeap.emplace(dist[src], src);\n\n        while (!minHeap.empty()) {\n            const auto [d, u] = minHeap.top();\n            minHeap.pop();\n            if (d > dist[u])\n                continue;\n            for (const auto& [v, w] : graph[u])\n                if (d + w < dist[v]) {\n                    dist[v] = d + w;\n                    ways[v] = ways[u];\n                    minHeap.emplace(dist[v], v);\n                } else if (d + w == dist[v]) {\n                    ways[v] += ways[u];\n                    ways[v] %= kMod;\n                }\n        }\n\n        return ways[dst];\n    }\n};"
     }
   },
   "1977": {
