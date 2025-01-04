@@ -8790,7 +8790,7 @@
   },
   "1748": {
     "solution": {
-      "counting": ""
+      "counting": "class Solution {\npublic:\n    int sumOfUnique(vector<int>& nums) {\n        unordered_map<int, int> freq;\n        int sum = 0;\n\n        for (int num : nums) {\n            ++freq[num];\n        }\n\n        for (const auto& [num, count] : freq) {\n            if (count == 1) { \n                sum += num;\n            }\n        }\n\n        return sum;\n    }\n};\n"
     }
   },
   "1749": {
