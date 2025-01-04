@@ -9752,7 +9752,7 @@
   },
   "1940": {
     "solution": {
-      "counting": ""
+      "counting": "class Solution {\npublic:\n    vector<int> longestCommomSubsequence(vector<vector<int>>& arrays) {\n        unordered_map<int, int> counter;\n        vector<int> res;\n        int n = arrays.size();\n        for (auto array : arrays) {\n            for (auto e : array) {\n                counter[e] += 1;\n                if (counter[e] == n) {\n                    res.push_back(e);\n                }\n            }\n        }\n        return res;\n    }\n};"
     }
   },
   "1941": {
