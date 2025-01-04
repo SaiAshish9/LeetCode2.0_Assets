@@ -6112,7 +6112,7 @@
   },
   "1213": {
     "solution": {
-      "counting": ""
+      "counting": "class Solution {\npublic:\n    vector<int> arraysIntersection(vector<int>& arr1, vector<int>& arr2, vector<int>& arr3) {\n        vector<int> ans;\n        int cnt[2001]{};\n        for (int x : arr1) {\n            ++cnt[x];\n        }\n        for (int x : arr2) {\n            ++cnt[x];\n        }\n        for (int x : arr3) {\n            if (++cnt[x] == 3) {\n                ans.push_back(x);\n            }\n        }\n        return ans;\n    }\n};"
     }
   },
   "1214": {
