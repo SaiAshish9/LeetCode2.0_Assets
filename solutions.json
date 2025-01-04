@@ -14869,7 +14869,7 @@
   },
   "3046": {
     "solution": {
-      "counting": ""
+      "counting": "class Solution {\npublic:\n    bool isPossibleToSplit(vector<int>& nums) {\n        constexpr int kMax = 100;\n        vector<int> count(kMax + 1);\n\n        for (const int num : nums)\n            ++count[num];\n\n        return ranges::all_of(count, [](int freq) { return freq <= 2; });\n    }\n};"
     }
   },
   "3047": {
