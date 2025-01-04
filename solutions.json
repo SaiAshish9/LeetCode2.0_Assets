@@ -12422,7 +12422,7 @@
   },
   "2473": {
     "solution": {
-      "heap-(priority-queue)": ""
+      "shortest-path": "class Solution {\n public:\n  vector<long long> minCost(int n, vector<vector<int>>& roads,\n                            vector<int>& appleCost, int k) {\n    vector<long long> ans;\n    vector<vector<pair<int, long>>> graph(n);\n\n    for (const vector<int>& road : roads) {\n      const int u = road[0] - 1;\n      const int v = road[1] - 1;\n      const int w = road[2];\n      graph[u].emplace_back(v, w);\n      graph[v].emplace_back(u, w);\n    }\n\n    for (int i = 0; i < n; ++i)\n      ans.push_back(dijkstra(graph, i, appleCost, k));\n\n    return ans;\n  }\n\n private:\n  long dijkstra(const vector<vector<pair<int, long>>>& graph, int i,\n                const vector<int>& appleCost, int k) {\n    vector<long> forwardCost(graph.size(), LONG_MAX);\n    vector<long> totalCost(graph.size(), LONG_MAX);\n    forwardCost[i] = 0;\n    queue<int> q{{i}};\n\n    while (!q.empty()) {\n      const int u = q.front();\n      q.pop();\n      for (const auto& [v, w] : graph[u]) {\n        const long nextCost = forwardCost[u] + w;\n        if (nextCost >= forwardCost[v])\n          continue;\n        forwardCost[v] = nextCost;\n        // Take apple at city v and return back to city i.\n        totalCost[v] = (k + 1) * nextCost + appleCost[v];\n        q.push(v);\n      }\n    }\n\n    return min(static_cast<long>(appleCost[i]), ranges::min(totalCost));\n  }\n};"
     }
   },
   "2474": {
