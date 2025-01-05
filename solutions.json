@@ -6694,7 +6694,7 @@
   },
   "1329": {
     "solution": {
-      "shortest-path": "#include <vector>\n#include <map>\n#include <algorithm>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<int>> diagonalSort(vector<vector<int>>& mat) {\n        int m = mat.size();\n        int n = mat[0].size();\n\n        map<int, vector<int>> diagonals;\n\n        for (int i = 0; i < m; ++i) {\n            for (int j = 0; j < n; ++j) {\n                diagonals[i - j].push_back(mat[i][j]);\n            }\n        }\n\n        for (auto& [key, diagonal] : diagonals) {\n            sort(diagonal.begin(), diagonal.end());\n        }\n\n        for (int i = 0; i < m; ++i) {\n            for (int j = 0; j < n; ++j) {\n                mat[i][j] = diagonals[i - j].front();\n                diagonals[i - j].erase(diagonals[i - j].begin());\n            }\n        }\n\n        return mat;\n    }\n};\n"
+      "matrix": ""
     }
   },
   "1330": {
@@ -7214,7 +7214,7 @@
   },
   "1433": {
     "solution": {
-      "shortest-path": "class Solution {\npublic:\n    bool checkIfCanBreak(string s1, string s2) {\n        sort(s1.begin(), s1.end());\n        sort(s2.begin(), s2.end());\n\n        bool s1Breaks = true;\n        bool s2Breaks = true;\n\n        for (int i = 0; i < s1.size(); ++i) {\n            if (s1[i] < s2[i]) {\n                s1Breaks = false;  // s1 cannot break s2\n            }\n            if (s2[i] < s1[i]) {\n                s2Breaks = false;  // s2 cannot break s1\n            }\n        }\n\n        return s1Breaks || s2Breaks;\n    }\n};\n"
+      "greedy": ""
     }
   },
   "1434": {
@@ -7304,7 +7304,7 @@
   },
   "1451": {
     "solution": {
-      "shortest-path": "#include <string>\n#include <vector>\n#include <sstream>\n#include <algorithm>\n#include <cctype>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    string arrangeWords(string text) {\n        // Convert the first letter to lowercase\n        text[0] = tolower(text[0]);\n\n        // Split the text into words\n        vector<pair<string, int>> words; // Pair of word and its original index\n        stringstream ss(text);\n        string word;\n        int index = 0;\n\n        while (ss >> word) {\n            words.emplace_back(word, index++);\n        }\n\n        // Sort words by length, maintaining stable order\n        stable_sort(words.begin(), words.end(), [](const pair<string, int>& a, const pair<string, int>& b) {\n            return a.first.size() < b.first.size();\n        });\n\n        // Reconstruct the sentence\n        string result;\n        for (const auto& w : words) {\n            if (!result.empty()) {\n                result += \" \";\n            }\n            result += w.first;\n        }\n\n        // Capitalize the first letter of the result\n        result[0] = toupper(result[0]);\n\n        return result;\n    }\n};\n"
+      "sorting": ""
     }
   },
   "1452": {
@@ -8145,7 +8145,7 @@
   },
   "1619": {
     "solution": {
-      "shortest-path": "#include <string>\n#include <vector>\n#include <sstream>\n#include <algorithm>\n#include <cctype>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    string arrangeWords(string text) {\n        // Convert the first letter to lowercase\n        text[0] = tolower(text[0]);\n\n        // Split the text into words\n        vector<pair<string, int>> words; // Pair of word and its original index\n        stringstream ss(text);\n        string word;\n        int index = 0;\n\n        while (ss >> word) {\n            words.emplace_back(word, index++);\n        }\n\n        // Sort words by length, maintaining stable order\n        stable_sort(words.begin(), words.end(), [](const pair<string, int>& a, const pair<string, int>& b) {\n            return a.first.size() < b.first.size();\n        });\n\n        // Reconstruct the sentence\n        string result;\n        for (const auto& w : words) {\n            if (!result.empty()) {\n                result += \" \";\n            }\n            result += w.first;\n        }\n\n        // Capitalize the first letter of the result\n        result[0] = toupper(result[0]);\n\n        return result;\n    }\n};\n"
+      "sorting": ""
     }
   },
   "1620": {
@@ -8600,7 +8600,7 @@
   },
   "1710": {
     "solution": {
-      "shortest-path": "#include <vector>\n#include <algorithm>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    int maximumUnits(vector<vector<int>>& boxTypes, int truckSize) {\n        // Step 1: Sort boxTypes by units per box in descending order\n        sort(boxTypes.begin(), boxTypes.end(), [](const vector<int>& a, const vector<int>& b) {\n            return a[1] > b[1];\n        });\n\n        int maxUnits = 0;\n        for (const auto& box : boxTypes) {\n            int boxCount = box[0];\n            int unitsPerBox = box[1];\n            \n            // Step 2: Take as many boxes as possible from the current type\n            int boxesToTake = min(boxCount, truckSize);\n            maxUnits += boxesToTake * unitsPerBox;\n            truckSize -= boxesToTake;\n\n            // Step 3: Stop if the truck is full\n            if (truckSize == 0) {\n                break;\n            }\n        }\n\n        return maxUnits;\n    }\n};\n"
+      "greedy": ""
     }
   },
   "1711": {
@@ -9617,7 +9617,7 @@
   },
   "1913": {
     "solution": {
-      "sorting": "class Solution {\npublic:\n    int maxProductDifference(vector<int>& nums) {\n        int largest1 = INT_MIN, largest2 = INT_MIN;\n        int smallest1 = INT_MAX, smallest2 = INT_MAX;\n\n        // Find the two largest and two smallest numbers\n        for (int num : nums) {\n            if (num > largest1) {\n                largest2 = largest1;\n                largest1 = num;\n            } else if (num > largest2) {\n                largest2 = num;\n            }\n\n            if (num < smallest1) {\n                smallest2 = smallest1;\n                smallest1 = num;\n            } else if (num < smallest2) {\n                smallest2 = num;\n            }\n        }\n\n        // Compute the product difference\n        return (largest1 * largest2) - (smallest1 * smallest2);\n    }\n};\n"
+      "sorting": ""
     }
   },
   "1914": {
@@ -10874,7 +10874,7 @@
   },
   "2164": {
     "solution": {
-      "sorting": ""
+      "sorting": "#include <vector>\n#include <algorithm>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> sortEvenOdd(vector<int>& nums) {\n        vector<int> even, odd;\n\n        for (int i = 0; i < nums.size(); i++) {\n            if (i % 2 == 0) {\n                even.push_back(nums[i]);\n            } else {\n                odd.push_back(nums[i]);\n            }\n        }\n\n        sort(even.begin(), even.end());\n        sort(odd.rbegin(), odd.rend()); // reverse sort\n\n        int evenIndex = 0, oddIndex = 0;\n        for (int i = 0; i < nums.size(); i++) {\n            if (i % 2 == 0) {\n                nums[i] = even[evenIndex++];\n            } else {\n                nums[i] = odd[oddIndex++];\n            }\n        }\n\n        return nums;\n    }\n};\n"
     }
   },
   "2165": {
