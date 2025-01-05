@@ -4493,7 +4493,7 @@
   },
   "891": {
     "solution": {
-      "sorting": ""
+      "sorting": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int sumSubseqWidths(vector<int>& nums) {\n        const int MOD = 1e9 + 7;\n        int n = nums.size();\n        sort(nums.begin(), nums.end());\n        \n        // Precompute powers of 2 modulo MOD\n        vector<long long> power(n, 1);\n        for (int i = 1; i < n; ++i) {\n            power[i] = (power[i - 1] * 2) % MOD;\n        }\n        \n        long long result = 0;\n        for (int i = 0; i < n; ++i) {\n            long long add = (power[i] - power[n - i - 1] + MOD) % MOD;\n            result = (result + nums[i] * add % MOD) % MOD;\n        }\n        \n        return result;\n    }\n};\n"
     }
   },
   "892": {
