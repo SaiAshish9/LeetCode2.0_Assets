@@ -6694,7 +6694,7 @@
   },
   "1329": {
     "solution": {
-      "matrix": ""
+      "shortest-path": "#include <vector>\n#include <map>\n#include <algorithm>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<int>> diagonalSort(vector<vector<int>>& mat) {\n        int m = mat.size();\n        int n = mat[0].size();\n\n        map<int, vector<int>> diagonals;\n\n        for (int i = 0; i < m; ++i) {\n            for (int j = 0; j < n; ++j) {\n                diagonals[i - j].push_back(mat[i][j]);\n            }\n        }\n\n        for (auto& [key, diagonal] : diagonals) {\n            sort(diagonal.begin(), diagonal.end());\n        }\n\n        for (int i = 0; i < m; ++i) {\n            for (int j = 0; j < n; ++j) {\n                mat[i][j] = diagonals[i - j].front();\n                diagonals[i - j].erase(diagonals[i - j].begin());\n            }\n        }\n\n        return mat;\n    }\n};\n"
     }
   },
   "1330": {
