@@ -1277,7 +1277,7 @@
   },
   "252": {
     "solution": {
-      "sorting": ""
+      "sorting": "class Solution {\npublic:\n    bool canAttendMeetings(vector<vector<int>>& intervals) {\n        sort(intervals.begin(), intervals.end(), [](const vector<int>& a, const vector<int>& b) {\n            return a[0] < b[0];\n        });\n        for (int i = 1; i < intervals.size(); ++i) {\n            if (intervals[i][0] < intervals[i - 1][1]) {\n                return false;\n            }\n        }\n        return true;\n    }\n};"
     }
   },
   "253": {
