@@ -3990,7 +3990,7 @@
   },
   "791": {
     "solution": {
-      "sorting": ""
+      "sorting": "#include <string>\n#include <unordered_map>\nusing namespace std;\n\nclass Solution {\npublic:\n    string customSortString(string order, string s) {\n        // Frequency map for characters in `s`\n        unordered_map<char, int> freq;\n        for (char c : s) {\n            freq[c]++;\n        }\n\n        // Build the result string based on `order`\n        string result;\n        for (char c : order) {\n            if (freq.count(c)) {\n                result.append(freq[c], c); // Append `freq[c]` occurrences of `c`\n                freq.erase(c); // Remove character from map\n            }\n        }\n\n        // Append remaining characters (not in `order`)\n        for (auto& [c, count] : freq) {\n            result.append(count, c);\n        }\n\n        return result;\n    }\n};\n"
     }
   },
   "792": {
