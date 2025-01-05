@@ -5708,7 +5708,7 @@
   },
   "1133": {
     "solution": {
-      "sorting": ""
+      "sorting": "class Solution {\npublic:\n    int largestUniqueNumber(vector<int>& nums) {\n        int cnt[1001]{};\n        for (int& x : nums) {\n            ++cnt[x];\n        }\n        for (int x = 1000; ~x; --x) {\n            if (cnt[x] == 1) {\n                return x;\n            }\n        }\n        return -1;\n    }\n};"
     }
   },
   "1134": {
