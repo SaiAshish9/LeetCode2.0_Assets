@@ -4533,7 +4533,7 @@
   },
   "899": {
     "solution": {
-      "sorting": ""
+      "sorting": "class Solution {\n public:\n  string orderlyQueue(string s, int k) {\n    if (k > 1) {\n      ranges::sort(s);\n      return s;\n    }\n\n    string ans = s;\n\n    for (int i = 1; i < s.length(); ++i)\n      ans = min(ans, s.substr(i) + s.substr(0, i));\n\n    return ans;\n  }\n};"
     }
   },
   "900": {
