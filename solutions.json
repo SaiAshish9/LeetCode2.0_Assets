@@ -2098,7 +2098,7 @@
   },
   "414": {
     "solution": {
-      "sorting": ""
+      "sorting": "#include <vector>\n#include <climits>\n#include <set>\nusing namespace std;\n\nclass Solution {\npublic:\n    int thirdMax(vector<int>& nums) {\n        // Use LONG_MIN to handle edge cases where the array contains negative numbers\n        long first = LONG_MIN, second = LONG_MIN, third = LONG_MIN;\n        \n        for (int num : nums) {\n            // Skip if num is already in the top three\n            if (num == first || num == second || num == third) {\n                continue;\n            }\n            \n            // Update the top three distinct maximums\n            if (num > first) {\n                third = second;\n                second = first;\n                first = num;\n            } else if (num > second) {\n                third = second;\n                second = num;\n            } else if (num > third) {\n                third = num;\n            }\n        }\n        \n        // If third is still LONG_MIN, it means there are less than 3 distinct numbers\n        return third == LONG_MIN ? first : third;\n    }\n};\n"
     }
   },
   "415": {
