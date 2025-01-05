@@ -4650,7 +4650,7 @@
   },
   "922": {
     "solution": {
-      "two-pointers": ""
+      "shortest-path": "class Solution {\npublic:\n    vector<int> sortArrayByParityII(vector<int>& nums) {\n        int n = nums.size();\n        int evenIdx = 0, oddIdx = 1; // Pointers for even and odd indices\n\n        while (evenIdx < n && oddIdx < n) {\n            // Find the first mispositioned even index\n            while (evenIdx < n && nums[evenIdx] % 2 == 0) {\n                evenIdx += 2;\n            }\n\n            // Find the first mispositioned odd index\n            while (oddIdx < n && nums[oddIdx] % 2 == 1) {\n                oddIdx += 2;\n            }\n\n            // Swap the mispositioned elements\n            if (evenIdx < n && oddIdx < n) {\n                swap(nums[evenIdx], nums[oddIdx]);\n            }\n        }\n\n        return nums;\n    }\n};\n"
     }
   },
   "923": {
