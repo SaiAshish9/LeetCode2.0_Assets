@@ -3770,7 +3770,7 @@
   },
   "747": {
     "solution": {
-      "sorting": ""
+      "sorting": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int dominantIndex(vector<int>& nums) {\n        int n = nums.size();\n        if (n == 1) {\n            return 0; // Single element is always dominant\n        }\n        \n        // Initialize variables to track the largest and second largest numbers\n        int max1 = -1, max2 = -1;\n        int maxIndex = -1;\n        \n        for (int i = 0; i < n; i++) {\n            if (nums[i] > max1) {\n                // Update max1 and max2\n                max2 = max1;\n                max1 = nums[i];\n                maxIndex = i;\n            } else if (nums[i] > max2) {\n                // Update max2\n                max2 = nums[i];\n            }\n        }\n        \n        // Check the dominance condition\n        return (max1 >= 2 * max2) ? maxIndex : -1;\n    }\n};\n"
     }
   },
   "748": {
