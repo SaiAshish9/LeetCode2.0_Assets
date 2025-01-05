@@ -7304,7 +7304,7 @@
   },
   "1451": {
     "solution": {
-      "sorting": ""
+      "shortest-path": "#include <string>\n#include <vector>\n#include <sstream>\n#include <algorithm>\n#include <cctype>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    string arrangeWords(string text) {\n        // Convert the first letter to lowercase\n        text[0] = tolower(text[0]);\n\n        // Split the text into words\n        vector<pair<string, int>> words; // Pair of word and its original index\n        stringstream ss(text);\n        string word;\n        int index = 0;\n\n        while (ss >> word) {\n            words.emplace_back(word, index++);\n        }\n\n        // Sort words by length, maintaining stable order\n        stable_sort(words.begin(), words.end(), [](const pair<string, int>& a, const pair<string, int>& b) {\n            return a.first.size() < b.first.size();\n        });\n\n        // Reconstruct the sentence\n        string result;\n        for (const auto& w : words) {\n            if (!result.empty()) {\n                result += \" \";\n            }\n            result += w.first;\n        }\n\n        // Capitalize the first letter of the result\n        result[0] = toupper(result[0]);\n\n        return result;\n    }\n};\n"
     }
   },
   "1452": {
