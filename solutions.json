@@ -4202,7 +4202,7 @@
   },
   "833": {
     "solution": {
-      "sorting": ""
+      "sorting": "class Solution {\n  public String findReplaceString(String S, int[] indexes, String[] sources, String[] targets) {\n    List<Pair<Integer, Integer>> sortedIndexes = new ArrayList<>();\n\n    for (int i = 0; i < indexes.length; ++i)\n      sortedIndexes.add(new Pair<>(indexes[i], i));\n\n    Collections.sort(sortedIndexes, (a, b) -> b.getKey() - a.getKey());\n\n    for (var sortedIndex : sortedIndexes) {\n      final int index = sortedIndex.getKey();\n      final int i = sortedIndex.getValue();\n      final String source = sources[i];\n      final String target = targets[i];\n      if (S.substring(index, index + source.length()).equals(source))\n        S = S.substring(0, index) + target + S.substring(index + source.length());\n    }\n\n    return S;\n  }\n}\n"
     }
   },
   "834": {
