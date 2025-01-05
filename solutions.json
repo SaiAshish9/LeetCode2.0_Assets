@@ -6046,7 +6046,7 @@
   },
   "1200": {
     "solution": {
-      "sorting": ""
+      "shortest-path": "class Solution {\n public:\n  vector<vector<int>> minimumAbsDifference(vector<int>& arr) {\n    vector<vector<int>> ans;\n    int mn = INT_MAX;\n\n    ranges::sort(arr);\n\n    for (int i = 1; i < arr.size(); ++i) {\n      const int diff = arr[i] - arr[i - 1];\n      if (diff < mn) {\n        mn = diff;\n        ans.clear();\n      }\n      if (diff == mn)\n        ans.push_back({arr[i - 1], arr[i]});\n    }\n\n    return ans;\n  }\n};"
     }
   },
   "1201": {
