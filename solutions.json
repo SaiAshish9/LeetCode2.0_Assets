@@ -9617,7 +9617,7 @@
   },
   "1913": {
     "solution": {
-      "sorting": ""
+      "sorting": "class Solution {\npublic:\n    int maxProductDifference(vector<int>& nums) {\n        int largest1 = INT_MIN, largest2 = INT_MIN;\n        int smallest1 = INT_MAX, smallest2 = INT_MAX;\n\n        // Find the two largest and two smallest numbers\n        for (int num : nums) {\n            if (num > largest1) {\n                largest2 = largest1;\n                largest1 = num;\n            } else if (num > largest2) {\n                largest2 = num;\n            }\n\n            if (num < smallest1) {\n                smallest2 = smallest1;\n                smallest1 = num;\n            } else if (num < smallest2) {\n                smallest2 = num;\n            }\n        }\n\n        // Compute the product difference\n        return (largest1 * largest2) - (smallest1 * smallest2);\n    }\n};\n"
     }
   },
   "1914": {
