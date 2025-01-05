@@ -5066,7 +5066,7 @@
   },
   "1005": {
     "solution": {
-      "greedy": ""
+      "shortest-path": "#include <algorithm> // for sort, min\n#include <numeric>   // for accumulate\n#include <ranges>    // for ranges::sort\n#include <vector>\n\nclass Solution {\npublic:\n    int largestSumAfterKNegations(std::vector<int>& nums, int k) {\n        std::ranges::sort(nums); // Sort in ascending order\n\n        // Negate negative numbers\n        for (int i = 0; i < nums.size(); ++i) {\n            if (nums[i] > 0 || k == 0)\n                break;\n            nums[i] = -nums[i];\n            --k;\n        }\n\n        // Calculate the sum and handle remaining k\n        return std::accumulate(nums.begin(), nums.end(), 0) -\n               (k % 2) * std::ranges::min(nums) * 2;\n    }\n};\n"
     }
   },
   "1006": {
