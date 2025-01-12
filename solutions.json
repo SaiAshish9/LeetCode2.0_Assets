@@ -1157,7 +1157,7 @@
   },
   "228": {
     "solution": {
-      "array": ""
+      "array": "class Solution {\npublic:\n    vector<string> summaryRanges(vector<int>& nums) {\n        vector<string> result;\n        int n = nums.size();\n        if (n == 0) return result;\n        \n        int start = nums[0];\n\n        for (int i = 1; i <= n; ++i) {\n            if (i == n || nums[i] != nums[i - 1] + 1) {\n                if (start == nums[i - 1]) {\n                    result.push_back(to_string(start));\n                } else {\n                    result.push_back(to_string(start) + \"->\" + to_string(nums[i - 1]));\n                }\n                if (i < n) start = nums[i];\n            }\n        }\n\n        return result;\n    }\n};\n"
     }
   },
   "229": {
