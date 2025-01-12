@@ -287,7 +287,7 @@
   },
   "57": {
     "solution": {
-      "array": ""
+      "array": "class Solution {\npublic:\n    vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {\n        vector<vector<int>> result;\n        int n = intervals.size();\n        int i = 0;\n\n        while (i < n && intervals[i][1] < newInterval[0]) {\n            result.push_back(intervals[i]);\n            i++;\n        }\n\n        while (i < n && intervals[i][0] <= newInterval[1]) {\n            newInterval[0] = min(newInterval[0], intervals[i][0]);\n            newInterval[1] = max(newInterval[1], intervals[i][1]);\n            i++;\n        }\n        result.push_back(newInterval);\n\n        while (i < n) {\n            result.push_back(intervals[i]);\n            i++;\n        }\n\n        return result;\n    }\n};\n"
     }
   },
   "58": {
