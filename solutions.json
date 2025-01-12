@@ -687,7 +687,7 @@
   },
   "136": {
     "solution": {
-      "bit-manipulation": ""
+      "array": "class Solution {\npublic:\n    int singleNumber(vector<int>& nums) {\n        int result = 0;\n\n        // XOR all numbers\n        for (int num : nums) {\n            result ^= num;\n        }\n\n        return result;\n    }\n};\n"
     }
   },
   "137": {
