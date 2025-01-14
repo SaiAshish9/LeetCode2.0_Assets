@@ -7234,7 +7234,7 @@
   },
   "1437": {
     "solution": {
-      "array": ""
+      "array": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool kLengthApart(vector<int>& nums, int k) {\n        int prevIndex = -1; \n\n        for (int i = 0; i < nums.size(); ++i) {\n            if (nums[i] == 1) { \n                if (prevIndex != -1 && i - prevIndex - 1 < k) {\n                    return false;\n                }\n                prevIndex = i; \n            }\n        }\n\n        return true; \n    }\n};\n"
     }
   },
   "1438": {
