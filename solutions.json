@@ -4615,7 +4615,7 @@
   },
   "915": {
     "solution": {
-      "array": ""
+      "array": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int partitionDisjoint(vector<int>& nums) {\n        int n = nums.size();\n        int maxLeft = nums[0]; // Maximum value in the left partition\n        int maxGlobal = nums[0]; // Global maximum encountered so far\n        int partitionIndex = 0; // Partition index\n\n        for (int i = 1; i < n; ++i) {\n            maxGlobal = max(maxGlobal, nums[i]); // Update global maximum\n\n            // If nums[i] < maxLeft, extend the left partition\n            if (nums[i] < maxLeft) {\n                partitionIndex = i; // Update partition index\n                maxLeft = maxGlobal; // Update maxLeft to include all elements in the left partition\n            }\n        }\n\n        return partitionIndex + 1; // Return the size of the left partition\n    }\n};\n"
     }
   },
   "916": {
