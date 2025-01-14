@@ -13692,7 +13692,7 @@
   },
   "2784": {
     "solution": {
-      "sorting": ""
+      "sorting": "class Solution {\npublic:\n    bool isGood(vector<int>& nums) {\n        constexpr int kMax = 200;\n        const int n = nums.size() - 1;\n        vector<int> count(kMax + 1);\n\n        for (const int num : nums)\n            ++count[num];\n\n        return all_of(count.begin() + 1, count.begin() + n,\n                      [](int c) { return c == 1; }) &&\n               count[n] == 2;\n    }\n};"
     }
   },
   "2785": {
