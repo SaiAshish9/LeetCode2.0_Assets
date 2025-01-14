@@ -15588,7 +15588,7 @@
   },
   "3190": {
     "solution": {
-      "math": ""
+      "array": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int minimumOperations(vector<int>& nums) {\n        int operations = 0;\n\n        for (int num : nums) {\n            int remainder = num % 3;\n\n            if (remainder == 1) {\n                operations += 1;  \n            } else if (remainder == 2) {\n                operations += 1;  \n            }\n        }\n\n        return operations;\n    }\n};\n"
     }
   },
   "3191": {
