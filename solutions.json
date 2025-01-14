@@ -3620,7 +3620,7 @@
   },
   "717": {
     "solution": {
-      "array": ""
+      "array": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool isOneBitCharacter(vector<int>& bits) {\n        int n = bits.size();\n        int i = 0;\n\n        while (i < n - 1) { // Traverse until the second last bit\n            if (bits[i] == 1) {\n                i += 2; // Skip the next bit for a 2-bit character\n            } else {\n                i += 1; // Move to the next bit for a 1-bit character\n            }\n        }\n\n        // If we land exactly on the last bit, it's a 1-bit character\n        return i == n - 1;\n    }\n};\n"
     }
   },
   "718": {
