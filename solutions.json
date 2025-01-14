@@ -13987,8 +13987,7 @@
   },
   "2855": {
     "solution": {
-      "array": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int minimumRightShifts(vector<int>& nums) {\n        int n = nums.size();\n        for (int k = 0; k < n; ++k) {\n            bool isSorted = true;\n            \n            for (int i = 0; i < n - 1; ++i) {\n                if (nums[(i + k) % n] > nums[(i + 1 + k) % n]) {\n                    isSorted = false;\n                    break;\n                }\n            }\n            \n            if (isSorted) {\n                return k;\n            }\n        }\n        \n        return -1; \n    }\n};\n"
-    }
+      "array": "class Solution {\npublic:\n    int minimumRightShifts(vector<int>& nums) {\n        int count = 0;\n        int pivot = -1;\n\n        for (int i = 0; i + 1 < nums.size(); i++)\n            if (nums[i] > nums[i + 1]) {\n                ++count;\n                pivot = i;\n            }\n\n        if (count == 0)\n            return 0;\n        if (count > 1 || nums.back() > nums.front())\n            return -1;\n        return nums.size() - 1 - pivot;\n    }\n};"    }
   },
   "2856": {
     "solution": {
