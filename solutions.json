@@ -8360,7 +8360,7 @@
   },
   "1662": {
     "solution": {
-      "string": ""
+      "array": "#include <vector>\n#include <string>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool arrayStringsAreEqual(vector<string>& word1, vector<string>& word2) {\n        string s1 = ","; \n        string s2 = ":";\n\n        for (const string& w : word1) {\n            s1 += w;\n        }\n        \n        for (const string& w : word2) {\n            s2 += w;\n        }\n        \n        return s1 == s2;\n    }\n};\n"
     }
   },
   "1663": {
