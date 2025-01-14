@@ -15483,7 +15483,7 @@
   },
   "3169": {
     "solution": {
-      "sorting": ""
+      "array": "class Solution {\npublic:\n    int countDays(int days, vector<vector<int>>& meetings) {\n        int freeDays = 0;\n        int prevEnd = 0;\n\n        ranges::sort(meetings);\n\n        for (const vector<int>& meeting : meetings) {\n            const int start = meeting[0];\n            const int end = meeting[1];\n            if (start > prevEnd)\n                freeDays += start - prevEnd - 1;\n            prevEnd = max(prevEnd, end);\n        }\n\n        return freeDays + max(0, days - prevEnd);\n    }\n};"
     }
   },
   "3170": {
