@@ -8600,7 +8600,7 @@
   },
   "1710": {
     "solution": {
-      "greedy": ""
+      "sorting": "#include <vector>\n#include <algorithm>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    int maximumUnits(vector<vector<int>>& boxTypes, int truckSize) {\n        // Step 1: Sort boxTypes by units per box in descending order\n        sort(boxTypes.begin(), boxTypes.end(), [](const vector<int>& a, const vector<int>& b) {\n            return a[1] > b[1];\n        });\n\n        int maxUnits = 0;\n        for (const auto& box : boxTypes) {\n            int boxCount = box[0];\n            int unitsPerBox = box[1];\n            \n            // Step 2: Take as many boxes as possible from the current type\n            int boxesToTake = min(boxCount, truckSize);\n            maxUnits += boxesToTake * unitsPerBox;\n            truckSize -= boxesToTake;\n\n            // Step 3: Stop if the truck is full\n            if (truckSize == 0) {\n                break;\n            }\n        }\n\n        return maxUnits;\n    }\n};\n"
     }
   },
   "1711": {
