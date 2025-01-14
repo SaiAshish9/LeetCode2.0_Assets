@@ -9290,7 +9290,7 @@
   },
   "1848": {
     "solution": {
-      "array": ""
+      "array": "#include <vector>\n#include <cmath>\n#include <climits>\nusing namespace std;\n\nclass Solution {\npublic:\n    int getMinDistance(vector<int>& nums, int target, int start) {\n        int minDistance = INT_MAX; \n        \n        for (int i = 0; i < nums.size(); ++i) {\n            if (nums[i] == target) { \n                minDistance = min(minDistance, abs(i - start)); \n            }\n        }\n        \n        return minDistance;\n    }\n};\n"
     }
   },
   "1849": {
