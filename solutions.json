@@ -7299,7 +7299,7 @@
   },
   "1450": {
     "solution": {
-      "array": ""
+      "array": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int busyStudent(vector<int>& startTime, vector<int>& endTime, int queryTime) {\n        int count = 0; \n        \n        for (int i = 0; i < startTime.size(); ++i) {\n            if (startTime[i] <= queryTime && queryTime <= endTime[i]) {\n                ++count; \n            }\n        }\n        \n        return count; \n    }\n};\n"
     }
   },
   "1451": {
