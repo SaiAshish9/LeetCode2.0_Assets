@@ -8145,7 +8145,7 @@
   },
   "1619": {
     "solution": {
-      "sorting": ""
+      "sorting": "class Solution {\npublic:\n    double trimMean(vector<int>& arr) {\n        int n = arr.size();\n        int removeCount = n / 20;  \n        \n        sort(arr.begin(), arr.end());\n        \n        double sum = 0;\n        for (int i = removeCount; i < n - removeCount; ++i) {\n            sum += arr[i];\n        }\n        \n        return sum / (n - 2 * removeCount);\n    }\n};\n"
     }
   },
   "1620": {
