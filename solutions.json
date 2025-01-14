@@ -7399,7 +7399,7 @@
   },
   "1470": {
     "solution": {
-      "array": ""
+      "array": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> shuffle(vector<int>& nums, int n) {\n        vector<int> result; \n        \n        for (int i = 0; i < n; ++i) {\n            result.push_back(nums[i]);    \n            result.push_back(nums[i + n]); \n        }\n        \n        return result;\n    }\n};\n"
     }
   },
   "1471": {
