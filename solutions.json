@@ -13697,7 +13697,7 @@
   },
   "2785": {
     "solution": {
-      "sorting": ""
+      "sorting": "class Solution {\npublic:\n    string sortVowels(string s) {\n        string ans;\n        vector<char> vowels;\n\n        for (const char c : s)\n            if (isVowel(c))\n                vowels.push_back(c);\n\n        ranges::sort(vowels);\n\n        int i = 0; // vowels' index\n        for (const char c : s)\n            ans += isVowel(c) ? vowels[i++] : c;\n\n        return ans;\n    }\n\nprivate:\n    bool isVowel(char c) {\n        static constexpr string_view kVowels = \"aeiouAEIOU\";\n        return kVowels.find(c) != string_view::npos;\n    }\n};"
     }
   },
   "2786": {
