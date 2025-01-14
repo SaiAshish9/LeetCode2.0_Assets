@@ -15192,7 +15192,7 @@
   },
   "3111": {
     "solution": {
-      "greedy": ""
+      "array": "class Solution {\npublic:\n    int minRectanglesToCoverPoints(vector<vector<int>>& points, int w) {\n        int ans = 0;\n        int prevX = -w - 1;\n        vector<int> xs;\n\n        for (const vector<int>& point : points) {\n            const int x = point[0];\n            xs.push_back(x);\n        }\n\n        ranges::sort(xs);\n\n        for (const int x : xs)\n            if (x > prevX + w) {\n                ++ans;\n                prevX = x;\n            }\n\n        return ans;\n    }\n};"
     }
   },
   "3112": {
