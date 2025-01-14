@@ -15162,7 +15162,7 @@
   },
   "3105": {
     "solution": {
-      "array": ""
+      "array": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int longestMonotonicSubarray(vector<int>& nums) {\n        int n = nums.size();\n        if (n == 0) return 0;\n\n        int maxLen = 1; \n        int inc = 1, dec = 1; \n\n        for (int i = 1; i < n; ++i) {\n            if (nums[i] > nums[i-1]) {\n                inc++;\n                dec = 1; \n            } \n            else if (nums[i] < nums[i-1]) {\n                dec++;\n                inc = 1; \n            } \n            else {\n                inc = 1;\n                dec = 1;\n            }\n            \n            maxLen = max(maxLen, max(inc, dec));\n        }\n        \n        return maxLen;\n    }\n};\n"
     }
   },
   "3106": {
