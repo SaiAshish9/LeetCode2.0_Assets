@@ -14962,7 +14962,7 @@
   },
   "3065": {
     "solution": {
-      "array": ""
+      "array": "class Solution {\npublic:\n    int minOperations(vector<int>& nums, int k) {\n        return ranges::count_if(nums, [k](int num) { return num < k; });\n    }\n};"
     }
   },
   "3066": {
