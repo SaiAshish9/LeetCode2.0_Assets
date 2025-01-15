@@ -10124,7 +10124,7 @@
   },
   "2014": {
     "solution": {
-      "backtracking": ""
+      "backtracking": "class Solution {\npublic:\n    string longestSubsequenceRepeatedK(string s, int k) {\n        string ans;\n        vector<int> count(26);\n        vector<char> possibleChars;\n        queue<string> q{{\"\"}};\n\n        for (const char c : s)\n            ++count[c - 'a'];\n\n        for (char c = 'a'; c <= 'z'; ++c)\n            if (count[c - 'a'] >= k)\n                possibleChars.push_back(c);\n\n        while (!q.empty()) {\n            const string currSubseq = q.front();\n            q.pop();\n            if (currSubseq.length() * k > s.length())\n                return ans;\n            for (const char c : possibleChars) {\n                const string& newSubseq = currSubseq + c;\n                if (isSubsequence(newSubseq, s, k)) {\n                    q.push(newSubseq);\n                    ans = newSubseq;\n                }\n            }\n        }\n\n        return ans;\n    }\n\nprivate:\n    bool isSubsequence(const string& subseq, string& s, int k) {\n        int i = 0;\n        for (const char c : s)\n            if (c == subseq[i])\n                if (++i == subseq.length()) {\n                    if (--k == 0)\n                        return true;\n                    i = 0;\n                }\n        return false;\n    }\n};"
     }
   },
   "2015": {
