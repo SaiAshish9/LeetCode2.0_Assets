@@ -5021,7 +5021,7 @@
   },
   "996": {
     "solution": {
-      "dynamic-programming": ""
+      "backtracking": "#include <vector>\n#include <cmath>\n#include <unordered_set>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int count = 0;\n    \n    bool isPerfectSquare(int num) {\n        int sqr = (int)sqrt(num);\n        return sqr * sqr == num;\n    }\n    \n    void dfs(vector<int>& nums, vector<bool>& visited, vector<int>& current, int& count) {\n        if (current.size() == nums.size()) {\n            count++;\n            return;\n        }\n        \n        for (int i = 0; i < nums.size(); i++) {\n            if (visited[i]) continue;\n            \n            if (i > 0 && nums[i] == nums[i-1] && !visited[i-1]) continue;\n            \n            if (!current.empty() && !isPerfectSquare(current.back() + nums[i])) {\n                continue;\n            }\n            \n            visited[i] = true;\n            current.push_back(nums[i]);\n            \n            dfs(nums, visited, current, count);\n            \n            visited[i] = false;\n            current.pop_back();\n        }\n    }\n    \n    int numSquarefulPerms(vector<int>& nums) {\n        sort(nums.begin(), nums.end()); \n        vector<bool> visited(nums.size(), false);\n        vector<int> current;\n        dfs(nums, visited, current, count);\n        return count;\n    }\n};\n"
     }
   },
   "997": {
