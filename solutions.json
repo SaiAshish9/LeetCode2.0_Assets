@@ -11581,7 +11581,7 @@
   },
   "2305": {
     "solution": {
-      "dynamic-programming": ""
+      "backtracking": "class Solution {\npublic:\n    int distributeCookies(vector<int>& cookies, int k) {\n        int n = cookies.size();\n        vector<int> childCookies(k, 0); \n        int result = INT_MAX; \n        \n        function<void(int)> dfs = [&](int index) {\n            if (index == n) {\n                int maxCookies = *max_element(childCookies.begin(), childCookies.end());\n                result = min(result, maxCookies);\n                return;\n            }\n\n            for (int i = 0; i < k; i++) {\n                if (i > 0 && childCookies[i] == childCookies[i-1]) continue;\n\n                childCookies[i] += cookies[index];\n                dfs(index + 1);\n                childCookies[i] -= cookies[index];\n            }\n        };\n        \n        sort(cookies.rbegin(), cookies.rend());        \n        dfs(0);\n        \n        return result;\n    }\n};\n"
     }
   },
   "2306": {
