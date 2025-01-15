@@ -1232,7 +1232,7 @@
   },
   "243": {
     "solution": {
-      "string": ""
+      "string": "class Solution {\npublic:\n    int shortestDistance(vector<string>& wordsDict, string word1, string word2) {\n        int ans = INT_MAX;\n        for (int k = 0, i = -1, j = -1; k < wordsDict.size(); ++k) {\n            if (wordsDict[k] == word1) {\n                i = k;\n            }\n            if (wordsDict[k] == word2) {\n                j = k;\n            }\n            if (i != -1 && j != -1) {\n                ans = min(ans, abs(i - j));\n            }\n        }\n        return ans;\n    }\n};"
     }
   },
   "244": {
