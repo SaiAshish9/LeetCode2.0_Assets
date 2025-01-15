@@ -4020,7 +4020,7 @@
   },
   "797": {
     "solution": {
-      "backtracking": ""
+      "backtracking": "class Solution {\npublic:\n    vector<vector<int>> allPathsSourceTarget(vector<vector<int>>& graph) {\n        vector<vector<int>> result;\n        vector<int> path;\n        dfs(graph, 0, path, result);\n        return result;\n    }\n\n    void dfs(vector<vector<int>>& graph, int node, vector<int>& path, vector<vector<int>>& result) {\n        path.push_back(node);\n        \n        if (node == graph.size() - 1) {\n            result.push_back(path);  \n        } else {\n            for (int neighbor : graph[node]) {\n                dfs(graph, neighbor, path, result);  \n            }\n        }\n        \n        path.pop_back();\n    }\n};\n"
     }
   },
   "798": {
