@@ -36,7 +36,7 @@
   },
   "8": {
     "solution": {
-      "string": ""
+      "string": "class Solution {\npublic:\n    int myAtoi(string s) {\n        int i = 0, result = 0, sign = 1;\n        \n        while (i < s.size() && s[i] == ' ') {\n            i++;\n        }\n        \n        if (i < s.size() && (s[i] == '+' || s[i] == '-')) {\n            sign = (s[i] == '-') ? -1 : 1;\n            i++;\n        }\n        \n        while (i < s.size() && isdigit(s[i])) {\n            int digit = s[i] - '0';\n            \n            if (result > (INT_MAX - digit) / 10) {\n                return sign == 1 ? INT_MAX : INT_MIN;\n            }\n            \n            result = result * 10 + digit;\n            i++;\n        }\n        \n        return result * sign;\n    }\n};\n"
     }
   },
   "9": {
