@@ -1094,7 +1094,7 @@
   },
   "216": {
     "solution": {
-      "backtracking": ""
+      "backtracking": "class Solution {\npublic:\n    void findCombinations(int start, int k, int target,\n                          vector<int>& currentCombination,\n                          vector<vector<int>>& result) {\n        if (currentCombination.size() == k) {\n            if (target == 0) {\n                result.push_back(currentCombination);\n            }\n            return;\n        }\n\n        for (int i = start; i <= 9; i++) {\n            if (i > target)\n                break;\n            currentCombination.push_back(i);\n            findCombinations(i + 1, k, target - i, currentCombination, result);\n            currentCombination.pop_back();\n        }\n    }\n\n    vector<vector<int>> combinationSum3(int k, int n) {\n        vector<vector<int>> result;\n        vector<int> currentCombination;\n        findCombinations(1, k, n, currentCombination, result);\n        return result;\n    }\n};\n"
     }
   },
   "217": {
