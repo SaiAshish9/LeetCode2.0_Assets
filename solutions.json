@@ -7124,7 +7124,7 @@
   },
   "1415": {
     "solution": {
-      "backtracking": ""
+      "backtracking": "class Solution {\npublic:\n    string getHappyString(int n, int k) {\n        const unordered_map<char, string> nextLetters{\n            {'a', \"bc\"}, {'b', \"ac\"}, {'c', \"ab\"}};\n        queue<string> q{{{\"a\", \"b\", \"c\"}}};\n\n        while (q.front().length() != n) {\n            const string u = q.front();\n            q.pop();\n            for (const char nextLetter : nextLetters.at(u.back()))\n                q.push(u + nextLetter);\n        }\n\n        if (q.size() < k)\n            return \"\";\n\n        for (int i = 0; i < k - 1; ++i)\n            q.pop();\n        return q.front();\n    }\n};"
     }
   },
   "1416": {
