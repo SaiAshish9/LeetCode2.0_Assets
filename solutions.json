@@ -4981,7 +4981,7 @@
   },
   "988": {
     "solution": {
-      "tree": ""
+      "backtracking": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    string smallestFromLeaf(TreeNode* root) {\n        string result = \"\";\n        dfs(root, \"\", result);\n        return result;\n    }\n    \n    void dfs(TreeNode* node, string path, string& result) {\n        if (!node) return;        \n        path = char('a' + node->val) + path; \n        \n        if (!node->left && !node->right) {\n            if (result == \"\" || path < result) {\n                result = path;\n            }\n        }\n        \n        dfs(node->left, path, result);\n        dfs(node->right, path, result);\n    }\n};\n"
     }
   },
   "989": {
