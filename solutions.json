@@ -292,7 +292,7 @@
   },
   "58": {
     "solution": {
-      "string": ""
+      "string": "class Solution {\npublic:\n    int lengthOfLastWord(string s) {\n        int n = s.size();\n        int index = n - 1;\n        \n        // Skip any trailing spaces\n        while (index >= 0 && s[index] == ' ') {\n            index--;\n        }\n        \n        // Now index points to the last non-space character\n        return dfs(s, index);\n    }\n    \n    int dfs(const string& s, int index) {\n        int length = 0;\n        \n        // Count the length of the last word (from the current position backwards)\n        while (index >= 0 && s[index] != ' ') {\n            length++;\n            index--;\n        }\n        \n        return length;\n    }\n};\n"
     }
   },
   "59": {
