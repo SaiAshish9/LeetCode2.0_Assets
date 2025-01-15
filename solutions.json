@@ -327,7 +327,7 @@
   },
   "65": {
     "solution": {
-      "string": ""
+      "string": "class Solution {\npublic:\n    bool isNumber(string s) {\n        int i = 0, n = s.size();\n        \n        while (i < n && s[i] == ' ') {\n            i++;\n        }\n        \n        if (i < n && (s[i] == '+' || s[i] == '-')) {\n            i++;\n        }\n        \n        bool hasDigit = false, hasDot = false, hasExp = false;\n        \n        while (i < n && (isdigit(s[i]) || s[i] == '.' || s[i] == 'e' || s[i] == 'E')) {\n            if (isdigit(s[i])) {\n                hasDigit = true;\n            } else if (s[i] == '.') {\n                if (hasDot || hasExp) return false; \n                hasDot = true;\n            } else if (s[i] == 'e' || s[i] == 'E') {\n                if (hasExp || !hasDigit) return false; \n                hasExp = true;\n                hasDigit = false; \n                if (i + 1 < n && (s[i + 1] == '+' || s[i + 1] == '-')) {\n                    i++;\n                }\n            }\n            i++;\n        }\n        \n        while (i < n && s[i] == ' ') {\n            i++;\n        }\n        \n        return hasDigit && i == n;\n    }\n};\n"
     }
   },
   "66": {
