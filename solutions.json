@@ -450,7 +450,7 @@
   },
   "89": {
     "solution": {
-      "backtracking": ""
+      "backtracking": "class Solution {\npublic:\n    vector<int> grayCode(int n) {\n        vector<int> result;          // To store the Gray Code sequence\n        unordered_set<int> visited; // To mark numbers that are already in the sequence\n        int totalNumbers = 1 << n;   // Total numbers in the Gray Code sequence\n        \n        result.push_back(0);\n        visited.insert(0);\n        dfs(0, n, result, visited, totalNumbers);\n        \n        return result;\n    }\n    \nprivate:\n    bool dfs(int current, int n, vector<int>& result, unordered_set<int>& visited, int totalNumbers) {\n        if (result.size() == totalNumbers) {\n            return true;\n        }\n        \n        for (int i = 0; i < n; ++i) {\n            int next = current ^ (1 << i); // Flip the ith bit\n            \n            if (visited.find(next) == visited.end()) { // If not visited\n                result.push_back(next);\n                visited.insert(next);\n                \n                if (dfs(next, n, result, visited, totalNumbers)) {\n                    return true;\n                }\n                \n                result.pop_back();\n                visited.erase(next);\n            }\n        }\n        \n        return false;\n    }\n};\n"
     }
   },
   "90": {
