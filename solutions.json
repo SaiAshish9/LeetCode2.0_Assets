@@ -2660,7 +2660,7 @@
   },
   "526": {
     "solution": {
-      "dynamic-programming": ""
+      "backtracking": "class Solution {\npublic:\n    int countArrangement(int n) {\n        int count = 0;\n        \n        vector<bool> used(n + 1, false);\n        \n        function<void(int)> dfs = [&](int position) {\n            if (position > n) {\n                count++;\n                return;\n            }\n            \n            for (int num = 1; num <= n; num++) {\n                if (!used[num] && (num % position == 0 || position % num == 0)) {\n                    used[num] = true;\n                    dfs(position + 1);\n                    used[num] = false;\n                }\n            }\n        };\n        \n        dfs(1);\n        \n        return count;\n    }\n};\n"
     }
   },
   "527": {
