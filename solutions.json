@@ -13268,7 +13268,7 @@
   },
   "2664": {
     "solution": {
-      "matrix": ""
+      "backtracking": "class Solution {\npublic:\n    vector<vector<int>> tourOfKnight(int rows, int cols, int startRow, int startCol) {\n        vector<vector<int>> board(rows, vector<int>(cols, -1));  \n        board[startRow][startCol] = 0; \n\n        int knightMoves[8][2] = {{-2, -1}, {-1, -2}, {1, -2}, {2, -1}, {2, 1}, {1, 2}, {-1, 2}, {-2, 1}};\n        bool foundSolution = false;\n\n        function<void(int, int, int)> dfs = [&](int row, int col, int moveCount) {\n            if (moveCount == rows * cols - 1) {\n                foundSolution = true;  \n                return;\n            }\n            for (auto& move : knightMoves) {\n                int newRow = row + move[0], newCol = col + move[1];\n                if (newRow >= 0 && newRow < rows && newCol >= 0 && newCol < cols && board[newRow][newCol] == -1) {\n                    board[newRow][newCol] = moveCount + 1; \n                    dfs(newRow, newCol, moveCount + 1);  \n                    if (foundSolution) {\n                        return;\n                    }\n                    board[newRow][newCol] = -1;  \n                }\n            }\n        };\n\n        dfs(startRow, startCol, 0); \n        return board;  \n    }\n};\n"
     }
   },
   "2668": {
