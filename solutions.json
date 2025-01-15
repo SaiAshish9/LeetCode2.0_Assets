@@ -191,7 +191,7 @@
   },
   "38": {
     "solution": {
-      "string": ""
+      "string": "class Solution {\npublic:\n    string countAndSay(int n) {\n        string result = \"1\";\n\n        for (int i = 2; i <= n; ++i) {\n            string temp = \"\";\n            int count = 1;\n\n            for (int j = 1; j < result.size(); ++j) {\n                if (result[j] == result[j - 1]) {\n                    count++;\n                } else {\n                    temp += to_string(count) + result[j - 1];\n                    count = 1;\n                }\n            }\n\n            temp += to_string(count) + result.back();\n            result = temp; \n        }\n\n        return result;\n    }\n};\n"
     }
   },
   "39": {
