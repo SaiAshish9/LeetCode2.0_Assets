@@ -26,7 +26,7 @@
   },
   "6": {
     "solution": {
-      "string": ""
+      "string": "class Solution {\npublic:\n    string convert(string s, int numRows) {\n        if (numRows == 1) return s;  \n        \n        vector<string> rows(min(numRows, int(s.size())));  \n        int currentRow = 0;\n        bool goingDown = false;\n        \n        for (char c : s) {\n            rows[currentRow] += c; \n            if (currentRow == 0 || currentRow == numRows - 1) {\n                goingDown = !goingDown; \n            }\n            currentRow += goingDown ? 1 : -1;  \n        }\n        \n        string result = \"\";\n        for (const string& row : rows) {\n            result += row;\n        }\n        \n        return result;\n    }\n};\n"
     }
   },
   "7": {
