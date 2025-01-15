@@ -1353,7 +1353,7 @@
   },
   "267": {
     "solution": {
-      "backtracking": ""
+      "backtracking": "class Solution {\npublic:\n    int strLength;\n    vector<string> palindromeResults;\n    unordered_map<char, int> charCount;\n\n    vector<string> generatePalindromes(string s) {\n        strLength = s.size();\n        \n        for (char c : s) ++charCount[c];\n        \n        string middleChar = \"\";\n        \n        for (auto& [charKey, count] : charCount) {\n            if (count % 2 != 0) {\n                if (!middleChar.empty()) {\n                    return palindromeResults; \n                }\n                middleChar += charKey;  \n            }\n        }\n        \n        findPalindromes(middleChar);\n        \n        return palindromeResults;\n    }\n\n    void findPalindromes(string current) {\n        if (current.size() == strLength) {\n            palindromeResults.push_back(current);\n            return;\n        }\n        \n        for (auto& [charKey, count] : charCount) {\n            if (count > 1) {  \n                charCount[charKey] -= 2;  \n                findPalindromes(charKey + current + charKey); \n                charCount[charKey] += 2;  \n            }\n        }\n    }\n};\n"
     }
   },
   "268": {
