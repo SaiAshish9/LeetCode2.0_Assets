@@ -1237,7 +1237,7 @@
   },
   "244": {
     "solution": {
-      "two-pointers": ""
+      "string": "class WordDistance {\npublic:\n    WordDistance(vector<string>& wordsDict) {\n        for (int index = 0; index < wordsDict.size(); ++index) {\n            wordIndices[wordsDict[index]].push_back(index);\n        }\n    }\n\n    int shortest(string word1, string word2) {\n        auto indicesWord1 = wordIndices[word1], indicesWord2 = wordIndices[word2];\n        \n        int i = 0, j = 0;\n        int minDistance = INT_MAX;\n        \n        while (i < indicesWord1.size() && j < indicesWord2.size()) {\n            minDistance = min(minDistance, abs(indicesWord1[i] - indicesWord2[j]));\n            \n            if (indicesWord1[i] < indicesWord2[j]) {\n                ++i;\n            } else {\n                ++j;\n            }\n        }\n        return minDistance;\n    }\n\nprivate:\n    unordered_map<string, vector<int>> wordIndices;  // Store the word and their indices\n};\n"
     }
   },
   "245": {
