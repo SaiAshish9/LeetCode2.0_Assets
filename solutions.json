@@ -867,7 +867,7 @@
   },
   "171": {
     "solution": {
-      "math": ""
+      "string": "class Solution {\npublic:\n    int titleToNumber(string columnTitle) {\n        int result = 0;\n        \n        for (char c : columnTitle) {\n            result = result * 26 + (c - 'A' + 1);\n        }\n        \n        return result;\n    }\n};\n"
     }
   },
   "172": {
