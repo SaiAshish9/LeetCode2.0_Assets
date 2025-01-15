@@ -1257,7 +1257,7 @@
   },
   "248": {
     "solution": {
-      "recursion": ""
+      "string": "using ll = long long;\n\nclass Solution {\npublic:\n    const vector<pair<char, char>> pairs = { {'1', '1'}, {'8', '8'}, {'6', '9'}, {'9', '6'} };\n\n    int strobogrammaticInRange(string low, string high) {\n        int n;\n        function<vector<string>(int)> dfs = [&](int u) {\n            if (u == 0) return vector<string>{\"\"};\n            if (u == 1) return vector<string>{\"0\", \"1\", \"8\"};\n            vector<string> ans;\n            for (auto& v : dfs(u - 2)) {\n                for (auto& [l, r] : pairs) ans.push_back(l + v + r);\n                if (u != n) ans.push_back('0' + v + '0');\n            }\n            return ans;\n        };\n\n        int a = low.size(), b = high.size();\n        int ans = 0;\n        ll l = stoll(low), r = stoll(high);\n        for (n = a; n <= b; ++n) {\n            for (auto& s : dfs(n)) {\n                ll v = stoll(s);\n                if (l <= v && v <= r) {\n                    ++ans;\n                }\n            }\n        }\n        return ans;\n    }\n};"
     }
   },
   "249": {
