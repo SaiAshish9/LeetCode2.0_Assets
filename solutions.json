@@ -1247,7 +1247,7 @@
   },
   "246": {
     "solution": {
-      "two-pointers": ""
+      "string": "class Solution {\nprivate:\n    bool same(char a, char b) {\n        return a == b && (a == '0' || a == '1' || a == '8');\n    }\n    bool match(char a, char b) {\n        if (a > b) swap(a, b);\n        return same(a, b) || (a == '6' && b == '9');\n    }\npublic:\n    bool isStrobogrammatic(string num) {\n        int i = 0, j = num.size() - 1;\n        for (; i <= j; ++i, --j) {\n            if ((i != j && !match(num[i], num[j]))\n               || (i == j && !same(num[i], num[j]))) return false;\n        }\n        return true;\n    }\n};"
     }
   },
   "247": {
