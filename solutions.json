@@ -1286,7 +1286,7 @@
   },
   "254": {
     "solution": {
-      "backtracking": ""
+      "backtracking": "class Solution {\npublic:\n    vector<vector<int>> getFactors(int n) {\n        vector<int> currentFactors;\n        vector<vector<int>> result;\n\n        function<void(int, int)> findFactors = [&](int remaining, int startFactor) {\n            if (!currentFactors.empty()) {\n                vector<int> factorsWithRemaining = currentFactors;\n                factorsWithRemaining.push_back(remaining);\n                result.push_back(factorsWithRemaining);\n            }\n\n            for (int factor = startFactor; factor <= remaining / factor; ++factor) {\n                if (remaining % factor == 0) {\n                    currentFactors.push_back(factor);\n                    findFactors(remaining / factor, factor);\n                    currentFactors.pop_back(); \n                }\n            }\n        };\n\n        findFactors(n, 2); \n        return result;\n    }\n};\n"
     }
   },
   "255": {
