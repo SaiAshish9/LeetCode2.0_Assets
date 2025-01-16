@@ -2369,7 +2369,7 @@
   },
   "468": {
     "solution": {
-      "string": ""
+      "string": "class Solution {\npublic:\n    string validIPAddress(string IP) {\n        string digit;\n        istringstream iss(IP);\n\n        if (ranges::count(IP, '.') == 3) {\n            for (int i = 0; i < 4; ++i) // Make sure that we have four parts.\n                if (!getline(iss, digit, '.') || !isIPv4(digit))\n                    return \"Neither\";\n            return \"IPv4\";\n        }\n\n        if (ranges::count(IP, ':') == 7) {\n            for (int i = 0; i < 8; ++i) // Make sure that we have eight parts.\n                if (!getline(iss, digit, ':') || !isIPv6(digit))\n                    return \"Neither\";\n            return \"IPv6\";\n        }\n\n        return \"Neither\";\n    }\n\nprivate:\n    static inline string validIPv6Chars = \"0123456789abcdefABCDEF\";\n\n    bool isIPv4(const string& digit) {\n        if (digit.empty() || digit.length() > 3)\n            return false;\n        if (digit.length() > 1 && digit[0] == '0')\n            return false;\n\n        for (const char c : digit)\n            if (c < '0' || c > '9')\n                return false;\n\n        const int num = stoi(digit);\n        return 0 <= num && num <= 255;\n    }\n\n    bool isIPv6(const string& digit) {\n        if (digit.empty() || digit.length() > 4)\n            return false;\n\n        for (const char c : digit)\n            if (validIPv6Chars.find(c) == string::npos)\n                return false;\n\n        return true;\n    }\n};"
     }
   },
   "469": {
