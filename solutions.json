@@ -8120,7 +8120,7 @@
   },
   "1614": {
     "solution": {
-      "stack": ""
+      "string": "class Solution {\npublic:\n    int maxDepth(string s) {\n        int currentDepth = 0;\n        int maxDepth = 0;\n\n        for (char c : s) {\n            if (c == '(') {\n                currentDepth++;\n                maxDepth = max(maxDepth, currentDepth);\n            } else if (c == ')') {\n                currentDepth--;\n            }\n        }\n\n        return maxDepth;\n    }\n};\n"
     }
   },
   "1615": {
