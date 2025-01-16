@@ -672,7 +672,7 @@
   },
   "133": {
     "solution": {
-      "graph": ""
+      "graph": "/*\n// Definition for a Node.\nclass Node {\npublic:\n    int val;\n    vector<Node*> neighbors;\n    Node() {\n        val = 0;\n        neighbors = vector<Node*>();\n    }\n    Node(int _val) {\n        val = _val;\n        neighbors = vector<Node*>();\n    }\n    Node(int _val, vector<Node*> _neighbors) {\n        val = _val;\n        neighbors = _neighbors;\n    }\n};\n*/\n\nclass Solution {\npublic:\n    Node* cloneGraph(Node* node) {\n        if (!node) return nullptr; \n        \n        unordered_map<int, Node*> visited;  \n        \n        function<Node*(Node*)> dfs = [&](Node* node) -> Node* {\n            if (visited.find(node->val) != visited.end()) {\n                return visited[node->val];  \n            }\n            \n            Node* clone = new Node(node->val);\n            visited[node->val] = clone;  \n            \n            for (Node* neighbor : node->neighbors) {\n                clone->neighbors.push_back(dfs(neighbor));\n            }\n            \n            return clone;\n        };\n        \n        return dfs(node); \n    }\n};\n"
     }
   },
   "134": {
