@@ -15690,7 +15690,7 @@
   },
   "3210": {
     "solution": {
-      "string": ""
+      "string": "class Solution {\npublic:\n    string getEncryptedString(string s, int k) {\n        k %= s.length();\n        return s.substr(k) + s.substr(0, k);\n    }\n};"
     }
   },
   "3211": {
