@@ -13714,7 +13714,7 @@
   },
   "2788": {
     "solution": {
-      "string": ""
+      "string": "class Solution {\npublic:\n    vector<string> splitWordsBySeparator(vector<string>& words,\n                                         char separator) {\n        vector<string> ans;\n\n        for (const string& word : words) {\n            istringstream iss(word);\n            for (string word; getline(iss, word, separator);)\n                if (!word.empty())\n                    ans.push_back(word);\n        }\n\n        return ans;\n    }\n};"
     }
   },
   "2789": {
