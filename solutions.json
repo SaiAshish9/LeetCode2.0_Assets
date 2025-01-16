@@ -1572,7 +1572,7 @@
   },
   "310": {
     "solution": {
-      "topological-sort": ""
+      "graph": "class Solution {\npublic:\n    vector<int> findMinHeightTrees(int n, vector<vector<int>>& edges) {\n        if (n == 1 || edges.empty())\n            return {0};\n\n        vector<int> ans;\n        unordered_map<int, unordered_set<int>> graph;\n\n        for (const auto& edge : edges) {\n            const int u = edge[0];\n            const int v = edge[1];\n            graph[u].insert(v);\n            graph[v].insert(u);\n        }\n\n        for (const auto& [label, children] : graph)\n            if (children.size() == 1)\n                ans.push_back(label);\n\n        while (n > 2) {\n            n -= ans.size();\n            vector<int> nextLeaves;\n            for (const int leaf : ans) {\n                const int u = *begin(graph[leaf]);\n                graph[u].erase(leaf);\n                if (graph[u].size() == 1)\n                    nextLeaves.push_back(u);\n            }\n            ans = nextLeaves;\n        }\n        for (auto a : ans)\n            cout << a << \" \";\n        return ans;\n    }\n};\n"
     }
   },
   "311": {
