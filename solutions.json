@@ -15510,7 +15510,7 @@
   },
   "3174": {
     "solution": {
-      "hash-table": ""
+      "string": "class Solution {\npublic:\n    string clearDigits(string s) {\n        string ans;\n\n        for (const char c : s)\n            if (isdigit(c))\n                ans.pop_back();\n            else\n                ans += c;\n\n        return ans;\n    }\n};"
     }
   },
   "3175": {
