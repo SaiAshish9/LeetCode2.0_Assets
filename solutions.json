@@ -13879,8 +13879,7 @@
   },
   "2833": {
     "solution": {
-      "string": "class Solution {\npublic:\n    int furthestDistanceFromOrigin(string moves) {\n        int x = 0, y = 0;\n        \n        for (char move : moves) {\n            if (move == 'L') {\n                x--;  \n            } else if (move == 'R') {\n                x++;  \n            } else if (move == 'U') {\n                y++;  \n            } else if (move == 'D') {\n                y--;  \n            }\n        }\n        \n        return abs(x) + abs(y);\n    }\n};\n"
-    }
+      "string": "class Solution {\npublic:\n    int furthestDistanceFromOrigin(string moves) {\n        int countL = 0;\n        int countR = 0;\n        int countUnderline = 0;\n\n        for (const char c : moves)\n            if (c == 'L')\n                ++countL;\n            else if (c == 'R')\n                ++countR;\n            else // c == '_'\n                ++countUnderline;\n\n        return abs(countL - countR) + countUnderline;\n    }\n};"    }
   },
   "2834": {
     "solution": {
