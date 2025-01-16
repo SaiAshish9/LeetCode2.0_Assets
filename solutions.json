@@ -13879,7 +13879,7 @@
   },
   "2833": {
     "solution": {
-      "counting": ""
+      "string": "class Solution {\npublic:\n    int furthestDistanceFromOrigin(string moves) {\n        int x = 0, y = 0;\n        \n        for (char move : moves) {\n            if (move == 'L') {\n                x--;  \n            } else if (move == 'R') {\n                x++;  \n            } else if (move == 'U') {\n                y++;  \n            } else if (move == 'D') {\n                y--;  \n            }\n        }\n        \n        return abs(x) + abs(y);\n    }\n};\n"
     }
   },
   "2834": {
