@@ -2635,7 +2635,7 @@
   },
   "521": {
     "solution": {
-      "string": ""
+      "string": "class Solution {\npublic:\n    int findLUSlength(string a, string b) {\n        if (a == b) {\n            return -1;\n        }\n        return max(a.size(), b.size());\n    }\n};\n"
     }
   },
   "522": {
