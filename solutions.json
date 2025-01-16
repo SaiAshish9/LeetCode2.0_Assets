@@ -2103,7 +2103,7 @@
   },
   "415": {
     "solution": {
-      "math": ""
+      "string": "#include <string>\n#include <algorithm>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    string addStrings(std::string num1, std::string num2) {\n        int i = num1.size() - 1; \n        int j = num2.size() - 1; \n        int carry = 0;           \n        std::string result;     \n\n        while (i >= 0 || j >= 0 || carry > 0) {\n            int digit1 = (i >= 0) ? num1[i] - '0' : 0; \n            int digit2 = (j >= 0) ? num2[j] - '0' : 0; \n\n            int sum = digit1 + digit2 + carry;\n            carry = sum / 10;                \n            result.push_back((sum % 10) + '0'); \n\n            i--;\n            j--;\n        }\n\n        reverse(result.begin(), result.end()); \n        return result;\n    }\n};\n"
     }
   },
   "416": {
