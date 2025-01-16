@@ -2439,7 +2439,7 @@
   },
   "482": {
     "solution": {
-      "string": ""
+      "string": "class Solution {\npublic:\n    string licenseKeyFormatting(string s, int k) {\n        string formatted;\n        int count = 0;\n\n        for (int i = s.size() - 1; i >= 0; --i) {\n            if (s[i] == '-') continue; \n            \n            formatted += toupper(s[i]); \n            count++;\n\n            if (count == k) {\n                formatted += '-';\n                count = 0;\n            }\n        }\n\n        if (!formatted.empty() && formatted.back() == '-') {\n            formatted.pop_back();\n        }\n\n        reverse(formatted.begin(), formatted.end());\n        return formatted;\n    }\n};\n"
     }
   },
   "483": {
