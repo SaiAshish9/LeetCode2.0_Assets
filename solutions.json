@@ -12128,7 +12128,7 @@
   },
   "2414": {
     "solution": {
-      "string": ""
+      "string": "class Solution {\npublic:\n    int longestContinuousSubstring(string s) {\n        int ans = 1;\n        int runningLen = 1;\n\n        for (int i = 1; i < s.length(); ++i)\n            if (s[i] == s[i - 1] + 1)\n                ans = max(ans, ++runningLen);\n            else\n                runningLen = 1;\n\n        return ans;\n    }\n};"
     }
   },
   "2415": {
