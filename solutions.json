@@ -2199,7 +2199,7 @@
   },
   "434": {
     "solution": {
-      "string": ""
+      "string": "class Solution {\npublic:\n    int countSegments(string s) {\n        int count = 0;\n        bool inSegment = false;\n\n        for (char c : s) {\n            if (c != ' ') { \n                if (!inSegment) { \n                    count++;\n                    inSegment = true;\n                }\n            } else { \n                inSegment = false;\n            }\n        }\n\n        return count;\n    }\n};\n"
     }
   },
   "435": {
