@@ -12634,7 +12634,7 @@
   },
   "2515": {
     "solution": {
-      "string": ""
+      "string": "class Solution {\npublic:\n    int closetTarget(vector<string>& words, string target, int startIndex) {\n        int n = words.size();\n        \n        bool foundTarget = false;\n        for (int i = 0; i < n; i++) {\n            if (words[i] == target) {\n                foundTarget = true;\n                break;\n            }\n        }\n        \n        if (!foundTarget) {\n            return -1; \n        }\n\n        int clockwiseDistance = -1;\n        for (int i = 0; i < n; i++) {\n            int index = (startIndex + i) % n;\n            if (words[index] == target) {\n                clockwiseDistance = i;\n                break;\n            }\n        }\n\n        int counterclockwiseDistance = -1;\n        for (int i = 0; i < n; i++) {\n            int index = (startIndex - i + n) % n; \n            if (words[index] == target) {\n                counterclockwiseDistance = i;\n                break;\n            }\n        }\n        \n        return min(clockwiseDistance, counterclockwiseDistance);\n    }\n};\n"
     }
   },
   "2516": {
