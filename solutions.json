@@ -15490,7 +15490,7 @@
   },
   "3170": {
     "solution": {
-      "heap-(priority-queue)": ""
+      "string": "class Solution {\npublic:\n    string clearStars(string s) {\n        string ans = s;\n        vector<vector<int>> buckets(26);\n\n        for (int i = 0; i < s.length(); ++i)\n            if (s[i] == '*') {\n                ans[i] = ' ';\n                int j = 0;\n                while (buckets[j].empty())\n                    ++j;\n                ans[buckets[j].back()] = ' ', buckets[j].pop_back();\n            } else {\n                buckets[s[i] - 'a'].push_back(i);\n            }\n\n        std::erase(ans, ' ');\n        return ans;\n    }\n};"
     }
   },
   "3171": {
