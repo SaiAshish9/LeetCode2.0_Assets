@@ -15720,7 +15720,7 @@
   },
   "3216": {
     "solution": {
-      "greedy": ""
+      "string": "class Solution {\npublic:\n    string getSmallestString(string s) {\n        for (int i = 1; i < s.length(); ++i)\n            if (s[i - 1] % 2 == s[i] % 2 && s[i - 1] > s[i]) {\n                swap(s[i - 1], s[i]);\n                break;\n            }\n        return s;\n    }\n};"
     }
   },
   "3217": {
