@@ -12599,7 +12599,7 @@
   },
   "2508": {
     "solution": {
-      "graph": ""
+      "graph": "class Solution {\npublic:\n    bool isPossible(int n, vector<vector<int>>& edges) {\n        vector<unordered_set<int>> graph(n);\n\n        for (const vector<int>& edge : edges) {\n            const int u = edge[0] - 1;\n            const int v = edge[1] - 1;\n            graph[u].insert(v);\n            graph[v].insert(u);\n        }\n\n        const vector<int> oddNodes = getOddNodes(graph);\n        if (oddNodes.empty())\n            return true;\n        if (oddNodes.size() == 2) {\n            const int a = oddNodes[0];\n            const int b = oddNodes[1];\n            for (int i = 0; i < n; ++i)\n                if (!graph[i].contains(a) && !graph[i].contains(b))\n                    return true;\n        }\n        if (oddNodes.size() == 4) {\n            const int a = oddNodes[0];\n            const int b = oddNodes[1];\n            const int c = oddNodes[2];\n            const int d = oddNodes[3];\n            return (!graph[a].contains(b) && !graph[c].contains(d)) ||\n                   (!graph[a].contains(c) && !graph[b].contains(d)) ||\n                   (!graph[a].contains(d) && !graph[b].contains(c));\n        }\n        return false;\n    }\n\nprivate:\n    vector<int> getOddNodes(const vector<unordered_set<int>>& graph) {\n        vector<int> oddNodes;\n        for (int i = 0; i < graph.size(); ++i)\n            if (graph[i].size() % 2 == 1)\n                oddNodes.push_back(i);\n        return oddNodes;\n    }\n};"
     }
   },
   "2509": {
