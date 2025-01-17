@@ -8856,7 +8856,7 @@
   },
   "1761": {
     "solution": {
-      "graph": ""
+      "graph": "#include <vector>\n#include <unordered_set>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int minTrioDegree(int n, vector<vector<int>>& edges) {\n        vector<unordered_set<int>> graph(n + 1);\n        vector<int> degree(n + 1, 0);\n\n        for (const auto& edge : edges) {\n            graph[edge[0]].insert(edge[1]);\n            graph[edge[1]].insert(edge[0]);\n            degree[edge[0]]++;\n            degree[edge[1]]++;\n        }\n\n        int minDegree = INT_MAX;\n\n        for (int i = 1; i <= n; ++i) {\n            for (int j : graph[i]) {\n                if (j > i) { \n                    for (int k : graph[j]) {\n                        if (k > j && graph[i].count(k)) {\n                            int currentDegree = degree[i] + degree[j] + degree[k] - 6;\n                            minDegree = min(minDegree, currentDegree);\n                        }\n                    }\n                }\n            }\n        }\n\n        return minDegree == INT_MAX ? -1 : minDegree;\n    }\n};"
     }
   },
   "1762": {
