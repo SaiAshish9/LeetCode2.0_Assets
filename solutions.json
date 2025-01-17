@@ -11076,7 +11076,7 @@
   },
   "2204": {
     "solution": {
-      "union-find": ""
+      "union-find": "class Solution {\npublic:\n    vector<int> distanceToCycle(int n, vector<vector<int>>& edges) {\n        unordered_set<int> adjList[n]; \n        \n        for (auto& edge : edges) {\n            int u = edge[0], v = edge[1];\n            adjList[u].insert(v);\n            adjList[v].insert(u);\n        }\n        \n        queue<int> q;  \n        for (int i = 0; i < n; ++i) {\n            if (adjList[i].size() == 1) {\n                q.push(i);\n            }\n        }\n\n        vector<int> parent(n, -1); \n        vector<int> nodeOrder;  \n        \n        while (!q.empty()) {\n            int node = q.front();\n            q.pop();\n            nodeOrder.push_back(node);\n\n            for (int neighbor : adjList[node]) {\n                adjList[neighbor].erase(node);  \n                parent[node] = neighbor; \n                // If the neighbor becomes a leaf, add it to the queue\n                if (adjList[neighbor].size() == 1) {\n                    q.push(neighbor);\n                }\n            }\n            adjList[node].clear();  \n        }\n\n        vector<int> distanceToCycle(n, -1); \n        for (int i = nodeOrder.size() - 1; i >= 0; --i) {\n            int node = nodeOrder[i];\n            if (parent[node] != -1) {\n                distanceToCycle[node] = distanceToCycle[parent[node]] + 1;\n            }\n        }\n\n        return distanceToCycle;\n    }\n};\n"
     }
   },
   "2205": {
