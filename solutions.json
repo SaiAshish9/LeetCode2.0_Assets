@@ -11852,7 +11852,7 @@
   },
   "2359": {
     "solution": {
-      "graph": ""
+      "graph": "#include <vector>\n#include <queue>\n#include <climits>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> bfs(int start, const vector<int>& edges, int n) {\n        vector<int> distance(n, INT_MAX);  \n        queue<int> q;\n        distance[start] = 0;  \n        q.push(start);\n\n        while (!q.empty()) {\n            int node = q.front();\n            q.pop();\n\n            int next = edges[node];  \n            if (next != -1 && distance[next] == INT_MAX) { \n                distance[next] = distance[node] + 1;\n                q.push(next);\n            }\n        }\n\n        return distance;\n    }\n\n    int closestMeetingNode(vector<int>& edges, int node1, int node2) {\n        int n = edges.size();\n        \n        vector<int> dist1 = bfs(node1, edges, n);\n        vector<int> dist2 = bfs(node2, edges, n);\n\n        int minDist = INT_MAX;  \n        int resultNode = -1;\n\n        for (int i = 0; i < n; ++i) {\n            int dist = max(dist1[i], dist2[i]);\n\n            if (dist < minDist) {\n                minDist = dist;\n                resultNode = i;\n            }\n            else if (dist == minDist && i < resultNode) {\n                resultNode = i;\n            }\n        }\n\n        return resultNode;\n    }\n};\n"
     }
   },
   "2360": {
