@@ -897,7 +897,7 @@
   },
   "177": {
     "solution": {
-      "database": ""
+      "database": "CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT\nBEGIN\n  SET N = N - 1;\n  RETURN (\n      select distinct e.Salary\n      from Employee e\n      order by e.Salary desc\n      limit N, 1\n  );\nEND"
     }
   },
   "178": {
