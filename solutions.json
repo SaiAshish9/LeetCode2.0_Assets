@@ -4045,7 +4045,7 @@
   },
   "802": {
     "solution": {
-      "topological-sort": ""
+      "graph": "enum State { INIT, VISITING, VISITED }\n\nclass Solution {\n    public List<Integer> eventualSafeNodes(int[][] graph) {\n        List<Integer> eventualSafeNodes = new ArrayList<>();\n\n        // Create the reverse graph\n        List<List<Integer>> reverseGraph = new ArrayList<>();\n        for (int i = 0; i < graph.length; i++) {\n            reverseGraph.add(new ArrayList<>());\n        }\n        int[] inDegree = new int[graph.length];\n        for (int i = 0; i < graph.length; i++) {\n            for (int j : graph[i]) {\n                reverseGraph.get(j).add(i);\n                inDegree[i]++;\n            }\n        }\n\n        // Topological sorting\n        Queue<Integer> queue = new LinkedList<>();\n        for (int i = 0; i < inDegree.length; i++) {\n            if (inDegree[i] == 0) {\n                queue.offer(i);\n            }\n        }\n        while (!queue.isEmpty()) {\n            int node = queue.poll();\n            eventualSafeNodes.add(node);\n            for (int neighbor : reverseGraph.get(node)) {\n                if (--inDegree[neighbor] == 0) {\n                    queue.offer(neighbor);\n                }\n            }\n        }\n\n        Collections.sort(eventualSafeNodes);\n        return eventualSafeNodes;\n    }\n  private boolean hasCycle(int[][] graph, int u, State[] state) {\n    if (state[u] == State.VISITING)\n      return true;\n    if (state[u] == State.VISITED)\n      return false;\n\n    state[u] = State.VISITING;\n    for (final int v : graph[u])\n      if (hasCycle(graph, v, state))\n        return true;\n    state[u] = State.VISITED;\n\n    return false;\n  }\n}\n"
     }
   },
   "803": {
