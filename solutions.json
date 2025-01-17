@@ -922,7 +922,7 @@
   },
   "182": {
     "solution": {
-      "database": ""
+      "database": "select distinct p1.Email\nfrom Person p1, Person p2\nwhere p1.Id <> p2.Id and p1.Email = p2.Email"
     }
   },
   "183": {
