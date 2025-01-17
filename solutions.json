@@ -892,7 +892,7 @@
   },
   "176": {
     "solution": {
-      "database": ""
+      "database": "SELECT\n    (SELECT DISTINCT\n            Salary\n        FROM\n            Employee\n        ORDER BY Salary DESC\n        LIMIT 1 OFFSET 1) AS SecondHighestSalary\n;"
     }
   },
   "177": {
