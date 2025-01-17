@@ -14259,7 +14259,7 @@
   },
   "2924": {
     "solution": {
-      "graph": ""
+      "graph": "#include <vector>\n#include <queue>\nusing namespace std;\n\nclass Solution {\npublic:\n    int findChampion(int n, vector<vector<int>>& edges) {\n        vector<int> inDegree(n, 0);  \n        vector<vector<int>> graph(n); \n        \n        for (const auto& edge : edges) {\n            int u = edge[0], v = edge[1];\n            graph[u].push_back(v);\n            inDegree[v]++; \n        }\n        \n        int candidate = -1;\n        for (int i = 0; i < n; ++i) {\n            if (inDegree[i] == 0) {\n                if (candidate == -1) {\n                    candidate = i;\n                } else {\n                    return -1;\n                }\n            }\n        }\n        \n        vector<bool> visited(n, false);\n        dfs(graph, candidate, visited);\n        \n        for (int i = 0; i < n; ++i) {\n            if (!visited[i]) {\n                return -1; \n            }\n        }\n        \n        return candidate; \n    }\n    \nprivate:\n    void dfs(const vector<vector<int>>& graph, int node, vector<bool>& visited) {\n        visited[node] = true;\n        for (int neighbor : graph[node]) {\n            if (!visited[neighbor]) {\n                dfs(graph, neighbor, visited);\n            }\n        }\n    }\n};\n"
     }
   },
   "2925": {
