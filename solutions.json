@@ -902,7 +902,7 @@
   },
   "178": {
     "solution": {
-      "database": ""
+      "database": "# Write your MySQL query statement below\n\nSELECT s.score, (SELECT count(distinct(score)) from scores m where m.score >= s.score) as \"Rank\" FROM scores s order by s.score desc;\n\n# SELECT\n#     score,\n#     DENSE_RANK() OVER(ORDER BY score DESC) as \"Rank\"\n# FROM scores"
     }
   },
   "179": {
