@@ -6539,7 +6539,7 @@
   },
   "1298": {
     "solution": {
-      "graph": ""
+      "graph": "#include <vector>\n#include <queue>\n#include <unordered_set>\nusing namespace std;\n\nclass Solution {\npublic:\n    int maxCandies(vector<int>& status, vector<int>& candies, vector<vector<int>>& keys, vector<vector<int>>& containedBoxes, vector<int>& initialBoxes) {\n        queue<int> availableBoxes; \n        unordered_set<int> unopenedBoxes; \n        unordered_set<int> collectedKeys; \n        int totalCandies = 0;\n\n        for (int box : initialBoxes) {\n            if (status[box] == 1) {\n                availableBoxes.push(box); \n            } else {\n                unopenedBoxes.insert(box);\n            }\n        }\n\n        while (!availableBoxes.empty()) {\n            int currentBox = availableBoxes.front();\n            availableBoxes.pop();\n\n            totalCandies += candies[currentBox];\n\n            for (int key : keys[currentBox]) {\n                if (collectedKeys.find(key) == collectedKeys.end()) {\n                    collectedKeys.insert(key);\n                    if (unopenedBoxes.find(key) != unopenedBoxes.end()) {\n                        unopenedBoxes.erase(key);\n                        availableBoxes.push(key); \n                    }\n                }\n            }\n\n            for (int box : containedBoxes[currentBox]) {\n                if (status[box] == 1 || collectedKeys.find(box) != collectedKeys.end()) {\n                    availableBoxes.push(box); \n                } else {\n                    unopenedBoxes.insert(box); \n                }\n            }\n        }\n\n        return totalCandies;\n    }\n};"
     }
   },
   "1299": {
