@@ -932,7 +932,7 @@
   },
   "184": {
     "solution": {
-      "database": ""
+      "database": "select d1.Name as Department, e1.Name as Employee, e1.Salary as Salary\nfrom Employee e1, Department d1, \n\n(select d.Id as Id, e.Name as Employee, max(e.Salary) as Salary\nfrom Employee e, Department d\nwhere e.DepartmentId = d.Id\ngroup by d.Id) as a\n\nwhere e1.DepartmentId = d1.Id and d1.Id = a.Id and a.Salary = e1.Salary"
     }
   },
   "185": {
