@@ -9006,7 +9006,7 @@
   },
   "1791": {
     "solution": {
-      "graph": ""
+      "graph": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int findCenter(vector<vector<int>>& edges) {\n        if (edges[0][0] == edges[1][0] || edges[0][0] == edges[1][1]) {\n            return edges[0][0];\n        }\n        return edges[0][1];\n    }\n};"
     }
   },
   "1792": {
