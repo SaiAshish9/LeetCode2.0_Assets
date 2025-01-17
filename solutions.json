@@ -4207,7 +4207,7 @@
   },
   "834": {
     "solution": {
-      "graph": ""
+      "graph": "#include <vector>\n#include <unordered_map>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> sumOfDistancesInTree(int n, vector<vector<int>>& edges) {\n        vector<vector<int>> tree(n);\n        vector<int> count(n, 1);\n        vector<int> answer(n, 0); \n\n        for (const auto& edge : edges) {\n            tree[edge[0]].push_back(edge[1]);\n            tree[edge[1]].push_back(edge[0]);\n        }\n\n        function<void(int, int)> postOrder = [&](int node, int parent) {\n            for (int child : tree[node]) {\n                if (child == parent) continue;\n                postOrder(child, node);\n                count[node] += count[child];\n                answer[node] += answer[child] + count[child];\n            }\n        };\n\n        function<void(int, int)> preOrder = [&](int node, int parent) {\n            for (int child : tree[node]) {\n                if (child == parent) continue;\n                answer[child] = answer[node] - count[child] + (n - count[child]);\n                preOrder(child, node);\n            }\n        };\n\n        postOrder(0, -1); \n        preOrder(0, -1); \n\n        return answer;\n    }\n};\n"
     }
   },
   "835": {
