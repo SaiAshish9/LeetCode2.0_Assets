@@ -3046,7 +3046,7 @@
   },
   "603": {
     "solution": {
-      "database": ""
+      "database": "# Write your MySQL query statement below\nWITH\n    T AS (\n        SELECT\n            *,\n            SUM(free = 1) OVER (\n                ORDER BY seat_id\n                ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING\n            ) AS cnt\n        FROM Cinema\n    )\nSELECT seat_id\nFROM T\nWHERE free = 1 AND cnt > 1\nORDER BY 1;"
     }
   },
   "604": {
