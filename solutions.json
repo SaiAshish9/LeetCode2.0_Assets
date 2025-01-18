@@ -4528,7 +4528,7 @@
   },
   "898": {
     "solution": {
-      "dynamic-programming": ""
+      "bit-manipulation": "class Solution {\npublic:\n    int subarrayBitwiseORs(vector<int>& arr) {\n        unordered_set<int> result;\n        unordered_set<int> current;\n\n        for (int num : arr) {\n            unordered_set<int> newCurrent;\n            newCurrent.insert(num);\n            for (int prev : current) {\n                newCurrent.insert(prev | num);\n            }\n            result.insert(newCurrent.begin(), newCurrent.end());\n            current = newCurrent;\n        }\n\n        return result.size();\n    }\n};"
     }
   },
   "899": {
