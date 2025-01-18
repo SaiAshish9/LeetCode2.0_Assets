@@ -3106,7 +3106,7 @@
   },
   "615": {
     "solution": {
-      "database": ""
+      "database": "WITH\n    S AS (\n        SELECT *\n        FROM\n            Salary\n            JOIN Employee USING (employee_id)\n    ),\n    T AS (\n        SELECT\n            DATE_FORMAT(pay_date, '%Y-%m') AS pay_month,\n            department_id,\n            AVG(amount) OVER (PARTITION BY pay_date, department_id) AS department_avg,\n            AVG(amount) OVER (PARTITION BY pay_date) AS company_avg\n        FROM S\n    )\nSELECT\n    pay_month,\n    department_id,\n    CASE\n        WHEN AVG(department_avg) > AVG(company_avg) THEN 'higher'\n        WHEN AVG(department_avg) < AVG(company_avg) THEN 'lower'\n        ELSE 'same'\n    END AS comparison\nFROM T\nGROUP BY 1, 2;"
     }
   },
   "616": {
