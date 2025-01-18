@@ -2926,7 +2926,7 @@
   },
   "579": {
     "solution": {
-      "database": ""
+      "database": "# Write your MySQL query statement below\nWITH\n    T AS (\n        SELECT\n            id,\n            month,\n            SUM(salary) OVER (\n                PARTITION BY id\n                ORDER BY month\n                RANGE 2 PRECEDING\n            ) AS salary,\n            RANK() OVER (\n                PARTITION BY id\n                ORDER BY month DESC\n            ) AS rk\n        FROM Employee\n    )\nSELECT id, month, salary\nFROM T\nWHERE rk > 1\nORDER BY 1, 2 DESC;"
     }
   },
   "580": {
