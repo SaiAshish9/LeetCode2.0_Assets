@@ -15630,7 +15630,7 @@
   },
   "3198": {
     "solution": {
-      "database": ""
+      "database": "SELECT\n  state,\n  GROUP_CONCAT(city ORDER BY city SEPARATOR ', ') AS cities\nFROM Cities\nGROUP BY 1\nORDER BY 1;"
     }
   },
   "3199": {
@@ -15710,7 +15710,7 @@
   },
   "3214": {
     "solution": {
-      "database": ""
+      "database": "WITH\n  YearlySpends AS (\n    SELECT\n      product_id,\n      YEAR(transaction_date) AS year,\n      SUM(spend) AS spend\n    FROM user_transactions\n    GROUP BY 1, 2\n  )\nSELECT\n  CurrYear.year,\n  CurrYear.product_id,\n  CurrYear.spend AS curr_year_spend,\n  PrevYear.spend AS prev_year_spend,\n  ROUND(100 * (CurrYear.spend - PrevYear.spend) / PrevYear.spend, 2) AS yoy_rate\nFROM YearlySpends AS CurrYear\nLEFT JOIN YearlySpends AS PrevYear\n  ON (\n    CurrYear.product_id = PrevYear.product_id\n    AND CurrYear.year - 1 = PrevYear.year)\nORDER BY product_id, year;"
     }
   },
   "3215": {
