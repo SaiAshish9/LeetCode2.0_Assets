@@ -1329,7 +1329,7 @@
   },
   "262": {
     "solution": {
-      "database": ""
+      "database": "SELECT \nt1.Day\n,ROUND(SUM(t1.not_completed)/COUNT(*),2) AS \"Cancellation Rate\"\nFROM\n(SELECT \n    t.request_at AS Day\n    ,(CASE\n        WHEN status<>'completed' THEN 1\n        ELSE 0 END) AS not_completed\n    \n \nFROM\n Trips t\nWHERE client_id IN (SELECT users_id FROM Users WHERE banned='No' AND role='client')\n      AND driver_id IN (SELECT users_id FROM Users WHERE banned='No' AND role='driver')\n        ) t1\nWHERE (t1.Day BETWEEN '2013-10-01' AND '2013-10-03')\n\nGROUP BY t1.Day"
     }
   },
   "263": {
