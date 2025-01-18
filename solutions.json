@@ -11156,7 +11156,7 @@
   },
   "2220": {
     "solution": {
-      "bit-manipulation": ""
+      "bit-manipulation": "class Solution {\npublic:\n    int minBitFlips(int start, int goal) {\n        return __builtin_popcount(start ^ goal);\n    }\n};"
     }
   },
   "2221": {
