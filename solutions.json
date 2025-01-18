@@ -967,7 +967,7 @@
   },
   "191": {
     "solution": {
-      "divide-and-conquer": ""
+      "bit-manipulation": "public class Solution {\n  public int hammingWeight(int n) {\n    int ans = 0;\n\n    for (int i = 0; i < 32; ++i)\n      if (((n >> i) & 1) == 1)\n        ++ans;\n\n    return ans;\n  }\n}\n"
     }
   },
   "192": {
