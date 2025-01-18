@@ -3205,7 +3205,7 @@
   },
   "635": {
     "solution": {
-      "ordered-set": ""
+      "ordered-set": "// Class to represent a log storage and retrieval system\nclass LogSystem {\npublic:\n    // Constructor to initialize granularity mapping\n    LogSystem() {\n        granularityMap[\"Year\"] = 4;\n        granularityMap[\"Month\"] = 7;\n        granularityMap[\"Day\"] = 10;\n        granularityMap[\"Hour\"] = 13;\n        granularityMap[\"Minute\"] = 16;\n        granularityMap[\"Second\"] = 19;\n    }\n\n    // Stores a log entry with an ID and timestamp\n    void put(int id, string timestamp) {\n        logs.emplace_back(id, timestamp);\n    }\n\n    // Retrieves log IDs within a range based on granularity\n    vector<int> retrieve(string start, string end, string granularity) {\n        vector<int> result;\n        int length = granularityMap[granularity];\n        string startPrefix = start.substr(0, length);\n        string endPrefix = end.substr(0, length);\n\n        for (const auto& [id, timestamp] : logs) {\n            string timestampPrefix = timestamp.substr(0, length);\n            if (startPrefix <= timestampPrefix && timestampPrefix <= endPrefix) {\n                result.emplace_back(id);\n            }\n        }\n\n        return result;\n    }\n\nprivate:\n    vector<pair<int, string>> logs;              // Stores logs as pairs of ID and timestamp\n    unordered_map<string, int> granularityMap;  // Maps granularity levels to substring lengths\n};\n\n/**\n * Example usage:\n * LogSystem* obj = new LogSystem();\n * obj->put(id, timestamp);\n * vector<int> param_2 = obj->retrieve(start, end, granularity);\n */"
     }
   },
   "636": {
