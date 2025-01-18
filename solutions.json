@@ -3036,7 +3036,7 @@
   },
   "601": {
     "solution": {
-      "database": ""
+      "database": "with cte\nas\n(select id,visit_date, people, id - row_number() over (order by id ) diff\n from stadium\nwhere people >=  100)\n\n\nselect id, visit_date, people from cte\nwhere diff in (\nselect diff from cte\n    group by diff\n    having count(*)>=3)\n    order by 2"
     }
   },
   "602": {
