@@ -11812,7 +11812,7 @@
   },
   "2351": {
     "solution": {
-      "bit-manipulation": ""
+      "bit-manipulation": "class Solution {\npublic:\n    char repeatedCharacter(string s) {\n        vector<bool> seen(26, false);\n        for (char c : s) {\n            if (seen[c - 'a']) \n                return c;\n            seen[c - 'a'] = true;\n        }\n        return '\\0'; // Should not reach here as per problem constraints\n    }\n};"
     }
   },
   "2352": {
