@@ -15154,7 +15154,7 @@
   },
   "3103": {
     "solution": {
-      "database": ""
+      "database": "WITH RECURSIVE\n  FebruaryTweets AS (\n    SELECT * FROM Tweets\n    WHERE YEAR(tweet_date) = 2024 AND MONTH(tweet_date) = 2\n  ),\n  HashtagToTweet AS (\n    SELECT\n      REGEXP_SUBSTR(tweet, '#[^\\s]+') AS hashtag,\n      REGEXP_REPLACE(tweet, '#[^\\s]+', '', 1, 1) AS tweet\n    FROM FebruaryTweets\n    UNION ALL\n    SELECT\n      REGEXP_SUBSTR(tweet, '#[^\\s]+') AS hashtag,\n      REGEXP_REPLACE(tweet, '#[^\\s]+', '', 1, 1) AS tweet\n    FROM HashtagToTweet\n    WHERE POSITION('#' IN tweet) > 0\n  )\nSELECT\n  hashtag,\n  COUNT(*) AS count\nFROM HashtagToTweet\nGROUP BY hashtag\nORDER BY count DESC, hashtag DESC\nLIMIT 3;"
     }
   },
   "3104": {
