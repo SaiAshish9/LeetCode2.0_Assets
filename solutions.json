@@ -862,7 +862,7 @@
   },
   "170": {
     "solution": {
-      "two-pointers": ""
+      "two-pointers": "// OJ: https://leetcode.com/problems/two-sum-iii-data-structure-design/\n// Time:\n//      TwoSum: O(1)\n//      add: O(logN)\n//      find: O(NlogN)\n// Space: O(N)\nclass TwoSum {\n    map<long, int> m;\npublic:\n    TwoSum() {}\n    void add(int n) {\n        m[n]++;\n    }\n    bool find(int n) {\n        for (auto &[a, cnt] : m) {\n            long b = n - a;\n            if (a > b) return false;\n            if (a == b) return cnt > 1;\n            if (m.count(b)) return true;\n        }\n        return false;\n    }\n};"
     }
   },
   "171": {
