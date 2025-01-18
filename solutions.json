@@ -6016,7 +6016,7 @@
   },
   "1194": {
     "solution": {
-      "database": ""
+      "database": "# Write your MySQL query statement below\nWITH\n    s AS (\n        SELECT first_player AS player_id, first_score AS score, group_id\n        FROM\n            Matches AS m\n            JOIN Players AS p ON m.first_player = p.player_id\n        UNION ALL\n        SELECT second_player AS player_id, second_score AS score, group_id\n        FROM\n            Matches AS m\n            JOIN Players AS p ON m.second_player = p.player_id\n    ),\n    t AS (\n        SELECT group_id, player_id, SUM(score) AS scores\n        FROM s\n        GROUP BY player_id\n    ),\n    p AS (\n        SELECT\n            group_id,\n            player_id,\n            RANK() OVER (\n                PARTITION BY group_id\n                ORDER BY scores DESC, player_id\n            ) AS rk\n        FROM t\n    )\nSELECT group_id, player_id\nFROM p\nWHERE rk = 1;"
     }
   },
   "1195": {
