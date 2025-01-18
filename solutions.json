@@ -143,7 +143,7 @@
   },
   "29": {
     "solution": {
-      "bit-manipulation": ""
+      "bit-manipulation": "class Solution {\npublic:\n    int divide(int dividend, int divisor) {\n        if (dividend == INT_MIN && divisor == -1)\n            return INT_MAX;\n\n        const int resultSign = (dividend > 0) ^ (divisor > 0) ? -1 : 1;\n\n        long absoluteDividend = labs(dividend);\n        long absoluteDivisor = labs(divisor);\n        long result = 0;\n\n        while (absoluteDividend >= absoluteDivisor) {\n            long multiplier = 1;\n            long tempDivisor = absoluteDivisor;\n\n            while (tempDivisor * 2 <= absoluteDividend) {\n                tempDivisor *= 2;\n                multiplier *= 2;\n            }\n\n            absoluteDividend -= tempDivisor;\n            result += multiplier;\n        }\n\n        return resultSign * result;\n    }\n};\n"
     }
   },
   "30": {
