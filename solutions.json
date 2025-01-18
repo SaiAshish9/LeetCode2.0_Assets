@@ -7109,7 +7109,7 @@
   },
   "1412": {
     "solution": {
-      "database": ""
+      "database": "# Write your MySQL query statement below\nWITH\n    T AS (\n        SELECT\n            student_id,\n            RANK() OVER (\n                PARTITION BY exam_id\n                ORDER BY score\n            ) AS rk1,\n            RANK() OVER (\n                PARTITION BY exam_id\n                ORDER BY score DESC\n            ) AS rk2\n        FROM Exam\n    )\nSELECT student_id, student_name\nFROM\n    T\n    JOIN Student USING (student_id)\nGROUP BY 1\nHAVING SUM(rk1 = 1) = 0 AND SUM(rk2 = 1) = 0\nORDER BY 1;"
     }
   },
   "1413": {
