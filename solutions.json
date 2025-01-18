@@ -997,7 +997,7 @@
   },
   "197": {
     "solution": {
-      "database": ""
+      "database": "WITH yesterday AS (SELECT id,recordDate,temperature,DATE_SUB(recordDate, INTERVAL 1 DAY) AS yesterday\nFROM Weather)\n\nSELECT yesterday.id\nFROM yesterday LEFT JOIN Weather on yesterday.yesterday = Weather.recordDate\nWHERE Weather.temperature IS NOT NULL AND yesterday.temperature > Weather.temperature"
     }
   },
   "198": {
