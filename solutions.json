@@ -15686,7 +15686,7 @@
   },
   "3209": {
     "solution": {
-      "bit-manipulation": ""
+      "bit-manipulation": "using namespace std;\n\nclass Solution {\npublic:\n    long long countSubarrays(vector<int>& nums, int k) {\n        long long ans = 0;\n        unordered_map<int, int> prev;\n\n        for (const int num : nums) {\n            unordered_map<int, int> curr{{num, 1}};\n            for (const auto& [val, freq] : prev)\n                curr[val & num] += freq;\n            ans += curr.contains(k) ? curr[k] : 0;\n            prev = move(curr);\n        }\n\n        return ans;\n    }\n};"
     }
   },
   "3210": {
