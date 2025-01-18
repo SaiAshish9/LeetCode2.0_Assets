@@ -1921,7 +1921,7 @@
   },
   "379": {
     "solution": {
-      "queue": ""
+      "design": "// OJ: https://leetcode.com/problems/design-phone-directory/\n// Time: O(1)\n// Space: O(N)\nclass PhoneDirectory {\nprivate:\n    unordered_set<int> pool;\n\npublic:\n    PhoneDirectory(int maxNumbers) {\n        while (maxNumbers--) {\n            pool.insert(maxNumbers);\n        }\n    }\n\n    int get() {\n        if (pool.empty()) {\n            return -1;\n        }\n        int ans = *pool.begin();\n        pool.erase(pool.begin());\n        return ans;\n    }\n\n    bool check(int number) {\n        return pool.find(number) != pool.end();\n    }\n\n    void release(int number) {\n        if (check(number)) {\n            return;\n        }\n        pool.insert(number);\n    }\n};"
     }
   },
   "380": {
