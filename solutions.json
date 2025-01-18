@@ -1836,7 +1836,7 @@
   },
   "362": {
     "solution": {
-      "queue": ""
+      "design": "// OJ: https://leetcode.com/problems/design-hit-counter/\n// Time:\n//      HitCounter: O(1)\n//      hit, getHits: amortized O(1)\n// Space: O(N)\nclass HitCounter {\nprivate:\n    queue<int> q;\n\n    void clear(int timestamp) {\n        int start = timestamp - 300;\n        while (!q.empty() && q.front() <= start) {\n            q.pop();\n        }\n    }\n\npublic:\n    HitCounter() {}\n\n    void hit(int timestamp) {\n        clear(timestamp);\n        q.push(timestamp);\n    }\n\n    int getHits(int timestamp) {\n        clear(timestamp);\n        return q.size();\n    }\n};"
     }
   },
   "363": {
