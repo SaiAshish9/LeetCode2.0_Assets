@@ -2886,7 +2886,7 @@
   },
   "571": {
     "solution": {
-      "database": ""
+      "database": "WITH\n    t AS (\n        SELECT\n            *,\n            SUM(frequency) OVER (ORDER BY num ASC) AS rk1,\n            SUM(frequency) OVER (ORDER BY num DESC) AS rk2,\n            SUM(frequency) OVER () AS s\n        FROM Numbers\n    )\nSELECT\n    ROUND(AVG(num), 1) AS median\nFROM t\nWHERE rk1 >= s / 2 AND rk2 >= s / 2;"
     }
   },
   "572": {
