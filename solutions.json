@@ -2921,7 +2921,7 @@
   },
   "578": {
     "solution": {
-      "database": ""
+      "database": "WITH\n    T AS (\n        SELECT\n            question_id AS survey_log,\n            (SUM(action = 'answer') OVER (PARTITION BY question_id)) / (\n                SUM(action = 'show') OVER (PARTITION BY question_id)\n            ) AS ratio\n        FROM SurveyLog\n    )\nSELECT survey_log\nFROM T\nORDER BY ratio DESC, 1\nLIMIT 1;"
     }
   },
   "579": {
