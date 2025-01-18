@@ -2409,7 +2409,7 @@
   },
   "476": {
     "solution": {
-      "bit-manipulation": ""
+      "bit-manipulation": "class Solution {\n  public int findComplement(int num) {\n    for (long i = 1; i <= num; i <<= 1)\n      num ^= i;\n    return num;\n  }\n}"
     }
   },
   "477": {
