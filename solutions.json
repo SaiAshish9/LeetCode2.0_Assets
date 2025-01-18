@@ -2876,7 +2876,7 @@
   },
   "569": {
     "solution": {
-      "database": ""
+      "database": "WITH\n    t AS (\n        SELECT\n            *,\n            ROW_NUMBER() OVER (\n                PARTITION BY company\n                ORDER BY salary ASC\n            ) AS rk,\n            COUNT(id) OVER (PARTITION BY company) AS n\n        FROM Employee\n    )\nSELECT\n    id,\n    company,\n    salary\nFROM t\nWHERE rk >= n / 2 AND rk <= n / 2 + 1;"
     }
   },
   "570": {
