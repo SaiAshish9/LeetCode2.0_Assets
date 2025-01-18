@@ -3121,7 +3121,7 @@
   },
   "618": {
     "solution": {
-      "database": ""
+      "database": "WITH\n    T AS (\n        SELECT\n            *,\n            ROW_NUMBER() OVER (\n                PARTITION BY continent\n                ORDER BY name\n            ) AS rk\n        FROM Student\n    )\nSELECT\n    MAX(IF(continent = 'America', name, NULL)) AS 'America',\n    MAX(IF(continent = 'Asia', name, NULL)) AS 'Asia',\n    MAX(IF(continent = 'Europe', name, NULL)) AS 'Europe'\nFROM T\nGROUP BY rk;"
     }
   },
   "619": {
