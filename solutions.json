@@ -14695,7 +14695,7 @@
   },
   "3011": {
     "solution": {
-      "bit-manipulation": ""
+      "bit-manipulation": "class Solution {\npublic:\n    bool canSortArray(vector<int>& nums) {\n        int prevSetBits = 0;\n        int prevMax = INT_MIN;\n        int currMax = INT_MIN;\n        int currMin = INT_MAX;\n\n        for (const int num : nums) {\n            const int setBits = __builtin_popcount(num);\n            if (setBits != prevSetBits) {\n                if (prevMax > currMin)\n                    return false;\n                prevSetBits = setBits;\n                prevMax = currMax;\n                currMax = num;\n                currMin = num;\n            } else {\n                currMax = max(currMax, num);\n                currMin = min(currMin, num);\n            }\n        }\n\n        return prevMax <= currMin;\n    }\n};"
     }
   },
   "3012": {
