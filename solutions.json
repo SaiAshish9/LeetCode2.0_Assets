@@ -1359,7 +1359,7 @@
   },
   "268": {
     "solution": {
-      "bit-manipulation": ""
+      "bit-manipulation": "class Solution {\npublic:\n    int missingNumber(vector<int>& nums) {\n        int n = nums.size();\n        int expectedSum = n * (n + 1) / 2;\n        int actualSum = 0;\n\n        for (int num : nums)\n            actualSum += num;\n\n        return expectedSum - actualSum;\n    }\n};"
     }
   },
   "269": {
@@ -13879,7 +13879,8 @@
   },
   "2833": {
     "solution": {
-      "string": "class Solution {\npublic:\n    int furthestDistanceFromOrigin(string moves) {\n        int countL = 0;\n        int countR = 0;\n        int countUnderline = 0;\n\n        for (const char c : moves)\n            if (c == 'L')\n                ++countL;\n            else if (c == 'R')\n                ++countR;\n            else // c == '_'\n                ++countUnderline;\n\n        return abs(countL - countR) + countUnderline;\n    }\n};"    }
+      "string": "class Solution {\npublic:\n    int furthestDistanceFromOrigin(string moves) {\n        int countL = 0;\n        int countR = 0;\n        int countUnderline = 0;\n\n        for (const char c : moves)\n            if (c == 'L')\n                ++countL;\n            else if (c == 'R')\n                ++countR;\n            else // c == '_'\n                ++countUnderline;\n\n        return abs(countL - countR) + countUnderline;\n    }\n};"
+    }
   },
   "2834": {
     "solution": {
