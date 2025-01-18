@@ -14960,7 +14960,7 @@
   },
   "3064": {
     "solution": {
-      "interactive": ""
+      "bit-manipulation": "class Solution {\npublic:\n    int findNumber() {\n        int n = 0;\n        for (int i = 0; i < 32; ++i) {\n            if (commonSetBits(1 << i)) {\n                n |= 1 << i;\n            }\n        }\n        return n;\n    }\n};"
     }
   },
   "3065": {
