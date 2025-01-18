@@ -5528,7 +5528,7 @@
   },
   "1097": {
     "solution": {
-      "database": ""
+      "database": "# Write your MySQL query statement below\nWITH\n    T AS (\n        SELECT\n            player_id,\n            event_date,\n            MIN(event_date) OVER (PARTITION BY player_id) AS install_dt\n        FROM Activity\n    )\nSELECT\n    install_dt,\n    COUNT(DISTINCT player_id) AS installs,\n    ROUND(\n        SUM(DATEDIFF(event_date, install_dt) = 1) / COUNT(DISTINCT player_id),\n        2\n    ) AS day1_retention\nFROM T\nGROUP BY 1;"
     }
   },
   "1098": {
