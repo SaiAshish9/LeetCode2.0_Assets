@@ -1882,7 +1882,7 @@
   },
   "371": {
     "solution": {
-      "bit-manipulation": ""
+      "bit-manipulation": "class Solution {\npublic:\n    int getSum(unsigned a, unsigned b) {\n        while (b > 0) { // Still have carry bits.\n            const unsigned carry = a & b; // Record the carry bits.\n            a ^= b; // ^ works like + without handling carry bits.\n            b = carry << 1;\n        }\n        return a;\n    }\n};"
     }
   },
   "372": {
