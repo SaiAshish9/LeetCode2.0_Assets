@@ -8105,7 +8105,7 @@
   },
   "1611": {
     "solution": {
-      "dynamic-programming": ""
+      "bit-manipulation": "class Solution {\npublic:\n    int minimumOneBitOperations(int n) {\n        if (n == 0)\n            return 0;\n        int x = 1;\n        while (x * 2 <= n)\n            x <<= 1;\n        return minimumOneBitOperations(n ^ (x | x >> 1)) + 1 + x - 1;\n    }\n};"
     }
   },
   "1612": {
