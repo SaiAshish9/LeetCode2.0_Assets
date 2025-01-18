@@ -1319,7 +1319,7 @@
   },
   "260": {
     "solution": {
-      "bit-manipulation": ""
+      "bit-manipulation": "class Solution {\npublic:\n    int getBit(int x, int k) { return (x >> k) & 1; }\n\n    vector<int> singleNumber(vector<int>& nums) {\n        int xorXY = 0;\n        for (int num : nums)\n            xorXY ^= num;\n\n        int pos = 0;\n        while (!getBit(xorXY, pos))\n            pos++;\n\n        int x = 0;\n        for (int num : nums)\n            if (getBit(num, pos))\n                x ^= num;\n\n        int y = xorXY ^ x;\n        return {x, y};\n    }\n};"
     }
   },
   "261": {
