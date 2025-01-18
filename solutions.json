@@ -14335,7 +14335,7 @@
   },
   "2939": {
     "solution": {
-      "bit-manipulation": ""
+      "bit-manipulation": "class Solution {\npublic:\n    int maximumXorProduct(long long a, long long b, int n) {\n        constexpr int kMod = 1'000'000'007;\n        if (n > 0)\n            for (long bit = 1L << (n - 1); bit > 0; bit >>= 1)\n                // Pick a bit if it makes min(a, b) larger.\n                if ((min(a, b) & bit) == 0) {\n                    a ^= bit;\n                    b ^= bit;\n                }\n        return a % kMod * (b % kMod) % kMod;\n    }\n};"
     }
   },
   "2940": {
