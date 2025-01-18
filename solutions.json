@@ -15110,7 +15110,7 @@
   },
   "3094": {
     "solution": {
-      "interactive": ""
+      "bit-manipulation": "/**\n * Definition of commonBits API.\n * int commonBits(int num);\n */\n\nclass Solution {\npublic:\n    int findNumber() {\n        int n = 0;\n        for (int i = 0; i < 32; ++i) {\n            int count1 = commonBits(1 << i);\n            int count2 = commonBits(1 << i);\n            if (count1 > count2) {\n                n |= 1 << i;\n            }\n        }\n        return n;\n    }\n};"
     }
   },
   "3095": {
