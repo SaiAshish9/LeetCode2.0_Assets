@@ -6939,7 +6939,7 @@
   },
   "1378": {
     "solution": {
-      "database": ""
+      "database": "SELECT\n  EmployeeUNI.unique_id,\n  Employees.name\nFROM Employees\nLEFT JOIN EmployeeUNI\n  USING (id);"
     }
   },
   "1379": {
