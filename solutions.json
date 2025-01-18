@@ -692,7 +692,7 @@
   },
   "137": {
     "solution": {
-      "bit-manipulation": ""
+      "bit-manipulation": "class Solution {\npublic:\n    int singleNumber(vector<int>& nums) {\n        int ones = 0;\n        int twos = 0;\n\n        for (const int num : nums) {\n            ones ^= (num & ~twos);\n            twos ^= (num & ~ones);\n        }\n\n        return ones;\n    }\n};"
     }
   },
   "138": {
