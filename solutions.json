@@ -15636,7 +15636,7 @@
   },
   "3199": {
     "solution": {
-      "bit-manipulation": ""
+      "bit-manipulation": "class Solution {\n public:\n  int tripletCount(vector<int>& a, vector<int>& b, vector<int>& c) {\n    const auto [evenA, oddA] = getEvenOddBitCount(a);\n    const auto [evenB, oddB] = getEvenOddBitCount(b);\n    const auto [evenC, oddC] = getEvenOddBitCount(c);\n    return evenA * oddB * oddC + oddA * evenB * oddC + oddA * oddB * evenC +\n           evenA * evenB * evenC;\n  }\n\n private:\n  pair<int, int> getEvenOddBitCount(const vector<int>& nums) {\n    int even = 0;\n    int odd = 0;\n    for (const unsigned num : nums)\n      if (popcount(num) % 2 == 0)\n        ++even;\n      else\n        ++odd;\n    return {even, odd};\n  }\n};"
     }
   },
   "3200": {
