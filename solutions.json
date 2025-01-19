@@ -8830,7 +8830,7 @@
   },
   "1756": {
     "solution": {
-      "stack": ""
+      "design": "class BinaryIndexedTree {\npublic:\n    BinaryIndexedTree(int _n)\n        : n(_n)\n        , c(_n + 1) {}\n\n    void update(int x, int delta) {\n        while (x <= n) {\n            c[x] += delta;\n            x += x & -x;\n        }\n    }\n\n    int query(int x) {\n        int s = 0;\n        while (x) {\n            s += c[x];\n            x -= x & -x;\n        }\n        return s;\n    }\n\nprivate:\n    int n;\n    vector<int> c;\n};\n\nclass MRUQueue {\npublic:\n    MRUQueue(int n) {\n        q.resize(n + 1);\n        iota(q.begin() + 1, q.end(), 1);\n        tree = new BinaryIndexedTree(n + 2010);\n    }\n\n    int fetch(int k) {\n        int l = 1, r = q.size() - 1;\n        while (l < r) {\n            int mid = (l + r) >> 1;\n            if (mid - tree->query(mid) >= k) {\n                r = mid;\n            } else {\n                l = mid + 1;\n            }\n        }\n        int x = q[l];\n        q.push_back(x);\n        tree->update(l, 1);\n        return x;\n    }\n\nprivate:\n    vector<int> q;\n    BinaryIndexedTree* tree;\n};\n\n/**\n * Your MRUQueue object will be instantiated and called as such:\n * MRUQueue* obj = new MRUQueue(n);\n * int param_1 = obj->fetch(k);\n */"
     }
   },
   "1757": {
