@@ -3679,7 +3679,7 @@
   },
   "729": {
     "solution": {
-      "ordered-set": ""
+      "design": "class MyCalendar {\npublic:\n    map<int, int> events;\n\n    MyCalendar() {}\n\n    bool book(int start, int end) {\n        // Temporarily add the event\n        ++events[start];\n        --events[end];\n\n        int activeBookings = 0;\n\n        // Traverse through the events to check overlaps\n        for (const auto& [time, count] : events) {\n            activeBookings += count;\n            if (activeBookings > 1) {\n                // Revert changes if overlap is detected\n                --events[start];\n                ++events[end];\n                return false;\n            }\n        }\n\n        return true;\n    }\n};\n\n/**\n * Your MyCalendar object will be instantiated and called as such:\n * MyCalendar* obj = new MyCalendar();\n * bool param_1 = obj->book(start, end);\n */"
     }
   },
   "730": {
