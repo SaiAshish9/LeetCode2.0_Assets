@@ -13052,7 +13052,7 @@
   },
   "2598": {
     "solution": {
-      "greedy": ""
+      "hash-table": "class Solution {\npublic:\n    int findSmallestInteger(vector<int>& nums, int value) {\n        unordered_map<int, int> count;\n\n        for (const int num : nums)\n            ++count[(num % value + value) % value];\n\n        for (int i = 0; i < nums.size(); ++i)\n            if (--count[i % value] < 0)\n                return i;\n\n        return nums.size();\n    }\n};"
     }
   },
   "2599": {
