@@ -2529,7 +2529,7 @@
   },
   "500": {
     "solution": {
-      "hash-table": ""
+      "hash-table": "#include <vector>\n#include <string>\n#include <unordered_set>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<string> findWords(vector<string>& words) {\n        unordered_set<char> row1 = {'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'};\n        unordered_set<char> row2 = {'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'};\n        unordered_set<char> row3 = {'z', 'x', 'c', 'v', 'b', 'n', 'm'};\n        \n        vector<string> validWords;\n\n        auto isSingleRowWord = [&](const string& word) {\n            unordered_set<char>* targetRow = nullptr;\n            \n            char firstChar = tolower(word[0]);\n            if (row1.count(firstChar)) targetRow = &row1;\n            else if (row2.count(firstChar)) targetRow = &row2;\n            else if (row3.count(firstChar)) targetRow = &row3;\n\n            for (char ch : word) {\n                if (!targetRow->count(tolower(ch))) {\n                    return false;\n                }\n            }\n            return true;\n        };\n\n        for (const string& word : words) {\n            if (isSingleRowWord(word)) {\n                validWords.push_back(word);\n            }\n        }\n\n        return validWords;\n    }\n};"
     }
   },
   "501": {
