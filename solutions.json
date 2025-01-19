@@ -13287,7 +13287,7 @@
   },
   "2671": {
     "solution": {
-      "design": ""
+      "design": "class FrequencyTracker {\npublic:\n    // Adds a number and updates its frequency count\n    void add(int number) {\n        if (count[number] > 0) {\n            --freqCount[count[number]]; // Decrease the count of the old frequency\n        }\n        ++count[number]; // Increase the count of the number\n        ++freqCount[count[number]]; // Increase the frequency of the new count\n    }\n\n    // Deletes one occurrence of the number, if it exists\n    void deleteOne(int number) {\n        if (count[number] == 0) {\n            return; // No occurrences to delete\n        }\n        --freqCount[count[number]]; // Decrease the count of the old frequency\n        --count[number]; // Decrease the count of the number\n        if (count[number] > 0) {\n            ++freqCount[count[number]]; // Increase the frequency of the new count\n        }\n    }\n\n    // Returns true if any number has the exact given frequency\n    bool hasFrequency(int frequency) {\n        return freqCount[frequency] > 0; // Check if the frequency is present\n    }\n\nprivate:\n    unordered_map<int, int> count; // Stores the count of each number\n    unordered_map<int, int> freqCount; // Stores how many numbers have each frequency\n};\n\n/**\n * Your FrequencyTracker object will be instantiated and called as such:\n * FrequencyTracker* obj = new FrequencyTracker();\n * obj->add(number);\n * obj->deleteOne(number);\n * bool param_3 = obj->hasFrequency(frequency);\n */"
     }
   },
   "2672": {
