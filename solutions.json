@@ -7043,7 +7043,7 @@
   },
   "1399": {
     "solution": {
-      "math": ""
+      "hash-table": "#include <iostream>\n#include <vector>\n#include <unordered_map>\nusing namespace std;\n\nclass Solution {\npublic:\n    int countLargestGroup(int n) {\n        auto digitSum = [](int num) {\n            int sum = 0;\n            while (num > 0) {\n                sum += num % 10;\n                num /= 10;\n            }\n            return sum;\n        };\n        \n        unordered_map<int, int> groupCount;\n        \n        for (int i = 1; i <= n; ++i) {\n            int sum = digitSum(i);\n            groupCount[sum]++;\n        }\n        \n        int maxGroupSize = 0;\n        for (const auto& entry : groupCount) {\n            maxGroupSize = max(maxGroupSize, entry.second);\n        }\n        \n        int largestGroupCount = 0;\n        for (const auto& entry : groupCount) {\n            if (entry.second == maxGroupSize) {\n                largestGroupCount++;\n            }\n        }\n        \n        return largestGroupCount;\n    }\n};"
     }
   },
   "1400": {
