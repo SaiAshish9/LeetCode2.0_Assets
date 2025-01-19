@@ -2694,7 +2694,7 @@
   },
   "533": {
     "solution": {
-      "matrix": ""
+      "matrix": "#include <vector>\n#include <unordered_map>\nusing namespace std;\n\nclass Solution {\npublic:\n    int findBlackPixel(vector<vector<char>>& picture, int target) {\n        int m = picture.size(), n = picture[0].size();\n        vector<int> rows(m);\n        unordered_map<int, vector<int>> cols;\n\n        for (int i = 0; i < m; ++i) {\n            for (int j = 0; j < n; ++j) {\n                if (picture[i][j] == 'B') {\n                    ++rows[i];\n                    cols[j].push_back(i);\n                }\n            }\n        }\n\n        vector<vector<bool>> t(m, vector<bool>(m, false));\n        for (int i = 0; i < m; ++i) {\n            for (int k = i; k < m; ++k) {\n                t[i][k] = i == k || all(picture[i], picture[k]);\n                t[k][i] = t[i][k];\n            }\n        }\n\n        int res = 0;\n        for (int i = 0; i < m; ++i) {\n            if (rows[i] == target) {\n                for (int j = 0; j < n; ++j) {\n                    if (cols[j].size() == target) {\n                        bool check = true;\n                        for (int k : cols[j]) {\n                            check = check && t[i][k];\n                        }\n                        if (check) {\n                            ++res;\n                        }\n                    }\n                }\n            }\n        }\n\n        return res;\n    }\n\nprivate:\n    bool all(vector<char>& row1, vector<char>& row2) {\n        int n = row1.size();\n        for (int j = 0; j < n; ++j) {\n            if (row1[j] != row2[j]) {\n                return false;\n            }\n        }\n        return true;\n    }\n};"
     }
   },
   "534": {
