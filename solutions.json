@@ -1262,7 +1262,7 @@
   },
   "249": {
     "solution": {
-      "hash-table": ""
+      "hash-table": "#include <vector>\n#include <string>\n#include <unordered_map>\n#include <iostream>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<string>> groupStrings(vector<string>& strings) {\n        unordered_map<string, vector<string>> groupedStrings;\n        \n        for (auto& str : strings) {\n            int shift = str[0] - 'a';  \n            string normalizedStr = str;\n\n            for (int i = 0; i < normalizedStr.size(); ++i) {\n                char shiftedChar = normalizedStr[i] - shift;\n                if (shiftedChar < 'a') shiftedChar += 26; \n                normalizedStr[i] = shiftedChar;\n            }\n            \n            groupedStrings[normalizedStr].push_back(str);\n        }\n\n        vector<vector<string>> result;\n        for (auto& group : groupedStrings) {\n            result.push_back(group.second);\n        }\n\n        return result;\n    }\n};"
     }
   },
   "250": {
