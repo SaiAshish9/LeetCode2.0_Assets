@@ -14619,7 +14619,7 @@
   },
   "2996": {
     "solution": {
-      "hash-table": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int missingInteger(vector<int>& nums) {\n        sort(nums.begin(), nums.end());\n        \n        long long prefixSum = 0;  \n        \n        for (int num : nums) {\n            if (num > prefixSum + 1) {\n                return prefixSum + 1;\n            }\n            prefixSum += num;  \n        }\n        \n        return prefixSum + 1;\n    }\n};"
+      "hash-table": "class Solution {\npublic:\n    int missingInteger(vector<int>& nums) {\n        const unordered_set<int> numsSet{nums.begin(), nums.end()};\n        int ans = nums[0];\n\n        for (int i = 1; i < nums.size(); ++i) {\n            if (nums[i] != nums[i - 1] + 1)\n                break;\n            ans += nums[i];\n        }\n\n        while (numsSet.contains(ans))\n            ++ans;\n\n        return ans;\n    }\n};"
     }
   },
   "2997": {
