@@ -8064,7 +8064,7 @@
   },
   "1603": {
     "solution": {
-      "counting": ""
+      "design": "class ParkingSystem {\nprivate:\n    int bigSlots;    // Number of available big parking slots\n    int mediumSlots; // Number of available medium parking slots\n    int smallSlots;  // Number of available small parking slots\n\npublic:\n    // Constructor to initialize the number of slots for each type\n    ParkingSystem(int big, int medium, int small) \n        : bigSlots(big), mediumSlots(medium), smallSlots(small) {}\n\n    // Method to add a car to the parking system\n    bool addCar(int carType) {\n        switch (carType) {\n            case 1: // Big car\n                if (bigSlots > 0) {\n                    bigSlots--;\n                    return true;\n                }\n                break;\n            case 2: // Medium car\n                if (mediumSlots > 0) {\n                    mediumSlots--;\n                    return true;\n                }\n                break;\n            case 3: // Small car\n                if (smallSlots > 0) {\n                    smallSlots--;\n                    return true;\n                }\n                break;\n            default:\n                return false; // Invalid car type\n        }\n        return false; // No available slot for the car type\n    }\n};\n\n/**\n * Your ParkingSystem object will be instantiated and called as such:\n * ParkingSystem* obj = new ParkingSystem(big, medium, small);\n * bool param_1 = obj->addCar(carType);\n */"
     }
   },
   "1604": {
