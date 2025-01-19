@@ -13327,7 +13327,7 @@
   },
   "2682": {
     "solution": {
-      "hash-table": ""
+      "hash-table": "class Solution {\npublic:\n    vector<int> circularGameLosers(int n, int k) {\n        vector<int> ans;\n        vector<bool> seen(n);\n\n        for (int friendIndex = 0, turn = 1; !seen[friendIndex];) {\n            seen[friendIndex] = true;\n            friendIndex += turn++ * k;\n            friendIndex %= n;\n        }\n\n        for (int friendIndex = 0; friendIndex < n; ++friendIndex)\n            if (!seen[friendIndex])\n                ans.push_back(friendIndex + 1);\n\n        return ans;\n    }\n};"
     }
   },
   "2683": {
