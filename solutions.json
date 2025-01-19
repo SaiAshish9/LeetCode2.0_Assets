@@ -6166,7 +6166,7 @@
   },
   "1224": {
     "solution": {
-      "hash-table": ""
+      "hash-table": "class Solution {\npublic:\n    int maxEqualFreq(vector<int>& nums) {\n        int ans = 0;\n        int maxFreq = 0;\n        unordered_map<int, int> count;\n        unordered_map<int, int> freq;\n\n        for (int i = 0; i < nums.size(); ++i) {\n            const int num = nums[i];\n            --freq[count[num]];\n            ++count[num];\n            ++freq[count[num]];\n            maxFreq = max(maxFreq, count[num]);\n            if (maxFreq == 1 || maxFreq * freq[maxFreq] == i ||\n                (maxFreq - 1) * (freq[maxFreq - 1] + 1) == i)\n                ans = i + 1;\n        }\n\n        return ans;\n    }\n};"
     }
   },
   "1225": {
