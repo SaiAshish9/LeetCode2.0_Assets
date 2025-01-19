@@ -5733,7 +5733,7 @@
   },
   "1138": {
     "solution": {
-      "hash-table": ""
+      "hash-table": "#include <string>\n#include <cmath>\nusing namespace std;\n\nclass Solution {\npublic:\n    string alphabetBoardPath(string target) {\n        string result = \"\";\n        int currentRow = 0, currentCol = 0;\n        \n        for (char c : target) {\n            int targetRow = (c - 'a') / 5;\n            int targetCol = (c - 'a') % 5;\n            \n            while (currentRow < targetRow) {\n                result += 'D';\n                currentRow++;\n            }\n            while (currentRow > targetRow) {\n                result += 'U';\n                currentRow--;\n            }\n\n            while (currentCol < targetCol) {\n                result += 'R';\n                currentCol++;\n            }\n            while (currentCol > targetCol) {\n                result += 'L';\n                currentCol--;\n            }\n\n            result += '!';\n        }\n\n        return result;\n    }\n};"
     }
   },
   "1139": {
