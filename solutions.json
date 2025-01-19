@@ -206,7 +206,7 @@
   },
   "41": {
     "solution": {
-      "hash-table": ""
+      "hash-table": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int firstMissingPositive(vector<int>& nums) {\n        int n = nums.size();\n\n        for (int i = 0; i < n; i++) {\n            if (nums[i] <= 0) {\n                nums[i] = n + 1;\n            }\n        }\n\n        for (int i = 0; i < n; i++) {\n            int val = abs(nums[i]);\n            if (val <= n) {\n                nums[val - 1] = -abs(nums[val - 1]);\n            }\n        }\n\n        for (int i = 0; i < n; i++) {\n            if (nums[i] > 0) {\n                return i + 1;\n            }\n        }\n\n        return n + 1;\n    }\n};"
     }
   },
   "42": {
