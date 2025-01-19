@@ -14799,7 +14799,7 @@
   },
   "3032": {
     "solution": {
-      "dynamic-programming": ""
+      "hash-table": "class Solution {\n public:\n  int numberCount(int a, int b) {\n    int ans = 0;\n    for (int num = a; num <= b; ++num)\n      if (isUniqueDigits(num))\n        ++ans;\n    return ans;\n  }\n\n private:\n  bool isUniqueDigits(int num) {\n    vector<bool> seen(10);\n    while (num > 0) {\n      const int digit = num % 10;\n      if (seen[digit])\n        return false;\n      seen[digit] = true;\n      num /= 10;\n    }\n    return true;\n  }\n};"
     }
   },
   "3033": {
