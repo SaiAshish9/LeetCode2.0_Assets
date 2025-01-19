@@ -12077,7 +12077,7 @@
   },
   "2404": {
     "solution": {
-      "counting": ""
+      "hash-table": "#include <iostream>\n#include <vector>\n#include <unordered_map>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int mostFrequentEven(vector<int>& nums) {\n        unordered_map<int, int> freqMap;\n        int result = -1;\n        int maxFreq = 0;\n\n        for (int num : nums) {\n            if (num % 2 == 0) {\n                freqMap[num]++;\n            }\n        }\n\n        for (const auto& entry : freqMap) {\n            if (entry.second > maxFreq || (entry.second == maxFreq && entry.first < result)) {\n                maxFreq = entry.second;\n                result = entry.first;\n            }\n        }\n\n        return result;\n    }\n};"
     }
   },
   "2405": {
