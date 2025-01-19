@@ -3517,7 +3517,7 @@
   },
   "697": {
     "solution": {
-      "hash-table": ""
+      "hash-table": "#include <vector>\n#include <unordered_map>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int findShortestSubArray(vector<int>& nums) {\n        unordered_map<int, int> frequency;\n        unordered_map<int, int> firstIndex;\n        unordered_map<int, int> lastIndex;\n\n        for (int i = 0; i < nums.size(); ++i) {\n            int num = nums[i];\n            frequency[num]++;\n            if (firstIndex.count(num) == 0) {\n                firstIndex[num] = i;\n            }\n            lastIndex[num] = i;\n        }\n\n        int maxDegree = 0;\n        int minLength = nums.size();\n\n        for (const auto& [num, freq] : frequency) {\n            if (freq > maxDegree) {\n                maxDegree = freq;\n                minLength = lastIndex[num] - firstIndex[num] + 1;\n            } else if (freq == maxDegree) {\n                minLength = min(minLength, lastIndex[num] - firstIndex[num] + 1);\n            }\n        }\n\n        return minLength;\n    }\n};"
     }
   },
   "698": {
