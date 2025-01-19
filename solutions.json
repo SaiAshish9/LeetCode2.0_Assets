@@ -4945,7 +4945,7 @@
   },
   "981": {
     "solution": {
-      "design": ""
+      "design": "struct TimeValue {\n    string value;\n    int timestamp;\n};\n\nclass TimeMap {\npublic:\n    // Sets the key with a value and a timestamp\n    void set(string key, string value, int timestamp) {\n        keyMap[key].emplace_back(TimeValue{value, timestamp});\n    }\n\n    // Retrieves the value with the largest timestamp <= given timestamp\n    string get(string key, int timestamp) {\n        if (!keyMap.contains(key)) // If the key doesn't exist, return an empty string\n            return \"\";\n\n        const vector<TimeValue>& values = keyMap[key];\n        int left = 0;\n        int right = values.size(); // Exclusive upper bound for binary search\n\n        // Binary search to find the largest timestamp <= the given timestamp\n        while (left < right) {\n            int mid = (left + right) / 2;\n            if (values[mid].timestamp > timestamp)\n                right = mid; // Move the right pointer left\n            else\n                left = mid + 1; // Move the left pointer right\n        }\n\n        // If left == 0, no valid timestamp exists\n        return left == 0 ? \"\" : values[left - 1].value;\n    }\n\nprivate:\n    unordered_map<string, vector<TimeValue>> keyMap; // Maps keys to a list of {value, timestamp} pairs\n};\n\n/**\n * Your TimeMap object will be instantiated and called as such:\n * TimeMap* obj = new TimeMap();\n * obj->set(key,value,timestamp);\n * string param_2 = obj->get(key,timestamp);\n */"
     }
   },
   "982": {
