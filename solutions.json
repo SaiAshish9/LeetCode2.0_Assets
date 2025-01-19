@@ -15239,7 +15239,7 @@
   },
   "3120": {
     "solution": {
-      "hash-table": ""
+      "hash-table": "class Solution {\npublic:\n    int numberOfSpecialChars(string word) {\n        int ans = 0;\n        vector<bool> lower(26);\n        vector<bool> upper(26);\n\n        for (const char c : word)\n            if (islower(c))\n                lower[c - 'a'] = true;\n            else\n                upper[c - 'A'] = true;\n\n        for (int i = 0; i < 26; ++i)\n            if (lower[i] && upper[i])\n                ++ans;\n\n        return ans;\n    }\n};"
     }
   },
   "3121": {
