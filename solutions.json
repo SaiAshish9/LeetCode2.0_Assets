@@ -6953,7 +6953,7 @@
   },
   "1381": {
     "solution": {
-      "stack": ""
+      "design": "class CustomStack {\nprivate:\n    vector<int> stack;   // Stores the elements of the stack\n    int maxSize;         // Maximum allowed size of the stack\n\npublic:\n    // Constructor to initialize the stack with a given max size\n    CustomStack(int maxSize) : maxSize(maxSize) {}\n\n    // Pushes an element onto the stack if it hasn't reached max size\n    void push(int x) {\n        if (stack.size() < maxSize) {\n            stack.push_back(x);\n        }\n    }\n\n    // Pops the top element from the stack and returns it\n    // Returns -1 if the stack is empty\n    int pop() {\n        if (stack.empty()) return -1;\n        int topElement = stack.back();\n        stack.pop_back();\n        return topElement;\n    }\n\n    // Increments the bottom k elements of the stack by val\n    void increment(int k, int val) {\n        int limit = min(k, (int)stack.size());\n        for (int i = 0; i < limit; i++) {\n            stack[i] += val;\n        }\n    }\n};\n\n/**\n * Your CustomStack object will be instantiated and called as such:\n * CustomStack* obj = new CustomStack(maxSize);\n * obj->push(x);\n * int param_2 = obj->pop();\n * obj->increment(k, val);\n */"
     }
   },
   "1382": {
