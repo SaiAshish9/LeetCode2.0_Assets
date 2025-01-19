@@ -246,7 +246,7 @@
   },
   "49": {
     "solution": {
-      "sorting": ""
+      "hash-table": "#include <vector>\n#include <string>\n#include <unordered_map>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<string>> groupAnagrams(vector<string>& strs) {\n        unordered_map<string, vector<string>> anagramGroups;\n\n        for (const string& str : strs) {\n            string sortedStr = str;\n            sort(sortedStr.begin(), sortedStr.end());\n\n            anagramGroups[sortedStr].push_back(str);\n        }\n\n        vector<vector<string>> result;\n        for (auto& group : anagramGroups) {\n            result.push_back(group.second);\n        }\n\n        return result;\n    }\n};"
     }
   },
   "50": {
