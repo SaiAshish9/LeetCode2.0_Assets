@@ -13282,7 +13282,7 @@
   },
   "2670": {
     "solution": {
-      "hash-table": ""
+      "hash-table": "class Solution {\npublic:\n    vector<int> distinctDifferenceArray(vector<int>& nums) {\n        constexpr int kMax = 50;\n        vector<int> ans;\n        vector<int> prefixCount(kMax + 1);\n        vector<int> suffixCount(kMax + 1);\n        int distinctPrefix = 0;\n        int distinctSuffix = 0;\n\n        for (const int num : nums)\n            if (++suffixCount[num] == 1)\n                ++distinctSuffix;\n\n        for (const int num : nums) {\n            if (++prefixCount[num] == 1)\n                ++distinctPrefix;\n            if (--suffixCount[num] == 0)\n                --distinctSuffix;\n            ans.push_back(distinctPrefix - distinctSuffix);\n        }\n\n        return ans;\n    }\n};"
     }
   },
   "2671": {
