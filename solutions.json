@@ -2268,7 +2268,7 @@
   },
   "448": {
     "solution": {
-      "hash-table": ""
+      "hash-table": "#include <vector>\n#include <cmath>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> findDisappearedNumbers(vector<int>& nums) {\n        int n = nums.size();\n\n        for (int& x : nums) {\n            int i = abs(x) - 1; // Convert to index (1-based to 0-based)\n            if (nums[i] > 0) {\n                nums[i] = -nums[i]; // Mark the number as seen\n            }\n        }\n\n        vector<int> ans;\n        for (int i = 0; i < n; ++i) {\n            if (nums[i] > 0) {\n                ans.push_back(i + 1); // Missing numbers correspond to positive indices\n            }\n        }\n\n        return ans;\n    }\n};"
     }
   },
   "449": {
