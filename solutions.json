@@ -11735,7 +11735,7 @@
   },
   "2336": {
     "solution": {
-      "heap-(priority-queue)": ""
+      "design": "#include <set>\nusing namespace std;\n\nclass SmallestInfiniteSet {\nprivate:\n    set<int> infiniteSet;  // Maintains the additional numbers\n    int current;           // Tracks the current smallest number in the sequence\n\npublic:\n    SmallestInfiniteSet() : current(1) {}\n\n    int popSmallest() {\n        if (!infiniteSet.empty()) {\n            int smallest = *infiniteSet.begin();\n            infiniteSet.erase(infiniteSet.begin());\n            return smallest;\n        }\n        return current++;  // Return the current smallest number and increment it\n    }\n\n    void addBack(int num) {\n        if (num < current && infiniteSet.find(num) == infiniteSet.end()) {\n            infiniteSet.insert(num);\n        }\n    }\n};\n\n/**\n * Your SmallestInfiniteSet object will be instantiated and called as such:\n * SmallestInfiniteSet* obj = new SmallestInfiniteSet();\n * int param_1 = obj->popSmallest();\n * obj->addBack(num);\n */"
     }
   },
   "2337": {
