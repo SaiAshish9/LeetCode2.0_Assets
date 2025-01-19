@@ -11005,7 +11005,7 @@
   },
   "2190": {
     "solution": {
-      "counting": ""
+      "hash-table": "#include <iostream>\n#include <vector>\n#include <unordered_map>\nusing namespace std;\n\nclass Solution {\npublic:\n    int mostFrequent(vector<int>& nums, int key) {\n        unordered_map<int, int> freqMap;\n        \n        for (int i = 0; i < nums.size() - 1; ++i) {\n            if (nums[i] == key) {\n                freqMap[nums[i + 1]]++;\n            }\n        }\n        \n        int mostFrequentNum = -1;\n        int maxFreq = 0;\n        \n        for (const auto& entry : freqMap) {\n            if (entry.second > maxFreq) {\n                maxFreq = entry.second;\n                mostFrequentNum = entry.first;\n            }\n        }\n        \n        return mostFrequentNum;\n    }\n};"
     }
   },
   "2191": {
