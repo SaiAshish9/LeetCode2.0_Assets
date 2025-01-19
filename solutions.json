@@ -11881,7 +11881,7 @@
   },
   "2365": {
     "solution": {
-      "hash-table": ""
+      "hash-table": "#include <iostream>\n#include <vector>\n#include <unordered_map>\nusing namespace std;\n\nclass Solution {\npublic:\n    long long taskSchedulerII(vector<int>& tasks, int space) {\n        unordered_map<int, long long> lastExecution;\n        long long time = 0;\n        \n        for (int task : tasks) {\n            if (lastExecution.find(task) != lastExecution.end()) {\n                time = max(time, lastExecution[task] + space + 1);\n            }\n            lastExecution[task] = time;\n            time++;\n        }\n        \n        return time;\n    }\n};"
     }
   },
   "2366": {
