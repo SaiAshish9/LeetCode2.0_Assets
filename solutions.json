@@ -6743,7 +6743,7 @@
   },
   "1339": {
     "solution": {
-      "tree": ""
+      "tree": "#include <iostream>\n#include <vector>\n#include <cmath>\nusing namespace std;\n\n/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\n\nclass Solution {\nprivate:\n    long long totalSum = 0;\n    long long maxProd = 0;\n\n    long long dfs(TreeNode* node) {\n        if (!node) return 0;\n        long long leftSum = dfs(node->left);\n        long long rightSum = dfs(node->right);\n        long long currentSum = node->val + leftSum + rightSum;\n        maxProd = max(maxProd, currentSum * (totalSum - currentSum));\n        return currentSum;\n    }\n\npublic:\n    int maxProduct(TreeNode* root) {\n        totalSum = dfs(root);\n        dfs(root);\n        return maxProd % 1000000007;\n    }\n};"
     }
   },
   "1340": {
