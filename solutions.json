@@ -2639,7 +2639,7 @@
   },
   "522": {
     "solution": {
-      "two-pointers": ""
+      "hash-table": "#include <vector>\n#include <string>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int findLUSlength(vector<string>& strs) {\n        auto isSubsequence = [](const string& s1, const string& s2) {\n            int i = 0, j = 0;\n            while (i < s1.size() && j < s2.size()) {\n                if (s1[i] == s2[j]) {\n                    i++;\n                }\n                j++;\n            }\n            return i == s1.size();\n        };\n\n        sort(strs.begin(), strs.end(), [](const string& a, const string& b) {\n            return a.size() > b.size();\n        });\n\n        for (int i = 0; i < strs.size(); ++i) {\n            bool isUnique = true;\n\n            for (int j = 0; j < strs.size(); ++j) {\n                if (i != j && isSubsequence(strs[i], strs[j])) {\n                    isUnique = false;\n                    break;\n                }\n            }\n\n            if (isUnique) {\n                return strs[i].size();\n            }\n        }\n\n        return -1;\n    }\n};"
     }
   },
   "523": {
