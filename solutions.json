@@ -2291,7 +2291,7 @@
   },
   "453": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    int minMoves(vector<int>& nums) {\n        int minElement = *min_element(nums.begin(), nums.end()); \n        int moves = 0;\n        for (int num : nums) {\n            moves += num - minElement; \n        }\n        return moves;\n    }\n};"
     }
   },
   "454": {
