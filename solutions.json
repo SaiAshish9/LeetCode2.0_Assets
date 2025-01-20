@@ -850,7 +850,7 @@
   },
   "168": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    string convertToTitle(int columnNumber) {\n        string result = \"\";\n\n        while (columnNumber > 0) {\n            columnNumber--; \n            int remainder = columnNumber % 26; \n            result += ('A' + remainder); \n            columnNumber /= 26; \n        }\n\n        reverse(result.begin(), result.end()); \n        return result;\n    }\n};"
     }
   },
   "169": {
