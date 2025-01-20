@@ -337,7 +337,7 @@
   },
   "67": {
     "solution": {
-      "bit-manipulation": ""
+      "math": "class Solution {\npublic:\n    string addBinary(string a, string b) {\n        string result = \"\";\n        int carry = 0;\n        int i = a.size() - 1;\n        int j = b.size() - 1;\n\n        while (i >= 0 || j >= 0 || carry > 0) {\n            int sum = carry;\n\n            if (i >= 0) {\n                sum += a[i] - '0';\n                i--;\n            }\n\n            if (j >= 0) {\n                sum += b[j] - '0';\n                j--;\n            }\n\n            carry = sum / 2;\n            result += (sum % 2) + '0';\n        }\n\n        reverse(result.begin(), result.end());\n        return result;\n    }\n};"
     }
   },
   "68": {
