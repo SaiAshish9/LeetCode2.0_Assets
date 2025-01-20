@@ -2421,7 +2421,7 @@
   },
   "479": {
     "solution": {
-      "enumeration": ""
+      "math": "class Solution {\npublic:\n    int largestPalindrome(int n) {\n        int maxNum = pow(10, n) - 1;\n        int minNum = maxNum / 10;  \n        \n        for (int firstHalf = maxNum; firstHalf > minNum; --firstHalf) {\n            long palindrome = firstHalf; \n            int temp = firstHalf;\n            \n            while (temp) {\n                palindrome = palindrome * 10 + temp % 10;\n                temp /= 10;\n            }\n            \n            for (long factor = maxNum; factor * factor >= palindrome; --factor) {\n                if (palindrome % factor == 0) {\n                    long otherFactor = palindrome / factor;\n                    if (otherFactor <= maxNum) {\n                        return palindrome % 1337;\n                    }\n                }\n            }\n        }\n        return 9; \n    }\n};"
     }
   },
   "480": {
