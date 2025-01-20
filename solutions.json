@@ -61,7 +61,7 @@
   },
   "13": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    int romanToInt(string s) {\n        unordered_map<char, int> romanToValue = {\n            {'I', 1}, {'V', 5}, {'X', 10}, {'L', 50},\n            {'C', 100}, {'D', 500}, {'M', 1000}\n        };\n\n        int total = 0; // Initialize total to store the integer value\n\n        for (int i = 0; i < s.size(); ++i) {\n            // Check if the current Roman numeral is less than the next one (subtractive notation)\n            if (i + 1 < s.size() && romanToValue[s[i]] < romanToValue[s[i + 1]]) {\n                total -= romanToValue[s[i]]; // Subtract the current value\n            } else {\n                total += romanToValue[s[i]]; // Add the current value\n            }\n        }\n\n        return total; // Return the calculated integer value\n    }\n};\n"
     }
   },
   "14": {
