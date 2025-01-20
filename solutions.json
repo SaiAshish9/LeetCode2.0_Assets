@@ -1732,7 +1732,7 @@
   },
   "342": {
     "solution": {
-      "recursion": ""
+      "math": "class Solution {\npublic:\n    bool isPowerOfFour(int n) {\n        if (n <= 0) return false; \n        return (n & (n - 1)) == 0 && (n % 3 == 1);\n    }\n};"
     }
   },
   "343": {
