@@ -56,7 +56,7 @@
   },
   "12": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    string intToRoman(int num) {\n        vector<pair<int, string>> valueToRoman = {\n            {1000, \"M\"}, {900, \"CM\"}, {500, \"D\"}, {400, \"CD\"},\n            {100, \"C\"}, {90, \"XC\"}, {50, \"L\"}, {40, \"XL\"},\n            {10, \"X\"}, {9, \"IX\"}, {5, \"V\"}, {4, \"IV\"}, {1, \"I\"}\n        };\n\n        string result = \"\"; // Initialize the result string\n\n        for (const auto& [value, roman] : valueToRoman) {\n            while (num >= value) {\n                result += roman; // Append the Roman numeral\n                num -= value;    // Subtract the value from num\n            }\n        }\n\n        return result; // Return the Roman numeral string\n    }\n};\n"
     }
   },
   "13": {
