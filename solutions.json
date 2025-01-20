@@ -31,7 +31,7 @@
   },
   "7": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    int reverse(int x) {\n        long long reversed = 0; \n        while (x != 0) {\n            int digit = x % 10;\n            reversed = reversed * 10 + digit; \n            x /= 10; \n        }\n\n        if (reversed < INT_MIN || reversed > INT_MAX) {\n            return 0;\n        }\n\n        return static_cast<int>(reversed);\n    }\n};\n"
     }
   },
   "8": {
