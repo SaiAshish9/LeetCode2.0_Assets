@@ -2547,7 +2547,7 @@
   },
   "504": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    string convertToBase7(int num) {\n        if (num == 0) return \"0\"; \n\n        bool isNegative = num < 0; \n        num = abs(num);\n        \n        string base7 = \"\";\n        while (num > 0) {\n            base7 = to_string(num % 7) + base7; \n            num /= 7; \n        }\n        \n        return isNegative ? \"-\" + base7 : base7; \n    }\n};"
     }
   },
   "505": {
