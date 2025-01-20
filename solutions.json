@@ -1860,7 +1860,7 @@
   },
   "367": {
     "solution": {
-      "math": ""
+      "math": "#include <cmath>\n\nclass Solution {\npublic:\n    bool isPerfectSquare(int num) {\n        if (num < 0) return false; \n        int root = static_cast<int>(sqrt(num)); \n        return root * root == num; \n    }\n};"
     }
   },
   "368": {
