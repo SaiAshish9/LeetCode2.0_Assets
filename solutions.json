@@ -41,7 +41,7 @@
   },
   "9": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    bool isPalindrome(int x) {\n        // Negative numbers and numbers ending with 0 (except 0 itself) are not palindromes\n        if (x < 0 || (x % 10 == 0 && x != 0)) {\n            return false;\n        }\n\n        int reversed = 0; // Variable to store the reversed number\n        int original = x; // Keep the original number for comparison\n\n        while (x > 0) {\n            int digit = x % 10; // Extract the last digit\n\n            // Check for overflow before updating the reversed number\n            if (reversed > (INT_MAX - digit) / 10) {\n                return false;\n            }\n\n            reversed = reversed * 10 + digit; // Update the reversed number\n            x /= 10; // Remove the last digit from x\n        }\n\n        return original == reversed; // Compare the reversed number with the original\n    }\n};\n"
     }
   },
   "10": {
