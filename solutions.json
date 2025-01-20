@@ -871,7 +871,7 @@
   },
   "172": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    int trailingZeroes(int n) {\n        int count = 0;\n        while (n >= 5) {\n            n /= 5;\n            count += n;\n        }\n        return count;\n    }\n};"
     }
   },
   "173": {
