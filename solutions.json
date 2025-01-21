@@ -15132,7 +15132,7 @@
   },
   "3099": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    int sumOfTheDigitsOfHarshadNumber(int x) {\n        const int digitSum = getDigitSum(x);\n        return x % digitSum == 0 ? digitSum : -1;\n    }\n\nprivate:\n    int getDigitSum(int x) {\n        int digitSum = 0;\n        while (x > 0) {\n            digitSum += x % 10;\n            x /= 10;\n        }\n        return digitSum;\n    }\n};\n"
     }
   },
   "3100": {
