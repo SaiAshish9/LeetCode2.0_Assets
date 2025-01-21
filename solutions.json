@@ -12100,7 +12100,7 @@
   },
   "2409": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    int countDaysTogether(string arriveAlice, string leaveAlice,\n                          string arriveBob, string leaveBob) {\n        const int arriveA = toDays(arriveAlice);\n        const int leaveA = toDays(leaveAlice);\n        const int arriveB = toDays(arriveBob);\n        const int leaveB = toDays(leaveBob);\n        int ans = 0;\n\n        for (int day = 1; day <= 365; ++day)\n            if (arriveA <= day && day <= leaveA && arriveB <= day &&\n                day <= leaveB)\n                ++ans;\n\n        return ans;\n    }\n\nprivate:\n    const vector<int> days{0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};\n\n    int toDays(const string& s) {\n        const int month = (s[0] - '0') * 10 + (s[1] - '0');\n        const int day = (s[3] - '0') * 10 + (s[4] - '0');\n        int prevDays = 0;\n        for (int m = 1; m < month; ++m)\n            prevDays += days[m];\n        return prevDays + day;\n    }\n};\n"
     }
   },
   "2410": {
