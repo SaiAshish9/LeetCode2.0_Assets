@@ -6631,7 +6631,7 @@
   },
   "1317": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    vector<int> getNoZeroIntegers(int n) {\n        for (int a = 1;; ++a) {\n            int b = n - a;\n            if ((to_string(a) + to_string(b)).find('0') == -1) {\n                return {a, b};\n            }\n        }\n    }\n};\n"
     }
   },
   "1318": {
