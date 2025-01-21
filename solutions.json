@@ -12626,7 +12626,7 @@
   },
   "2514": {
     "solution": {
-      "combinatorics": ""
+      "math": "class Solution {\npublic:\n    int countAnagrams(string s) {\n        const int n = s.length();\n        const auto [fact, invFact] = getFactAndInvFact(n);\n        int ans = 1;\n        istringstream iss(s);\n\n        for (string word; iss >> word;) {\n            ans = ans * fact[word.length()] % kMod;\n            vector<int> count(26);\n            for (const char c : word)\n                ++count[c - 'a'];\n            for (const int freq : count)\n                ans = ans * invFact[freq] % kMod;\n        }\n\n        return ans;\n    }\n\nprivate:\n    static constexpr int kMod = 1'000'000'007;\n\n    pair<vector<long>, vector<long>> getFactAndInvFact(int n) {\n        vector<long> fact(n + 1);\n        vector<long> invFact(n + 1);\n        vector<long> inv(n + 1);\n        fact[0] = invFact[0] = 1;\n        inv[0] = inv[1] = 1;\n        for (int i = 1; i <= n; ++i) {\n            if (i >= 2)\n                inv[i] = kMod - kMod / i * inv[kMod % i] % kMod;\n            fact[i] = fact[i - 1] * i % kMod;\n            invFact[i] = invFact[i - 1] * inv[i] % kMod;\n        }\n        return {fact, invFact};\n    }\n};\n"
     }
   },
   "2515": {
