@@ -4672,7 +4672,7 @@
   },
   "927": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    vector<int> threeEqualParts(vector<int>& arr) {\n        int count = 0;\n        for (int num : arr) {\n            if (num == 1) {\n                count++;\n            }\n        }\n        \n        // If count is not divisible by 3, return {-1, -1}\n        if (count % 3 != 0) {\n            return {-1, -1};\n        }\n        \n        // If there are no 1's, return [0, arr.size() - 1]\n        if (count == 0) {\n            return {0, (int)arr.size() - 1};\n        }\n        \n        vector<int> ones;\n        for (int i = 0; i < arr.size(); i++) {\n            if (arr[i] == 1) {\n                ones.push_back(i);\n            }\n        }\n        \n        int part1_start = ones[0];\n        int part2_start = ones[count / 3];\n        int part3_start = ones[2 * count / 3];\n        \n        while (part3_start < arr.size()) {\n            if (arr[part1_start] == arr[part2_start] && arr[part1_start] == arr[part3_start]) {\n                part1_start++;\n                part2_start++;\n                part3_start++;\n            } else {\n                return {-1, -1};\n            }\n        }\n        \n        return {part1_start - 1, part2_start};\n    }\n};"
     }
   },
   "928": {
