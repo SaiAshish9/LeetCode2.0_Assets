@@ -8628,7 +8628,7 @@
   },
   "1716": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    int totalMoney(int n) {\n        const int weeks = n / 7;\n        const int firstWeek = trapezoid(1, 7);\n        const int lastFullWeek = trapezoid(1 + weeks - 1, 7 + weeks - 1);\n        const int remainingDays = trapezoid(1 + weeks, n % 7 + weeks);\n        return (firstWeek + lastFullWeek) * weeks / 2 + remainingDays;\n    }\n\n    // Returns sum(a..b).\n    int trapezoid(int a, int b) { return (a + b) * (b - a + 1) / 2; }\n};\n"
     }
   },
   "1717": {
