@@ -8948,7 +8948,7 @@
   },
   "1780": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    bool checkPowersOfThree(int n) {\n        while (n > 0) {\n            int remainder = n % 3;\n            if (remainder > 1) {\n                return false; \n            }\n            n /= 3; \n        }\n        return true;\n    }\n};\n"
     }
   },
   "1781": {
