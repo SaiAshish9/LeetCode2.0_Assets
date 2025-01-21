@@ -3672,7 +3672,7 @@
   },
   "728": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    vector<int> selfDividingNumbers(int left, int right) {\n        vector<int> result;\n\n        for (int num = left; num <= right; ++num) {\n            if (isSelfDividing(num)) {\n                result.push_back(num);\n            }\n        }\n\n        return result;\n    }\n\nprivate:\n    bool isSelfDividing(int num) {\n        int original = num;\n        while (num > 0) {\n            int digit = num % 10; \n            if (digit == 0 || original % digit != 0) {\n                return false; \n            }\n            num /= 10; \n        }\n        return true; \n    }\n};"
     }
   },
   "729": {
