@@ -7636,7 +7636,7 @@
   },
   "1518": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    int numWaterBottles(int numBottles, int numExchange) {\n        int totalDrinks = numBottles; \n        int emptyBottles = numBottles; \n\n        while (emptyBottles >= numExchange) {\n            int newBottles = emptyBottles / numExchange;\n            totalDrinks += newBottles; \n            emptyBottles = emptyBottles % numExchange + newBottles; \n        }\n\n        return totalDrinks;\n    }\n};\n"
     }
   },
   "1519": {
