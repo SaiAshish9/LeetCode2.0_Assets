@@ -11228,7 +11228,7 @@
   },
   "2235": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    int sum(int num1, int num2) {\n        return num1 + num2;\n    }\n};\n"
     }
   },
   "2236": {
