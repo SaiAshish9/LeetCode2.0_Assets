@@ -6426,7 +6426,7 @@
   },
   "1276": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    vector<int> numOfBurgers(int tomatoSlices, int cheeseSlices) {\n        if (tomatoSlices % 2 != 0 || cheeseSlices * 2 < tomatoSlices || cheeseSlices > tomatoSlices) {\n            return {}; // Return empty vector if it's impossible\n        }\n        \n        int jumbo = (tomatoSlices - 2 * cheeseSlices) / 2;\n        int small = cheeseSlices - jumbo;\n        \n        if (jumbo < 0 || small < 0) {\n            return {}; // Return empty vector if negative values are computed\n        }\n        \n        return {jumbo, small}; // Return the number of jumbo and small burgers\n    }\n};\n"
     }
   },
   "1277": {
