@@ -10647,7 +10647,7 @@
   },
   "2119": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    bool isSameAfterReversals(int num) { return num == 0 || num % 10; }\n};\n"
     }
   },
   "2120": {
