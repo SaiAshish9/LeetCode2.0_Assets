@@ -5710,7 +5710,7 @@
   },
   "1134": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    bool isArmstrong(int n) {\n        int k = to_string(n).size();\n        int s = 0;\n        for (int x = n; x; x /= 10) {\n            s += pow(x % 10, k);\n        }\n        return s == n;\n    }\n};\n"
     }
   },
   "1135": {
