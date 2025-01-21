@@ -11138,7 +11138,7 @@
   },
   "2217": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\n public:\n  vector<long long> kthPalindrome(vector<int>& queries, int intLength) {\n    const int start = pow(10, (intLength + 1) / 2 - 1);\n    const int end = pow(10, (intLength + 1) / 2);\n    const int mul = pow(10, intLength / 2);\n    vector<long long> ans;\n\n    for (const int query : queries)\n      if (start + query > end)\n        ans.push_back(-1);\n      else\n        ans.push_back(getKthPalindrome(query, start, mul, intLength));\n\n    return ans;\n  }\n\n private:\n  long getKthPalindrome(int query, int start, int mul, int intLength) {\n    const long prefix = start + query - 1;\n    return prefix * mul + reverse(intLength % 2 == 0 ? prefix : prefix / 10);\n  }\n\n  long reverse(int num) {\n    long res = 0;\n    while (num > 0) {\n      res = res * 10 + num % 10;\n      num /= 10;\n    }\n    return res;\n  }\n};\n"
     }
   },
   "2218": {
