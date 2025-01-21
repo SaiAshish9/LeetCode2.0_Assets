@@ -5319,7 +5319,7 @@
   },
   "1056": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    bool confusingNumber(int n) {\n        vector<int> d = {0, 1, -1, -1, -1, -1, 9, -1, 8, 6};\n        int x = n, y = 0;\n        while (x) {\n            int v = x % 10;\n            if (d[v] < 0) {\n                return false;\n            }\n            y = y * 10 + d[v];\n            x /= 10;\n        }\n        return y != n;\n    }\n};"
     }
   },
   "1057": {
