@@ -9158,7 +9158,7 @@
   },
   "1822": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    int arraySign(vector<int>& nums) {\n        int sign = 1; \n        \n        for (int num : nums) {\n            if (num == 0) {\n                return 0; // If any number is 0, the product is 0\n            }\n            if (num < 0) {\n                sign *= -1; // Flip the sign for negative numbers\n            }\n        }\n        \n        return sign;\n    }\n};\n"
     }
   },
   "1823": {
