@@ -6184,7 +6184,7 @@
   },
   "1228": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    int missingNumber(vector<int>& arr) {\n        int n = arr.size();\n        int x = (arr[0] + arr[n - 1]) * (n + 1) / 2;\n        int y = accumulate(arr.begin(), arr.end(), 0);\n        return x - y;\n    }\n};\n"
     }
   },
   "1229": {
