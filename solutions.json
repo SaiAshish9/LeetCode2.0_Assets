@@ -13195,7 +13195,7 @@
   },
   "2647": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    vector<vector<int>> colorRed(int n) {\n        vector<vector<int>> ans;\n        ans.push_back({1, 1});\n        for (int i = n, k = 0; i > 1; --i, k = (k + 1) % 4) {\n            if (k == 0) {\n                for (int j = 1; j < i << 1; j += 2) {\n                    ans.push_back({i, j});\n                }\n            } else if (k == 1) {\n                ans.push_back({i, 2});\n            } else if (k == 2) {\n                for (int j = 3; j < i << 1; j += 2) {\n                    ans.push_back({i, j});\n                }\n            } else {\n                ans.push_back({i, 1});\n            }\n        }\n        return ans;\n    }\n};\n"
     }
   },
   "2651": {
