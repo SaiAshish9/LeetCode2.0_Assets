@@ -7116,7 +7116,7 @@
   },
   "1414": {
     "solution": {
-      "greedy": ""
+      "math": "class Solution {\npublic:\n    int findMinFibonacciNumbers(int k) {\n        vector<int> fib = {1, 2};\n        \n        // Generate Fibonacci numbers until we exceed k\n        while (fib.back() <= k) {\n            int nextFib = fib[fib.size() - 1] + fib[fib.size() - 2];\n            fib.push_back(nextFib);\n        }\n        \n        int count = 0;\n        \n        // Start from the largest Fibonacci number and subtract it from k\n        for (int i = fib.size() - 1; i >= 0 && k > 0; --i) {\n            if (fib[i] <= k) {\n                k -= fib[i];\n                count++;\n            }\n        }\n        \n        return count;\n    }\n};\n"
     }
   },
   "1415": {
