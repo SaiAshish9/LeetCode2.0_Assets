@@ -3328,7 +3328,7 @@
   },
   "660": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\n public:\n  int newInteger(int n) {\n    string ans;\n    while (n > 0) {\n      ans = to_string(n % 9) + ans;\n      n /= 9;\n    }\n    return stoi(ans);\n  }\n};"
     }
   },
   "661": {
