@@ -3932,7 +3932,7 @@
   },
   "780": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    bool reachingPoints(int sx, int sy, int tx, int ty) {\n        while (sx < tx && sy < ty)\n            if (tx > ty)\n                tx %= ty;\n            else\n                ty %= tx;\n\n        return sx == tx && sy <= ty && (ty - sy) % sx == 0 ||\n               sy == ty && sx <= tx && (tx - sx) % sy == 0;\n    }\n};"
     }
   },
   "781": {
