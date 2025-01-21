@@ -13521,7 +13521,7 @@
   },
   "2739": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    int distanceTraveled(int mainTank, int additionalTank) {\n        // M  M M M M  A  M M M M   A\n        // 1 [2 3 4 5] 6 [7 8 9 10] 11\n        return (mainTank + min((mainTank - 1) / 4, additionalTank)) * 10;\n    }\n};\n"
     }
   },
   "2740": {
