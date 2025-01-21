@@ -6451,7 +6451,7 @@
   },
   "1281": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    int subtractProductAndSum(int n) {\n        int product = 1, sum = 0;\n        \n        while (n > 0) {\n            int digit = n % 10;\n            product *= digit;\n            sum += digit;\n            n /= 10;\n        }\n        \n        return product - sum;\n    }\n};\n"
     }
   },
   "1282": {
