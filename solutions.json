@@ -3018,7 +3018,7 @@
   },
   "598": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\n public:\n  int maxCount(int m, int n, vector<vector<int>>& ops) {\n    int minY = m;\n    int minX = n;\n\n    for (const vector<int>& op : ops) {\n      minY = min(minY, op[0]);\n      minX = min(minX, op[1]);\n    }\n\n    return minX * minY;\n  }\n};"
     }
   },
   "599": {
