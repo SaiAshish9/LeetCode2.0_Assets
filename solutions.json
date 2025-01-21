@@ -9675,7 +9675,7 @@
   },
   "1925": {
     "solution": {
-      "enumeration": ""
+      "math": "#include <cmath> \n\nclass Solution {\npublic:\n    int countTriples(int n) {\n        int count = 0;\n        \n        for (int c = 1; c <= n; ++c) {\n            for (int a = 1; a < c; ++a) {\n                int b2 = c * c - a * a; \n                int b = sqrt(b2); \n                \n                if (b * b == b2 && b < c) { \n                    ++count;\n                }\n            }\n        }\n        \n        return count;\n    }\n};\n"
     }
   },
   "1926": {
