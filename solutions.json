@@ -12779,7 +12779,7 @@
   },
   "2544": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    int alternateDigitSum(int n) {\n        int ans = 0;\n        int sign = 1;\n\n        for (; n > 0; n /= 10) {\n            sign *= -1;\n            ans += sign * n % 10;\n        }\n\n        return sign * ans;\n    }\n};\n"
     }
   },
   "2545": {
