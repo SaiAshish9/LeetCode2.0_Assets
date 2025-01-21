@@ -2847,7 +2847,7 @@
   },
   "564": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    string nearestPalindromic(string n) {\n        long originalNumber = stol(n); \n        long closestPalindrome = -1; \n\n        for (long candidate : generateCandidates(n)) {\n            if (closestPalindrome == -1 || \n                abs(candidate - originalNumber) < abs(closestPalindrome - originalNumber) || \n                (abs(candidate - originalNumber) == abs(closestPalindrome - originalNumber) && candidate < closestPalindrome)) {\n                closestPalindrome = candidate;\n            }\n        }\n\n        return to_string(closestPalindrome);\n    }\n\nprivate:\n    unordered_set<long> generateCandidates(string& n) {\n        int length = n.size();\n        unordered_set<long> candidates;\n\n        candidates.insert((long)pow(10, length - 1) - 1); \n        candidates.insert((long)pow(10, length) + 1);     \n\n        long prefix = stol(n.substr(0, (length + 1) / 2)); \n        for (long i = prefix - 1; i <= prefix + 1; ++i) { \n            string prefixString = to_string(i);\n            string palindrome = prefixString + string(prefixString.rbegin() + (length % 2), prefixString.rend());\n            candidates.insert(stol(palindrome));\n        }\n\n        candidates.erase(stol(n));\n\n        return candidates;\n    }\n};"
     }
   },
   "565": {
