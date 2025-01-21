@@ -13320,7 +13320,7 @@
   },
   "2681": {
     "solution": {
-      "prefix-sum": ""
+      "math": "class Solution {\npublic:\n    int sumOfPower(vector<int>& nums) {\n        const int mod = 1e9 + 7;\n        sort(nums.rbegin(), nums.rend());\n        long long result = 0, prevSum = 0;\n        for (long long num : nums) {\n            result = (result + (num * num % mod) * num) % mod;\n            result = (result + num * prevSum % mod) % mod;\n            prevSum = (prevSum * 2 + num * num % mod) % mod;\n        }\n        return result;\n    }\n};\n"
     }
   },
   "2682": {
