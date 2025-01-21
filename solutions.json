@@ -15142,7 +15142,7 @@
   },
   "3101": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    long long countAlternatingSubarrays(vector<int>& nums) {\n        // dp[i] := the number of alternating subarrays ending in index i\n        vector<long> dp(nums.size(), 1);\n\n        for (int i = 1; i < nums.size(); ++i)\n            if (nums[i] != nums[i - 1])\n                dp[i] += dp[i - 1];\n\n        return accumulate(dp.begin(), dp.end(), 0L);\n    }\n};\n"
     }
   },
   "3102": {
