@@ -5966,7 +5966,7 @@
   },
   "1185": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    string dayOfTheWeek(int day, int month, int year) {\n        if (month < 3) {\n            month += 12;\n            year -= 1;\n        }\n        \n        int k = year % 100;\n        int j = year / 100;\n        \n        int dayOfWeek = (day + (13 * (month + 1)) / 5 + k + k / 4 + j / 4 + 5 * j) % 7;\n        \n        vector<string> days = {\"Saturday\", \"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\"};\n        return days[dayOfWeek];\n    }\n};\n"
     }
   },
   "1186": {
