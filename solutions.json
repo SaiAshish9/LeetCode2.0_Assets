@@ -5630,7 +5630,7 @@
   },
   "1118": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    int numberOfDays(int year, int month) {\n        bool leap = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);\n        vector<int> days = {0, 31, leap ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};\n        return days[month];\n    }\n};\n"
     }
   },
   "1119": {
