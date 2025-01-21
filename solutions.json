@@ -5123,7 +5123,7 @@
   },
   "1017": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    string baseNeg2(int n) {\n        if (n == 0) return \"0\"; \n        \n        string result = \"\";\n        \n        while (n != 0) {\n            int remainder = n % -2; \n            \n            if (remainder < 0) {\n                remainder += 2;\n                n = (n / -2) + 1;\n            } else {\n                n /= -2; \n            }\n            \n            result += to_string(remainder); \n        }\n        \n        reverse(result.begin(), result.end());\n        return result;\n    }\n};\n"
     }
   },
   "1018": {
