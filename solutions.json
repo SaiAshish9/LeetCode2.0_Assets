@@ -4575,7 +4575,7 @@
   },
   "908": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    int smallestRangeI(vector<int>& nums, int k) {\n        int minElement = *min_element(nums.begin(), nums.end()); \n        int maxElement = *max_element(nums.begin(), nums.end()); \n\n        int range = maxElement - minElement - 2 * k; \n        return max(0, range);\n    }\n};"
     }
   },
   "909": {
