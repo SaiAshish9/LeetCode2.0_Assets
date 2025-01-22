@@ -2537,7 +2537,7 @@
   },
   "502": {
     "solution": {
-      "heap-(priority-queue)": ""
+      "greedy": "#include <vector>\n#include <queue>\n#include <algorithm>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    int findMaximizedCapital(int k, int w, vector<int>& profits, vector<int>& capital) {\n        vector<pair<int, int>> projects;\n        for (int i = 0; i < profits.size(); ++i) {\n            projects.push_back({capital[i], profits[i]});\n        }\n\n        sort(projects.begin(), projects.end());\n\n        priority_queue<int> maxHeap;\n\n        int i = 0;\n        for (int j = 0; j < k; ++j) {\n            while (i < projects.size() && projects[i].first <= w) {\n                maxHeap.push(projects[i].second);\n                ++i;\n            }\n\n            if (!maxHeap.empty()) {\n                w += maxHeap.top();\n                maxHeap.pop();\n            }\n        }\n\n        return w;\n    }\n};"
     }
   },
   "503": {
