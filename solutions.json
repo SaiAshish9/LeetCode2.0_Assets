@@ -2301,7 +2301,7 @@
   },
   "455": {
     "solution": {
-      "two-pointers": ""
+      "greedy": "#include <vector>\n#include <algorithm>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    int findContentChildren(vector<int>& g, vector<int>& s) {\n        sort(g.begin(), g.end());\n        sort(s.begin(), s.end());\n        \n        int child = 0, cookie = 0;\n        \n        while (child < g.size() && cookie < s.size()) {\n            if (s[cookie] >= g[child]) {\n                child++;\n            }\n            cookie++;\n        }\n        \n        return child;\n    }\n};"
     }
   },
   "456": {
