@@ -3148,7 +3148,7 @@
   },
   "624": {
     "solution": {
-      "greedy": ""
+      "greedy": "#include <vector>\n#include <algorithm>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    int maxDistance(vector<vector<int>>& arrays) {\n        int n = arrays.size();\n        int maxDist = 0;\n        int minVal = arrays[0][0];\n        int maxVal = arrays[0][arrays[0].size() - 1];\n        \n        for (int i = 1; i < n; ++i) {\n            maxDist = max(maxDist, abs(arrays[i][0] - maxVal));\n            maxDist = max(maxDist, abs(arrays[i].back() - minVal));\n            \n            minVal = min(minVal, arrays[i][0]);\n            maxVal = max(maxVal, arrays[i].back());\n        }\n        \n        return maxDist;\n    }\n};"
     }
   },
   "625": {
