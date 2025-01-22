@@ -2612,7 +2612,7 @@
   },
   "517": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\n public:\n  int findMinMoves(vector<int>& machines) {\n    const int dresses = accumulate(machines.begin(), machines.end(), 0);\n    if (dresses % machines.size() != 0)\n      return -1;\n\n    int ans = 0;\n    int inout = 0;\n    const int average = dresses / machines.size();\n\n    for (const int dress : machines) {\n      inout += dress - average;\n      ans = max({ans, abs(inout), dress - average});\n    }\n\n    return ans;\n  }\n};"
     }
   },
   "518": {
