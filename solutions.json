@@ -15528,7 +15528,7 @@
   },
   "3178": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\npublic:\n    int numberOfChild(int n, int k) {\n        // the time for the ball to return to 0\n        const int roundTime = 2 * (n - 1);\n        const int pos = k % roundTime;\n        return pos < n ? pos : roundTime - pos;\n    }\n};\n"
     }
   },
   "3179": {
