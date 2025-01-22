@@ -2286,7 +2286,7 @@
   },
   "452": {
     "solution": {
-      "greedy": ""
+      "greedy": "#include <vector>\n#include <algorithm>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    int findMinArrowShots(vector<vector<int>>& points) {\n        if (points.empty()) return 0;\n\n        sort(points.begin(), points.end(), [](const vector<int>& a, const vector<int>& b) {\n            return a[1] < b[1];\n        });\n\n        int arrows = 1;  \n        int prevEnd = points[0][1];\n\n        for (const auto& balloon : points) {\n            if (balloon[0] > prevEnd) {  \n                arrows++;\n                prevEnd = balloon[1];  \n            }\n        }\n\n        return arrows;\n    }\n};"
     }
   },
   "453": {
