@@ -5761,7 +5761,7 @@
   },
   "1144": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\npublic:\n    int movesToMakeZigzag(vector<int>& nums) {\n        int evenMoves = 0, oddMoves = 0;\n        \n        for (int i = 0; i < nums.size(); ++i) {\n            int left = (i > 0) ? nums[i - 1] : INT_MAX;\n            int right = (i < nums.size() - 1) ? nums[i + 1] : INT_MAX;\n            \n            int minNeighbor = min(left, right);\n            int moves = max(0, nums[i] - minNeighbor + 1);\n            \n            if (i % 2 == 0) {\n                evenMoves += moves;\n            } else {\n                oddMoves += moves;\n            }\n        }\n        \n        return min(evenMoves, oddMoves);\n    }\n};"
     }
   },
   "1145": {
