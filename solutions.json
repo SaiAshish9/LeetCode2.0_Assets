@@ -4067,7 +4067,7 @@
   },
   "807": {
     "solution": {
-      "matrix": ""
+      "greedy": "class Solution {\npublic:\n    int maxIncreaseKeepingSkyline(vector<vector<int>>& grid) {\n        int n = grid.size();\n        vector<int> rowMax(n, 0), colMax(n, 0);\n\n        // Calculate row-wise and column-wise maximum values\n        for (int i = 0; i < n; ++i) {\n            for (int j = 0; j < n; ++j) {\n                rowMax[i] = max(rowMax[i], grid[i][j]);\n                colMax[j] = max(colMax[j], grid[i][j]);\n            }\n        }\n\n        int maxIncrease = 0;\n\n        // Calculate the maximum increase possible\n        for (int i = 0; i < n; ++i) {\n            for (int j = 0; j < n; ++j) {\n                maxIncrease += min(rowMax[i], colMax[j]) - grid[i][j];\n            }\n        }\n\n        return maxIncrease;\n    }\n};\n"
     }
   },
   "808": {
