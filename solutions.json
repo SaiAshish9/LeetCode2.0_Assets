@@ -681,7 +681,7 @@
   },
   "135": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\npublic:\n    int candy(vector<int>& ratings) {\n        int n = ratings.size();\n        vector<int> candies(n, 1); // Initialize all children with 1 candy\n        \n        // Pass 1: Left to right\n        for (int i = 1; i < n; i++) {\n            if (ratings[i] > ratings[i - 1]) {\n                candies[i] = candies[i - 1] + 1;\n            }\n        }\n        \n        // Pass 2: Right to left\n        for (int i = n - 2; i >= 0; i--) {\n            if (ratings[i] > ratings[i + 1]) {\n                candies[i] = max(candies[i], candies[i + 1] + 1);\n            }\n        }\n        \n        // Sum up all candies\n        return accumulate(candies.begin(), candies.end(), 0);\n    }\n};"
     }
   },
   "136": {
