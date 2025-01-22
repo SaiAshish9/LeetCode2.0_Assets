@@ -5304,7 +5304,7 @@
   },
   "1053": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\npublic:\n    vector<int> prevPermOpt1(vector<int>& arr) {\n        int n = arr.size();\n        \n        for (int i = n - 2; i >= 0; --i) {\n            if (arr[i] > arr[i + 1]) {\n                // Find the largest element smaller than arr[i] to the right\n                int j = n - 1;\n                while (arr[j] >= arr[i] || arr[j] == arr[j - 1]) {\n                    --j;\n                }\n                swap(arr[i], arr[j]);\n                break;\n            }\n        }\n        \n        return arr;\n    }\n};"
     }
   },
   "1054": {
