@@ -5103,7 +5103,7 @@
   },
   "1013": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\npublic:\n    bool canThreePartsEqualSum(vector<int>& arr) {\n        int totalSum = accumulate(arr.begin(), arr.end(), 0);\n        if (totalSum % 3 != 0) {\n            return false;\n        }\n        \n        int targetSum = totalSum / 3;\n        int currentSum = 0, partitions = 0;\n        \n        for (int num : arr) {\n            currentSum += num;\n            if (currentSum == targetSum) {\n                ++partitions;\n                currentSum = 0;\n            }\n        }\n        \n        return partitions >= 3;\n    }\n};\n"
     }
   },
   "1014": {
