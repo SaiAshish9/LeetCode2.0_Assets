@@ -15277,7 +15277,7 @@
   },
   "3128": {
     "solution": {
-      "combinatorics": ""
+      "math": "class Solution {\npublic:\n    long long numberOfRightTriangles(vector<vector<int>>& grid) {\n        int m = grid.size(), n = grid[0].size();\n        vector<int> rows(m);\n        vector<int> cols(n);\n        for (int i = 0; i < m; ++i) {\n            for (int j = 0; j < n; ++j) {\n                rows[i] += grid[i][j];\n                cols[j] += grid[i][j];\n            }\n        }\n        long long ans = 0;\n        for (int i = 0; i < m; ++i) {\n            for (int j = 0; j < n; ++j) {\n                if (grid[i][j] == 1) {\n                    ans += (rows[i] - 1) * (cols[j] - 1);\n                }\n            }\n        }\n        return ans;\n    }\n};\n"
     }
   },
   "3129": {
