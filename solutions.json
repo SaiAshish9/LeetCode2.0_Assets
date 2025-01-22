@@ -5956,7 +5956,7 @@
   },
   "1183": {
     "solution": {
-      "heap-(priority-queue)": ""
+      "greedy": "class Solution {\npublic:\n    int maximumNumberOfOnes(int width, int height, int sideLength, int maxOnes) {\n        int x = sideLength;\n        vector<int> count(x * x);\n        for (int i = 0; i < width; ++i) {\n            for (int j = 0; j < height; ++j) {\n                int k = (i % x) * x + (j % x);\n                ++count[k];\n            }\n        }\n        sort(count.rbegin(), count.rend());\n        int ans = 0;\n        for (int i = 0; i < maxOnes; ++i) {\n            ans += count[i];\n        }\n        return ans;\n    }\n};"
     }
   },
   "1184": {
