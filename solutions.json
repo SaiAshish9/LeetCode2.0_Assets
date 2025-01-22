@@ -4642,7 +4642,7 @@
   },
   "921": {
     "solution": {
-      "stack": ""
+      "greedy": "class Solution {\n public:\n  int minAddToMakeValid(string s) {\n    int l = 0;\n    int r = 0;\n\n    for (const char c : s)\n      if (c == '(') {\n        ++l;\n      } else {\n        if (l == 0)\n          ++r;\n        else\n          --l;\n      }\n\n    return l + r;\n  }\n};"
     }
   },
   "922": {
