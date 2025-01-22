@@ -1692,7 +1692,7 @@
   },
   "334": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\npublic:\n    bool increasingTriplet(vector<int>& nums) {\n        int first = INT_MAX, second = INT_MAX;\n        \n        for (int num : nums) {\n            if (num <= first) {\n                first = num;\n            } else if (num <= second) {\n                second = num;\n            } else {\n                return true;\n            }\n        }\n        \n        return false;\n    }\n};"
     }
   },
   "335": {
