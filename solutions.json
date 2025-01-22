@@ -3153,7 +3153,7 @@
   },
   "625": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\n public:\n  int smallestFactorization(int num) {\n    if (num == 1)\n      return 1;\n\n    long ans = 0;\n    long base = 1;\n\n    for (int i = 9; i > 1; --i)\n      while (num % i == 0) {\n        num /= i;\n        ans = base * i + ans;\n        base *= 10;\n      }\n\n    return num == 1 && ans <= INT_MAX ? ans : 0;\n  }\n};"
     }
   },
   "626": {
