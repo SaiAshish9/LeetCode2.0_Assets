@@ -2662,7 +2662,7 @@
   },
   "527": {
     "solution": {
-      "trie": ""
+      "greedy": "class Solution {\n public:\n  vector<string> wordsAbbreviation(vector<string>& words) {\n    const int n = words.size();\n    vector<string> ans;\n    // prefix[i] := ans[i] takes words[i][0..prefix[i]]\n    vector<int> prefix(n);\n\n    for (const string& word : words)\n      ans.push_back(getAbbrev(word, 0));\n\n    for (int i = 0; i < n; ++i) {\n      while (true) {\n        vector<int> dupeIndices;\n        for (int j = i + 1; j < n; ++j)\n          if (ans[i] == ans[j])\n            dupeIndices.push_back(j);\n        if (dupeIndices.empty())\n          break;\n        dupeIndices.push_back(i);\n        for (const int index : dupeIndices)\n          ans[index] = getAbbrev(words[index], ++prefix[index]);\n      }\n    }\n\n    return ans;\n  }\n\n private:\n  string getAbbrev(const string& s, int prefixIndex) {\n    const int n = s.length();\n    const int num = n - (prefixIndex + 1) - 1;\n    const int numLength = num < 10 ? 1 : num < 100 ? 2 : 3;\n    const int abbrevLength = (prefixIndex + 1) + numLength + 1;\n    if (abbrevLength >= n)\n      return s;\n    return s.substr(0, prefixIndex + 1) + to_string(num) + s.back();\n  }\n};"
     }
   },
   "528": {
