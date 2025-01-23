@@ -15167,7 +15167,7 @@
   },
   "3106": {
     "solution": {
-      "greedy": "class Solution {\npublic:\n    string getSmallestString(string s, int k) {\n        string ans = s;\n\n        for (char& c : ans) {\n            if (k == 0)\n                break;\n            const int distToA = min(c - 'a', 'z' - c + 1);\n            if (k >= distToA) {\n                k -= distToA;\n                c = 'a';\n            } else {\n                // k is not enough to change the current letter to 'a', so move\n                // as closer to 'a' as possible.\n                c -= k;\n                k = 0;\n            }\n        }\n\n        return ans;\n    }\n};"
+      "greedy": "class Solution {\npublic:\n    string getSmallestString(string s, int k) {\n        string result = s; \n\n        for (char& currentChar : result) {\n            if (k == 0)\n                break;\n            \n            const int distanceToA = min(currentChar - 'a', 'z' - currentChar + 1);\n\n            if (k >= distanceToA) {\n                k -= distanceToA;\n                currentChar = 'a';\n            } else {\n                // If we don't have enough steps to change to 'a', reduce the character as much as possible\n                currentChar -= k;\n                k = 0;\n            }\n        }\n\n        return result;  // Return the lexicographically smallest string\n    }\n};"
     }
   },
   "3107": {
