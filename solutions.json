@@ -10852,7 +10852,7 @@
   },
   "2160": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\npublic:\n    int minimumSum(int num) {\n        vector<int> digits;\n        \n        while (num > 0) {\n            digits.push_back(num % 10);\n            num /= 10;\n        }\n        \n        sort(digits.begin(), digits.end());\n        \n        int num1 = digits[0] * 10 + digits[2];\n        int num2 = digits[1] * 10 + digits[3];\n        \n        return num1 + num2;\n    }\n};"
     }
   },
   "2161": {
