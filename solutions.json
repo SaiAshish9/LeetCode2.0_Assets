@@ -11969,7 +11969,7 @@
   },
   "2383": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\npublic:\n    int minNumberOfHours(int initialEnergy, int initialExperience, vector<int>& energy, vector<int>& experience) {\n        int totalEnergyRequired = 0, totalExperienceRequired = 0;\n        int n = energy.size();\n        \n        // Traverse through each battle\n        for (int i = 0; i < n; ++i) {\n            // If initial energy is less than the energy required for battle, train\n            if (initialEnergy <= energy[i]) {\n                totalEnergyRequired += energy[i] - initialEnergy + 1; // Train to surpass energy[i]\n                initialEnergy = energy[i] + 1;\n            }\n            initialEnergy -= energy[i]; // After the battle, energy decreases\n            \n            // If initial experience is less than the experience required for battle, train\n            if (initialExperience <= experience[i]) {\n                totalExperienceRequired += experience[i] - initialExperience + 1; // Train to surpass experience[i]\n                initialExperience = experience[i] + 1;\n            }\n            initialExperience += experience[i]; // After the battle, experience increases\n        }\n        \n        // Total hours of training are the sum of training required for energy and experience\n        return totalEnergyRequired + totalExperienceRequired;\n    }\n};"
     }
   },
   "2384": {
