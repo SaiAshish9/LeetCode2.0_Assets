@@ -9890,7 +9890,7 @@
   },
   "1968": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\npublic:\n    vector<int> rearrangeArray(vector<int>& nums) {\n        ranges::sort(nums);\n        for (int i = 1; i < nums.size(); i += 2)\n            swap(nums[i], nums[i - 1]);\n        return nums;\n    }\n};"
     }
   },
   "1969": {
