@@ -9815,7 +9815,7 @@
   },
   "1953": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\npublic:\n    long long numberOfWeeks(vector<int>& milestones) {\n        long long totalMilestones = 0;\n        int maxMilestone = 0;\n        \n        for (int milestone : milestones) {\n            totalMilestones += milestone;\n            maxMilestone = max(maxMilestone, milestone);\n        }\n        \n        // If the total milestones minus the largest milestone is greater than or equal to the largest milestone,\n        // then we can distribute the work across all weeks.\n        if (totalMilestones - maxMilestone >= maxMilestone) {\n            return totalMilestones;\n        }\n        \n        // Otherwise, the maximum number of weeks we can work is twice the sum of the other milestones minus the largest one.\n        return 2 * (totalMilestones - maxMilestone) + 1;\n    }\n};"
     }
   },
   "1954": {
