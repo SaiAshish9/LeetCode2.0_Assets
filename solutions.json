@@ -6736,7 +6736,7 @@
   },
   "1338": {
     "solution": {
-      "heap-(priority-queue)": ""
+      "greedy": "#include <vector>\n#include <unordered_map>\n#include <algorithm>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    int minSetSize(vector<int>& arr) {\n        unordered_map<int, int> freq;\n        \n        for (int num : arr) {\n            freq[num]++;\n        }\n\n        vector<int> counts;\n        for (const auto& entry : freq) {\n            counts.push_back(entry.second);\n        }\n        sort(counts.rbegin(), counts.rend());\n\n        int removed = 0, setSize = 0;\n        int target = arr.size() / 2;\n\n        for (int count : counts) {\n            removed += count;\n            setSize++;\n            if (removed >= target) {\n                break;\n            }\n        }\n\n        return setSize;\n    }\n};"
     }
   },
   "1339": {
