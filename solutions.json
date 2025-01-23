@@ -9368,7 +9368,7 @@
   },
   "1864": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\npublic:\n    int minSwaps(string s) {\n        const int ones = ranges::count(s, '1');\n        const int zeros = s.length() - ones;\n        if (abs(ones - zeros) > 1)\n            return -1;\n        if (ones > zeros)\n            return countSwaps(s, '1');\n        if (zeros > ones)\n            return countSwaps(s, '0');\n        return min(countSwaps(s, '1'), countSwaps(s, '0'));\n    }\n\nprivate:\n    int countSwaps(const string& s, char curr) {\n        int swaps = 0;\n        for (const char c : s) {\n            if (c != curr)\n                ++swaps;\n            curr ^= 1;\n        }\n        return swaps / 2;\n    }\n};"
     }
   },
   "1865": {
