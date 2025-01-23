@@ -15167,7 +15167,7 @@
   },
   "3106": {
     "solution": {
-      "greedy": "class Solution {\npublic:\n    string getSmallestString(string s, int k) {\n        for (int i = 0; i < s.size() && k > 0; ++i) {\n            if (s[i] != 'a') {\n                int diff = s[i] - 'a';\n                int change = min(k, diff);\n                s[i] -= change;\n                k -= change;\n            }\n        }\n        if (k > 0) {\n            s[s.size() - 1] -= min(k, s[s.size() - 1] - 'a');\n        }\n        return s;\n    }\n};"
+      "greedy": "class Solution {\npublic:\n    string getSmallestString(string s, int k) {\n        string ans = s;\n\n        for (char& c : ans) {\n            if (k == 0)\n                break;\n            const int distToA = min(c - 'a', 'z' - c + 1);\n            if (k >= distToA) {\n                k -= distToA;\n                c = 'a';\n            } else {\n                // k is not enough to change the current letter to 'a', so move\n                // as closer to 'a' as possible.\n                c -= k;\n                k = 0;\n            }\n        }\n\n        return ans;\n    }\n};"
     }
   },
   "3107": {
