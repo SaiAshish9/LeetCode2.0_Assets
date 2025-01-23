@@ -9920,7 +9920,7 @@
   },
   "1974": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\npublic:\n    int minTimeToType(string word) {\n        int time = word.size();  // Initial time for typing each character\n        char current = 'a';  // Start with 'a'\n\n        for (char c : word) {\n            int dist = abs(c - current);  // Find the distance between current character and the one to be typed\n            time += min(dist, 26 - dist);  // Minimum time to type the character (either forward or backward)\n            current = c;  // Update current character to the one typed\n        }\n\n        return time;\n    }\n};"
     }
   },
   "1975": {
