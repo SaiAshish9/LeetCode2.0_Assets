@@ -15673,7 +15673,7 @@
   },
   "3207": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\npublic:\n    long long maximumPoints(vector<int>& enemyEnergies, int currentEnergy) {\n        const int minEnergy = ranges::min(enemyEnergies);\n        return currentEnergy < minEnergy\n                   ? 0\n                   : (currentEnergy +\n                      accumulate(enemyEnergies.begin(), enemyEnergies.end(),\n                                 0LL) -\n                      minEnergy) /\n                         minEnergy;\n    }\n};"
     }
   },
   "3208": {
