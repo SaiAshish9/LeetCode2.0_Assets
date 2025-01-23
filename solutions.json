@@ -7937,7 +7937,7 @@
   },
   "1578": {
     "solution": {
-      "dynamic-programming": ""
+      "greedy": "class Solution {\npublic:\n    int minCost(string colors, vector<int>& neededTime) {\n        int totalCost = 0;\n        int maxTimeInGroup = 0;\n\n        for (int i = 0; i < colors.size(); ++i) {\n            // If the current balloon is different from the previous one\n            // or it's the first balloon, reset maxTimeInGroup.\n            if (i > 0 && colors[i] != colors[i - 1]) {\n                maxTimeInGroup = 0;\n            }\n\n            totalCost += min(maxTimeInGroup, neededTime[i]);\n\n            maxTimeInGroup = max(maxTimeInGroup, neededTime[i]);\n        }\n\n        return totalCost;\n    }\n};\n"
     }
   },
   "1579": {
