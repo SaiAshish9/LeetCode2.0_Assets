@@ -8973,7 +8973,7 @@
   },
   "1785": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\npublic:\n    int minElements(vector<int>& nums, int limit, int goal) {\n        long long currentSum = accumulate(nums.begin(), nums.end(), 0LL); // Calculate the current sum\n        long long diff = abs(goal - currentSum); // Absolute difference between goal and current sum\n\n        // Calculate the minimum number of elements needed\n        return (diff + limit - 1) / limit;\n    }\n};"
     }
   },
   "1786": {
