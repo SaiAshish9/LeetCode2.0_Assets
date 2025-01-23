@@ -9543,7 +9543,7 @@
   },
   "1899": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\npublic:\n    bool mergeTriplets(vector<vector<int>>& triplets, vector<int>& target) {\n        vector<int> maxTriplet(3, 0);  // Holds the max value for each position across all triplets\n        \n        for (auto& triplet : triplets) {\n            if (triplet[0] <= target[0] && triplet[1] <= target[1] && triplet[2] <= target[2]) {\n                maxTriplet[0] = max(maxTriplet[0], triplet[0]);\n                maxTriplet[1] = max(maxTriplet[1], triplet[1]);\n                maxTriplet[2] = max(maxTriplet[2], triplet[2]);\n            }\n        }\n        \n        // If max triplet matches target triplet, return true\n        return maxTriplet == target;\n    }\n};"
     }
   },
   "1900": {
