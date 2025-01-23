@@ -13115,7 +13115,7 @@
   },
   "2611": {
     "solution": {
-      "heap-(priority-queue)": ""
+      "greedy": "class Solution {\npublic:\n    int miceAndCheese(vector<int>& reward1, vector<int>& reward2, int k) {\n        // diffs[i] := reward1[i] - reward2[i].\n        vector<int> diffs;\n\n        for (int i = 0; i < reward1.size(); ++i)\n            diffs.push_back(reward1[i] - reward2[i]);\n\n        nth_element(diffs.begin(), diffs.begin() + k, diffs.end(), greater<>());\n        return accumulate(reward2.begin(), reward2.end(), 0) +\n               accumulate(diffs.begin(), diffs.begin() + k, 0);\n    }\n};"
     }
   },
   "2612": {
