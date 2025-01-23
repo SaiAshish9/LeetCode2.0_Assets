@@ -13946,7 +13946,7 @@
   },
   "2847": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\npublic:\n    string smallestNumber(long long n) {\n        int count[10]{};\n        for (int i = 9; i > 1; --i) {\n            while (n % i == 0) {\n                n /= i;\n                ++count[i];\n            }\n        }\n        if (n > 1) {\n            return \"-1\";\n        }\n        string ans;\n        for (int i = 2; i < 10; ++i) {\n            ans += string(count[i], '0' + i);\n        }\n        return ans == \"\" ? \"1\" : ans;\n    }\n};"
     }
   },
   "2848": {
