@@ -11063,7 +11063,7 @@
   },
   "2202": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\npublic:\n    int maximumTop(vector<int>& nums, int k) {\n        const int n = nums.size();\n        // After taking k elements, if there's something left, then return\n        // nums[k]. Otherwise, return -1.\n        if (k == 0 || k == 1)\n            return n == k ? -1 : nums[k];\n        // Remove then add even number of times.\n        if (n == 1)\n            return k % 2 == 0 ? nums[0] : -1;\n        // Take min(n, k - 1) elements and put the largest one back.\n        const int mx = *max_element(nums.begin(), nums.begin() + min(n, k - 1));\n        if (k >= n)\n            return mx;\n        return max(mx, nums[k]);\n    }\n};"
     }
   },
   "2203": {
