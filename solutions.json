@@ -10632,7 +10632,7 @@
   },
   "2116": {
     "solution": {
-      "stack": ""
+      "greedy": "class Solution {\npublic:\n    bool canBeValid(string s, string locked) {\n        int n = s.size();\n        \n        if (n % 2 != 0) {\n            return false;  // An odd length string can never be valid\n        }\n        \n        // Forward pass: ensure the number of open parentheses is balanced\n        int openCount = 0;\n        for (int i = 0; i < n; ++i) {\n            if (s[i] == '(' || locked[i] == '0') {\n                openCount++;\n            } else {\n                openCount--;\n            }\n            \n            if (openCount < 0) {\n                return false;  // More closing parentheses than opening\n            }\n        }\n        \n        // Backward pass: ensure there are enough closing parentheses\n        openCount = 0;\n        for (int i = n - 1; i >= 0; --i) {\n            if (s[i] == ')' || locked[i] == '0') {\n                openCount++;\n            } else {\n                openCount--;\n            }\n            \n            if (openCount < 0) {\n                return false;  // More opening parentheses than closing\n            }\n        }\n        \n        return true;\n    }\n};"
     }
   },
   "2117": {
