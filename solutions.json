@@ -15167,7 +15167,7 @@
   },
   "3106": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\npublic:\n    string getSmallestString(string s, int k) {\n        for (int i = 0; i < s.size() && k > 0; ++i) {\n            if (s[i] != 'a') {\n                int diff = s[i] - 'a';\n                int change = min(k, diff);\n                s[i] -= change;\n                k -= change;\n            }\n        }\n        if (k > 0) {\n            s[s.size() - 1] -= min(k, s[s.size() - 1] - 'a');\n        }\n        return s;\n    }\n};"
     }
   },
   "3107": {
