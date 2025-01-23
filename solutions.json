@@ -15733,7 +15733,7 @@
   },
   "3219": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\npublic:\n    long long minimumCost(int m, int n, vector<int>& horizontalCut,\n                          vector<int>& verticalCut) {\n        long cost = 0;\n        long sumH = accumulate(horizontalCut.begin(), horizontalCut.end(), 0L);\n        long sumV = accumulate(verticalCut.begin(), verticalCut.end(), 0L);\n\n        ranges::sort(horizontalCut, greater<>());\n        ranges::sort(verticalCut, greater<>());\n\n        for (int i = 0, j = 0; i < m - 1 && j < n - 1;)\n            if (horizontalCut[i] > verticalCut[j]) {\n                cost += horizontalCut[i] + sumV;\n                sumH -= horizontalCut[i++];\n            } else {\n                cost += verticalCut[j] + sumH;\n                sumV -= verticalCut[j++];\n            }\n\n        return cost + sumH + sumV;\n    }\n};"
     }
   }
 }
