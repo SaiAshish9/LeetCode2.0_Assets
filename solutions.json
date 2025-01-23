@@ -12950,7 +12950,7 @@
   },
   "2578": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\npublic:\n    int splitNum(int num) {\n        vector<int> digits;\n        \n        while (num > 0) {\n            digits.push_back(num % 10);\n            num /= 10;\n        }\n        \n        sort(digits.begin(), digits.end());\n        \n        int num1 = 0, num2 = 0;\n        for (int i = 0; i < digits.size(); ++i) {\n            if (i % 2 == 0) {\n                num1 = num1 * 10 + digits[i]; // Add digit to num1\n            } else {\n                num2 = num2 * 10 + digits[i]; // Add digit to num2\n            }\n        }\n        \n        return num1 + num2;\n    }\n};"
     }
   },
   "2579": {
