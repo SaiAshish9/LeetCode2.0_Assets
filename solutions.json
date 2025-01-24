@@ -574,7 +574,7 @@
   },
   "114": {
     "solution": {
-      "stack": ""
+      "depth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    void flatten(TreeNode* root) {\n        TreeNode* current = root;\n\n        while (current) {\n            if (current->left) {\n                TreeNode* predecessor = current->left;\n                while (predecessor->right) {\n                    predecessor = predecessor->right;\n                }\n                predecessor->right = current->right;\n                current->right = current->left;\n                current->left = nullptr;\n            }\n\n            current = current->right;\n        }\n    }\n};"
     }
   },
   "115": {
