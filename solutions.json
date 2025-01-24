@@ -2592,7 +2592,7 @@
   },
   "513": {
     "solution": {
-      "tree": ""
+      "depth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int findBottomLeftValue(TreeNode* root) {\n        queue<TreeNode*> q;\n        q.push(root);\n        \n        int bottomLeftValue = 0;\n        \n        while (!q.empty()) {\n            int size = q.size();\n            \n            for (int i = 0; i < size; ++i) {\n                TreeNode* current = q.front();\n                q.pop();\n                \n                if (i == 0) bottomLeftValue = current->val;\n                \n                if (current->left) q.push(current->left);\n                if (current->right) q.push(current->right);\n            }\n        }\n        \n        return bottomLeftValue;\n    }\n};"
     }
   },
   "514": {
