@@ -3287,7 +3287,7 @@
   },
   "652": {
     "solution": {
-      "tree": ""
+      "depth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),\n * right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<TreeNode*> findDuplicateSubtrees(TreeNode* root) {\n        vector<TreeNode*> ans;\n        unordered_map<string, int> count;\n        encode(root, count, ans);\n        return ans;\n    }\n\nprivate:\n    string encode(TreeNode* root, unordered_map<string, int>& count,\n                  vector<TreeNode*>& ans) {\n        if (root == nullptr)\n            return \"\";\n\n        const string encoded = to_string(root->val) + \"#\" +\n                               encode(root->left, count, ans) + \"#\" +\n                               encode(root->right, count, ans);\n        if (++count[encoded] == 2)\n            ans.push_back(root);\n        return encoded;\n    }\n};"
     }
   },
   "653": {
