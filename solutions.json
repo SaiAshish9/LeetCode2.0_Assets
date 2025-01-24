@@ -649,7 +649,7 @@
   },
   "129": {
     "solution": {
-      "tree": ""
+      "depth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int sumNumbers(TreeNode* root) {\n        return dfs(root, 0);\n    }\n\nprivate:\n    int dfs(TreeNode* node, int currentSum) {\n        if (!node) return 0;  // Base case: if the node is null, return 0\n\n        currentSum = currentSum * 10 + node->val;\n\n        // If it's a leaf node (no left and right children), return the current sum\n        if (!node->left && !node->right) {\n            return currentSum;\n        }\n\n        // Otherwise, recurse on left and right subtrees and sum their results\n        return dfs(node->left, currentSum) + dfs(node->right, currentSum);\n    }\n};"
     }
   },
   "130": {
