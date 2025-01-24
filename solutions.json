@@ -2211,7 +2211,7 @@
   },
   "437": {
     "solution": {
-      "tree": ""
+      "depth-first-search": "class Solution {\npublic:\n    int pathSum(TreeNode* root, int targetSum) {\n        if (!root) return 0;\n        int count = countPathsFromNode(root, targetSum);        \n        count += pathSum(root->left, targetSum);\n        count += pathSum(root->right, targetSum);\n        \n        return count;\n    }\n    \nprivate:\n    int countPathsFromNode(TreeNode* node, long long targetSum) {\n        if (!node) return 0; \n        \n        int count = 0;\n        \n        if (node->val == targetSum) count++;\n\n        count += countPathsFromNode(node->left, targetSum - node->val);\n        count += countPathsFromNode(node->right, targetSum - node->val);\n        \n        return count;\n    }\n};"
     }
   },
   "438": {
