@@ -474,7 +474,7 @@
   },
   "94": {
     "solution": {
-      "stack": ""
+      "depth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    void inorder(TreeNode* root, vector<int>& result) {\n        if (!root) return; \n        inorder(root->left, result); \n        result.push_back(root->val); \n        inorder(root->right, result); \n    }\n\n    vector<int> inorderTraversal(TreeNode* root) {\n        vector<int> result;\n        inorder(root, result);\n        return result;\n    }\n};"
     }
   },
   "95": {
