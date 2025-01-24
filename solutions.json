@@ -624,7 +624,7 @@
   },
   "124": {
     "solution": {
-      "dynamic-programming": ""
+      "depth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int maxPathSum(TreeNode* root) {\n        int maxSum = INT_MIN; \n        dfs(root, maxSum);\n        return maxSum;\n    }\n\nprivate:\n    int dfs(TreeNode* node, int& maxSum) {\n        if (!node) return 0;  \n\n        int left = max(dfs(node->left, maxSum), 0);  \n        int right = max(dfs(node->right, maxSum), 0);  \n\n        int currentMax = node->val + left + right;\n\n        maxSum = max(maxSum, currentMax);\n\n        return node->val + max(left, right);\n    }\n};"
     }
   },
   "125": {
