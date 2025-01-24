@@ -266,7 +266,6 @@
   },
   "53": {
     "solution": {
-      "dynamic-programming": "",
       "divide-and-conquer": "public class Solution {\n    public int maxSubArray(int[] nums) {\n        return maxSubArrayHelper(nums, 0, nums.length - 1);\n    }\n\n    private int maxSubArrayHelper(int[] nums, int left, int right) {\n        if (left == right) {\n            return nums[left];\n        }\n\n        int mid = (left + right) / 2;\n        int leftMax = maxSubArrayHelper(nums, left, mid);\n        int rightMax = maxSubArrayHelper(nums, mid + 1, right);\n        int crossMax = findMaxCrossingSubarray(nums, left, mid, right);\n\n        return Math.max(leftMax, Math.max(rightMax, crossMax));\n    }\n\n    private int findMaxCrossingSubarray(int[] nums, int left, int mid, int right) {\n        int leftSum = Integer.MIN_VALUE;\n        int sum = 0;\n        for (int i = mid; i >= left; i--) {\n            sum += nums[i];\n            if (sum > leftSum) {\n                leftSum = sum;\n            }\n        }\n\n        int rightSum = Integer.MIN_VALUE;\n        sum = 0;\n        for (int i = mid + 1; i <= right; i++) {\n            sum += nums[i];\n            if (sum > rightSum) {\n                rightSum = sum;\n            }\n        }\n\n        return leftSum + rightSum;\n    }\n\n}"
     }
   },
@@ -2842,7 +2841,7 @@
   },
   "563": {
     "solution": {
-      "tree": ""
+      "depth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\n\nusing namespace std;\n\nclass Solution {\npublic:\n    int findTilt(TreeNode* root) {\n        int totalTilt = 0;\n        \n        function<int(TreeNode*)> calculateSubtreeSum = [&](TreeNode* node) {\n            if (!node) return 0; \n            \n            int leftSum = calculateSubtreeSum(node->left);\n            int rightSum = calculateSubtreeSum(node->right);\n            \n            totalTilt += abs(leftSum - rightSum);\n            \n            return leftSum + rightSum + node->val;\n        };\n        \n        calculateSubtreeSum(root); \n        return totalTilt;\n    }\n};"
     }
   },
   "564": {
