@@ -1510,7 +1510,7 @@
   },
   "298": {
     "solution": {
-      "tree": ""
+      "depth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int longestConsecutive(TreeNode* root) {\n        int ans = 0;\n        function<int(TreeNode*)> dfs = [&](TreeNode* root) {\n            if (!root) {\n                return 0;\n            }\n            int l = dfs(root->left) + 1;\n            int r = dfs(root->right) + 1;\n            if (root->left && root->left->val - root->val != 1) {\n                l = 1;\n            }\n            if (root->right && root->right->val - root->val != 1) {\n                r = 1;\n            }\n            int t = max(l, r);\n            ans = max(ans, t);\n            return t;\n        };\n        dfs(root);\n        return ans;\n    }\n};"
     }
   },
   "299": {
