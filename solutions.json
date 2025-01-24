@@ -2887,7 +2887,7 @@
   },
   "572": {
     "solution": {
-      "hash-function": ""
+      "depth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    bool isSubtree(TreeNode* root, TreeNode* subRoot) {\n        if (!root) return false;\n        \n        if (isSameTree(root, subRoot)) return true;\n        \n        return isSubtree(root->left, subRoot) || isSubtree(root->right, subRoot);\n    }\n\nprivate:\n    bool isSameTree(TreeNode* s, TreeNode* t) {\n        if (!s && !t) return true; \n        if (!s || !t) return false; \n        if (s->val != t->val) return false;\n        \n        return isSameTree(s->left, t->left) && isSameTree(s->right, t->right);\n    }\n};"
     }
   },
   "573": {
