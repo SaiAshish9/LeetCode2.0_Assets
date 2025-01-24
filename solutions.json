@@ -788,7 +788,7 @@
   },
   "156": {
     "solution": {
-      "tree": ""
+      "depth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* upsideDownBinaryTree(TreeNode* root) {\n        if (!root || !root->left) return root;\n        TreeNode* newRoot = upsideDownBinaryTree(root->left);\n        root->left->right = root;\n        root->left->left = root->right;\n        root->left = nullptr;\n        root->right = nullptr;\n        return newRoot;\n    }\n};"
     }
   },
   "157": {
