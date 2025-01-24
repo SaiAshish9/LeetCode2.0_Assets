@@ -2045,7 +2045,7 @@
   },
   "404": {
     "solution": {
-      "tree": ""
+      "depth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int sumOfLeftLeaves(TreeNode* root) {\n        if (!root) return 0;\n\n        int sum = 0;\n\n        if (root->left && !root->left->left && !root->left->right) {\n            sum += root->left->val;\n        }\n\n        sum += sumOfLeftLeaves(root->left);\n        sum += sumOfLeftLeaves(root->right);\n        return sum;\n    }\n};"
     }
   },
   "405": {
