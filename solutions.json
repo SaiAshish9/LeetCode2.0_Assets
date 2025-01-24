@@ -569,7 +569,7 @@
   },
   "113": {
     "solution": {
-      "tree": ""
+      "depth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    void dfs(TreeNode* root, int targetSum, vector<int>& currentPath, vector<vector<int>>& result) {\n        if (!root) return;\n\n        currentPath.push_back(root->val);\n        if (!root->left && !root->right && targetSum == root->val) {\n            result.push_back(currentPath); \n        } else {\n            dfs(root->left, targetSum - root->val, currentPath, result);\n            dfs(root->right, targetSum - root->val, currentPath, result);\n        }\n\n        currentPath.pop_back();\n    }\n\n    vector<vector<int>> pathSum(TreeNode* root, int targetSum) {\n        vector<vector<int>> result;\n        vector<int> currentPath;\n        dfs(root, targetSum, currentPath, result);\n        return result;\n    }\n};"
     }
   },
   "114": {
