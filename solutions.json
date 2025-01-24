@@ -1196,7 +1196,7 @@
   },
   "236": {
     "solution": {
-      "tree": ""
+      "depth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {\n        if (!root) return nullptr;  // Base case: if the node is null, return nullptr\n        \n        // If the current node is either p or q, return it\n        if (root == p || root == q) return root;\n\n        // Recursively search in the left and right subtrees\n        TreeNode* left = lowestCommonAncestor(root->left, p, q);\n        TreeNode* right = lowestCommonAncestor(root->right, p, q);\n\n        // If both left and right are non-null, the current node is the LCA\n        if (left && right) return root;\n\n        // If one of the subtrees is non-null, return the non-null subtree's result\n        return left ? left : right;\n    }\n};"
     }
   },
   "237": {
