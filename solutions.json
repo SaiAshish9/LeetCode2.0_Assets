@@ -5549,7 +5549,7 @@
   },
   "1102": {
     "solution": {
-      "union-find": ""
+      "depth-first-search": "class Solution {\npublic:\n    int maximumMinimumPath(vector<vector<int>>& grid) {\n        int rows = grid.size(), cols = grid[0].size();\n        vector<tuple<int, int, int>> cellValues;\n        vector<int> parent(rows * cols);\n        \n        iota(parent.begin(), parent.end(), 0);\n\n        for (int row = 0; row < rows; ++row) {\n            for (int col = 0; col < cols; ++col) {\n                cellValues.emplace_back(grid[row][col], row, col);\n            }\n        }\n\n        function<int(int)> find = [&](int index) {\n            return parent[index] == index ? index : parent[index] = find(parent[index]);\n        };\n\n        sort(cellValues.begin(), cellValues.end(), greater<tuple<int, int, int>>());\n\n        int maxMinValue = 0;\n        int directions[5] = {-1, 0, 1, 0, -1}; // To traverse up, down, left, right\n        vector<vector<bool>> visited(rows, vector<bool>(cols, false));\n\n        for (auto& [value, row, col] : cellValues) {\n            visited[row][col] = true;\n            maxMinValue = value;\n\n            for (int direction = 0; direction < 4; ++direction) {\n                int newRow = row + directions[direction];\n                int newCol = col + directions[direction + 1];\n\n                if (newRow >= 0 && newRow < rows && newCol >= 0 && newCol < cols && visited[newRow][newCol]) {\n                    parent[find(newRow * cols + newCol)] = find(row * cols + col);\n                }\n            }\n\n            if (find(0) == find(rows * cols - 1)) {\n                break;\n            }\n        }\n\n        return maxMinValue;\n    }\n};\n"
     }
   },
   "1103": {
