@@ -4359,7 +4359,7 @@
   },
   "865": {
     "solution": {
-      "tree": ""
+      "depth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* subtreeWithAllDeepest(TreeNode* root) {\n        return dfs(root).second;\n    }\n\nprivate:\n    pair<int, TreeNode*> dfs(TreeNode* node) {\n        if (!node) return {0, nullptr}; \n        \n        auto left = dfs(node->left);\n        auto right = dfs(node->right);\n        \n        if (left.first == right.first) {\n            return {left.first + 1, node};\n        } else if (left.first > right.first) {\n            return {left.first + 1, left.second};\n        } else {\n            return {right.first + 1, right.second};\n        }\n    }\n};\n"
     }
   },
   "866": {
