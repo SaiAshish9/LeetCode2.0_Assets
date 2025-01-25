@@ -12344,7 +12344,7 @@
   },
   "2458": {
     "solution": {
-      "tree": ""
+      "depth-first-search": "class Solution {\npublic:\n    vector<int> treeQueries(TreeNode* root, vector<int>& queries) {\n        vector<int> ans;\n\n        dfs(root, 0, 0);\n\n        for (const int query : queries)\n            ans.push_back(valToMaxHeight[query]);\n\n        return ans;\n    }\n\nprivate:\n    // valToMaxHeight[val] := the maximum height without the node with `val`\n    unordered_map<int, int> valToMaxHeight;\n    // valToHeight[val] := the height of the node with `val`\n    unordered_map<int, int> valToHeight;\n\n    int height(TreeNode* root) {\n        if (root == nullptr)\n            return 0;\n        if (const auto it = valToHeight.find(root->val);\n            it != valToHeight.cend())\n            return it->second;\n        return valToHeight[root->val] =\n                   (1 + max(height(root->left), height(root->right)));\n    }\n\n    // maxHeight := the maximum height without the current node `root`\n    void dfs(TreeNode* root, int depth, int maxHeight) {\n        if (root == nullptr)\n            return;\n        valToMaxHeight[root->val] = maxHeight;\n        dfs(root->left, depth + 1, max(maxHeight, depth + height(root->right)));\n        dfs(root->right, depth + 1, max(maxHeight, depth + height(root->left)));\n    }\n};\n"
     }
   },
   "2459": {
