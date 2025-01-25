@@ -14656,7 +14656,7 @@
   },
   "3004": {
     "solution": {
-      "dynamic-programming": ""
+      "depth-first-search": "class Solution {\npublic:\n    int maximumSubtreeSize(vector<vector<int>>& edges, vector<int>& colors) {\n        int n = edges.size() + 1;\n        vector<int> graph[n];\n        vector<int> size(n, 1);\n        \n        for (auto& e : edges) {\n            int a = e[0], b = e[1];\n            graph[a].push_back(b);\n            graph[b].push_back(a);\n        }\n\n        int ans = 0;\n        \n        function<bool(int, int)> dfs = [&](int a, int fa) {\n            bool ok = true;\n            for (int b : graph[a]) {\n                if (b != fa) {\n                    bool t = dfs(b, a);\n                    ok = ok && colors[a] == colors[b] && t;\n                    size[a] += size[b];\n                }\n            }\n            if (ok) {\n                ans = max(ans, size[a]);\n            }\n            return ok;\n        };\n        \n        dfs(0, -1);\n        return ans;\n    }\n};\n"
     }
   },
   "3005": {
