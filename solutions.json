@@ -5147,7 +5147,7 @@
   },
   "1022": {
     "solution": {
-      "tree": ""
+      "depth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int sumRootToLeaf(TreeNode* root) {\n        return dfs(root, 0);\n    }\n\nprivate:\n    int dfs(TreeNode* node, int currentSum) {\n        if (!node) return 0; \n\n        currentSum = (currentSum << 1) | node->val;\n        \n        if (!node->left && !node->right) {\n            return currentSum;\n        }\n        \n        return dfs(node->left, currentSum) + dfs(node->right, currentSum);\n    }\n};\n"
     }
   },
   "1023": {
