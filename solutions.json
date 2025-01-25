@@ -7390,7 +7390,7 @@
   },
   "1469": {
     "solution": {
-      "tree": ""
+      "depth-first-search": "class Solution {\npublic:\n    vector<int> getLonelyNodes(TreeNode* root) {\n        vector<int> ans;\n        function<void(TreeNode * root)> dfs;\n        dfs = [&](TreeNode* root) {\n            if (!root || (!root->left && !root->right)) return;\n            if (!root->left) ans.push_back(root->right->val);\n            if (!root->right) ans.push_back(root->left->val);\n            dfs(root->left);\n            dfs(root->right);\n        };\n        dfs(root);\n        return ans;\n    }\n};\n"
     }
   },
   "1470": {
