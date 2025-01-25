@@ -6905,7 +6905,7 @@
   },
   "1372": {
     "solution": {
-      "dynamic-programming": ""
+      "depth-first-search": "class Solution {\npublic:\n    int longestZigZag(TreeNode* root) {\n        int result = 0;\n        \n        function<void(TreeNode*, int, bool)> dfs = [&](TreeNode* node, int length, bool isLeft) {\n            if (!node) return;\n            \n            result = max(result, length);\n            \n            if (isLeft) {\n                dfs(node->left, length + 1, false);\n                dfs(node->right, 1, true);\n            }\n            else {\n                dfs(node->right, length + 1, true); \n                dfs(node->left, 1, false);\n            }\n        };\n        \n        dfs(root, 0, true); \n        dfs(root, 0, false); \n        \n        return result;\n    }\n};\n"
     }
   },
   "1373": {
