@@ -12279,7 +12279,7 @@
   },
   "2445": {
     "solution": {
-      "tree": ""
+      "depth-first-search": "class Solution {\npublic:\n    int numberOfNodes(int n, vector<int>& queries) {\n        vector<int> tree(n + 1);\n        vector<int> count(n + 1);\n        for (int v : queries) ++count[v];\n        function<void(int)> dfs = [&](int i) {\n            if (i > n) return;\n            tree[i] ^= 1;\n            dfs(i << 1);\n            dfs(i << 1 | 1);\n        };\n        for (int i = 0; i < n + 1; ++i) {\n            if (count[i] & 1) {\n                dfs(i);\n            }\n        }\n        return accumulate(tree.begin(), tree.end(), 0);\n    }\n};\n"
     }
   },
   "2446": {
