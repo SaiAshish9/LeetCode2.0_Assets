@@ -3297,7 +3297,7 @@
   },
   "654": {
     "solution": {
-      "monotonic-stack": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* constructMaximumBinaryTree(vector<int>& nums) {\n        return buildTree(nums, 0, nums.size() - 1);\n    }\n\nprivate:\n    TreeNode* buildTree(const vector<int>& nums, int start, int end) {\n        if (start > end) return nullptr;\n        \n        int maxIndex = max_element(nums.begin() + start, nums.begin() + end + 1) - nums.begin();        \n        TreeNode* root = new TreeNode(nums[maxIndex]);        \n        root->left = buildTree(nums, start, maxIndex - 1);\n        root->right = buildTree(nums, maxIndex + 1, end);\n        \n        return root;\n    }\n};"
     }
   },
   "655": {
