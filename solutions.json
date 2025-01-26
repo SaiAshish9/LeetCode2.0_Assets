@@ -13655,7 +13655,7 @@
   },
   "2773": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int heightOfTree(TreeNode* root) {\n        int ans = 0;\n        function<void(TreeNode*, int)> dfs = [&](TreeNode* root, int d) {\n            ans = max(ans, d++);\n            if (root->left && root->left->right != root) {\n                dfs(root->left, d);\n            }\n            if (root->right && root->right->left != root) {\n                dfs(root->right, d);\n            }\n        };\n        dfs(root, 0);\n        return ans;\n    }\n};"
     }
   },
   "2778": {
