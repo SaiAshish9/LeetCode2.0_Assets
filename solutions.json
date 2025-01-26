@@ -4891,7 +4891,7 @@
   },
   "971": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<int> flipMatchVoyage(TreeNode* root, vector<int>& voyage) {\n        vector<int> result;\n        int index = 0;\n        if (dfs(root, voyage, index, result)) {\n            return result;\n        }\n        return {-1}; \n    }\n    \nprivate:\n    bool dfs(TreeNode* root, vector<int>& voyage, int& index, vector<int>& result) {\n        if (!root) return true;\n        \n        if (root->val != voyage[index++]) {\n            return false;\n        }\n        \n        if (root->left && root->left->val != voyage[index]) {\n            result.push_back(root->val); \n            return dfs(root->right, voyage, index, result) && dfs(root->left, voyage, index, result);\n        }\n        \n        return dfs(root->left, voyage, index, result) && dfs(root->right, voyage, index, result);\n    }\n};"
     }
   },
   "972": {
