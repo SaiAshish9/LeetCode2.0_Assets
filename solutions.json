@@ -5559,7 +5559,7 @@
   },
   "1104": {
     "solution": {
-      "tree": ""
+      "binary-tree": "class Solution {\npublic:\n    vector<int> pathInZigZagTree(int label) {\n        deque<int> ans;\n        int level;\n\n        for (int l = 0; l < 21; ++l)\n            if (pow(2, l) > label) {\n                level = l - 1;\n                break;\n            }\n\n        if (level % 2 == 1)\n            label = boundarySum(level) - label;\n\n        for (int l = level; l >= 0; --l) {\n            ans.push_front(l % 2 == 0 ? label : boundarySum(l) - label);\n            label /= 2;\n        }\n\n        return {ans.begin(), ans.end()};\n    }\n\nprivate:\n    int boundarySum(int level) { return pow(2, level) + pow(2, level + 1) - 1; }\n};"
     }
   },
   "1105": {
