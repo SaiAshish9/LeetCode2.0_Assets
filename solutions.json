@@ -46,7 +46,7 @@
   },
   "10": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\npublic:\n    bool isMatch(string s, string p) {\n        int m = s.length(), n = p.length();\n        \n        // dp[i][j] will be true if s[0...i-1] matches p[0...j-1]\n        vector<vector<bool>> dp(m + 1, vector<bool>(n + 1, false));\n        \n        dp[0][0] = true;\n        \n        // Handle patterns like a*, a*b*, a*b*c* matching an empty string\n        for (int j = 1; j <= n; ++j) {\n            if (p[j - 1] == '*') {\n                dp[0][j] = dp[0][j - 2];\n            }\n        }\n        \n        for (int i = 1; i <= m; ++i) {\n            for (int j = 1; j <= n; ++j) {\n                if (p[j - 1] == s[i - 1] || p[j - 1] == '.') {\n                    dp[i][j] = dp[i - 1][j - 1];\n                } else if (p[j - 1] == '*') {\n                    dp[i][j] = dp[i][j - 2] || \n                                (dp[i - 1][j] && (s[i - 1] == p[j - 2] || p[j - 2] == '.'));\n                }\n            }\n        }\n        \n        return dp[m][n];\n    }\n};"
     }
   },
   "11": {
