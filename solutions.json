@@ -1854,7 +1854,7 @@
   },
   "366": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<vector<int>> findLeaves(TreeNode* root) {\n        vector<vector<int>> res;\n        TreeNode* prev = new TreeNode(0, root, nullptr);\n        while (prev->left) {\n            vector<int> t;\n            dfs(prev->left, prev, t);\n            res.push_back(t);\n        }\n        return res;\n    }\n\n    void dfs(TreeNode* root, TreeNode* prev, vector<int>& t) {\n        if (!root) return;\n        if (!root->left && !root->right) {\n            t.push_back(root->val);\n            if (prev->left == root)\n                prev->left = nullptr;\n            else\n                prev->right = nullptr;\n        }\n        dfs(root->left, root, t);\n        dfs(root->right, root, t);\n    }\n};"
     }
   },
   "367": {
