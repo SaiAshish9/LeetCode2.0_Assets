@@ -2566,7 +2566,7 @@
   },
   "508": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<int> findFrequentTreeSum(TreeNode* root) {\n        unordered_map<int, int> sumFrequency;  \n        int maxFrequency = 0;  \n        dfs(root, sumFrequency, maxFrequency);  \n        vector<int> result; \n        \n        for (const auto& [sum, freq] : sumFrequency) {\n            if (freq == maxFrequency) {\n                result.push_back(sum);\n            }\n        }\n        return result;\n    }\n\nprivate:\n    int dfs(TreeNode* root, unordered_map<int, int>& sumFrequency, int& maxFrequency) {\n        if (!root) return 0;\n        \n        int leftSum = dfs(root->left, sumFrequency, maxFrequency); \n        int rightSum = dfs(root->right, sumFrequency, maxFrequency);  \n        \n        int totalSum = root->val + leftSum + rightSum; \n        \n        sumFrequency[totalSum]++;  \n        maxFrequency = max(maxFrequency, sumFrequency[totalSum]);  \n        \n        return totalSum; \n    }\n};"
     }
   },
   "509": {
