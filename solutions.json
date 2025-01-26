@@ -1398,7 +1398,7 @@
   },
   "276": {
     "solution": {
-      "dynamic-programming": "// OJ: https://leetcode.com/problems/paint-fence/\n// Time: O(N)\n// Space: O(1)\nclass Solution {\npublic:\n    int numWays(int n, int k) {\n        if (k == 1 && n >= 3) return 0;\n        int dp[2] = {k, 0};\n        for (int i = 1; i < n; ++i) {\n            int next[2] = {(k - 1) * (dp[0] + dp[1]), dp[0]};\n            swap(next, dp);\n        }\n        return dp[0] + dp[1];\n    }\n};"
+      "dynamic-programming": "// Time: O(N)\n// Space: O(1)\nclass Solution {\npublic:\n    int numWays(int n, int k) {\n        if (k == 1 && n >= 3) return 0;\n        int dp[2] = {k, 0};\n        for (int i = 1; i < n; ++i) {\n            int next[2] = {(k - 1) * (dp[0] + dp[1]), dp[0]};\n            swap(next, dp);\n        }\n        return dp[0] + dp[1];\n    }\n};"
     }
   },
   "277": {
