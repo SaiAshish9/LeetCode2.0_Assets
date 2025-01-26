@@ -5654,7 +5654,7 @@
   },
   "1123": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* lcaDeepestLeaves(TreeNode* root) {\n        return findLCA(root).first;\n    }\n\n    pair<TreeNode*, int> findLCA(TreeNode* node) {\n        if (!node) {\n            return {nullptr, 0}; \n        }\n\n        auto [leftLCA, leftDepth] = findLCA(node->left);\n        auto [rightLCA, rightDepth] = findLCA(node->right);\n\n        if (leftDepth > rightDepth) {\n            return {leftLCA, leftDepth + 1}; \n        }\n\n        if (leftDepth < rightDepth) {\n            return {rightLCA, rightDepth + 1}; \n        }\n\n        return {node, leftDepth + 1}; \n    }\n};"
     }
   },
   "1124": {
