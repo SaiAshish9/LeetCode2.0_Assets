@@ -8747,7 +8747,7 @@
   },
   "1740": {
     "solution": {
-      "tree": ""
+      "binary-tree": "// Time: O(N)\n// Space: O(H)\nclass Solution {\n    bool dfs(TreeNode *root, int target, vector<TreeNode*> &path) {\n        if (!root) return false;\n        path.push_back(root);\n        if (root->val == target || dfs(root->left, target, path) || dfs(root->right, target, path)) return true;\n        path.pop_back();\n        return false;\n    }\npublic:\n    int findDistance(TreeNode* root, int p, int q) {\n        if (p == q) return 0;\n        vector<TreeNode*> a, b;\n        dfs(root, p, a);\n        dfs(root, q, b);\n        int i = 0;\n        while (i < a.size() && i < b.size() && a[i] == b[i]) ++i;\n        return a.size() + b.size() - 2 * i;\n    }\n};"
     }
   },
   "1741": {
