@@ -553,7 +553,7 @@
   },
   "110": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    bool isBalanced(TreeNode* root) {\n        return dfs(root) != -1;\n    }\n    \nprivate:\n    int dfs(TreeNode* node) {\n        if (!node) return 0; \n        \n        int leftHeight = dfs(node->left);\n        if (leftHeight == -1) return -1; \n        \n        int rightHeight = dfs(node->right);\n        if (rightHeight == -1) return -1; \n        \n        if (abs(leftHeight - rightHeight) > 1) return -1;\n        \n        return max(leftHeight, rightHeight) + 1;\n    }\n};"
     }
   },
   "111": {
