@@ -5167,7 +5167,7 @@
   },
   "1026": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int maxAncestorDiff(TreeNode* root) {\n        return dfs(root, root->val, root->val);\n    }\n\nprivate:\n    int dfs(TreeNode* node, int minVal, int maxVal) {\n        if (!node) {\n            return maxVal - minVal; \n        }\n\n        minVal = min(minVal, node->val);\n        maxVal = max(maxVal, node->val);\n\n        int leftDiff = dfs(node->left, minVal, maxVal);\n        int rightDiff = dfs(node->right, minVal, maxVal);\n\n        return max(leftDiff, rightDiff);\n    }\n};"
     }
   },
   "1027": {
