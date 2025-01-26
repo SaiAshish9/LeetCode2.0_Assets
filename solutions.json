@@ -13359,7 +13359,7 @@
   },
   "2689": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a rope tree node.\n * struct RopeTreeNode {\n *     int len;\n *     string val;\n *     RopeTreeNode *left;\n *     RopeTreeNode *right;\n *     RopeTreeNode() : len(0), val(\"\"), left(nullptr), right(nullptr) {}\n *     RopeTreeNode(string s) : len(0), val(std::move(s)), left(nullptr), right(nullptr) {}\n *     RopeTreeNode(int x) : len(x), val(\"\"), left(nullptr), right(nullptr) {}\n *     RopeTreeNode(int x, RopeTreeNode *left, RopeTreeNode *right) : len(x), val(\"\"), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    char getKthCharacter(RopeTreeNode* root, int k) {\n        function<string(RopeTreeNode* root)> dfs = [&](RopeTreeNode* root) -> string {\n            if (root == nullptr) {\n                return \"\";\n            }\n            if (root->len == 0) {\n                return root->val;\n            }\n            string left = dfs(root->left);\n            string right = dfs(root->right);\n            return left + right;\n        }; \n        return dfs(root)[k - 1];\n    }\n};"
     }
   },
   "2696": {
