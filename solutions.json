@@ -1707,7 +1707,7 @@
   },
   "337": {
     "solution": {
-      "dynamic-programming": ""
+      "backtracking": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\n#include <iostream>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    // Helper function that returns a pair {robbed, notRobbed} for each node\n    pair<int, int> dfs(TreeNode* node) {\n        if (!node) {\n            return {0, 0};  // If node is null, return {0, 0}\n        }\n\n        // Recursively calculate the result for the left and right subtrees\n        auto left = dfs(node->left);\n        auto right = dfs(node->right);\n\n        // If we rob the current node, we cannot rob its children\n        int robbed = node->val + left.second + right.second;\n\n        // If we do not rob the current node, we are free to rob the children\n        int notRobbed = max(left.first, left.second) + max(right.first, right.second);\n\n        return {robbed, notRobbed};\n    }\n\n    int rob(TreeNode* root) {\n        auto result = dfs(root);\n        return max(result.first, result.second);  \n    }\n};"
     }
   },
   "338": {
