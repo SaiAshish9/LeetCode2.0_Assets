@@ -1338,7 +1338,7 @@
   },
   "264": {
     "solution": {
-      "heap-(priority-queue)": ""
+      "dynamic-programming": "class Solution {\n    public int nthUglyNumber(int n) {\n        int[] dp = new int[n];\n        dp[0] = 1;\n        int p2 = 0, p3 = 0, p5 = 0;\n        for (int i = 1; i < n; i++) {\n            dp[i] = Math.min(Math.min(dp[p2] * 2, dp[p3] * 3), dp[p5] * 5);\n            p2 = (dp[i] == dp[p2] * 2) ? p2 + 1 : p2;\n            p3 = (dp[i] == dp[p3] * 3) ? p3 + 1 : p3;\n            p5 = (dp[i] == dp[p5] * 5) ? p5 + 1 : p5;\n        }\n        System.out.println(Arrays.toString(dp));\n        return dp[n - 1];\n    }\n}"
     }
   },
   "265": {
