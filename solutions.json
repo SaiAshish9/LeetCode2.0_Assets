@@ -594,7 +594,7 @@
   },
   "118": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "import java.util.*;\n\nclass Solution {\n    public static List<List<Integer>> generate(int numRows) {\n        int[][] dp = new int[numRows][];\n        \n        for (int i = 0; i < numRows; i++) {\n            int[] row = new int[i + 1];\n            row[0] = 1;\n            row[i] = 1;\n            for (int j = 1; j < i; j++) {\n                row[j] = dp[i - 1][j - 1] + dp[i - 1][j];\n            }\n            dp[i] = row;\n        }\n        \n        List<List<Integer>> result = new ArrayList<>();\n        for (int[] row : dp) {\n            List<Integer> rowList = new ArrayList<>();\n            for (int num : row) {\n                rowList.add(num);\n            }\n            result.add(rowList);\n        }\n        \n        return result;\n    }\n}"
     }
   },
   "119": {
