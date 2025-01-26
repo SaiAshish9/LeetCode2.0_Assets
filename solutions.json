@@ -13294,7 +13294,7 @@
   },
   "2673": {
     "solution": {
-      "dynamic-programming": ""
+      "binary-tree": "class Solution {\npublic:\n    int minIncrements(int n, vector<int>& cost) {\n        int ans = 0;\n\n        for (int i = n / 2 - 1; i >= 0; --i) {\n            const int l = i * 2 + 1;\n            const int r = i * 2 + 2;\n            ans += abs(cost[l] - cost[r]);\n            // Record the information in the parent from the children. So,\n            // there's need to actually update the values in the children.\n            cost[i] += max(cost[l], cost[r]);\n        }\n\n        return ans;\n    }\n};"
     }
   },
   "2674": {
