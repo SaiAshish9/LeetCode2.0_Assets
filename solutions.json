@@ -8346,7 +8346,7 @@
   },
   "1660": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* correctBinaryTree(TreeNode* root) {\n        unordered_set<TreeNode*> vis;\n        function<TreeNode*(TreeNode*)> dfs = [&](TreeNode* root) -> TreeNode* {\n            if (!root || vis.count(root->right)) {\n                return nullptr;\n            }\n            vis.insert(root);\n            root->right = dfs(root->right);\n            root->left = dfs(root->left);\n            return root;\n        };\n        return dfs(root);\n    }\n};"
     }
   },
   "1661": {
