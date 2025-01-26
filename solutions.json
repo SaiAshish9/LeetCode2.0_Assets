@@ -5439,7 +5439,7 @@
   },
   "1080": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),\n * right(right) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* sufficientSubset(TreeNode* root, int limit) {\n        if (!root)\n            return nullptr;\n        if (!dfs(root, limit, 0))\n            return nullptr;\n        return root;\n    }\n\nprivate:\n    bool dfs(TreeNode* node, int limit, int currentSum) {\n        if (!node)\n            return false;\n\n        currentSum += node->val;\n\n        if (!node->left && !node->right) {\n            return currentSum >= limit;\n        }\n\n        bool leftValid = dfs(node->left, limit, currentSum);\n        bool rightValid = dfs(node->right, limit, currentSum);\n\n        if (!leftValid)\n            node->left = nullptr;\n        if (!rightValid)\n            node->right = nullptr;\n\n        return leftValid || rightValid;\n    }\n};"
     }
   },
   "1081": {
