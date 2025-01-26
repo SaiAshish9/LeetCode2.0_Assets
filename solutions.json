@@ -13730,7 +13730,7 @@
   },
   "2792": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int countGreatEnoughNodes(TreeNode* root, int k) {\n        int ans = 0;\n        function<priority_queue<int>(TreeNode*)> dfs = [&](TreeNode* root) {\n            if (!root) {\n                return priority_queue<int>();\n            }\n            auto left = dfs(root->left);\n            auto right = dfs(root->right);\n            while (right.size()) {\n                left.push(right.top());\n                right.pop();\n                if (left.size() > k) {\n                    left.pop();\n                }\n            }\n            if (left.size() == k && left.top() < root->val) {\n                ++ans;\n            }\n            left.push(root->val);\n            if (left.size() > k) {\n                left.pop();\n            }\n            return left;\n        };\n        dfs(root);\n        return ans;\n    }\n};"
     }
   },
   "2798": {
