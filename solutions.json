@@ -533,7 +533,7 @@
   },
   "106": {
     "solution": {
-      "tree": ""
+      "tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {\n        unordered_map<int, int> inorderIndexMap;\n        for (int i = 0; i < inorder.size(); i++) {\n            inorderIndexMap[inorder[i]] = i;\n        }\n        int postorderIndex = postorder.size() - 1;\n        return constructTree(inorder, postorder, inorderIndexMap, postorderIndex, 0, inorder.size() - 1);\n    }\n\nprivate:\n    TreeNode* constructTree(vector<int>& inorder, vector<int>& postorder,\n                            unordered_map<int, int>& inorderIndexMap, int& postorderIndex,\n                            int inorderStart, int inorderEnd) {\n        if (inorderStart > inorderEnd) return nullptr; // Base case: no elements to construct\n\n        int rootValue = postorder[postorderIndex--];\n        TreeNode* root = new TreeNode(rootValue);\n\n        int inorderIndex = inorderIndexMap[rootValue];\n\n        root->right = constructTree(inorder, postorder, inorderIndexMap, postorderIndex, inorderIndex + 1, inorderEnd);\n        root->left = constructTree(inorder, postorder, inorderIndexMap, postorderIndex, inorderStart, inorderIndex - 1);\n\n        return root;\n    }\n};"
     }
   },
   "107": {
