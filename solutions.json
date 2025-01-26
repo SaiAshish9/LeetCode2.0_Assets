@@ -604,7 +604,7 @@
   },
   "120": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\npublic:\n    // dp[i][j] represents the minimum path sum from the current position (i, j)\n    // to the bottom of the triangle.\n    int minimumTotal(int[][] dp) {\n        for (int i = dp.length - 2; i >= 0; --i)\n            for (int j = 0; j <= i; ++j)\n                dp[i][j] += Math.min(dp[i + 1][j], dp[i + 1][j + 1]);\n        System.out.println(Arrays.deepToString(dp).replace(\",\", \",\n\"));\n        return dp[0][0];\n    }\n};"
     }
   },
   "121": {
