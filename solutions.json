@@ -619,7 +619,7 @@
   },
   "123": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\n    public static int maxProfit(int[] prices) {\n        if (prices == null || prices.length == 0) {\n            return 0;\n        }\n\n        int n = prices.length;\n        int[] leftProfit = new int[n];\n        int[] rightProfit = new int[n];\n\n        // Calculate maximum profit from left to right\n        int minPrice = prices[0];\n        leftProfit[0] = 0;\n        for (int i = 1; i < n; i++) {\n            minPrice = Math.min(minPrice, prices[i]);\n            leftProfit[i] = Math.max(leftProfit[i - 1], prices[i] - minPrice);\n        }\n\n        // Calculate maximum profit from right to left\n        int maxPrice = prices[n - 1];\n        rightProfit[n - 1] = 0;\n        for (int i = n - 2; i >= 0; i--) {\n            maxPrice = Math.max(maxPrice, prices[i]);\n            rightProfit[i] = Math.max(rightProfit[i + 1], maxPrice - prices[i]);\n        }\n\n        int maxProfit = 0;\n        // Find the maximum profit by combining left and right profits\n        for (int i = 0; i < n; i++) {\n            maxProfit = Math.max(maxProfit, leftProfit[i] + rightProfit[i]);\n        }\n\n        return maxProfit;\n    }\n\n    public static void main(String[] args) {\n        int[] prices = { 3, 3, 5, 0, 0, 3, 1, 4 };\n        System.out.println(\"Maximum profit: \" + maxProfit(prices));\n    }\n}"
     }
   },
   "124": {
