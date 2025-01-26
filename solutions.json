@@ -701,7 +701,7 @@
   },
   "139": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "import java.util.Arrays;\nimport java.util.HashSet;\nimport java.util.Set;\n\nclass Solution {\n    // dp[i] represents whether the substring of s from index 0 to index i-1 can be\n    // segmented into words from the given wordDict.\n    static boolean wordBreak(String s, List<String> wordDict) {\n        int n = s.length();\n        Set<String> wordSet = new HashSet<>(wordDict);\n        boolean[] dp = new boolean[n + 1];\n        dp[0] = true;\n        for (int i = 1; i <= n; ++i)\n            for (int j = 0; j < i; ++j)\n                if (dp[j] && wordSet.contains(s.substring(j, i))) {\n                    dp[i] = true;\n                    break;\n                }\n        System.out.println(Arrays.toString(dp));\n        // [true, false, false, false, true, false, false, false, true]\n        return dp[n];\n    }\n}"
     }
   },
   "140": {
