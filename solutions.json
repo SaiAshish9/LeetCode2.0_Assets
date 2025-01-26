@@ -3302,7 +3302,7 @@
   },
   "655": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<vector<string>> printTree(TreeNode* root) {\n        int height = getHeight(root);\n        int width = (1 << height) - 1; \n        vector<vector<string>> result(height, vector<string>(width, \"\"));\n        \n        dfs(root, result, 0, 0, width - 1);\n        \n        return result;\n    }\n\nprivate:\n    int getHeight(TreeNode* root) {\n        if (!root) return 0;\n        return 1 + max(getHeight(root->left), getHeight(root->right));\n    }\n    \n    void dfs(TreeNode* root, vector<vector<string>>& result, int level, int left, int right) {\n        if (!root) return;\n        int mid = left + (right - left) / 2;\n        result[level][mid] = to_string(root->val);\n        \n        dfs(root->left, result, level + 1, left, mid - 1);\n        dfs(root->right, result, level + 1, mid + 1, right);\n    }\n};"
     }
   },
   "656": {
