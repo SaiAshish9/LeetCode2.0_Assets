@@ -11232,7 +11232,7 @@
   },
   "2236": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    bool checkTree(TreeNode* root) {\n        if (!root || !root->left || !root->right) {\n            return false; // if any child is missing, return false\n        }\n        return root->val == root->left->val + root->right->val;\n    }\n};"
     }
   },
   "2237": {
