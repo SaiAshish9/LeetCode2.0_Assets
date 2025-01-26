@@ -3142,7 +3142,7 @@
   },
   "623": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),\n * right(right) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* addOneRow(TreeNode* root, int val, int depth) {\n        if (depth == 1) {\n            TreeNode* newRoot = new TreeNode(val);\n            newRoot->left = root;\n            return newRoot;\n        }\n\n        queue<TreeNode*> q;\n        q.push(root);\n        int currentLevel = 1;\n\n        while (!q.empty()) {\n            int size = q.size();\n            for (int i = 0; i < size; i++) {\n                TreeNode* node = q.front();\n                q.pop();\n\n                if (currentLevel == depth - 1) {\n                    TreeNode* leftNode = new TreeNode(val);\n                    TreeNode* rightNode = new TreeNode(val);\n\n                    leftNode->left = node->left;\n                    node->left = leftNode;\n                    rightNode->right = node->right;\n                    node->right = rightNode;\n                } else {\n                    if (node->left)\n                        q.push(node->left);\n                    if (node->right)\n                        q.push(node->right);\n                }\n            }\n            currentLevel++;\n        }\n\n        return root;\n    }\n};"
     }
   },
   "624": {
