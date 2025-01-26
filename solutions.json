@@ -1520,7 +1520,7 @@
   },
   "300": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "#include <iostream>\n#include <vector>\n#include <algorithm>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    int lengthOfLIS(vector<int>& nums) {\n        int n = nums.size();\n        vector<int> dp(n, 1); // Initialize LIS lengths to 1 for each element\n        int maxLIS = 1;\n\n        for (int i = 1; i < n; i++) {\n            for (int j = 0; j < i; j++) {\n                if (nums[i] > nums[j]) {\n                    dp[i] = max(dp[i], dp[j] + 1);\n                }\n            }\n            maxLIS = max(maxLIS, dp[i]);\n        }\n\n        return maxLIS;\n    }\n};"
     }
   },
   "301": {
