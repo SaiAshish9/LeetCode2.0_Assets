@@ -1001,7 +1001,7 @@
   },
   "198": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\n    // dp[i] represents the maximum amount of money that can be robbed from the\n    // first i houses.\n    public int rob(int[] nums) {\n        if (nums == null || nums.length == 0) {\n            return 0;\n        }\n        int[] dp = new int[nums.length + 1];\n        dp[0] = 0;\n        dp[1] = nums[0];\n        for (int i = 2; i <= nums.length; i++) {\n            dp[i] = Math.max(nums[i - 1] + dp[i - 2], dp[i - 1]);\n        }\n        System.out.println(Arrays.toString(dp));\n        return dp[nums.length];\n    }\n}"
     }
   },
   "199": {
