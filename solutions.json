@@ -4972,7 +4972,7 @@
   },
   "987": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<vector<int>> verticalTraversal(TreeNode* root) {\n        vector<vector<int>> ans;\n        if (!root)\n            return ans;\n\n        map<int, vector<pair<int, int>>> nodes;\n        queue<pair<TreeNode*, pair<int, int>>> q;\n\n        q.push({root, {0, 0}});\n\n        while (!q.empty()) {\n            auto node = q.front();\n            q.pop();\n            TreeNode* currentNode = node.first;\n            int vertical = node.second.first;\n            int level = node.second.second;\n\n            nodes[vertical].push_back({level, currentNode->val});\n\n            if (currentNode->left) {\n                q.push({currentNode->left, {vertical - 1, level + 1}});\n            }\n            if (currentNode->right) {\n                q.push({currentNode->right, {vertical + 1, level + 1}});\n            }\n        }\n\n        for (auto& [_, nodeList] : nodes) {\n            sort(nodeList.begin(), nodeList.end());\n            vector<int> column;\n            for (auto& p : nodeList) {\n                column.push_back(p.second);\n            }\n            ans.push_back(column);\n        }\n\n        return ans;\n    }\n};"
     }
   },
   "988": {
