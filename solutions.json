@@ -6555,7 +6555,7 @@
   },
   "1302": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int deepestLeavesSum(TreeNode* root) {\n        int ans = 0;\n        queue<TreeNode*> q{ {root} };\n        while (!q.empty()) {\n            ans = 0;\n            for (int n = q.size(); n; --n) {\n                root = q.front();\n                q.pop();\n                ans += root->val;\n                if (root->left) q.push(root->left);\n                if (root->right) q.push(root->right);\n            }\n        }\n        return ans;\n    }\n};"
     }
   },
   "1303": {
