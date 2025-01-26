@@ -1565,7 +1565,7 @@
   },
   "309": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\n   public int maxProfit(int[] prices) {\n        int n = prices.length;\n        if (n <= 1) return 0;\n\n        int[] buy = new int[n]; // Maximum profit on each day when a stock is bought\n        int[] sell = new int[n]; // Maximum profit on each day when a stock is sold\n        int[] cooldown = new int[n]; // Maximum profit on each day when a cooldown is in effect\n\n        // Base case initialization\n        buy[0] = -prices[0];\n\n        // Dynamic programming to calculate the maximum profit on each day\n        for (int i = 1; i < n; i++) {\n            buy[i] = Math.max(buy[i - 1], cooldown[i - 1] - prices[i]);\n            sell[i] = Math.max(sell[i - 1], buy[i - 1] + prices[i]);\n            cooldown[i] = Math.max(cooldown[i - 1], sell[i - 1]);\n        }\n\n        // The maximum profit will be the maximum of the last day's sell and cooldown\n        return Math.max(sell[n - 1], cooldown[n - 1]);\n    }\n}"
     }
   },
   "310": {
