@@ -599,7 +599,7 @@
   },
   "119": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "#include <iostream>\n#include <vector>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> getRow(int rowIndex) {\n        vector<int> row(rowIndex + 1, 1); \n\n        for (int i = 1; i <= rowIndex / 2; i++) {\n            row[i] = (long long)row[i - 1] * (rowIndex - i + 1) / i;\n            row[rowIndex - i] = row[i]; // The k-th row is symmetric\n        }\n\n        return row;\n    }\n};"
     }
   },
   "120": {
