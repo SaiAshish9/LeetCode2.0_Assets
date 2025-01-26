@@ -3337,7 +3337,7 @@
   },
   "662": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int widthOfBinaryTree(TreeNode* root) {\n        if (!root) return 0;\n        \n        queue<pair<TreeNode*, unsigned long long>> q;\n        q.push({root, 0});\n        \n        int maxWidth = 0;\n        \n        while (!q.empty()) {\n            int size = q.size();\n            unsigned long long left = q.front().second;\n            unsigned long long right = left;\n            \n            for (int i = 0; i < size; ++i) {\n                TreeNode* node = q.front().first;\n                unsigned long long idx = q.front().second;\n                q.pop();\n                \n                if (node->left) q.push({node->left, 2 * idx + 1});\n                if (node->right) q.push({node->right, 2 * idx + 2});\n                \n                right = idx; \n            }\n            \n            maxWidth = max(maxWidth, (int)(right - left + 1));\n        }\n        \n        return maxWidth;\n    }\n};"
     }
   },
   "663": {
