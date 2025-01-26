@@ -3212,7 +3212,7 @@
   },
   "637": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),\n * right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<double> averageOfLevels(TreeNode* root) {\n        vector<double> result;\n        if (!root)\n            return result;\n\n        queue<TreeNode*> q;\n        q.push(root);\n\n        while (!q.empty()) {\n            int levelSize = q.size();\n            long long sum = 0;\n\n            for (int i = 0; i < levelSize; ++i) {\n                TreeNode* node = q.front();\n                q.pop();\n                sum += node->val;\n\n                if (node->left)\n                    q.push(node->left);\n                if (node->right)\n                    q.push(node->right);\n            }\n\n            result.push_back(static_cast<double>(sum) / levelSize);\n        }\n\n        return result;\n    }\n};"
     }
   },
   "638": {
