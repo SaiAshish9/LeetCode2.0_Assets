@@ -508,7 +508,7 @@
   },
   "101": {
     "solution": {
-      "tree": ""
+      "tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    bool isSymmetric(TreeNode* root) {\n        if (!root) return true; \n        return isMirror(root->left, root->right);\n    }\n    \nprivate:\n    bool isMirror(TreeNode* t1, TreeNode* t2) {\n        if (!t1 && !t2) return true; \n        if (!t1 || !t2) return false; \n        if (t1->val != t2->val) return false; \n        \n        return isMirror(t1->left, t2->right) && isMirror(t1->right, t2->left);\n    }\n};"
     }
   },
   "102": {
