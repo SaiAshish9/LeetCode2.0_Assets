@@ -5177,7 +5177,7 @@
   },
   "1028": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),\n * right(right) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* recoverFromPreorder(string traversal) {\n        int i = 0;\n        return recoverFromPreorder(traversal, 0, i);\n    }\n\nprivate:\n    TreeNode* recoverFromPreorder(const string& traversal, int depth, int& i) {\n        int nDashes = 0;\n        while (i + nDashes < traversal.length() &&\n               traversal[i + nDashes] == '-')\n            ++nDashes;\n        if (nDashes != depth)\n            return nullptr;\n\n        i += depth;\n        const int start = i;\n        while (i < traversal.length() && isdigit(traversal[i]))\n            ++i;\n\n        return new TreeNode(stoi(traversal.substr(start, i - start)),\n                            recoverFromPreorder(traversal, depth + 1, i),\n                            recoverFromPreorder(traversal, depth + 1, i));\n    }\n};"
     }
   },
   "1029": {
