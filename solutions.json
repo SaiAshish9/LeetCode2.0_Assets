@@ -13610,7 +13610,7 @@
   },
   "2764": {
     "solution": {
-      "stack": ""
+      "binary-tree": "class Solution {\n public:\n  bool isPreorder(vector<vector<int>>& nodes) {\n    stack<int> stack;  // Stores `id`s.\n\n    for (const vector<int>& node : nodes) {\n      const int id = node[0];\n      const int parentId = node[1];\n      if (parentId == -1) {\n        stack.push(id);\n        continue;\n      }\n      while (!stack.empty() && stack.top() != parentId)\n        stack.pop();\n      if (stack.empty())\n        return false;\n      stack.push(id);\n    }\n\n    return true;\n  }\n};"
     }
   },
   "2765": {
