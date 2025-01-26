@@ -2741,7 +2741,7 @@
   },
   "543": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int diameterOfBinaryTree(TreeNode* root) {\n        int diameter = 0;\n        dfs(root, diameter);\n        return diameter;\n    }\n    \nprivate:\n    int dfs(TreeNode* node, int& diameter) {\n        if (!node) return 0; \n        \n        int leftDepth = dfs(node->left, diameter); \n        int rightDepth = dfs(node->right, diameter);       \n        diameter = max(diameter, leftDepth + rightDepth);\n        \n        return max(leftDepth, rightDepth) + 1;\n    }\n};"
     }
   },
   "544": {
