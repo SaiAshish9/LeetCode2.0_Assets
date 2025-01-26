@@ -5639,7 +5639,7 @@
   },
   "1120": {
     "solution": {
-      "tree": ""
+      "binary-tree": "\"/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    double maximumAverageSubtree(TreeNode* root) {\n        double ans = 0;\n        function<pair<int, int>(TreeNode*)> dfs = [&](TreeNode* root) -> pair<int, int> {\n            if (!root) {\n                return {0, 0};\n            }\n            auto [ls, ln] = dfs(root->left);\n            auto [rs, rn] = dfs(root->right);\n            int s = root->val + ls + rs;\n            int n = 1 + ln + rn;\n            ans = max(ans, s * 1.0 / n);\n            return {s, n};\n        };\n        dfs(root);\n        return ans;\n    }\n}"
     }
   },
   "1121": {
