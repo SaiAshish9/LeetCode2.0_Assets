@@ -459,7 +459,7 @@
   },
   "91": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\n//i: Represents the starting index of the substring in the input string s1.\n//dp[i]: Represents the number of ways to decode the substring starting from index i until the end of the string.\n    static boolean isSafe(char c1) {\n        return c1 != '0';\n    }\n\n    static boolean isSafe(char c1, char c2) {\n        return c1 == '1' || (c1 == '2' && c2 <= '6');\n    }\n\n    static int numDecodings(String s1) {\n        int n = s1.length();\n        int[] dp = new int[n + 1];\n        dp[n] = 1;\n        char[] s = s1.toCharArray();\n        if (isSafe(s[n - 1])) dp[n - 1] = 1;\n        for (int i = n - 2; i >= 0; --i) {\n            if (isSafe(s[i]))\n                dp[i] += dp[i + 1];\n            if (isSafe(s[i], s[i + 1]))\n                dp[i] += dp[i + 2];\n        }\n        System.out.println(Arrays.toString(dp));\n        return dp[0];\n    }\n}"
     }
   },
   "92": {
