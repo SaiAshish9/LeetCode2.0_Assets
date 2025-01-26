@@ -8377,7 +8377,7 @@
   },
   "1666": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/*\n // Definition for a Node->\n class Node {\n public:\n     int val;\n     Node* left;\n     Node* right;\n     Node* parent;\n };\n*/\n\nclass Solution {\npublic:\n    Node* flipBinaryTree(Node* root, Node* targetLeaf) {\n        Node* currentNode = targetLeaf;\n        Node* parentNode = currentNode->parent;\n        while (currentNode != root) {\n            Node* grandParentNode = parentNode->parent;\n            if (currentNode->left) {\n                currentNode->right = currentNode->left;\n            }\n            currentNode->left = parentNode;\n            parentNode->parent = currentNode;\n            if (parentNode->left == currentNode) {\n                parentNode->left = nullptr;\n            } else if (parentNode->right == currentNode) {\n                parentNode->right = nullptr;\n            }\n            currentNode = parentNode;\n            parentNode = grandParentNode;\n        }\n        targetLeaf->parent = nullptr;\n        return targetLeaf;\n    }\n};"
     }
   },
   "1667": {
