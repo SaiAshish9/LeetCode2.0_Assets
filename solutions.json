@@ -277,7 +277,7 @@
   },
   "55": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\npublic:\n    bool canJump(vector<int>& nums) {\n        int n = nums.size();\n        // dp[i] represents whether we can reach index i\n        vector<bool> dp(n, false);\n\n        // We can always start at the first position\n        dp[0] = true;\n\n        for (int i = 0; i < n; ++i) {\n            if (!dp[i])\n                continue; // If we can't reach index i, skip it\n\n            // Update reachable indices based on nums[i]\n            for (int j = 1; j <= nums[i] && i + j < n; ++j) {\n                dp[i + j] = true;\n            }\n        }\n\n        // If the last index is reachable, dp[n - 1] will be true\n        return dp[n - 1];\n    }\n};\n"
     }
   },
   "56": {
