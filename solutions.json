@@ -951,7 +951,7 @@
   },
   "188": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\n    public static int maxProfit(int k, int[] prices) {\n        if (prices == null || prices.length == 0 || k == 0) {\n            return 0;\n        }\n        \n        int n = prices.length;\n        \n        // If k is large enough, we can use the greedy solution\n        if (k >= n / 2) {\n            int maxProfit = 0;\n            for (int i = 1; i < n; i++) {\n                if (prices[i] > prices[i - 1]) {\n                    maxProfit += prices[i] - prices[i - 1];\n                }\n            }\n            return maxProfit;\n        }\n        \n        // dp[i][j] stores the maximum profit with at most i transactions\n        // using prices[0:j] (0-based index)\n        int[][] dp = new int[k + 1][n];\n        \n        for (int i = 1; i <= k; i++) {\n            int maxDiff = -prices[0];\n            for (int j = 1; j < n; j++) {\n                dp[i][j] = Math.max(dp[i][j - 1], prices[j] + maxDiff);\n                maxDiff = Math.max(maxDiff, dp[i - 1][j] - prices[j]);\n            }\n        }\n        \n        return dp[k][n - 1];\n    }\n}"
     }
   },
   "189": {
