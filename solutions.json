@@ -8106,7 +8106,7 @@
   },
   "1612": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct Node {\n *     char val;\n *     Node *left;\n *     Node *right;\n *     Node() : val(' '), left(nullptr), right(nullptr) {}\n *     Node(char x) : val(x), left(nullptr), right(nullptr) {}\n *     Node(char x, Node *left, Node *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    bool checkEquivalence(Node* root1, Node* root2) {\n        int count[26]{};\n        function<void(Node*, int)> dfs = [&](Node* root, int v) {\n            if (!root) {\n                return;\n            }\n            if (root->val != '+') {\n                count[root->val - 'a'] += v;\n            }\n            dfs(root->left, v);\n            dfs(root->right, v);\n        };\n        dfs(root1, 1);\n        dfs(root2, -1);\n        for (int& x : count) {\n            if (x) {\n                return false;\n            }\n        }\n        return true;\n    }\n};"
     }
   },
   "1613": {
