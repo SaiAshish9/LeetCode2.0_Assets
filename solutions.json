@@ -1585,7 +1585,7 @@
   },
   "313": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\npublic:\n    int nthSuperUglyNumber(int n, vector<int>& primes) {\n        if (n == 1)\n            return 1;\n\n        int numPrimes = primes.size();\n        vector<int> primeIndices(numPrimes,\n                                 0); // Indices to track prime number multiples\n\n        int superUgly[n];\n        superUgly[0] = 1;\n\n        for (int i = 1; i < n; i++) {\n            long minVal = INT_MAX;\n\n            for (int j = 0; j < numPrimes; j++) {\n                minVal =\n                    min(minVal, (long)primes[j] * superUgly[primeIndices[j]]);\n            }\n\n            superUgly[i] = (int)minVal;\n\n            for (int j = 0; j < numPrimes; j++) {\n                if (minVal == (long)primes[j] * superUgly[primeIndices[j]]) {\n                    primeIndices[j]++;\n                }\n            }\n        }\n\n        return superUgly[n - 1];\n    }\n};"
     }
   },
   "314": {
