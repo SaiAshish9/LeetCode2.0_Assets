@@ -362,7 +362,7 @@
   },
   "72": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\n   //  dp[i][j] represents the minimum number of operations (edits) required to transform the substring word1[0...i-1] to the substring word2[0...j-1].\n    public int minDistance(String word1, String word2) {\n        int m = word1.length();\n        int n = word2.length();\n        if (m == 0) return n;\n        if (n == 0) return m;\n        int[][] dp = new int[m + 1][n + 1];\n\n        for (int i = 1; i <= m; i++) {\n            dp[i][0] = i;\n        }\n\n        for (int j = 1; j <= n; j++) {\n            dp[0][j] = j;\n        }\n\n        for (int i = 1; i <= m; i++) {\n            for (int j = 1; j <= n; j++) {\n                if (word1.charAt(i - 1) == word2.charAt(j - 1)) {\n                    dp[i][j] = dp[i - 1][j - 1];\n                } else {\n                    dp[i][j] = Math.min(dp[i - 1][j - 1], // replace\n                            Math.min(dp[i - 1][j], // remove\n                                    dp[i][j - 1] // insert\n                            )) + 1;\n                }\n            }\n        }\n\n        System.out.println(Arrays.deepToString(dp));\n        return dp[m][n];\n    }\n}"
     }
   },
   "73": {
