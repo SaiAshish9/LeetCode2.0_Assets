@@ -4791,7 +4791,7 @@
   },
   "951": {
     "solution": {
-      "tree": ""
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),\n * right(right) {}\n * };\n */\nclass Solution {\npublic:\n    bool flipEquiv(TreeNode* root1, TreeNode* root2) {\n        // If both trees are null, they are flip equivalent\n        if (!root1 && !root2)\n            return true;\n\n        // If one of the trees is null or their values don't match, they can't\n        // be flip equivalent\n        if (!root1 || !root2 || root1->val != root2->val)\n            return false;\n\n        // Check for two cases:\n        // 1. Left of root1 with left of root2 and right of root1 with right of\n        // root2 (no flip)\n        // 2. Left of root1 with right of root2 and right of root1 with left of\n        // root2 (with flip)\n        return (flipEquiv(root1->left, root2->left) &&\n                flipEquiv(root1->right, root2->right)) ||\n               (flipEquiv(root1->left, root2->right) &&\n                flipEquiv(root1->right, root2->left));\n    }\n};"
     }
   },
   "952": {
