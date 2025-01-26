@@ -1296,7 +1296,7 @@
   },
   "256": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "public int minCost(int[][] costs) {\n    int len = costs.length;\n    if (costs != null && len == 0)\n        return 0;\n\n    int[][] dp = costs;\n    // dp[i][j], for house-i, three colors j (0 or 1 or 2)\n\n    // no need dp[m+1][n+1], just i=1 is good enough\n    for (int i = 1; i < len; i++) {\n        dp[i][0] = costs[i][0] + Math.min(costs[i - 1][1], costs[i - 1][2]);\n        dp[i][1] = costs[i][1] + Math.min(costs[i - 1][0], costs[i - 1][2]);\n        dp[i][2] = costs[i][2] + Math.min(costs[i - 1][0], costs[i - 1][1]);\n    }\n    return Math.min(dp[len - 1][0], Math.min(dp[len - 1][1], dp[len - 1][2]));\n}"
     }
   },
   "257": {
