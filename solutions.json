@@ -317,7 +317,7 @@
   },
   "63": {
     "solution": {
-      "matrix": ""
+      "dynamic-programming": "class Solution {\n    // dp[i][j]: the number of unique paths to reach the cell at position (i, j) in\n    // the grid without any obstacle.\n    public int uniquePathsWithObstacles(int[][] obstacleGrid) {\n        int m = obstacleGrid.length;\n        int n = obstacleGrid[0].length;\n        int[][] dp = new int[m + 1][n + 1];\n        dp[0][1] = 1;\n        // or dp[1][0] = 1\n\n        for (int i = 1; i <= m; i++) {\n            for (int j = 1; j <= n; j++) {\n                if (obstacleGrid[i - 1][j - 1] == 0) {\n                    dp[i][j] = dp[i - 1][j] + dp[i][j - 1];\n                }\n            }\n        }\n\n        System.out.println(Arrays.deepToString(dp));\n        return dp[m][n];\n    }\n}"
     }
   },
   "64": {
