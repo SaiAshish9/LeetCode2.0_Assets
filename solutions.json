@@ -609,7 +609,7 @@
   },
   "121": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\n    // dp[i] represents the minimum price of the stock among the prices encountered up to index i in the prices array.\n    // You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.\n\n    public int maxProfit(int[] prices) {\n        int res = 0;\n        int[] dp = new int[prices.length];\n        dp[0] = prices[0];\n        for (int i = 1; i < prices.length; i++) {\n            dp[i] = Math.min(dp[i - 1], prices[i]);\n        }\n        for (int i = 0; i < prices.length; i++) {\n            res = Math.max(res, prices[i] - dp[i]);\n        }\n        System.out.println(Arrays.toString(dp));\n        return res;\n    }\n}"
     }
   },
   "122": {
