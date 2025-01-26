@@ -579,7 +579,7 @@
   },
   "115": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\n    public int numDistinct(String s, String t) {\n        int m = s.length();\n        int n = t.length();\n        int[] dp = new int[n + 1];\n        dp[0] = 1;\n        for (int i = 1; i <= m; ++i)\n            for (int j = n; j >= 1; --j)\n                if (s.charAt(i - 1) == t.charAt(j - 1))\n                    dp[j] += dp[j - 1];\n        System.out.println(Arrays.toString(dp));\n        return dp[n];\n    }\n}"
     }
   },
   "116": {
