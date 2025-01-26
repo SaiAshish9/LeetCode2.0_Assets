@@ -322,7 +322,7 @@
   },
   "64": {
     "solution": {
-      "matrix": ""
+      "dynamic-programming": "class Solution {\n //  dp[i][j] represents the minimum path sum to reach the cell at row i and column j in a 2D grid\n    public int minPathSum(int[][] grid) {\n        int m = grid.length;\n        int n = grid[0].length;\n        int[][] dp = grid;\n\n        for (int i = 0; i < m; i++) {\n            for (int j = 0; j < n; j++) {\n                if (i > 0 && j > 0) {\n                    dp[i][j] += Math.min(dp[i - 1][j], dp[i][j - 1]);\n                } else if (i > 0) {\n                    dp[i][0] += dp[i - 1][0];\n                } else if (j > 0) {\n                    dp[0][j] += dp[0][j - 1];\n                }\n            }\n        }\n\n        System.out.println(Arrays.deepToString(dp));\n\n        return dp[m - 1][n - 1];\n    }\n}"
     }
   },
   "65": {
