@@ -3741,7 +3741,7 @@
   },
   "742": {
     "solution": {
-      "tree": ""
+      "binary-tree": "class Solution {\n public:\n  int findClosestLeaf(TreeNode* root, int k) {\n    int ans = -1;\n    int minDist = 1000;\n    unordered_map<TreeNode*, int> nodeToDist;\n\n    getDists(root, k, nodeToDist);\n    dfs(root, 0, nodeToDist, minDist, ans);\n\n    return ans;\n  }\n\n private:\n  void getDists(TreeNode* root, int k,\n                unordered_map<TreeNode*, int>& nodeToDist) {\n    if (root == nullptr)\n      return;\n    if (root->val == k) {\n      nodeToDist[root] = 0;\n      return;\n    }\n\n    getDists(root->left, k, nodeToDist);\n    if (const auto it = nodeToDist.find(root->left); it != nodeToDist.cend()) {\n      nodeToDist[root] = it->second + 1;\n      return;\n    }\n\n    getDists(root->right, k, nodeToDist);\n    if (const auto it = nodeToDist.find(root->right); it != nodeToDist.cend())\n      nodeToDist[root] = it->second + 1;\n  }\n\n  void dfs(TreeNode* root, int dist,\n                      unordered_map<TreeNode*, int>& nodeToDist, int& minDist,\n                      int& ans) {\n    if (root == nullptr)\n      return;\n    if (nodeToDist.contains(root))\n      dist = nodeToDist[root];\n    if (root->left == nullptr && root->right == nullptr) {\n      if (dist < minDist) {\n        minDist = dist;\n        ans = root->val;\n      }\n      return;\n    }\n\n    dfs(root->left, dist + 1, nodeToDist, minDist, ans);\n    dfs(root->right, dist + 1, nodeToDist, minDist, ans);\n  }\n};"
     }
   },
   "743": {
