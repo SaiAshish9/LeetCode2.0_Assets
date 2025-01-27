@@ -3393,7 +3393,7 @@
   },
   "673": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\npublic:\n    int findNumberOfLIS(vector<int>& nums) {\n        const int n = nums.size();\n        int ans = 0;\n        int maxLength = 0;\n        // length[i] := the length of LIS's ending in nums[i]\n        vector<int> length(n, 1);\n        // count[i] := the number of LIS's ending in nums[i]\n        vector<int> count(n, 1);\n\n        // Calculate `length` and `count` arrays.\n        for (int i = 0; i < n; ++i)\n            for (int j = 0; j < i; ++j)\n                if (nums[j] < nums[i])\n                    if (length[i] < length[j] + 1) {\n                        length[i] = length[j] + 1;\n                        count[i] = count[j];\n                    } else if (length[i] == length[j] + 1) {\n                        count[i] += count[j];\n                    }\n\n        for (int i = 0; i < n; ++i)\n            if (length[i] > maxLength) {\n                maxLength = length[i];\n                ans = count[i];\n            } else if (length[i] == maxLength) {\n                ans += count[i];\n            }\n\n        return ans;\n    }\n};"
     }
   },
   "674": {
