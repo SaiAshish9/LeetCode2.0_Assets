@@ -13530,7 +13530,7 @@
   },
   "2741": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "#include <numeric>\\n#include <unordered_map>\\n#include <vector>\\nusing namespace std;\\n\\nconst int MOD = 1e9 + 7;\\nint dp[14][(1 << 14) + 5];\\n\\nclass Solution {\\npublic:\\n    int helper(vector<int>& nums, int prev, int mask) {\\n        if (mask == (1 << nums.size()) - 1)\\n            return 1;\\n        if (dp[prev][mask] != -1)\\n            return dp[prev][mask];\\n        int ans = 0;\\n        for (int i = 0; i < nums.size(); i++) {\\n            if ((mask & (1 << i)) == 0 &&\\n                (nums[i] % nums[prev] == 0 || nums[prev] % nums[i] == 0)) {\\n                ans += helper(nums, i, mask | (1 << i)) % MOD;\\n                ans = ans % MOD;\\n            }\\n        }\\n        return dp[prev][mask] = ans;\\n    }\\n    int specialPerm(vector<int>& nums) {\\n        memset(dp, -1, sizeof dp);\\n        int ans = 0;\\n        for (int i = 0; i < nums.size(); i++) {\\n            ans += helper(nums, i, (1 << i)) % MOD;\\n            ans = ans % MOD;\\n        }\\n        return ans;\\n    }\\n};"
     }
   },
   "2742": {
