@@ -101,43 +101,7 @@
   },
   "21": {
     "solution": {
-      "recursion": "/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
-        ListNode* dummy = new ListNode(0);
-        ListNode* current = dummy;
-        
-        while (list1 != nullptr && list2 != nullptr) {
-            if (list1->val < list2->val) {
-                current->next = list1;
-                list1 = list1->next;
-            } else {
-                current->next = list2;
-                list2 = list2->next;
-            }
-            current = current->next; // Move current to the next node
-        }
-        
-        // If one of the lists is not empty, attach it to the merged list
-        if (list1 != nullptr) {
-            current->next = list1;
-        } else {
-            current->next = list2;
-        }
-        
-        return dummy->next;
-    }
-};"
+      "recursion": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {\n        ListNode* dummy = new ListNode(0);\n        ListNode* current = dummy;\n        \n        while (list1 != nullptr && list2 != nullptr) {\n            if (list1->val < list2->val) {\n                current->next = list1;\n                list1 = list1->next;\n            } else {\n                current->next = list2;\n                list2 = list2->next;\n            }\n            current = current->next; // Move current to the next node\n        }\n        \n        // If one of the lists is not empty, attach it to the merged list\n        if (list1 != nullptr) {\n            current->next = list1;\n        } else {\n            current->next = list2;\n        }\n        \n        return dummy->next;\n    }\n};"
     }
   },
   "22": {
