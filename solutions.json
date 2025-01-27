@@ -15647,7 +15647,7 @@
   },
   "3202": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\\npublic:\\n    int maximumLength(vector<int>& nums, int k) {\\n        // dp[i][j] := the maximum length of a valid subsequence, where the last\\n        // number mod k equal to i and the next desired number mod k equal to j\\n        vector<vector<int>> dp(k, vector<int>(k));\\n\\n        for (const int x : nums)\\n            for (int y = 0; y < k; ++y)\\n                dp[x % k][y] = dp[y][x % k] + 1;\\n\\n        return accumulate(dp.begin(), dp.end(), 0,\\n                          [](int acc, const vector<int>& row) {\\n                              return max(acc, ranges::max(row));\\n                          });\\n    }\\n};"
     }
   },
   "3203": {
