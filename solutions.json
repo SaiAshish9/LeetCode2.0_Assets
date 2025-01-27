@@ -4223,7 +4223,7 @@
   },
   "838": {
     "solution": {
-      "two-pointers": ""
+      "dynamic-programming": "class Solution {\n public:\n  string pushDominoes(string dominoes) {\n    int L = -1;\n    int R = -1;\n\n    for (int i = 0; i <= dominoes.length(); ++i)\n      if (i == dominoes.length() || dominoes[i] == 'R') {\n        if (L < R)\n          while (R < i)\n            dominoes[R++] = 'R';\n        R = i;\n      } else if (dominoes[i] == 'L') {\n        if (R < L || L == -1 && R == -1) {\n          if (L == -1 && R == -1)\n            ++L;\n          while (L < i)\n            dominoes[L++] = 'L';\n        } else {\n          int l = R + 1;\n          int r = i - 1;\n          while (l < r) {\n            dominoes[l++] = 'R';\n            dominoes[r--] = 'L';\n          }\n        }\n        L = i;\n      }\n\n    return dominoes;\n  }\n};"
     }
   },
   "839": {
