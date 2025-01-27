@@ -14211,7 +14211,7 @@
   },
   "2915": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "#include <vector>\\n#include <algorithm>\\nusing namespace std;\\n\\nclass Solution {\\npublic:\\n    int lengthOfLongestSubsequence(vector<int>& nums, int target) {\\n        // DP array, initialize with -1 (meaning not possible)\\n        vector<int> dp(target + 1, -1);\\n        \\n        dp[0] = 0;\\n        \\n        for (int num : nums) {\\n            for (int s = target; s >= num; --s) {\\n                if (dp[s - num] != -1) {  // If sum s-num is achievable\\n                    dp[s] = max(dp[s], dp[s - num] + 1);  // Update the subsequence length for sum s\\n                }\\n            }\\n        }\\n        \\n        return dp[target];\\n    }\\n};"
     }
   },
   "2916": {
