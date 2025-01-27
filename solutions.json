@@ -216,7 +216,7 @@
   },
   "43": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\\npublic:\\n    string multiply(string num1, string num2) {\\n        int m = num1.size();\\n        int n = num2.size();\\n        \\n        vector<int> result(m + n, 0);\\n        \\n        reverse(num1.begin(), num1.end());\\n        reverse(num2.begin(), num2.end());\\n        \\n        for (int i = 0; i < m; ++i) {\\n            for (int j = 0; j < n; ++j) {\\n                result[i + j] += (num1[i] - '0') * (num2[j] - '0');\\n                result[i + j + 1] += result[i + j] / 10;  \\n                result[i + j] %= 10; \\n            }\\n        }\\n        \\n        while (result.size() > 1 && result.back() == 0) {\\n            result.pop_back();\\n        }\\n        \\n        string resultStr;\\n        for (int i = result.size() - 1; i >= 0; --i) {\\n            resultStr += to_string(result[i]);\\n        }\\n        \\n        return resultStr;\\n    }\\n};"
     }
   },
   "44": {
