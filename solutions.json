@@ -11537,7 +11537,7 @@
   },
   "2297": {
     "solution": {
-      "monotonic-stack": ""
+      "dynamic-programming": "class Solution {\npublic:\n    long long minCost(vector<int>& nums, vector<int>& costs) {\n        int n = nums.size();\n        vector<int> graph[n]; \n        stack<int> stack;     \n\n        for (int i = n - 1; i >= 0; --i) {\n            while (!stack.empty() && nums[stack.top()] < nums[i]) {\n                stack.pop();\n            }\n            if (!stack.empty()) {\n                graph[i].push_back(stack.top());\n            }\n            stack.push(i);\n        }\n\n        stack = stack<int>();\n        for (int i = n - 1; i >= 0; --i) {\n            while (!stack.empty() && nums[stack.top()] >= nums[i]) {\n                stack.pop();\n            }\n            if (!stack.empty()) {\n                graph[i].push_back(stack.top());\n            }\n            stack.push(i);\n        }\n\n        vector<long long> dp(n, 1e18);\n        dp[0] = 0; // Starting point\n\n        for (int i = 0; i < n; ++i) {\n            for (int neighbor : graph[i]) {\n                dp[neighbor] = min(dp[neighbor], dp[i] + costs[neighbor]);\n            }\n        }\n\n        return dp[n - 1];\n    }\n};"
     }
   },
   "2298": {
