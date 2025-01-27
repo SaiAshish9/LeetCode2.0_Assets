@@ -8457,7 +8457,7 @@
   },
   "1682": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\npublic:\n    int longestPalindromeSubseq(string s) {\n        int n = s.size();\n        \n        vector<vector<vector<int>>> dp(n, vector<vector<int>>(n, vector<int>(27, 0)));\n        \n        for (int len = 1; len <= n; ++len) {\n            for (int i = 0; i + len - 1 < n; ++i) {\n                int j = i + len - 1;\n                for (int x = 0; x < 27; ++x) {\n                    if (i >= j) {\n                        dp[i][j][x] = 0;\n                    } else if (s[i] == s[j] && s[i] - 'a' != x) {\n                        dp[i][j][x] = dp[i + 1][j - 1][s[i] - 'a'] + 2;\n                    } else {\n                        dp[i][j][x] = max(dp[i + 1][j][x], dp[i][j - 1][x]);\n                    }\n                }\n            }\n        }\n        \n        return dp[0][n - 1][26]; // Return the result for the full string\n    }\n};"
     }
   },
   "1683": {
