@@ -5283,7 +5283,7 @@
   },
   "1049": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\n public:\n  int lastStoneWeightII(vector<int>& stones) {\n    const int sum = accumulate(stones.begin(), stones.end(), 0);\n    vector<bool> dp(sum + 1);\n    dp[0] = true;\n    int s = 0;\n\n    for (int stone : stones)\n      for (int w = sum / 2; w > 0; --w) {\n        if (w >= stone)\n          dp[w] = dp[w] || dp[w - stone];\n        if (dp[w])\n          s = max(s, w);\n      }\n\n    return sum - 2 * s;\n  }\n};"
     }
   },
   "1050": {
