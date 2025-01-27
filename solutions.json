@@ -6745,7 +6745,7 @@
   },
   "1340": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\npublic:\n    int maxJumps(vector<int>& arr, int d) {\n        int n = arr.size();\n        vector<int> dp(n, -1);\n\n        function<int(int)> dfs = [&](int i) {\n            if (dp[i] != -1) return dp[i];\n            dp[i] = 1; // At least one jump (staying at the current position)\n            \n            // Jump to the right\n            for (int j = i + 1; j <= min(i + d, n - 1) && arr[j] < arr[i]; ++j) {\n                dp[i] = max(dp[i], 1 + dfs(j));\n            }\n            \n            // Jump to the left\n            for (int j = i - 1; j >= max(i - d, 0) && arr[j] < arr[i]; --j) {\n                dp[i] = max(dp[i], 1 + dfs(j));\n            }\n            \n            return dp[i];\n        };\n\n        int result = 0;\n        for (int i = 0; i < n; ++i) {\n            result = max(result, dfs(i));\n        }\n\n        return result;\n    }\n};\n"
     }
   },
   "1341": {
