@@ -2040,7 +2040,7 @@
   },
   "403": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\n public:\n  bool canCross(vector<int>& stones) {\n    const int n = stones.size();\n    // dp[i][j] := true if a frog can make a size j jump to stones[i]\n    vector<vector<bool>> dp(n, vector<bool>(n + 1));\n    dp[0][0] = true;\n\n    for (int i = 1; i < n; ++i)\n      for (int j = 0; j < i; ++j) {\n        const int k = stones[i] - stones[j];\n        if (k > n)\n          continue;\n        for (const int x : {k - 1, k, k + 1})\n          if (0 <= x && x <= n)\n            dp[i][k] = dp[i][k] || dp[j][x];\n      }\n\n    return ranges::any_of(dp.back(), [](bool val) { return val; });\n  }\n};"
     }
   },
   "404": {
