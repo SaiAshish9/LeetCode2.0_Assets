@@ -10365,7 +10365,7 @@
   },
   "2063": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\npublic:\n    long long countVowels(string word) {\n        long long totalVowels = 0;\n        int n = word.size();\n\n        // Iterate through all possible substrings\n        for (int i = 0; i < n; ++i) {\n            // Check each character of the substring\n            for (int j = i; j < n; ++j) {\n                if (isVowel(word[j])) {\n                    totalVowels++;\n                }\n            }\n        }\n        return totalVowels;\n    }\n\nprivate:\n    bool isVowel(char c) {\n        return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' ||\n               c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U';\n    }\n};"
     }
   },
   "2064": {
