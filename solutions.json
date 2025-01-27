@@ -8792,7 +8792,7 @@
   },
   "1749": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\npublic:\n    int maxAbsoluteSum(vector<int>& nums) {\n        int maxSum = 0, minSum = 0, currentMax = 0, currentMin = 0;\n\n        for (int num : nums) {\n            currentMax = max(currentMax + num, num);\n            currentMin = min(currentMin + num, num);\n            maxSum = max(maxSum, currentMax);\n            minSum = min(minSum, currentMin);\n        }\n\n        return max(abs(maxSum), abs(minSum));\n    }\n};"
     }
   },
   "1750": {
