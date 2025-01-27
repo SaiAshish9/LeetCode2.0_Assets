@@ -7410,7 +7410,7 @@
   },
   "1473": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\npublic:\n    int minCost(vector<int>& houses, vector<vector<int>>& cost, int m, int n, int target) {\n        const int INF = 1e9; \n        vector<vector<vector<int>>> dp(m + 1, vector<vector<int>>(target + 1, vector<int>(n + 1, INF)));\n\n        // Base case: zero neighborhoods\n        dp[0][0][0] = 0;\n\n        for (int i = 1; i <= m; ++i) { \n            for (int k = 1; k <= target; ++k) {\n                for (int c = 1; c <= n; ++c) {\n                    if (houses[i - 1] != 0 && houses[i - 1] != c) continue; // Skip invalid colors\n                    \n                    int currentCost = (houses[i - 1] == 0) ? cost[i - 1][c - 1] : 0; // Cost if repainting is needed\n                    \n                    for (int prevColor = 0; prevColor <= n; ++prevColor) {\n                        if (prevColor == c) { // Same color as previous house\n                            dp[i][k][c] = min(dp[i][k][c], dp[i - 1][k][prevColor] + currentCost);\n                        } else { // Different color forms a new neighborhood\n                            dp[i][k][c] = min(dp[i][k][c], dp[i - 1][k - 1][prevColor] + currentCost);\n                        }\n                    }\n                }\n            }\n        }\n\n        int result = INF;\n        for (int c = 1; c <= n; ++c) {\n            result = min(result, dp[m][target][c]);\n        }\n\n        return result == INF ? -1 : result; // If no valid solution, return -1\n    }\n};\n"
     }
   },
   "1474": {
