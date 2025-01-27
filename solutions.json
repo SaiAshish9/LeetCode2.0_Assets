@@ -6123,7 +6123,7 @@
   },
   "1216": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\n    public boolean isValidPalindrome(String s, int k) {\n        int n = s.length();\n\n        // dp[i][j] will store the length of the longest palindromic subsequence in s[i..j]\n        int[][] dp = new int[n][n];\n\n        // Every single character is a palindrome of length 1\n        for (int i = 0; i < n; ++i) {\n            dp[i][i] = 1;\n        }\n\n        // Build the dp table\n        for (int len = 2; len <= n; ++len) {\n            for (int i = 0; i <= n - len; ++i) {\n                int j = i + len - 1;\n\n                // If characters match, extend the palindrome length by 2\n                if (s.charAt(i) == s.charAt(j)) {\n                    dp[i][j] = dp[i + 1][j - 1] + 2;\n                } else {\n                    // Else take the maximum length from removing either character\n                    dp[i][j] = Math.max(dp[i + 1][j], dp[i][j - 1]);\n                }\n\n                // If the palindromic subsequence is large enough to form a valid palindrome\n                if (dp[i][j] + k >= n) {\n                    return true;\n                }\n            }\n        }\n\n        return false;\n    }\n}"
     }
   },
   "1217": {
