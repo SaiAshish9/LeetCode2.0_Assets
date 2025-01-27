@@ -12474,7 +12474,7 @@
   },
   "2484": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\\n public:\\n  int countPalindromes(string s) {\\n    constexpr int kMod = 1'000'000'007;\\n    constexpr int kPatternSize = 5;\\n    long ans = 0;\\n\\n    for (char a = '0'; a <= '9'; ++a)\\n      for (char b = '0'; b <= '9'; ++b) {\\n        const vector<char> pattern{a, b, '.', b, a};\\n        // dp[i] := the number of subsequences of pattern[i..n) in s, where\\n        // pattern[2] can be any character\\n        vector<long> dp(kPatternSize + 1);\\n        dp.back() = 1;\\n        for (const char c : s)\\n          for (int i = 0; i < kPatternSize; ++i)\\n            if (pattern[i] == '.' || pattern[i] == c)\\n              dp[i] += dp[i + 1];\\n        ans += dp[0];\\n        ans %= kMod;\\n      }\\n\\n    return ans;\\n  }\\n};"
     }
   },
   "2485": {
