@@ -1910,7 +1910,7 @@
   },
   "377": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\npublic:\n    int combinationSum4(vector<int>& nums, int target) {\n        vector<unsigned long> dp(target + 1);\n        dp[0] = 1;\n\n        for (int i = 1; i <= target; ++i)\n            for (const int num : nums)\n                if (i >= num)\n                    dp[i] += dp[i - num];\n\n        return dp[target];\n    }\n};"
     }
   },
   "378": {
