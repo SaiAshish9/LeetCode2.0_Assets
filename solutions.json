@@ -3278,7 +3278,7 @@
   },
   "650": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\npublic:\n    int minSteps(int n) {\n        vector<int> dp(n + 1, INT_MAX);\n        dp[1] = 0; \n        \n        for (int i = 2; i <= n; ++i) {\n            for (int j = 1; j <= sqrt(i); ++j) {\n                if (i % j == 0) {\n                    dp[i] = min(dp[i], dp[j] + (i / j));\n                    if (j != i / j) {\n                        dp[i] = min(dp[i], dp[i / j] + j);\n                    }\n                }\n            }\n        }\n\n        return dp[n];\n    }\n};"
     }
   },
   "651": {
