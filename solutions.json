@@ -12154,7 +12154,7 @@
   },
   "2420": {
     "solution": {
-      "prefix-sum": ""
+      "dynamic-programming": "class Solution {\npublic:\n    vector<int> goodIndices(vector<int>& nums, int k) {\n        int n = nums.size();\n        vector<int> result;\n\n        vector<int> nonInc(n, 1), nonDec(n, 1);\n\n        // Compute non-increasing prefix lengths\n        for (int i = 1; i < n; ++i) {\n            if (nums[i] <= nums[i - 1]) {\n                nonInc[i] = nonInc[i - 1] + 1;\n            }\n        }\n\n        // Compute non-decreasing suffix lengths\n        for (int i = n - 2; i >= 0; --i) {\n            if (nums[i] <= nums[i + 1]) {\n                nonDec[i] = nonDec[i + 1] + 1;\n            }\n        }\n\n        // Check for good indices\n        for (int i = k; i < n - k; ++i) {\n            if (nonInc[i - 1] >= k && nonDec[i + 1] >= k) {\n                result.push_back(i);\n            }\n        }\n\n        return result;\n    }\n};"
     }
   },
   "2421": {
