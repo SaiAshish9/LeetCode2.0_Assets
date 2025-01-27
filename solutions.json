@@ -282,7 +282,7 @@
   },
   "56": {
     "solution": {
-      "sorting": ""
+      "sorting": "class Solution {\\npublic:\\n    vector<vector<int>> merge(vector<vector<int>>& intervals) {\\n        // If there are no intervals, return an empty result\\n        if (intervals.empty()) {\\n            return {};\\n        }\\n        \\n        sort(intervals.begin(), intervals.end());\\n        \\n        vector<vector<int>> result;\\n        result.push_back(intervals[0]);\\n        \\n        for (int i = 1; i < intervals.size(); ++i) {\\n            if (intervals[i][0] <= result.back()[1]) {\\n                result.back()[1] = max(result.back()[1], intervals[i][1]);\\n            } else {\\n                result.push_back(intervals[i]);\\n            }\\n        }\\n        \\n        return result;\\n    }\\n};"
     }
   },
   "57": {
