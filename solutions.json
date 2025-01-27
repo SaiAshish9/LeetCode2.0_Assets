@@ -3418,7 +3418,7 @@
   },
   "678": {
     "solution": {
-      "stack": ""
+      "dynamic-programming": "class Solution {\npublic:\n    bool checkValidString(const string& s) {\n        int low = 0;  // the lower bound of the number of valid '('s\n        int high = 0; // the upper bound of the number of valid '('s\n\n        for (const char c : s) {\n            switch (c) {\n            case '(': \n                ++low;\n                ++high;\n                break;\n            case ')':\n                low = max(0, --low);\n                --high;\n                break;\n            case '*':\n                low = max(0, --low);\n                ++high;\n                break;\n            }\n            if (high < 0)\n                return false;\n        }\n\n        return low == 0;\n    }\n};"
     }
   },
   "679": {
