@@ -4912,7 +4912,7 @@
   },
   "975": {
     "solution": {
-      "monotonic-stack": ""
+      "dynamic-programming": "class Solution {\n public:\n  int oddEvenJumps(vector<int>& arr) {\n    const int n = arr.size();\n    map<int, int> map;  // {num: min index}\n    // inc[i] := true if can reach arr[n - 1] from i using increasing jumps\n    vector<bool> inc(n);\n    // dec[i] := true if can reach arr[n - 1] from i using decreasing jumps\n    vector<bool> dec(n);\n\n    map[arr[n - 1]] = n - 1;\n    inc.back() = true;\n    dec.back() = true;\n\n    for (int i = n - 2; i >= 0; --i) {\n      const auto lo = map.lower_bound(arr[i]);  // the minimum value >= arr[i]\n      const auto hi = map.upper_bound(arr[i]);  // the minimum value > arr[i]\n      if (lo != map.cend())\n        inc[i] = dec[lo->second];\n      if (hi != map.cbegin())\n        dec[i] = inc[prev(hi)->second];\n      map[arr[i]] = i;\n    }\n\n    return ranges::count(inc, true);\n  }\n};"
     }
   },
   "976": {
@@ -5097,7 +5097,7 @@
   },
   "1012": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\npublic:\n    int numDupDigitsAtMostN(int n) {\n        return n - countSpecialNumbers(n);\n    }\n\nprivate:\n    int countSpecialNumbers(int n) {\n        const int numDigits = log10(n) + 1;\n        vector<vector<vector<int>>> memo(\n            numDigits + 1, vector<vector<int>>(1 << 10, vector<int>(2, -1))\n        );\n        return count(to_string(n), 0, 0, true, memo) - 1;\n    }\n\nprivate:\n    int count(const string& number, int index, int usedDigits, bool isTight,\n              vector<vector<vector<int>>>& memo) {\n        if (index == number.length())\n            return 1;\n        if (memo[index][usedDigits][isTight] != -1)\n            return memo[index][usedDigits][isTight];\n\n        int result = 0;\n        const int maxDigit = isTight ? number[index] - '0' : 9;\n\n        for (int digit = 0; digit <= maxDigit; ++digit) {\n            if (usedDigits >> digit & 1)\n                continue;\n            const bool nextIsTight = isTight && (digit == maxDigit);\n            if (usedDigits == 0 && digit == 0)\n                result += count(number, index + 1, usedDigits, nextIsTight, memo);\n            else\n                result += count(number, index + 1, usedDigits | 1 << digit, nextIsTight, memo);\n        }\n\n        return memo[index][usedDigits][isTight] = result;\n    }\n};"
     }
   },
   "1013": {
