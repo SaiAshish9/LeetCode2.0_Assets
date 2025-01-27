@@ -9467,7 +9467,7 @@
   },
   "1884": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\npublic:\n    int twoEggDrop(int n) {\n        // The minimum number of drops required\n        int drops = 0;\n        \n        // The strategy is to drop the first egg from a floor and continue from higher floors.\n        // The second egg will be used to check between the floors once the first egg breaks.\n        \n        // As we want to minimize the number of drops, we will increase the floor number\n        // progressively from the 1st egg drop, decreasing the number of possible floors \n        // left to drop on the second egg after each drop.\n        \n        // The idea is to drop the first egg from increasing floors, \n        // then use the second egg to check between the last drop and the previous one.\n        \n        // We start from the floor `x` and increase the next drop by 1 step.\n        while ((drops * (drops + 1)) / 2 < n) {\n            drops++;\n        }\n        \n        return drops;\n    }\n};"
     }
   },
   "1885": {
