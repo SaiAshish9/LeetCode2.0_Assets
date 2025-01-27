@@ -1810,7 +1810,7 @@
   },
   "357": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\npublic:\n    int countNumbersWithUniqueDigits(int n) {\n        if (n == 0) return 1;\n        \n        int count = 10; \n        int uniqueDigits = 9; \n        int availableDigits = 9; \n        \n        for (int i = 2; i <= n && availableDigits > 0; i++) {\n            uniqueDigits *= availableDigits;\n            count += uniqueDigits;\n            availableDigits--;\n        }\n        \n        return count;\n    }\n};"
     }
   },
   "358": {
