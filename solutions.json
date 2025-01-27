@@ -5995,7 +5995,7 @@
   },
   "1191": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\npublic:\n    int kConcatenationMaxSum(vector<int>& arr, int k) {\n        constexpr int kMod = 1'000'000'007;\n        const int sz = arr.size() * (k == 1 ? 1 : 2);\n        const int sum = accumulate(arr.begin(), arr.end(), 0);\n        return (sum > 0 && k > 2\n                    ? kadane(arr, sz) + sum * static_cast<long>(k - 2)\n                    : kadane(arr, sz)) %\n               kMod;\n    }\n\nprivate:\n    int kadane(const vector<int>& A, int sz) {\n        int ans = 0;\n        int sum = 0;\n        for (int i = 0; i < sz; ++i) {\n            const int a = A[i % A.size()];\n            sum = max(a, sum + a);\n            ans = max(ans, sum);\n        }\n        return ans;\n    }\n};"
     }
   },
   "1192": {
