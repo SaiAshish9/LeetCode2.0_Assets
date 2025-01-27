@@ -11572,7 +11572,7 @@
   },
   "2304": {
     "solution": {
-      "matrix": ""
+      "dynamic-programming": "class Solution {\npublic:\n    int minPathCost(vector<vector<int>>& grid, vector<vector<int>>& moveCost) {\n        int rows = grid.size();\n        int cols = grid[0].size();\n\n        vector<vector<int>> dp(rows, vector<int>(cols, INT_MAX));\n\n        for (int col = 0; col < cols; ++col) {\n            dp[0][col] = grid[0][col];\n        }\n\n        for (int row = 1; row < rows; ++row) {\n            for (int col = 0; col < cols; ++col) {\n                for (int prevCol = 0; prevCol < cols; ++prevCol) {\n                    int transitionCost = moveCost[grid[row - 1][prevCol]][col];\n                    dp[row][col] = min(dp[row][col], dp[row - 1][prevCol] + transitionCost + grid[row][col]);\n                }\n            }\n        }\n\n        int minCost = INT_MAX;\n        for (int col = 0; col < cols; ++col) {\n            minCost = min(minCost, dp[rows - 1][col]);\n        }\n\n        return minCost;\n    }\n};"
     }
   },
   "2305": {
