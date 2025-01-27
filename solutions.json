@@ -3781,7 +3781,7 @@
   },
   "750": {
     "solution": {
-      "matrix": ""
+      "dynamic-programming": "class Solution {\npublic:\n    int countCornerRectangles(vector<vector<int>>& grid) {\n        int n = grid[0].size();\n        int ans = 0;\n        map<pair<int, int>, int> cnt;\n        for (auto& row : grid) {\n            for (int i = 0; i < n; ++i) {\n                if (row[i]) {\n                    for (int j = i + 1; j < n; ++j) {\n                        if (row[j]) {\n                            ans += cnt[{i, j}];\n                            ++cnt[{i, j}];\n                        }\n                    }\n                }\n            }\n        }\n        return ans;\n    }\n};"
     }
   },
   "751": {
