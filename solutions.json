@@ -12019,7 +12019,7 @@
   },
   "2393": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\npublic:\n    long long countSubarrays(vector<int>& nums) {\n        long long ans = 0;\n        int i = 0, n = nums.size();\n        while (i < n) {\n            int j = i + 1;\n            while (j < n && nums[j] > nums[j - 1]) {\n                ++j;\n            }\n            int count = j - i;\n            ans += 1ll * (1 + count) * count / 2;\n            i = j;\n        }\n        return ans;\n    }\n};"
     }
   },
   "2394": {
