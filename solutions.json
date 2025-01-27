@@ -6274,7 +6274,7 @@
   },
   "1246": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\n    public int minimumMoves(int[] arr) {\n        int n = arr.length;\n        int[][] dp = new int[n][n];\n        \n        for (int i = 0; i < n; ++i) {\n            dp[i][i] = 1;\n        }\n        \n        for (int i = n - 2; i >= 0; --i) {\n            for (int j = i + 1; j < n; ++j) {\n                if (i + 1 == j) {\n                    dp[i][j] = arr[i] == arr[j] ? 1 : 2;\n                } else {\n                    int t = arr[i] == arr[j] ? dp[i + 1][j - 1] : Integer.MAX_VALUE;\n                    \n                    for (int k = i; k < j; ++k) {\n                        t = Math.min(t, dp[i][k] + dp[k + 1][j]);\n                    }\n                    \n                    dp[i][j] = t;\n                }\n            }\n        }\n        \n        return dp[0][n - 1];\n    }\n}"
     }
   },
   "1247": {
