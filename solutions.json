@@ -2396,7 +2396,7 @@
   },
   "474": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "#include <vector>\n#include <string>\nusing namespace std;\n\nclass Solution {\npublic:\n    int findMaxForm(vector<string>& strs, int m, int n) {\n        // dp[i][j] represents the maximum number of strings that can be formed \n        // with at most i zeros and j ones\n        vector<vector<int>> dp(m + 1, vector<int>(n + 1, 0));\n        \n        for (const string& str : strs) {\n            int zeros = 0, ones = 0;\n            for (char c : str) {\n                if (c == '0') ++zeros;\n                else if (c == '1') ++ones;\n            }\n            \n            for (int i = m; i >= zeros; --i) {\n                for (int j = n; j >= ones; --j) {\n                    dp[i][j] = max(dp[i][j], dp[i - zeros][j - ones] + 1);\n                }\n            }\n        }\n        \n        return dp[m][n];\n    }\n};"
     }
   },
   "475": {
