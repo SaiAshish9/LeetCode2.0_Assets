@@ -11387,7 +11387,7 @@
   },
   "2267": {
     "solution": {
-      "matrix": ""
+      "dynamic-programming": "class Solution {\npublic:\n    bool hasValidPath(vector<vector<char>>& grid) {\n        const int rows = grid.size();\n        const int cols = grid[0].size();\n        vector<vector<vector<int>>> memo(\n            rows, vector<vector<int>>(cols, vector<int>(rows + cols, -1)));\n        return isValidPath(grid, 0, 0, 0, memo);\n    }\n\nprivate:\n    bool isValidPath(const vector<vector<char>>& grid, int row, int col, int balance,\n                     vector<vector<vector<int>>>& memo) {\n        const int rows = grid.size();\n        const int cols = grid[0].size();\n\n        // If out of bounds, return false\n        if (row == rows || col == cols) \n            return false;\n\n        // Update balance based on the current cell\n        balance += (grid[row][col] == '(' ? 1 : -1);\n\n        // If balance goes negative, it's invalid\n        if (balance < 0)\n            return false;\n\n        // If we reach the bottom-right cell, check if balance is zero\n        if (row == rows - 1 && col == cols - 1)\n            return balance == 0;\n\n        // If the result for the current state is already computed, return it\n        if (memo[row][col][balance] != -1)\n            return memo[row][col][balance];\n\n        bool moveRight = isValidPath(grid, row, col + 1, balance, memo);\n        bool moveDown = isValidPath(grid, row + 1, col, balance, memo);\n\n        return memo[row][col][balance] = (moveRight || moveDown);\n    }\n};"
     }
   },
   "2268": {
