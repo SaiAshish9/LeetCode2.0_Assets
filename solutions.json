@@ -4399,7 +4399,7 @@
   },
   "873": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\npublic:\n    int lenLongestFibSubseq(vector<int>& arr) {\n        const int n = arr.size();\n        int ans = 0;\n        vector<vector<int>> dp(n, vector<int>(n, 2));\n        unordered_map<int, int> numToIndex;\n\n        for (int i = 0; i < n; ++i)\n            numToIndex[arr[i]] = i;\n\n        for (int j = 0; j < n; ++j)\n            for (int k = j + 1; k < n; ++k) {\n                const int ai = arr[k] - arr[j];\n                if (ai < arr[j] && numToIndex.contains(ai)) {\n                    const int i = numToIndex[ai];\n                    dp[j][k] = dp[i][j] + 1;\n                    ans = max(ans, dp[j][k]);\n                }\n            }\n\n        return ans;\n    }\n};"
     }
   },
   "874": {
