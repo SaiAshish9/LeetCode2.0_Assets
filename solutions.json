@@ -6390,7 +6390,7 @@
   },
   "1269": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\npublic:\n    int numWays(int steps, int arrLen) {\n        const int MOD = 1e9 + 7;\n        int maxPosition = min(steps, arrLen - 1); \n        vector<vector<int>> dp(steps + 1, vector<int>(maxPosition + 1, 0));\n\n        dp[0][0] = 1; \n\n        for (int i = 1; i <= steps; ++i) {\n            for (int j = 0; j <= maxPosition; ++j) {\n                dp[i][j] = dp[i-1][j];\n                if (j > 0) {\n                    dp[i][j] = (dp[i][j] + dp[i-1][j-1]) % MOD; \n                }\n                if (j < maxPosition) {\n                    dp[i][j] = (dp[i][j] + dp[i-1][j+1]) % MOD;\n                }\n            }\n        }\n\n        return dp[steps][0]; \n    }\n};\n"
     }
   },
   "1270": {
