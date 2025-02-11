@@ -1454,7 +1454,7 @@
   },
   "287": {
     "solution": {
-      "two-pointers": "public class Solution {\n    public int findDuplicate(int[] nums) {\n        int slow = nums[0];\n        int fast = nums[nums[0]];\n        \n        while (slow != fast) {\n            slow = nums[slow];\n            fast = nums[nums[fast]];\n        }\n        \n        fast = 0; \n        slow = 0; \n        while (slow != fast) {\n            slow = nums[slow];\n            fast = nums[fast];\n        }\n        \n        return slow;\n    }\n}\n"
+      "two-pointers": "class Solution {\n    // Floyd's Tortoise and Hare Algorithm\n   public int findDuplicate(int[] nums) {\n        int slow = nums[0];\n        int fast = nums[nums[0]];\n\n        while (slow != fast) {\n            slow = nums[slow];\n            fast = nums[nums[fast]];\n        }\n\n        slow = 0; \n        while (slow != fast) {\n            slow = nums[slow];\n            fast = nums[fast];\n        }\n\n        return slow;\n    }\n}\n"
     }
   },
   "288": {
