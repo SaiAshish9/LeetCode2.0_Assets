@@ -4192,8 +4192,7 @@
   },
   "832": {
     "solution": {
-      "matrix": "class Solution {\n  public int[][] flipAndInvertImage(int[][] A) {\n    int n = A.length;\n\n    for (int i = 0; i < n; ++i)\n      for (int j = 0; j < (n + 1) / 2; ++j) {\n        int temp = A[i][j];\n        A[i][j] = A[i][n - j - 1] ^ 1;\n        A[i][n - j - 1] = temp ^ 1;\n      }\n\n    return A;\n  }\n}",
-      "two-pointers": ""
+      "matrix": "public class Solution {\n    public int[][] flipAndInvertImage(int[][] image) {\n        int rows = image.length, cols = image[0].length;\n\n        for (int i = 0; i < rows; i++) {\n            int left = 0, right = cols - 1;\n\n            while (left <= right) {\n                // Swap and invert simultaneously\n                int temp = image[i][left] ^ 1;\n                image[i][left] = image[i][right] ^ 1;\n                image[i][right] = temp;\n\n                left++;\n                right--;\n            }\n        }\n        return image;\n    }\n}"
     }
   },
   "833": {
