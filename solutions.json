@@ -439,7 +439,7 @@
   },
   "87": {
     "solution": {
-      "dynamic-programming": "class Solution {\n\n    // dp[i][j][len]: represents whether the substring of length len starting from index i in s1 and the substring of length len starting from index j in s2 are scrambled strings.\n    public boolean isScramble(String s1, String s2) {\n        if (s1.length() != s2.length()) {\n            return false;\n        }\n        int n = s1.length();\n        boolean[][][] dp = new boolean[n][n][n + 1];\n\n        // strings of length 1\n        for (int i = 0; i < n; i++) {\n            for (int j = 0; j < n; j++) {\n                if (s1.charAt(i) == s2.charAt(j)) {\n                    dp[i][j][1] = true;\n                }\n            }\n        }\n\n        // longer substrings\n        for (int len = 2; len <= n; len++) {\n            for (int i = 0; i <= n - len; i++) {\n                for (int j = 0; j <= n - len; j++) {\n                    for (int k = 1; k < len; k++) {\n                        if ((dp[i][j][k] && dp[i + k][j + k][len - k]) // without swap\n                                || (dp[i][j + len - k][k] && dp[i + k][j][len - k]) // with swap\n                        ) {\n                            dp[i][j][len] = true;\n                            break;\n                        }\n                    }\n                }\n            }\n        }\n\n        System.out.println(Arrays.deepToString(dp));\n        return dp[0][0][n];\n    }\n}"
+      "dynamic-programming": "class Solution {\n\n    // dp[i][j][len]: represents whether the substring of length len starting from index i in s1 and the substring of length len starting from index j in s2 are scrambled strings.\n    public boolean isScramble(String s1, String s2) {\n        if (s1.length() != s2.length()) {\n            return false;\n        }\n        int n = s1.length();\n        boolean[][][] dp = new boolean[n][n][n + 1];\n\n        // strings of length 1\n        for (int i = 0; i < n; i++) {\n            for (int j = 0; j < n; j++) {\n                if (s1.charAt(i) == s2.charAt(j)) {\n                    dp[i][j][1] = true;\n                }\n            }\n        }\n\n        // longer substrings\n        for (int len = 2; len <= n; len++) {\n            for (int i = 0; i <= n - len; i++) {\n                for (int j = 0; j <= n - len; j++) {\n                    for (int k = 1; k < len; k++) {\n                        if ((dp[i][j][k] && dp[i + k][j + k][len - k]) // without swap\n                                || (dp[i][j + len - k][k] && dp[i + k][j][len - k]) // with swap\n                        ) {\n                            dp[i][j][len] = true;\n                            break;\n                        }\n                    }\n                }\n            }\n        }\n\n        System.out.println(Arrays.deepToString(dp)\n                .replaceAll(\"]]\", \"]\n]\")\n                .replaceAll(\"\\\\[\\\\[\", \"[\n[\")\n                .replaceAll(\"\\\\[\\\\[\", \"[\n[\")\n                .replaceAll(\"],\", \"],\n\")\n                .replaceAll(\"]]\", \"]\n]\")\n        );\n        return dp[0][0][n];\n    }\n}"
     }
   },
   "88": {
@@ -604,7 +604,7 @@
   },
   "120": {
     "solution": {
-      "dynamic-programming": "class Solution {\npublic:\n    // dp[i][j] represents the minimum path sum from the current position (i, j)\n    // to the bottom of the triangle.\n    int minimumTotal(int[][] dp) {\n        for (int i = dp.length - 2; i >= 0; --i)\n            for (int j = 0; j <= i; ++j)\n                dp[i][j] += Math.min(dp[i + 1][j], dp[i + 1][j + 1]);\n        System.out.println(Arrays.deepToString(dp).replace(\",\", \",\n\"));\n        return dp[0][0];\n    }\n};"
+      "dynamic-programming": "class Solution {\npublic:\n    // dp[i][j] represents the minimum path sum from the current position (i, j)\n    // to the bottom of the triangle.\n    int minimumTotal(int[][] dp) {\n        for (int i = dp.length - 2; i >= 0; --i)\n            for (int j = 0; j <= i; ++j)\n                dp[i][j] += Math.min(dp[i + 1][j], dp[i + 1][j + 1]);\n        System.out.println(Arrays.deepToString(dp));\n        return dp[0][0];\n    }\n};"
     }
   },
   "121": {
@@ -12248,7 +12248,7 @@
   },
   "2439": {
     "solution": {
-      "dynamic-programming": "class Solution {\n public:\n  int minimizeArrayValue(vector<int>& nums) {\n    long ans = 0;\n    long prefix = 0;\n\n    for (int i = 0; i < nums.size(); ++i) {\n      prefix += nums[i];\n      const long prefixAvg = ceil(prefix / static_cast<double>(i + 1));\n      ans = max(ans, prefixAvg);\n    }\n\n    return ans;\n  }\n};"
+      "dynamic-programming": "class Solution {\\n public:\\n  int minimizeArrayValue(vector<int>& nums) {\\n    long ans = 0;\\n    long prefix = 0;\\n\\n    for (int i = 0; i < nums.size(); ++i) {\\n      prefix += nums[i];\\n      const long prefixAvg = ceil(prefix / static_cast<double>(i + 1));\\n      ans = max(ans, prefixAvg);\\n    }\\n\\n    return ans;\\n  }\\n};"
     }
   },
   "2440": {
@@ -15641,12 +15641,12 @@
   },
   "3201": {
     "solution": {
-      "dynamic-programming": "class Solution {\npublic:\n    int maximumLength(vector<int>& nums) {\n        // dp[i][j] := the maximum length of a valid subsequence, where the last\n        // number mod 2 equals i and the next desired number mod 2 equals j\n        vector<vector<int>> dp(2, vector<int>(2));\n\n        for (const int x : nums)\n            for (int y = 0; y < 2; ++y)\n                dp[x % 2][y] = dp[y][x % 2] + 1;\n\n        return accumulate(dp.begin(), dp.end(), 0,\n                          [](int acc, const vector<int>& row) {\n                              return max(acc, ranges::max(row));\n                          });\n    }\n};"
+      "dynamic-programming": "class Solution {\\npublic:\\n    int maximumLength(vector<int>& nums) {\\n        // dp[i][j] := the maximum length of a valid subsequence, where the last\\n        // number mod 2 equal to i and the next desired number mod 2 equal to j\\n        vector<vector<int>> dp(2, vector<int>(2));\\n\\n        for (const int x : nums)\\n            for (int y = 0; y < 2; ++y)\\n                dp[x % 2][y] = dp[y][x % 2] + 1;\\n\\n        return accumulate(dp.begin(), dp.end(), 0,\\n                          [](int acc, const vector<int>& row) {\\n                              return max(acc, ranges::max(row));\\n                          });\\n    }\\n};"
     }
   },
   "3202": {
     "solution": {
-      "dynamic-programming": "class Solution {\npublic:\n    int maximumLength(vector<int>& nums, int k) {\n        // dp[i][j] := the maximum length of a valid subsequence, where the last\n        // number mod k equals i and the next desired number mod k equals j\n        vector<vector<int>> dp(k, vector<int>(k));\n\n        for (const int x : nums)\n            for (int y = 0; y < k; ++y)\n                dp[x % k][y] = dp[y][x % k] + 1;\n\n        return accumulate(dp.begin(), dp.end(), 0,\n                          [](int acc, const vector<int>& row) {\n                              return max(acc, ranges::max(row));\n                          });\n    }\n};"
+      "dynamic-programming": "class Solution {\\npublic:\\n    int maximumLength(vector<int>& nums, int k) {\\n        // dp[i][j] := the maximum length of a valid subsequence, where the last\\n        // number mod k equal to i and the next desired number mod k equal to j\\n        vector<vector<int>> dp(k, vector<int>(k));\\n\\n        for (const int x : nums)\\n            for (int y = 0; y < k; ++y)\\n                dp[x % k][y] = dp[y][x % k] + 1;\\n\\n        return accumulate(dp.begin(), dp.end(), 0,\\n                          [](int acc, const vector<int>& row) {\\n                              return max(acc, ranges::max(row));\\n                          });\\n    }\\n};"
     }
   },
   "3203": {
