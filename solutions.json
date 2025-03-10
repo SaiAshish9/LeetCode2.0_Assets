@@ -742,7 +742,7 @@
   },
   "147": {
     "solution": {
-      "linked-list": ""
+      "linked-list": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode insertionSortList(ListNode head) {\n        if (head == null || head.next == null) return head;\n\n        ListNode dummy = new ListNode(0); // Dummy node for sorted list\n        ListNode current = head; // Pointer to traverse the original list\n\n        while (current != null) {\n            ListNode nextNode = current.next; // Store next node\n            ListNode prev = dummy; // Start from dummy node\n\n            // Find the correct position in the sorted list\n            while (prev.next != null && prev.next.val < current.val) {\n                prev = prev.next;\n            }\n\n            // Insert current node into sorted list\n            current.next = prev.next;\n            prev.next = current;\n\n            current = nextNode; // Move to next node\n        }\n\n        return dummy.next; // Head of sorted list\n    }\n}"
     }
   },
   "148": {
