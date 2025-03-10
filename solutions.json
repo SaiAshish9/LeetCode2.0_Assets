@@ -752,7 +752,7 @@
   },
   "149": {
     "solution": {
-      "geometry": ""
+      "geometry": "#include <unordered_map>\n#include <vector>\n#include <algorithm>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    int maxPoints(vector<vector<int>>& points) {\n        if (points.size() <= 1) return points.size();\n\n        int maxPointsOnLine = 1; // At least one point exists\n\n        for (int i = 0; i < points.size(); i++) {\n            unordered_map<string, int> slopeCount;\n            int duplicate = 0, vertical = 0, localMax = 0;\n\n            for (int j = i + 1; j < points.size(); j++) {\n                int dx = points[j][0] - points[i][0];\n                int dy = points[j][1] - points[i][1];\n\n                if (dx == 0 && dy == 0) {\n                    duplicate++; // Identical point\n                } else if (dx == 0) {\n                    vertical++; // Vertical line\n                } else {\n                    int gcdVal = __gcd(dx, dy);\n                    dx /= gcdVal;\n                    dy /= gcdVal;\n                    string slope = to_string(dy) + \"/\" + to_string(dx);\n                    slopeCount[slope]++;\n                    localMax = max(localMax, slopeCount[slope]);\n                }\n            }\n\n            localMax = max(localMax, vertical); // Include vertical lines\n            maxPointsOnLine = max(maxPointsOnLine, localMax + duplicate + 1);\n        }\n\n        return maxPointsOnLine;\n    }\n};"
     }
   },
   "150": {
