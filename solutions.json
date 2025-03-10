@@ -722,7 +722,7 @@
   },
   "143": {
     "solution": {
-      "two-pointers": ""
+      "two-pointers": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public void reorderList(ListNode head) {\n        if (head == null || head.next == null) return;\n\n        // Step 1: Find the middle node\n        ListNode slow = head, fast = head;\n        while (fast != null && fast.next != null) {\n            slow = slow.next;\n            fast = fast.next.next;\n        }\n\n        // Step 2: Reverse the second half\n        ListNode secondHalf = reverseList(slow.next);\n        slow.next = null; // Split the list\n\n        // Step 3: Merge two halves alternately\n        ListNode firstHalf = head;\n        while (secondHalf != null) {\n            ListNode temp1 = firstHalf.next;\n            ListNode temp2 = secondHalf.next;\n\n            firstHalf.next = secondHalf;\n            secondHalf.next = temp1;\n\n            firstHalf = temp1;\n            secondHalf = temp2;\n        }\n    }\n\n    // Helper function to reverse a linked list\n    private ListNode reverseList(ListNode head) {\n        ListNode prev = null;\n        while (head != null) {\n            ListNode next = head.next;\n            head.next = prev;\n            prev = head;\n            head = next;\n        }\n        return prev;\n    }\n}"
     }
   },
   "144": {
