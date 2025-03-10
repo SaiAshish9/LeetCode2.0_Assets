@@ -757,7 +757,7 @@
   },
   "150": {
     "solution": {
-      "stack": ""
+      "stack": "#include <vector>\n#include <string>\n#include <stack>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    int evalRPN(vector<string>& tokens) {\n        stack<int> stk;\n        for (const string& token : tokens) {\n            if (token == \"+\" || token == \"-\" || token == \"*\" || token == \"/\") {\n                int b = stk.top(); stk.pop();\n                int a = stk.top(); stk.pop();\n                if (token == \"+\") stk.push(a + b);\n                else if (token == \"-\") stk.push(a - b);\n                else if (token == \"*\") stk.push(a * b);\n                else if (token == \"/\") stk.push(a / b);\n            } else {\n                stk.push(stoi(token));\n            }\n        }\n        return stk.top();\n    }\n};"
     }
   },
   "151": {
