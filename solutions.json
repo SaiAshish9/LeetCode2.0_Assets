@@ -666,7 +666,7 @@
   },
   "132": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "import java.util.Arrays;\n\nclass Solution {\n    public int minCut(String s) {\n        int n = s.length();\n        boolean[][] isPalindrome = new boolean[n][n];\n        int[] dp = new int[n];\n\n        // Step 1: Precompute palindromes using DP\n        for (int len = 1; len <= n; len++) {\n            for (int i = 0; i + len - 1 < n; i++) {\n                int j = i + len - 1;\n                if (s.charAt(i) == s.charAt(j)) {\n                    if (len <= 2) {\n                        isPalindrome[i][j] = true;\n                    } else {\n                        isPalindrome[i][j] = isPalindrome[i + 1][j - 1];\n                    }\n                }\n            }\n        }\n\n        // Step 2: DP to find the minimum cuts\n        Arrays.fill(dp, Integer.MAX_VALUE);\n        for (int i = 0; i < n; i++) {\n            if (isPalindrome[0][i]) {\n                dp[i] = 0;\n            } else {\n                for (int j = 0; j < i; j++) {\n                    if (isPalindrome[j + 1][i]) {\n                        dp[i] = Math.min(dp[i], dp[j] + 1);\n                    }\n                }\n            }\n        }\n\n        return dp[n - 1];\n    }\n}"
     }
   },
   "133": {
