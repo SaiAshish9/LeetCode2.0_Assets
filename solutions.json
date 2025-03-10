@@ -644,7 +644,7 @@
   },
   "128": {
     "solution": {
-      "union-find": ""
+      "array": "import java.util.HashSet;\n\nclass Solution {\n    public int longestConsecutive(int[] nums) {\n        if (nums == null || nums.length == 0) return 0;\n\n        HashSet<Integer> set = new HashSet<>();\n        for (int num : nums) {\n            set.add(num);\n        }\n\n        int maxLength = 0;\n        for (int num : set) {\n            if (!set.contains(num - 1)) { // Check if it's the start of a sequence\n                int currentNum = num;\n                int currentLength = 1;\n\n                while (set.contains(currentNum + 1)) {\n                    currentNum++;\n                    currentLength++;\n                }\n\n                maxLength = Math.max(maxLength, currentLength);\n            }\n        }\n\n        return maxLength;\n    }\n}\n"
     }
   },
   "129": {
