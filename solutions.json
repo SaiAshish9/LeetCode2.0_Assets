@@ -639,7 +639,7 @@
   },
   "127": {
     "solution": {
-      "breadth-first-search": ""
+      "breadth-first-search": "import java.util.*;\n\nclass Solution {\n    public int ladderLength(String beginWord, String endWord, List<String> wordList) {\n        Set<String> wordSet = new HashSet<>(wordList);\n        if (!wordSet.contains(endWord)) return 0; // End word must be in the wordList\n\n        Queue<String> queue = new LinkedList<>();\n        queue.add(beginWord);\n        int level = 1; // Start transformation count\n\n        while (!queue.isEmpty()) {\n            int size = queue.size();\n            for (int i = 0; i < size; i++) {\n                String word = queue.poll();\n                char[] wordArr = word.toCharArray();\n                \n                for (int j = 0; j < wordArr.length; j++) {\n                    char originalChar = wordArr[j];\n                    \n                    for (char c = 'a'; c <= 'z'; c++) {\n                        if (c == originalChar) continue; // Skip same letter\n                        \n                        wordArr[j] = c;\n                        String newWord = new String(wordArr);\n\n                        if (newWord.equals(endWord)) return level + 1; // Found transformation\n\n                        if (wordSet.contains(newWord)) {\n                            queue.add(newWord);\n                            wordSet.remove(newWord); // Mark as visited\n                        }\n                    }\n                    \n                    wordArr[j] = originalChar; // Restore original character\n                }\n            }\n            level++; // Increase transformation count\n        }\n\n        return 0; // No possible transformation sequence\n    }\n}\n"
     }
   },
   "128": {
