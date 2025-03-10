@@ -614,7 +614,7 @@
   },
   "122": {
     "solution": {
-      "dynamic-programming": "class Solution {\n    public static int maxProfit(int[] prices) {\n        if (prices == null || prices.length == 0) {\n            return 0;\n        }\n\n        int n = prices.length;\n        int[] dp = new int[n];\n\n        dp[0] = 0;\n        for (int i = 1; i < n; i++) {\n            int diff = prices[i] - prices[i - 1];\n            dp[i] = Math.max(dp[i - 1] + diff, dp[i - 1]);\n        }\n\n        return dp[n - 1];\n    }\n}"
+      "dynamic-programming": "class Solution {\n\n    // dp[i]: Maximum profit attainable on or before day i.\n\n    public static int maxProfit(int[] prices) {\n        if (prices == null || prices.length == 0) {\n            return 0;\n        }\n\n        int n = prices.length;\n        int[] dp = new int[n];\n\n        dp[0] = 0;\n        for (int i = 1; i < n; i++) {\n            int diff = prices[i] - prices[i - 1];\n            dp[i] = Math.max(dp[i - 1] + diff, dp[i - 1]);\n        }\n\n        return dp[n - 1];\n    }\n}"
     }
   },
   "123": {
