@@ -1697,7 +1697,7 @@
   },
   "335": {
     "solution": {
-      "geometry": ""
+      "geometry": "class Solution {\n    public boolean isSelfCrossing(int[] distance) {\n        int n = distance.length;\n        if (n < 4) return false; // A path with fewer than 4 moves cannot cross itself\n\n        for (int i = 3; i < n; i++) {\n            // Case 1: Fourth step crosses the first step\n            if (distance[i] >= distance[i - 2] && distance[i - 1] <= distance[i - 3]) {\n                return true;\n            }\n\n            // Case 2: Fifth step crosses the first step\n            if (i >= 4 && distance[i - 1] == distance[i - 3] && \n                distance[i] + distance[i - 4] >= distance[i - 2]) {\n                return true;\n            }\n\n            // Case 3: Sixth step crosses the first step\n            if (i >= 5 && distance[i - 2] >= distance[i - 4] &&\n                distance[i] + distance[i - 4] >= distance[i - 2] &&\n                distance[i - 1] <= distance[i - 3] &&\n                distance[i - 1] + distance[i - 5] >= distance[i - 3]) {\n                return true;\n            }\n        }\n\n        return false;\n    }\n}"
     }
   },
   "336": {
