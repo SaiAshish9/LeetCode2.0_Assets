@@ -1677,7 +1677,7 @@
   },
   "331": {
     "solution": {
-      "stack": ""
+      "string": "class Solution {\n    public boolean isValidSerialization(String preorder) {\n        String[] nodes = preorder.split(\",\");\n        int availableSlots = 1; // Start with one slot for the root\n\n        for (String node : nodes) {\n            // Every node must consume one slot\n            availableSlots--;\n\n            // If at any point slots become negative, the serialization is invalid\n            if (availableSlots < 0) {\n                return false;\n            }\n\n            // If the node is not null, it creates two additional slots for children\n            if (!node.equals(\"#\")) {\n                availableSlots += 2;\n            }\n        }\n\n        // A valid serialization should use exactly all slots\n        return availableSlots == 0;\n    }\n}"
     }
   },
   "332": {
