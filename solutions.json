@@ -1631,7 +1631,7 @@
   },
   "322": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\n    public int coinChange(int[] coins, int amount) {\n        // Edge case: If amount is 0, we need 0 coins\n        if (amount == 0) return 0;\n\n        // Initialize dp array, set to a large value (amount + 1 is effectively \"infinity\")\n        int[] dp = new int[amount + 1];\n        Arrays.fill(dp, amount + 1);\n        dp[0] = 0; // Base case: 0 coins needed for amount 0\n\n        // Process each amount from 1 to target amount\n        for (int currentAmount = 1; currentAmount <= amount; currentAmount++) {\n            for (int coin : coins) {\n                if (currentAmount >= coin) {\n                    dp[currentAmount] = Math.min(dp[currentAmount], dp[currentAmount - coin] + 1);\n                }\n            }\n        }\n\n        // If dp[amount] remains unchanged, it means we cannot make the amount\n        return dp[amount] == amount + 1 ? -1 : dp[amount];\n    }\n}"
     }
   },
   "323": {
