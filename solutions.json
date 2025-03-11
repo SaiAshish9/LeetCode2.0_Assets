@@ -1752,7 +1752,7 @@
   },
   "346": {
     "solution": {
-      "queue": ""
+      "queue": "class MovingAverage {\n    private int[] arr;\n    private int s;\n    private int cnt;\n\n    public MovingAverage(int size) {\n        arr = new int[size];\n    }\n\n    public double next(int val) {\n        int idx = cnt % arr.length;\n        s += val - arr[idx];\n        arr[idx] = val;\n        ++cnt;\n        return s * 1.0 / Math.min(cnt, arr.length);\n    }\n}\n\n/**\n * Your MovingAverage object will be instantiated and called as such:\n * MovingAverage obj = new MovingAverage(size);\n * double param_1 = obj.next(val);\n */"
     }
   },
   "347": {
