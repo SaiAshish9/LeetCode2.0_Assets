@@ -1550,7 +1550,7 @@
   },
   "306": {
     "solution": {
-      "backtracking": ""
+      "backtracking": "class Solution {\n  public boolean isAdditiveNumber(String num) {\n    final int n = num.length();\n\n    // num[0..i] = firstNum\n    for (int i = 0; i < n / 2; ++i) {\n      if (i > 0 && num.charAt(0) == '0')\n        return false;\n      final long firstNum = Long.parseLong(num.substring(0, i + 1));\n      // num[i + 1..j] = secondNum\n      // |thirdNum| >= max(|firstNum|, |secondNum|)\n      for (int j = i + 1; Math.max(i, j - i) < n - j; ++j) {\n        if (j > i + 1 && num.charAt(i + 1) == '0')\n          break;\n        final long secondNum = Long.parseLong(num.substring(i + 1, j + 1));\n        if (dfs(num, firstNum, secondNum, j + 1))\n          return true;\n      }\n    }\n\n    return false;\n  }\n\n  private boolean dfs(final String num, long firstNum, long secondNum, long s) {\n    if (s == num.length())\n      return true;\n\n    final long thirdNum = firstNum + secondNum;\n    final String thirdNumStr = String.valueOf(thirdNum);\n    return num.indexOf(thirdNumStr, (int) s) == s &&\n        dfs(num, secondNum, thirdNum, s + thirdNumStr.length());\n  }\n}"
     }
   },
   "307": {
