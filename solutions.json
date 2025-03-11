@@ -1151,7 +1151,7 @@
   },
   "227": {
     "solution": {
-      "stack": ""
+      "stack": "import java.util.Stack;\n\nclass Solution {\n    public int calculate(String expression) {\n        Stack<Integer> valuesStack = new Stack<>();\n        int currentNumber = 0;\n        char previousOperator = '+';\n\n        for (int index = 0; index < expression.length(); index++) {\n            char currentChar = expression.charAt(index);\n\n            if (Character.isDigit(currentChar)) {\n                currentNumber = currentNumber * 10 + (currentChar - '0');\n            }\n\n            if ((!Character.isDigit(currentChar) && currentChar != ' ') || index == expression.length() - 1) {\n                if (previousOperator == '+') {\n                    valuesStack.push(currentNumber);\n                } else if (previousOperator == '-') {\n                    valuesStack.push(-currentNumber);\n                } else if (previousOperator == '*') {\n                    valuesStack.push(valuesStack.pop() * currentNumber);\n                } else if (previousOperator == '/') {\n                    valuesStack.push(valuesStack.pop() / currentNumber);\n                }\n                previousOperator = currentChar;\n                currentNumber = 0;\n            }\n        }\n\n        int result = 0;\n        while (!valuesStack.isEmpty()) {\n            result += valuesStack.pop();\n        }\n        return result;\n    }\n}"
     }
   },
   "228": {
