@@ -793,7 +793,7 @@
   },
   "157": {
     "solution": {
-      "interactive": ""
+      "interactive": "/**\n * The read4 API is defined in the parent class Reader4.\n *     int read4(char[] buffer4);\n */\n\npublic class Solution extends Reader4 {\n  /**\n   * @param buffer  Destination buffer\n   * @param charactersToRead Number of characters to read\n   * @return The number of actual characters read\n   */\n  public int read(char[] buffer, int charactersToRead) {\n    char[] tempBuffer = new char[4]; // Temporary buffer to store read characters\n    int tempIndex = 0;  // Index for tempBuffer\n    int tempSize = 0;   // Number of characters read into tempBuffer\n    int bufferIndex = 0; // Index for buffer\n\n    while (bufferIndex < charactersToRead) {\n      if (tempIndex == tempSize) {  // If all characters in tempBuffer are consumed\n        tempIndex = 0;              // Reset tempBuffer index\n        tempSize = read4(tempBuffer); // Read up to 4 characters from the file\n        if (tempSize == 0)           // If EOF is reached\n          return bufferIndex;\n      }\n      buffer[bufferIndex++] = tempBuffer[tempIndex++];\n    }\n\n    return bufferIndex;\n  }\n}"
     }
   },
   "158": {
