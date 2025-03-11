@@ -778,27 +778,7 @@
   },
   "154": {
     "solution": {
-      "array": "class Solution {
-    public int findMin(int[] nums) {
-        int left = 0;
-        int right = nums.length - 1;
-
-        while (left < right) {
-            int mid = left + (right - left) / 2;
-            
-            if (nums[mid] == nums[right]) {
-                right--; // Handle duplicates
-            } else if (nums[mid] < nums[right]) {
-                right = mid; // Minimum is in the left half
-            } else {
-                left = mid + 1; // Minimum is in the right half
-            }
-        }
-
-        return nums[left];
-    }
-}
-"
+      "array": "class Solution {\n    public int findMin(int[] nums) {\n        int left = 0;\n        int right = nums.length - 1;\n\n        while (left < right) {\n            int mid = left + (right - left) / 2;\n            \n            if (nums[mid] == nums[right]) {\n                right--; // Handle duplicates\n            } else if (nums[mid] < nums[right]) {\n                right = mid; // Minimum is in the left half\n            } else {\n                left = mid + 1; // Minimum is in the right half\n            }\n        }\n\n        return nums[left];\n    }\n}"
     }
   },
   "155": {
