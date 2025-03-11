@@ -1409,7 +1409,7 @@
   },
   "278": {
     "solution": {
-      "interactive": ""
+      "interactive": "/* The isBadVersion API is defined in the parent class VersionControl.\n      boolean isBadVersion(int version); */\n\npublic class Solution extends VersionControl {\n    public int firstBadVersion(int n) {\n        int left = 1, right = n;\n        \n        while (left < right) {\n            int mid = left + (right - left) / 2; // Avoids integer overflow\n            \n            if (isBadVersion(mid)) {\n                right = mid; // The first bad version is at mid or before\n            } else {\n                left = mid + 1; // The first bad version is after mid\n            }\n        }\n        \n        return left; // 'left' will point to the first bad version\n    }\n}"
     }
   },
   "279": {
