@@ -886,7 +886,7 @@
   },
   "175": {
     "solution": {
-      "database": ""
+      "database": "SELECT FirstName, LastName, City, State FROM Person LEFT JOIN Address ON Person.PersonId = Address.PersonId;"
     }
   },
   "176": {
