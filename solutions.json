@@ -1226,7 +1226,7 @@
   },
   "242": {
     "solution": {
-      "sorting": ""
+      "hash-table": "import java.util.*;\n\nclass Solution {\n    public boolean isAnagram(String s, String t) {\n        if (s.length() != t.length()) {\n            return false; // Anagrams must have the same length\n        }\n        \n        int[] charCount = new int[26]; // Array to store character counts\n\n        for (char ch : s.toCharArray()) {\n            charCount[ch - 'a']++; // Increment count for character in s\n        }\n\n        for (char ch : t.toCharArray()) {\n            charCount[ch - 'a']--; // Decrement count for character in t\n        }\n\n        for (int count : charCount) {\n            if (count != 0) {\n                return false; // If any count is nonzero, not an anagram\n            }\n        }\n\n        return true;\n    }\n}"
     }
   },
   "243": {
