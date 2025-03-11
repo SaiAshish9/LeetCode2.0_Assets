@@ -926,7 +926,7 @@
   },
   "183": {
     "solution": {
-      "database": ""
+      "database": "SELECT c2.Name AS Customers\nFROM Customers c2\nWHERE c2.Id \nNOT IN \n(SELECT o.CustomerId\nFROM Orders o);"
     }
   },
   "184": {
