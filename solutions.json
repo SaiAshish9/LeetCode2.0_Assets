@@ -1717,7 +1717,7 @@
   },
   "339": {
     "solution": {
-      "breadth-first-search": ""
+      "depth-first-search": "class Solution {\n    public int depthSum(List<NestedInteger> nestedList) {\n        return dfs(nestedList, 1);\n    }\n\n    private int dfs(List<NestedInteger> nestedList, int depth) {\n        int depthSum = 0;\n        for (NestedInteger item : nestedList) {\n            if (item.isInteger()) {\n                depthSum += item.getInteger() * depth;\n            } else {\n                depthSum += dfs(item.getList(), depth + 1);\n            }\n        }\n        return depthSum;\n    }\n}"
     }
   },
   "340": {
