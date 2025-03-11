@@ -840,7 +840,7 @@
   },
   "166": {
     "solution": {
-      "math": ""
+      "hash-table": "import java.util.*;\n\nclass Solution {\n    public String fractionToDecimal(int numerator, int denominator) {\n        if (numerator == 0) return \"0\";\n        \n        StringBuilder result = new StringBuilder();\n        \n        // Handle sign\n        if ((numerator < 0) ^ (denominator < 0)) {\n            result.append(\"-\");\n        }\n        \n        // Convert to long to handle overflow cases\n        long num = Math.abs((long) numerator);\n        long den = Math.abs((long) denominator);\n        \n        // Append integer part\n        result.append(num / den);\n        long remainder = num % den;\n        \n        if (remainder == 0) return result.toString();\n        \n        // Append decimal point\n        result.append(\".\");\n        \n        // Map to store remainder positions\n        Map<Long, Integer> remainderMap = new HashMap<>();\n        \n        while (remainder != 0) {\n            // If remainder is seen before, it means repeating fraction\n            if (remainderMap.containsKey(remainder)) {\n                result.insert(remainderMap.get(remainder), \"(\");\n                result.append(\")\");\n                break;\n            }\n            \n            // Store remainder with its index\n            remainderMap.put(remainder, result.length());\n            remainder *= 10;\n            result.append(remainder / den);\n            remainder %= den;\n        }\n        \n        return result.toString();\n    }\n}"
     }
   },
   "167": {
