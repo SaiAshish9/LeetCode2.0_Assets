@@ -1201,7 +1201,7 @@
   },
   "237": {
     "solution": {
-      "linked-list": ""
+      "linked-list": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode(int x) { val = x; }\n * }\n */\nclass Solution {\n    public void deleteNode(ListNode node) {\n        if (node == null || node.next == null) {\n            return; // Edge case: If it's the last node, deletion is not possible\n        }\n        \n        node.val = node.next.val; // Copy the value of the next node\n        node.next = node.next.next; // Delete the next node by skipping it\n    }\n}"
     }
   },
   "238": {
