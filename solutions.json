@@ -1281,7 +1281,7 @@
   },
   "253": {
     "solution": {
-      "two-pointers": ""
+      "two-pointers": "class Solution {\n    public int minMeetingRooms(int[][] intervals) {\n        int n = 1000010;\n        int[] delta = new int[n];\n        for (int[] e : intervals) {\n            ++delta[e[0]];\n            --delta[e[1]];\n        }\n        int res = delta[0];\n        for (int i = 1; i < n; ++i) {\n            delta[i] += delta[i - 1];\n            res = Math.max(res, delta[i]);\n        }\n        return res;\n    }\n}"
     }
   },
   "254": {
