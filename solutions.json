@@ -1611,7 +1611,7 @@
   },
   "318": {
     "solution": {
-      "bit-manipulation": ""
+      "bit-manipulation": "class Solution {\n    public int maxProduct(String[] words) {\n        int n = words.length;\n        int[] bitMasks = new int[n]; // Store bitmask representation of each word\n        int[] lengths = new int[n]; // Store word lengths\n\n        // Precompute bitmasks and lengths\n        for (int i = 0; i < n; i++) {\n            int mask = 0;\n            for (char ch : words[i].toCharArray()) {\n                mask |= (1 << (ch - 'a')); // Set bit for the character\n            }\n            bitMasks[i] = mask;\n            lengths[i] = words[i].length();\n        }\n\n        int maxProduct = 0;\n\n        // Compare every pair of words\n        for (int i = 0; i < n; i++) {\n            for (int j = i + 1; j < n; j++) {\n                if ((bitMasks[i] & bitMasks[j]) == 0) { // No common characters\n                    maxProduct = Math.max(maxProduct, lengths[i] * lengths[j]);\n                }\n            }\n        }\n        return maxProduct;\n    }\n}"
     }
   },
   "319": {
