@@ -1545,7 +1545,7 @@
   },
   "305": {
     "solution": {
-      "union-find": ""
+      "union-find": "class UnionFind {\n    private final int[] p;\n    private final int[] size;\n\n    public UnionFind(int n) {\n        p = new int[n];\n        size = new int[n];\n        for (int i = 0; i < n; ++i) {\n            p[i] = i;\n            size[i] = 1;\n        }\n    }\n\n    public int find(int x) {\n        if (p[x] != x) {\n            p[x] = find(p[x]);\n        }\n        return p[x];\n    }\n\n    public boolean union(int a, int b) {\n        int pa = find(a), pb = find(b);\n        if (pa == pb) {\n            return false;\n        }\n        if (size[pa] > size[pb]) {\n            p[pb] = pa;\n            size[pa] += size[pb];\n        } else {\n            p[pa] = pb;\n            size[pb] += size[pa];\n        }\n        return true;\n    }\n}\n\nclass Solution {\n    public List<Integer> numIslands2(int m, int n, int[][] positions) {\n        int[][] grid = new int[m][n];\n        UnionFind uf = new UnionFind(m * n);\n        int[] dirs = {-1, 0, 1, 0, -1};\n        int cnt = 0;\n        List<Integer> ans = new ArrayList<>();\n        for (var p : positions) {\n            int i = p[0], j = p[1];\n            if (grid[i][j] == 1) {\n                ans.add(cnt);\n                continue;\n            }\n            grid[i][j] = 1;\n            ++cnt;\n            for (int k = 0; k < 4; ++k) {\n                int x = i + dirs[k], y = j + dirs[k + 1];\n                if (x >= 0 && x < m && y >= 0 && y < n && grid[x][y] == 1\n                    && uf.union(i * n + j, x * n + y)) {\n                    --cnt;\n                }\n            }\n            ans.add(cnt);\n        }\n        return ans;\n    }\n}"
     }
   },
   "306": {
