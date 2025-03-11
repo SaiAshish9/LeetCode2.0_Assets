@@ -798,7 +798,7 @@
   },
   "158": {
     "solution": {
-      "interactive": ""
+      "interactive": "int read4(char *buffer4);\n\nclass Solution {\npublic:\n    /**\n     * @param buffer Destination buffer\n     * @param charactersToRead Number of characters to read\n     * @return The number of actual characters read\n     */\n    char leftoverBuffer[4] = { '\\0' };\n\n    int read(char *buffer, int charactersToRead) {\n        strcpy(buffer, leftoverBuffer);\n        int totalCharactersRead = strlen(leftoverBuffer);\n\n        while (totalCharactersRead < charactersToRead) {\n            int charactersRead = read4(buffer + totalCharactersRead);\n            if (charactersRead == 0) break; // End of file reached\n            totalCharactersRead += charactersRead;\n        }\n\n        if (totalCharactersRead > charactersToRead) {\n            memcpy(leftoverBuffer, buffer + charactersToRead, totalCharactersRead - charactersToRead);\n            leftoverBuffer[totalCharactersRead - charactersToRead] = '\\0';\n        } else {\n            leftoverBuffer[0] = '\\0';\n        }\n\n        totalCharactersRead = min(totalCharactersRead, charactersToRead);\n        return totalCharactersRead;\n    }\n};"
     }
   },
   "159": {
