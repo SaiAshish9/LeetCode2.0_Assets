@@ -1646,7 +1646,7 @@
   },
   "325": {
     "solution": {
-      "prefix-sum": ""
+      "prefix-sum": "class Solution {\n    public int maxSubArrayLen(int[] nums, int targetSum) {\n        Map<Long, Integer> prefixSumIndices = new HashMap<>();\n        prefixSumIndices.put(0L, -1); \n        \n        int maxLength = 0;\n        long currentSum = 0;\n\n        for (int index = 0; index < nums.length; ++index) {\n            currentSum += nums[index];\n\n            if (prefixSumIndices.containsKey(currentSum - targetSum)) {\n                maxLength = Math.max(maxLength, index - prefixSumIndices.get(currentSum - targetSum));\n            }\n\n            prefixSumIndices.putIfAbsent(currentSum, index);\n        }\n        return maxLength;\n    }\n}"
     }
   },
   "326": {
