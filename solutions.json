@@ -1099,7 +1099,7 @@
   },
   "217": {
     "solution": {
-      "sorting": ""
+      "hash-table": "import java.util.HashSet;\n\nclass Solution {\n    public boolean containsDuplicate(int[] numbers) {\n        HashSet<Integer> uniqueNumbers = new HashSet<>();\n        \n        for (int number : numbers) {\n            if (!uniqueNumbers.add(number)) {\n                return true; // Duplicate found\n            }\n        }\n        \n        return false; // No duplicates found\n    }\n}"
     }
   },
   "218": {
