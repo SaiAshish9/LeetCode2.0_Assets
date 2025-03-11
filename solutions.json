@@ -1621,7 +1621,7 @@
   },
   "320": {
     "solution": {
-      "backtracking": ""
+      "backtracking": "class Solution {\n    public List<String> generateAbbreviations(String word) {\n        int wordLength = word.length();\n        List<String> abbreviations = new ArrayList<>();\n\n        // Iterate through all possible bitmask representations\n        for (int bitmask = 0; bitmask < (1 << wordLength); ++bitmask) {\n            StringBuilder abbreviation = new StringBuilder();\n            int consecutiveOnesCount = 0;\n\n            for (int position = 0; position < wordLength; ++position) {\n                if ((bitmask >> position & 1) == 1) {\n                    // If the bit is set, increase count for abbreviation\n                    ++consecutiveOnesCount;\n                } else {\n                    // If transitioning from a sequence of ones, append the count\n                    if (consecutiveOnesCount > 0) {\n                        abbreviation.append(consecutiveOnesCount);\n                        consecutiveOnesCount = 0;\n                    }\n                    // Append the character from the original word\n                    abbreviation.append(word.charAt(position));\n                }\n            }\n\n            // Append any remaining abbreviation count at the end\n            if (consecutiveOnesCount > 0) {\n                abbreviation.append(consecutiveOnesCount);\n            }\n\n            abbreviations.add(abbreviation.toString());\n        }\n\n        return abbreviations;\n    }\n}"
     }
   },
   "321": {
