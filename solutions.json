@@ -906,7 +906,7 @@
   },
   "179": {
     "solution": {
-      "greedy": ""
+      "greedy": "import java.util.*;\n\nclass Solution {\n    public String largestNumber(int[] nums) {\n        String[] strNums = new String[nums.length];\n\n        // Convert numbers to strings\n        for (int i = 0; i < nums.length; i++) {\n            strNums[i] = String.valueOf(nums[i]);\n        }\n\n        // Sort using a custom comparator\n        Arrays.sort(strNums, (a, b) -> (b + a).compareTo(a + b));\n\n        // If the largest number is \"0\", return \"0\" (handles cases like [0, 0])\n        if (strNums[0].equals(\"0\")) {\n            return \"0\";\n        }\n\n        // Join sorted numbers to form the largest number\n        return String.join(\"\", strNums);\n    }\n}"
     }
   },
   "180": {
