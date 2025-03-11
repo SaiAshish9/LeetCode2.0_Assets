@@ -813,7 +813,7 @@
   },
   "161": {
     "solution": {
-      "two-pointers": ""
+      "two-pointers": "class Solution {\nprivate:\n    int computeEditDistance(string &longerString, string &shorterString) {\n        if (longerString.size() < shorterString.size()) \n            swap(longerString, shorterString);\n\n        int longerLength = longerString.size();\n        int shorterLength = shorterString.size();\n        vector<int> editDistanceDP(shorterLength + 1, 0);\n\n        for (int index = 1; index <= shorterLength; ++index) \n            editDistanceDP[index] = index;\n\n        for (int i = 1; i <= longerLength; ++i) {\n            int previousDiagonal = editDistanceDP[0];\n            editDistanceDP[0] = i;\n\n            for (int j = 1; j <= shorterLength; ++j) {\n                int temp = editDistanceDP[j];\n\n                if (longerString[i - 1] == shorterString[j - 1]) {\n                    editDistanceDP[j] = previousDiagonal;\n                } else {\n                    editDistanceDP[j] = min(previousDiagonal, min(editDistanceDP[j - 1], editDistanceDP[j])) + 1;\n                }\n\n                previousDiagonal = temp;\n            }\n        }\n        return editDistanceDP[shorterLength];\n    }\n\npublic:\n    bool isOneEditDistance(string firstString, string secondString) {\n        return computeEditDistance(firstString, secondString) == 1;\n    }\n};"
     }
   },
   "162": {
