@@ -1712,7 +1712,7 @@
   },
   "338": {
     "solution": {
-      "dynamic-programming": ""
+      "bit-manipulation": "class Solution {\n    public int[] countBits(int n) {\n        int[] bitCounts = new int[n + 1];\n\n        for (int i = 1; i <= n; i++) {\n            bitCounts[i] = bitCounts[i >> 1] + (i & 1);\n        }\n\n        return bitCounts;\n    }\n}"
     }
   },
   "339": {
