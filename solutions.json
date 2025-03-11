@@ -835,7 +835,7 @@
   },
   "165": {
     "solution": {
-      "two-pointers": ""
+      "two-pointers": "class Solution {\n    public int compareVersion(String version1, String version2) {\n        int length1 = version1.length(), length2 = version2.length();\n\n        for (int index1 = 0, index2 = 0; index1 < length1 || index2 < length2; ++index1, ++index2) {\n            int revision1 = 0, revision2 = 0;\n\n            // Extract numerical value of the current revision from version1\n            while (index1 < length1 && version1.charAt(index1) != '.') {\n                revision1 = revision1 * 10 + (version1.charAt(index1++) - '0');\n            }\n\n            // Extract numerical value of the current revision from version2\n            while (index2 < length2 && version2.charAt(index2) != '.') {\n                revision2 = revision2 * 10 + (version2.charAt(index2++) - '0');\n            }\n\n            // Compare the current revisions\n            if (revision1 != revision2) {\n                return revision1 < revision2 ? -1 : 1;\n            }\n        }\n        return 0;\n    }\n}"
     }
   },
   "166": {
