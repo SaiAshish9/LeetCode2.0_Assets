@@ -1266,7 +1266,7 @@
   },
   "250": {
     "solution": {
-      "tree": ""
+      "tree": "class Solution {\n    private int ans;\n\n    public int countUnivalSubtrees(TreeNode root) {\n        dfs(root);\n        return ans;\n    }\n\n    private boolean dfs(TreeNode root) {\n        if (root == null) {\n            return true;\n        }\n        boolean l = dfs(root.left);\n        boolean r = dfs(root.right);\n        if (!l || !r) {\n            return false;\n        }\n        int a = root.left == null ? root.val : root.left.val;\n        int b = root.right == null ? root.val : root.right.val;\n        if (a == b && b == root.val) {\n            ++ans;\n            return true;\n        }\n        return false;\n    }\n}"
     }
   },
   "251": {
