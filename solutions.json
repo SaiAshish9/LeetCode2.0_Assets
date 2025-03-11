@@ -1027,7 +1027,7 @@
   },
   "203": {
     "solution": {
-      "recursion": ""
+      "linked-list": "class Solution {\n    public ListNode removeElements(ListNode head, int targetValue) {\n        // Create a dummy node to handle edge cases like removing the head node\n        ListNode dummyNode = new ListNode(0);\n        dummyNode.next = head;\n        \n        ListNode currentNode = dummyNode;\n        \n        // Traverse the linked list\n        while (currentNode.next != null) {\n            if (currentNode.next.val == targetValue) {\n                currentNode.next = currentNode.next.next; // Remove the node\n            } else {\n                currentNode = currentNode.next; // Move to the next node\n            }\n        }\n        \n        return dummyNode.next; // Return the updated head\n    }\n}"
     }
   },
   "204": {
