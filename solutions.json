@@ -1348,7 +1348,7 @@
   },
   "266": {
     "solution": {
-      "bit-manipulation": ""
+      "bit-manipulation": "class Solution {\n    public boolean canPermutePalindrome(String s) {\n        int[] cnt = new int[26];\n        for (char c : s.toCharArray()) {\n            ++cnt[c - 'a'];\n        }\n        int odd = 0;\n        for (int x : cnt) {\n            odd += x & 1;\n        }\n        return odd < 2;\n    }\n}"
     }
   },
   "267": {
