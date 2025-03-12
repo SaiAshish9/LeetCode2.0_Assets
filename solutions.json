@@ -1785,7 +1785,7 @@
   },
   "352": {
     "solution": {
-      "ordered-set": ""
+      "ordered-set": "class SummaryRanges {\n    private TreeMap<Integer, int[]> map;\n\n    public SummaryRanges() {\n        map = new TreeMap<>();\n    }\n\n    public void addNum(int val) {\n        Integer l = map.floorKey(val);\n        Integer r = map.ceilingKey(val);\n        if (l != null && r != null && map.get(l)[1] + 1 == val && map.get(r)[0] - 1 == val) {\n            map.get(l)[1] = map.get(r)[1];\n            map.remove(r);\n        } else if (l != null && val <= map.get(l)[1] + 1) {\n            map.get(l)[1] = Math.max(val, map.get(l)[1]);\n        } else if (r != null && val >= map.get(r)[0] - 1) {\n            map.get(r)[0] = Math.min(val, map.get(r)[0]);\n        } else {\n            map.put(val, new int[] {val, val});\n        }\n    }\n\n    public int[][] getIntervals() {\n        int[][] res = new int[map.size()][2];\n        int i = 0;\n        for (int[] range : map.values()) {\n            res[i++] = range;\n        }\n        return res;\n    }\n}\n\n/**\n * Your SummaryRanges object will be instantiated and called as such:\n * SummaryRanges obj = new SummaryRanges();\n * obj.addNum(val);\n * int[][] param_2 = obj.getIntervals();\n */"
     }
   },
   "353": {
