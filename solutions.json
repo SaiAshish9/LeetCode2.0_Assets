@@ -2331,7 +2331,7 @@
   },
   "461": {
     "solution": {
-      "bit-manipulation": ""
+      "bit-manipulation": "class Solution {\n    public int hammingDistance(int x, int y) {\n        int xor = x ^ y; // XOR to find differing bits\n        int distance = 0;\n        \n        while (xor > 0) {\n            distance += xor & 1; // Count set bits\n            xor >>= 1; // Right shift to process next bit\n        }\n        \n        return distance;\n    }\n}"
     }
   },
   "462": {
