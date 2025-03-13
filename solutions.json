@@ -2221,7 +2221,7 @@
   },
   "439": {
     "solution": {
-      "stack": ""
+      "stack": "class Solution {\n    public String parseTernary(String expression) {\n        Deque<Character> stk = new ArrayDeque<>();\n        boolean cond = false;\n        for (int i = expression.length() - 1; i >= 0; --i) {\n            char c = expression.charAt(i);\n            if (c == ':') {\n                continue;\n            }\n            if (c == '?') {\n                cond = true;\n            } else {\n                if (cond) {\n                    if (c == 'T') {\n                        char x = stk.pop();\n                        stk.pop();\n                        stk.push(x);\n                    } else {\n                        stk.pop();\n                    }\n                    cond = false;\n                } else {\n                    stk.push(c);\n                }\n            }\n        }\n        return String.valueOf(stk.peek());\n    }\n}"
     }
   },
   "440": {
