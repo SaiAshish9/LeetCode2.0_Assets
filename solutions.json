@@ -2075,7 +2075,7 @@
   },
   "410": {
     "solution": {
-      "prefix-sum": ""
+      "prefix-sum": "class Solution {\n    public int splitArray(int[] nums, int m) {\n        int left = 0, right = 0;\n\n        for (int num : nums) {\n            left = Math.max(left, num); // The largest single element\n            right += num; // The sum of all elements\n        }\n\n        while (left < right) {\n            int mid = left + (right - left) / 2;\n            if (canSplit(nums, m, mid)) {\n                right = mid; // Try for a smaller maximum subarray sum\n            } else {\n                left = mid + 1; // Increase the allowed sum\n            }\n        }\n        return left;\n    }\n\n    private boolean canSplit(int[] nums, int m, int maxSum) {\n        int subarrays = 1, currentSum = 0;\n\n        for (int num : nums) {\n            if (currentSum + num > maxSum) {\n                subarrays++;\n                currentSum = num;\n                if (subarrays > m) return false;\n            } else {\n                currentSum += num;\n            }\n        }\n        return true;\n    }\n}"
     }
   },
   "411": {
