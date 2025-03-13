@@ -2206,7 +2206,7 @@
   },
   "436": {
     "solution": {
-      "sorting": ""
+      "hash-table": "import java.util.*;\n\nclass Solution {\n  public int[] findRightInterval(int[][] intervals) {\n    final int n = intervals.length;\n\n    int[] ans = new int[n];\n    NavigableMap<Integer, Integer> startToIndex = new TreeMap<>();\n\n    for (int i = 0; i < n; ++i)\n      startToIndex.put(intervals[i][0], i);\n\n    for (int i = 0; i < n; ++i) {\n      Map.Entry<Integer, Integer> entry = startToIndex.ceilingEntry(intervals[i][1]);\n      if (entry == null)\n        ans[i] = -1;\n      else\n        ans[i] = entry.getValue();\n    }\n\n    return ans;\n  }\n}"
     }
   },
   "437": {
