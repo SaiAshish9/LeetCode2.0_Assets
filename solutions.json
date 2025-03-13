@@ -2231,7 +2231,7 @@
   },
   "441": {
     "solution": {
-      "math": ""
+      "math": "class Solution {\n  public int arrangeCoins(long n) {\n    return (int) ((-1 + Math.sqrt(8 * n + 1)) / 2);\n  }\n}"
     }
   },
   "442": {
