@@ -1995,7 +1995,7 @@
   },
   "394": {
     "solution": {
-      "stack": ""
+      "stack": "import java.util.*;\n\nclass Solution {\n    public String decodeString(String s) {\n        Stack<Integer> countStack = new Stack<>();  // Stores repetition counts\n        Stack<StringBuilder> stringStack = new Stack<>();  // Stores previous substrings\n        StringBuilder currentStr = new StringBuilder();\n        int num = 0;  // Stores current number\n        \n        for (char ch : s.toCharArray()) {\n            if (Character.isDigit(ch)) {\n                num = num * 10 + (ch - '0');  // Build the full number\n            } else if (ch == '[') {\n                countStack.push(num);  // Push repetition count\n                stringStack.push(currentStr);  // Save current state\n                currentStr = new StringBuilder();  // Start new substring\n                num = 0;  // Reset number\n            } else if (ch == ']') {\n                int count = countStack.pop();  // Get repeat count\n                StringBuilder decodedStr = stringStack.pop();  // Get previous string\n                while (count-- > 0) {\n                    decodedStr.append(currentStr);  // Repeat the current string\n                }\n                currentStr = decodedStr;  // Update current string\n            } else {\n                currentStr.append(ch);  // Append normal characters\n            }\n        }\n        \n        return currentStr.toString();\n    }\n}"
     }
   },
   "395": {
