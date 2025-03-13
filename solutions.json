@@ -2401,7 +2401,7 @@
   },
   "475": {
     "solution": {
-      "two-pointers": ""
+      "two-pointers": "import java.util.Arrays;\n\nclass Solution {\n    public int findRadius(int[] houses, int[] heaters) {\n        Arrays.sort(houses);\n        Arrays.sort(heaters);\n        \n        int maxRadius = 0;\n        \n        for (int house : houses) {\n            int idx = Arrays.binarySearch(heaters, house);\n            \n            if (idx < 0) {\n                idx = -(idx + 1); // Find insertion point\n            }\n            \n            int leftDist = (idx > 0) ? house - heaters[idx - 1] : Integer.MAX_VALUE;\n            int rightDist = (idx < heaters.length) ? heaters[idx] - house : Integer.MAX_VALUE;\n            \n            int minDist = Math.min(leftDist, rightDist);\n            maxRadius = Math.max(maxRadius, minDist);\n        }\n        \n        return maxRadius;\n    }\n}\n"
     }
   },
   "476": {
