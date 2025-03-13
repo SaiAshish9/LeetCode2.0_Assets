@@ -2105,7 +2105,7 @@
   },
   "416": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "import java.util.*;\n\nclass Solution {\n    public boolean canPartition(int[] nums) {\n        int totalSum = 0;\n        for (int num : nums) {\n            totalSum += num;\n        }\n\n        // If the total sum is odd, we cannot split it into equal subsets\n        if (totalSum % 2 != 0) return false;\n\n        int target = totalSum / 2;\n        boolean[] dp = new boolean[target + 1];\n        dp[0] = true; // Base case: a subset with sum 0 is always possible\n\n        for (int num : nums) {\n            for (int sum = target; sum >= num; sum--) {\n                dp[sum] = dp[sum] || dp[sum - num];\n            }\n        }\n\n        return dp[target];\n    }\n}"
     }
   },
   "417": {
