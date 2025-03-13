@@ -2411,7 +2411,7 @@
   },
   "477": {
     "solution": {
-      "bit-manipulation": ""
+      "bit-manipulation": "class Solution {\n    public int totalHammingDistance(int[] nums) {\n        int totalDistance = 0;\n        int n = nums.length;\n        \n        for (int bitPosition = 0; bitPosition < 32; bitPosition++) {\n            int countOnes = 0;\n            \n            // Count how many numbers have a 1 at this bit position\n            for (int num : nums) {\n                countOnes += (num >> bitPosition) & 1;\n            }\n            \n            int countZeros = n - countOnes; // Remaining are zeros\n            totalDistance += countOnes * countZeros; // Contribution of this bit position\n        }\n        \n        return totalDistance;\n    }\n}\n"
     }
   },
   "478": {
