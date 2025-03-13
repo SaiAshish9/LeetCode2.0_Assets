@@ -1875,7 +1875,7 @@
   },
   "370": {
     "solution": {
-      "prefix-sum": ""
+      "prefix-sum": "class Solution {\n    public int[] getModifiedArray(int length, int[][] updates) {\n        int[] result = new int[length];\n\n        // Apply the difference array technique\n        for (var update : updates) {\n            int startIndex = update[0];\n            int endIndex = update[1];\n            int increment = update[2];\n\n            result[startIndex] += increment;\n            if (endIndex + 1 < length) {\n                result[endIndex + 1] -= increment;\n            }\n        }\n\n        // Compute the prefix sum to get the final modified array\n        for (int i = 1; i < length; i++) {\n            result[i] += result[i - 1];\n        }\n\n        return result;\n    }\n}"
     }
   },
   "371": {
