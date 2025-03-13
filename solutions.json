@@ -1905,7 +1905,7 @@
   },
   "376": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\n    public int wiggleMaxLength(int[] nums) {\n        if (nums.length < 2) return nums.length;\n\n        int up = 1, down = 1;\n        \n        for (int i = 1; i < nums.length; i++) {\n            if (nums[i] > nums[i - 1]) {\n                up = down + 1;\n            } else if (nums[i] < nums[i - 1]) {\n                down = up + 1;\n            }\n        }\n        \n        return Math.max(up, down);\n    }\n}"
     }
   },
   "377": {
