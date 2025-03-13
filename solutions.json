@@ -2010,7 +2010,7 @@
   },
   "397": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\n    public int integerReplacement(int n) {\n        int steps = 0;\n        long num = n; // Use long to handle Integer.MAX_VALUE\n\n        while (num > 1) {\n            if ((num & 1) == 0) { // Even case\n                num >>= 1;\n            } else if (num == 3 || (num & 2) == 0) { // Prefer decrement for n=3 or when (n+1) creates more 1s\n                num--;\n            } else {\n                num++;\n            }\n            steps++;\n        }\n\n        return steps;\n    }\n}"
     }
   },
   "398": {
