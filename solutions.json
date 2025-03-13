@@ -1985,7 +1985,7 @@
   },
   "392": {
     "solution": {
-      "two-pointers": ""
+      "two-pointers": "class Solution {\n    public boolean isSubsequence(String s, String t) {\n        int i = 0, j = 0;\n        while (i < s.length() && j < t.length()) {\n            if (s.charAt(i) == t.charAt(j)) {\n                i++;\n            }\n            j++;\n        }\n        return i == s.length();\n    }\n}"
     }
   },
   "393": {
