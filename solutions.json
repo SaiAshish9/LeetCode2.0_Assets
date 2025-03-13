@@ -1865,7 +1865,7 @@
   },
   "368": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "import java.util.*;\n\nclass Solution {\n    public List<Integer> largestDivisibleSubset(int[] nums) {\n        if (nums == null || nums.length == 0) return new ArrayList<>();\n\n        Arrays.sort(nums);\n        int n = nums.length;\n        int[] dp = new int[n]; // dp[i] stores the size of the largest subset ending at index i\n        int[] prev = new int[n]; // prev[i] stores the previous index in the subset\n        Arrays.fill(dp, 1);\n        Arrays.fill(prev, -1);\n\n        int maxSize = 1, maxIndex = 0;\n\n        // Build the DP table\n        for (int i = 1; i < n; i++) {\n            for (int j = 0; j < i; j++) {\n                if (nums[i] % nums[j] == 0 && dp[i] < dp[j] + 1) {\n                    dp[i] = dp[j] + 1;\n                    prev[i] = j;\n                }\n            }\n            if (dp[i] > maxSize) {\n                maxSize = dp[i];\n                maxIndex = i;\n            }\n        }\n\n        // Reconstruct the subset\n        List<Integer> result = new ArrayList<>();\n        while (maxIndex != -1) {\n            result.add(nums[maxIndex]);\n            maxIndex = prev[maxIndex];\n        }\n\n        Collections.reverse(result); // Since we traced back, we need to reverse the list\n        return result;\n    }\n}"
     }
   },
   "369": {
