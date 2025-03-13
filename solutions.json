@@ -1850,7 +1850,7 @@
   },
   "365": {
     "solution": {
-      "breadth-first-search": ""
+      "breadth-first-search": "class Solution {\n    public boolean canMeasureWater(int jug1Capacity, int jug2Capacity, int targetCapacity) {\n        if (targetCapacity > jug1Capacity + jug2Capacity) {\n            return false; // The total capacity is not enough to measure the target\n        }\n        return targetCapacity % gcd(jug1Capacity, jug2Capacity) == 0;\n    }\n\n    private int gcd(int a, int b) {\n        while (b != 0) {\n            int temp = b;\n            b = a % b;\n            a = temp;\n        }\n        return a;\n    }\n}"
     }
   },
   "366": {
