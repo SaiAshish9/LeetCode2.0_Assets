@@ -2386,7 +2386,7 @@
   },
   "472": {
     "solution": {
-      "dynamic-programming": ""
+      "depth-first-search": "import java.util.*;\n\nclass Solution {\n    public List<String> findAllConcatenatedWordsInADict(String[] words) {\n        List<String> result = new ArrayList<>();\n        Set<String> wordSet = new HashSet<>(Arrays.asList(words));\n        Map<String, Boolean> memo = new HashMap<>();\n\n        for (String word : words) {\n            if (canForm(word, wordSet, memo)) {\n                result.add(word);\n            }\n        }\n        return result;\n    }\n\n    private boolean canForm(String word, Set<String> wordSet, Map<String, Boolean> memo) {\n        if (memo.containsKey(word)) return memo.get(word);\n\n        for (int i = 1; i < word.length(); i++) {\n            String prefix = word.substring(0, i);\n            String suffix = word.substring(i);\n\n            if (wordSet.contains(prefix) && \n                (wordSet.contains(suffix) || canForm(suffix, wordSet, memo))) {\n                memo.put(word, true);\n                return true;\n            }\n        }\n\n        memo.put(word, false);\n        return false;\n    }\n}\n"
     }
   },
   "473": {
