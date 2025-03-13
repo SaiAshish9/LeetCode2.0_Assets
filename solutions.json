@@ -2371,7 +2371,7 @@
   },
   "469": {
     "solution": {
-      "geometry": ""
+      "geometry": "class Solution {\n    public boolean isConvex(List<List<Integer>> points) {\n        int n = points.size();\n        long pre = 0, cur = 0;\n        for (int i = 0; i < n; ++i) {\n            var p1 = points.get(i);\n            var p2 = points.get((i + 1) % n);\n            var p3 = points.get((i + 2) % n);\n            int x1 = p2.get(0) - p1.get(0);\n            int y1 = p2.get(1) - p1.get(1);\n            int x2 = p3.get(0) - p1.get(0);\n            int y2 = p3.get(1) - p1.get(1);\n            cur = x1 * y2 - x2 * y1;\n            if (cur != 0) {\n                if (cur * pre < 0) {\n                    return false;\n                }\n                pre = cur;\n            }\n        }\n        return true;\n    }\n}"
     }
   },
   "470": {
