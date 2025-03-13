@@ -2055,7 +2055,7 @@
   },
   "406": {
     "solution": {
-      "sorting": ""
+      "sorting": "class Solution {\n  public int[][] reconstructQueue(int[][] people) {\n    List<int[]> ans = new ArrayList<>();\n\n    Arrays.sort(people, (a, b) -> a[0] == b[0] ? a[1] - b[1] : b[0] - a[0]);\n\n    for (final int[] p : people)\n      ans.add(p[1], p);\n\n    return ans.toArray(new int[ans.size()][]);\n  }\n}"
     }
   },
   "407": {
