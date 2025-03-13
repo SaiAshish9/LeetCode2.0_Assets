@@ -1955,7 +1955,7 @@
   },
   "386": {
     "solution": {
-      "trie": ""
+      "trie": "class Solution {\n    public List<Integer> lexicalOrder(int n) {\n        List<Integer> result = new ArrayList<>(n);\n        int current = 1;\n        \n        for (int i = 0; i < n; i++) {\n            result.add(current);\n            if (current * 10 <= n) {\n                current *= 10;  // Go to next lexicographical level\n            } else {\n                while (current % 10 == 9 || current + 1 > n) {\n                    current /= 10;  // Backtrack\n                }\n                current++;  // Move to next number\n            }\n        }\n        return result;\n    }\n}"
     }
   },
   "387": {
