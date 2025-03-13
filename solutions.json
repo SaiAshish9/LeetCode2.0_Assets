@@ -2241,7 +2241,7 @@
   },
   "443": {
     "solution": {
-      "two-pointers": ""
+      "two-pointers": "class Solution {\n    public int compress(char[] chars) {\n        int write = 0, read = 0;\n        \n        while (read < chars.length) {\n            char currentChar = chars[read];\n            int count = 0;\n            \n            while (read < chars.length && chars[read] == currentChar) {\n                read++;\n                count++;\n            }\n            \n            chars[write++] = currentChar;\n            \n            if (count > 1) {\n                for (char c : Integer.toString(count).toCharArray()) {\n                    chars[write++] = c;\n                }\n            }\n        }\n        \n        return write;\n    }\n}"
     }
   },
   "444": {
