@@ -2502,7 +2502,7 @@
   },
   "495": {
     "solution": {
-      "array": ""
+      "array": "class Solution {\n    public int findPoisonedDuration(int[] timeSeries, int duration) {\n        if (timeSeries.length == 0) return 0;\n\n        int totalDuration = 0;\n        for (int i = 1; i < timeSeries.length; i++) {\n            totalDuration += Math.min(duration, timeSeries[i] - timeSeries[i - 1]);\n        }\n\n        return totalDuration + duration; // Add last attack's full duration\n    }\n}"
     }
   },
   "496": {
