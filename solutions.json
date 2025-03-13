@@ -2316,7 +2316,7 @@
   },
   "458": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\n public:\n  int poorPigs(int buckets, int minutesToDie, int minutesToTest) {\n    const int base = minutesToTest / minutesToDie + 1;\n    int ans = 0;\n    for (int x = 1; x < buckets; x *= base)\n      ++ans;\n    return ans;\n  }\n};"
     }
   },
   "459": {
