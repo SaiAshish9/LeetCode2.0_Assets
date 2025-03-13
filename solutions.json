@@ -2180,7 +2180,7 @@
   },
   "431": {
     "solution": {
-      "tree": ""
+      "tree": "class Codec {\n    // Encodes an n-ary tree to a binary tree.\n    public TreeNode encode(Node root) {\n        if (root == null) {\n            return null;\n        }\n        TreeNode node = new TreeNode(root.val);\n        if (root.children == null || root.children.isEmpty()) {\n            return node;\n        }\n        TreeNode left = encode(root.children.get(0));\n        node.left = left;\n        for (int i = 1; i < root.children.size(); i++) {\n            left.right = encode(root.children.get(i));\n            left = left.right;\n        }\n        return node;\n    }\n\n    // Decodes your binary tree to an n-ary tree.\n    public Node decode(TreeNode data) {\n        if (data == null) {\n            return null;\n        }\n        Node node = new Node(data.val, new ArrayList<>());\n        if (data.left == null) {\n            return node;\n        }\n        TreeNode left = data.left;\n        while (left != null) {\n            node.children.add(decode(left));\n            left = left.right;\n        }\n        return node;\n    }\n}\n\n// Your Codec object will be instantiated and called as such:\n// Codec codec = new Codec();\n// codec.decode(codec.encode(root));"
     }
   },
   "432": {
