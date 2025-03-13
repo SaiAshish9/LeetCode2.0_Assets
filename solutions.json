@@ -1890,7 +1890,7 @@
   },
   "373": {
     "solution": {
-      "heap-(priority-queue)": ""
+      "heap-(priority-queue)": "import java.util.*;\n\nclass Solution {\n    public List<List<Integer>> kSmallestPairs(int[] nums1, int[] nums2, int k) {\n        List<List<Integer>> result = new ArrayList<>();\n        if (nums1.length == 0 || nums2.length == 0 || k == 0) {\n            return result;\n        }\n\n        // Min-heap to store pairs (sum, index1, index2)\n        PriorityQueue<int[]> minHeap = new PriorityQueue<>(Comparator.comparingInt(a -> (nums1[a[0]] + nums2[a[1]])));\n\n        // Push first k pairs from nums1 with the first element of nums2\n        for (int i = 0; i < Math.min(k, nums1.length); i++) {\n            minHeap.offer(new int[]{i, 0}); // (index in nums1, index in nums2)\n        }\n\n        while (k > 0 && !minHeap.isEmpty()) {\n            int[] indices = minHeap.poll();\n            int i = indices[0], j = indices[1];\n\n            // Add the smallest pair to the result\n            result.add(Arrays.asList(nums1[i], nums2[j]));\n            k--;\n\n            // Push the next pair (i, j+1) into the heap if within bounds\n            if (j + 1 < nums2.length) {\n                minHeap.offer(new int[]{i, j + 1});\n            }\n        }\n\n        return result;\n    }\n}"
     }
   },
   "374": {
