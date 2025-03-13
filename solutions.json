@@ -2261,7 +2261,7 @@
   },
   "447": {
     "solution": {
-      "math": ""
+      "hash-table": "class Solution {\n    public int numberOfBoomerangs(int[][] points) {\n        int count = 0;\n        for (int[] p : points) {\n            Map<Integer, Integer> distanceMap = new HashMap<>();\n            for (int[] q : points) {\n                int dx = p[0] - q[0];\n                int dy = p[1] - q[1];\n                int distance = dx * dx + dy * dy;\n                distanceMap.put(distance, distanceMap.getOrDefault(distance, 0) + 1);\n            }\n            for (int freq : distanceMap.values()) {\n                count += freq * (freq - 1); // Permutations: P(n, 2) = n * (n - 1)\n            }\n        }\n        return count;\n    }\n}"
     }
   },
   "448": {
