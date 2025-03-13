@@ -2191,7 +2191,7 @@
   },
   "433": {
     "solution": {
-      "breadth-first-search": ""
+      "breadth-first-search": "import java.util.*;\n\nclass Solution {\n    public int minMutation(String start, String end, String[] bank) {\n        Set<String> validMutations = new HashSet<>(Arrays.asList(bank));\n        if (!validMutations.contains(end)) {\n            return -1; // If the end mutation is not in the bank, return -1\n        }\n\n        char[] genes = {'A', 'C', 'G', 'T'};\n        Queue<String> queue = new LinkedList<>();\n        queue.offer(start);\n        int level = 0;\n\n        while (!queue.isEmpty()) {\n            int size = queue.size();\n            for (int i = 0; i < size; i++) {\n                String current = queue.poll();\n                if (current.equals(end)) {\n                    return level;\n                }\n\n                char[] currArray = current.toCharArray();\n                for (int j = 0; j < currArray.length; j++) {\n                    char originalChar = currArray[j];\n                    for (char gene : genes) {\n                        if (gene == originalChar) continue;\n\n                        currArray[j] = gene;\n                        String newMutation = new String(currArray);\n                        if (validMutations.contains(newMutation)) {\n                            queue.offer(newMutation);\n                            validMutations.remove(newMutation); // Mark as visited\n                        }\n                    }\n                    currArray[j] = originalChar; // Restore original character\n                }\n            }\n            level++;\n        }\n        return -1; // No mutation path found\n    }\n}"
     }
   },
   "434": {
