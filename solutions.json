@@ -2120,7 +2120,7 @@
   },
   "419": {
     "solution": {
-      "matrix": ""
+      "matrix": "class Solution {\n    public int countBattleships(char[][] board) {\n        int rows = board.length, cols = board[0].length;\n        int battleships = 0;\n        \n        for (int r = 0; r < rows; r++) {\n            for (int c = 0; c < cols; c++) {\n                // A battleship is only counted if it's the top-left part of a new ship\n                if (board[r][c] == 'X' \n                    && (r == 0 || board[r - 1][c] != 'X') \n                    && (c == 0 || board[r][c - 1] != 'X')) {\n                    battleships++;\n                }\n            }\n        }\n        \n        return battleships;\n    }\n}"
     }
   },
   "420": {
