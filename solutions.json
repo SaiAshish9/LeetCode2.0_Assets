@@ -1970,7 +1970,7 @@
   },
   "389": {
     "solution": {
-      "bit-manipulation": ""
+      "bit-manipulation": "class Solution {\n    public char findTheDifference(String s, String t) {\n        int result = 0;\n        for (char c : s.toCharArray()) {\n            result ^= c;\n        }\n        for (char c : t.toCharArray()) {\n            result ^= c;\n        }\n        return (char) result;\n    }\n}"
     }
   },
   "390": {
