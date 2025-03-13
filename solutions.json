@@ -2431,7 +2431,7 @@
   },
   "481": {
     "solution": {
-      "two-pointers": ""
+      "two-pointers": "class Solution {\n    public int magicalString(int n) {\n        if (n == 0) return 0;\n        if (n <= 3) return 1; // \"122\" has one '1'\n\n        List<Integer> magicString = new ArrayList<>();\n        magicString.add(1);\n        magicString.add(2);\n        magicString.add(2);\n        \n        int index = 2;  // Points to the number determining the next repetition\n        int nextNum = 1; // Next number to be added (alternating between 1 and 2)\n        int onesCount = 1; // Initial count (since \"1\" appears once in \"122\")\n        \n        while (magicString.size() < n) {\n            int repeat = magicString.get(index); // Number of times to add `nextNum`\n            for (int i = 0; i < repeat && magicString.size() < n; i++) {\n                magicString.add(nextNum);\n                if (nextNum == 1) {\n                    onesCount++; // Count '1's as we add them\n                }\n            }\n            nextNum = (nextNum == 1) ? 2 : 1; // Alternate between 1 and 2\n            index++; // Move to the next determining number\n        }\n\n        return onesCount;\n    }\n}\n"
     }
   },
   "482": {
