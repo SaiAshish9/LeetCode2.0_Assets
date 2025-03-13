@@ -2351,7 +2351,7 @@
   },
   "465": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "import java.util.*;\n\nclass Solution {\n    public int minTransfers(int[][] transactions) {\n        int[] balance = new int[12];\n        \n        // Calculate net balance for each person\n        for (var transaction : transactions) {\n            balance[transaction[0]] -= transaction[2];\n            balance[transaction[1]] += transaction[2];\n        }\n        \n        List<Integer> nonZeroBalances = new ArrayList<>();\n        for (int amount : balance) {\n            if (amount != 0) {\n                nonZeroBalances.add(amount);\n            }\n        }\n        \n        int numPeople = nonZeroBalances.size();\n        int[] dp = new int[1 << numPeople];\n        Arrays.fill(dp, Integer.MAX_VALUE / 2);\n        dp[0] = 0;\n        \n        for (int mask = 1; mask < (1 << numPeople); ++mask) {\n            int sum = 0;\n            for (int j = 0; j < numPeople; ++j) {\n                if ((mask & (1 << j)) != 0) {\n                    sum += nonZeroBalances.get(j);\n                }\n            }\n            \n            if (sum == 0) {\n                dp[mask] = Integer.bitCount(mask) - 1;\n                for (int subset = (mask - 1) & mask; subset > 0; subset = (subset - 1) & mask) {\n                    dp[mask] = Math.min(dp[mask], dp[subset] + dp[mask ^ subset]);\n                }\n            }\n        }\n        \n        return dp[(1 << numPeople) - 1];\n    }\n}"
     }
   },
   "466": {
