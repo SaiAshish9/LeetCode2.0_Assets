@@ -1845,7 +1845,7 @@
   },
   "364": {
     "solution": {
-      "stack": ""
+      "stack": "class Solution {\n    public int depthSumInverse(List<NestedInteger> nestedList) {\n        int depth = maxDepth(nestedList);\n        return dfs(nestedList, depth);\n    }\n\n    private int maxDepth(List<NestedInteger> nestedList) {\n        int depth = 1;\n        for (NestedInteger item : nestedList) {\n            if (item.isInteger()) {\n                continue;\n            }\n            depth = Math.max(depth, 1 + maxDepth(item.getList()));\n        }\n        return depth;\n    }\n\n    private int dfs(List<NestedInteger> nestedList, int depth) {\n        int depthSum = 0;\n        for (NestedInteger item : nestedList) {\n            if (item.isInteger()) {\n                depthSum += item.getInteger() * depth;\n            } else {\n                depthSum += dfs(item.getList(), depth - 1);\n            }\n        }\n        return depthSum;\n    }\n}"
     }
   },
   "365": {
