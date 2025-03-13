@@ -2356,7 +2356,7 @@
   },
   "466": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\n    public int getMaxRepetitions(String s1, int n1, String s2, int n2) {\n        if (n1 == 0) return 0;\n\n        int lengthS1 = s1.length(), lengthS2 = s2.length();\n        int[] repeatCount = new int[lengthS2 + 1];\n        int[] nextIndex = new int[lengthS2 + 1];\n\n        int indexS2 = 0, countS1 = 0, countS2 = 0;\n\n        while (countS1 < n1) {\n            countS1++;\n            for (int i = 0; i < lengthS1; i++) {\n                if (s1.charAt(i) == s2.charAt(indexS2)) {\n                    indexS2++;\n                    if (indexS2 == lengthS2) {\n                        countS2++;\n                        indexS2 = 0;\n                    }\n                }\n            }\n            repeatCount[countS1] = countS2;\n            nextIndex[countS1] = indexS2;\n\n            for (int prev = 0; prev < countS1; prev++) {\n                if (nextIndex[prev] == indexS2) {\n                    int cycleLength = countS1 - prev;\n                    int cycleCountS2 = countS2 - repeatCount[prev];\n\n                    int fullCycles = (n1 - prev) / cycleLength;\n                    int remainingS1 = (n1 - prev) % cycleLength;\n\n                    return (repeatCount[prev] + fullCycles * cycleCountS2 + repeatCount[prev + remainingS1]) / n2;\n                }\n            }\n        }\n        return repeatCount[n1] / n2;\n    }\n}"
     }
   },
   "467": {
