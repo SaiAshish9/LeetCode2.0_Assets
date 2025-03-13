@@ -1885,7 +1885,7 @@
   },
   "372": {
     "solution": {
-      "divide-and-conquer": ""
+      "divide-and-conquer": "class Solution {\n    private static final int MODULO = 1337;\n\n    public int superPow(int base, int[] exponent) {\n        base %= MODULO; // Reduce base within the modulo range\n        return powerMod(base, exponent, exponent.length);\n    }\n\n    private int powerMod(int base, int[] exponent, int length) {\n        if (length == 0) {\n            return 1; // Base case: any number to the power of 0 is 1\n        }\n\n        // Compute powerMod(base, exponent[0..n-2])\n        int partialResult = powerMod(base, exponent, length - 1);\n\n        // Current digit as an exponent\n        int lastDigit = exponent[length - 1];\n\n        // Compute (partialResult^10 * base^lastDigit) % MODULO\n        return (modularExponentiation(partialResult, 10) * modularExponentiation(base, lastDigit)) % MODULO;\n    }\n\n    private int modularExponentiation(int base, int exponent) {\n        int result = 1;\n        base %= MODULO;\n        while (exponent > 0) {\n            if (exponent % 2 == 1) { // If exponent is odd, multiply base\n                result = (result * base) % MODULO;\n            }\n            base = (base * base) % MODULO; // Square base\n            exponent /= 2;\n        }\n        return result;\n    }\n}"
     }
   },
   "373": {
