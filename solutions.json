@@ -2471,7 +2471,7 @@
   },
   "489": {
     "solution": {
-      "interactive": ""
+      "interactive": "class Solution {\n    private int[] dirs = {-1, 0, 1, 0, -1};\n    private Set<List<Integer>> vis = new HashSet<>();\n    private Robot robot;\n\n    public void cleanRoom(Robot robot) {\n        this.robot = robot;\n        dfs(0, 0, 0);\n    }\n\n    private void dfs(int i, int j, int d) {\n        robot.clean();\n        vis.add(List.of(i, j));\n        for (int k = 0; k < 4; ++k) {\n            int nd = (d + k) % 4;\n            int x = i + dirs[nd], y = j + dirs[nd + 1];\n            if (!vis.contains(List.of(x, y)) && robot.move()) {\n                dfs(x, y, nd);\n                robot.turnRight();\n                robot.turnRight();\n                robot.move();\n                robot.turnRight();\n                robot.turnRight();\n            }\n            robot.turnRight();\n        }\n    }\n}"
     }
   },
   "490": {
