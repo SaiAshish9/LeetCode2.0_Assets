@@ -2130,7 +2130,7 @@
   },
   "421": {
     "solution": {
-      "trie": ""
+      "bit-manipulation": "import java.util.HashSet;\n\nclass Solution {\n    public int findMaximumXOR(int[] nums) {\n        int maxXor = 0, mask = 0;\n        \n        for (int i = 31; i >= 0; i--) {\n            mask |= (1 << i);\n            HashSet<Integer> prefixes = new HashSet<>();\n            \n            for (int num : nums) {\n                prefixes.add(num & mask);\n            }\n            \n            int potentialMax = maxXor | (1 << i);\n            \n            for (int prefix : prefixes) {\n                if (prefixes.contains(prefix ^ potentialMax)) {\n                    maxXor = potentialMax;\n                    break;\n                }\n            }\n        }\n        \n        return maxXor;\n    }\n}"
     }
   },
   "422": {
