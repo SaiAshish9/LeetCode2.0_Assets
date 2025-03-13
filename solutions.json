@@ -2256,7 +2256,7 @@
   },
   "446": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "import java.util.HashMap;\nimport java.util.Map;\n\nclass Solution {\n    public int numberOfArithmeticSlices(int[] nums) {\n        int n = nums.length;\n        int totalCount = 0;\n        \n        // Array of HashMaps to store count of subsequences ending at each index\n        Map<Long, Integer>[] dp = new HashMap[n];\n        \n        for (int i = 0; i < n; i++) {\n            dp[i] = new HashMap<>();\n            \n            for (int j = 0; j < i; j++) {\n                long diff = (long) nums[i] - nums[j]; // Compute difference\n                \n                // Get existing count of sequences with this difference at index j\n                int countAtJ = dp[j].getOrDefault(diff, 0);\n                \n                // Update the count at index i\n                dp[i].put(diff, dp[i].getOrDefault(diff, 0) + countAtJ + 1);\n                \n                // Only count subsequences of length ≥ 3 (not pairs)\n                totalCount += countAtJ;\n            }\n        }\n        \n        return totalCount;\n    }\n}"
     }
   },
   "447": {
