@@ -2030,7 +2030,7 @@
   },
   "401": {
     "solution": {
-      "backtracking": ""
+      "backtracking": "import java.util.*;\n\nclass Solution {\n    public List<String> readBinaryWatch(int turnedOn) {\n        List<String> result = new ArrayList<>();\n\n        for (int hour = 0; hour < 12; hour++) {\n            for (int minute = 0; minute < 60; minute++) {\n                if (Integer.bitCount(hour) + Integer.bitCount(minute) == turnedOn) {\n                    result.add(String.format(\"%d:%02d\", hour, minute));\n                }\n            }\n        }\n        return result;\n    }\n}"
     }
   },
   "402": {
