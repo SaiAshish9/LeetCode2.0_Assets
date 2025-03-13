@@ -1870,7 +1870,7 @@
   },
   "369": {
     "solution": {
-      "linked-list": ""
+      "linked-list": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode plusOne(ListNode head) {\n        ListNode dummy = new ListNode(0, head);\n        ListNode target = dummy;\n        while (head != null) {\n            if (head.val != 9) {\n                target = head;\n            }\n            head = head.next;\n        }\n        ++target.val;\n        target = target.next;\n        while (target != null) {\n            target.val = 0;\n            target = target.next;\n        }\n        return dummy.val == 1 ? dummy : dummy.next;\n    }\n}"
     }
   },
   "370": {
