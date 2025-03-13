@@ -2381,7 +2381,7 @@
   },
   "471": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\n    private String inputString;\n    private String[][] encodedResults;\n\n    public String encode(String s) {\n        this.inputString = s;\n        int stringLength = s.length();\n        encodedResults = new String[stringLength][stringLength];\n\n        for (int start = stringLength - 1; start >= 0; --start) {\n            for (int end = start; end < stringLength; ++end) {\n                encodedResults[start][end] = encodeSubstring(start, end);\n\n                if (end - start + 1 > 4) {\n                    for (int mid = start; mid < end; ++mid) {\n                        String splitEncoded = encodedResults[start][mid] + encodedResults[mid + 1][end];\n                        if (encodedResults[start][end].length() > splitEncoded.length()) {\n                            encodedResults[start][end] = splitEncoded;\n                        }\n                    }\n                }\n            }\n        }\n        return encodedResults[0][stringLength - 1];\n    }\n\n    private String encodeSubstring(int start, int end) {\n        String substring = inputString.substring(start, end + 1);\n        if (substring.length() < 5) {\n            return substring;\n        }\n\n        int repeatIndex = (substring + substring).indexOf(substring, 1);\n        if (repeatIndex < substring.length()) {\n            int repeatCount = substring.length() / repeatIndex;\n            return String.format(\"%d[%s]\", repeatCount, encodedResults[start][start + repeatIndex - 1]);\n        }\n        return substring;\n    }\n}\n"
     }
   },
   "472": {
