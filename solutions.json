@@ -2226,7 +2226,7 @@
   },
   "440": {
     "solution": {
-      "trie": ""
+      "trie": "class Solution {\n    public int findKthNumber(int n, int k) {\n        int curr = 1;\n        k--;\n        while (k > 0) {\n            long step = countSteps(n, curr, curr + 1);\n            if (step <= k) {\n                k -= step;\n                curr++;\n            } else {\n                curr *= 10;\n                k--;\n            }\n        }\n        return curr;\n    }\n\n    private long countSteps(int n, long curr, long next) {\n        long steps = 0;\n        while (curr <= n) {\n            steps += Math.min(n + 1, next) - curr;\n            curr *= 10;\n            next *= 10;\n        }\n        return steps;\n    }\n}"
     }
   },
   "441": {
