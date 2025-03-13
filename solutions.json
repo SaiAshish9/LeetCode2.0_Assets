@@ -2296,7 +2296,7 @@
   },
   "454": {
     "solution": {
-      "hash-table": ""
+      "hash-table": "class Solution {\n  public int fourSumCount(int[] nums1, int[] nums2, int[] nums3, int[] nums4) {\n    int ans = 0;\n    Map<Integer, Integer> count = new HashMap<>();\n\n    for (final int a : nums1)\n      for (final int b : nums2)\n        count.merge(a + b, 1, Integer::sum);\n\n    for (final int c : nums3)\n      for (final int d : nums4)\n        if (count.containsKey(-c - d))\n          ans += count.get(-c - d);\n\n    return ans;\n  }\n}"
     }
   },
   "455": {
