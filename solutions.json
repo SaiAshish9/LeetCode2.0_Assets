@@ -2090,7 +2090,7 @@
   },
   "413": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\n    public int numberOfArithmeticSlices(int[] nums) {\n        if (nums.length < 3) return 0;\n\n        int totalSlices = 0;\n        int currentSlices = 0; // dp[i], number of slices ending at index i\n\n        for (int i = 2; i < nums.length; i++) {\n            if (nums[i] - nums[i - 1] == nums[i - 1] - nums[i - 2]) {\n                currentSlices += 1;  // Extend the previous slices\n                totalSlices += currentSlices;  // Add to the result\n            } else {\n                currentSlices = 0; // Reset count if the sequence is broken\n            }\n        }\n        return totalSlices;\n    }\n}"
     }
   },
   "414": {
