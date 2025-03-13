@@ -2065,7 +2065,7 @@
   },
   "408": {
     "solution": {
-      "two-pointers": ""
+      "two-pointers": "class Solution {\n    public boolean validWordAbbreviation(String word, String abbreviation) {\n        int wordLength = word.length(), abbrLength = abbreviation.length();\n        int wordIndex = 0, abbrIndex = 0, numValue = 0;\n\n        for (; wordIndex < wordLength && abbrIndex < abbrLength; ++abbrIndex) {\n            char currentChar = abbreviation.charAt(abbrIndex);\n\n            if (Character.isDigit(currentChar)) {\n                if (currentChar == '0' && numValue == 0) {\n                    return false; // Leading zeros are not allowed in abbreviations\n                }\n                numValue = numValue * 10 + (currentChar - '0');\n            } else {\n                wordIndex += numValue;\n                numValue = 0;\n                if (wordIndex >= wordLength || word.charAt(wordIndex) != currentChar) {\n                    return false;\n                }\n                ++wordIndex;\n            }\n        }\n        return wordIndex + numValue == wordLength && abbrIndex == abbrLength;\n    }\n}"
     }
   },
   "409": {
