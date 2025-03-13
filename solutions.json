@@ -2201,7 +2201,7 @@
   },
   "435": {
     "solution": {
-      "dynamic-programming": ""
+      "greedy": "import java.util.Arrays;\n\nclass Solution {\n    public int eraseOverlapIntervals(int[][] intervals) {\n        if (intervals.length == 0)\n            return 0;\n        \n        Arrays.sort(intervals, (a, b) -> Integer.compare(a[1], b[1]));\n        int end = intervals[0][1];\n        int count = 0;\n        \n        for (int i = 1; i < intervals.length; i++) {\n            if (intervals[i][0] < end) {\n                count++;\n            } else {\n                end = intervals[i][1];\n            }\n        }\n        \n        return count;\n    }\n}"
     }
   },
   "436": {
