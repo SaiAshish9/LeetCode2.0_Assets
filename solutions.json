@@ -2050,7 +2050,7 @@
   },
   "405": {
     "solution": {
-      "bit-manipulation": ""
+      "bit-manipulation": "class Solution {\n    public String toHex(int num) {\n        if (num == 0) return \"0\";\n\n        StringBuilder hex = new StringBuilder();\n        char[] hexMap = \"0123456789abcdef\".toCharArray();\n\n        while (num != 0 && hex.length() < 8) { // Process up to 8 hex digits\n            hex.append(hexMap[num & 15]);  // Get last 4 bits as hex\n            num >>>= 4;  // Unsigned right shift\n        }\n\n        return hex.reverse().toString();\n    }\n}"
     }
   },
   "406": {
