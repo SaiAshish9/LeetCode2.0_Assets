@@ -2481,7 +2481,7 @@
   },
   "491": {
     "solution": {
-      "backtracking": ""
+      "backtracking": "class Solution {\n    public List<List<Integer>> findSubsequences(int[] nums) {\n        List<List<Integer>> result = new ArrayList<>();\n        backtrack(result, new ArrayList<>(), nums, 0);\n        return result;\n    }\n\n    private void backtrack(List<List<Integer>> result, List<Integer> sequence, int[] nums, int index) {\n        if (sequence.size() >= 2) {\n            result.add(new ArrayList<>(sequence)); // Store valid sequence\n        }\n        Set<Integer> used = new HashSet<>(); // Avoid duplicates at this level\n        \n        for (int i = index; i < nums.length; i++) {\n            if (!sequence.isEmpty() && nums[i] < sequence.get(sequence.size() - 1)) {\n                continue; // Maintain non-decreasing order\n            }\n            if (used.contains(nums[i])) {\n                continue; // Skip duplicates\n            }\n            used.add(nums[i]);\n            sequence.add(nums[i]);\n            backtrack(result, sequence, nums, i + 1);\n            sequence.remove(sequence.size() - 1); // Undo choice\n        }\n    }\n}"
     }
   },
   "492": {
