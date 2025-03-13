@@ -2236,7 +2236,7 @@
   },
   "442": {
     "solution": {
-      "hash-table": ""
+      "hash-table": "import java.util.ArrayList;\nimport java.util.List;\n\nclass Solution {\n    public List<Integer> findDuplicates(int[] nums) {\n        List<Integer> ans = new ArrayList<>();\n\n        for (final int num : nums) {\n            nums[Math.abs(num) - 1] *= -1;\n            if (nums[Math.abs(num) - 1] > 0)\n                ans.add(Math.abs(num));\n        }\n\n        return ans;\n    }\n}"
     }
   },
   "443": {
