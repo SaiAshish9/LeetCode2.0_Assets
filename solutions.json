@@ -2361,7 +2361,7 @@
   },
   "467": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\n    public int findSubstringInWraproundString(String input) {\n        int[] maxSubstringLengths = new int[26]; // Stores max length of substrings ending at each letter\n        int currentLength = 0; // Length of the current valid substring sequence\n\n        for (int index = 0; index < input.length(); ++index) {\n            char currentChar = input.charAt(index);\n\n            // Check if current character continues the cyclic sequence\n            if (index > 0 && (currentChar - input.charAt(index - 1) + 26) % 26 == 1) {\n                ++currentLength;\n            } else {\n                currentLength = 1;\n            }\n\n            int charIndex = currentChar - 'a';\n            maxSubstringLengths[charIndex] = Math.max(maxSubstringLengths[charIndex], currentLength);\n        }\n\n        int totalSubstrings = 0;\n        for (int length : maxSubstringLengths) {\n            totalSubstrings += length;\n        }\n        return totalSubstrings;\n    }\n}"
     }
   },
   "468": {
