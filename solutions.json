@@ -2070,7 +2070,7 @@
   },
   "409": {
     "solution": {
-      "greedy": ""
+      "greedy": "class Solution {\n    public int longestPalindrome(String s) {\n        int[] charCount = new int[128]; // Covers all ASCII characters\n        int palindromeLength = 0;\n\n        for (char ch : s.toCharArray()) {\n            charCount[ch]++;\n            if (charCount[ch] % 2 == 0) {\n                palindromeLength += 2;\n            }\n        }\n\n        return palindromeLength + (palindromeLength < s.length() ? 1 : 0);\n    }\n}"
     }
   },
   "410": {
