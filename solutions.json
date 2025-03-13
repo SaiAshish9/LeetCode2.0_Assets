@@ -2336,7 +2336,7 @@
   },
   "462": {
     "solution": {
-      "sorting": ""
+      "sorting": "import java.util.*;\n\nclass Solution {\n    public int minMoves2(int[] nums) {\n        int length = nums.length;\n        int median = quickSelect(nums, 0, length - 1, (length + 1) / 2);\n        int totalMoves = 0;\n        \n        for (int num : nums) {\n            totalMoves += Math.abs(num - median);\n        }\n        \n        return totalMoves;\n    }\n\n    private int quickSelect(int[] nums, int left, int right, int k) {\n        int randomIndex = new Random().nextInt(right - left + 1) + left;\n        swap(nums, randomIndex, right);\n        int pivot = nums[right];\n\n        int swapIndex = left;\n        for (int i = left; i < right; ++i) {\n            if (nums[i] <= pivot) {\n                swap(nums, swapIndex++, i);\n            }\n        }\n        swap(nums, swapIndex, right);\n\n        int count = swapIndex - left + 1;\n        if (count == k) {\n            return nums[swapIndex];\n        }\n        if (count > k) {\n            return quickSelect(nums, left, swapIndex - 1, k);\n        }\n        return quickSelect(nums, swapIndex + 1, right, k - count);\n    }\n\n    private void swap(int[] nums, int i, int j) {\n        int temp = nums[i];\n        nums[i] = nums[j];\n        nums[j] = temp;\n    }\n}"
     }
   },
   "463": {
