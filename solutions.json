@@ -11,7 +11,7 @@
   },
   "3": {
     "solution": {
-      "sliding-window": "public class Solution {\n    public int lengthOfLongestSubstring(String s) {\n        int[] charIndex = new int[128]; \n        int left = 0, right = 0;\n        int maxLength = 0;\n\n        while (right < s.length()) {\n            char right = s.charAt(right);\n            left = Math.max(charIndex[right], left);\n            maxLength = Math.max(maxLength, right - left + 1);\n            charIndex[right] = right + 1;\n            right++;\n        }\n\n        return maxLength;\n    }\n\n    public static void main(String[] args) {\n        Solution sol = new Solution();\n        String input = \"abcabcbb\";\n        int result = sol.lengthOfLongestSubstring(input);\n        System.out.println(\"Length of Longest Substring Without Repeating Characters: \" + result);\n    }\n}"
+      "sliding-window": "public class Solution {\n    public int lengthOfLongestSubstring(String s) {\n        int[] charIndex = new int[128]; \n        int left = 0, right = 0, maxLength = 0;\n        int n = s.length();\n\n        while (right < n) {\n            char currentChar = s.charAt(right);\n            left = Math.max(charIndex[currentChar], left);\n            maxLength = Math.max(maxLength, right - left + 1);\n            charIndex[currentChar] = right + 1;\n            right++;\n        }\n\n        return maxLength;\n    }\n}"
     }
   },
   "4": {
