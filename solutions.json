@@ -3692,7 +3692,7 @@
   },
   "732": {
     "solution": {
-      "prefix-sum": ""
+      "segment-tree": "class MyCalendarThree {\n\n    class Node {\n        int start, end, max, lazy;\n        Node left, right;\n        Node(int start, int end) {\n            this.start = start;\n            this.end = end;\n            this.max = 0;\n            this.lazy = 0;\n        }\n\n        private void push() {\n            if (left == null) {\n                int mid = start + (end - start) / 2;\n                left = new Node(start, mid);\n                right = new Node(mid + 1, end);\n            }\n            if (lazy != 0) {\n                left.max += lazy;\n                left.lazy += lazy;\n                right.max += lazy;\n                right.lazy += lazy;\n                lazy = 0;\n            }\n        }\n\n        public void update(int l, int r) {\n            if (r < start || end < l) return;\n            if (l <= start && end <= r) {\n                max++;\n                lazy++;\n                return;\n            }\n            push();\n            left.update(l, r);\n            right.update(l, r);\n            max = Math.max(left.max, right.max);\n        }\n    }\n\n    Node root;\n    int MAX_TIME = (int) 1e9;\n\n    public MyCalendarThree() {\n        root = new Node(0, MAX_TIME);\n    }\n\n    public int book(int start, int end) {\n        root.update(start, end - 1);\n        return root.max;\n    }\n}\n\n\n/**\n * Your MyCalendarThree object will be instantiated and called as such:\n * MyCalendarThree obj = new MyCalendarThree();\n * int param_1 = obj.book(startTime,endTime);\n */"
     }
   },
   "733": {
