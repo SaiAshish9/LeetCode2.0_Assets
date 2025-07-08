@@ -2562,7 +2562,7 @@
   },
   "513": {
     "solution": {
-      "depth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int findBottomLeftValue(TreeNode* root) {\n        queue<TreeNode*> q;\n        q.push(root);\n        \n        int bottomLeftValue = 0;\n        \n        while (!q.empty()) {\n            int size = q.size();\n            \n            for (int i = 0; i < size; ++i) {\n                TreeNode* current = q.front();\n                q.pop();\n                \n                if (i == 0) bottomLeftValue = current->val;\n                \n                if (current->left) q.push(current->left);\n                if (current->right) q.push(current->right);\n            }\n        }\n        \n        return bottomLeftValue;\n    }\n};"
+      "breadth-first-search": "import java.util.*;\n\nclass Solution {\n    public int findBottomLeftValue(TreeNode root) {\n        Queue<TreeNode> queue = new LinkedList<>();\n        queue.offer(root);\n        int bottomLeft = root.val;\n\n        while (!queue.isEmpty()) {\n            int size = queue.size();\n            for (int i = 0; i < size; i++) {\n                TreeNode node = queue.poll();\n                if (i == 0) {\n                    bottomLeft = node.val; // First node of the level\n                }\n                if (node.left != null) queue.offer(node.left);\n                if (node.right != null) queue.offer(node.right);\n            }\n        }\n\n        return bottomLeft;\n    }\n}"
     }
   },
   "514": {
@@ -2577,7 +2577,7 @@
   },
   "516": {
     "solution": {
-      "dynamic-programming": ""
+      "dynamic-programming": "class Solution {\n    public int longestPalindromeSubseq(String s) {\n        int n = s.length();\n        int[][] dp = new int[n][n];\n\n        // Single characters are palindromes of length 1\n        for (int i = 0; i < n; i++) {\n            dp[i][i] = 1;\n        }\n\n        for (int len = 2; len <= n; len++) {\n            for (int i = 0; i <= n - len; i++) {\n                int j = i + len - 1;\n                if (s.charAt(i) == s.charAt(j)) {\n                    dp[i][j] = 2 + dp[i + 1][j - 1];\n                } else {\n                    dp[i][j] = Math.max(dp[i + 1][j], dp[i][j - 1]);\n                }\n            }\n        }\n\n        return dp[0][n - 1];\n    }\n}"
     }
   },
   "517": {
