@@ -3570,7 +3570,7 @@
   },
   "714": {
     "solution": {
-      "dynamic-programming": "class Solution {\npublic:\n    int maxProfit(vector<int>& prices, int fee) {\n        int n = prices.size();\n        if (n == 0) return 0;\n\n        // dp[i][0] = max profit on day i without holding a stock\n        // dp[i][1] = max profit on day i holding a stock\n        vector<vector<int>> dp(n, vector<int>(2, 0));\n\n        dp[0][0] = 0;  // No profit if we don't hold any stock on day 0\n        dp[0][1] = -prices[0];  // We buy a stock on day 0, hence the negative profit\n\n        for (int i = 1; i < n; ++i) {\n            // If we are not holding a stock on day i, we could have either:\n            // - Not done any transaction, so the profit remains the same as the previous day.\n            // - Sold the stock we were holding, considering the transaction fee.\n            dp[i][0] = max(dp[i - 1][0], dp[i - 1][1] + prices[i] - fee);\n\n            // If we are holding a stock on day i, we could have either:\n            // - Not bought any new stock, so the profit remains the same as the previous day.\n            // - Bought a new stock on day i, considering the cost of the stock.\n            dp[i][1] = max(dp[i - 1][1], dp[i - 1][0] - prices[i]);\n        }\n\n        // The maximum profit on the last day without holding a stock\n        return dp[n - 1][0];\n    }\n};"
+      "dynamic-programming": "class Solution {\n    public int maxProfit(int[] prices, int fee) {\n        int n = prices.length;\n        if (n == 0) return 0;\n\n        int[] dp0 = new int[n]; // Not holding stock\n        int[] dp1 = new int[n]; // Holding stock\n\n        dp0[0] = 0;\n        dp1[0] = -prices[0];\n\n        for (int i = 1; i < n; i++) {\n            dp0[i] = Math.max(dp0[i - 1], dp1[i - 1] + prices[i] - fee);\n            dp1[i] = Math.max(dp1[i - 1], dp0[i - 1] - prices[i]);\n        }\n\n        return dp0[n - 1];\n    }\n}"
     }
   },
   "715": {
@@ -3585,7 +3585,7 @@
   },
   "717": {
     "solution": {
-      "array": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool isOneBitCharacter(vector<int>& bits) {\n        int n = bits.size();\n        int i = 0;\n\n        while (i < n - 1) { // Traverse until the second last bit\n            if (bits[i] == 1) {\n                i += 2; // Skip the next bit for a 2-bit character\n            } else {\n                i += 1; // Move to the next bit for a 1-bit character\n            }\n        }\n\n        // If we land exactly on the last bit, it's a 1-bit character\n        return i == n - 1;\n    }\n};\n"
+      "array": "class Solution {\n    public boolean isOneBitCharacter(int[] bits) {\n        int i = 0;\n        while (i < bits.length - 1) {\n            i += bits[i] == 1 ? 2 : 1;\n        }\n        return i == bits.length - 1;\n    }\n}"
     }
   },
   "718": {
