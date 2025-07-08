@@ -1634,7 +1634,7 @@
   },
   "328": {
     "solution": {
-      "linked-list": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* oddEvenList(ListNode* head) {\n        if (!head || !head->next)\n            return head;\n\n        ListNode* odd = head;\n        ListNode* even = head->next;\n        ListNode* evenHead = even;\n\n        while (even && even->next) {\n            odd->next = even->next;\n            odd = odd->next;\n            even->next = odd->next;\n            even = even->next;\n        }\n\n        odd->next = evenHead;\n        return head;\n    }\n};\n"
+      "linked-list": "class Solution {\n    public ListNode oddEvenList(ListNode head) {\n        if (head == null || head.next == null) return head;\n\n        ListNode odd = head;\n        ListNode even = head.next;\n        ListNode evenHead = even;\n\n        while (even != null && even.next != null) {\n            odd.next = even.next;\n            odd = odd.next;\n            even.next = odd.next;\n            even = even.next;\n        }\n\n        odd.next = evenHead;\n        return head;\n    }\n\n    // Definition for singly-linked list.\n    public class ListNode {\n        int val;\n        ListNode next;\n        ListNode() {}\n        ListNode(int val) { this.val = val; }\n        ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n    }\n}"
     }
   },
   "329": {
@@ -1644,7 +1644,7 @@
   },
   "330": {
     "solution": {
-      "greedy": "class Solution {\npublic:\n    int candy(vector<int>& ratings) {\n        int n = ratings.size();\n        vector<int> candies(n, 1); // Initialize all children with 1 candy\n        \n        // Pass 1: Left to right\n        for (int i = 1; i < n; i++) {\n            if (ratings[i] > ratings[i - 1]) {\n                candies[i] = candies[i - 1] + 1;\n            }\n        }\n        \n        // Pass 2: Right to left\n        for (int i = n - 2; i >= 0; i--) {\n            if (ratings[i] > ratings[i + 1]) {\n                candies[i] = max(candies[i], candies[i + 1] + 1);\n            }\n        }\n        \n        // Sum up all candies\n        return accumulate(candies.begin(), candies.end(), 0);\n    }\n};"
+      "greedy": "import java.util.*;\n\nclass Solution {\n    public int candy(int[] ratings) {\n        int n = ratings.length;\n        int[] candies = new int[n];\n        Arrays.fill(candies, 1);\n\n        // Pass 1: left to right\n        for (int i = 1; i < n; i++) {\n            if (ratings[i] > ratings[i - 1]) {\n                candies[i] = candies[i - 1] + 1;\n            }\n        }\n\n        // Pass 2: right to left\n        for (int i = n - 2; i >= 0; i--) {\n            if (ratings[i] > ratings[i + 1]) {\n                candies[i] = Math.max(candies[i], candies[i + 1] + 1);\n            }\n        }\n\n        int total = 0;\n        for (int candy : candies) {\n            total += candy;\n        }\n\n        return total;\n    }\n}"
     }
   },
   "331": {
