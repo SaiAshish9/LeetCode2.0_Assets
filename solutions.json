@@ -821,7 +821,7 @@
   },
   "168": {
     "solution": {
-      "math": "class Solution {\npublic:\n    string convertToTitle(int columnNumber) {\n        string result = \"\";\n\n        while (columnNumber > 0) {\n            columnNumber--; \n            int remainder = columnNumber % 26; \n            result += ('A' + remainder); \n            columnNumber /= 26; \n        }\n\n        reverse(result.begin(), result.end()); \n        return result;\n    }\n};"
+      "math": "public class Solution {\n    public String convertToTitle(int columnNumber) {\n        StringBuilder result = new StringBuilder();\n\n        while (columnNumber > 0) {\n            columnNumber--; // Adjust for 1-based indexing\n            int remainder = columnNumber % 26;\n            result.append((char) ('A' + remainder));\n            columnNumber /= 26;\n        }\n\n        return result.reverse().toString();\n    }\n}"
     }
   },
   "169": {
@@ -837,12 +837,12 @@
   },
   "171": {
     "solution": {
-      "string": "class Solution {\npublic:\n    int titleToNumber(string columnTitle) {\n        int result = 0;\n        \n        for (char c : columnTitle) {\n            result = result * 26 + (c - 'A' + 1);\n        }\n        \n        return result;\n    }\n};\n"
+      "string": "public class Solution {\n    public int titleToNumber(String columnTitle) {\n        int result = 0;\n        for (char c : columnTitle.toCharArray()) {\n            result = result * 26 + (c - 'A' + 1);\n        }\n        return result;\n    }\n}"
     }
   },
   "172": {
     "solution": {
-      "math": "class Solution {\npublic:\n    int trailingZeroes(int n) {\n        int count = 0;\n        while (n >= 5) {\n            n /= 5;\n            count += n;\n        }\n        return count;\n    }\n};"
+      "math": "public class Solution {\n    public int trailingZeroes(int n) {\n        int count = 0;\n        while (n >= 5) {\n            n /= 5;\n            count += n;\n        }\n        return count;\n    }\n}"
     }
   },
   "173": {
