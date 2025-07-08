@@ -1117,7 +1117,7 @@
   },
   "226": {
     "solution": {
-      "breadth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* invertTree(TreeNode* root) {\n        if (!root) return nullptr; \n        \n        TreeNode* temp = root->left;\n        root->left = root->right;\n        root->right = temp;\n\n        invertTree(root->left);\n        invertTree(root->right);\n\n        return root;\n    }\n};"
+      "breadth-first-search": "class Solution {\n    public TreeNode invertTree(TreeNode root) {\n        if (root == null) return null;\n\n        TreeNode temp = root.left;\n        root.left = root.right;\n        root.right = temp;\n\n        invertTree(root.left);\n        invertTree(root.right);\n\n        return root;\n    }\n}"
     }
   },
   "227": {
@@ -1127,7 +1127,7 @@
   },
   "228": {
     "solution": {
-      "array": "class Solution {\npublic:\n    vector<string> summaryRanges(vector<int>& nums) {\n        vector<string> result;\n        int n = nums.size();\n        if (n == 0) return result;\n        \n        int start = nums[0];\n\n        for (int i = 1; i <= n; ++i) {\n            if (i == n || nums[i] != nums[i - 1] + 1) {\n                if (start == nums[i - 1]) {\n                    result.push_back(to_string(start));\n                } else {\n                    result.push_back(to_string(start) + \"->\" + to_string(nums[i - 1]));\n                }\n                if (i < n) start = nums[i];\n            }\n        }\n\n        return result;\n    }\n};\n"
+      "array": "class Solution {\n    public List<String> summaryRanges(int[] nums) {\n        List<String> result = new ArrayList<>();\n        if (nums.length == 0) return result;\n\n        int start = nums[0];\n\n        for (int i = 1; i <= nums.length; i++) {\n            if (i == nums.length || nums[i] != nums[i - 1] + 1) {\n                if (start == nums[i - 1]) {\n                    result.add(String.valueOf(start));\n                } else {\n                    result.add(start + \"->\" + nums[i - 1]);\n                }\n                if (i < nums.length) start = nums[i];\n            }\n        }\n        return result;\n    }\n}"
     }
   },
   "229": {
@@ -1142,7 +1142,7 @@
   },
   "231": {
     "solution": {
-      "math": "class Solution {\npublic:\n    bool isPowerOfTwo(int n) {\n        return n > 0 && (n & (n - 1)) == 0;\n    }\n};"
+      "math": "class Solution {\n    public boolean isPowerOfTwo(int n) {\n        return n > 0 && (n & (n - 1)) == 0;\n    }\n}"
     }
   },
   "232": {
@@ -1167,7 +1167,7 @@
   },
   "236": {
     "solution": {
-      "depth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {\n        if (!root) return nullptr;  // Base case: if the node is null, return nullptr\n        \n        // If the current node is either p or q, return it\n        if (root == p || root == q) return root;\n\n        // Recursively search in the left and right subtrees\n        TreeNode* left = lowestCommonAncestor(root->left, p, q);\n        TreeNode* right = lowestCommonAncestor(root->right, p, q);\n\n        // If both left and right are non-null, the current node is the LCA\n        if (left && right) return root;\n\n        // If one of the subtrees is non-null, return the non-null subtree's result\n        return left ? left : right;\n    }\n};"
+      "depth-first-search": "class Solution {\n    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {\n        if (root == null || root == p || root == q) return root;\n\n        TreeNode left = lowestCommonAncestor(root.left, p, q);\n        TreeNode right = lowestCommonAncestor(root.right, p, q);\n\n        if (left != null && right != null) return root;\n\n        return left != null ? left : right;\n    }\n}"
     }
   },
   "237": {
@@ -1192,7 +1192,7 @@
   },
   "241": {
     "solution": {
-      "memoization": "#include <vector>\n#include <string>\n#include <unordered_map>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> diffWaysToCompute(string expression) {\n        unordered_map<string, vector<int>> memo; // Memoization map\n        return helper(expression, memo);\n    }\n    \nprivate:\n    vector<int> helper(const string& expression, unordered_map<string, vector<int>>& memo) {\n        if (memo.find(expression) != memo.end()) {\n            return memo[expression];\n        }\n        \n        vector<int> results;\n        bool isNumber = true;\n        \n        for (int i = 0; i < expression.length(); ++i) {\n            char c = expression[i];\n            if (c == '+' || c == '-' || c == '*') {\n                isNumber = false;\n                \n                string left = expression.substr(0, i);\n                string right = expression.substr(i + 1);\n                \n                vector<int> leftResults = helper(left, memo);\n                vector<int> rightResults = helper(right, memo);\n                \n                for (int l : leftResults) {\n                    for (int r : rightResults) {\n                        if (c == '+') {\n                            results.push_back(l + r);\n                        } else if (c == '-') {\n                            results.push_back(l - r);\n                        } else if (c == '*') {\n                            results.push_back(l * r);\n                        }\n                    }\n                }\n            }\n        }\n        \n        if (isNumber) {\n            results.push_back(stoi(expression));\n        }\n        \n        memo[expression] = results;\n        return results;\n    }\n};\n"
+      "memoization": "class Solution {\n    public List<Integer> diffWaysToCompute(String expression) {\n        Map<String, List<Integer>> memo = new HashMap<>();\n        return helper(expression, memo);\n    }\n\n    private List<Integer> helper(String expr, Map<String, List<Integer>> memo) {\n        if (memo.containsKey(expr)) return memo.get(expr);\n\n        List<Integer> results = new ArrayList<>();\n        boolean isNumber = true;\n\n        for (int i = 0; i < expr.length(); i++) {\n            char c = expr.charAt(i);\n            if (c == '+' || c == '-' || c == '*') {\n                isNumber = false;\n\n                List<Integer> left = helper(expr.substring(0, i), memo);\n                List<Integer> right = helper(expr.substring(i + 1), memo);\n\n                for (int l : left) {\n                    for (int r : right) {\n                        if (c == '+') results.add(l + r);\n                        else if (c == '-') results.add(l - r);\n                        else results.add(l * r);\n                    }\n                }\n            }\n        }\n\n        if (isNumber) {\n            results.add(Integer.parseInt(expr));\n        }\n\n        memo.put(expr, results);\n        return results;\n    }\n}"
     }
   },
   "242": {
@@ -1202,17 +1202,17 @@
   },
   "243": {
     "solution": {
-      "string": "class Solution {\npublic:\n    int shortestDistance(vector<string>& wordsDict, string word1, string word2) {\n        int ans = INT_MAX;\n        for (int k = 0, i = -1, j = -1; k < wordsDict.size(); ++k) {\n            if (wordsDict[k] == word1) {\n                i = k;\n            }\n            if (wordsDict[k] == word2) {\n                j = k;\n            }\n            if (i != -1 && j != -1) {\n                ans = min(ans, abs(i - j));\n            }\n        }\n        return ans;\n    }\n};"
+      "string": "class Solution {\n    public int shortestDistance(String[] wordsDict, String word1, String word2) {\n        int i = -1, j = -1, min = Integer.MAX_VALUE;\n\n        for (int k = 0; k < wordsDict.length; k++) {\n            if (wordsDict[k].equals(word1)) i = k;\n            if (wordsDict[k].equals(word2)) j = k;\n            if (i != -1 && j != -1) {\n                min = Math.min(min, Math.abs(i - j));\n            }\n        }\n\n        return min;\n    }\n}"
     }
   },
   "244": {
     "solution": {
-      "string": "class WordDistance {\npublic:\n    WordDistance(vector<string>& wordsDict) {\n        for (int index = 0; index < wordsDict.size(); ++index) {\n            wordIndices[wordsDict[index]].push_back(index);\n        }\n    }\n\n    int shortest(string word1, string word2) {\n        auto indicesWord1 = wordIndices[word1], indicesWord2 = wordIndices[word2];\n        \n        int i = 0, j = 0;\n        int minDistance = INT_MAX;\n        \n        while (i < indicesWord1.size() && j < indicesWord2.size()) {\n            minDistance = min(minDistance, abs(indicesWord1[i] - indicesWord2[j]));\n            \n            if (indicesWord1[i] < indicesWord2[j]) {\n                ++i;\n            } else {\n                ++j;\n            }\n        }\n        return minDistance;\n    }\n\nprivate:\n    unordered_map<string, vector<int>> wordIndices;  // Store the word and their indices\n};\n"
+      "string": "class WordDistance {\n    private Map<String, List<Integer>> wordIndices = new HashMap<>();\n\n    public WordDistance(String[] wordsDict) {\n        for (int i = 0; i < wordsDict.length; i++) {\n            wordIndices.computeIfAbsent(wordsDict[i], k -> new ArrayList<>()).add(i);\n        }\n    }\n\n    public int shortest(String word1, String word2) {\n        List<Integer> list1 = wordIndices.get(word1);\n        List<Integer> list2 = wordIndices.get(word2);\n\n        int i = 0, j = 0, min = Integer.MAX_VALUE;\n        while (i < list1.size() && j < list2.size()) {\n            min = Math.min(min, Math.abs(list1.get(i) - list2.get(j)));\n            if (list1.get(i) < list2.get(j)) i++;\n            else j++;\n        }\n        return min;\n    }\n}"
     }
   },
   "245": {
     "solution": {
-      "string": "class Solution {\npublic:\n    int shortestWordDistance(vector<string>& wordsDict, string word1, string word2) {\n        int n = wordsDict.size();\n        int ans = n;\n        if (word1 == word2) {\n            for (int i = 0, j = -1; i < n; ++i) {\n                if (wordsDict[i] == word1) {\n                    if (j != -1) {\n                        ans = min(ans, i - j);\n                    }\n                    j = i;\n                }\n            }\n        } else {\n            for (int k = 0, i = -1, j = -1; k < n; ++k) {\n                if (wordsDict[k] == word1) {\n                    i = k;\n                }\n                if (wordsDict[k] == word2) {\n                    j = k;\n                }\n                if (i != -1 && j != -1) {\n                    ans = min(ans, abs(i - j));\n                }\n            }\n        }\n        return ans;\n    }\n};"
+      "string": "class Solution {\n    public int shortestWordDistance(String[] wordsDict, String word1, String word2) {\n        int min = wordsDict.length;\n        int i = -1, j = -1;\n\n        if (word1.equals(word2)) {\n            for (int k = 0; k < wordsDict.length; k++) {\n                if (wordsDict[k].equals(word1)) {\n                    if (i != -1) min = Math.min(min, k - i);\n                    i = k;\n                }\n            }\n        } else {\n            for (int k = 0; k < wordsDict.length; k++) {\n                if (wordsDict[k].equals(word1)) i = k;\n                else if (wordsDict[k].equals(word2)) j = k;\n\n                if (i != -1 && j != -1) {\n                    min = Math.min(min, Math.abs(i - j));\n                }\n            }\n        }\n\n        return min;\n    }\n}"
     }
   },
   "246": {
