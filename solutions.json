@@ -6,7 +6,7 @@
   },
   "2": {
     "solution": {
-      "linked-list": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {\n        ListNode* dummy = new ListNode();\n        ListNode* current = dummy;\n        int carry = 0;\n\n        while (l1 != nullptr || l2 != nullptr || carry > 0) {\n            int sum = carry;\n\n            if (l1 != nullptr) {\n                sum += l1->val;\n                l1 = l1->next;\n            }\n            if (l2 != nullptr) {\n                sum += l2->val;\n                l2 = l2->next;\n            }\n\n            carry = sum / 10;\n            current->next = new ListNode(sum % 10);\n\n            current = current->next;\n        }\n\n        return dummy->next;\n    }\n};\n"
+      "linked-list": "class ListNode {\n    int val;\n    ListNode next;\n\n    ListNode() {\n        this.val = 0;\n    }\n\n    ListNode(int val) {\n        this.val = val;\n    }\n\n    ListNode(int val, ListNode next) {\n        this.val = val;\n        this.next = next;\n    }\n}\n\nclass Solution {\n    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {\n        ListNode dummy = new ListNode();\n        ListNode current = dummy;\n        int carry = 0;\n\n        while (l1 != null || l2 != null || carry > 0) {\n            int sum = carry;\n\n            if (l1 != null) {\n                sum += l1.val;\n                l1 = l1.next;\n            }\n\n            if (l2 != null) {\n                sum += l2.val;\n                l2 = l2.next;\n            }\n\n            carry = sum / 10;\n            current.next = new ListNode(sum % 10);\n            current = current.next;\n        }\n\n        return dummy.next;\n    }\n}"
     }
   },
   "3": {
@@ -163,19 +163,16 @@
   },
   "33": {
     "solution": {
-      "array": "",
       "binary-search": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int search(vector<int>& nums, int target) {\n        int left = 0, right = nums.size() - 1;\n        \n        while (left <= right) {\n            int mid = left + (right - left) / 2;\n            \n            if (nums[mid] == target) {\n                return mid;\n            }\n            \n            if (nums[left] <= nums[mid]) {\n                if (nums[left] <= target && target < nums[mid]) {\n                    right = mid - 1;\n                } else {\n                    left = mid + 1;\n                }\n            } else {\n                if (nums[mid] < target && target <= nums[right]) {\n                    left = mid + 1;\n                } else {\n                    right = mid - 1;\n                }\n            }\n        }\n        \n        return -1;\n    }\n};\n"
     }
   },
   "34": {
     "solution": {
-      "array": "",
       "binary-search": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int binarySearchFirst(const vector<int>& nums, int target) {\n        int low = 0, high = nums.size() - 1;\n        int firstPos = -1;\n\n        while (low <= high) {\n            int mid = low + (high - low) / 2;\n            if (nums[mid] == target) {\n                firstPos = mid; \n                high = mid - 1;\n            } else if (nums[mid] < target) {\n                low = mid + 1;\n            } else {\n                high = mid - 1;\n            }\n        }\n\n        return firstPos;\n    }\n\n    int binarySearchLast(const vector<int>& nums, int target) {\n        int low = 0, high = nums.size() - 1;\n        int lastPos = -1;\n\n        while (low <= high) {\n            int mid = low + (high - low) / 2;\n            if (nums[mid] == target) {\n                lastPos = mid;\n                low = mid + 1;\n            } else if (nums[mid] < target) {\n                low = mid + 1;\n            } else {\n                high = mid - 1;\n            }\n        }\n\n        return lastPos;\n    }\n\n    vector<int> searchRange(vector<int>& nums, int target) {\n        int first = binarySearchFirst(nums, target);\n        int last = binarySearchLast(nums, target);\n        return {first, last};\n    }\n};"
     }
   },
   "35": {
     "solution": {
-      "array": "",
       "binary-search": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int searchInsert(vector<int>& nums, int target) {\n        int low = 0, high = nums.size() - 1;\n\n        while (low <= high) {\n            int mid = low + (high - low) / 2;\n\n            if (nums[mid] == target) {\n                return mid; \n            } else if (nums[mid] < target) {\n                low = mid + 1;\n            } else {\n                high = mid - 1; \n            }\n        }\n\n        return low; \n    }\n};"
     }
   },
