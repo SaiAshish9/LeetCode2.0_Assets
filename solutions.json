@@ -471,7 +471,7 @@
   },
   "94": {
     "solution": {
-      "depth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    void inorder(TreeNode* root, vector<int>& result) {\n        if (!root) return; \n        inorder(root->left, result); \n        result.push_back(root->val); \n        inorder(root->right, result); \n    }\n\n    vector<int> inorderTraversal(TreeNode* root) {\n        vector<int> result;\n        inorder(root, result);\n        return result;\n    }\n};"
+      "depth-first-search": "/*\nclass TreeNode {\n    int val;\n    TreeNode left;\n    TreeNode right;\n    TreeNode() {}\n    TreeNode(int val) { this.val = val; }\n    TreeNode(int val, TreeNode left, TreeNode right) {\n        this.val = val;\n        this.left = left;\n        this.right = right;\n    }\n}\n*/\n\nimport java.util.*;\n\nclass Solution {\n    public List<Integer> inorderTraversal(TreeNode root) {\n        List<Integer> result = new ArrayList<>();\n        inorder(root, result);\n        return result;\n    }\n\n    private void inorder(TreeNode node, List<Integer> result) {\n        if (node == null) return;\n        inorder(node.left, result);\n        result.add(node.val);\n        inorder(node.right, result);\n    }\n}"
     }
   },
   "95": {
