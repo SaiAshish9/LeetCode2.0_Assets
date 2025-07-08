@@ -1,7 +1,7 @@
 {
   "1": {
     "solution": {
-      "hash-table": "#include <vector>\n#include <unordered_map>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> twoSum(vector<int>& nums, int target) {\n        unordered_map<int, int> numMap;\n        vector<int> result;\n\n        for (int i = 0; i < nums.size(); ++i) {\n            int complement = target - nums[i];\n            if (numMap.find(complement) != numMap.end()) {\n                result.push_back(numMap[complement]);\n                result.push_back(i);\n                return result;\n            }\n            numMap[nums[i]] = i;\n        }\n\n        return result;\n    }\n};"
+      "hash-table": "import java.util.*;\n\nclass Solution {\n    public int[] twoSum(int[] nums, int target) {\n        Map<Integer, Integer> numMap = new HashMap<>();\n\n        for (int i = 0; i < nums.length; i++) {\n            int complement = target - nums[i];\n            if (numMap.containsKey(complement)) {\n                return new int[] { numMap.get(complement), i };\n            }\n            numMap.put(nums[i], i);\n        }\n\n        return new int[0]; // Return an empty array if no valid pair is found\n    }\n}"
     }
   },
   "2": {
