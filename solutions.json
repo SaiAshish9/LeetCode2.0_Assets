@@ -760,7 +760,7 @@
   },
   "156": {
     "solution": {
-      "depth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* upsideDownBinaryTree(TreeNode* root) {\n        if (!root || !root->left) return root;\n        TreeNode* newRoot = upsideDownBinaryTree(root->left);\n        root->left->right = root;\n        root->left->left = root->right;\n        root->left = nullptr;\n        root->right = nullptr;\n        return newRoot;\n    }\n};"
+      "depth-first-search": "/*\nclass TreeNode {\n    int val;\n    TreeNode left;\n    TreeNode right;\n    TreeNode() {}\n    TreeNode(int val) { this.val = val; }\n    TreeNode(int val, TreeNode left, TreeNode right) {\n        this.val = val;\n        this.left = left;\n        this.right = right;\n    }\n}\n*/\n\nclass Solution {\n    public TreeNode upsideDownBinaryTree(TreeNode root) {\n        if (root == null || root.left == null) return root;\n\n        TreeNode newRoot = upsideDownBinaryTree(root.left);\n\n        root.left.left = root.right;\n        root.left.right = root;\n\n        root.left = null;\n        root.right = null;\n\n        return newRoot;\n    }\n}"
     }
   },
   "157": {
