@@ -745,7 +745,7 @@
   "153": {
     "solution": {
       "array": "",
-      "binary-search": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int findMin(vector<int>& nums) {\n        int low = 0, high = nums.size() - 1;\n\n        while (low < high) {\n            int mid = low + (high - low) / 2;\n\n            if (nums[mid] > nums[high]) {\n                low = mid + 1;\n            } else {\n                high = mid;\n            }\n        }\n\n        return nums[low];\n    }\n};"
+      "binary-search": "class Solution {\n    public int findMin(int[] nums) {\n        int low = 0, high = nums.length - 1;\n\n        while (low < high) {\n            int mid = low + (high - low) / 2;\n\n            if (nums[mid] > nums[high]) {\n                low = mid + 1;\n            } else {\n                high = mid;\n            }\n        }\n\n        return nums[low];\n    }\n}"
     }
   },
   "154": {
