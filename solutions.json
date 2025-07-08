@@ -832,7 +832,7 @@
   },
   "170": {
     "solution": {
-      "two-pointers": "// OJ: https://leetcode.com/problems/two-sum-iii-data-structure-design/\n// Time:\n//      TwoSum: O(1)\n//      add: O(logN)\n//      find: O(NlogN)\n// Space: O(N)\nclass TwoSum {\n    map<long, int> m;\npublic:\n    TwoSum() {}\n    void add(int n) {\n        m[n]++;\n    }\n    bool find(int n) {\n        for (auto &[a, cnt] : m) {\n            long b = n - a;\n            if (a > b) return false;\n            if (a == b) return cnt > 1;\n            if (m.count(b)) return true;\n        }\n        return false;\n    }\n};"
+      "two-pointers": "import java.util.*;\n\npublic class TwoSum {\n    private Map<Integer, Integer> map;\n\n    public TwoSum() {\n        map = new HashMap<>();\n    }\n\n    public void add(int number) {\n        map.put(number, map.getOrDefault(number, 0) + 1);\n    }\n\n    public boolean find(int value) {\n        for (int key : map.keySet()) {\n            int complement = value - key;\n            if (complement == key) {\n                if (map.get(key) > 1) return true;\n            } else if (map.containsKey(complement)) {\n                return true;\n            }\n        }\n        return false;\n    }\n}"
     }
   },
   "171": {
@@ -977,7 +977,7 @@
   },
   "199": {
     "solution": {
-      "breadth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<int> rightSideView(TreeNode* root) {\n        vector<int> result;\n        if (!root) return result; \n        \n        queue<TreeNode*> q;\n        q.push(root);\n\n        while (!q.empty()) {\n            int size = q.size();\n            TreeNode* rightMost = nullptr;\n\n            for (int i = 0; i < size; ++i) {\n                TreeNode* currentNode = q.front();\n                q.pop();\n\n                rightMost = currentNode;\n\n                if (currentNode->left) q.push(currentNode->left);\n                if (currentNode->right) q.push(currentNode->right);\n            }\n\n            if (rightMost) result.push_back(rightMost->val);\n        }\n\n        return result;\n    }\n};\n"
+      "breadth-first-search": "import java.util.*;\n\nclass Solution {\n    public List<Integer> rightSideView(TreeNode root) {\n        List<Integer> result = new ArrayList<>();\n        if (root == null) return result;\n\n        Queue<TreeNode> queue = new LinkedList<>();\n        queue.offer(root);\n\n        while (!queue.isEmpty()) {\n            int size = queue.size();\n            TreeNode rightMost = null;\n\n            for (int i = 0; i < size; i++) {\n                TreeNode current = queue.poll();\n                rightMost = current;\n\n                if (current.left != null) queue.offer(current.left);\n                if (current.right != null) queue.offer(current.right);\n            }\n\n            if (rightMost != null) {\n                result.add(rightMost.val);\n            }\n        }\n\n        return result;\n    }\n}"
     }
   },
   "200": {
