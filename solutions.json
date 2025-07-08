@@ -1946,7 +1946,7 @@
   },
   "390": {
     "solution": {
-      "recursion": "class Solution {\npublic:\n    int lastRemaining(int n) { return helper(n, true); }\n\nprivate:\n    int helper(int n, bool leftToRight) {\n        if (n == 1) {\n            return 1;\n        }\n\n        if (leftToRight || n % 2 == 1) {\n            return 2 * helper(n / 2, !leftToRight);\n        } else {\n            return 2 * helper(n / 2, !leftToRight) - 1;\n        }\n    }\n};\n"
+      "recursion": "class Solution {\n    public int lastRemaining(int n) {\n        return helper(n, true);\n    }\n\n    private int helper(int n, boolean leftToRight) {\n        if (n == 1) return 1;\n        if (leftToRight || n % 2 == 1) {\n            return 2 * helper(n / 2, false);\n        } else {\n            return 2 * helper(n / 2, true) - 1;\n        }\n    }\n}"
     }
   },
   "391": {
@@ -1996,7 +1996,7 @@
   },
   "400": {
     "solution": {
-      "math": "#include <iostream>\n#include <cmath>\nusing namespace std;\n\nclass Solution {\npublic:\n    int findNthDigit(int n) {\n        long long digitLength = 1; \n        long long count = 9;       \n        long long start = 1;      \n\n        while (n > digitLength * count) {\n            n -= digitLength * count; // Skip all digits from this range\n            ++digitLength;            // Move to the next range (2-digits, 3-digits, etc.)\n            count *= 10;              // Update the count of numbers in the current range\n            start *= 10;              // Update the start of the current range\n        }\n\n        long long targetNumber = start + (n - 1) / digitLength; // Zero-indexed position\n\n        string targetStr = to_string(targetNumber); \n        int digitIndex = (n - 1) % digitLength;     \n        return targetStr[digitIndex] - '0';        \n    }\n};"
+      "math": "class Solution {\n    public int findNthDigit(int n) {\n        long digitLength = 1;\n        long count = 9;\n        long start = 1;\n\n        while (n > digitLength * count) {\n            n -= digitLength * count;\n            digitLength++;\n            count *= 10;\n            start *= 10;\n        }\n\n        long targetNumber = start + (n - 1) / digitLength;\n        String targetStr = Long.toString(targetNumber);\n        int digitIndex = (n - 1) % (int)digitLength;\n\n        return targetStr.charAt(digitIndex) - '0';\n    }\n}"
     }
   },
   "401": {
@@ -2016,7 +2016,7 @@
   },
   "404": {
     "solution": {
-      "depth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int sumOfLeftLeaves(TreeNode* root) {\n        if (!root) return 0;\n\n        int sum = 0;\n\n        if (root->left && !root->left->left && !root->left->right) {\n            sum += root->left->val;\n        }\n\n        sum += sumOfLeftLeaves(root->left);\n        sum += sumOfLeftLeaves(root->right);\n        return sum;\n    }\n};"
+      "depth-first-search": "class Solution {\n    public int sumOfLeftLeaves(TreeNode root) {\n        if (root == null) return 0;\n\n        int sum = 0;\n        if (root.left != null && root.left.left == null && root.left.right == null) {\n            sum += root.left.val;\n        }\n\n        sum += sumOfLeftLeaves(root.left);\n        sum += sumOfLeftLeaves(root.right);\n        return sum;\n    }\n}\n\n// TreeNode class assumed to be:\n// public class TreeNode {\n//     int val;\n//     TreeNode left;\n//     TreeNode right;\n//     TreeNode() {}\n//     TreeNode(int val) { this.val = val; }\n//     TreeNode(int val, TreeNode left, TreeNode right) {\n//         this.val = val;\n//         this.left = left;\n//         this.right = right;\n//     }\n// }"
     }
   },
   "405": {
@@ -2066,12 +2066,12 @@
   },
   "414": {
     "solution": {
-      "sorting": "#include <vector>\n#include <climits>\n#include <set>\nusing namespace std;\n\nclass Solution {\npublic:\n    int thirdMax(vector<int>& nums) {\n        // Use LONG_MIN to handle edge cases where the array contains negative numbers\n        long first = LONG_MIN, second = LONG_MIN, third = LONG_MIN;\n        \n        for (int num : nums) {\n            // Skip if num is already in the top three\n            if (num == first || num == second || num == third) {\n                continue;\n            }\n            \n            // Update the top three distinct maximums\n            if (num > first) {\n                third = second;\n                second = first;\n                first = num;\n            } else if (num > second) {\n                third = second;\n                second = num;\n            } else if (num > third) {\n                third = num;\n            }\n        }\n        \n        // If third is still LONG_MIN, it means there are less than 3 distinct numbers\n        return third == LONG_MIN ? first : third;\n    }\n};\n"
+      "sorting": "class Solution {\n    public int thirdMax(int[] nums) {\n        Long first = null, second = null, third = null;\n\n        for (int num : nums) {\n            long n = (long) num;\n            if (n == first || n == second || n == third) continue;\n\n            if (first == null || n > first) {\n                third = second;\n                second = first;\n                first = n;\n            } else if (second == null || n > second) {\n                third = second;\n                second = n;\n            } else if (third == null || n > third) {\n                third = n;\n            }\n        }\n\n        return third == null ? first.intValue() : third.intValue();\n    }\n}"
     }
   },
   "415": {
     "solution": {
-      "string": "#include <string>\n#include <algorithm>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    string addStrings(std::string num1, std::string num2) {\n        int i = num1.size() - 1; \n        int j = num2.size() - 1; \n        int carry = 0;           \n        std::string result;     \n\n        while (i >= 0 || j >= 0 || carry > 0) {\n            int digit1 = (i >= 0) ? num1[i] - '0' : 0; \n            int digit2 = (j >= 0) ? num2[j] - '0' : 0; \n\n            int sum = digit1 + digit2 + carry;\n            carry = sum / 10;                \n            result.push_back((sum % 10) + '0'); \n\n            i--;\n            j--;\n        }\n\n        reverse(result.begin(), result.end()); \n        return result;\n    }\n};\n"
+      "string": "class Solution {\n    public String addStrings(String num1, String num2) {\n        StringBuilder result = new StringBuilder();\n        int i = num1.length() - 1, j = num2.length() - 1, carry = 0;\n\n        while (i >= 0 || j >= 0 || carry > 0) {\n            int digit1 = (i >= 0) ? num1.charAt(i--) - '0' : 0;\n            int digit2 = (j >= 0) ? num2.charAt(j--) - '0' : 0;\n            int sum = digit1 + digit2 + carry;\n            result.append(sum % 10);\n            carry = sum / 10;\n        }\n\n        return result.reverse().toString();\n    }\n}"
     }
   },
   "416": {
@@ -2181,7 +2181,7 @@
   },
   "437": {
     "solution": {
-      "depth-first-search": "class Solution {\npublic:\n    int pathSum(TreeNode* root, int targetSum) {\n        if (!root) return 0;\n        int count = countPathsFromNode(root, targetSum);        \n        count += pathSum(root->left, targetSum);\n        count += pathSum(root->right, targetSum);\n        \n        return count;\n    }\n    \nprivate:\n    int countPathsFromNode(TreeNode* node, long long targetSum) {\n        if (!node) return 0; \n        \n        int count = 0;\n        \n        if (node->val == targetSum) count++;\n\n        count += countPathsFromNode(node->left, targetSum - node->val);\n        count += countPathsFromNode(node->right, targetSum - node->val);\n        \n        return count;\n    }\n};"
+      "depth-first-search": "class Solution {\n    public int pathSum(TreeNode root, int targetSum) {\n        if (root == null) return 0;\n\n        return countFromNode(root, targetSum)\n            + pathSum(root.left, targetSum)\n            + pathSum(root.right, targetSum);\n    }\n\n    private int countFromNode(TreeNode node, long sum) {\n        if (node == null) return 0;\n\n        int count = 0;\n        if (node.val == sum) count++;\n\n        count += countFromNode(node.left, sum - node.val);\n        count += countFromNode(node.right, sum - node.val);\n\n        return count;\n    }\n}\n\n// TreeNode class assumed as before."
     }
   },
   "438": {
