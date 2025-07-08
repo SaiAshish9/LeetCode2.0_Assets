@@ -4386,7 +4386,7 @@
   },
   "877": {
     "solution": {
-      "game-theory": "class Solution {\npublic:\n    bool stoneGame(vector<int>& piles) {\n        return true;\n    }\n};\n"
+      "game-theory": "class Solution {\n    public boolean stoneGame(int[] piles) {\n        return true;\n    }\n}"
     }
   },
   "878": {
@@ -4436,7 +4436,7 @@
   },
   "887": {
     "solution": {
-      "dynamic-programming": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int superEggDrop(int k, int n) {\n        // dp[i][j] represents the minimum number of moves needed with i eggs and j floors\n        vector<vector<int>> dp(k + 1, vector<int>(n + 1, 0));\n\n        // Base case: 0 floors needs 0 moves, and 1 floor needs 1 move\n        for (int i = 0; i <= k; ++i) {\n            dp[i][0] = 0;\n            dp[i][1] = 1;\n        }\n        \n        // Base case: with 1 egg, we need j moves for j floors (worst case is linear search)\n        for (int j = 0; j <= n; ++j) {\n            dp[1][j] = j;\n        }\n\n        // Fill the DP table\n        for (int i = 2; i <= k; ++i) {\n            for (int j = 2; j <= n; ++j) {\n                int low = 1, high = j, ans = j;\n                while (low <= high) {\n                    int mid = low + (high - low) / 2;\n                    int breakEgg = dp[i - 1][mid - 1];  // Egg breaks\n                    int noBreakEgg = dp[i][j - mid];  // Egg doesn't break\n                    \n                    // Take the maximum of the two cases, add 1 for the current attempt\n                    int worst = max(breakEgg, noBreakEgg) + 1;\n                    ans = min(ans, worst);\n                    \n                    // Binary search for the optimal floor\n                    if (breakEgg > noBreakEgg) {\n                        high = mid - 1;\n                    } else {\n                        low = mid + 1;\n                    }\n                }\n                dp[i][j] = ans;\n            }\n        }\n        \n        return dp[k][n];  // Minimum number of moves required for k eggs and n floors\n    }\n};"
+      "dynamic-programming": "class Solution {\n    public int superEggDrop(int k, int n) {\n        int[][] dp = new int[k + 1][n + 1];\n\n        for (int i = 0; i <= k; i++) {\n            dp[i][0] = 0;\n            if (n >= 1) dp[i][1] = 1;\n        }\n\n        for (int j = 0; j <= n; j++) {\n            dp[1][j] = j;\n        }\n\n        for (int i = 2; i <= k; i++) {\n            for (int j = 2; j <= n; j++) {\n                int low = 1, high = j, ans = j;\n                while (low <= high) {\n                    int mid = low + (high - low) / 2;\n                    int breakEgg = dp[i - 1][mid - 1];\n                    int noBreakEgg = dp[i][j - mid];\n                    int worst = Math.max(breakEgg, noBreakEgg) + 1;\n                    ans = Math.min(ans, worst);\n\n                    if (breakEgg > noBreakEgg) {\n                        high = mid - 1;\n                    } else {\n                        low = mid + 1;\n                    }\n                }\n                dp[i][j] = ans;\n            }\n        }\n\n        return dp[k][n];\n    }\n}"
     }
   },
   "888": {
@@ -4456,12 +4456,12 @@
   },
   "891": {
     "solution": {
-      "sorting": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int sumSubseqWidths(vector<int>& nums) {\n        const int MOD = 1e9 + 7;\n        int n = nums.size();\n        sort(nums.begin(), nums.end());\n        \n        // Precompute powers of 2 modulo MOD\n        vector<long long> power(n, 1);\n        for (int i = 1; i < n; ++i) {\n            power[i] = (power[i - 1] * 2) % MOD;\n        }\n        \n        long long result = 0;\n        for (int i = 0; i < n; ++i) {\n            long long add = (power[i] - power[n - i - 1] + MOD) % MOD;\n            result = (result + nums[i] * add % MOD) % MOD;\n        }\n        \n        return result;\n    }\n};\n"
+      "sorting": "import java.util.*;\n\nclass Solution {\n    public int sumSubseqWidths(int[] nums) {\n        Arrays.sort(nums);\n        int n = nums.length;\n        long mod = 1_000_000_007;\n        long[] power = new long[n];\n        power[0] = 1;\n\n        for (int i = 1; i < n; i++) {\n            power[i] = (power[i - 1] * 2) % mod;\n        }\n\n        long result = 0;\n        for (int i = 0; i < n; i++) {\n            result = (result + (power[i] - power[n - i - 1] + mod) % mod * nums[i]) % mod;\n        }\n\n        return (int) result;\n    }\n}"
     }
   },
   "892": {
     "solution": {
-      "geometry": "class Solution {\npublic:\n    int surfaceArea(vector<vector<int>>& grid) {\n        int n = grid.size();\n        int totalSurfaceArea = 0;\n\n        for (int i = 0; i < n; ++i) {\n            for (int j = 0; j < n; ++j) {\n                if (grid[i][j] > 0) {\n                    // Add the top and bottom surface areas\n                    totalSurfaceArea += 2;\n                    // Add the side areas\n                    totalSurfaceArea += grid[i][j] * 4;\n\n                    // Subtract overlap with the cell above\n                    if (i > 0)\n                        totalSurfaceArea -= 2 * min(grid[i][j], grid[i - 1][j]);\n\n                    // Subtract overlap with the cell to the left\n                    if (j > 0)\n                        totalSurfaceArea -= 2 * min(grid[i][j], grid[i][j - 1]);\n                }\n            }\n        }\n\n        return totalSurfaceArea;\n    }\n};\n"
+      "geometry": "class Solution {\n    public int surfaceArea(int[][] grid) {\n        int n = grid.length;\n        int totalSurfaceArea = 0;\n\n        for (int i = 0; i < n; i++) {\n            for (int j = 0; j < n; j++) {\n                if (grid[i][j] > 0) {\n                    totalSurfaceArea += 2 + grid[i][j] * 4;\n\n                    if (i > 0) {\n                        totalSurfaceArea -= 2 * Math.min(grid[i][j], grid[i - 1][j]);\n                    }\n\n                    if (j > 0) {\n                        totalSurfaceArea -= 2 * Math.min(grid[i][j], grid[i][j - 1]);\n                    }\n                }\n            }\n        }\n\n        return totalSurfaceArea;\n    }\n}"
     }
   },
   "893": {
