@@ -2216,7 +2216,7 @@
   },
   "444": {
     "solution": {
-      "topological-sort": "class Solution {\npublic:\n    bool sequenceReconstruction(vector<int>& nums, vector<vector<int>>& sequences) {\n        int n = nums.size();\n        vector<vector<int>> g(n);\n        vector<int> indeg(n);\n        for (auto& seq : sequences) {\n            for (int i = 1; i < seq.size(); ++i) {\n                int a = seq[i - 1] - 1, b = seq[i] - 1;\n                g[a].push_back(b);\n                ++indeg[b];\n            }\n        }\n        queue<int> q;\n        for (int i = 0; i < n; ++i)\n            if (indeg[i] == 0) q.push(i);\n        while (!q.empty()) {\n            if (q.size() > 1) return false;\n            int i = q.front();\n            q.pop();\n            for (int j : g[i])\n                if (--indeg[j] == 0) q.push(j);\n        }\n        return true;\n    }\n};"
+      "topological-sort": "class Solution {\n    public boolean sequenceReconstruction(int[] nums, List<List<Integer>> sequences) {\n        int n = nums.length;\n        List<Set<Integer>> graph = new ArrayList<>();\n        int[] indegree = new int[n + 1];\n        for (int i = 0; i <= n; i++) graph.add(new HashSet<>());\n\n        for (List<Integer> seq : sequences) {\n            for (int i = 1; i < seq.size(); i++) {\n                int from = seq.get(i - 1), to = seq.get(i);\n                if (graph.get(from).add(to)) {\n                    indegree[to]++;\n                }\n            }\n        }\n\n        Queue<Integer> queue = new LinkedList<>();\n        for (int i = 1; i <= n; i++) {\n            if (indegree[i] == 0) queue.offer(i);\n        }\n\n        int idx = 0;\n        while (!queue.isEmpty()) {\n            if (queue.size() > 1) return false;\n            int cur = queue.poll();\n            if (nums[idx++] != cur) return false;\n            for (int nei : graph.get(cur)) {\n                if (--indegree[nei] == 0) queue.offer(nei);\n            }\n        }\n        return idx == n;\n    }\n}"
     }
   },
   "445": {
@@ -2236,7 +2236,7 @@
   },
   "448": {
     "solution": {
-      "hash-table": "#include <vector>\n#include <cmath>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> findDisappearedNumbers(vector<int>& nums) {\n        int n = nums.size();\n\n        for (int& x : nums) {\n            int i = abs(x) - 1; // Convert to index (1-based to 0-based)\n            if (nums[i] > 0) {\n                nums[i] = -nums[i]; // Mark the number as seen\n            }\n        }\n\n        vector<int> ans;\n        for (int i = 0; i < n; ++i) {\n            if (nums[i] > 0) {\n                ans.push_back(i + 1); // Missing numbers correspond to positive indices\n            }\n        }\n\n        return ans;\n    }\n};"
+      "hash-table": "class Solution {\n    public List<Integer> findDisappearedNumbers(int[] nums) {\n        for (int i = 0; i < nums.length; i++) {\n            int idx = Math.abs(nums[i]) - 1;\n            if (nums[idx] > 0) {\n                nums[idx] = -nums[idx];\n            }\n        }\n\n        List<Integer> result = new ArrayList<>();\n        for (int i = 0; i < nums.length; i++) {\n            if (nums[i] > 0) {\n                result.add(i + 1);\n            }\n        }\n        return result;\n    }\n}"
     }
   },
   "449": {
@@ -2256,12 +2256,12 @@
   },
   "452": {
     "solution": {
-      "greedy": "#include <vector>\n#include <algorithm>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    int findMinArrowShots(vector<vector<int>>& points) {\n        if (points.empty()) return 0;\n\n        sort(points.begin(), points.end(), [](const vector<int>& a, const vector<int>& b) {\n            return a[1] < b[1];\n        });\n\n        int arrows = 1;  \n        int prevEnd = points[0][1];\n\n        for (const auto& balloon : points) {\n            if (balloon[0] > prevEnd) {  \n                arrows++;\n                prevEnd = balloon[1];  \n            }\n        }\n\n        return arrows;\n    }\n};"
+      "greedy": "class Solution {\n    public int findMinArrowShots(int[][] points) {\n        if (points.length == 0) return 0;\n\n        Arrays.sort(points, (a, b) -> Integer.compare(a[1], b[1]));\n\n        int arrows = 1;\n        int end = points[0][1];\n\n        for (int[] point : points) {\n            if (point[0] > end) {\n                arrows++;\n                end = point[1];\n            }\n        }\n        return arrows;\n    }\n}"
     }
   },
   "453": {
     "solution": {
-      "math": "class Solution {\npublic:\n    int minMoves(vector<int>& nums) {\n        int minElement = *min_element(nums.begin(), nums.end()); \n        int moves = 0;\n        for (int num : nums) {\n            moves += num - minElement; \n        }\n        return moves;\n    }\n};"
+      "math": "class Solution {\n    public int minMoves(int[] nums) {\n        int min = Arrays.stream(nums).min().getAsInt();\n        int moves = 0;\n        for (int num : nums) {\n            moves += num - min;\n        }\n        return moves;\n    }\n}"
     }
   },
   "454": {
@@ -2271,7 +2271,7 @@
   },
   "455": {
     "solution": {
-      "greedy": "#include <vector>\n#include <algorithm>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    int findContentChildren(vector<int>& g, vector<int>& s) {\n        sort(g.begin(), g.end());\n        sort(s.begin(), s.end());\n        \n        int child = 0, cookie = 0;\n        \n        while (child < g.size() && cookie < s.size()) {\n            if (s[cookie] >= g[child]) {\n                child++;\n            }\n            cookie++;\n        }\n        \n        return child;\n    }\n};"
+      "greedy": "class Solution {\n    public int findContentChildren(int[] g, int[] s) {\n        Arrays.sort(g);\n        Arrays.sort(s);\n\n        int i = 0, j = 0;\n        while (i < g.length && j < s.length) {\n            if (s[j] >= g[i]) {\n                i++;\n            }\n            j++;\n        }\n        return i;\n    }\n}"
     }
   },
   "456": {
@@ -2291,7 +2291,7 @@
   },
   "459": {
     "solution": {
-      "string-matching": "class Solution {\npublic:\n    bool repeatedSubstringPattern(string s) {\n        string doubled = s + s;        \n        return doubled.substr(1, doubled.size() - 2).find(s) != string::npos;\n    }\n};\n"
+      "string-matching": "class Solution {\n    public boolean repeatedSubstringPattern(String s) {\n        String doubled = s + s;\n        return doubled.substring(1, doubled.length() - 1).contains(s);\n    }\n}"
     }
   },
   "460": {
