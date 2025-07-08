@@ -284,12 +284,12 @@
   },
   "57": {
     "solution": {
-      "array": "class Solution {\npublic:\n    vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {\n        vector<vector<int>> result;\n        int n = intervals.size();\n        int i = 0;\n\n        while (i < n && intervals[i][1] < newInterval[0]) {\n            result.push_back(intervals[i]);\n            i++;\n        }\n\n        while (i < n && intervals[i][0] <= newInterval[1]) {\n            newInterval[0] = min(newInterval[0], intervals[i][0]);\n            newInterval[1] = max(newInterval[1], intervals[i][1]);\n            i++;\n        }\n        result.push_back(newInterval);\n\n        while (i < n) {\n            result.push_back(intervals[i]);\n            i++;\n        }\n\n        return result;\n    }\n};\n"
+      "array": "import java.util.*;\n\nclass Solution {\n    public int[][] insert(int[][] intervals, int[] newInterval) {\n        List<int[]> result = new ArrayList<>();\n        int i = 0, n = intervals.length;\n\n        while (i < n && intervals[i][1] < newInterval[0]) {\n            result.add(intervals[i++]);\n        }\n\n        while (i < n && intervals[i][0] <= newInterval[1]) {\n            newInterval[0] = Math.min(newInterval[0], intervals[i][0]);\n            newInterval[1] = Math.max(newInterval[1], intervals[i][1]);\n            i++;\n        }\n        result.add(newInterval);\n\n        while (i < n) {\n            result.add(intervals[i++]);\n        }\n\n        return result.toArray(new int[result.size()][]);\n    }\n}"
     }
   },
   "58": {
     "solution": {
-      "string": "class Solution {\npublic:\n    int lengthOfLastWord(string s) {\n        int n = s.size();\n        int index = n - 1;\n        \n        // Skip any trailing spaces\n        while (index >= 0 && s[index] == ' ') {\n            index--;\n        }\n        \n        // Now index points to the last non-space character\n        return dfs(s, index);\n    }\n    \n    int dfs(const string& s, int index) {\n        int length = 0;\n        \n        // Count the length of the last word (from the current position backwards)\n        while (index >= 0 && s[index] != ' ') {\n            length++;\n            index--;\n        }\n        \n        return length;\n    }\n};\n"
+      "string": "class Solution {\n    public int lengthOfLastWord(String s) {\n        int index = s.length() - 1;\n\n        while (index >= 0 && s.charAt(index) == ' ') {\n            index--;\n        }\n\n        int length = 0;\n        while (index >= 0 && s.charAt(index) != ' ') {\n            length++;\n            index--;\n        }\n\n        return length;\n    }\n}"
     }
   },
   "59": {
