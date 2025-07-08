@@ -1278,18 +1278,17 @@
   },
   "258": {
     "solution": {
-      "number-theory": "class Solution {\npublic:\n    int addDigits(int num) {\n        if (num == 0) return 0;\n        \n        return 1 + (num - 1) % 9;\n    }\n};\n"
+      "number-theory": "class Solution {\n    public int addDigits(int num) {\n        if (num == 0) return 0;\n        return 1 + (num - 1) % 9;\n    }\n}"
     }
   },
   "259": {
     "solution": {
-      "two-pointers": "",
-      "binary-search": "class Solution {\npublic:\n    int threeSumSmaller(vector<int>& nums, int target) {\n        sort(nums.begin(), nums.end());\n        int tripletCount = 0;\n\n        for (int i = 0, n = nums.size(); i < n; ++i) {\n            int left = i + 1, right = n - 1;\n\n            while (left < right) {\n                int currentSum = nums[i] + nums[left] + nums[right];\n\n                if (currentSum >= target) {\n                    --right; \n                } else {\n                    tripletCount += right - left; \n                    ++left; \n                }\n            }\n        }\n        return tripletCount;\n    }\n};\n"
+      "binary-search": "import java.util.Arrays;\n\nclass Solution {\n    public int threeSumSmaller(int[] nums, int target) {\n        Arrays.sort(nums);\n        int count = 0;\n\n        for (int i = 0; i < nums.length - 2; i++) {\n            int left = i + 1, right = nums.length - 1;\n\n            while (left < right) {\n                int sum = nums[i] + nums[left] + nums[right];\n\n                if (sum < target) {\n                    count += right - left;\n                    left++;\n                } else {\n                    right--;\n                }\n            }\n        }\n\n        return count;\n    }\n}"
     }
   },
   "260": {
     "solution": {
-      "bit-manipulation": "class Solution {\npublic:\n    int getBit(int x, int k) { return (x >> k) & 1; }\n\n    vector<int> singleNumber(vector<int>& nums) {\n        int xorXY = 0;\n        for (int num : nums)\n            xorXY ^= num;\n\n        int pos = 0;\n        while (!getBit(xorXY, pos))\n            pos++;\n\n        int x = 0;\n        for (int num : nums)\n            if (getBit(num, pos))\n                x ^= num;\n\n        int y = xorXY ^ x;\n        return {x, y};\n    }\n};"
+      "bit-manipulation": "class Solution {\n    public int[] singleNumber(int[] nums) {\n        int xor = 0;\n        for (int num : nums) {\n            xor ^= num;\n        }\n\n        int diffBit = xor & -xor;\n        int x = 0;\n        for (int num : nums) {\n            if ((num & diffBit) != 0) {\n                x ^= num;\n            }\n        }\n\n        return new int[] {x, xor ^ x};\n    }\n}"
     }
   },
   "261": {
@@ -1304,7 +1303,7 @@
   },
   "263": {
     "solution": {
-      "math": "class Solution {\npublic:\n    bool isUgly(int n) {\n        if (n <= 0)\n            return false;\n        while (n % 2 == 0)\n            n /= 2;\n        while (n % 3 == 0)\n            n /= 3;\n        while (n % 5 == 0)\n            n /= 5;\n        return n == 1;\n    }\n};"
+      "math": "class Solution {\n    public boolean isUgly(int n) {\n        if (n <= 0) return false;\n        while (n % 2 == 0) n /= 2;\n        while (n % 3 == 0) n /= 3;\n        while (n % 5 == 0) n /= 5;\n        return n == 1;\n    }\n}"
     }
   },
   "264": {
