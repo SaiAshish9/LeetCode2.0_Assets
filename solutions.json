@@ -2194,7 +2194,7 @@
   },
   "434": {
     "solution": {
-      "string": "class Solution {\npublic:\n    int countSegments(string s) {\n        int count = 0;\n        bool inSegment = false;\n\n        for (char c : s) {\n            if (c != ' ') { \n                if (!inSegment) { \n                    count++;\n                    inSegment = true;\n                }\n            } else { \n                inSegment = false;\n            }\n        }\n\n        return count;\n    }\n};\n"
+      "string": "class Solution {\n    public int countSegments(String s) {\n        int count = 0;\n        boolean inSegment = false;\n\n        for (char c : s.toCharArray()) {\n            if (c != ' ') {\n                if (!inSegment) {\n                    count++;\n                    inSegment = true;\n                }\n            } else {\n                inSegment = false;\n            }\n        }\n\n        return count;\n    }\n}"
     }
   },
   "435": {
