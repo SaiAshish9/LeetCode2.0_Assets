@@ -648,27 +648,27 @@
   },
   "134": {
     "solution": {
-      "greedy": "class Solution {\npublic:\n    int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {\n        int totalGas = 0, totalCost = 0, tank = 0, start = 0;\n        \n        for (int i = 0; i < gas.size(); i++) {\n            totalGas += gas[i];\n            totalCost += cost[i];\n            tank += gas[i] - cost[i];\n            \n            // If tank is negative, reset start position and tank\n            if (tank < 0) {\n                start = i + 1;\n                tank = 0;\n            }\n        }\n        \n        // If total gas is less than total cost, no solution exists\n        return (totalGas >= totalCost) ? start : -1;\n    }\n};"
+      "greedy": "class Solution {\n    public int canCompleteCircuit(int[] gas, int[] cost) {\n        int totalGas = 0, totalCost = 0, tank = 0, start = 0;\n\n        for (int i = 0; i < gas.length; i++) {\n            totalGas += gas[i];\n            totalCost += cost[i];\n            tank += gas[i] - cost[i];\n\n            if (tank < 0) {\n                start = i + 1;\n                tank = 0;\n            }\n        }\n\n        return totalGas >= totalCost ? start : -1;\n    }\n}"
     }
   },
   "135": {
     "solution": {
-      "greedy": "class Solution {\npublic:\n    int candy(vector<int>& ratings) {\n        int n = ratings.size();\n        vector<int> candies(n, 1); // Initialize all children with 1 candy\n        \n        // Pass 1: Left to right\n        for (int i = 1; i < n; i++) {\n            if (ratings[i] > ratings[i - 1]) {\n                candies[i] = candies[i - 1] + 1;\n            }\n        }\n        \n        // Pass 2: Right to left\n        for (int i = n - 2; i >= 0; i--) {\n            if (ratings[i] > ratings[i + 1]) {\n                candies[i] = max(candies[i], candies[i + 1] + 1);\n            }\n        }\n        \n        // Sum up all candies\n        return accumulate(candies.begin(), candies.end(), 0);\n    }\n};"
+      "greedy": "import java.util.*;\n\nclass Solution {\n    public int candy(int[] ratings) {\n        int n = ratings.length;\n        int[] candies = new int[n];\n        Arrays.fill(candies, 1);\n\n        for (int i = 1; i < n; i++) {\n            if (ratings[i] > ratings[i - 1]) {\n                candies[i] = candies[i - 1] + 1;\n            }\n        }\n\n        for (int i = n - 2; i >= 0; i--) {\n            if (ratings[i] > ratings[i + 1]) {\n                candies[i] = Math.max(candies[i], candies[i + 1] + 1);\n            }\n        }\n\n        int total = 0;\n        for (int candy : candies) {\n            total += candy;\n        }\n\n        return total;\n    }\n}"
     }
   },
   "136": {
     "solution": {
-      "array": "class Solution {\npublic:\n    int singleNumber(vector<int>& nums) {\n        int result = 0;\n\n        // XOR all numbers\n        for (int num : nums) {\n            result ^= num;\n        }\n\n        return result;\n    }\n};\n"
+      "array": "class Solution {\n    public int singleNumber(int[] nums) {\n        int result = 0;\n        for (int num : nums) {\n            result ^= num;\n        }\n        return result;\n    }\n}"
     }
   },
   "137": {
     "solution": {
-      "bit-manipulation": "class Solution {\npublic:\n    int singleNumber(vector<int>& nums) {\n        int ones = 0;\n        int twos = 0;\n\n        for (const int num : nums) {\n            ones ^= (num & ~twos);\n            twos ^= (num & ~ones);\n        }\n\n        return ones;\n    }\n};"
+      "bit-manipulation": "class Solution {\n    public int singleNumber(int[] nums) {\n        int ones = 0, twos = 0;\n        for (int num : nums) {\n            ones = (ones ^ num) & ~twos;\n            twos = (twos ^ num) & ~ones;\n        }\n        return ones;\n    }\n}"
     }
   },
   "138": {
     "solution": {
-      "linked-list": "/*\n// Definition for a Node.\nclass Node {\npublic:\n    int val;\n    Node* next;\n    Node* random;\n\n    Node(int _val) {\n        val = _val;\n        next = NULL;\n        random = NULL;\n    }\n};\n*/\n\nclass Solution {\npublic:\n    Node* copyRandomList(Node* head) {\n        if (head == nullptr)\n            return nullptr;\n\n        Node* current = head;\n        while (current != nullptr) {\n            Node* newNode = new Node(current->val);\n            newNode->next = current->next;\n            current->next = newNode;\n            current = newNode->next;\n        }\n\n        current = head;\n        while (current != nullptr) {\n            if (current->random != nullptr) {\n                current->next->random = current->random->next;\n            }\n            current = current->next->next;\n        }\n\n        Node* dummy = new Node(0);\n        Node* copy = dummy;\n        current = head;\n\n        while (current != nullptr) {\n            Node* temp = current->next;\n            current->next = temp->next;\n            copy->next = temp;\n            copy = copy->next;\n            current = current->next;\n        }\n\n        return dummy->next;\n    }\n};\n"
+      "linked-list": "class Node {\n    int val;\n    Node next;\n    Node random;\n    Node(int val) {\n        this.val = val;\n    }\n}\n\nclass Solution {\n    public Node copyRandomList(Node head) {\n        if (head == null) return null;\n\n        Node current = head;\n        while (current != null) {\n            Node newNode = new Node(current.val);\n            newNode.next = current.next;\n            current.next = newNode;\n            current = newNode.next;\n        }\n\n        current = head;\n        while (current != null) {\n            if (current.random != null) {\n                current.next.random = current.random.next;\n            }\n            current = current.next.next;\n        }\n\n        Node dummy = new Node(0);\n        Node copy = dummy;\n        current = head;\n\n        while (current != null) {\n            Node temp = current.next;\n            current.next = temp.next;\n            copy.next = temp;\n            copy = copy.next;\n            current = current.next;\n        }\n\n        return dummy.next;\n    }\n}"
     }
   },
   "139": {
