@@ -1881,7 +1881,7 @@
   },
   "377": {
     "solution": {
-      "dynamic-programming": "// dp[i] stores the number of ways to form the sum i using elements from nums.\nclass Solution {\npublic:\n    int combinationSum4(vector<int>& nums, int target) {\n        vector<unsigned long> dp(target + 1);\n        dp[0] = 1;\n\n        for (int i = 1; i <= target; ++i)\n            for (const int num : nums)\n                if (i >= num)\n                    dp[i] += dp[i - num];\n\n        return dp[target];\n    }\n};"
+      "dynamic-programming": "class Solution {\n    public int combinationSum4(int[] nums, int target) {\n        long[] dp = new long[target + 1];\n        dp[0] = 1; // Base case: one way to form target 0\n\n        for (int i = 1; i <= target; i++) {\n            for (int num : nums) {\n                if (i >= num) {\n                    dp[i] += dp[i - num];\n                }\n            }\n        }\n\n        return (int) dp[target];\n    }\n}"
     }
   },
   "378": {
