@@ -24910,7 +24910,7 @@
         "Math",
         "Recursion"
       ],
-      "default": "Recursion",
+      "default": "Linked List",
       "difficulty": "Medium",
       "language": "Solution",
       "acceptance": 43.5
