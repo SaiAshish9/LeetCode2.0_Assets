@@ -1003,12 +1003,12 @@
   },
   "204": {
     "solution": {
-      "number-theory": "class Solution {\npublic:\n    int countPrimes(int n) {\n        if (n <= 2) return 0;\n\n        vector<bool> isPrime(n, true);\n        isPrime[0] = isPrime[1] = false; \n        \n        for (int i = 2; i * i < n; i++) {\n            if (isPrime[i]) {\n                for (int j = i * i; j < n; j += i) {\n                    isPrime[j] = false;\n                }\n            }\n        }\n        \n        int count = 0;\n        for (int i = 2; i < n; i++) {\n            if (isPrime[i]) {\n                count++;\n            }\n        }\n        \n        return count;\n    }\n};\n"
+      "number-theory": "public class Solution {\n    public int countPrimes(int n) {\n        if (n <= 2) return 0;\n\n        boolean[] isPrime = new boolean[n];\n        Arrays.fill(isPrime, true);\n        isPrime[0] = isPrime[1] = false;\n\n        for (int i = 2; i * i < n; i++) {\n            if (isPrime[i]) {\n                for (int j = i * i; j < n; j += i) {\n                    isPrime[j] = false;\n                }\n            }\n        }\n\n        int count = 0;\n        for (int i = 2; i < n; i++) {\n            if (isPrime[i]) {\n                count++;\n            }\n        }\n\n        return count;\n    }\n}"
     }
   },
   "205": {
     "solution": {
-      "hash-table": "#include <string>\n#include <unordered_map>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool isIsomorphic(string s, string t) {\n        if (s.size() != t.size()) {\n            return false;\n        }\n\n        unordered_map<char, char> sToTMap, tToSMap;\n\n        for (int i = 0; i < s.size(); ++i) {\n            if (sToTMap.find(s[i]) != sToTMap.end()) {\n                if (sToTMap[s[i]] != t[i]) {\n                    return false;\n                }\n            } else {\n                sToTMap[s[i]] = t[i];\n            }\n\n            if (tToSMap.find(t[i]) != tToSMap.end()) {\n                if (tToSMap[t[i]] != s[i]) {\n                    return false;\n                }\n            } else {\n                tToSMap[t[i]] = s[i];\n            }\n        }\n\n        return true;\n    }\n};"
+      "hash-table": "import java.util.*;\n\npublic class Solution {\n    public boolean isIsomorphic(String s, String t) {\n        if (s.length() != t.length()) return false;\n\n        Map<Character, Character> sToT = new HashMap<>();\n        Map<Character, Character> tToS = new HashMap<>();\n\n        for (int i = 0; i < s.length(); i++) {\n            char cs = s.charAt(i);\n            char ct = t.charAt(i);\n\n            if (sToT.containsKey(cs) && sToT.get(cs) != ct) return false;\n            if (tToS.containsKey(ct) && tToS.get(ct) != cs) return false;\n\n            sToT.put(cs, ct);\n            tToS.put(ct, cs);\n        }\n\n        return true;\n    }\n}"
     }
   },
   "206": {
