@@ -188,7 +188,7 @@
   },
   "38": {
     "solution": {
-      "string": "class Solution {\npublic:\n    string countAndSay(int n) {\n        string result = \"1\";\n\n        for (int i = 2; i <= n; ++i) {\n            string temp = \"\";\n            int count = 1;\n\n            for (int j = 1; j < result.size(); ++j) {\n                if (result[j] == result[j - 1]) {\n                    count++;\n                } else {\n                    temp += to_string(count) + result[j - 1];\n                    count = 1;\n                }\n            }\n\n            temp += to_string(count) + result.back();\n            result = temp; \n        }\n\n        return result;\n    }\n};\n"
+      "string": "class Solution {\n    public String countAndSay(int n) {\n        String result = \"1\";\n\n        for (int i = 2; i <= n; i++) {\n            StringBuilder temp = new StringBuilder();\n            int count = 1;\n\n            for (int j = 1; j < result.length(); j++) {\n                if (result.charAt(j) == result.charAt(j - 1)) {\n                    count++;\n                } else {\n                    temp.append(count).append(result.charAt(j - 1));\n                    count = 1;\n                }\n            }\n\n            temp.append(count).append(result.charAt(result.length() - 1));\n            result = temp.toString();\n        }\n\n        return result;\n    }\n}"
     }
   },
   "39": {
@@ -203,7 +203,7 @@
   },
   "41": {
     "solution": {
-      "hash-table": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int firstMissingPositive(vector<int>& nums) {\n        int n = nums.size();\n\n        for (int i = 0; i < n; i++) {\n            if (nums[i] <= 0) {\n                nums[i] = n + 1;\n            }\n        }\n\n        for (int i = 0; i < n; i++) {\n            int val = abs(nums[i]);\n            if (val <= n) {\n                nums[val - 1] = -abs(nums[val - 1]);\n            }\n        }\n\n        for (int i = 0; i < n; i++) {\n            if (nums[i] > 0) {\n                return i + 1;\n            }\n        }\n\n        return n + 1;\n    }\n};"
+      "hash-table": "import java.util.*;\n\nclass Solution {\n    public int firstMissingPositive(int[] nums) {\n        int n = nums.length;\n\n        for (int i = 0; i < n; i++) {\n            if (nums[i] <= 0) {\n                nums[i] = n + 1;\n            }\n        }\n\n        for (int i = 0; i < n; i++) {\n            int val = Math.abs(nums[i]);\n            if (val <= n) {\n                nums[val - 1] = -Math.abs(nums[val - 1]);\n            }\n        }\n\n        for (int i = 0; i < n; i++) {\n            if (nums[i] > 0) {\n                return i + 1;\n            }\n        }\n\n        return n + 1;\n    }\n}"
     }
   },
   "42": {
