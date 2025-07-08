@@ -4364,9 +4364,9 @@
       "tree": ""
     }
   },
-  "873": {
+   "873": {
     "solution": {
-      "dynamic-programming": "class Solution {\npublic:\n    int lenLongestFibSubseq(vector<int>& arr) {\n        const int n = arr.size();\n        int ans = 0;\n        vector<vector<int>> dp(n, vector<int>(n, 2));\n        unordered_map<int, int> numToIndex;\n\n        for (int i = 0; i < n; ++i)\n            numToIndex[arr[i]] = i;\n\n        for (int j = 0; j < n; ++j)\n            for (int k = j + 1; k < n; ++k) {\n                const int ai = arr[k] - arr[j];\n                if (ai < arr[j] && numToIndex.contains(ai)) {\n                    const int i = numToIndex[ai];\n                    dp[j][k] = dp[i][j] + 1;\n                    ans = max(ans, dp[j][k]);\n                }\n            }\n\n        return ans;\n    }\n};"
+      "dynamic-programming": "import java.util.*;\n\nclass Solution {\n    public int lenLongestFibSubseq(int[] arr) {\n        int n = arr.length;\n        int maxLen = 0;\n        Map<Integer, Integer> indexMap = new HashMap<>();\n\n        for (int i = 0; i < n; i++) {\n            indexMap.put(arr[i], i);\n        }\n\n        int[][] dp = new int[n][n];\n\n        for (int j = 0; j < n; j++) {\n            for (int k = j + 1; k < n; k++) {\n                int ai = arr[k] - arr[j];\n                if (ai < arr[j] && indexMap.containsKey(ai)) {\n                    int i = indexMap.get(ai);\n                    dp[j][k] = dp[i][j] > 0 ? dp[i][j] + 1 : 3;\n                    maxLen = Math.max(maxLen, dp[j][k]);\n                }\n            }\n        }\n\n        return maxLen;\n    }\n}"
     }
   },
   "874": {
