@@ -1054,7 +1054,7 @@
   "214": {
     "solution": {
       "rolling-hash": "",
-      "hash-function": "class Solution {\npublic:\n    string shortestPalindrome(string s) {\n        string rev = s;\n        reverse(rev.begin(), rev.end());\n\n        string combined = s + \"#\" + rev;\n\n        vector<int> prefix(combined.size(), 0);\n        for (int i = 1; i < combined.size(); i++) {\n            int j = prefix[i - 1];\n            while (j > 0 && combined[i] != combined[j]) {\n                j = prefix[j - 1];\n            }\n            if (combined[i] == combined[j]) {\n                j++;\n            }\n            prefix[i] = j;\n        }\n\n        int longest_palindrome_prefix_len = prefix.back();\n\n        return rev.substr(0, s.size() - longest_palindrome_prefix_len) + s;\n    }\n};\n"
+      "hash-function": "class Solution {\n    public String shortestPalindrome(String s) {\n        String rev = new StringBuilder(s).reverse().toString();\n        String combined = s + \"#\" + rev;\n\n        int[] prefix = new int[combined.length()];\n\n        for (int i = 1; i < combined.length(); i++) {\n            int j = prefix[i - 1];\n            while (j > 0 && combined.charAt(i) != combined.charAt(j)) {\n                j = prefix[j - 1];\n            }\n            if (combined.charAt(i) == combined.charAt(j)) {\n                j++;\n            }\n            prefix[i] = j;\n        }\n\n        int longestPrefix = prefix[combined.length() - 1];\n        String suffixToAdd = rev.substring(0, s.length() - longestPrefix);\n        return suffixToAdd + s;\n    }\n}"
     }
   },
   "215": {
@@ -1065,7 +1065,7 @@
   },
   "216": {
     "solution": {
-      "backtracking": "class Solution {\npublic:\n    void findCombinations(int start, int k, int target,\n                          vector<int>& currentCombination,\n                          vector<vector<int>>& result) {\n        if (currentCombination.size() == k) {\n            if (target == 0) {\n                result.push_back(currentCombination);\n            }\n            return;\n        }\n\n        for (int i = start; i <= 9; i++) {\n            if (i > target)\n                break;\n            currentCombination.push_back(i);\n            findCombinations(i + 1, k, target - i, currentCombination, result);\n            currentCombination.pop_back();\n        }\n    }\n\n    vector<vector<int>> combinationSum3(int k, int n) {\n        vector<vector<int>> result;\n        vector<int> currentCombination;\n        findCombinations(1, k, n, currentCombination, result);\n        return result;\n    }\n};\n"
+      "backtracking": "class Solution {\n    public List<List<Integer>> combinationSum3(int k, int n) {\n        List<List<Integer>> result = new ArrayList<>();\n        backtrack(1, k, n, new ArrayList<>(), result);\n        return result;\n    }\n\n    private void backtrack(int start, int k, int target, List<Integer> combination, List<List<Integer>> result) {\n        if (combination.size() == k) {\n            if (target == 0) {\n                result.add(new ArrayList<>(combination));\n            }\n            return;\n        }\n\n        for (int i = start; i <= 9; i++) {\n            if (i > target) break;\n            combination.add(i);\n            backtrack(i + 1, k, target - i, combination, result);\n            combination.remove(combination.size() - 1);\n        }\n    }\n}"
     }
   },
   "217": {
