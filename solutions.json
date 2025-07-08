@@ -31,17 +31,17 @@
   },
   "7": {
     "solution": {
-      "math": "class Solution {\npublic:\n    int reverse(int x) {\n        long long reversed = 0; \n        while (x != 0) {\n            int digit = x % 10;\n            reversed = reversed * 10 + digit; \n            x /= 10; \n        }\n\n        if (reversed < INT_MIN || reversed > INT_MAX) {\n            return 0;\n        }\n\n        return static_cast<int>(reversed);\n    }\n};\n"
+      "math": "class Solution {\n    public int reverse(int x) {\n        long reversed = 0;\n        while (x != 0) {\n            int digit = x % 10;\n            reversed = reversed * 10 + digit;\n            x /= 10;\n        }\n        if (reversed < Integer.MIN_VALUE || reversed > Integer.MAX_VALUE) {\n            return 0;\n        }\n        return (int) reversed;\n    }\n}"
     }
   },
   "8": {
     "solution": {
-      "string": "class Solution {\npublic:\n    int myAtoi(string s) {\n        int i = 0, result = 0, sign = 1;\n        \n        while (i < s.size() && s[i] == ' ') {\n            i++;\n        }\n        \n        if (i < s.size() && (s[i] == '+' || s[i] == '-')) {\n            sign = (s[i] == '-') ? -1 : 1;\n            i++;\n        }\n        \n        while (i < s.size() && isdigit(s[i])) {\n            int digit = s[i] - '0';\n            \n            if (result > (INT_MAX - digit) / 10) {\n                return sign == 1 ? INT_MAX : INT_MIN;\n            }\n            \n            result = result * 10 + digit;\n            i++;\n        }\n        \n        return result * sign;\n    }\n};\n"
+      "string": "class Solution {\n    public int myAtoi(String s) {\n        int i = 0, result = 0, sign = 1;\n\n        while (i < s.length() && s.charAt(i) == ' ') {\n            i++;\n        }\n\n        if (i < s.length() && (s.charAt(i) == '+' || s.charAt(i) == '-')) {\n            sign = (s.charAt(i) == '-') ? -1 : 1;\n            i++;\n        }\n\n        while (i < s.length() && Character.isDigit(s.charAt(i))) {\n            int digit = s.charAt(i) - '0';\n            if (result > (Integer.MAX_VALUE - digit) / 10) {\n                return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;\n            }\n            result = result * 10 + digit;\n            i++;\n        }\n\n        return result * sign;\n    }\n}"
     }
   },
   "9": {
     "solution": {
-      "math": "class Solution {\npublic:\n    bool isPalindrome(int x) {\n        // Negative numbers and numbers ending with 0 (except 0 itself) are not palindromes\n        if (x < 0 || (x % 10 == 0 && x != 0)) {\n            return false;\n        }\n\n        int reversed = 0; // Variable to store the reversed number\n        int original = x; // Keep the original number for comparison\n\n        while (x > 0) {\n            int digit = x % 10; // Extract the last digit\n\n            // Check for overflow before updating the reversed number\n            if (reversed > (INT_MAX - digit) / 10) {\n                return false;\n            }\n\n            reversed = reversed * 10 + digit; // Update the reversed number\n            x /= 10; // Remove the last digit from x\n        }\n\n        return original == reversed; // Compare the reversed number with the original\n    }\n};\n"
+      "math": "class Solution {\n    public boolean isPalindrome(int x) {\n        if (x < 0 || (x % 10 == 0 && x != 0)) {\n            return false;\n        }\n\n        int reversed = 0, original = x;\n\n        while (x > 0) {\n            int digit = x % 10;\n            if (reversed > (Integer.MAX_VALUE - digit) / 10) {\n                return false;\n            }\n            reversed = reversed * 10 + digit;\n            x /= 10;\n        }\n\n        return original == reversed;\n    }\n}"
     }
   },
   "10": {
