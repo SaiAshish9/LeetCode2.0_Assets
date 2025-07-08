@@ -988,7 +988,7 @@
   },
   "201": {
     "solution": {
-      "bit-manipulation": "class Solution {\npublic:\n    int rangeBitwiseAnd(int left, int right) {\n        int shiftCount = 0;\n\n        while (left != right) {\n            left >>= 1;\n            right >>= 1;\n            shiftCount++;\n        }\n\n        return left << shiftCount;\n    }\n};\n"
+      "bit-manipulation": "public class Solution {\n    public int rangeBitwiseAnd(int left, int right) {\n        int shiftCount = 0;\n\n        while (left != right) {\n            left >>= 1;\n            right >>= 1;\n            shiftCount++;\n        }\n\n        return left << shiftCount;\n    }\n}"
     }
   },
   "202": {
