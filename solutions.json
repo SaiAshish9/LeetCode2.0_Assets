@@ -3725,7 +3725,7 @@
   },
   "745": {
     "solution": {
-      "design": "struct TrieNode {\n    vector<shared_ptr<TrieNode>> children;\n    int weight = -1; // Stores the weight of the word\n\n    TrieNode() : children(27) {} // Initialize with 27 children (26 letters + '{')\n};\n\nclass Trie {\npublic:\n    // Inserts a word into the trie with its corresponding weight\n    void insert(const string& word, int weight) {\n        shared_ptr<TrieNode> node = root;\n        for (const char c : word) {\n            int index = c - 'a';\n            if (c == '{') // Special character '{' to handle prefix-suffix separation\n                index = 26;\n\n            if (node->children[index] == nullptr)\n                node->children[index] = make_shared<TrieNode>();\n\n            node = node->children[index];\n            node->weight = weight; // Update the weight at each node\n        }\n    }\n\n    // Finds the weight of the word if it starts with the given prefix\n    int startsWith(const string& word) {\n        shared_ptr<TrieNode> node = root;\n        for (const char c : word) {\n            int index = c - 'a';\n            if (c == '{')\n                index = 26;\n\n            if (node->children[index] == nullptr)\n                return -1; // Prefix does not exist\n\n            node = node->children[index];\n        }\n        return node->weight; // Return the weight of the last node\n    }\n\nprivate:\n    shared_ptr<TrieNode> root = make_shared<TrieNode>();\n};\n\nclass WordFilter {\npublic:\n    WordFilter(vector<string>& words) {\n        for (int i = 0; i < words.size(); ++i) {\n            const string& word = words[i];\n            for (int j = 0; j <= word.length(); ++j) {\n                // Create combinations of suffix + '{' + word\n                trie.insert(word.substr(j) + '{' + word, i);\n            }\n        }\n    }\n\n    // Returns the weight of the word matching the given prefix and suffix\n    int f(string prefix, string suffix) {\n        return trie.startsWith(suffix + '{' + prefix);\n    }\n\nprivate:\n    Trie trie;\n};\n\n/**\n * Your WordFilter object will be instantiated and called as such:\n * WordFilter* obj = new WordFilter(words);\n * int param_1 = obj->f(prefix, suffix);\n */"
+      "design": "class TrieNode {\n    TrieNode[] children;\n    int weight;\n\n    public TrieNode() {\n        children = new TrieNode[27]; // 26 letters + '{'\n        weight = -1;\n    }\n}\n\nclass Trie {\n    private TrieNode root;\n\n    public Trie() {\n        root = new TrieNode();\n    }\n\n    public void insert(String word, int weight) {\n        TrieNode node = root;\n        for (char c : word.toCharArray()) {\n            int index = (c == '{') ? 26 : c - 'a';\n            if (node.children[index] == null) {\n                node.children[index] = new TrieNode();\n            }\n            node = node.children[index];\n            node.weight = weight;\n        }\n    }\n\n    public int startsWith(String word) {\n        TrieNode node = root;\n        for (char c : word.toCharArray()) {\n            int index = (c == '{') ? 26 : c - 'a';\n            if (node.children[index] == null) return -1;\n            node = node.children[index];\n        }\n        return node.weight;\n    }\n}\n\nclass WordFilter {\n    private Trie trie;\n\n    public WordFilter(String[] words) {\n        trie = new Trie();\n        for (int weight = 0; weight < words.length; weight++) {\n            String word = words[weight];\n            for (int i = 0; i <= word.length(); i++) {\n                String suffixPrefix = word.substring(i) + '{' + word;\n                trie.insert(suffixPrefix, weight);\n            }\n        }\n    }\n\n    public int f(String prefix, String suffix) {\n        return trie.startsWith(suffix + '{' + prefix);\n    }\n}"
     }
   },
   "746": {
@@ -3750,7 +3750,7 @@
   },
   "750": {
     "solution": {
-      "dynamic-programming": "class Solution {\npublic:\n    int countCornerRectangles(vector<vector<int>>& grid) {\n        int n = grid[0].size();\n        int ans = 0;\n        map<pair<int, int>, int> cnt;\n        for (auto& row : grid) {\n            for (int i = 0; i < n; ++i) {\n                if (row[i]) {\n                    for (int j = i + 1; j < n; ++j) {\n                        if (row[j]) {\n                            ans += cnt[{i, j}];\n                            ++cnt[{i, j}];\n                        }\n                    }\n                }\n            }\n        }\n        return ans;\n    }\n};"
+      "dynamic-programming": "class Solution {\n    public int countCornerRectangles(int[][] grid) {\n        int n = grid[0].length;\n        int ans = 0;\n        Map<String, Integer> countMap = new HashMap<>();\n\n        for (int[] row : grid) {\n            for (int i = 0; i < n; ++i) {\n                if (row[i] == 1) {\n                    for (int j = i + 1; j < n; ++j) {\n                        if (row[j] == 1) {\n                            String key = i + \",\" + j;\n                            int cnt = countMap.getOrDefault(key, 0);\n                            ans += cnt;\n                            countMap.put(key, cnt + 1);\n                        }\n                    }\n                }\n            }\n        }\n\n        return ans;\n    }\n}"
     }
   },
   "751": {
@@ -3785,7 +3785,7 @@
   },
   "757": {
     "solution": {
-      "sorting": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int intersectionSizeTwo(vector<vector<int>>& intervals) {\n        // Sort intervals by end point, and by start in descending order if ends are equal\n        sort(intervals.begin(), intervals.end(), [](const vector<int>& a, const vector<int>& b) {\n            return a[1] < b[1] || (a[1] == b[1] && a[0] > b[0]);\n        });\n\n        int count = 0;\n        int largest = -1, secondLargest = -1;\n\n        for (const auto& interval : intervals) {\n            int start = interval[0], end = interval[1];\n\n            // If the current interval does not overlap with the largest and second largest\n            if (largest < start) {\n                count += 2; // Add two elements\n                secondLargest = end - 1; // Second largest is the second-to-last element in the interval\n                largest = end; // Largest is the last element in the interval\n            } else if (secondLargest < start) {\n                count += 1; // Add one element\n                secondLargest = largest; // Update second largest to the previous largest\n                largest = end; // Update largest to the end of the interval\n            }\n        }\n\n        return count;\n    }\n};\n"
+      "sorting": "import java.util.*;\n\nclass Solution {\n    public int intersectionSizeTwo(int[][] intervals) {\n        Arrays.sort(intervals, (a, b) -> a[1] != b[1] ? a[1] - b[1] : b[0] - a[0]);\n\n        int largest = -1, secondLargest = -1, count = 0;\n        for (int[] interval : intervals) {\n            int start = interval[0], end = interval[1];\n\n            if (start > largest) {\n                count += 2;\n                secondLargest = end - 1;\n                largest = end;\n            } else if (start > secondLargest) {\n                count += 1;\n                secondLargest = largest;\n                largest = end;\n            }\n        }\n\n        return count;\n    }\n}"
     }
   },
   "758": {
@@ -3810,7 +3810,7 @@
   },
   "762": {
     "solution": {
-      "bit-manipulation": "class Solution {\npublic:\n    int countPrimeSetBits(int left, int right) {\n        const unordered_set<int> primes = {2,  3,  5,  7,  11, 13,\n                                           17, 19, 23, 29, 31};\n        int count = 0;\n\n        for (int num = left; num <= right; ++num) {\n            int setBits = __builtin_popcount(num);\n            if (primes.count(setBits))\n                ++count;\n        }\n\n        return count;\n    }\n};"
+      "bit-manipulation": "import java.util.*;\n\nclass Solution {\n    private static final Set<Integer> PRIME_SET = new HashSet<>(Arrays.asList(\n        2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31\n    ));\n\n    public int countPrimeSetBits(int left, int right) {\n        int count = 0;\n        for (int num = left; num <= right; ++num) {\n            if (PRIME_SET.contains(Integer.bitCount(num))) {\n                count++;\n            }\n        }\n        return count;\n    }\n}"
     }
   },
   "763": {
@@ -3825,7 +3825,7 @@
   },
   "765": {
     "solution": {
-      "graph": "class UnionFind {\npublic:\n    UnionFind(int n) : count(n), parent(n), rank(n) {\n        iota(parent.begin(), parent.end(), 0);\n    }\n\n    void unionByRank(int u, int v) {\n        const int i = find(u);\n        const int j = find(v);\n        if (i == j)\n            return;\n        if (rank[i] < rank[j]) {\n            parent[i] = j;\n        } else if (rank[i] > rank[j]) {\n            parent[j] = i;\n        } else {\n            parent[i] = j;\n            ++rank[j];\n        }\n        --count;\n    }\n\n    int getCount() const { return count; }\n\nprivate:\n    int count;\n    vector<int> parent;\n    vector<int> rank;\n\n    int find(int u) { return parent[u] == u ? u : parent[u] = find(parent[u]); }\n};\n\nclass Solution {\npublic:\n    int minSwapsCouples(vector<int>& row) {\n        const int n = row.size() / 2;\n        UnionFind uf(n);\n\n        for (int i = 0; i < n; ++i) {\n            const int a = row[2 * i];\n            const int b = row[2 * i + 1];\n            uf.unionByRank(a / 2, b / 2);\n        }\n\n        return n - uf.getCount();\n    }\n};"
+      "graph": "class UnionFind {\n    private int[] parent, rank;\n    private int count;\n\n    public UnionFind(int n) {\n        parent = new int[n];\n        rank = new int[n];\n        count = n;\n        for (int i = 0; i < n; i++) parent[i] = i;\n    }\n\n    public int find(int x) {\n        if (parent[x] != x)\n            parent[x] = find(parent[x]);\n        return parent[x];\n    }\n\n    public void union(int x, int y) {\n        int px = find(x), py = find(y);\n        if (px == py) return;\n        if (rank[px] < rank[py]) parent[px] = py;\n        else if (rank[px] > rank[py]) parent[py] = px;\n        else {\n            parent[py] = px;\n            rank[px]++;\n        }\n        count--;\n    }\n\n    public int getCount() {\n        return count;\n    }\n}\n\nclass Solution {\n    public int minSwapsCouples(int[] row) {\n        int n = row.length / 2;\n        UnionFind uf = new UnionFind(n);\n        for (int i = 0; i < row.length; i += 2) {\n            uf.union(row[i] / 2, row[i + 1] / 2);\n        }\n        return n - uf.getCount();\n    }\n}"
     }
   },
   "766": {
@@ -3895,12 +3895,12 @@
   },
   "779": {
     "solution": {
-      "recursion": "class Solution {\npublic:\n    int kthGrammar(int n, int k) {\n        if (n == 1 && k == 1) {\n            return 0;\n        }\n\n        int mid = (1 << (n - 1)) / 2;\n        if (k <= mid) {\n            return kthGrammar(n - 1, k);\n        } else {\n            return 1 - kthGrammar(n - 1, k - mid);\n        }\n    }\n};\n"
+      "recursion": "class Solution {\n    public int kthGrammar(int n, int k) {\n        if (n == 1 && k == 1) return 0;\n        int mid = 1 << (n - 2);\n        if (k <= mid) return kthGrammar(n - 1, k);\n        return 1 - kthGrammar(n - 1, k - mid);\n    }\n}"
     }
   },
   "780": {
     "solution": {
-      "math": "class Solution {\npublic:\n    bool reachingPoints(int sx, int sy, int tx, int ty) {\n        while (sx < tx && sy < ty)\n            if (tx > ty)\n                tx %= ty;\n            else\n                ty %= tx;\n\n        return sx == tx && sy <= ty && (ty - sy) % sx == 0 ||\n               sy == ty && sx <= tx && (tx - sx) % sy == 0;\n    }\n};"
+      "math": "class Solution {\n    public boolean reachingPoints(int sx, int sy, int tx, int ty) {\n        while (sx < tx && sy < ty) {\n            if (tx > ty) tx %= ty;\n            else ty %= tx;\n        }\n        return (sx == tx && sy <= ty && (ty - sy) % sx == 0) ||\n               (sy == ty && sx <= tx && (tx - sx) % sy == 0);\n    }\n}"
     }
   },
   "781": {
@@ -3955,7 +3955,7 @@
   },
   "791": {
     "solution": {
-      "sorting": "#include <string>\n#include <unordered_map>\nusing namespace std;\n\nclass Solution {\npublic:\n    string customSortString(string order, string s) {\n        // Frequency map for characters in `s`\n        unordered_map<char, int> freq;\n        for (char c : s) {\n            freq[c]++;\n        }\n\n        // Build the result string based on `order`\n        string result;\n        for (char c : order) {\n            if (freq.count(c)) {\n                result.append(freq[c], c); // Append `freq[c]` occurrences of `c`\n                freq.erase(c); // Remove character from map\n            }\n        }\n\n        // Append remaining characters (not in `order`)\n        for (auto& [c, count] : freq) {\n            result.append(count, c);\n        }\n\n        return result;\n    }\n};\n"
+      "sorting": "import java.util.*;\n\nclass Solution {\n    public String customSortString(String order, String s) {\n        Map<Character, Integer> freq = new HashMap<>();\n        for (char c : s.toCharArray()) {\n            freq.put(c, freq.getOrDefault(c, 0) + 1);\n        }\n\n        StringBuilder sb = new StringBuilder();\n        for (char c : order.toCharArray()) {\n            if (freq.containsKey(c)) {\n                for (int i = 0; i < freq.get(c); i++) sb.append(c);\n                freq.remove(c);\n            }\n        }\n\n        for (Map.Entry<Character, Integer> entry : freq.entrySet()) {\n            for (int i = 0; i < entry.getValue(); i++) sb.append(entry.getKey());\n        }\n\n        return sb.toString();\n    }\n}"
     }
   },
   "792": {
@@ -3980,12 +3980,12 @@
   },
   "796": {
     "solution": {
-      "string-matching": "class Solution {\npublic:\n    bool rotateString(string s, string goal) {\n        return s.length() == goal.length() &&\n               (s + s).find(goal) != string::npos;\n    }\n};"
+      "string-matching": "class Solution {\n    public boolean rotateString(String s, String goal) {\n        return s.length() == goal.length() && (s + s).contains(goal);\n    }\n}"
     }
   },
   "797": {
     "solution": {
-      "backtracking": "class Solution {\npublic:\n    vector<vector<int>> allPathsSourceTarget(vector<vector<int>>& graph) {\n        vector<vector<int>> result;\n        vector<int> path;\n        dfs(graph, 0, path, result);\n        return result;\n    }\n\n    void dfs(vector<vector<int>>& graph, int node, vector<int>& path, vector<vector<int>>& result) {\n        path.push_back(node);\n        \n        if (node == graph.size() - 1) {\n            result.push_back(path);  \n        } else {\n            for (int neighbor : graph[node]) {\n                dfs(graph, neighbor, path, result);  \n            }\n        }\n        \n        path.pop_back();\n    }\n};\n"
+      "backtracking": "import java.util.*;\n\nclass Solution {\n    public List<List<Integer>> allPathsSourceTarget(int[][] graph) {\n        List<List<Integer>> result = new ArrayList<>();\n        List<Integer> path = new ArrayList<>();\n        dfs(graph, 0, path, result);\n        return result;\n    }\n\n    private void dfs(int[][] graph, int node, List<Integer> path, List<List<Integer>> result) {\n        path.add(node);\n        if (node == graph.length - 1) {\n            result.add(new ArrayList<>(path));\n        } else {\n            for (int next : graph[node]) {\n                dfs(graph, next, path, result);\n            }\n        }\n        path.remove(path.size() - 1);\n    }\n}"
     }
   },
   "798": {
