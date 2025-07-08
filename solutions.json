@@ -1851,7 +1851,7 @@
   },
   "371": {
     "solution": {
-      "bit-manipulation": "class Solution {\npublic:\n    int getSum(unsigned a, unsigned b) {\n        while (b > 0) { // Still have carry bits.\n            const unsigned carry = a & b; // Record the carry bits.\n            a ^= b; // ^ works like + without handling carry bits.\n            b = carry << 1;\n        }\n        return a;\n    }\n};"
+      "bit-manipulation": "class Solution {\n    public int getSum(int a, int b) {\n        while (b != 0) {\n            int carry = a & b;\n            a = a ^ b;\n            b = carry << 1;\n        }\n        return a;\n    }\n}"
     }
   },
   "372": {
@@ -1871,7 +1871,7 @@
   },
   "375": {
     "solution": {
-      "breadth-first-search": "class Solution {\npublic:\n    int getMoneyAmount(int n) {\n        vector<vector<int>> dp(n + 1, vector<int>(n + 1, 0));\n        \n        for (int len = 2; len <= n; ++len) { \n            for (int i = 1; i <= n - len + 1; ++i) {\n                int j = i + len - 1;\n                dp[i][j] = INT_MAX;\n                for (int k = i; k <= j; ++k) {\n                    int cost = k;\n                    int left = (k > i) ? dp[i][k - 1] : 0;\n                    int right = (k < j) ? dp[k + 1][j] : 0;\n                    dp[i][j] = min(dp[i][j], cost + max(left, right));\n                }\n            }\n        }\n        \n        return dp[1][n];\n    }\n};\n"
+      "dynamic-programming": "class Solution {\n    public int getMoneyAmount(int n) {\n        int[][] dp = new int[n + 1][n + 1];\n\n        for (int len = 2; len <= n; ++len) {\n            for (int start = 1; start <= n - len + 1; ++start) {\n                int end = start + len - 1;\n                dp[start][end] = Integer.MAX_VALUE;\n                for (int pivot = start; pivot <= end; ++pivot) {\n                    int left = (pivot > start) ? dp[start][pivot - 1] : 0;\n                    int right = (pivot < end) ? dp[pivot + 1][end] : 0;\n                    int cost = pivot + Math.max(left, right);\n                    dp[start][end] = Math.min(dp[start][end], cost);\n                }\n            }\n        }\n\n        return dp[1][n];\n    }\n}"
     }
   },
   "376": {
@@ -1891,7 +1891,7 @@
   },
   "379": {
     "solution": {
-      "design": "// OJ: https://leetcode.com/problems/design-phone-directory/\n// Time: O(1)\n// Space: O(N)\nclass PhoneDirectory {\nprivate:\n    unordered_set<int> pool;\n\npublic:\n    PhoneDirectory(int maxNumbers) {\n        while (maxNumbers--) {\n            pool.insert(maxNumbers);\n        }\n    }\n\n    int get() {\n        if (pool.empty()) {\n            return -1;\n        }\n        int ans = *pool.begin();\n        pool.erase(pool.begin());\n        return ans;\n    }\n\n    bool check(int number) {\n        return pool.find(number) != pool.end();\n    }\n\n    void release(int number) {\n        if (check(number)) {\n            return;\n        }\n        pool.insert(number);\n    }\n};"
+      "design": "import java.util.HashSet;\n\nclass PhoneDirectory {\n    private HashSet<Integer> pool;\n\n    public PhoneDirectory(int maxNumbers) {\n        pool = new HashSet<>();\n        for (int i = 0; i < maxNumbers; i++) {\n            pool.add(i);\n        }\n    }\n\n    public int get() {\n        if (pool.isEmpty()) {\n            return -1;\n        }\n        int number = pool.iterator().next();\n        pool.remove(number);\n        return number;\n    }\n\n    public boolean check(int number) {\n        return pool.contains(number);\n    }\n\n    public void release(int number) {\n        pool.add(number);\n    }\n}"
     }
   },
   "380": {
@@ -1911,7 +1911,7 @@
   },
   "383": {
     "solution": {
-      "counting": "class Solution {\npublic:\n    bool canConstruct(string ransomNote, string magazine) {\n        vector<int> count(26);\n\n        for (const char c : magazine)\n            ++count[c - 'a'];\n\n        for (const char c : ransomNote) {\n            if (count[c - 'a'] == 0)\n                return false;\n            --count[c - 'a'];\n        }\n\n        return true;\n    }\n};"
+      "counting": "class Solution {\n    public boolean canConstruct(String ransomNote, String magazine) {\n        int[] count = new int[26];\n\n        for (char c : magazine.toCharArray()) {\n            count[c - 'a']++;\n        }\n\n        for (char c : ransomNote.toCharArray()) {\n            if (count[c - 'a'] == 0) {\n                return false;\n            }\n            count[c - 'a']--;\n        }\n\n        return true;\n    }\n}"
     }
   },
   "384": {
