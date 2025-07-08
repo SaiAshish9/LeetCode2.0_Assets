@@ -2627,7 +2627,7 @@
   },
   "526": {
     "solution": {
-      "backtracking": "class Solution {\npublic:\n    int countArrangement(int n) {\n        int count = 0;\n        \n        vector<bool> used(n + 1, false);\n        \n        function<void(int)> dfs = [&](int position) {\n            if (position > n) {\n                count++;\n                return;\n            }\n            \n            for (int num = 1; num <= n; num++) {\n                if (!used[num] && (num % position == 0 || position % num == 0)) {\n                    used[num] = true;\n                    dfs(position + 1);\n                    used[num] = false;\n                }\n            }\n        };\n        \n        dfs(1);\n        \n        return count;\n    }\n};\n"
+      "backtracking": "class Solution {\n    private int count = 0;\n\n    public int countArrangement(int n) {\n        boolean[] used = new boolean[n + 1];\n        backtrack(n, 1, used);\n        return count;\n    }\n\n    private void backtrack(int n, int pos, boolean[] used) {\n        if (pos > n) {\n            count++;\n            return;\n        }\n\n        for (int i = 1; i <= n; i++) {\n            if (!used[i] && (i % pos == 0 || pos % i == 0)) {\n                used[i] = true;\n                backtrack(n, pos + 1, used);\n                used[i] = false;\n            }\n        }\n    }\n}"
     }
   },
   "527": {
