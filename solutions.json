@@ -3308,7 +3308,7 @@
   },
   "662": {
     "solution": {
-      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int widthOfBinaryTree(TreeNode* root) {\n        if (!root) return 0;\n        \n        queue<pair<TreeNode*, unsigned long long>> q;\n        q.push({root, 0});\n        \n        int maxWidth = 0;\n        \n        while (!q.empty()) {\n            int size = q.size();\n            unsigned long long left = q.front().second;\n            unsigned long long right = left;\n            \n            for (int i = 0; i < size; ++i) {\n                TreeNode* node = q.front().first;\n                unsigned long long idx = q.front().second;\n                q.pop();\n                \n                if (node->left) q.push({node->left, 2 * idx + 1});\n                if (node->right) q.push({node->right, 2 * idx + 2});\n                \n                right = idx; \n            }\n            \n            maxWidth = max(maxWidth, (int)(right - left + 1));\n        }\n        \n        return maxWidth;\n    }\n};"
+      "binary-tree": "class Solution {\n    public int widthOfBinaryTree(TreeNode root) {\n        if (root == null) return 0;\n\n        int maxWidth = 0;\n        Queue<Pair<TreeNode, Long>> queue = new LinkedList<>();\n        queue.offer(new Pair<>(root, 0L));\n\n        while (!queue.isEmpty()) {\n            int size = queue.size();\n            long min = queue.peek().getValue();\n            long first = 0, last = 0;\n\n            for (int i = 0; i < size; i++) {\n                Pair<TreeNode, Long> p = queue.poll();\n                TreeNode node = p.getKey();\n                long curId = p.getValue() - min;\n                if (i == 0) first = curId;\n                if (i == size - 1) last = curId;\n\n                if (node.left != null)\n                    queue.offer(new Pair<>(node.left, 2 * curId + 1));\n                if (node.right != null)\n                    queue.offer(new Pair<>(node.right, 2 * curId + 2));\n            }\n\n            maxWidth = Math.max(maxWidth, (int) (last - first + 1));\n        }\n        return maxWidth;\n    }\n}"
     }
   },
   "663": {
@@ -3323,7 +3323,7 @@
   },
   "665": {
     "solution": {
-      "array": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool checkPossibility(vector<int>& nums) {\n        int n = nums.size();\n        int count = 0; \n\n        for (int i = 0; i < n - 1; ++i) {\n            if (nums[i] > nums[i + 1]) {\n                if (++count > 1) return false; \n\n                if (i == 0 || nums[i - 1] <= nums[i + 1]) {\n                    nums[i] = nums[i + 1]; \n                } else {\n                    nums[i + 1] = nums[i]; \n                }\n            }\n        }\n\n        return true;\n    }\n};\n"
+      "array": "class Solution {\n    public boolean checkPossibility(int[] nums) {\n        int count = 0;\n        for (int i = 0; i < nums.length - 1; i++) {\n            if (nums[i] > nums[i + 1]) {\n                if (++count > 1) return false;\n                if (i == 0 || nums[i - 1] <= nums[i + 1]) {\n                    nums[i] = nums[i + 1];\n                } else {\n                    nums[i + 1] = nums[i];\n                }\n            }\n        }\n        return true;\n    }\n}"
     }
   },
   "666": {
@@ -3348,7 +3348,7 @@
   },
   "670": {
     "solution": {
-      "greedy": "class Solution {\npublic:\n    int maximumSwap(int num) {\n        string numStr = to_string(num);\n        int n = numStr.size();\n        vector<int> last(10, -1);\n        \n        for (int i = 0; i < n; ++i) {\n            last[numStr[i] - '0'] = i;\n        }\n        \n        for (int i = 0; i < n; ++i) {\n            for (int d = 9; d > numStr[i] - '0'; --d) {\n                if (last[d] > i) {\n                    swap(numStr[i], numStr[last[d]]);\n                    return stoi(numStr);\n                }\n            }\n        }\n        \n        return num;\n    }\n};\n"
+      "greedy": "class Solution {\n    public int maximumSwap(int num) {\n        char[] digits = String.valueOf(num).toCharArray();\n        int[] last = new int[10];\n        for (int i = 0; i < digits.length; i++) {\n            last[digits[i] - '0'] = i;\n        }\n\n        for (int i = 0; i < digits.length; i++) {\n            for (int d = 9; d > digits[i] - '0'; d--) {\n                if (last[d] > i) {\n                    char temp = digits[i];\n                    digits[i] = digits[last[d]];\n                    digits[last[d]] = temp;\n                    return Integer.parseInt(new String(digits));\n                }\n            }\n        }\n        return num;\n    }\n}"
     }
   },
   "671": {
@@ -3363,7 +3363,7 @@
   },
   "673": {
     "solution": {
-      "dynamic-programming": "class Solution {\npublic:\n    int findNumberOfLIS(vector<int>& nums) {\n        const int n = nums.size();\n        int ans = 0;\n        int maxLength = 0;\n        // length[i] := the length of LIS's ending in nums[i]\n        vector<int> length(n, 1);\n        // count[i] := the number of LIS's ending in nums[i]\n        vector<int> count(n, 1);\n\n        // Calculate `length` and `count` arrays.\n        for (int i = 0; i < n; ++i)\n            for (int j = 0; j < i; ++j)\n                if (nums[j] < nums[i])\n                    if (length[i] < length[j] + 1) {\n                        length[i] = length[j] + 1;\n                        count[i] = count[j];\n                    } else if (length[i] == length[j] + 1) {\n                        count[i] += count[j];\n                    }\n\n        for (int i = 0; i < n; ++i)\n            if (length[i] > maxLength) {\n                maxLength = length[i];\n                ans = count[i];\n            } else if (length[i] == maxLength) {\n                ans += count[i];\n            }\n\n        return ans;\n    }\n};"
+      "dynamic-programming": "class Solution {\n    public int findNumberOfLIS(int[] nums) {\n        int n = nums.length;\n        int[] length = new int[n];\n        int[] count = new int[n];\n        Arrays.fill(length, 1);\n        Arrays.fill(count, 1);\n\n        int maxLength = 0, result = 0;\n\n        for (int i = 0; i < n; ++i) {\n            for (int j = 0; j < i; ++j) {\n                if (nums[j] < nums[i]) {\n                    if (length[i] < length[j] + 1) {\n                        length[i] = length[j] + 1;\n                        count[i] = count[j];\n                    } else if (length[i] == length[j] + 1) {\n                        count[i] += count[j];\n                    }\n                }\n            }\n            if (length[i] > maxLength) {\n                maxLength = length[i];\n                result = count[i];\n            } else if (length[i] == maxLength) {\n                result += count[i];\n            }\n        }\n        return result;\n    }\n}"
     }
   },
   "674": {
@@ -3388,7 +3388,7 @@
   },
   "678": {
     "solution": {
-      "dynamic-programming": "class Solution {\npublic:\n    bool checkValidString(const string& s) {\n        int low = 0;  // the lower bound of the number of valid '('s\n        int high = 0; // the upper bound of the number of valid '('s\n\n        for (const char c : s) {\n            switch (c) {\n            case '(': \n                ++low;\n                ++high;\n                break;\n            case ')':\n                low = max(0, --low);\n                --high;\n                break;\n            case '*':\n                low = max(0, --low);\n                ++high;\n                break;\n            }\n            if (high < 0)\n                return false;\n        }\n\n        return low == 0;\n    }\n};"
+      "dynamic-programming": "class Solution {\n    public boolean checkValidString(String s) {\n        int low = 0, high = 0;\n        for (char c : s.toCharArray()) {\n            if (c == '(') {\n                low++;\n                high++;\n            } else if (c == ')') {\n                if (low > 0) low--;\n                high--;\n            } else {\n                if (low > 0) low--;\n                high++;\n            }\n            if (high < 0) return false;\n        }\n        return low == 0;\n    }\n}"
     }
   },
   "679": {
@@ -3398,7 +3398,7 @@
   },
   "680": {
     "solution": {
-      "string": "class Solution {\npublic:\n    bool isPalindrome(const string& s, int left, int right) {\n        while (left < right) {\n            if (s[left] != s[right]) {\n                return false;\n            }\n            left++;\n            right--;\n        }\n        return true;\n    }\n    \n    bool validPalindrome(string s) {\n        int left = 0, right = s.size() - 1;\n        \n        while (left < right) {\n            if (s[left] != s[right]) {\n                return isPalindrome(s, left + 1, right) || isPalindrome(s, left, right - 1);\n            }\n            left++;\n            right--;\n        }\n        \n        return true; \n    }\n};\n"
+      "string": "class Solution {\n    public boolean validPalindrome(String s) {\n        int left = 0, right = s.length() - 1;\n        while (left < right) {\n            if (s.charAt(left) != s.charAt(right)) {\n                return isPalindrome(s, left + 1, right) || isPalindrome(s, left, right - 1);\n            }\n            left++;\n            right--;\n        }\n        return true;\n    }\n\n    private boolean isPalindrome(String s, int l, int r) {\n        while (l < r) {\n            if (s.charAt(l++) != s.charAt(r--)) return false;\n        }\n        return true;\n    }\n}"
     }
   },
   "681": {
@@ -3418,7 +3418,7 @@
   },
   "684": {
     "solution": {
-      "union-find": "class Solution {\npublic:\n    vector<int> parent;\n\n    int find(int x) {\n        if (parent[x] != x) {\n            parent[x] = find(parent[x]); // Path compression\n        }\n        return parent[x];\n    }\n\n    bool unionSets(int x, int y) {\n        int rootX = find(x);\n        int rootY = find(y);\n        if (rootX == rootY) {\n            return false; // Cycle detected\n        }\n        parent[rootX] = rootY; // Union operation\n        return true;\n    }\n\n    vector<int> findRedundantConnection(vector<vector<int>>& edges) {\n        int n = edges.size();\n        parent.resize(n + 1);\n        for (int i = 1; i <= n; ++i) {\n            parent[i] = i;\n        }\n\n        for (const auto& edge : edges) {\n            if (!unionSets(edge[0], edge[1])) {\n                return edge;\n            }\n        }\n        return {};\n    }\n};\n"
+      "union-find": "class Solution {\n    int[] parent;\n\n    public int[] findRedundantConnection(int[][] edges) {\n        int n = edges.length;\n        parent = new int[n + 1];\n        for (int i = 1; i <= n; i++) parent[i] = i;\n\n        for (int[] edge : edges) {\n            int u = edge[0], v = edge[1];\n            if (find(u) == find(v)) return edge;\n            union(u, v);\n        }\n        return new int[0];\n    }\n\n    private int find(int x) {\n        if (parent[x] != x) parent[x] = find(parent[x]);\n        return parent[x];\n    }\n\n    private void union(int x, int y) {\n        parent[find(x)] = find(y);\n    }\n}"
     }
   },
   "685": {
@@ -3428,7 +3428,7 @@
   },
   "686": {
     "solution": {
-      "string-matching": "class Solution {\npublic:\n    int repeatedStringMatch(string a, string b) {\n        int repeatCount = 1; \n        string repeatedA = a;\n\n        while (repeatedA.size() < b.size()) {\n            repeatedA += a;\n            repeatCount++;\n        }\n\n        if (repeatedA.find(b) != string::npos) {\n            return repeatCount;\n        }\n\n        repeatedA += a;\n        repeatCount++;\n\n        if (repeatedA.find(b) != string::npos) {\n            return repeatCount;\n        }\n\n        return -1;\n    }\n};\n"
+      "string-matching": "class Solution {\n    public int repeatedStringMatch(String a, String b) {\n        StringBuilder sb = new StringBuilder(a);\n        int count = 1;\n        while (sb.length() < b.length()) {\n            sb.append(a);\n            count++;\n        }\n        if (sb.indexOf(b) != -1) return count;\n        sb.append(a);\n        return sb.indexOf(b) != -1 ? count + 1 : -1;\n    }\n}"
     }
   },
   "687": {
