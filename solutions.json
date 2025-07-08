@@ -2597,17 +2597,17 @@
   },
   "520": {
     "solution": {
-      "string": "class Solution {\npublic:\n    bool detectCapitalUse(string word) {\n        int n = word.size();\n        if (n == 1) return true;\n        \n        bool isFirstUpper = isupper(word[0]);\n        bool isSecondUpper = isupper(word[1]);\n        \n        if (isFirstUpper && isSecondUpper) {\n            for (int i = 2; i < n; ++i) {\n                if (!isupper(word[i])) return false;\n            }\n        }\n        else {\n            for (int i = 1; i < n; ++i) {\n                if (isupper(word[i])) return false;\n            }\n        }\n        \n        return true;\n    }\n};\n"
+      "string": "class Solution {\n    public boolean detectCapitalUse(String word) {\n        return word.equals(word.toUpperCase()) ||\n               word.equals(word.toLowerCase()) ||\n               (Character.isUpperCase(word.charAt(0)) && word.substring(1).equals(word.substring(1).toLowerCase()));\n    }\n}"
     }
   },
   "521": {
     "solution": {
-      "string": "class Solution {\npublic:\n    int findLUSlength(string a, string b) {\n        if (a == b) {\n            return -1;\n        }\n        return max(a.size(), b.size());\n    }\n};\n"
+      "string": "class Solution {\n    public int findLUSlength(String a, String b) {\n        if (a.equals(b)) return -1;\n        return Math.max(a.length(), b.length());\n    }\n}"
     }
   },
   "522": {
     "solution": {
-      "hash-table": "#include <vector>\n#include <string>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int findLUSlength(vector<string>& strs) {\n        auto isSubsequence = [](const string& s1, const string& s2) {\n            int i = 0, j = 0;\n            while (i < s1.size() && j < s2.size()) {\n                if (s1[i] == s2[j]) {\n                    i++;\n                }\n                j++;\n            }\n            return i == s1.size();\n        };\n\n        sort(strs.begin(), strs.end(), [](const string& a, const string& b) {\n            return a.size() > b.size();\n        });\n\n        for (int i = 0; i < strs.size(); ++i) {\n            bool isUnique = true;\n\n            for (int j = 0; j < strs.size(); ++j) {\n                if (i != j && isSubsequence(strs[i], strs[j])) {\n                    isUnique = false;\n                    break;\n                }\n            }\n\n            if (isUnique) {\n                return strs[i].size();\n            }\n        }\n\n        return -1;\n    }\n};"
+      "hash-table": "class Solution {\n    public int findLUSlength(String[] strs) {\n        int res = -1;\n        for (int i = 0; i < strs.length; ++i) {\n            boolean isSubsequence = false;\n            for (int j = 0; j < strs.length; ++j) {\n                if (i == j) continue;\n                if (isSubsequence(strs[i], strs[j])) {\n                    isSubsequence = true;\n                    break;\n                }\n            }\n            if (!isSubsequence) {\n                res = Math.max(res, strs[i].length());\n            }\n        }\n        return res;\n    }\n\n    private boolean isSubsequence(String a, String b) {\n        int i = 0, j = 0;\n        while (i < a.length() && j < b.length()) {\n            if (a.charAt(i) == b.charAt(j)) i++;\n            j++;\n        }\n        return i == a.length();\n    }\n}"
     }
   },
   "523": {
