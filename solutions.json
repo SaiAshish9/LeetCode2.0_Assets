@@ -26,7 +26,7 @@
   },
   "6": {
     "solution": {
-      "string": "class Solution {\npublic:\n    string convert(string s, int numRows) {\n        if (numRows == 1) return s;  \n        \n        vector<string> rows(min(numRows, int(s.size())));  \n        int currentRow = 0;\n        bool goingDown = false;\n        \n        for (char c : s) {\n            rows[currentRow] += c; \n            if (currentRow == 0 || currentRow == numRows - 1) {\n                goingDown = !goingDown; \n            }\n            currentRow += goingDown ? 1 : -1;  \n        }\n        \n        string result = \"\";\n        for (const string& row : rows) {\n            result += row;\n        }\n        \n        return result;\n    }\n};\n"
+      "string": "class Solution {\n    public String convert(String s, int numRows) {\n        if (numRows == 1) return s;\n\n        List<StringBuilder> rows = new ArrayList<>();\n        for (int i = 0; i < Math.min(numRows, s.length()); i++) {\n            rows.add(new StringBuilder());\n        }\n\n        int currentRow = 0;\n        boolean goingDown = false;\n\n        for (char c : s.toCharArray()) {\n            rows.get(currentRow).append(c);\n            if (currentRow == 0 || currentRow == numRows - 1) {\n                goingDown = !goingDown;\n            }\n            currentRow += goingDown ? 1 : -1;\n        }\n\n        StringBuilder result = new StringBuilder();\n        for (StringBuilder row : rows) {\n            result.append(row);\n        }\n\n        return result.toString();\n    }\n}"
     }
   },
   "7": {
