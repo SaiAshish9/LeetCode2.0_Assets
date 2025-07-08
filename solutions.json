@@ -3731,12 +3731,12 @@
   },
   "746": {
     "solution": {
-      "dynamic-programming": "class Solution {\npublic:\n    int minCostClimbingStairs(vector<int>& cost) {\n        int n = cost.size();\n        \n        // dp[i] will represent the minimum cost to reach step i\n        vector<int> dp(n + 1, 0);\n\n        // Base case: we can start from step 0 or 1, so we initialize the first two steps.\n        dp[0] = 0;  // No cost to be on the ground (before the first step)\n        dp[1] = 0;  // No cost to be on the first step (starting point)\n\n        for (int i = 2; i <= n; ++i) {\n            // The cost to reach step i is the minimum of:\n            // 1. The cost to reach step i-1 plus the cost at step i-1\n            // 2. The cost to reach step i-2 plus the cost at step i-2\n            dp[i] = min(dp[i - 1] + cost[i - 1], dp[i - 2] + cost[i - 2]);\n        }\n\n        // The answer is the minimum cost to reach either the last step or the one before it\n        return dp[n];\n    }\n};"
+      "dynamic-programming": "class Solution {\n    public int minCostClimbingStairs(int[] cost) {\n        int n = cost.length;\n        int[] dp = new int[n + 1];\n\n        dp[0] = 0;\n        dp[1] = 0;\n\n        for (int i = 2; i <= n; i++) {\n            dp[i] = Math.min(dp[i - 1] + cost[i - 1], dp[i - 2] + cost[i - 2]);\n        }\n\n        return dp[n];\n    }\n}"
     }
   },
   "747": {
     "solution": {
-      "sorting": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int dominantIndex(vector<int>& nums) {\n        int n = nums.size();\n        if (n == 1) {\n            return 0; // Single element is always dominant\n        }\n        \n        // Initialize variables to track the largest and second largest numbers\n        int max1 = -1, max2 = -1;\n        int maxIndex = -1;\n        \n        for (int i = 0; i < n; i++) {\n            if (nums[i] > max1) {\n                // Update max1 and max2\n                max2 = max1;\n                max1 = nums[i];\n                maxIndex = i;\n            } else if (nums[i] > max2) {\n                // Update max2\n                max2 = nums[i];\n            }\n        }\n        \n        // Check the dominance condition\n        return (max1 >= 2 * max2) ? maxIndex : -1;\n    }\n};\n"
+      "sorting": "class Solution {\n    public int dominantIndex(int[] nums) {\n        int max1 = -1, max2 = -1, maxIndex = -1;\n\n        for (int i = 0; i < nums.length; i++) {\n            if (nums[i] > max1) {\n                max2 = max1;\n                max1 = nums[i];\n                maxIndex = i;\n            } else if (nums[i] > max2) {\n                max2 = nums[i];\n            }\n        }\n\n        return (max1 >= 2 * max2) ? maxIndex : -1;\n    }\n}"
     }
   },
   "748": {
