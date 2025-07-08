@@ -1556,7 +1556,7 @@
   },
   "313": {
     "solution": {
-      "dynamic-programming": "class Solution {\npublic:\n    int nthSuperUglyNumber(int n, vector<int>& primes) {\n        if (n == 1)\n            return 1;\n\n        int numPrimes = primes.size();\n        vector<int> primeIndices(numPrimes,\n                                 0); // Indices to track prime number multiples\n\n        int superUgly[n];\n        superUgly[0] = 1;\n\n        for (int i = 1; i < n; i++) {\n            long minVal = INT_MAX;\n\n            for (int j = 0; j < numPrimes; j++) {\n                minVal =\n                    min(minVal, (long)primes[j] * superUgly[primeIndices[j]]);\n            }\n\n            superUgly[i] = (int)minVal;\n\n            for (int j = 0; j < numPrimes; j++) {\n                if (minVal == (long)primes[j] * superUgly[primeIndices[j]]) {\n                    primeIndices[j]++;\n                }\n            }\n        }\n\n        return superUgly[n - 1];\n    }\n};"
+      "dynamic-programming": "class Solution {\n    public int nthSuperUglyNumber(int n, int[] primes) {\n        int k = primes.length;\n        int[] indices = new int[k]; // pointers to track multiplication positions\n        int[] ugly = new int[n];\n        ugly[0] = 1;\n\n        for (int i = 1; i < n; i++) {\n            int min = Integer.MAX_VALUE;\n            for (int j = 0; j < k; j++) {\n                min = Math.min(min, primes[j] * ugly[indices[j]]);\n            }\n            ugly[i] = min;\n\n            for (int j = 0; j < k; j++) {\n                if (primes[j] * ugly[indices[j]] == min) {\n                    indices[j]++;\n                }\n            }\n        }\n\n        return ugly[n - 1];\n    }\n}"
     }
   },
   "314": {
