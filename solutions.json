@@ -1561,7 +1561,7 @@
   },
   "314": {
     "solution": {
-      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<vector<int>> verticalOrder(TreeNode* root) {\n        vector<vector<int>> result;\n        if (!root) return result;\n\n        map<int, vector<int>> columnMap;  \n        queue<pair<TreeNode*, int>> nodeQueue; \n        nodeQueue.push({root, 0});  \n\n        while (!nodeQueue.empty()) {\n            int currentLevelSize = nodeQueue.size();  \n            for (int i = 0; i < currentLevelSize; ++i) {\n                auto nodePair = nodeQueue.front();\n                nodeQueue.pop();\n\n                TreeNode* currentNode = nodePair.first;\n                int currentColumn = nodePair.second;\n\n                columnMap[currentColumn].push_back(currentNode->val); \n                if (currentNode->left) nodeQueue.push({currentNode->left, currentColumn - 1});\n                if (currentNode->right) nodeQueue.push({currentNode->right, currentColumn + 1});\n            }\n        }\n\n        for (auto& entry : columnMap) {\n            result.push_back(entry.second);\n        }\n\n        return result;\n    }\n};"
+      "binary-tree": "import java.util.*;\n\nclass Solution {\n    public List<List<Integer>> verticalOrder(TreeNode root) {\n        List<List<Integer>> result = new ArrayList<>();\n        if (root == null) return result;\n\n        Map<Integer, List<Integer>> columnMap = new TreeMap<>();\n        Queue<Pair<TreeNode, Integer>> queue = new LinkedList<>();\n        queue.offer(new Pair<>(root, 0));\n\n        while (!queue.isEmpty()) {\n            Pair<TreeNode, Integer> pair = queue.poll();\n            TreeNode node = pair.getKey();\n            int col = pair.getValue();\n\n            columnMap.putIfAbsent(col, new ArrayList<>());\n            columnMap.get(col).add(node.val);\n\n            if (node.left != null) queue.offer(new Pair<>(node.left, col - 1));\n            if (node.right != null) queue.offer(new Pair<>(node.right, col + 1));\n        }\n\n        for (List<Integer> col : columnMap.values()) {\n            result.add(col);\n        }\n        return result;\n    }\n\n    // Helper Pair class for compatibility (if not using JavaFX or javafx.util.Pair)\n    private static class Pair<K, V> {\n        private final K key;\n        private final V value;\n\n        public Pair(K key, V value) {\n            this.key = key;\n            this.value = value;\n        }\n\n        public K getKey() {\n            return key;\n        }\n\n        public V getValue() {\n            return value;\n        }\n    }\n}"
     }
   },
   "315": {
@@ -1623,7 +1623,7 @@
   },
   "326": {
     "solution": {
-      "math": "class Solution {\npublic:\n    bool isPowerOfThree(int n) {\n        if (n <= 0) return false; \n        while (n % 3 == 0) {\n            n /= 3; \n        }\n        return n == 1; \n    }\n};"
+      "math": "class Solution {\n    public boolean isPowerOfThree(int n) {\n        if (n <= 0) return false;\n        while (n % 3 == 0) {\n            n /= 3;\n        }\n        return n == 1;\n    }\n}"
     }
   },
   "327": {
