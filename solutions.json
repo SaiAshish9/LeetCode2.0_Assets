@@ -7621,12 +7621,12 @@
   },
   "1522": {
     "solution": {
-      "tree": "/*\n// Definition for a Node.\nclass Node {\npublic:\n    int val;\n    vector<Node*> children;\n\n    Node() {}\n\n    Node(int _val) {\n        val = _val;\n    }\n\n    Node(int _val, vector<Node*> _children) {\n        val = _val;\n        children = _children;\n    }\n};\n*/\n\nclass Solution {\npublic:\n    int ans;\n\n    int diameter(Node* root) {\n        ans = 0;\n        dfs(root);\n        return ans;\n    }\n\n    int dfs(Node* root) {\n        if (!root) return 0;\n        int m1 = 0, m2 = 0;\n        for (Node* child : root->children) {\n            int t = dfs(child);\n            if (t > m1) {\n                m2 = m1;\n                m1 = t;\n            } else if (t > m2)\n                m2 = t;\n        }\n        ans = max(ans, m1 + m2);\n        return 1 + m1;\n    }\n};"
+      "tree": "class Node {\n    public int val;\n    public List<Node> children;\n\n    public Node() {}\n\n    public Node(int val) {\n        this.val = val;\n        this.children = new ArrayList<>();\n    }\n\n    public Node(int val, List<Node> children) {\n        this.val = val;\n        this.children = children;\n    }\n}\n\nclass Solution {\n    private int ans = 0;\n\n    public int diameter(Node root) {\n        dfs(root);\n        return ans;\n    }\n\n    private int dfs(Node root) {\n        if (root == null) return 0;\n\n        int max1 = 0, max2 = 0;\n        for (Node child : root.children) {\n            int depth = dfs(child);\n            if (depth > max1) {\n                max2 = max1;\n                max1 = depth;\n            } else if (depth > max2) {\n                max2 = depth;\n            }\n        }\n\n        ans = Math.max(ans, max1 + max2);\n        return 1 + max1;\n    }\n}"
     }
   },
   "1523": {
     "solution": {
-      "math": "class Solution {\n public:\n  int countOdds(int low, int high) {\n    return (high + 1) / 2 - low / 2;\n  }\n};\n"
+      "math": "class Solution {\n    public int countOdds(int low, int high) {\n        return (high + 1) / 2 - low / 2;\n    }\n}"
     }
   },
   "1524": {
