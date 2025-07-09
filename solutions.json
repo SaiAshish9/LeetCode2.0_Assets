@@ -8522,7 +8522,7 @@
   },
   "1702": {
     "solution": {
-      "greedy": "class Solution {\npublic:\n    string maximumBinaryString(string binary) {\n        int n = binary.size();\n        int zeroCount = 0, firstZeroIndex = -1;\n\n        // Count the number of '0's and find the index of the first '0'\n        for (int i = 0; i < n; ++i) {\n            if (binary[i] == '0') {\n                if (firstZeroIndex == -1) {\n                    firstZeroIndex = i;\n                }\n                zeroCount++;\n            }\n        }\n\n        // If there are no '0's or just one, the binary string is already maximal\n        if (zeroCount <= 1) {\n            return binary;\n        }\n\n        // Construct the result string\n        string result(n, '1'); // Start with all '1's\n        result[firstZeroIndex + zeroCount - 1] = '0'; // Place a single '0'\n\n        return result;\n    }\n};\n"
+      "greedy": "class Solution {\n    public String maximumBinaryString(String binary) {\n        int n = binary.length();\n        int zeroCount = 0, firstZeroIndex = -1;\n\n        for (int i = 0; i < n; i++) {\n            if (binary.charAt(i) == '0') {\n                if (firstZeroIndex == -1) {\n                    firstZeroIndex = i;\n                }\n                zeroCount++;\n            }\n        }\n\n        if (zeroCount <= 1) {\n            return binary;\n        }\n\n        char[] result = new char[n];\n        for (int i = 0; i < n; i++) {\n            result[i] = '1';\n        }\n\n        result[firstZeroIndex + zeroCount - 1] = '0';\n\n        return new String(result);\n    }\n}"
     }
   },
   "1703": {
