@@ -7006,7 +7006,7 @@
   },
   "1399": {
     "solution": {
-      "hash-table": "#include <iostream>\n#include <vector>\n#include <unordered_map>\nusing namespace std;\n\nclass Solution {\npublic:\n    int countLargestGroup(int n) {\n        auto digitSum = [](int num) {\n            int sum = 0;\n            while (num > 0) {\n                sum += num % 10;\n                num /= 10;\n            }\n            return sum;\n        };\n        \n        unordered_map<int, int> groupCount;\n        \n        for (int i = 1; i <= n; ++i) {\n            int sum = digitSum(i);\n            groupCount[sum]++;\n        }\n        \n        int maxGroupSize = 0;\n        for (const auto& entry : groupCount) {\n            maxGroupSize = max(maxGroupSize, entry.second);\n        }\n        \n        int largestGroupCount = 0;\n        for (const auto& entry : groupCount) {\n            if (entry.second == maxGroupSize) {\n                largestGroupCount++;\n            }\n        }\n        \n        return largestGroupCount;\n    }\n};"
+      "hash-table": "class Solution {\n    public int countLargestGroup(int n) {\n        Map<Integer, Integer> groupCount = new HashMap<>();\n\n        for (int i = 1; i <= n; i++) {\n            int sum = digitSum(i);\n            groupCount.put(sum, groupCount.getOrDefault(sum, 0) + 1);\n        }\n\n        int maxGroupSize = 0;\n        for (int size : groupCount.values()) {\n            maxGroupSize = Math.max(maxGroupSize, size);\n        }\n\n        int count = 0;\n        for (int size : groupCount.values()) {\n            if (size == maxGroupSize) count++;\n        }\n\n        return count;\n    }\n\n    private int digitSum(int num) {\n        int sum = 0;\n        while (num > 0) {\n            sum += num % 10;\n            num /= 10;\n        }\n        return sum;\n    }\n}"
     }
   },
   "1400": {
@@ -7016,7 +7016,7 @@
   },
   "1401": {
     "solution": {
-      "geometry": "class Solution {\npublic:\n    bool checkOverlap(int radius, int xCenter, int yCenter, int x1, int y1,\n                      int x2, int y2) {\n        int nearestX = clamp(xCenter, x1, x2);\n        int nearestY = clamp(yCenter, y1, y2);\n\n        int dx = nearestX - xCenter;\n        int dy = nearestY - yCenter;\n        int distanceSquared = dx * dx + dy * dy;\n\n        return distanceSquared <= radius * radius;\n    }\n\nprivate:\n    int clamp(int value, int minVal, int maxVal) {\n        if (value < minVal)\n            return minVal;\n        if (value > maxVal)\n            return maxVal;\n        return value;\n    }\n};\n"
+      "geometry": "class Solution {\n    public boolean checkOverlap(int radius, int xCenter, int yCenter, int x1, int y1, int x2, int y2) {\n        int nearestX = clamp(xCenter, x1, x2);\n        int nearestY = clamp(yCenter, y1, y2);\n\n        int dx = nearestX - xCenter;\n        int dy = nearestY - yCenter;\n\n        return dx * dx + dy * dy <= radius * radius;\n    }\n\n    private int clamp(int value, int min, int max) {\n        return Math.max(min, Math.min(max, value));\n    }\n}"
     }
   },
   "1402": {
@@ -7041,7 +7041,7 @@
   },
   "1406": {
     "solution": {
-      "game-theory": "class Solution {\npublic:\n    string stoneGameIII(vector<int>& stoneValue) {\n        int n = stoneValue.size();\n        vector<int> dp(n + 1, 0); // dp[i] stores the maximum score difference\n                                  // Alice can achieve starting from i\n        vector<int> suffixSum(n + 1, 0);\n\n        for (int i = n - 1; i >= 0; --i) {\n            suffixSum[i] = suffixSum[i + 1] + stoneValue[i];\n        }\n\n        for (int i = n - 1; i >= 0; --i) {\n            dp[i] = INT_MIN;\n            for (int k = 1; k <= 3 && i + k <= n; ++k) {\n                int currentSum = suffixSum[i] - suffixSum[i + k];\n                dp[i] = max(dp[i], currentSum - dp[i + k]);\n            }\n        }\n\n        if (dp[0] > 0)\n            return \"Alice\";\n        else if (dp[0] < 0)\n            return \"Bob\";\n        else\n            return \"Tie\";\n    }\n};\n"
+      "game-theory": "class Solution {\n    public String stoneGameIII(int[] stoneValue) {\n        int n = stoneValue.length;\n        int[] dp = new int[n + 1];\n        int[] suffixSum = new int[n + 1];\n\n        for (int i = n - 1; i >= 0; i--) {\n            suffixSum[i] = suffixSum[i + 1] + stoneValue[i];\n        }\n\n        for (int i = n - 1; i >= 0; i--) {\n            dp[i] = Integer.MIN_VALUE;\n            for (int k = 1; k <= 3 && i + k <= n; k++) {\n                int currentSum = suffixSum[i] - suffixSum[i + k];\n                dp[i] = Math.max(dp[i], currentSum - dp[i + k]);\n            }\n        }\n\n        if (dp[0] > 0) return \"Alice\";\n        else if (dp[0] < 0) return \"Bob\";\n        else return \"Tie\";\n    }\n}"
     }
   },
   "1407": {
@@ -7081,12 +7081,12 @@
   },
   "1414": {
     "solution": {
-      "math": "class Solution {\npublic:\n    int findMinFibonacciNumbers(int k) {\n        vector<int> fib = {1, 2};\n        \n        // Generate Fibonacci numbers until we exceed k\n        while (fib.back() <= k) {\n            int nextFib = fib[fib.size() - 1] + fib[fib.size() - 2];\n            fib.push_back(nextFib);\n        }\n        \n        int count = 0;\n        \n        // Start from the largest Fibonacci number and subtract it from k\n        for (int i = fib.size() - 1; i >= 0 && k > 0; --i) {\n            if (fib[i] <= k) {\n                k -= fib[i];\n                count++;\n            }\n        }\n        \n        return count;\n    }\n};\n"
+      "math": "class Solution {\n    public int findMinFibonacciNumbers(int k) {\n        List<Integer> fib = new ArrayList<>();\n        fib.add(1);\n        fib.add(2);\n        while (fib.get(fib.size() - 1) <= k) {\n            int next = fib.get(fib.size() - 1) + fib.get(fib.size() - 2);\n            fib.add(next);\n        }\n\n        int count = 0;\n        for (int i = fib.size() - 1; i >= 0 && k > 0; i--) {\n            if (fib.get(i) <= k) {\n                k -= fib.get(i);\n                count++;\n            }\n        }\n        return count;\n    }\n}"
     }
   },
   "1415": {
     "solution": {
-      "backtracking": "class Solution {\npublic:\n    string getHappyString(int n, int k) {\n        const unordered_map<char, string> nextLetters{\n            {'a', \"bc\"}, {'b', \"ac\"}, {'c', \"ab\"}};\n        queue<string> q{{{\"a\", \"b\", \"c\"}}};\n\n        while (q.front().length() != n) {\n            const string u = q.front();\n            q.pop();\n            for (const char nextLetter : nextLetters.at(u.back()))\n                q.push(u + nextLetter);\n        }\n\n        if (q.size() < k)\n            return \"\";\n\n        for (int i = 0; i < k - 1; ++i)\n            q.pop();\n        return q.front();\n    }\n};"
+      "backtracking": "class Solution {\n    public String getHappyString(int n, int k) {\n        Queue<String> queue = new LinkedList<>();\n        queue.offer(\"a\");\n        queue.offer(\"b\");\n        queue.offer(\"c\");\n\n        while (!queue.isEmpty()) {\n            String s = queue.poll();\n            if (s.length() == n) {\n                k--;\n                if (k == 0) return s;\n            } else {\n                for (char c : new char[]{'a', 'b', 'c'}) {\n                    if (s.charAt(s.length() - 1) != c) {\n                        queue.offer(s + c);\n                    }\n                }\n            }\n        }\n\n        return \"\";\n    }\n}"
     }
   },
   "1416": {
@@ -7176,7 +7176,7 @@
   },
   "1433": {
     "solution": {
-      "array": "class Solution {\npublic:\n    bool checkIfCanBreak(string s1, string s2) {\n        sort(s1.begin(), s1.end());\n        sort(s2.begin(), s2.end());\n\n        bool s1Breaks = true;\n        bool s2Breaks = true;\n\n        for (int i = 0; i < s1.size(); ++i) {\n            if (s1[i] < s2[i]) {\n                s1Breaks = false;  // s1 cannot break s2\n            }\n            if (s2[i] < s1[i]) {\n                s2Breaks = false;  // s2 cannot break s1\n            }\n        }\n\n        return s1Breaks || s2Breaks;\n    }\n};\n"
+      "array": "import java.util.Arrays;\n\nclass Solution {\n    public boolean checkIfCanBreak(String s1, String s2) {\n        char[] arr1 = s1.toCharArray();\n        char[] arr2 = s2.toCharArray();\n        Arrays.sort(arr1);\n        Arrays.sort(arr2);\n\n        boolean s1Breaks = true;\n        boolean s2Breaks = true;\n\n        for (int i = 0; i < arr1.length; i++) {\n            if (arr1[i] < arr2[i]) {\n                s1Breaks = false;\n            }\n            if (arr2[i] < arr1[i]) {\n                s2Breaks = false;\n            }\n        }\n\n        return s1Breaks || s2Breaks;\n    }\n}"
     }
   },
   "1434": {
