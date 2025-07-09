@@ -12241,7 +12241,7 @@
   },
   "2445": {
     "solution": {
-      "depth-first-search": "class Solution {\npublic:\n    int numberOfNodes(int n, vector<int>& queries) {\n        vector<int> tree(n + 1);\n        vector<int> count(n + 1);\n        for (int v : queries) ++count[v];\n        function<void(int)> dfs = [&](int i) {\n            if (i > n) return;\n            tree[i] ^= 1;\n            dfs(i << 1);\n            dfs(i << 1 | 1);\n        };\n        for (int i = 0; i < n + 1; ++i) {\n            if (count[i] & 1) {\n                dfs(i);\n            }\n        }\n        return accumulate(tree.begin(), tree.end(), 0);\n    }\n};\n"
+      "depth-first-search": "import java.util.*;\n\nclass Solution {\n    private int[] tree;\n    private int n;\n\n    public int numberOfNodes(int n, int[] queries) {\n        this.n = n;\n        tree = new int[n + 1];\n        int[] count = new int[n + 1];\n\n        for (int v : queries) {\n            count[v]++;\n        }\n\n        for (int i = 0; i <= n; i++) {\n            if ((count[i] & 1) == 1) {\n                dfs(i);\n            }\n        }\n\n        int result = 0;\n        for (int val : tree) {\n            result += val;\n        }\n\n        return result;\n    }\n\n    private void dfs(int i) {\n        if (i > n) return;\n\n        tree[i] ^= 1;\n        dfs(i << 1);\n        dfs((i << 1) | 1);\n    }\n}"
     }
   },
   "2446": {
