@@ -7471,7 +7471,7 @@
   },
   "1492": {
     "solution": {
-      "number-theory": "#include <vector>\n#include <cmath>\nusing namespace std;\n\nclass Solution {\npublic:\n    int kthFactor(int n, int k) {\n        vector<int> factors;\n        \n        for (int i = 1; i <= sqrt(n); ++i) {\n            if (n % i == 0) {\n                factors.push_back(i); \n                if (i != n / i) {  \n                    factors.push_back(n / i);  // n/i is also a factor\n                }\n            }\n        }\n        \n        sort(factors.begin(), factors.end());\n        \n        if (k > factors.size()) {\n            return -1;\n        }\n        \n        return factors[k - 1];\n    }\n};\n"
+      "number-theory": "import java.util.*;\n\nclass Solution {\n    public int kthFactor(int n, int k) {\n        List<Integer> factors = new ArrayList<>();\n\n        for (int i = 1; i <= Math.sqrt(n); ++i) {\n            if (n % i == 0) {\n                factors.add(i);\n                if (i != n / i) {\n                    factors.add(n / i);\n                }\n            }\n        }\n\n        Collections.sort(factors);\n\n        return k > factors.size() ? -1 : factors.get(k - 1);\n    }\n}"
     }
   },
   "1493": {
@@ -7481,7 +7481,7 @@
   },
   "1494": {
     "solution": {
-      "graph": "#include <vector>\n#include <queue>\n#include <unordered_map>\nusing namespace std;\n\nclass Solution {\npublic:\n    int minNumberOfSemesters(int n, vector<vector<int>>& relations, int k) {\n        vector<int> prerequisites(n, 0); // Bitmask for prerequisites of each course\n        for (const auto& relation : relations) {\n            prerequisites[relation[1] - 1] |= (1 << (relation[0] - 1));\n        }\n\n        vector<int> dp(1 << n, n); // dp[mask]: min semesters to complete courses in mask\n        dp[0] = 0;\n\n        for (int mask = 0; mask < (1 << n); ++mask) {\n            int availableCourses = 0;\n            for (int i = 0; i < n; ++i) {\n                if ((mask & prerequisites[i]) == prerequisites[i] && !(mask & (1 << i))) {\n                    availableCourses |= (1 << i);\n                }\n            }\n\n            for (int subset = availableCourses; subset; subset = (subset - 1) & availableCourses) {\n                if (__builtin_popcount(subset) <= k) { // Check if subset size is <= k\n                    dp[mask | subset] = min(dp[mask | subset], dp[mask] + 1);\n                }\n            }\n        }\n\n        return dp[(1 << n) - 1];\n    }\n};"
+      "graph": "import java.util.*;\n\nclass Solution {\n    public int minNumberOfSemesters(int n, int[][] relations, int k) {\n        int[] prerequisites = new int[n];\n        for (int[] rel : relations) {\n            prerequisites[rel[1] - 1] |= (1 << (rel[0] - 1));\n        }\n\n        int size = 1 << n;\n        int[] dp = new int[size];\n        Arrays.fill(dp, n);\n        dp[0] = 0;\n\n        for (int mask = 0; mask < size; mask++) {\n            int available = 0;\n            for (int i = 0; i < n; i++) {\n                if ((mask & (1 << i)) == 0 && (mask & prerequisites[i]) == prerequisites[i]) {\n                    available |= (1 << i);\n                }\n            }\n\n            for (int sub = available; sub > 0; sub = (sub - 1) & available) {\n                if (Integer.bitCount(sub) <= k) {\n                    dp[mask | sub] = Math.min(dp[mask | sub], dp[mask] + 1);\n                }\n            }\n        }\n\n        return dp[size - 1];\n    }\n}"
     }
   },
   "1495": {
