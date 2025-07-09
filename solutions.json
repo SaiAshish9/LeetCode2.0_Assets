@@ -6044,7 +6044,7 @@
   },
   "1207": {
     "solution": {
-      "hash-table": "#include <vector>\n#include <unordered_map>\n#include <unordered_set>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool uniqueOccurrences(vector<int>& arr) {\n        unordered_map<int, int> frequencyMap; \n\n        for (int num : arr) {\n            frequencyMap[num]++;\n        }\n\n        unordered_set<int> occurrencesSet;  \n\n        for (auto& entry : frequencyMap) {\n            if (occurrencesSet.count(entry.second)) {\n                return false;  \n            }\n            occurrencesSet.insert(entry.second);  \n        }\n\n        return true; \n    }\n};"
+      "hash-table": "import java.util.HashMap;\nimport java.util.HashSet;\n\nclass Solution {\n    public boolean uniqueOccurrences(int[] arr) {\n        HashMap<Integer, Integer> frequencyMap = new HashMap<>();\n        for (int num : arr) {\n            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);\n        }\n\n        HashSet<Integer> occurrencesSet = new HashSet<>();\n        for (int count : frequencyMap.values()) {\n            if (occurrencesSet.contains(count)) {\n                return false;\n            }\n            occurrencesSet.add(count);\n        }\n        return true;\n    }\n}"
     }
   },
   "1208": {
