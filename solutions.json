@@ -15629,7 +15629,7 @@
   },
   "3207": {
     "solution": {
-      "greedy": "class Solution {\npublic:\n    long long maximumPoints(vector<int>& enemyEnergies, int currentEnergy) {\n        const int minEnergy = ranges::min(enemyEnergies);\n        return currentEnergy < minEnergy\n                   ? 0\n                   : (currentEnergy +\n                      accumulate(enemyEnergies.begin(), enemyEnergies.end(),\n                                 0LL) -\n                      minEnergy) /\n                         minEnergy;\n    }\n};"
+      "greedy": "import java.util.*;\n\npublic class Solution {\n    public long maximumPoints(List<Integer> enemyEnergies, int currentEnergy) {\n        int minEnergy = Collections.min(enemyEnergies);\n        if (currentEnergy < minEnergy) {\n            return 0L;\n        }\n        long sum = 0L;\n        for (int e : enemyEnergies) {\n            sum += e;\n        }\n        return (currentEnergy + sum - minEnergy) / minEnergy;\n    }\n}"
     }
   },
   "3208": {
@@ -15639,12 +15639,12 @@
   },
   "3209": {
     "solution": {
-      "bit-manipulation": "using namespace std;\n\nclass Solution {\npublic:\n    long long countSubarrays(vector<int>& nums, int k) {\n        long long ans = 0;\n        unordered_map<int, int> prev;\n\n        for (const int num : nums) {\n            unordered_map<int, int> curr{{num, 1}};\n            for (const auto& [val, freq] : prev)\n                curr[val & num] += freq;\n            ans += curr.contains(k) ? curr[k] : 0;\n            prev = move(curr);\n        }\n\n        return ans;\n    }\n};"
+      "bit-manipulation": "import java.util.*;\n\npublic class Solution {\n    public long countSubarrays(int[] nums, int k) {\n        long ans = 0;\n        Map<Integer, Integer> prev = new HashMap<>();\n\n        for (int num : nums) {\n            Map<Integer, Integer> curr = new HashMap<>();\n            curr.put(num, 1);\n            for (Map.Entry<Integer, Integer> entry : prev.entrySet()) {\n                int val = entry.getKey() & num;\n                curr.put(val, curr.getOrDefault(val, 0) + entry.getValue());\n            }\n            ans += curr.getOrDefault(k, 0);\n            prev = curr;\n        }\n\n        return ans;\n    }\n}"
     }
   },
   "3210": {
     "solution": {
-      "string": "class Solution {\npublic:\n    string getEncryptedString(string s, int k) {\n        k %= s.length();\n        return s.substr(k) + s.substr(0, k);\n    }\n};"
+      "string": "public class Solution {\n    public String getEncryptedString(String s, int k) {\n        k %= s.length();\n        return s.substring(k) + s.substring(0, k);\n    }\n}"
     }
   },
   "3211": {
