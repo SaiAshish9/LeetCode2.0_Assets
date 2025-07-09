@@ -8462,7 +8462,7 @@
   },
   "1690": {
     "solution": {
-      "game-theory": "class Solution {\npublic:\n    int stoneGameVII(vector<int>& stones) {\n        int n = stones.size();\n        vector<vector<int>> dp(n, vector<int>(n, 0));\n        vector<int> prefixSum(n + 1, 0);\n        \n        // Compute prefix sums\n        for (int i = 0; i < n; ++i) {\n            prefixSum[i + 1] = prefixSum[i] + stones[i];\n        }\n        \n        // Fill DP table\n        for (int len = 2; len <= n; ++len) { // Length of the subarray\n            for (int i = 0; i <= n - len; ++i) {\n                int j = i + len - 1;\n                int sum = prefixSum[j + 1] - prefixSum[i];\n                dp[i][j] = max(sum - stones[i] - dp[i + 1][j], sum - stones[j] - dp[i][j - 1]);\n            }\n        }\n        \n        return dp[0][n - 1];\n    }\n};\n"
+      "game-theory": "class Solution {\n    public int stoneGameVII(int[] stones) {\n        int n = stones.length;\n        int[][] dp = new int[n][n];\n        int[] prefixSum = new int[n + 1];\n        \n        for (int i = 0; i < n; i++) {\n            prefixSum[i + 1] = prefixSum[i] + stones[i];\n        }\n        \n        for (int len = 2; len <= n; len++) {\n            for (int i = 0; i <= n - len; i++) {\n                int j = i + len - 1;\n                int sum = prefixSum[j + 1] - prefixSum[i];\n                dp[i][j] = Math.max(sum - stones[i] - dp[i + 1][j], sum - stones[j] - dp[i][j - 1]);\n            }\n        }\n        \n        return dp[0][n - 1];\n    }\n}"
     }
   },
   "1691": {
