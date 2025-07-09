@@ -14712,12 +14712,12 @@
   },
   "3024": {
     "solution": {
-      "sorting": "class Solution {\npublic:\n  string triangleType(vector<int>& nums) {\n    ranges::sort(nums);\n    if (nums[0] + nums[1] <= nums[2])\n      return \"none\";\n    if (nums[0] == nums[1] && nums[1] == nums[2])\n      return \"equilateral\";\n    if (nums[0] == nums[1] || nums[1] == nums[2])\n      return \"isosceles\";\n    return \"scalene\";\n  }\n};"
+      "sorting": "import java.util.*;\n\npublic class Solution {\n    public String triangleType(int[] nums) {\n        Arrays.sort(nums);\n        if (nums[0] + nums[1] <= nums[2])\n            return \"none\";\n        if (nums[0] == nums[1] && nums[1] == nums[2])\n            return \"equilateral\";\n        if (nums[0] == nums[1] || nums[1] == nums[2])\n            return \"isosceles\";\n        return \"scalene\";\n    }\n}"
     }
   },
   "3025": {
     "solution": {
-      "geometry": "class Solution {\npublic:\n  int numberOfPairs(vector<vector<int>>& points) {\n    int ans = 0;\n\n    ranges::sort(points, [](const vector<int>& a, const vector<int>& b) {\n      return a[0] < b[0] || (a[0] == b[0] && a[1] > b[1]);\n    });\n\n    for (int i = 0; i < points.size(); ++i) {\n      int maxY = INT_MIN;\n      for (int j = i + 1; j < points.size(); ++j)\n        if (points[i][1] >= points[j][1] && points[j][1] > maxY) {\n          ++ans;\n          maxY = points[j][1];\n        }\n    }\n\n    return ans;\n  }\n};"
+      "geometry": "import java.util.*;\n\npublic class Solution {\n    public int numberOfPairs(List<int[]> points) {\n        points.sort((a, b) -> a[0] != b[0] ? Integer.compare(a[0], b[0]) : Integer.compare(b[1], a[1]));\n        int ans = 0;\n        for (int i = 0; i < points.size(); i++) {\n            int maxY = Integer.MIN_VALUE;\n            for (int j = i + 1; j < points.size(); j++) {\n                if (points.get(i)[1] >= points.get(j)[1] && points.get(j)[1] > maxY) {\n                    ans++;\n                    maxY = points.get(j)[1];\n                }\n            }\n        }\n        return ans;\n    }\n}"
     }
   },
   "3026": {
@@ -14822,12 +14822,12 @@
   },
   "3046": {
     "solution": {
-      "counting": "class Solution {\npublic:\n    bool isPossibleToSplit(vector<int>& nums) {\n        constexpr int kMax = 100;\n        vector<int> count(kMax + 1);\n\n        for (const int num : nums)\n            ++count[num];\n\n        return ranges::all_of(count, [](int freq) { return freq <= 2; });\n    }\n};"
+      "counting": "import java.util.*;\n\npublic class Solution {\n    public boolean isPossibleToSplit(int[] nums) {\n        int kMax = 100;\n        int[] count = new int[kMax + 1];\n        for (int num : nums) {\n            count[num]++;\n        }\n        for (int c : count) {\n            if (c > 2) return false;\n        }\n        return true;\n    }\n}"
     }
   },
   "3047": {
     "solution": {
-      "geometry": "class Solution {\npublic:\n  long long largestSquareArea(vector<vector<int>>& bottomLeft,\n                              vector<vector<int>>& topRight) {\n    int minSide = 0;\n\n    for (int i = 0; i < bottomLeft.size(); ++i)\n      for (int j = i + 1; j < bottomLeft.size(); ++j) {\n        const int ax1 = bottomLeft[i][0];\n        const int ay1 = bottomLeft[i][1];\n        const int ax2 = topRight[i][0];\n        const int ay2 = topRight[i][1];\n        const int bx1 = bottomLeft[j][0];\n        const int by1 = bottomLeft[j][1];\n        const int bx2 = topRight[j][0];\n        const int by2 = topRight[j][1];\n        const int overlapX = min(ax2, bx2) - max(ax1, bx1);\n        const int overlapY = min(ay2, by2) - max(ay1, by1);\n        minSide = max(minSide, min(overlapX, overlapY));\n      }\n\n    return static_cast<long>(minSide) * minSide;\n  }\n};"
+      "geometry": "import java.util.*;\n\npublic class Solution {\n    public long largestSquareArea(List<int[]> bottomLeft, List<int[]> topRight) {\n        int minSide = 0;\n        int n = bottomLeft.size();\n\n        for (int i = 0; i < n; i++) {\n            int ax1 = bottomLeft.get(i)[0];\n            int ay1 = bottomLeft.get(i)[1];\n            int ax2 = topRight.get(i)[0];\n            int ay2 = topRight.get(i)[1];\n            for (int j = i + 1; j < n; j++) {\n                int bx1 = bottomLeft.get(j)[0];\n                int by1 = bottomLeft.get(j)[1];\n                int bx2 = topRight.get(j)[0];\n                int by2 = topRight.get(j)[1];\n\n                int overlapX = Math.min(ax2, bx2) - Math.max(ax1, bx1);\n                int overlapY = Math.min(ay2, by2) - Math.max(ay1, by1);\n                minSide = Math.max(minSide, Math.min(overlapX, overlapY));\n            }\n        }\n\n        return (long) minSide * minSide;\n    }\n}"
     }
   },
   "3048": {
@@ -14912,12 +14912,12 @@
   },
   "3064": {
     "solution": {
-      "bit-manipulation": "class Solution {\npublic:\n    int findNumber() {\n        int n = 0;\n        for (int i = 0; i < 32; ++i) {\n            if (commonSetBits(1 << i)) {\n                n |= 1 << i;\n            }\n        }\n        return n;\n    }\n};"
+      "bit-manipulation": "public class Solution {\n    // Assume commonSetBits is defined externally\n    public int findNumber() {\n        int n = 0;\n        for (int i = 0; i < 32; ++i) {\n            if (commonSetBits(1 << i)) {\n                n |= 1 << i;\n            }\n        }\n        return n;\n    }\n\n    // Dummy placeholder, actual implementation depends on API\n    private boolean commonSetBits(int num) {\n        // Implementation goes here\n        return false;\n    }\n}"
     }
   },
   "3065": {
     "solution": {
-      "array": "class Solution {\npublic:\n    int minOperations(vector<int>& nums, int k) {\n        return ranges::count_if(nums, [k](int num) { return num < k; });\n    }\n};"
+      "array": "import java.util.*;\n\npublic class Solution {\n    public int minOperations(int[] nums, int k) {\n        int count = 0;\n        for (int num : nums) {\n            if (num < k) count++;\n        }\n        return count;\n    }\n}"
     }
   },
   "3066": {
@@ -15057,12 +15057,12 @@
   },
   "3093": {
     "solution": {
-      "trie": "struct TrieNode {\n  vector<shared_ptr<TrieNode>> children;\n  TrieNode() : children(26) {}\n  int length = INT_MAX;\n  int index = -1;\n};\n\nclass Solution {\npublic:\n  vector<int> stringIndices(vector<string>& wordsContainer,\n                            vector<string>& wordsQuery) {\n    vector<int> ans;\n    int minIndex = 0;\n\n    for (int i = 0; i < wordsContainer.size(); ++i) {\n      insert(wordsContainer[i], i);\n      if (wordsContainer[i].length() < wordsContainer[minIndex].length())\n        minIndex = i;\n    }\n\n    for (const string& query : wordsQuery) {\n      const int index = search(query);\n      ans.push_back(index == -1 ? minIndex : index);\n    }\n\n    return ans;\n  }\n\n private:\n  shared_ptr<TrieNode> root = make_shared<TrieNode>();\n\n  void insert(const string& word, int index) {\n    shared_ptr<TrieNode> node = root;\n    for (int i = word.length() - 1; i >= 0; --i) {\n      const int j = word[i] - 'a';\n      if (node->children[j] == nullptr)\n        node->children[j] = make_shared<TrieNode>();\n      node = node->children[j];\n      if (node->length > word.length()) {\n        node->length = word.length();\n        node->index = index;\n      }\n    }\n  }\n\n  int search(const string& word) {\n    shared_ptr<TrieNode> node = root;\n    for (int i = word.length() - 1; i >= 0; --i) {\n      const int j = word[i] - 'a';\n      if (node->children[j] == nullptr)\n        return node->index;\n      node = node->children[j];\n    }\n    return node->index;\n  }\n};"
+      "trie": "import java.util.*;\n\nclass TrieNode {\n    TrieNode[] children = new TrieNode[26];\n    int length = Integer.MAX_VALUE;\n    int index = -1;\n}\n\npublic class Solution {\n    private TrieNode root = new TrieNode();\n\n    public List<Integer> stringIndices(List<String> wordsContainer, List<String> wordsQuery) {\n        List<Integer> ans = new ArrayList<>();\n        int minIndex = 0;\n\n        for (int i = 0; i < wordsContainer.size(); i++) {\n            insert(wordsContainer.get(i), i);\n            if (wordsContainer.get(i).length() < wordsContainer.get(minIndex).length()) {\n                minIndex = i;\n            }\n        }\n\n        for (String query : wordsQuery) {\n            int index = search(query);\n            ans.add(index == -1 ? minIndex : index);\n        }\n\n        return ans;\n    }\n\n    private void insert(String word, int index) {\n        TrieNode node = root;\n        for (int i = word.length() - 1; i >= 0; i--) {\n            int j = word.charAt(i) - 'a';\n            if (node.children[j] == null) {\n                node.children[j] = new TrieNode();\n            }\n            node = node.children[j];\n            if (node.length > word.length()) {\n                node.length = word.length();\n                node.index = index;\n            }\n        }\n    }\n\n    private int search(String word) {\n        TrieNode node = root;\n        for (int i = word.length() - 1; i >= 0; i--) {\n            int j = word.charAt(i) - 'a';\n            if (node.children[j] == null) {\n                return node.index;\n            }\n            node = node.children[j];\n        }\n        return node.index;\n    }\n}"
     }
   },
   "3094": {
     "solution": {
-      "bit-manipulation": "/**\n * Definition of commonBits API.\n * int commonBits(int num);\n */\n\nclass Solution {\npublic:\n    int findNumber() {\n        int n = 0;\n        for (int i = 0; i < 32; ++i) {\n            int count1 = commonBits(1 << i);\n            int count2 = commonBits(1 << i);\n            if (count1 > count2) {\n                n |= 1 << i;\n            }\n        }\n        return n;\n    }\n};"
+      "bit-manipulation": "public class Solution {\n    // Assume commonBits(int num) is implemented externally\n    public int findNumber() {\n        int n = 0;\n        for (int i = 0; i < 32; i++) {\n            int count1 = commonBits(1 << i);\n            int count2 = commonBits(1 << i);\n            if (count1 > count2) {\n                n |= 1 << i;\n            }\n        }\n        return n;\n    }\n\n    // Placeholder method\n    private int commonBits(int num) {\n        // Implementation needed\n        return 0;\n    }\n}"
     }
   },
   "3095": {
@@ -15436,7 +15436,7 @@
       "string": ""
     }
   },
-   "3169": {
+  "3169": {
     "solution": {
       "array": "import java.util.*;\n\npublic class Solution {\n    public int countDays(int days, List<int[]> meetings) {\n        int freeDays = 0;\n        int prevEnd = 0;\n\n        meetings.sort((a, b) -> {\n            if (a[0] != b[0]) return Integer.compare(a[0], b[0]);\n            return Integer.compare(a[1], b[1]);\n        });\n\n        for (int[] meeting : meetings) {\n            int start = meeting[0];\n            int end = meeting[1];\n            if (start > prevEnd) {\n                freeDays += start - prevEnd - 1;\n            }\n            prevEnd = Math.max(prevEnd, end);\n        }\n\n        return freeDays + Math.max(0, days - prevEnd);\n    }\n}"
     }
