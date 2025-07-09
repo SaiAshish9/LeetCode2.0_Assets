@@ -579,6 +579,31 @@
       "dynamic-programming": "class Solution {\n    public int numDistinct(String s, String t) {\n        int m = s.length();\n        int n = t.length();\n        int[] dp = new int[n + 1];\n        dp[0] = 1;\n        for (int i = 1; i <= m; ++i)\n            for (int j = n; j >= 1; --j)\n                if (s.charAt(i - 1) == t.charAt(j - 1))\n                    dp[j] += dp[j - 1];\n        System.out.println(Arrays.toString(dp));\n        return dp[n];\n    }\n}"
     }
   },
+  "116": {
+    "solution": {
+      "binary-tree": "/*\n// Definition for a Node.\nclass Node {\n    public int val;\n    public Node left;\n    public Node right;\n    public Node next;\n\n    public Node() {}\n    \n    public Node(int _val) {\n        val = _val;\n    }\n\n    public Node(int _val, Node _left, Node _right, Node _next) {\n        val = _val;\n        left = _left;\n        right = _right;\n        next = _next;\n    }\n};\n*/\n\nclass Solution {\n    public Node connect(Node root) {\n        if (root == null) return null;\n\n        Node leftmost = root;\n\n        while (leftmost.left != null) {\n            Node curr = leftmost;\n\n            while (curr != null) {\n                curr.left.next = curr.right;\n\n                if (curr.next != null) {\n                    curr.right.next = curr.next.left;\n                }\n\n                curr = curr.next;\n            }\n\n            leftmost = leftmost.left;\n        }\n\n        return root;\n    }\n}"
+    }
+  },
+  "117": {
+    "solution": {
+      "binary-tree": "/*\n// Definition for a Node.\nclass Node {\n    public int val;\n    public Node left;\n    public Node right;\n    public Node next;\n\n    public Node() {}\n\n    public Node(int _val) {\n        val = _val;\n    }\n\n    public Node(int _val, Node _left, Node _right, Node _next) {\n        val = _val;\n        left = _left;\n        right = _right;\n        next = _next;\n    }\n};\n*/\n\nimport java.util.*;\n\nclass Solution {\n    public Node connect(Node root) {\n        if (root == null) return null;\n\n        Queue<Node> queue = new LinkedList<>();\n        queue.offer(root);\n\n        while (!queue.isEmpty()) {\n            int size = queue.size();\n            Node prev = null;\n\n            for (int i = 0; i < size; i++) {\n                Node curr = queue.poll();\n                if (prev != null) {\n                    prev.next = curr;\n                }\n                prev = curr;\n\n                if (curr.left != null) queue.offer(curr.left);\n                if (curr.right != null) queue.offer(curr.right);\n            }\n        }\n\n        return root;\n    }\n}"
+    }
+  },
+  "118": {
+    "solution": {
+      "dynamic-programming": "class Solution {\n    public List<List<Integer>> generate(int numRows) {\n        List<List<Integer>> triangle = new ArrayList<>();\n\n        for (int i = 0; i < numRows; i++) {\n            List<Integer> row = new ArrayList<>();\n            for (int j = 0; j <= i; j++) {\n                if (j == 0 || j == i) {\n                    row.add(1);\n                } else {\n                    int val = triangle.get(i - 1).get(j - 1) + triangle.get(i - 1).get(j);\n                    row.add(val);\n                }\n            }\n            triangle.add(row);\n        }\n\n        return triangle;\n    }\n}"
+    }
+  },
+  "119": {
+    "solution": {
+      "dynamic-programming": "class Solution {\n    public List<Integer> getRow(int rowIndex) {\n        List<Integer> row = new ArrayList<>();\n        row.add(1);\n\n        for (int i = 1; i <= rowIndex; i++) {\n            row.add(0); // Add dummy value to extend size\n            for (int j = i; j > 0; j--) {\n                row.set(j, row.get(j) + row.get(j - 1));\n            }\n        }\n\n        return row;\n    }\n}"
+    }
+  },
+  "120": {
+    "solution": {
+      "dynamic-programming": "class Solution {\n    public int minimumTotal(List<List<Integer>> triangle) {\n        int n = triangle.size();\n        int[] dp = new int[n + 1];\n\n        for (int i = n - 1; i >= 0; i--) {\n            for (int j = 0; j < triangle.get(i).size(); j++) {\n                dp[j] = triangle.get(i).get(j) + Math.min(dp[j], dp[j + 1]);\n            }\n        }\n\n        return dp[0];\n    }\n}"
+    }
+  },
   "121": {
     "solution": {
       "dynamic-programming": "class Solution {\n    // dp[i] represents the minimum price of the stock among the prices encountered up to index i in the prices array.\n    // You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.\n\n    public int maxProfit(int[] prices) {\n        int res = 0;\n        int[] dp = new int[prices.length];\n        dp[0] = prices[0];\n        for (int i = 1; i < prices.length; i++) {\n            dp[i] = Math.min(dp[i - 1], prices[i]);\n        }\n        for (int i = 0; i < prices.length; i++) {\n            res = Math.max(res, prices[i] - dp[i]);\n        }\n        System.out.println(Arrays.toString(dp));\n        return res;\n    }\n}"
