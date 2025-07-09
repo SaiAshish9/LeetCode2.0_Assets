@@ -5989,7 +5989,7 @@
   },
   "1196": {
     "solution": {
-      "sorting": "class Solution {\npublic:\n    int maxNumberOfApples(vector<int>& weight) {\n        sort(weight.begin(), weight.end());\n        int s = 0;\n        for (int i = 0; i < weight.size(); ++i) {\n            s += weight[i];\n            if (s > 5000) {\n                return i;\n            }\n        }\n        return weight.size();\n    }\n};"
+      "sorting": "import java.util.Arrays;\n\nclass Solution {\n    public int maxNumberOfApples(int[] weight) {\n        Arrays.sort(weight);\n        int sum = 0;\n        for (int i = 0; i < weight.length; i++) {\n            sum += weight[i];\n            if (sum > 5000) {\n                return i;\n            }\n        }\n        return weight.length;\n    }\n}"
     }
   },
   "1197": {
