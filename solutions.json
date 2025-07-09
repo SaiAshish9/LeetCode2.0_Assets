@@ -8562,7 +8562,7 @@
   },
   "1710": {
     "solution": {
-      "sorting": "#include <vector>\n#include <algorithm>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    int maximumUnits(vector<vector<int>>& boxTypes, int truckSize) {\n        // Step 1: Sort boxTypes by units per box in descending order\n        sort(boxTypes.begin(), boxTypes.end(), [](const vector<int>& a, const vector<int>& b) {\n            return a[1] > b[1];\n        });\n\n        int maxUnits = 0;\n        for (const auto& box : boxTypes) {\n            int boxCount = box[0];\n            int unitsPerBox = box[1];\n            \n            // Step 2: Take as many boxes as possible from the current type\n            int boxesToTake = min(boxCount, truckSize);\n            maxUnits += boxesToTake * unitsPerBox;\n            truckSize -= boxesToTake;\n\n            // Step 3: Stop if the truck is full\n            if (truckSize == 0) {\n                break;\n            }\n        }\n\n        return maxUnits;\n    }\n};\n"
+      "sorting": "import java.util.*;\n\nclass Solution {\n    public int maximumUnits(int[][] boxTypes, int truckSize) {\n        Arrays.sort(boxTypes, (a, b) -> b[1] - a[1]);\n        int maxUnits = 0;\n        \n        for (int[] box : boxTypes) {\n            int boxCount = box[0];\n            int unitsPerBox = box[1];\n            int boxesToTake = Math.min(boxCount, truckSize);\n            maxUnits += boxesToTake * unitsPerBox;\n            truckSize -= boxesToTake;\n            if (truckSize == 0) break;\n        }\n        \n        return maxUnits;\n    }\n}"
     }
   },
   "1711": {
@@ -8592,7 +8592,7 @@
   },
   "1716": {
     "solution": {
-      "math": "class Solution {\npublic:\n    int totalMoney(int n) {\n        const int weeks = n / 7;\n        const int firstWeek = trapezoid(1, 7);\n        const int lastFullWeek = trapezoid(1 + weeks - 1, 7 + weeks - 1);\n        const int remainingDays = trapezoid(1 + weeks, n % 7 + weeks);\n        return (firstWeek + lastFullWeek) * weeks / 2 + remainingDays;\n    }\n\n    // Returns sum(a..b).\n    int trapezoid(int a, int b) { return (a + b) * (b - a + 1) / 2; }\n};\n"
+      "math": "class Solution {\n    public int totalMoney(int n) {\n        int weeks = n / 7;\n        int firstWeek = trapezoid(1, 7);\n        int lastFullWeek = trapezoid(1 + weeks - 1, 7 + weeks - 1);\n        int remainingDays = trapezoid(1 + weeks, n % 7 + weeks);\n        return (firstWeek + lastFullWeek) * weeks / 2 + remainingDays;\n    }\n\n    private int trapezoid(int a, int b) {\n        return (a + b) * (b - a + 1) / 2;\n    }\n}"
     }
   },
   "1717": {
@@ -8607,7 +8607,7 @@
   },
   "1719": {
     "solution": {
-      "tree": "class Solution {\npublic:\n    int checkWays(vector<vector<int>>& pairs) {\n        constexpr int kMax = 501;\n        unordered_map<int, vector<int>> graph;\n        vector<int> degrees(kMax);\n        vector<vector<bool>> connected(kMax, vector<bool>(kMax));\n\n        for (const vector<int>& pair : pairs) {\n            const int u = pair[0];\n            const int v = pair[1];\n            graph[u].push_back(v);\n            graph[v].push_back(u);\n            ++degrees[u];\n            ++degrees[v];\n            connected[u][v] = true;\n            connected[v][u] = true;\n        }\n\n        for (auto& [_, children] : graph)\n            ranges::sort(children, ranges::greater{},\n                         [&degrees](int child) { return degrees[child]; });\n\n        const int root = getRoot(degrees, graph.size());\n        if (root == -1)\n            return 0;\n        if (!dfs(graph, root, degrees, connected, {}, vector<bool>(kMax)))\n            return 0;\n        return hasMoreThanOneWay ? 2 : 1;\n    }\n\nprivate:\n    bool hasMoreThanOneWay = false;\n\n    // Returns the root by finding the node with a degree that equals to n - 1.\n    int getRoot(const vector<int>& degrees, int n) {\n        for (int i = 1; i < degrees.size(); ++i)\n            if (degrees[i] == n - 1)\n                return i;\n        return -1;\n    }\n\n    bool dfs(const unordered_map<int, vector<int>>& graph, int u,\n             vector<int>& degrees, vector<vector<bool>>& connected,\n             vector<int>&& ancestors, vector<bool>&& seen) {\n        seen[u] = true;\n\n        for (const int ancestor : ancestors)\n            if (!connected[u][ancestor])\n                return false;\n\n        ancestors.push_back(u);\n\n        for (const int v : graph.at(u)) {\n            if (seen[v])\n                continue;\n            if (degrees[v] == degrees[u])\n                hasMoreThanOneWay = true;\n            if (!dfs(graph, v, degrees, connected, std::move(ancestors),\n                     std::move(seen)))\n                return false;\n        }\n\n        ancestors.pop_back();\n        return true;\n    }\n};"
+      "tree": "import java.util.*;\n\nclass Solution {\n    private boolean hasMoreThanOneWay = false;\n\n    public int checkWays(int[][] pairs) {\n        int n = 0;\n        for (int[] pair : pairs) {\n            n = Math.max(n, Math.max(pair[0], pair[1]));\n        }\n        n++;\n\n        List<Set<Integer>> graph = new ArrayList<>();\n        for (int i = 0; i < n; i++) graph.add(new HashSet<>());\n\n        int[] degrees = new int[n];\n        for (int[] pair : pairs) {\n            int u = pair[0], v = pair[1];\n            graph.get(u).add(v);\n            graph.get(v).add(u);\n            degrees[u]++;\n            degrees[v]++;\n        }\n\n        int root = -1;\n        for (int i = 0; i < n; i++) {\n            if (degrees[i] == n - 1) {\n                root = i;\n                break;\n            }\n        }\n        if (root == -1) return 0;\n\n        boolean[] seen = new boolean[n];\n        if (!dfs(root, graph, degrees, seen, new ArrayList<>())) {\n            return 0;\n        }\n\n        return hasMoreThanOneWay ? 2 : 1;\n    }\n\n    private boolean dfs(int u, List<Set<Integer>> graph, int[] degrees, boolean[] seen, List<Integer> ancestors) {\n        seen[u] = true;\n\n        for (int anc : ancestors) {\n            if (!graph.get(u).contains(anc)) {\n                return false;\n            }\n        }\n\n        ancestors.add(u);\n\n        for (int v : graph.get(u)) {\n            if (seen[v]) continue;\n            if (degrees[v] == degrees[u]) hasMoreThanOneWay = true;\n            if (!dfs(v, graph, degrees, seen, ancestors)) return false;\n        }\n\n        ancestors.remove(ancestors.size() - 1);\n        return true;\n    }\n}"
     }
   },
   "1720": {
@@ -8642,7 +8642,7 @@
   },
   "1726": {
     "solution": {
-      "counting": "class Solution {\npublic:\n    int tupleSameProduct(vector<int>& nums) {\n        unordered_map<int, int> productFreq;\n        int result = 0;\n\n        for (int i = 0; i < nums.size(); ++i) {\n            for (int j = i + 1; j < nums.size(); ++j) {\n                int product = nums[i] * nums[j]; \n                result += productFreq[product] * 8;\n                ++productFreq[product]; \n            }\n        }\n\n        return result;\n    }\n};\n"
+      "counting": "import java.util.*;\n\nclass Solution {\n    public int tupleSameProduct(int[] nums) {\n        Map<Integer, Integer> productFreq = new HashMap<>();\n        int result = 0;\n        \n        for (int i = 0; i < nums.length; i++) {\n            for (int j = i + 1; j < nums.length; j++) {\n                int product = nums[i] * nums[j];\n                result += productFreq.getOrDefault(product, 0) * 8;\n                productFreq.put(product, productFreq.getOrDefault(product, 0) + 1);\n            }\n        }\n        \n        return result;\n    }\n}"
     }
   },
   "1727": {
@@ -8712,7 +8712,7 @@
   },
   "1740": {
     "solution": {
-      "binary-tree": "// Time: O(N)\n// Space: O(H)\nclass Solution {\n    bool dfs(TreeNode *root, int target, vector<TreeNode*> &path) {\n        if (!root) return false;\n        path.push_back(root);\n        if (root->val == target || dfs(root->left, target, path) || dfs(root->right, target, path)) return true;\n        path.pop_back();\n        return false;\n    }\npublic:\n    int findDistance(TreeNode* root, int p, int q) {\n        if (p == q) return 0;\n        vector<TreeNode*> a, b;\n        dfs(root, p, a);\n        dfs(root, q, b);\n        int i = 0;\n        while (i < a.size() && i < b.size() && a[i] == b[i]) ++i;\n        return a.size() + b.size() - 2 * i;\n    }\n};"
+      "binary-tree": "import java.util.*;\n\nclass Solution {\n    private boolean dfs(TreeNode root, int target, List<TreeNode> path) {\n        if (root == null) return false;\n        path.add(root);\n        if (root.val == target || dfs(root.left, target, path) || dfs(root.right, target, path)) {\n            return true;\n        }\n        path.remove(path.size() - 1);\n        return false;\n    }\n\n    public int findDistance(TreeNode root, int p, int q) {\n        if (p == q) return 0;\n        List<TreeNode> pathP = new ArrayList<>();\n        List<TreeNode> pathQ = new ArrayList<>();\n        dfs(root, p, pathP);\n        dfs(root, q, pathQ);\n\n        int i = 0;\n        while (i < pathP.size() && i < pathQ.size() && pathP.get(i) == pathQ.get(i)) {\n            i++;\n        }\n\n        return pathP.size() + pathQ.size() - 2 * i;\n    }\n}\n\n// Definition for a binary tree node.\nclass TreeNode {\n    int val;\n    TreeNode left;\n    TreeNode right;\n    TreeNode(int x) { val = x; }\n}"
     }
   },
   "1741": {
@@ -8752,12 +8752,12 @@
   },
   "1748": {
     "solution": {
-      "counting": "class Solution {\npublic:\n    int sumOfUnique(vector<int>& nums) {\n        unordered_map<int, int> freq;\n        int sum = 0;\n\n        for (int num : nums) {\n            ++freq[num];\n        }\n\n        for (const auto& [num, count] : freq) {\n            if (count == 1) { \n                sum += num;\n            }\n        }\n\n        return sum;\n    }\n};\n"
+      "counting": "import java.util.*;\n\nclass Solution {\n    public int sumOfUnique(int[] nums) {\n        Map<Integer, Integer> freq = new HashMap<>();\n        int sum = 0;\n        \n        for (int num : nums) {\n            freq.put(num, freq.getOrDefault(num, 0) + 1);\n        }\n        \n        for (Map.Entry<Integer, Integer> entry : freq.entrySet()) {\n            if (entry.getValue() == 1) {\n                sum += entry.getKey();\n            }\n        }\n        \n        return sum;\n    }\n}"
     }
   },
   "1749": {
     "solution": {
-      "dynamic-programming": "class Solution {\npublic:\n    int maxAbsoluteSum(vector<int>& nums) {\n        int maxSum = 0, minSum = 0, currentMax = 0, currentMin = 0;\n\n        for (int num : nums) {\n            currentMax = max(currentMax + num, num);\n            currentMin = min(currentMin + num, num);\n            maxSum = max(maxSum, currentMax);\n            minSum = min(minSum, currentMin);\n        }\n\n        return max(abs(maxSum), abs(minSum));\n    }\n};"
+      "dynamic-programming": "class Solution {\n    public int maxAbsoluteSum(int[] nums) {\n        int maxSum = 0, minSum = 0, currentMax = 0, currentMin = 0;\n        \n        for (int num : nums) {\n            currentMax = Math.max(currentMax + num, num);\n            currentMin = Math.min(currentMin + num, num);\n            maxSum = Math.max(maxSum, currentMax);\n            minSum = Math.min(minSum, currentMin);\n        }\n        \n        return Math.max(Math.abs(maxSum), Math.abs(minSum));\n    }\n}"
     }
   },
   "1750": {
@@ -8792,7 +8792,7 @@
   },
   "1756": {
     "solution": {
-      "design": "class BinaryIndexedTree {\npublic:\n    BinaryIndexedTree(int _n)\n        : n(_n)\n        , c(_n + 1) {}\n\n    void update(int x, int delta) {\n        while (x <= n) {\n            c[x] += delta;\n            x += x & -x;\n        }\n    }\n\n    int query(int x) {\n        int s = 0;\n        while (x) {\n            s += c[x];\n            x -= x & -x;\n        }\n        return s;\n    }\n\nprivate:\n    int n;\n    vector<int> c;\n};\n\nclass MRUQueue {\npublic:\n    MRUQueue(int n) {\n        q.resize(n + 1);\n        iota(q.begin() + 1, q.end(), 1);\n        tree = new BinaryIndexedTree(n + 2010);\n    }\n\n    int fetch(int k) {\n        int l = 1, r = q.size() - 1;\n        while (l < r) {\n            int mid = (l + r) >> 1;\n            if (mid - tree->query(mid) >= k) {\n                r = mid;\n            } else {\n                l = mid + 1;\n            }\n        }\n        int x = q[l];\n        q.push_back(x);\n        tree->update(l, 1);\n        return x;\n    }\n\nprivate:\n    vector<int> q;\n    BinaryIndexedTree* tree;\n};\n\n/**\n * Your MRUQueue object will be instantiated and called as such:\n * MRUQueue* obj = new MRUQueue(n);\n * int param_1 = obj->fetch(k);\n */"
+      "design": "import java.util.*;\n\nclass BinaryIndexedTree {\n    private int n;\n    private int[] c;\n\n    public BinaryIndexedTree(int n) {\n        this.n = n;\n        c = new int[n + 1];\n    }\n\n    public void update(int x, int delta) {\n        while (x <= n) {\n            c[x] += delta;\n            x += x & (-x);\n        }\n    }\n\n    public int query(int x) {\n        int s = 0;\n        while (x > 0) {\n            s += c[x];\n            x -= x & (-x);\n        }\n        return s;\n    }\n}\n\nclass MRUQueue {\n    private List<Integer> q;\n    private BinaryIndexedTree tree;\n\n    public MRUQueue(int n) {\n        q = new ArrayList<>();\n        q.add(0); // 1-based indexing placeholder\n        for (int i = 1; i <= n; i++) {\n            q.add(i);\n        }\n        tree = new BinaryIndexedTree(n + 2010);\n    }\n\n    public int fetch(int k) {\n        int l = 1, r = q.size() - 1;\n        while (l < r) {\n            int mid = (l + r) / 2;\n            if (mid - tree.query(mid) >= k) {\n                r = mid;\n            } else {\n                l = mid + 1;\n            }\n        }\n        int x = q.get(l);\n        q.add(x);\n        tree.update(l, 1);\n        return x;\n    }\n}"
     }
   },
   "1757": {
@@ -8817,7 +8817,7 @@
   },
   "1761": {
     "solution": {
-      "graph": "#include <vector>\n#include <unordered_set>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int minTrioDegree(int n, vector<vector<int>>& edges) {\n        vector<unordered_set<int>> graph(n + 1);\n        vector<int> degree(n + 1, 0);\n\n        for (const auto& edge : edges) {\n            graph[edge[0]].insert(edge[1]);\n            graph[edge[1]].insert(edge[0]);\n            degree[edge[0]]++;\n            degree[edge[1]]++;\n        }\n\n        int minDegree = INT_MAX;\n\n        for (int i = 1; i <= n; ++i) {\n            for (int j : graph[i]) {\n                if (j > i) { \n                    for (int k : graph[j]) {\n                        if (k > j && graph[i].count(k)) {\n                            int currentDegree = degree[i] + degree[j] + degree[k] - 6;\n                            minDegree = min(minDegree, currentDegree);\n                        }\n                    }\n                }\n            }\n        }\n\n        return minDegree == INT_MAX ? -1 : minDegree;\n    }\n};"
+      "graph": "import java.util.*;\n\nclass Solution {\n    public int minTrioDegree(int n, List<List<Integer>> edges) {\n        List<Set<Integer>> graph = new ArrayList<>();\n        for (int i = 0; i <= n; i++) {\n            graph.add(new HashSet<>());\n        }\n        int[] degree = new int[n + 1];\n\n        for (List<Integer> edge : edges) {\n            int u = edge.get(0), v = edge.get(1);\n            graph.get(u).add(v);\n            graph.get(v).add(u);\n            degree[u]++;\n            degree[v]++;\n        }\n\n        int minDegree = Integer.MAX_VALUE;\n        for (int i = 1; i <= n; i++) {\n            for (int j : graph.get(i)) {\n                if (j > i) {\n                    for (int k : graph.get(j)) {\n                        if (k > j && graph.get(i).contains(k)) {\n                            int currentDegree = degree[i] + degree[j] + degree[k] - 6;\n                            minDegree = Math.min(minDegree, currentDegree);\n                        }\n                    }\n                }\n            }\n        }\n\n        return minDegree == Integer.MAX_VALUE ? -1 : minDegree;\n    }\n}"
     }
   },
   "1762": {
@@ -8912,7 +8912,7 @@
   },
   "1780": {
     "solution": {
-      "math": "class Solution {\npublic:\n    bool checkPowersOfThree(int n) {\n        while (n > 0) {\n            int remainder = n % 3;\n            if (remainder > 1) {\n                return false; \n            }\n            n /= 3; \n        }\n        return true;\n    }\n};\n"
+      "math": "class Solution {\n    public boolean checkPowersOfThree(int n) {\n        while (n > 0) {\n            int remainder = n % 3;\n            if (remainder > 1) {\n                return false;\n            }\n            n /= 3;\n        }\n        return true;\n    }\n}"
     }
   },
   "1781": {
@@ -8937,7 +8937,7 @@
   },
   "1785": {
     "solution": {
-      "greedy": "class Solution {\npublic:\n    int minElements(vector<int>& nums, int limit, int goal) {\n        long long currentSum = accumulate(nums.begin(), nums.end(), 0LL); // Calculate the current sum\n        long long diff = abs(goal - currentSum); // Absolute difference between goal and current sum\n\n        // Calculate the minimum number of elements needed\n        return (diff + limit - 1) / limit;\n    }\n};"
+      "greedy": "import java.util.*;\n\nclass Solution {\n    public int minElements(int[] nums, int limit, int goal) {\n        long currentSum = 0;\n        for (int num : nums) {\n            currentSum += num;\n        }\n        long diff = Math.abs(goal - currentSum);\n        return (int)((diff + limit - 1) / limit);\n    }\n}"
     }
   },
   "1786": {
