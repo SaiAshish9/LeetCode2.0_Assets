@@ -5516,7 +5516,7 @@
   },
   "1102": {
     "solution": {
-      "depth-first-search": "class Solution {\npublic:\n    int maximumMinimumPath(vector<vector<int>>& grid) {\n        int rows = grid.size(), cols = grid[0].size();\n        vector<tuple<int, int, int>> cellValues;\n        vector<int> parent(rows * cols);\n        \n        iota(parent.begin(), parent.end(), 0);\n\n        for (int row = 0; row < rows; ++row) {\n            for (int col = 0; col < cols; ++col) {\n                cellValues.emplace_back(grid[row][col], row, col);\n            }\n        }\n\n        function<int(int)> find = [&](int index) {\n            return parent[index] == index ? index : parent[index] = find(parent[index]);\n        };\n\n        sort(cellValues.begin(), cellValues.end(), greater<tuple<int, int, int>>());\n\n        int maxMinValue = 0;\n        int directions[5] = {-1, 0, 1, 0, -1}; // To traverse up, down, left, right\n        vector<vector<bool>> visited(rows, vector<bool>(cols, false));\n\n        for (auto& [value, row, col] : cellValues) {\n            visited[row][col] = true;\n            maxMinValue = value;\n\n            for (int direction = 0; direction < 4; ++direction) {\n                int newRow = row + directions[direction];\n                int newCol = col + directions[direction + 1];\n\n                if (newRow >= 0 && newRow < rows && newCol >= 0 && newCol < cols && visited[newRow][newCol]) {\n                    parent[find(newRow * cols + newCol)] = find(row * cols + col);\n                }\n            }\n\n            if (find(0) == find(rows * cols - 1)) {\n                break;\n            }\n        }\n\n        return maxMinValue;\n    }\n};\n"
+      "depth-first-search": "class Solution {\n    public int maximumMinimumPath(int[][] grid) {\n        int rows = grid.length, cols = grid[0].length;\n        int[] parent = new int[rows * cols];\n        for (int i = 0; i < parent.length; i++) parent[i] = i;\n\n        List<int[]> cells = new ArrayList<>();\n        for (int r = 0; r < rows; r++) {\n            for (int c = 0; c < cols; c++) {\n                cells.add(new int[] {grid[r][c], r, c});\n            }\n        }\n        cells.sort((a, b) -> Integer.compare(b[0], a[0])); // Descending\n\n        boolean[][] visited = new boolean[rows][cols];\n        int[][] dirs = {{0,1}, {1,0}, {0,-1}, {-1,0}};\n\n        for (int[] cell : cells) {\n            int val = cell[0], r = cell[1], c = cell[2];\n            visited[r][c] = true;\n            int id = r * cols + c;\n            for (int[] d : dirs) {\n                int nr = r + d[0], nc = c + d[1];\n                if (nr >= 0 && nr < rows && nc >= 0 && nc < cols && visited[nr][nc]) {\n                    int nid = nr * cols + nc;\n                    union(parent, id, nid);\n                }\n            }\n            if (find(parent, 0) == find(parent, rows * cols - 1)) {\n                return val;\n            }\n        }\n        return -1;\n    }\n\n    private int find(int[] parent, int x) {\n        if (parent[x] != x) {\n            parent[x] = find(parent, parent[x]);\n        }\n        return parent[x];\n    }\n\n    private void union(int[] parent, int x, int y) {\n        int px = find(parent, x);\n        int py = find(parent, y);\n        if (px != py) {\n            parent[py] = px;\n        }\n    }\n}"
     }
   },
   "1103": {
@@ -5526,7 +5526,7 @@
   },
   "1104": {
     "solution": {
-      "binary-tree": "class Solution {\npublic:\n    vector<int> pathInZigZagTree(int label) {\n        deque<int> ans;\n        int level;\n\n        for (int l = 0; l < 21; ++l)\n            if (pow(2, l) > label) {\n                level = l - 1;\n                break;\n            }\n\n        if (level % 2 == 1)\n            label = boundarySum(level) - label;\n\n        for (int l = level; l >= 0; --l) {\n            ans.push_front(l % 2 == 0 ? label : boundarySum(l) - label);\n            label /= 2;\n        }\n\n        return {ans.begin(), ans.end()};\n    }\n\nprivate:\n    int boundarySum(int level) { return pow(2, level) + pow(2, level + 1) - 1; }\n};"
+      "binary-tree": "class Solution {\n    public List<Integer> pathInZigZagTree(int label) {\n        List<Integer> path = new ArrayList<>();\n        int level = (int)(Math.log(label) / Math.log(2));\n\n        while (label > 0) {\n            path.add(0, label);\n            int levelStart = (int)Math.pow(2, level);\n            int levelEnd = (int)Math.pow(2, level + 1) - 1;\n            label = (levelStart + levelEnd - label) / 2;\n            level--;\n        }\n\n        return path;\n    }\n}"
     }
   },
   "1105": {
@@ -5536,7 +5536,7 @@
   },
   "1106": {
     "solution": {
-      "recursion": "class Solution {\npublic:\n    bool parseBoolExpr(string expression) {\n        return evaluate(expression, 0, expression.size() - 1);\n    }\n\nprivate:\n    bool evaluate(const string& expr, int start, int end) {\n        char op = expr[start];\n\n        if (op == 't')\n            return true;\n        if (op == 'f')\n            return false;\n\n        if (op == '!') {\n            return !evaluate(expr, start + 2, end - 1);\n        } else if (op == '&') {\n            bool result = true;\n            for (int i = start + 2; i < end;) {\n                int nextPos = findNext(expr, i, end);\n                result &= evaluate(expr, i, nextPos - 1);\n                i = nextPos + 1;\n            }\n            return result;\n        } else if (op == '|') {\n            bool result = false;\n            for (int i = start + 2; i < end;) {\n                int nextPos = findNext(expr, i, end);\n                result |= evaluate(expr, i, nextPos - 1);\n                i = nextPos + 1;\n            }\n            return result;\n        }\n        return false;\n    }\n\n    int findNext(const string& expr, int start, int end) {\n        int balance = 0;\n        for (int i = start; i <= end; ++i) {\n            if (expr[i] == '(')\n                ++balance;\n            else if (expr[i] == ')')\n                --balance;\n            else if (expr[i] == ',' && balance == 0)\n                return i;\n        }\n        return end + 1;\n    }\n};\n"
+      "recursion": "class Solution {\n    public boolean parseBoolExpr(String expression) {\n        Stack<Character> stack = new Stack<>();\n\n        for (char c : expression.toCharArray()) {\n            if (c == ',') continue;\n            if (c != ')') {\n                stack.push(c);\n            } else {\n                Set<Character> seen = new HashSet<>();\n                while (stack.peek() != '(') {\n                    seen.add(stack.pop());\n                }\n                stack.pop(); // remove '('\n                char op = stack.pop();\n                if (op == '&') {\n                    stack.push(seen.contains('f') ? 'f' : 't');\n                } else if (op == '|') {\n                    stack.push(seen.contains('t') ? 't' : 'f');\n                } else { // '!' operator\n                    stack.push(seen.contains('t') ? 'f' : 't');\n                }\n            }\n        }\n\n        return stack.pop() == 't';\n    }\n}"
     }
   },
   "1107": {
@@ -5571,7 +5571,7 @@
   },
   "1113": {
     "solution": {
-      "shortest-path": "class Solution {\npublic:\n    int largestUniqueNumber(vector<int>& nums) {\n        int cnt[1001]{};\n        for (int& x : nums) {\n            ++cnt[x];\n        }\n        for (int x = 1000; ~x; --x) {\n            if (cnt[x] == 1) {\n                return x;\n            }\n        }\n        return -1;\n    }\n};"
+      "shortest-path": "class Solution {\n    public int largestUniqueNumber(int[] nums) {\n        int[] count = new int[1001];\n\n        for (int num : nums) {\n            count[num]++;\n        }\n\n        for (int i = 1000; i >= 0; i--) {\n            if (count[i] == 1) {\n                return i;\n            }\n        }\n\n        return -1;\n    }\n}"
     }
   },
   "1114": {
@@ -5596,7 +5596,7 @@
   },
   "1118": {
     "solution": {
-      "math": "class Solution {\npublic:\n    int numberOfDays(int year, int month) {\n        bool leap = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);\n        vector<int> days = {0, 31, leap ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};\n        return days[month];\n    }\n};\n"
+      "math": "class Solution {\n    public int numberOfDays(int year, int month) {\n        boolean leap = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);\n        int[] days = {0, 31, leap ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};\n        return days[month];\n    }\n}"
     }
   },
   "1119": {
