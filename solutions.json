@@ -7356,12 +7356,12 @@
   },
   "1469": {
     "solution": {
-      "depth-first-search": "class Solution {\npublic:\n    vector<int> getLonelyNodes(TreeNode* root) {\n        vector<int> ans;\n        function<void(TreeNode * root)> dfs;\n        dfs = [&](TreeNode* root) {\n            if (!root || (!root->left && !root->right)) return;\n            if (!root->left) ans.push_back(root->right->val);\n            if (!root->right) ans.push_back(root->left->val);\n            dfs(root->left);\n            dfs(root->right);\n        };\n        dfs(root);\n        return ans;\n    }\n};\n"
+      "depth-first-search": "import java.util.*;\n\nclass Solution {\n    public List<Integer> getLonelyNodes(TreeNode root) {\n        List<Integer> result = new ArrayList<>();\n        dfs(root, result);\n        return result;\n    }\n\n    private void dfs(TreeNode node, List<Integer> result) {\n        if (node == null) return;\n        if (node.left == null && node.right != null) {\n            result.add(node.right.val);\n        } else if (node.right == null && node.left != null) {\n            result.add(node.left.val);\n        }\n        dfs(node.left, result);\n        dfs(node.right, result);\n    }\n}\n\nclass TreeNode {\n    int val;\n    TreeNode left;\n    TreeNode right;\n    TreeNode(int val) { this.val = val; }\n}"
     }
   },
   "1470": {
     "solution": {
-      "array": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> shuffle(vector<int>& nums, int n) {\n        vector<int> result; \n        \n        for (int i = 0; i < n; ++i) {\n            result.push_back(nums[i]);    \n            result.push_back(nums[i + n]); \n        }\n        \n        return result;\n    }\n};\n"
+      "array": "class Solution {\n    public int[] shuffle(int[] nums, int n) {\n        int[] result = new int[nums.length];\n        for (int i = 0; i < n; i++) {\n            result[2 * i] = nums[i];\n            result[2 * i + 1] = nums[i + n];\n        }\n        return result;\n    }\n}"
     }
   },
   "1471": {
