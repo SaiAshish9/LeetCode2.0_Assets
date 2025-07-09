@@ -6556,7 +6556,7 @@
   },
   "1309": {
     "solution": {
-      "string": "class Solution {\npublic:\n    string freqAlphabets(string s) {\n        string result = \"\";\n        int n = s.size();\n        \n        for (int i = 0; i < n; i++) {\n            if (i + 2 < n && s[i + 2] == '#') {\n                int num = (s[i] - '0') * 10 + (s[i + 1] - '0');\n                result += (char)('a' + num - 1);\n                i += 2; \n            } else {\n                int num = s[i] - '0';\n                result += (char)('a' + num - 1);\n            }\n        }\n        \n        return result;\n    }\n};\n"
+      "string": "class Solution {\n    public String freqAlphabets(String s) {\n        StringBuilder result = new StringBuilder();\n        int n = s.length();\n        for (int i = 0; i < n; i++) {\n            if (i + 2 < n && s.charAt(i + 2) == '#') {\n                int num = (s.charAt(i) - '0') * 10 + (s.charAt(i + 1) - '0');\n                result.append((char) ('a' + num - 1));\n                i += 2;\n            } else {\n                int num = s.charAt(i) - '0';\n                result.append((char) ('a' + num - 1));\n            }\n        }\n        return result.toString();\n    }\n}"
     }
   },
   "1310": {
