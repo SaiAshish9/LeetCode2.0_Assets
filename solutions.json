@@ -7261,12 +7261,12 @@
   },
   "1450": {
     "solution": {
-      "array": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int busyStudent(vector<int>& startTime, vector<int>& endTime, int queryTime) {\n        int count = 0; \n        \n        for (int i = 0; i < startTime.size(); ++i) {\n            if (startTime[i] <= queryTime && queryTime <= endTime[i]) {\n                ++count; \n            }\n        }\n        \n        return count; \n    }\n};\n"
+      "array": "class Solution {\n    public int busyStudent(int[] startTime, int[] endTime, int queryTime) {\n        int count = 0;\n        for (int i = 0; i < startTime.length; i++) {\n            if (startTime[i] <= queryTime && queryTime <= endTime[i]) {\n                count++;\n            }\n        }\n        return count;\n    }\n}"
     }
   },
   "1451": {
     "solution": {
-      "sorting": "#include <string>\n#include <vector>\n#include <sstream>\n#include <algorithm>\n#include <cctype>\n\nusing namespace std;\n\nclass Solution {\npublic:\n    string arrangeWords(string text) {\n        text[0] = tolower(text[0]);\n\n        vector<pair<string, int>> words; \n        stringstream ss(text);\n        string word;\n        int index = 0;\n\n        while (ss >> word) {\n            words.emplace_back(word, index++);\n        }\n\n        stable_sort(words.begin(), words.end(), [](const pair<string, int>& a, const pair<string, int>& b) {\n            return a.first.size() < b.first.size();\n        });\n\n        string result;\n        for (const auto& w : words) {\n            if (!result.empty()) {\n                result += \" \";\n            }\n            result += w.first;\n        }\n\n        result[0] = toupper(result[0]);\n\n        return result;\n    }\n};\n"
+      "sorting": "import java.util.*;\n\nclass Solution {\n    public String arrangeWords(String text) {\n        String[] words = text.toLowerCase().split(\" \");\n\n        List<String> wordList = Arrays.asList(words);\n        wordList.sort(Comparator.comparingInt(String::length));\n\n        StringBuilder result = new StringBuilder();\n        for (String word : wordList) {\n            if (result.length() > 0) result.append(\" \");\n            result.append(word);\n        }\n\n        result.setCharAt(0, Character.toUpperCase(result.charAt(0)));\n        return result.toString();\n    }\n}"
     }
   },
   "1452": {
