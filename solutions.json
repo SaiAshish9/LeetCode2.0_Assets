@@ -6916,7 +6916,7 @@
   },
   "1381": {
     "solution": {
-      "design": "class CustomStack {\nprivate:\n    vector<int> stack;   // Stores the elements of the stack\n    int maxSize;         // Maximum allowed size of the stack\n\npublic:\n    // Constructor to initialize the stack with a given max size\n    CustomStack(int maxSize) : maxSize(maxSize) {}\n\n    // Pushes an element onto the stack if it hasn't reached max size\n    void push(int x) {\n        if (stack.size() < maxSize) {\n            stack.push_back(x);\n        }\n    }\n\n    // Pops the top element from the stack and returns it\n    // Returns -1 if the stack is empty\n    int pop() {\n        if (stack.empty()) return -1;\n        int topElement = stack.back();\n        stack.pop_back();\n        return topElement;\n    }\n\n    // Increments the bottom k elements of the stack by val\n    void increment(int k, int val) {\n        int limit = min(k, (int)stack.size());\n        for (int i = 0; i < limit; i++) {\n            stack[i] += val;\n        }\n    }\n};\n\n/**\n * Your CustomStack object will be instantiated and called as such:\n * CustomStack* obj = new CustomStack(maxSize);\n * obj->push(x);\n * int param_2 = obj->pop();\n * obj->increment(k, val);\n */"
+      "design": "class CustomStack {\n    private int[] stack;\n    private int size;\n    private int maxSize;\n\n    public CustomStack(int maxSize) {\n        this.stack = new int[maxSize];\n        this.size = 0;\n        this.maxSize = maxSize;\n    }\n\n    public void push(int x) {\n        if (size < maxSize) {\n            stack[size++] = x;\n        }\n    }\n\n    public int pop() {\n        if (size == 0) return -1;\n        return stack[--size];\n    }\n\n    public void increment(int k, int val) {\n        int limit = Math.min(k, size);\n        for (int i = 0; i < limit; i++) {\n            stack[i] += val;\n        }\n    }\n}"
     }
   },
   "1382": {
@@ -6971,7 +6971,7 @@
   },
   "1392": {
     "solution": {
-      "rolling-hash": "class Solution {\npublic:\n    string longestPrefix(string s) {\n        int n = s.length();\n        vector<int> lps(n, 0); \n        \n        int len = 0;\n        for (int i = 1; i < n; ++i) {\n            while (len > 0 && s[i] != s[len]) {\n                len = lps[len - 1];\n            }\n            \n            if (s[i] == s[len]) {\n                ++len; \n            }\n            \n            lps[i] = len; \n        }\n        \n        // The value at lps[n - 1] gives the length of the longest happy prefix\n        return s.substr(0, lps[n - 1]);\n    }\n};\n"
+      "kmp": "class Solution {\n    public String longestPrefix(String s) {\n        int n = s.length();\n        int[] lps = new int[n];\n        int len = 0;\n\n        for (int i = 1; i < n; i++) {\n            while (len > 0 && s.charAt(i) != s.charAt(len)) {\n                len = lps[len - 1];\n            }\n\n            if (s.charAt(i) == s.charAt(len)) {\n                len++;\n            }\n\n            lps[i] = len;\n        }\n\n        return s.substring(0, lps[n - 1]);\n    }\n}"
     }
   },
   "1393": {
