@@ -5697,7 +5697,7 @@
   },
   "1138": {
     "solution": {
-      "hash-table": "class Solution {\npublic:\n    string alphabetBoardPath(string target) {\n        string ans;\n        int i = 0, j = 0;\n        for (char& c : target) {\n            int v = c - 'a';\n            int x = v / 5, y = v % 5;\n            while (j > y) {\n                --j;\n                ans += 'L';\n            }\n            while (i > x) {\n                --i;\n                ans += 'U';\n            }\n            while (j < y) {\n                ++j;\n                ans += 'R';\n            }\n            while (i < x) {\n                ++i;\n                ans += 'D';\n            }\n            ans += '!';\n        }\n        return ans;\n    }\n};"
+      "hash-table": "class Solution {\n    public String alphabetBoardPath(String target) {\n        StringBuilder ans = new StringBuilder();\n        int i = 0, j = 0;\n        for (char c : target.toCharArray()) {\n            int v = c - 'a';\n            int x = v / 5, y = v % 5;\n            while (j > y) {\n                j--;\n                ans.append('L');\n            }\n            while (i > x) {\n                i--;\n                ans.append('U');\n            }\n            while (j < y) {\n                j++;\n                ans.append('R');\n            }\n            while (i < x) {\n                i++;\n                ans.append('D');\n            }\n            ans.append('!');\n        }\n        return ans.toString();\n    }\n}"
     }
   },
   "1139": {
@@ -5707,7 +5707,7 @@
   },
   "1140": {
     "solution": {
-      "breadth-first-search": "class Solution {\npublic:\n    int stoneGameII(vector<int>& piles) {\n        int n = piles.size();\n        vector<vector<int>> dp(n + 1, vector<int>(n + 1, 0));\n        vector<int> suffixSum(n + 1, 0);\n\n        for (int i = n - 1; i >= 0; --i) {\n            suffixSum[i] = suffixSum[i + 1] + piles[i];\n        }\n\n        for (int i = n - 1; i >= 0; --i) {\n            for (int M = 1; M <= n; ++M) {\n                for (int X = 1; X <= 2 * M && i + X <= n; ++X) {\n                    dp[i][M] =\n                        max(dp[i][M], suffixSum[i] - dp[i + X][max(M, X)]);\n                }\n            }\n        }\n\n        return dp[0][1];\n    }\n};\n"
+      "breadth-first-search": "class Solution {\n    public int stoneGameII(int[] piles) {\n        int n = piles.length;\n        int[][] dp = new int[n + 1][n + 1];\n        int[] suffixSum = new int[n + 1];\n\n        for (int i = n - 1; i >= 0; i--) {\n            suffixSum[i] = suffixSum[i + 1] + piles[i];\n        }\n\n        for (int i = n - 1; i >= 0; i--) {\n            for (int M = 1; M <= n; M++) {\n                for (int X = 1; X <= 2 * M && i + X <= n; X++) {\n                    dp[i][M] = Math.max(dp[i][M], suffixSum[i] - dp[i + X][Math.max(M, X)]);\n                }\n            }\n        }\n\n        return dp[0][1];\n    }\n}"
     }
   },
   "1141": {
