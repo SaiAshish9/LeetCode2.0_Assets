@@ -6014,8 +6014,7 @@
   },
   "1201": {
     "solution": {
-      "combinatorics": "",
-      "binary-search": "class Solution {\npublic:\n    int nthUglyNumber(int n, int a, int b, int c) {\n        long long ab = lcm(a, b);\n        long long bc = lcm(b, c);\n        long long ac = lcm(a, c);\n        long long abc = lcm(ab, c);\n        long long l = 1, r = 2000000000;\n        while (l < r) {\n            long long mid = (l + r) >> 1;\n            if (mid / a + mid / b + mid / c - mid / ab - mid / bc - mid / ac + mid / abc >= n) {\n                r = mid;\n            } else {\n                l = mid + 1;\n            }\n        }\n        return l;\n    }\n\n    long long lcm(long long a, long long b) {\n        return a * b / gcd(a, b);\n    }\n\n    long long gcd(long long a, long long b) {\n        return b == 0 ? a : gcd(b, a % b);\n    }\n};"
+      "binary-search": "class Solution {\n    public int nthUglyNumber(int n, int a, int b, int c) {\n        long ab = lcm(a, b);\n        long bc = lcm(b, c);\n        long ac = lcm(a, c);\n        long abc = lcm(ab, c);\n        long left = 1, right = 2_000_000_000L;\n        while (left < right) {\n            long mid = left + (right - left) / 2;\n            if (countUgly(mid, a, b, c, ab, bc, ac, abc) >= n) {\n                right = mid;\n            } else {\n                left = mid + 1;\n            }\n        }\n        return (int) left;\n    }\n\n    private long countUgly(long x, long a, long b, long c, long ab, long bc, long ac, long abc) {\n        return x / a + x / b + x / c - x / ab - x / bc - x / ac + x / abc;\n    }\n\n    private long gcd(long x, long y) {\n        while (y != 0) {\n            long temp = y;\n            y = x % y;\n            x = temp;\n        }\n        return x;\n    }\n\n    private long lcm(long x, long y) {\n        return x / gcd(x, y) * y;\n    }\n}"
     }
   },
   "1202": {
