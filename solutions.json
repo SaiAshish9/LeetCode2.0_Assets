@@ -8312,7 +8312,7 @@
   },
   "1660": {
     "solution": {
-      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* correctBinaryTree(TreeNode* root) {\n        unordered_set<TreeNode*> vis;\n        function<TreeNode*(TreeNode*)> dfs = [&](TreeNode* root) -> TreeNode* {\n            if (!root || vis.count(root->right)) {\n                return nullptr;\n            }\n            vis.insert(root);\n            root->right = dfs(root->right);\n            root->left = dfs(root->left);\n            return root;\n        };\n        return dfs(root);\n    }\n};"
+      "binary-tree": "import java.util.*;\n\nclass TreeNode {\n    int val;\n    TreeNode left;\n    TreeNode right;\n    TreeNode() {}\n    TreeNode(int val) { this.val = val; }\n    TreeNode(int val, TreeNode left, TreeNode right) {\n        this.val = val;\n        this.left = left;\n        this.right = right;\n    }\n}\n\nclass Solution {\n    private Set<TreeNode> visited = new HashSet<>();\n\n    public TreeNode correctBinaryTree(TreeNode root) {\n        return dfs(root);\n    }\n\n    private TreeNode dfs(TreeNode root) {\n        if (root == null || (root.right != null && visited.contains(root.right))) {\n            return null;\n        }\n        visited.add(root);\n        root.right = dfs(root.right);\n        root.left = dfs(root.left);\n        return root;\n    }\n}"
     }
   },
   "1661": {
@@ -8322,13 +8322,12 @@
   },
   "1662": {
     "solution": {
-      "array": "#include <vector>\n#include <string>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool arrayStringsAreEqual(vector<string>& word1, vector<string>& word2) {\n        string s1 = ",
-      "; \n        string s2 = ": ";\n\n        for (const string& w : word1) {\n            s1 += w;\n        }\n        \n        for (const string& w : word2) {\n            s2 += w;\n        }\n        \n        return s1 == s2;\n    }\n};\n"
+      "array": "class Solution {\n    public boolean arrayStringsAreEqual(String[] word1, String[] word2) {\n        StringBuilder s1 = new StringBuilder();\n        StringBuilder s2 = new StringBuilder();\n\n        for (String w : word1) {\n            s1.append(w);\n        }\n        for (String w : word2) {\n            s2.append(w);\n        }\n\n        return s1.toString().equals(s2.toString());\n    }\n}"
     }
   },
   "1663": {
     "solution": {
-      "greedy": "class Solution {\npublic:\n    string getSmallestString(int n, int k) {\n        string result(n, 'a'); // Start with all 'a's, which is the smallest lexicographically\n        k -= n; // Subtract 1 for each 'a'\n\n        for (int i = n - 1; i >= 0 && k > 0; --i) {\n            int addValue = min(k, 25); // Add as much as possible, but not more than 25\n            result[i] += addValue;\n            k -= addValue;\n        }\n\n        return result;\n    }\n};\n"
+      "greedy": "class Solution {\n    public String getSmallestString(int n, int k) {\n        char[] result = new char[n];\n        java.util.Arrays.fill(result, 'a');\n        k -= n; // subtract 1 for each 'a'\n\n        for (int i = n - 1; i >= 0 && k > 0; i--) {\n            int addValue = Math.min(k, 25);\n            result[i] = (char) (result[i] + addValue);\n            k -= addValue;\n        }\n\n        return new String(result);\n    }\n}"
     }
   },
   "1664": {
