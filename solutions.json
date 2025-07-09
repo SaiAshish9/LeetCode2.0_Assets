@@ -5606,7 +5606,7 @@
   },
   "1120": {
     "solution": {
-      "binary-tree": "\"/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    double maximumAverageSubtree(TreeNode* root) {\n        double ans = 0;\n        function<pair<int, int>(TreeNode*)> dfs = [&](TreeNode* root) -> pair<int, int> {\n            if (!root) {\n                return {0, 0};\n            }\n            auto [ls, ln] = dfs(root->left);\n            auto [rs, rn] = dfs(root->right);\n            int s = root->val + ls + rs;\n            int n = 1 + ln + rn;\n            ans = max(ans, s * 1.0 / n);\n            return {s, n};\n        };\n        dfs(root);\n        return ans;\n    }\n}"
+      "binary-tree": "class Solution {\n    private double maxAvg = 0;\n\n    public double maximumAverageSubtree(TreeNode root) {\n        dfs(root);\n        return maxAvg;\n    }\n\n    private int[] dfs(TreeNode node) {\n        if (node == null) return new int[]{0, 0};\n\n        int[] left = dfs(node.left);\n        int[] right = dfs(node.right);\n\n        int sum = node.val + left[0] + right[0];\n        int count = 1 + left[1] + right[1];\n\n        maxAvg = Math.max(maxAvg, (double) sum / count);\n\n        return new int[]{sum, count};\n    }\n}"
     }
   },
   "1121": {
@@ -5621,7 +5621,7 @@
   },
   "1123": {
     "solution": {
-      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* lcaDeepestLeaves(TreeNode* root) {\n        return findLCA(root).first;\n    }\n\n    pair<TreeNode*, int> findLCA(TreeNode* node) {\n        if (!node) {\n            return {nullptr, 0}; \n        }\n\n        auto [leftLCA, leftDepth] = findLCA(node->left);\n        auto [rightLCA, rightDepth] = findLCA(node->right);\n\n        if (leftDepth > rightDepth) {\n            return {leftLCA, leftDepth + 1}; \n        }\n\n        if (leftDepth < rightDepth) {\n            return {rightLCA, rightDepth + 1}; \n        }\n\n        return {node, leftDepth + 1}; \n    }\n};"
+      "binary-tree": "class Solution {\n    public TreeNode lcaDeepestLeaves(TreeNode root) {\n        return dfs(root).node;\n    }\n\n    private Result dfs(TreeNode node) {\n        if (node == null) return new Result(null, 0);\n\n        Result left = dfs(node.left);\n        Result right = dfs(node.right);\n\n        if (left.depth > right.depth) return new Result(left.node, left.depth + 1);\n        if (right.depth > left.depth) return new Result(right.node, right.depth + 1);\n        return new Result(node, left.depth + 1);\n    }\n\n    private static class Result {\n        TreeNode node;\n        int depth;\n        Result(TreeNode n, int d) {\n            node = n;\n            depth = d;\n        }\n    }\n}"
     }
   },
   "1124": {
@@ -5671,12 +5671,12 @@
   },
   "1133": {
     "solution": {
-      "sorting": "class Solution {\npublic:\n    int largestUniqueNumber(vector<int>& nums) {\n        int cnt[1001]{};\n        for (int& x : nums) {\n            ++cnt[x];\n        }\n        for (int x = 1000; ~x; --x) {\n            if (cnt[x] == 1) {\n                return x;\n            }\n        }\n        return -1;\n    }\n};"
+      "sorting": "class Solution {\n    public int largestUniqueNumber(int[] nums) {\n        int[] count = new int[1001];\n        for (int num : nums) {\n            count[num]++;\n        }\n        for (int i = 1000; i >= 0; i--) {\n            if (count[i] == 1) {\n                return i;\n            }\n        }\n        return -1;\n    }\n}"
     }
   },
   "1134": {
     "solution": {
-      "math": "class Solution {\npublic:\n    bool isArmstrong(int n) {\n        int k = to_string(n).size();\n        int s = 0;\n        for (int x = n; x; x /= 10) {\n            s += pow(x % 10, k);\n        }\n        return s == n;\n    }\n};\n"
+      "math": "class Solution {\n    public boolean isArmstrong(int n) {\n        String s = Integer.toString(n);\n        int k = s.length();\n        int sum = 0, temp = n;\n        while (temp > 0) {\n            int digit = temp % 10;\n            sum += Math.pow(digit, k);\n            temp /= 10;\n        }\n        return sum == n;\n    }\n}"
     }
   },
   "1135": {
