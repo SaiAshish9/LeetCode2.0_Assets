@@ -11694,7 +11694,7 @@
   },
   "2336": {
     "solution": {
-      "design": "#include <set>\nusing namespace std;\n\nclass SmallestInfiniteSet {\nprivate:\n    set<int> infiniteSet;  // Maintains the additional numbers\n    int current;           // Tracks the current smallest number in the sequence\n\npublic:\n    SmallestInfiniteSet() : current(1) {}\n\n    int popSmallest() {\n        if (!infiniteSet.empty()) {\n            int smallest = *infiniteSet.begin();\n            infiniteSet.erase(infiniteSet.begin());\n            return smallest;\n        }\n        return current++;  // Return the current smallest number and increment it\n    }\n\n    void addBack(int num) {\n        if (num < current && infiniteSet.find(num) == infiniteSet.end()) {\n            infiniteSet.insert(num);\n        }\n    }\n};\n\n/**\n * Your SmallestInfiniteSet object will be instantiated and called as such:\n * SmallestInfiniteSet* obj = new SmallestInfiniteSet();\n * int param_1 = obj->popSmallest();\n * obj->addBack(num);\n */"
+      "design": "import java.util.*;\n\nclass SmallestInfiniteSet {\n    private TreeSet<Integer> set;\n    private int current;\n\n    public SmallestInfiniteSet() {\n        set = new TreeSet<>();\n        current = 1;\n    }\n\n    public int popSmallest() {\n        if (!set.isEmpty()) {\n            int smallest = set.first();\n            set.remove(smallest);\n            return smallest;\n        }\n        return current++;\n    }\n\n    public void addBack(int num) {\n        if (num < current && !set.contains(num)) {\n            set.add(num);\n        }\n    }\n}"
     }
   },
   "2337": {
