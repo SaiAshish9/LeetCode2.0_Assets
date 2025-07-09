@@ -6129,7 +6129,7 @@
   },
   "1224": {
     "solution": {
-      "hash-table": "class Solution {\npublic:\n    int maxEqualFreq(vector<int>& nums) {\n        int ans = 0;\n        int maxFreq = 0;\n        unordered_map<int, int> count;\n        unordered_map<int, int> freq;\n\n        for (int i = 0; i < nums.size(); ++i) {\n            const int num = nums[i];\n            --freq[count[num]];\n            ++count[num];\n            ++freq[count[num]];\n            maxFreq = max(maxFreq, count[num]);\n            if (maxFreq == 1 || maxFreq * freq[maxFreq] == i ||\n                (maxFreq - 1) * (freq[maxFreq - 1] + 1) == i)\n                ans = i + 1;\n        }\n\n        return ans;\n    }\n};"
+      "hash-table": "import java.util.HashMap;\n\nclass Solution {\n    public int maxEqualFreq(int[] nums) {\n        int ans = 0;\n        int maxFreq = 0;\n        HashMap<Integer, Integer> count = new HashMap<>();\n        HashMap<Integer, Integer> freq = new HashMap<>();\n\n        for (int i = 0; i < nums.length; i++) {\n            int num = nums[i];\n            int c = count.getOrDefault(num, 0);\n            freq.put(c, freq.getOrDefault(c, 0) - 1);\n            if (freq.get(c) == 0) freq.remove(c);\n            count.put(num, c + 1);\n            freq.put(c + 1, freq.getOrDefault(c + 1, 0) + 1);\n\n            maxFreq = Math.max(maxFreq, c + 1);\n\n            if (maxFreq == 1 ||\n                maxFreq * freq.get(maxFreq) == i + 1 ||\n                (maxFreq - 1) * (freq.getOrDefault(maxFreq - 1, 0) + 1) == i + 1) {\n                ans = i + 1;\n            }\n        }\n\n        return ans;\n    }\n}"
     }
   },
   "1225": {
@@ -6149,7 +6149,7 @@
   },
   "1228": {
     "solution": {
-      "math": "class Solution {\npublic:\n    int missingNumber(vector<int>& arr) {\n        int n = arr.size();\n        int x = (arr[0] + arr[n - 1]) * (n + 1) / 2;\n        int y = accumulate(arr.begin(), arr.end(), 0);\n        return x - y;\n    }\n};\n"
+      "math": "import java.util.Arrays;\n\nclass Solution {\n    public int missingNumber(int[] arr) {\n        int n = arr.length;\n        int x = (arr[0] + arr[n - 1]) * (n + 1) / 2;\n        int y = Arrays.stream(arr).sum();\n        return x - y;\n    }\n}"
     }
   },
   "1229": {
@@ -6169,7 +6169,7 @@
   },
   "1232": {
     "solution": {
-      "geometry": "class Solution {\npublic:\n    bool checkStraightLine(vector<vector<int>>& coordinates) {\n        int n = coordinates.size();\n        if (n < 2)\n            return false; // At least two points are needed\n\n        int x1 = coordinates[0][0], y1 = coordinates[0][1];\n        int x2 = coordinates[1][0], y2 = coordinates[1][1];\n\n        for (int i = 2; i < n; ++i) {\n            int x3 = coordinates[i][0], y3 = coordinates[i][1];\n            // Compare cross product: (y2 - y1) * (x3 - x2) == (y3 - y2) * (x2 -\n            // x1)\n            if ((y2 - y1) * (x3 - x2) != (y3 - y2) * (x2 - x1))\n                return false;\n        }\n\n        return true;\n    }\n};\n"
+      "geometry": "class Solution {\n    public boolean checkStraightLine(int[][] coordinates) {\n        int n = coordinates.length;\n        if (n < 2) return false; // At least two points needed\n\n        int x1 = coordinates[0][0], y1 = coordinates[0][1];\n        int x2 = coordinates[1][0], y2 = coordinates[1][1];\n\n        for (int i = 2; i < n; i++) {\n            int x3 = coordinates[i][0], y3 = coordinates[i][1];\n            if ((y2 - y1) * (x3 - x2) != (y3 - y2) * (x2 - x1)) {\n                return false;\n            }\n        }\n        return true;\n    }\n}"
     }
   },
   "1233": {
@@ -6189,13 +6189,13 @@
   },
   "1236": {
     "solution": {
-      "breadth-first-search": "class Solution {\npublic:\n    vector<string> ans;\n    unordered_set<string> vis;\n\n    vector<string> crawl(string startUrl, HtmlParser htmlParser) {\n        dfs(startUrl, htmlParser);\n        return ans;\n    }\n\n    void dfs(string& url, HtmlParser& htmlParser) {\n        if (vis.count(url)) return;\n        vis.insert(url);\n        ans.push_back(url);\n        for (string next : htmlParser.getUrls(url))\n            if (host(url) == host(next))\n                dfs(next, htmlParser);\n    }\n\n    string host(string url) {\n        int i = 7;\n        string res;\n        for (; i < url.size(); ++i) {\n            if (url[i] == '/') break;\n            res += url[i];\n        }\n        return res;\n    }\n};"
+      "breadth-first-search": "import java.util.*;\n\ninterface HtmlParser {\n    List<String> getUrls(String url);\n}\n\nclass Solution {\n    private List<String> ans = new ArrayList<>();\n    private Set<String> visited = new HashSet<>();\n    private String hostName;\n\n    public List<String> crawl(String startUrl, HtmlParser htmlParser) {\n        hostName = getHostName(startUrl);\n        dfs(startUrl, htmlParser);\n        return ans;\n    }\n\n    private void dfs(String url, HtmlParser htmlParser) {\n        if (visited.contains(url)) return;\n        visited.add(url);\n        ans.add(url);\n        for (String next : htmlParser.getUrls(url)) {\n            if (getHostName(next).equals(hostName)) {\n                dfs(next, htmlParser);\n            }\n        }\n    }\n\n    private String getHostName(String url) {\n        int start = url.indexOf(\"//\") + 2;\n        int end = url.indexOf('/', start);\n        if (end == -1) {\n            end = url.length();\n        }\n        return url.substring(start, end);\n    }\n}"
     }
   },
   "1237": {
     "solution": {
       "two-pointers": "",
-      "interactive": "/*\n * // This is the custom function interface.\n * // You should not implement it, or speculate about its implementation\n * class CustomFunction {\n * public:\n *     // Returns f(x, y) for any given positive integers x and y.\n *     // Note that f(x, y) is increasing with respect to both x and y.\n *     // i.e. f(x, y) < f(x + 1, y), f(x, y) < f(x, y + 1)\n *     int f(int x, int y);\n * };\n */\n\nclass Solution {\npublic:\n    vector<vector<int>> findSolution(CustomFunction& customfunction, int z) {\n        vector<vector<int>> result;\n        int x = 1, y = 1000; // Start with x=1 and maximum possible y\n\n        while (x <= 1000 && y > 0) {\n            int value = customfunction.f(x, y);\n            if (value == z) {\n                result.push_back({x, y});\n                x++; // Move to the next x\n                y--; // Move to the next y\n            } else if (value < z) {\n                x++; // Increase x to increase f(x, y)\n            } else {\n                y--; // Decrease y to decrease f(x, y)\n            }\n        }\n\n        return result;\n    }\n};\n"
+      "interactive": "import java.util.*;\n\n/*\n * // This is the custom function interface.\n * // You should not implement it, or speculate about its implementation\n * interface CustomFunction {\n *     // Returns f(x, y) for any given positive integers x and y.\n *     // Note that f(x, y) is increasing with respect to both x and y.\n *     // i.e. f(x, y) < f(x + 1, y), f(x, y) < f(x, y + 1)\n *     int f(int x, int y);\n * }\n */\n\nclass Solution {\n    public List<List<Integer>> findSolution(CustomFunction customfunction, int z) {\n        List<List<Integer>> result = new ArrayList<>();\n        int x = 1, y = 1000; // Start with x=1 and maximum y\n\n        while (x <= 1000 && y > 0) {\n            int val = customfunction.f(x, y);\n            if (val == z) {\n                result.add(Arrays.asList(x, y));\n                x++;\n                y--;\n            } else if (val < z) {\n                x++;\n            } else {\n                y--;\n            }\n        }\n\n        return result;\n    }\n}\n"
     }
   },
   "1238": {
@@ -6235,7 +6235,7 @@
   },
   "1245": {
     "solution": {
-      "tree": "class Solution {\npublic:\n    unordered_map<int, unordered_set<int>> adjacencyList;\n    vector<bool> visitedNodes;\n    int maxDistance;\n    int farthestNode;\n\n    int treeDiameter(vector<vector<int>>& edges) {\n        for (auto& edge : edges) {\n            adjacencyList[edge[0]].insert(edge[1]);\n            adjacencyList[edge[1]].insert(edge[0]);\n        }\n        int totalNodes = edges.size();\n        maxDistance = 0;\n        visitedNodes.resize(totalNodes + 1);\n        farthestNode = edges[0][0];\n        depthFirstSearch(farthestNode, 0);\n        visitedNodes.assign(visitedNodes.size(), false);\n        depthFirstSearch(farthestNode, 0);\n        return maxDistance;\n    }\n\n    void depthFirstSearch(int currentNode, int distance) {\n        if (visitedNodes[currentNode]) return;\n        visitedNodes[currentNode] = true;\n        if (maxDistance < distance) {\n            maxDistance = distance;\n            farthestNode = currentNode;\n        }\n        for (int neighbor : adjacencyList[currentNode]) {\n            depthFirstSearch(neighbor, distance + 1);\n        }\n    }\n};"
+      "tree": "import java.util.*;\n\nclass Solution {\n    private Map<Integer, Set<Integer>> adjacencyList = new HashMap<>();\n    private boolean[] visited;\n    private int maxDistance = 0;\n    private int farthestNode = 0;\n\n    public int treeDiameter(int[][] edges) {\n        for (int[] edge : edges) {\n            adjacencyList.computeIfAbsent(edge[0], k -> new HashSet<>()).add(edge[1]);\n            adjacencyList.computeIfAbsent(edge[1], k -> new HashSet<>()).add(edge[0]);\n        }\n\n        int n = edges.length + 1;\n        visited = new boolean[n];\n        farthestNode = edges[0][0];\n        dfs(farthestNode, 0);\n\n        visited = new boolean[n];\n        maxDistance = 0;\n        dfs(farthestNode, 0);\n\n        return maxDistance;\n    }\n\n    private void dfs(int currentNode, int distance) {\n        if (visited[currentNode]) return;\n        visited[currentNode] = true;\n\n        if (distance > maxDistance) {\n            maxDistance = distance;\n            farthestNode = currentNode;\n        }\n\n        for (int neighbor : adjacencyList.getOrDefault(currentNode, new HashSet<>())) {\n            dfs(neighbor, distance + 1);\n        }\n    }\n}"
     }
   },
   "1246": {
@@ -6260,7 +6260,7 @@
   },
   "1250": {
     "solution": {
-      "number-theory": "#include <vector>\n#include <numeric> \nusing namespace std;\n\nclass Solution {\npublic:\n    bool isGoodArray(vector<int>& nums) {\n        int result = nums[0];\n        \n        for (int i = 1; i < nums.size(); ++i) {\n            result = gcd(result, nums[i]);\n            if (result == 1) {\n                return true;  \n            }\n        }\n        \n        return result == 1;\n    }\n};\n"
+      "number-theory": "import java.util.*;\n\nclass Solution {\n    public boolean isGoodArray(int[] nums) {\n        int result = nums[0];\n        for (int i = 1; i < nums.length; ++i) {\n            result = gcd(result, nums[i]);\n            if (result == 1) {\n                return true;\n            }\n        }\n        return result == 1;\n    }\n\n    private int gcd(int a, int b) {\n        while (b != 0) {\n            int temp = b;\n            b = a % b;\n            a = temp;\n        }\n        return a;\n    }\n}"
     }
   },
   "1251": {
@@ -6341,7 +6341,7 @@
   },
   "1266": {
     "solution": {
-      "geometry": "class Solution {\npublic:\n    int minTimeToVisitAllPoints(vector<vector<int>>& points) {\n        int ans = 0;\n\n        for (int i = 1; i < points.size(); ++i)\n            ans += max(abs(points[i][0] - points[i - 1][0]),\n                       abs(points[i][1] - points[i - 1][1]));\n\n        return ans;\n    }\n};"
+      "geometry": "class Solution {\n    public int minTimeToVisitAllPoints(int[][] points) {\n        int time = 0;\n        for (int i = 1; i < points.length; i++) {\n            int dx = Math.abs(points[i][0] - points[i - 1][0]);\n            int dy = Math.abs(points[i][1] - points[i - 1][1]);\n            time += Math.max(dx, dy);\n        }\n        return time;\n    }\n}"
     }
   },
   "1267": {
@@ -6356,7 +6356,7 @@
   },
   "1269": {
     "solution": {
-      "dynamic-programming": "class Solution {\npublic:\n    int numWays(int steps, int arrLen) {\n        const int MOD = 1e9 + 7;\n        int maxPosition = min(steps, arrLen - 1); \n        vector<vector<int>> dp(steps + 1, vector<int>(maxPosition + 1, 0));\n\n        dp[0][0] = 1; \n\n        for (int i = 1; i <= steps; ++i) {\n            for (int j = 0; j <= maxPosition; ++j) {\n                dp[i][j] = dp[i-1][j];\n                if (j > 0) {\n                    dp[i][j] = (dp[i][j] + dp[i-1][j-1]) % MOD; \n                }\n                if (j < maxPosition) {\n                    dp[i][j] = (dp[i][j] + dp[i-1][j+1]) % MOD;\n                }\n            }\n        }\n\n        return dp[steps][0]; \n    }\n};\n"
+      "dynamic-programming": "class Solution {\n    public int numWays(int steps, int arrLen) {\n        int MOD = 1_000_000_007;\n        int maxPos = Math.min(steps, arrLen - 1);\n        int[][] dp = new int[steps + 1][maxPos + 1];\n\n        dp[0][0] = 1;\n\n        for (int i = 1; i <= steps; i++) {\n            for (int j = 0; j <= maxPos; j++) {\n                dp[i][j] = dp[i - 1][j];\n                if (j > 0) {\n                    dp[i][j] = (dp[i][j] + dp[i - 1][j - 1]) % MOD;\n                }\n                if (j < maxPos) {\n                    dp[i][j] = (dp[i][j] + dp[i - 1][j + 1]) % MOD;\n                }\n            }\n        }\n\n        return dp[steps][0];\n    }\n}"
     }
   },
   "1270": {
@@ -6391,7 +6391,7 @@
   },
   "1276": {
     "solution": {
-      "math": "class Solution {\n public:\n  vector<int> numOfBurgers(int tomatoSlices, int cheeseSlices) {\n    if (tomatoSlices % 2 == 1 || tomatoSlices < 2 * cheeseSlices ||\n        tomatoSlices > cheeseSlices * 4)\n      return {};\n\n    int jumboBurgers = (tomatoSlices - 2 * cheeseSlices) / 2;\n\n    return {jumboBurgers, cheeseSlices - jumboBurgers};\n  }\n};\n"
+      "math": "import java.util.*;\n\nclass Solution {\n    public List<Integer> numOfBurgers(int tomatoSlices, int cheeseSlices) {\n        if (tomatoSlices % 2 != 0 || tomatoSlices < 2 * cheeseSlices || tomatoSlices > 4 * cheeseSlices) {\n            return new ArrayList<>();\n        }\n\n        int jumbo = (tomatoSlices - 2 * cheeseSlices) / 2;\n        int small = cheeseSlices - jumbo;\n\n        return Arrays.asList(jumbo, small);\n    }\n}"
     }
   },
   "1277": {
@@ -6416,7 +6416,7 @@
   },
   "1281": {
     "solution": {
-      "math": "class Solution {\npublic:\n    int subtractProductAndSum(int n) {\n        int product = 1, sum = 0;\n        \n        while (n > 0) {\n            int digit = n % 10;\n            product *= digit;\n            sum += digit;\n            n /= 10;\n        }\n        \n        return product - sum;\n    }\n};\n"
+      "math": "class Solution {\n    public int subtractProductAndSum(int n) {\n        int product = 1, sum = 0;\n\n        while (n > 0) {\n            int digit = n % 10;\n            product *= digit;\n            sum += digit;\n            n /= 10;\n        }\n\n        return product - sum;\n    }\n}"
     }
   },
   "1282": {
@@ -6486,7 +6486,7 @@
   },
   "1295": {
     "solution": {
-      "array": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int findNumbers(vector<int>& nums) {\n        int count = 0;\n        \n        for (int num : nums) {\n            int digitCount = 0;\n            int current = num;\n            \n            while (current > 0) {\n                current /= 10;\n                ++digitCount;\n            }\n            \n            if (digitCount % 2 == 0) {\n                ++count;\n            }\n        }\n        \n        return count;\n    }\n};\n"
+      "array": "class Solution {\n    public int findNumbers(int[] nums) {\n        int count = 0;\n\n        for (int num : nums) {\n            int digitCount = 0;\n            int current = num;\n\n            while (current > 0) {\n                current /= 10;\n                ++digitCount;\n            }\n\n            if (digitCount % 2 == 0) {\n                ++count;\n            }\n        }\n\n        return count;\n    }\n}"
     }
   },
   "1296": {
@@ -6501,12 +6501,12 @@
   },
   "1298": {
     "solution": {
-      "graph": "#include <vector>\n#include <queue>\n#include <unordered_set>\nusing namespace std;\n\nclass Solution {\npublic:\n    int maxCandies(vector<int>& status, vector<int>& candies, vector<vector<int>>& keys, vector<vector<int>>& containedBoxes, vector<int>& initialBoxes) {\n        queue<int> availableBoxes; \n        unordered_set<int> unopenedBoxes; \n        unordered_set<int> collectedKeys; \n        int totalCandies = 0;\n\n        for (int box : initialBoxes) {\n            if (status[box] == 1) {\n                availableBoxes.push(box); \n            } else {\n                unopenedBoxes.insert(box);\n            }\n        }\n\n        while (!availableBoxes.empty()) {\n            int currentBox = availableBoxes.front();\n            availableBoxes.pop();\n\n            totalCandies += candies[currentBox];\n\n            for (int key : keys[currentBox]) {\n                if (collectedKeys.find(key) == collectedKeys.end()) {\n                    collectedKeys.insert(key);\n                    if (unopenedBoxes.find(key) != unopenedBoxes.end()) {\n                        unopenedBoxes.erase(key);\n                        availableBoxes.push(key); \n                    }\n                }\n            }\n\n            for (int box : containedBoxes[currentBox]) {\n                if (status[box] == 1 || collectedKeys.find(box) != collectedKeys.end()) {\n                    availableBoxes.push(box); \n                } else {\n                    unopenedBoxes.insert(box); \n                }\n            }\n        }\n\n        return totalCandies;\n    }\n};"
+      "graph": "import java.util.*;\n\nclass Solution {\n    public int maxCandies(int[] status, int[] candies, int[][] keys, int[][] containedBoxes, int[] initialBoxes) {\n        Queue<Integer> availableBoxes = new LinkedList<>();\n        Set<Integer> unopenedBoxes = new HashSet<>();\n        Set<Integer> collectedKeys = new HashSet<>();\n        int totalCandies = 0;\n\n        for (int box : initialBoxes) {\n            if (status[box] == 1) {\n                availableBoxes.offer(box);\n            } else {\n                unopenedBoxes.add(box);\n            }\n        }\n\n        while (!availableBoxes.isEmpty()) {\n            int currentBox = availableBoxes.poll();\n            totalCandies += candies[currentBox];\n\n            for (int key : keys[currentBox]) {\n                if (collectedKeys.add(key) && unopenedBoxes.remove(key)) {\n                    availableBoxes.offer(key);\n                }\n            }\n\n            for (int box : containedBoxes[currentBox]) {\n                if (status[box] == 1 || collectedKeys.contains(box)) {\n                    availableBoxes.offer(box);\n                } else {\n                    unopenedBoxes.add(box);\n                }\n            }\n        }\n\n        return totalCandies;\n    }\n}"
     }
   },
   "1299": {
     "solution": {
-      "array": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> replaceElements(vector<int>& arr) {\n        int n = arr.size();\n        int maxRight = -1;\n\n        for (int i = n - 1; i >= 0; --i) {\n            int current = arr[i]; \n            arr[i] = maxRight;   \n            maxRight = max(maxRight, current);\n        }\n        \n        return arr;\n    }\n};\n"
+      "array": "class Solution {\n    public int[] replaceElements(int[] arr) {\n        int n = arr.length;\n        int maxRight = -1;\n\n        for (int i = n - 1; i >= 0; --i) {\n            int current = arr[i];\n            arr[i] = maxRight;\n            maxRight = Math.max(maxRight, current);\n        }\n\n        return arr;\n    }\n}"
     }
   },
   "1300": {
@@ -6521,7 +6521,7 @@
   },
   "1302": {
     "solution": {
-      "binary-tree": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int deepestLeavesSum(TreeNode* root) {\n        int ans = 0;\n        queue<TreeNode*> q{ {root} };\n        while (!q.empty()) {\n            ans = 0;\n            for (int n = q.size(); n; --n) {\n                root = q.front();\n                q.pop();\n                ans += root->val;\n                if (root->left) q.push(root->left);\n                if (root->right) q.push(root->right);\n            }\n        }\n        return ans;\n    }\n};"
+      "binary-tree": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    private int maxDepth = 0;\n    private int sum = 0;\n\n    public int deepestLeavesSum(TreeNode root) {\n        dfs(root, 0);\n        return sum;\n    }\n\n    private void dfs(TreeNode node, int depth) {\n        if (node == null) return;\n\n        if (depth > maxDepth) {\n            maxDepth = depth;\n            sum = node.val;\n        } else if (depth == maxDepth) {\n            sum += node.val;\n        }\n\n        dfs(node.left, depth + 1);\n        dfs(node.right, depth + 1);\n    }\n}"
     }
   },
   "1303": {
