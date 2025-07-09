@@ -11920,7 +11920,7 @@
   },
   "2381": {
     "solution": {
-      "string": "class Solution {\npublic:\n    string shiftingLetters(string s, vector<vector<int>>& shifts) {\n        int currShift = 0;\n        vector<int> timeline(s.length() + 1);\n\n        for (const vector<int>& shift : shifts) {\n            const int start = shift[0];\n            const int end = shift[1];\n            const int direction = shift[2];\n            const int diff = direction ? 1 : -1;\n            timeline[start] += diff;\n            timeline[end + 1] -= diff;\n        }\n\n        for (int i = 0; i < s.length(); ++i) {\n            currShift = (currShift + timeline[i]) % 26;\n            const int num = (s[i] - 'a' + currShift + 26) % 26;\n            s[i] = 'a' + num;\n        }\n\n        return s;\n    }\n};"
+      "string": "class Solution {\n    public String shiftingLetters(String s, int[][] shifts) {\n        int currShift = 0;\n        int n = s.length();\n        int[] timeline = new int[n + 1];\n\n        for (int[] shift : shifts) {\n            int start = shift[0];\n            int end = shift[1];\n            int direction = shift[2];\n            int diff = direction == 1 ? 1 : -1;\n            timeline[start] += diff;\n            if (end + 1 < timeline.length) timeline[end + 1] -= diff;\n        }\n\n        StringBuilder result = new StringBuilder();\n        for (int i = 0; i < n; ++i) {\n            currShift = (currShift + timeline[i]) % 26;\n            int num = (s.charAt(i) - 'a' + currShift + 26) % 26;\n            result.append((char) ('a' + num));\n        }\n\n        return result.toString();\n    }\n}"
     }
   },
   "2382": {
@@ -11930,7 +11930,7 @@
   },
   "2383": {
     "solution": {
-      "greedy": "class Solution {\npublic:\n    int minNumberOfHours(int initialEnergy, int initialExperience, vector<int>& energy, vector<int>& experience) {\n        int totalEnergyRequired = 0, totalExperienceRequired = 0;\n        int n = energy.size();\n        \n        // Traverse through each battle\n        for (int i = 0; i < n; ++i) {\n            // If initial energy is less than the energy required for battle, train\n            if (initialEnergy <= energy[i]) {\n                totalEnergyRequired += energy[i] - initialEnergy + 1; // Train to surpass energy[i]\n                initialEnergy = energy[i] + 1;\n            }\n            initialEnergy -= energy[i]; // After the battle, energy decreases\n            \n            // If initial experience is less than the experience required for battle, train\n            if (initialExperience <= experience[i]) {\n                totalExperienceRequired += experience[i] - initialExperience + 1; // Train to surpass experience[i]\n                initialExperience = experience[i] + 1;\n            }\n            initialExperience += experience[i]; // After the battle, experience increases\n        }\n        \n        // Total hours of training are the sum of training required for energy and experience\n        return totalEnergyRequired + totalExperienceRequired;\n    }\n};"
+      "greedy": "class Solution {\n    public int minNumberOfHours(int initialEnergy, int initialExperience, int[] energy, int[] experience) {\n        int totalEnergyRequired = 0, totalExperienceRequired = 0;\n        int n = energy.length;\n\n        for (int i = 0; i < n; ++i) {\n            if (initialEnergy <= energy[i]) {\n                totalEnergyRequired += energy[i] - initialEnergy + 1;\n                initialEnergy = energy[i] + 1;\n            }\n            initialEnergy -= energy[i];\n\n            if (initialExperience <= experience[i]) {\n                totalExperienceRequired += experience[i] - initialExperience + 1;\n                initialExperience = experience[i] + 1;\n            }\n            initialExperience += experience[i];\n        }\n\n        return totalEnergyRequired + totalExperienceRequired;\n    }\n}"
     }
   },
   "2384": {
@@ -11961,7 +11961,7 @@
   "2389": {
     "solution": {
       "prefix-sum": "",
-      "binary-search": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> answerQueries(vector<int>& nums, vector<int>& queries) {\n        sort(nums.begin(), nums.end());\n\n        vector<int> prefixSum(nums.size());\n        prefixSum[0] = nums[0];\n        for (int i = 1; i < nums.size(); ++i) {\n            prefixSum[i] = prefixSum[i - 1] + nums[i];\n        }\n\n        vector<int> result;\n        for (int query : queries) {\n            int idx = upper_bound(prefixSum.begin(), prefixSum.end(), query) - prefixSum.begin();\n            result.push_back(idx); \n        }\n\n        return result;\n    }\n};\n"
+      "binary-search": "import java.util.*;\n\nclass Solution {\n    public List<Integer> answerQueries(int[] nums, int[] queries) {\n        Arrays.sort(nums);\n\n        int n = nums.length;\n        int[] prefixSum = new int[n];\n        prefixSum[0] = nums[0];\n        for (int i = 1; i < n; i++) {\n            prefixSum[i] = prefixSum[i - 1] + nums[i];\n        }\n\n        List<Integer> result = new ArrayList<>();\n        for (int query : queries) {\n            int idx = upperBound(prefixSum, query);\n            result.add(idx);\n        }\n\n        return result;\n    }\n\n    private int upperBound(int[] arr, int target) {\n        int low = 0, high = arr.length;\n        while (low < high) {\n            int mid = low + (high - low) / 2;\n            if (arr[mid] <= target) {\n                low = mid + 1;\n            } else {\n                high = mid;\n            }\n        }\n        return low;\n    }\n}"
     }
   },
   "2390": {
@@ -11981,7 +11981,7 @@
   },
   "2393": {
     "solution": {
-      "dynamic-programming": "class Solution {\npublic:\n    long long countSubarrays(vector<int>& nums) {\n        long long ans = 0;\n        int i = 0, n = nums.size();\n        while (i < n) {\n            int j = i + 1;\n            while (j < n && nums[j] > nums[j - 1]) {\n                ++j;\n            }\n            int count = j - i;\n            ans += 1ll * (1 + count) * count / 2;\n            i = j;\n        }\n        return ans;\n    }\n};"
+      "dynamic-programming": "class Solution {\n    public long countSubarrays(int[] nums) {\n        long ans = 0;\n        int i = 0, n = nums.length;\n        while (i < n) {\n            int j = i + 1;\n            while (j < n && nums[j] > nums[j - 1]) {\n                j++;\n            }\n            int count = j - i;\n            ans += (long)(count) * (count + 1) / 2;\n            i = j;\n        }\n        return ans;\n    }\n}"
     }
   },
   "2394": {
