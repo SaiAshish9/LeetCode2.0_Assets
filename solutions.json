@@ -7541,7 +7541,7 @@
   },
   "1506": {
     "solution": {
-      "tree": "*\n// Definition for a Node.\nclass Node {\npublic:\n    int val;\n    vector<Node*> children;\n\n    Node() {}\n\n    Node(int _val) {\n        val = _val;\n    }\n\n    Node(int _val, vector<Node*> _children) {\n        val = _val;\n        children = _children;\n    }\n};\n*/\n\nclass Solution {\npublic:\n    Node* findRoot(vector<Node*> tree) {\n        int x = 0;\n        for (Node* node : tree) {\n            x ^= node->val;\n            for (Node* child : node->children) {\n                x ^= child->val;\n            }\n        }\n        for (int i = 0;; ++i) {\n            if (tree[i]->val == x) {\n                return tree[i];\n            }\n        }\n    }\n};"
+      "tree": "import java.util.*;\n\nclass Node {\n    public int val;\n    public List<Node> children;\n\n    public Node() {}\n\n    public Node(int val) {\n        this.val = val;\n        this.children = new ArrayList<>();\n    }\n\n    public Node(int val, List<Node> children) {\n        this.val = val;\n        this.children = children;\n    }\n}\n\nclass Solution {\n    public Node findRoot(List<Node> tree) {\n        int x = 0;\n        for (Node node : tree) {\n            x ^= node.val;\n            for (Node child : node.children) {\n                x ^= child.val;\n            }\n        }\n        for (Node node : tree) {\n            if (node.val == x) {\n                return node;\n            }\n        }\n        return null; // Should never happen per problem constraints\n    }\n}"
     }
   },
   "1507": {
@@ -7561,7 +7561,7 @@
   },
   "1510": {
     "solution": {
-      "game-theory": "class Solution {\npublic:\n    bool winnerSquareGame(int n) {\n        vector<bool> dp(n + 1, false); // dp[i] represents if Alice can win with i stones\n        \n        for (int i = 1; i <= n; ++i) {\n            for (int k = 1; k * k <= i; ++k) {\n                if (!dp[i - k * k]) {\n                    dp[i] = true;\n                    break;\n                }\n            }\n        }\n        \n        return dp[n];\n    }\n};\n"
+      "game-theory": "class Solution {\n    public boolean winnerSquareGame(int n) {\n        boolean[] dp = new boolean[n + 1];\n\n        for (int i = 1; i <= n; ++i) {\n            for (int k = 1; k * k <= i; ++k) {\n                if (!dp[i - k * k]) {\n                    dp[i] = true;\n                    break;\n                }\n            }\n        }\n\n        return dp[n];\n    }\n}"
     }
   },
   "1511": {
@@ -7571,7 +7571,7 @@
   },
   "1512": {
     "solution": {
-      "counting": "class Solution {\npublic:\n    int numIdenticalPairs(vector<int>& nums) {\n        unordered_map<int, int> freq; \n        int count = 0;\n\n        for (int num : nums) {\n            count += freq[num];\n            ++freq[num];     \n        }\n\n        return count;\n    }\n};\n"
+      "counting": "import java.util.*;\n\nclass Solution {\n    public int numIdenticalPairs(int[] nums) {\n        Map<Integer, Integer> freq = new HashMap<>();\n        int count = 0;\n\n        for (int num : nums) {\n            count += freq.getOrDefault(num, 0);\n            freq.put(num, freq.getOrDefault(num, 0) + 1);\n        }\n\n        return count;\n    }\n}"
     }
   },
   "1513": {
