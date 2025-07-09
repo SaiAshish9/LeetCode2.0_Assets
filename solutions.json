@@ -12991,7 +12991,7 @@
   },
   "2595": {
     "solution": {
-      "bit-manipulation": "class Solution {\npublic:\n    vector<int> evenOddBit(int n) {\n        int evenCount = 0, oddCount = 0;\n        \n        for (int i = 0; i < 32; ++i) {\n            if ((n >> i) & 1) {\n                if (i % 2 == 0)\n                    ++evenCount;\n                else\n                    ++oddCount;\n            }\n        }\n        \n        return {evenCount, oddCount};\n    }\n};"
+      "bit-manipulation": "class Solution {\n    public int[] evenOddBit(int n) {\n        int even = 0, odd = 0;\n        for (int i = 0; i < 32; i++) {\n            if (((n >> i) & 1) == 1) {\n                if (i % 2 == 0) even++;\n                else odd++;\n            }\n        }\n        return new int[]{even, odd};\n    }\n}"
     }
   },
   "2596": {
@@ -13006,7 +13006,7 @@
   },
   "2598": {
     "solution": {
-      "hash-table": "class Solution {\npublic:\n    int findSmallestInteger(vector<int>& nums, int value) {\n        unordered_map<int, int> count;\n\n        for (const int num : nums)\n            ++count[(num % value + value) % value];\n\n        for (int i = 0; i < nums.size(); ++i)\n            if (--count[i % value] < 0)\n                return i;\n\n        return nums.size();\n    }\n};"
+      "hash-table": "class Solution {\n    public int findSmallestInteger(int[] nums, int value) {\n        Map<Integer, Integer> count = new HashMap<>();\n        for (int num : nums) {\n            int mod = ((num % value) + value) % value;\n            count.put(mod, count.getOrDefault(mod, 0) + 1);\n        }\n        \n        for (int i = 0; i < nums.length; i++) {\n            int mod = i % value;\n            if (count.getOrDefault(mod, 0) <= 0) return i;\n            count.put(mod, count.get(mod) - 1);\n        }\n        return nums.length;\n    }\n}"
     }
   },
   "2599": {
@@ -13071,7 +13071,7 @@
   },
   "2611": {
     "solution": {
-      "greedy": "class Solution {\npublic:\n    int miceAndCheese(vector<int>& reward1, vector<int>& reward2, int k) {\n        // diffs[i] := reward1[i] - reward2[i].\n        vector<int> diffs;\n\n        for (int i = 0; i < reward1.size(); ++i)\n            diffs.push_back(reward1[i] - reward2[i]);\n\n        nth_element(diffs.begin(), diffs.begin() + k, diffs.end(), greater<>());\n        return accumulate(reward2.begin(), reward2.end(), 0) +\n               accumulate(diffs.begin(), diffs.begin() + k, 0);\n    }\n};"
+      "greedy": "class Solution {\n    public int miceAndCheese(int[] reward1, int[] reward2, int k) {\n        int n = reward1.length;\n        int[] diffs = new int[n];\n        for (int i = 0; i < n; i++) {\n            diffs[i] = reward1[i] - reward2[i];\n        }\n        \n        Arrays.sort(diffs);\n        int sum = Arrays.stream(reward2).sum();\n        for (int i = n - 1; i >= n - k; i--) {\n            sum += diffs[i];\n        }\n        return sum;\n    }\n}"
     }
   },
   "2612": {
@@ -13086,7 +13086,7 @@
   },
   "2614": {
     "solution": {
-      "number-theory": "class Solution {\npublic:\n  int diagonalPrime(vector<vector<int>>& nums) {\n    int ans = 0;\n    for (int i = 0; i < nums.size(); ++i) {\n      const int a = nums[i][i];\n      const int b = nums[i][nums.size() - i - 1];\n      if (isPrime(a))\n        ans = max(ans, a);\n      if (isPrime(b))\n        ans = max(ans, b);\n    }\n    return ans;\n  }\n\n private:\n  bool isPrime(int n) {\n    if (n <= 1)\n      return false;\n    for (int i = 2; i * i <= n; ++i)\n      if (n % i == 0)\n        return false;\n    return true;\n  }\n};"
+      "number-theory": "class Solution {\n    public int diagonalPrime(int[][] nums) {\n        int maxPrime = 0;\n        int n = nums.length;\n        for (int i = 0; i < n; i++) {\n            int a = nums[i][i];\n            int b = nums[i][n - i - 1];\n            if (isPrime(a)) maxPrime = Math.max(maxPrime, a);\n            if (isPrime(b)) maxPrime = Math.max(maxPrime, b);\n        }\n        return maxPrime;\n    }\n    \n    private boolean isPrime(int n) {\n        if (n <= 1) return false;\n        for (int i = 2; i * i <= n; i++) {\n            if (n % i == 0) return false;\n        }\n        return true;\n    }\n}"
     }
   },
   "2615": {
@@ -13126,7 +13126,7 @@
   },
   "2642": {
     "solution": {
-      "design": "class Graph {\npublic:\n    // Constructor to initialize the graph with nodes and edges\n    Graph(int n, vector<vector<int>>& edges) {\n        graph.resize(n);\n        for (const vector<int>& edge : edges) {\n            addEdge(edge);\n        }\n    }\n\n    // Method to add an edge to the graph\n    void addEdge(vector<int> edge) {\n        const int u = edge[0];\n        const int v = edge[1];\n        const int w = edge[2];\n        graph[u].emplace_back(v, w);\n    }\n\n    // Method to find the shortest path between two nodes using Dijkstra's algorithm\n    int shortestPath(int node1, int node2) {\n        vector<int> dist(graph.size(), INT_MAX); // Distance array initialized to infinity\n        using P = pair<int, int>; // Pair to store distance and node (dist, node)\n        priority_queue<P, vector<P>, greater<>> minHeap; // Min-heap for Dijkstra's algorithm\n\n        dist[node1] = 0; // Distance to the start node is 0\n        minHeap.emplace(0, node1);\n\n        while (!minHeap.empty()) {\n            const auto [d, u] = minHeap.top(); // Get the node with the smallest distance\n            minHeap.pop();\n\n            if (u == node2) {\n                return d; // If destination node is reached, return the distance\n            }\n\n            if (d > dist[u]) {\n                continue; // Skip if the distance is outdated\n            }\n\n            for (const auto& [v, w] : graph[u]) {\n                if (d + w < dist[v]) { // Relax the edge\n                    dist[v] = d + w;\n                    minHeap.emplace(dist[v], v);\n                }\n            }\n        }\n\n        return -1; // If no path exists, return -1\n    }\n\nprivate:\n    vector<vector<pair<int, int>>> graph; // Adjacency list representation of the graph\n};\n\n/**\n * Usage example:\n * Graph* obj = new Graph(n, edges);\n * obj->addEdge(edge);\n * int param_2 = obj->shortestPath(node1, node2);\n */"
+      "design": "class Graph {\n    private List<List<Pair<Integer, Integer>>> adj;\n\n    public Graph(int n, int[][] edges) {\n        adj = new ArrayList<>();\n        for (int i = 0; i < n; i++) adj.add(new ArrayList<>());\n        for (int[] edge : edges) addEdge(edge);\n    }\n    \n    public void addEdge(int[] edge) {\n        adj.get(edge[0]).add(new Pair<>(edge[1], edge[2]));\n    }\n    \n    public int shortestPath(int node1, int node2) {\n        int n = adj.size();\n        int[] dist = new int[n];\n        Arrays.fill(dist, Integer.MAX_VALUE);\n        dist[node1] = 0;\n        \n        PriorityQueue<Pair<Integer, Integer>> pq = new PriorityQueue<>((a, b) -> a.getValue() - b.getValue());\n        pq.add(new Pair<>(node1, 0));\n        \n        while (!pq.isEmpty()) {\n            Pair<Integer, Integer> curr = pq.poll();\n            int u = curr.getKey(), d = curr.getValue();\n            if (u == node2) return d;\n            if (d > dist[u]) continue;\n            \n            for (Pair<Integer, Integer> neighbor : adj.get(u)) {\n                int v = neighbor.getKey(), w = neighbor.getValue();\n                if (dist[v] > d + w) {\n                    dist[v] = d + w;\n                    pq.add(new Pair<>(v, dist[v]));\n                }\n            }\n        }\n        \n        return -1;\n    }\n}"
     }
   },
   "2643": {
@@ -13136,7 +13136,7 @@
   },
   "2644": {
     "solution": {
-      "array": "class Solution {\npublic:\n    int maxDivScore(vector<int>& nums, vector<int>& divisors) {\n        int ans = -1;\n        int maxScore = -1;\n\n        for (const int divisor : divisors) {\n            const int score = ranges::count_if(\n                nums, [divisor](const int num) { return num % divisor == 0; });\n            if (score > maxScore) {\n                ans = divisor;\n                maxScore = score;\n            } else if (score == maxScore) {\n                ans = min(ans, divisor);\n            }\n        }\n\n        return ans;\n    }\n};"
+      "array": "class Solution {\n    public int maxDivScore(int[] nums, int[] divisors) {\n        int maxScore = -1, ans = -1;\n        for (int d : divisors) {\n            int score = 0;\n            for (int num : nums) if (num % d == 0) score++;\n            if (score > maxScore || (score == maxScore && d < ans)) {\n                maxScore = score;\n                ans = d;\n            }\n        }\n        return ans;\n    }\n}"
     }
   },
   "2645": {
@@ -13151,7 +13151,7 @@
   },
   "2647": {
     "solution": {
-      "math": "class Solution {\npublic:\n    vector<vector<int>> colorRed(int n) {\n        vector<vector<int>> ans;\n        ans.push_back({1, 1});\n        for (int i = n, k = 0; i > 1; --i, k = (k + 1) % 4) {\n            if (k == 0) {\n                for (int j = 1; j < i << 1; j += 2) {\n                    ans.push_back({i, j});\n                }\n            } else if (k == 1) {\n                ans.push_back({i, 2});\n            } else if (k == 2) {\n                for (int j = 3; j < i << 1; j += 2) {\n                    ans.push_back({i, j});\n                }\n            } else {\n                ans.push_back({i, 1});\n            }\n        }\n        return ans;\n    }\n};\n"
+      "math": "class Solution {\n    public List<List<Integer>> colorRed(int n) {\n        List<List<Integer>> ans = new ArrayList<>();\n        ans.add(Arrays.asList(1, 1));\n        \n        for (int i = n, k = 0; i > 1; i--, k = (k + 1) % 4) {\n            if (k == 0) {\n                for (int j = 1; j < i * 2; j += 2) {\n                    ans.add(Arrays.asList(i, j));\n                }\n            } else if (k == 1) {\n                ans.add(Arrays.asList(i, 2));\n            } else if (k == 2) {\n                for (int j = 3; j < i * 2; j += 2) {\n                    ans.add(Arrays.asList(i, j));\n                }\n            } else {\n                ans.add(Arrays.asList(i, 1));\n            }\n        }\n        \n        return ans;\n    }\n}"
     }
   },
   "2651": {
@@ -13196,7 +13196,7 @@
   },
   "2659": {
     "solution": {
-      "ordered-set": "class Solution {\npublic:\n    long long countOperationsToEmptyArray(vector<int>& nums) {\n        const int n = nums.size();\n        long ans = n;\n        unordered_map<int, int> numToIndex;\n\n        for (int i = 0; i < n; ++i)\n            numToIndex[nums[i]] = i;\n\n        ranges::sort(nums);\n\n        for (int i = 1; i < n; ++i)\n            // On the i-th step we've already removed the i - 1 smallest numbers\n            // and can ignore them. If an element nums[i] has smaller index in\n            // origin array than nums[i - 1], we should rotate the whole left\n            // array n - i times to set nums[i] element on the first position.\n            if (numToIndex[nums[i]] < numToIndex[nums[i - 1]])\n                ans += n - i;\n\n        return ans;\n    }\n};"
+      "ordered-set": "class Solution {\n    public long countOperationsToEmptyArray(int[] nums) {\n        int n = nums.length;\n        Map<Integer, Integer> numToIndex = new HashMap<>();\n        for (int i = 0; i < n; i++) numToIndex.put(nums[i], i);\n        \n        Arrays.sort(nums);\n        long res = n;\n        \n        for (int i = 1; i < n; i++) {\n            if (numToIndex.get(nums[i]) < numToIndex.get(nums[i-1])) {\n                res += n - i;\n            }\n        }\n        \n        return res;\n    }\n}"
     }
   },
   "2660": {
@@ -13386,8 +13386,7 @@
   },
   "2713": {
     "solution": {
-      "matrix": "",
-      "ordered-set": "class Solution {\npublic:\n    int maxIncreasingCells(vector<vector<int>>& mat) {\n        const int m = mat.size();\n        const int n = mat[0].size();\n        // rows[i] := the maximum path length for the i-th row\n        vector<int> rows(m);\n        // cols[j] := the maximum path length for the j-th column\n        vector<int> cols(n);\n        unordered_map<int, vector<pair<int, int>>> valToIndices;\n        // maxPathLength[i][j] := the maximum path length from mat[i][j]\n        vector<vector<int>> maxPathLength(m, vector<int>(n));\n        // Sort all the unique values in the matrix in non-increasing order.\n        set<int, greater<>> decreasingSet;\n\n        for (int i = 0; i < m; ++i)\n            for (int j = 0; j < n; ++j) {\n                valToIndices[mat[i][j]].emplace_back(i, j);\n                decreasingSet.insert(mat[i][j]);\n            }\n\n        for (const int val : decreasingSet) {\n            for (const auto& [i, j] : valToIndices[val])\n                maxPathLength[i][j] = max(rows[i], cols[j]) + 1;\n            for (const auto& [i, j] : valToIndices[val]) {\n                rows[i] = max(rows[i], maxPathLength[i][j]);\n                cols[j] = max(cols[j], maxPathLength[i][j]);\n            }\n        }\n\n        return max(ranges::max(rows), ranges::max(cols));\n    }\n};"
+      "matrix": "class Solution {\n    public int maxIncreasingCells(int[][] mat) {\n        int m = mat.length, n = mat[0].length;\n        int[] rows = new int[m], cols = new int[n];\n        Map<Integer, List<int[]>> valToIndices = new TreeMap<>(Collections.reverseOrder());\n        int[][] maxPath = new int[m][n];\n        \n        for (int i = 0; i < m; i++) {\n            for (int j = 0; j < n; j++) {\n                valToIndices.computeIfAbsent(mat[i][j], k -> new ArrayList<>()).add(new int[]{i, j});\n            }\n        }\n        \n        for (int val : valToIndices.keySet()) {\n            for (int[] pos : valToIndices.get(val)) {\n                int i = pos[0], j = pos[1];\n                maxPath[i][j] = Math.max(rows[i], cols[j]) + 1;\n            }\n            for (int[] pos : valToIndices.get(val)) {\n                int i = pos[0], j = pos[1];\n                rows[i] = Math.max(rows[i], maxPath[i][j]);\n                cols[j] = Math.max(cols[j], maxPath[i][j]);\n            }\n        }\n        \n        return Math.max(Arrays.stream(rows).max().getAsInt(), \n                       Arrays.stream(cols).max().getAsInt());\n    }\n}"
     }
   },
   "2714": {
@@ -13477,7 +13476,7 @@
   },
   "2739": {
     "solution": {
-      "math": "class Solution {\npublic:\n    int distanceTraveled(int mainTank, int additionalTank) {\n        // M  M M M M  A  M M M M   A\n        // 1 [2 3 4 5] 6 [7 8 9 10] 11\n        return (mainTank + min((mainTank - 1) / 4, additionalTank)) * 10;\n    }\n};\n"
+      "math": "class Solution {\n    public int distanceTraveled(int mainTank, int additionalTank) {\n        return (mainTank + Math.min((mainTank - 1) / 4, additionalTank)) * 10;\n    }\n}"
     }
   },
   "2740": {
@@ -13567,7 +13566,7 @@
   },
   "2764": {
     "solution": {
-      "binary-tree": "class Solution {\npublic:\n  bool isPreorder(vector<vector<int>>& nodes) {\n    stack<int> stack;  // Stores `id`s.\n\n    for (const vector<int>& node : nodes) {\n      const int id = node[0];\n      const int parentId = node[1];\n      if (parentId == -1) {\n        stack.push(id);\n        continue;\n      }\n      while (!stack.empty() && stack.top() != parentId)\n        stack.pop();\n      if (stack.empty())\n        return false;\n      stack.push(id);\n    }\n\n    return true;\n  }\n};"
+      "binary-tree": "class Solution {\n    public boolean isPreorder(List<List<Integer>> nodes) {\n        Stack<Integer> stack = new Stack<>();\n        \n        for (List<Integer> node : nodes) {\n            int id = node.get(0), parentId = node.get(1);\n            if (parentId == -1) {\n                stack.push(id);\n                continue;\n            }\n            while (!stack.isEmpty() && stack.peek() != parentId) stack.pop();\n            if (stack.isEmpty()) return false;\n            stack.push(id);\n        }\n        \n        return true;\n    }\n}"
     }
   },
   "2765": {
@@ -13602,7 +13601,7 @@
   },
   "2771": {
     "solution": {
-      "dynamic-programming": "class Solution {\\npublic:\\n    int maxNonDecreasingLength(vector<int>& nums1, vector<int>& nums2) {\\n        int ans = 1;\\n        int dp1 = 1; // the longest subarray that ends in nums1[i] so far\\n        int dp2 = 1; // the longest subarray that ends in nums2[i] so far\\n\\n        for (int i = 1; i < nums1.size(); ++i) {\\n            const int dp11 = nums1[i - 1] <= nums1[i] ? dp1 + 1 : 1;\\n            const int dp21 = nums2[i - 1] <= nums1[i] ? dp2 + 1 : 1;\\n            const int dp12 = nums1[i - 1] <= nums2[i] ? dp1 + 1 : 1;\\n            const int dp22 = nums2[i - 1] <= nums2[i] ? dp2 + 1 : 1;\\n            dp1 = max(dp11, dp21);\\n            dp2 = max(dp12, dp22);\\n            ans = max({ans, dp1, dp2});\\n        }\\n\\n        return ans;\\n    }\\n};"
+      "dynamic-programming": "class Solution {\n    public int maxNonDecreasingLength(int[] nums1, int[] nums2) {\n        int n = nums1.length, res = 1;\n        int dp1 = 1, dp2 = 1;\n        \n        for (int i = 1; i < n; i++) {\n            int newDp1 = 1, newDp2 = 1;\n            if (nums1[i-1] <= nums1[i]) newDp1 = Math.max(newDp1, dp1 + 1);\n            if (nums2[i-1] <= nums1[i]) newDp1 = Math.max(newDp1, dp2 + 1);\n            if (nums1[i-1] <= nums2[i]) newDp2 = Math.max(newDp2, dp1 + 1);\n            if (nums2[i-1] <= nums2[i]) newDp2 = Math.max(newDp2, dp2 + 1);\n            \n            dp1 = newDp1;\n            dp2 = newDp2;\n            res = Math.max(res, Math.max(dp1, dp2));\n        }\n        \n        return res;\n    }\n}"
     }
   },
   "2772": {
@@ -13667,7 +13666,7 @@
   },
   "2788": {
     "solution": {
-      "string": "class Solution {\npublic:\n    vector<string> splitWordsBySeparator(vector<string>& words,\n                                         char separator) {\n        vector<string> ans;\n\n        for (const string& word : words) {\n            istringstream iss(word);\n            for (string word; getline(iss, word, separator);)\n                if (!word.empty())\n                    ans.push_back(word);\n        }\n\n        return ans;\n    }\n};"
+      "string": "class Solution {\n    public List<String> splitWordsBySeparator(List<String> words, char separator) {\n        List<String> res = new ArrayList<>();\n        for (String word : words) {\n            String[] parts = word.split(Pattern.quote(String.valueOf(separator)));\n            for (String part : parts) {\n                if (!part.isEmpty()) res.add(part);\n            }\n        }\n        return res;\n    }\n}"
     }
   },
   "2789": {
@@ -13682,7 +13681,7 @@
   },
   "2791": {
     "solution": {
-      "depth-first-search": "class Solution {\npublic:\n    vector<vector<int>> findPrimePairs(int n) {\n        vector<vector<int>> result;\n        \n        vector<bool> isPrime(n + 1, true);\n        isPrime[0] = isPrime[1] = false; // 0 and 1 are not prime numbers\n        for (int i = 2; i * i <= n; ++i) {\n            if (isPrime[i]) {\n                for (int j = i * i; j <= n; j += i) {\n                    isPrime[j] = false;\n                }\n            }\n        }\n        \n        for (int i = 2; i <= n / 2; ++i) {\n            if (isPrime[i] && isPrime[n - i]) {\n                result.push_back({i, n - i});\n            }\n        }\n        \n        return result;\n    }\n};\n"
+      "depth-first-search": "class Solution {\n    public List<List<Integer>> findPrimePairs(int n) {\n        List<List<Integer>> res = new ArrayList<>();\n        boolean[] isPrime = sieve(n);\n        \n        for (int i = 2; i <= n/2; i++) {\n            if (isPrime[i] && isPrime[n-i]) {\n                res.add(Arrays.asList(i, n-i));\n            }\n        }\n        \n        return res;\n    }\n    \n    private boolean[] sieve(int n) {\n        boolean[] isPrime = new boolean[n+1];\n        Arrays.fill(isPrime, true);\n        isPrime[0] = isPrime[1] = false;\n        \n        for (int i = 2; i * i <= n; i++) {\n            if (isPrime[i]) {\n                for (int j = i*i; j <= n; j += i) {\n                    isPrime[j] = false;\n                }\n            }\n        }\n        \n        return isPrime;\n    }\n}"
     }
   },
   "2792": {
@@ -13772,7 +13771,7 @@
   },
   "2817": {
     "solution": {
-      "ordered-set": "#include <cmath>\n#include <limits>\n#include <set>\n#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int minAbsoluteDifference(vector<int>& nums, int x) {\n        if (x == 0)\n            return 0; // Edge case: x cannot be zero as |i - j| >= x\n\n        int n = nums.size();\n        set<int> orderedSet;\n        int minDiff = numeric_limits<int>::max();\n\n        for (int i = x; i < n; ++i) {\n            orderedSet.insert(nums[i - x]);\n\n            // Find the closest numbers in the set\n            auto it = orderedSet.lower_bound(nums[i]);\n\n            // Check the number >= nums[i]\n            if (it != orderedSet.end()) {\n                minDiff = min(minDiff, abs(*it - nums[i]));\n            }\n\n            // Check the number < nums[i]\n            if (it != orderedSet.begin()) {\n                minDiff = min(minDiff, abs(*prev(it) - nums[i]));\n            }\n        }\n\n        return minDiff;\n    }\n};\n"
+      "ordered-set": "class Solution {\n    public int minAbsoluteDifference(List<Integer> nums, int x) {\n        if (x == 0) return 0;\n        \n        TreeSet<Integer> set = new TreeSet<>();\n        int minDiff = Integer.MAX_VALUE;\n        \n        for (int i = x; i < nums.size(); i++) {\n            set.add(nums.get(i - x));\n            \n            Integer ceil = set.ceiling(nums.get(i));\n            if (ceil != null) minDiff = Math.min(minDiff, ceil - nums.get(i));\n            \n            Integer floor = set.floor(nums.get(i));\n            if (floor != null) minDiff = Math.min(minDiff, nums.get(i) - floor);\n        }\n        \n        return minDiff;\n    }\n}"
     }
   },
   "2818": {
@@ -13832,7 +13831,7 @@
   },
   "2833": {
     "solution": {
-      "string": "class Solution {\npublic:\n    int furthestDistanceFromOrigin(string moves) {\n        int countL = 0;\n        int countR = 0;\n        int countUnderline = 0;\n\n        for (const char c : moves)\n            if (c == 'L')\n                ++countL;\n            else if (c == 'R')\n                ++countR;\n            else // c == '_'\n                ++countUnderline;\n\n        return abs(countL - countR) + countUnderline;\n    }\n};"
+      "string": "class Solution {\n    public int furthestDistanceFromOrigin(String moves) {\n        int left = 0, right = 0, underline = 0;\n        for (char c : moves.toCharArray()) {\n            if (c == 'L') left++;\n            else if (c == 'R') right++;\n            else underline++;\n        }\n        return Math.abs(left - right) + underline;\n    }\n}"
     }
   },
   "2834": {
@@ -13902,7 +13901,7 @@
   },
   "2847": {
     "solution": {
-      "greedy": "class Solution {\npublic:\n    string smallestNumber(long long n) {\n        int count[10]{};\n        for (int i = 9; i > 1; --i) {\n            while (n % i == 0) {\n                n /= i;\n                ++count[i];\n            }\n        }\n        if (n > 1) {\n            return \"-1\";\n        }\n        string ans;\n        for (int i = 2; i < 10; ++i) {\n            ans += string(count[i], '0' + i);\n        }\n        return ans == \"\" ? \"1\" : ans;\n    }\n};"
+      "greedy": "class Solution {\n    public String smallestNumber(long n) {\n        if (n == 1) return \"1\";\n        \n        int[] count = new int[10];\n        for (int i = 9; i >= 2; i--) {\n            while (n % i == 0) {\n                n /= i;\n                count[i]++;\n            }\n        }\n        if (n != 1) return \"-1\";\n        \n        StringBuilder sb = new StringBuilder();\n        for (int i = 2; i <= 9; i++) {\n            for (int j = 0; j < count[i]; j++) {\n                sb.append(i);\n            }\n        }\n        return sb.length() == 0 ? \"1\" : sb.toString();\n    }\n}"
     }
   },
   "2848": {
@@ -13942,7 +13941,7 @@
   },
   "2855": {
     "solution": {
-      "array": "class Solution {\npublic:\n    int minimumRightShifts(vector<int>& nums) {\n        int count = 0;\n        int pivot = -1;\n\n        for (int i = 0; i + 1 < nums.size(); i++)\n            if (nums[i] > nums[i + 1]) {\n                ++count;\n                pivot = i;\n            }\n\n        if (count == 0)\n            return 0;\n        if (count > 1 || nums.back() > nums.front())\n            return -1;\n        return nums.size() - 1 - pivot;\n    }\n};"
+      "array": "class Solution {\n    public int minimumRightShifts(List<Integer> nums) {\n        int count = 0, pivot = -1;\n        for (int i = 0; i < nums.size() - 1; i++) {\n            if (nums.get(i) > nums.get(i + 1)) {\n                count++;\n                pivot = i;\n            }\n        }\n        \n        if (count == 0) return 0;\n        if (count > 1 || nums.get(nums.size() - 1) > nums.get(0)) return -1;\n        return nums.size() - 1 - pivot;\n    }\n}"
     }
   },
   "2856": {
@@ -14002,7 +14001,7 @@
   },
   "2867": {
     "solution": {
-      "depth-first-search": "class Solution {\npublic:\n    long long countPaths(int n, vector<vector<int>>& edges) {\n        long ans = 0;\n        const vector<bool> isPrime = sieveEratosthenes(n + 1);\n        vector<vector<int>> graph(n + 1);\n\n        for (const vector<int>& edge : edges) {\n            const int u = edge[0];\n            const int v = edge[1];\n            graph[u].push_back(v);\n            graph[v].push_back(u);\n        }\n\n        dfs(graph, 1, -1, isPrime, ans);\n        return ans;\n    }\n\nprivate:\n    pair<long, long> dfs(const vector<vector<int>>& graph, int u, int prev,\n                         const vector<bool>& isPrime, long& ans) {\n        long countZeroPrimePath = !isPrime[u];\n        long countOnePrimePath = isPrime[u];\n\n        for (const int v : graph[u]) {\n            if (v == prev)\n                continue;\n            const auto& [countZeroPrimeChildPath, countOnePrimeChildPath] =\n                dfs(graph, v, u, isPrime, ans);\n            ans += countZeroPrimePath * countOnePrimeChildPath +\n                   countOnePrimePath * countZeroPrimeChildPath;\n            if (isPrime[u]) {\n                countOnePrimePath += countZeroPrimeChildPath;\n            } else {\n                countZeroPrimePath += countZeroPrimeChildPath;\n                countOnePrimePath += countOnePrimeChildPath;\n            }\n        }\n\n        return {countZeroPrimePath, countOnePrimePath};\n    }\n\n    vector<bool> sieveEratosthenes(int n) {\n        vector<bool> isPrime(n, true);\n        isPrime[0] = false;\n        isPrime[1] = false;\n        for (int i = 2; i * i < n; ++i)\n            if (isPrime[i])\n                for (int j = i * i; j < n; j += i)\n                    isPrime[j] = false;\n        return isPrime;\n    }\n};\n"
+      "depth-first-search": "class Solution {\n    public long countPaths(int n, int[][] edges) {\n        boolean[] isPrime = sieve(n + 1);\n        List<List<Integer>> graph = new ArrayList<>();\n        for (int i = 0; i <= n; i++) graph.add(new ArrayList<>());\n        for (int[] edge : edges) {\n            graph.get(edge[0]).add(edge[1]);\n            graph.get(edge[1]).add(edge[0]);\n        }\n        \n        long[] res = new long[1];\n        dfs(graph, 1, -1, isPrime, res);\n        return res[0];\n    }\n    \n    private long[] dfs(List<List<Integer>> graph, int u, int parent, boolean[] isPrime, long[] res) {\n        long zero = isPrime[u] ? 0 : 1;\n        long one = isPrime[u] ? 1 : 0;\n        \n        for (int v : graph.get(u)) {\n            if (v == parent) continue;\n            long[] child = dfs(graph, v, u, isPrime, res);\n            res[0] += zero * child[1] + one * child[0];\n            if (isPrime[u]) {\n                one += child[0];\n            } else {\n                zero += child[0];\n                one += child[1];\n            }\n        }\n        \n        return new long[]{zero, one};\n    }\n    \n    private boolean[] sieve(int n) {\n        boolean[] isPrime = new boolean[n];\n        Arrays.fill(isPrime, true);\n        isPrime[0] = isPrime[1] = false;\n        for (int i = 2; i * i < n; i++) {\n            if (isPrime[i]) {\n                for (int j = i * i; j < n; j += i) {\n                    isPrime[j] = false;\n                }\n            }\n        }\n        return isPrime;\n    }\n}"
     }
   },
   "2868": {
@@ -14047,7 +14046,7 @@
   },
   "2876": {
     "solution": {
-      "graph": "class Solution {\npublic:\n  vector<int> countVisitedNodes(vector<int>& edges) {\n    const int n = edges.size();\n    vector<int> ans(n);\n    vector<int> inDegrees(n);\n    vector<bool> seen(n);\n    queue<int> q;\n    stack<int> stack;\n\n    for (const int v : edges)\n      ++inDegrees[v];\n\n    // Perform topological sorting.\n    for (int i = 0; i < n; ++i)\n      if (inDegrees[i] == 0)\n        q.push(i);\n\n    // Push non-cyclic nodes to stack.\n    while (!q.empty()) {\n      const int u = q.front();\n      q.pop();\n      if (--inDegrees[edges[u]] == 0)\n        q.push(edges[u]);\n      stack.push(u);\n      seen[u] = true;\n    }\n\n    // Fill the length of cyclic nodes.\n    for (int i = 0; i < n; ++i)\n      if (!seen[i])\n        fillCycle(edges, i, seen, ans);\n\n    // Fill the length of non-cyclic nodes.\n    while (!stack.empty()) {\n      const int u = stack.top();\n      stack.pop();\n      ans[u] = ans[edges[u]] + 1;\n    }\n\n    return ans;\n  }\n\n private:\n  void fillCycle(const vector<int>& edges, int start, vector<bool>& seen,\n                 vector<int>& ans) {\n    int cycleLength = 0;\n    for (int u = start; !seen[u]; u = edges[u]) {\n      ++cycleLength;\n      seen[u] = true;\n    }\n    ans[start] = cycleLength;\n    for (int u = edges[start]; u != start; u = edges[u])\n      ans[u] = cycleLength;\n  }\n};"
+      "graph": "class Solution {\n    public int[] countVisitedNodes(int[] edges) {\n        int n = edges.length;\n        int[] inDegree = new int[n];\n        boolean[] visited = new boolean[n];\n        int[] res = new int[n];\n        Queue<Integer> q = new LinkedList<>();\n        \n        for (int v : edges) inDegree[v]++;\n        \n        for (int i = 0; i < n; i++) {\n            if (inDegree[i] == 0) q.add(i);\n        }\n        \n        Stack<Integer> stack = new Stack<>();\n        while (!q.isEmpty()) {\n            int u = q.poll();\n            if (--inDegree[edges[u]] == 0) q.add(edges[u]);\n            stack.push(u);\n            visited[u] = true;\n        }\n        \n        for (int i = 0; i < n; i++) {\n            if (!visited[i]) fillCycle(edges, i, visited, res);\n        }\n        \n        while (!stack.isEmpty()) {\n            int u = stack.pop();\n            res[u] = res[edges[u]] + 1;\n        }\n        \n        return res;\n    }\n    \n    private void fillCycle(int[] edges, int start, boolean[] visited, int[] res) {\n        int len = 0;\n        for (int u = start; !visited[u]; u = edges[u]) {\n            len++;\n            visited[u] = true;\n        }\n        res[start] = len;\n        for (int u = edges[start]; u != start; u = edges[u]) {\n            res[u] = len;\n        }\n    }\n}"
     }
   },
   "2892": {
@@ -14127,7 +14126,7 @@
   },
   "2907": {
     "solution": {
-      "binary-indexed-tree": "class FenwickTree {\npublic:\n  FenwickTree(int n) : vals(n + 1) {}\n\n  void maximize(int i, int val) {\n    while (i < vals.size()) {\n      vals[i] = max(vals[i], val);\n      i += lowbit(i);\n    }\n  }\n\n  int get(int i) const {\n    int res = 0;\n    while (i > 0) {\n      res = max(res, vals[i]);\n      i -= lowbit(i);\n    }\n    return res;\n  }\n\n private:\n  vector<int> vals;\n\n  static int lowbit(int i) {\n    return i & -i;\n  }\n};\n\nclass Solution {\npublic:\n  int maxProfit(vector<int>& prices, vector<int>& profits) {\n    const int maxPrice = ranges::max(prices);\n    int ans = -1;\n    FenwickTree maxProfitTree1(maxPrice);\n    FenwickTree maxProfitTree2(maxPrice);\n\n    for (int i = 0; i < prices.size(); ++i) {\n      const int price = prices[i];\n      const int profit = profits[i];\n      // max(proftis[i])\n      const int maxProfit1 = maxProfitTree1.get(price - 1);\n      // max(proftis[i]) + max(profits[j])\n      const int maxProfit2 = maxProfitTree2.get(price - 1);\n      maxProfitTree1.maximize(price, profit);\n      if (maxProfit1 > 0)\n        maxProfitTree2.maximize(price, profit + maxProfit1);\n      if (maxProfit2 > 0)\n        ans = max(ans, profit + maxProfit2);\n    }\n\n    return ans;\n  }\n};"
+      "binary-indexed-tree": "class FenwickTree {\n    private int[] tree;\n    \n    public FenwickTree(int size) {\n        tree = new int[size + 1];\n    }\n    \n    public void update(int index, int val) {\n        while (index < tree.length) {\n            tree[index] = Math.max(tree[index], val);\n            index += index & -index;\n        }\n    }\n    \n    public int query(int index) {\n        int res = 0;\n        while (index > 0) {\n            res = Math.max(res, tree[index]);\n            index -= index & -index;\n        }\n        return res;\n    }\n}\n\nclass Solution {\n    public int maxProfit(int[] prices, int[] profits) {\n        int maxPrice = Arrays.stream(prices).max().getAsInt();\n        FenwickTree ft1 = new FenwickTree(maxPrice);\n        FenwickTree ft2 = new FenwickTree(maxPrice);\n        int res = -1;\n        \n        for (int i = 0; i < prices.length; i++) {\n            int price = prices[i], profit = profits[i];\n            int max1 = ft1.query(price - 1);\n            int max2 = ft2.query(price - 1);\n            \n            ft1.update(price, profit);\n            if (max1 > 0) ft2.update(price, profit + max1);\n            if (max2 > 0) res = Math.max(res, profit + max2);\n        }\n        \n        return res;\n    }\n}"
     }
   },
   "2908": {
