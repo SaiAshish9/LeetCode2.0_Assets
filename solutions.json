@@ -14926,7 +14926,7 @@
   },
   "3067": {
     "solution": {
-      "tree": "class Solution {\npublic:\n    vector<int> countPairsOfConnectableServers(vector<vector<int>>& edges,\n                                               int signalSpeed) {\n        const int n = edges.size() + 1;\n        vector<int> ans;\n        vector<vector<pair<int, int>>> tree(n);\n\n        for (const vector<int>& edge : edges) {\n            const int u = edge[0];\n            const int v = edge[1];\n            const int w = edge[2];\n            tree[u].emplace_back(v, w);\n            tree[v].emplace_back(u, w);\n        }\n\n        for (int i = 0; i < n; ++i)\n            ans.push_back(connectablePairsRootedAt(tree, i, signalSpeed));\n\n        return ans;\n    }\n\nprivate:\n    int connectablePairsRootedAt(const vector<vector<pair<int, int>>>& tree,\n                                 int u, int signalSpeed) {\n        int pairs = 0;\n        int count = 0;\n        for (const auto& [v, w] : tree[u]) {\n            const int childCount = dfs(tree, v, u, w, signalSpeed);\n            pairs += count * childCount;\n            count += childCount;\n        }\n        return pairs;\n    }\n\n    int dfs(const vector<vector<pair<int, int>>>& tree, int u, int prev,\n            int dist, int signalSpeed) {\n        int count = 0;\n        for (const auto& [v, w] : tree[u])\n            if (v != prev)\n                count += dfs(tree, v, u, dist + w, signalSpeed);\n        return (dist % signalSpeed == 0 ? 1 : 0) + count;\n    }\n};"
+      "tree": "import java.util.*;\n\nclass Solution {\n    public List<Integer> countPairsOfConnectableServers(List<List<Integer>> edges, int signalSpeed) {\n        int n = edges.size() + 1;\n        List<Integer> ans = new ArrayList<>();\n        List<List<int[]>> tree = new ArrayList<>();\n\n        for (int i = 0; i < n; i++) {\n            tree.add(new ArrayList<>());\n        }\n\n        for (List<Integer> edge : edges) {\n            int u = edge.get(0);\n            int v = edge.get(1);\n            int w = edge.get(2);\n            tree.get(u).add(new int[]{v, w});\n            tree.get(v).add(new int[]{u, w});\n        }\n\n        for (int i = 0; i < n; i++) {\n            ans.add(connectablePairsRootedAt(tree, i, signalSpeed));\n        }\n\n        return ans;\n    }\n\n    private int connectablePairsRootedAt(List<List<int[]>> tree, int u, int signalSpeed) {\n        int pairs = 0, count = 0;\n        for (int[] vw : tree.get(u)) {\n            int v = vw[0], w = vw[1];\n            int childCount = dfs(tree, v, u, w, signalSpeed);\n            pairs += count * childCount;\n            count += childCount;\n        }\n        return pairs;\n    }\n\n    private int dfs(List<List<int[]>> tree, int u, int prev, int dist, int signalSpeed) {\n        int count = 0;\n        for (int[] vw : tree.get(u)) {\n            int v = vw[0], w = vw[1];\n            if (v != prev) {\n                count += dfs(tree, v, u, dist + w, signalSpeed);\n            }\n        }\n        return (dist % signalSpeed == 0 ? 1 : 0) + count;\n    }\n}"
     }
   },
   "3068": {
@@ -14956,7 +14956,7 @@
   },
   "3073": {
     "solution": {
-      "ordered-set": "class Solution {\npublic:\n    int maximumTripletValue(vector<int>& nums) {\n        int n = nums.size();\n        vector<int> right(n, nums.back());\n        for (int i = n - 2; ~i; --i) {\n            right[i] = max(nums[i], right[i + 1]);\n        }\n        set<int> ts;\n        ts.insert(nums[0]);\n        int ans = 0;\n        for (int j = 1; j < n - 1; ++j) {\n            if (right[j + 1] > nums[j]) {\n                auto it = ts.lower_bound(nums[j]);\n                if (it != ts.begin()) {\n                    --it;\n                    ans = max(ans, *it - nums[j] + right[j + 1]);\n                }\n            }\n            ts.insert(nums[j]);\n        }\n        return ans;\n    }\n};"
+      "ordered-set": "import java.util.*;\n\nclass Solution {\n    public int maximumTripletValue(int[] nums) {\n        int n = nums.length;\n        int[] right = new int[n];\n        right[n - 1] = nums[n - 1];\n        for (int i = n - 2; i >= 0; i--) {\n            right[i] = Math.max(nums[i], right[i + 1]);\n        }\n\n        TreeSet<Integer> ts = new TreeSet<>();\n        ts.add(nums[0]);\n        int ans = 0;\n        for (int j = 1; j < n - 1; j++) {\n            if (right[j + 1] > nums[j]) {\n                Integer floor = ts.floor(nums[j] - 1);\n                if (floor != null) {\n                    ans = Math.max(ans, floor - nums[j] + right[j + 1]);\n                }\n            }\n            ts.add(nums[j]);\n        }\n\n        return ans;\n    }\n}"
     }
   },
   "3074": {
@@ -15086,7 +15086,7 @@
   },
   "3099": {
     "solution": {
-      "math": "class Solution {\npublic:\n    int sumOfTheDigitsOfHarshadNumber(int x) {\n        const int digitSum = getDigitSum(x);\n        return x % digitSum == 0 ? digitSum : -1;\n    }\n\nprivate:\n    int getDigitSum(int x) {\n        int digitSum = 0;\n        while (x > 0) {\n            digitSum += x % 10;\n            x /= 10;\n        }\n        return digitSum;\n    }\n};\n"
+      "math": "class Solution {\n    public int sumOfTheDigitsOfHarshadNumber(int x) {\n        int digitSum = getDigitSum(x);\n        return x % digitSum == 0 ? digitSum : -1;\n    }\n\n    private int getDigitSum(int x) {\n        int digitSum = 0;\n        while (x > 0) {\n            digitSum += x % 10;\n            x /= 10;\n        }\n        return digitSum;\n    }\n}"
     }
   },
   "3100": {
@@ -15096,7 +15096,7 @@
   },
   "3101": {
     "solution": {
-      "math": "class Solution {\npublic:\n    long long countAlternatingSubarrays(vector<int>& nums) {\n        // dp[i] := the number of alternating subarrays ending in index i\n        vector<long> dp(nums.size(), 1);\n\n        for (int i = 1; i < nums.size(); ++i)\n            if (nums[i] != nums[i - 1])\n                dp[i] += dp[i - 1];\n\n        return accumulate(dp.begin(), dp.end(), 0L);\n    }\n};\n"
+      "math": "class Solution {\n    public long countAlternatingSubarrays(int[] nums) {\n        long[] dp = new long[nums.length];\n        Arrays.fill(dp, 1);\n        long result = 1;\n\n        for (int i = 1; i < nums.length; i++) {\n            if (nums[i] != nums[i - 1]) {\n                dp[i] = dp[i - 1] + 1;\n            }\n            result += dp[i];\n        }\n\n        return result;\n    }\n}"
     }
   },
   "3102": {
@@ -15166,7 +15166,7 @@
   },
   "3115": {
     "solution": {
-      "number-theory": "class Solution {\npublic:\n    int maximumPrimeDifference(vector<int>& nums) {\n        constexpr int kMax = 100;\n        const vector<bool> isPrime = sieveEratosthenes(kMax + 1);\n        int minPrimeIndex = -1;\n        int maxPrimeIndex = -1;\n\n        for (int i = 0; i < nums.size(); ++i)\n            if (isPrime[nums[i]]) {\n                if (minPrimeIndex == -1)\n                    minPrimeIndex = i;\n                maxPrimeIndex = i;\n            }\n\n        return maxPrimeIndex - minPrimeIndex;\n    }\n\nprivate:\n    vector<bool> sieveEratosthenes(int n) {\n        vector<bool> isPrime(n, true);\n        isPrime[0] = false;\n        isPrime[1] = false;\n        for (int i = 2; i * i < n; ++i)\n            if (isPrime[i])\n                for (int j = i * i; j < n; j += i)\n                    isPrime[j] = false;\n        return isPrime;\n    }\n};"
+      "number-theory": "class Solution {\n    public int maximumPrimeDifference(int[] nums) {\n        boolean[] isPrime = sieveEratosthenes(101); // since nums[i] ≤ 100\n        int minPrimeIndex = -1;\n        int maxPrimeIndex = -1;\n\n        for (int i = 0; i < nums.length; i++) {\n            if (isPrime[nums[i]]) {\n                if (minPrimeIndex == -1) {\n                    minPrimeIndex = i;\n                }\n                maxPrimeIndex = i;\n            }\n        }\n\n        return maxPrimeIndex - minPrimeIndex;\n    }\n\n    private boolean[] sieveEratosthenes(int n) {\n        boolean[] isPrime = new boolean[n];\n        Arrays.fill(isPrime, true);\n        isPrime[0] = isPrime[1] = false;\n\n        for (int i = 2; i * i < n; i++) {\n            if (isPrime[i]) {\n                for (int j = i * i; j < n; j += i) {\n                    isPrime[j] = false;\n                }\n            }\n        }\n\n        return isPrime;\n    }\n}"
     }
   },
   "3116": {
@@ -15191,7 +15191,7 @@
   },
   "3120": {
     "solution": {
-      "hash-table": "class Solution {\npublic:\n    int numberOfSpecialChars(string word) {\n        int ans = 0;\n        vector<bool> lower(26);\n        vector<bool> upper(26);\n\n        for (const char c : word)\n            if (islower(c))\n                lower[c - 'a'] = true;\n            else\n                upper[c - 'A'] = true;\n\n        for (int i = 0; i < 26; ++i)\n            if (lower[i] && upper[i])\n                ++ans;\n\n        return ans;\n    }\n};"
+      "hash-table": "class Solution {\n    public int numberOfSpecialChars(String word) {\n        boolean[] lower = new boolean[26];\n        boolean[] upper = new boolean[26];\n\n        for (char c : word.toCharArray()) {\n            if (Character.isLowerCase(c)) {\n                lower[c - 'a'] = true;\n            } else {\n                upper[c - 'A'] = true;\n            }\n        }\n\n        int count = 0;\n        for (int i = 0; i < 26; i++) {\n            if (lower[i] && upper[i]) {\n                count++;\n            }\n        }\n\n        return count;\n    }\n}"
     }
   },
   "3121": {
@@ -15206,7 +15206,7 @@
   },
   "3123": {
     "solution": {
-      "shortest-path": "class Solution {\npublic:\n    vector<bool> findAnswer(int n, vector<vector<int>>& edges) {\n        vector<bool> ans;\n        vector<vector<pair<int, int>>> graph(n);\n\n        for (const vector<int>& edge : edges) {\n            const int u = edge[0];\n            const int v = edge[1];\n            const int w = edge[2];\n            graph[u].emplace_back(v, w);\n            graph[v].emplace_back(u, w);\n        }\n\n        const vector<int> from0 = dijkstra(graph, 0);\n        const vector<int> from1 = dijkstra(graph, n - 1);\n\n        for (const vector<int>& edge : edges) {\n            const int u = edge[0];\n            const int v = edge[1];\n            const int w = edge[2];\n            ans.push_back(from0[u] + w + from1[v] == from0[n - 1] ||\n                          from0[v] + w + from1[u] == from0[n - 1]);\n        }\n\n        return ans;\n    }\n\nprivate:\n    static constexpr int kMax = 1'000'000'000;\n\n    vector<int> dijkstra(const vector<vector<pair<int, int>>>& graph, int src) {\n        vector<int> dist(graph.size(), kMax);\n\n        dist[src] = 0;\n        using P = pair<int, int>; // (d, u)\n        priority_queue<P, vector<P>, greater<>> minHeap;\n        minHeap.emplace(dist[src], src);\n\n        while (!minHeap.empty()) {\n            const auto [d, u] = minHeap.top();\n            minHeap.pop();\n            if (d > dist[u])\n                continue;\n            for (const auto& [v, w] : graph[u])\n                if (d + w < dist[v]) {\n                    dist[v] = d + w;\n                    minHeap.emplace(dist[v], v);\n                }\n        }\n\n        return dist;\n    }\n};"
+      "shortest-path": "class Solution {\n    public List<Boolean> findAnswer(int n, int[][] edges) {\n        List<List<int[]>> graph = new ArrayList<>();\n        for (int i = 0; i < n; i++) graph.add(new ArrayList<>());\n        for (int[] e : edges) {\n            graph.get(e[0]).add(new int[]{e[1], e[2]});\n            graph.get(e[1]).add(new int[]{e[0], e[2]});\n        }\n\n        int[] from0 = dijkstra(graph, 0);\n        int[] fromN = dijkstra(graph, n - 1);\n        int dist = from0[n - 1];\n        List<Boolean> res = new ArrayList<>();\n\n        for (int[] e : edges) {\n            int u = e[0], v = e[1], w = e[2];\n            boolean cond = (from0[u] + w + fromN[v] == dist) || (from0[v] + w + fromN[u] == dist);\n            res.add(cond);\n        }\n\n        return res;\n    }\n\n    private int[] dijkstra(List<List<int[]>> graph, int src) {\n        int n = graph.size();\n        int[] dist = new int[n];\n        Arrays.fill(dist, Integer.MAX_VALUE);\n        dist[src] = 0;\n        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));\n        pq.offer(new int[]{0, src});\n\n        while (!pq.isEmpty()) {\n            int[] curr = pq.poll();\n            int d = curr[0], u = curr[1];\n            if (d > dist[u]) continue;\n            for (int[] nei : graph.get(u)) {\n                int v = nei[0], w = nei[1];\n                if (dist[v] > d + w) {\n                    dist[v] = d + w;\n                    pq.offer(new int[]{dist[v], v});\n                }\n            }\n        }\n\n        return dist;\n    }\n}"
     }
   },
   "3124": {
@@ -15377,7 +15377,7 @@
   },
   "3157": {
     "solution": {
-      "breadth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int minimumLevel(TreeNode* root) {\n        queue<TreeNode*> q{{root}};\n        int ans = 0;\n        long long s = 1LL << 60;\n        for (int level = 1; q.size(); ++level) {\n            long long t = 0;\n            for (int m = q.size(); m; --m) {\n                TreeNode* node = q.front();\n                q.pop();\n                t += node->val;\n                if (node->left) {\n                    q.push(node->left);\n                }\n                if (node->right) {\n                    q.push(node->right);\n                }\n            }\n            if (s > t) {\n                s = t;\n                ans = level;\n            }\n        }\n        return ans;\n    }\n};"
+      "breadth-first-search": "class Solution {\n    public int minimumLevel(TreeNode root) {\n        Queue<TreeNode> q = new LinkedList<>();\n        q.offer(root);\n        int minLevel = 0, level = 1;\n        long minSum = Long.MAX_VALUE;\n\n        while (!q.isEmpty()) {\n            int size = q.size();\n            long sum = 0;\n            for (int i = 0; i < size; ++i) {\n                TreeNode node = q.poll();\n                sum += node.val;\n                if (node.left != null) q.offer(node.left);\n                if (node.right != null) q.offer(node.right);\n            }\n            if (sum < minSum) {\n                minSum = sum;\n                minLevel = level;\n            }\n            level++;\n        }\n\n        return minLevel;\n    }\n}"
     }
   },
   "3158": {
@@ -15427,7 +15427,7 @@
   },
   "3167": {
     "solution": {
-      "counting": "class Solution {\npublic:\n  string betterCompression(string compressed) {\n    string ans;\n    vector<int> count(26);\n\n    for (int i = 0; i < compressed.length();) {\n      const char c = compressed[i++];\n      int freq = 0;\n      while (i < compressed.length() && isdigit(compressed[i]))\n        freq = freq * 10 + (compressed[i++] - '0');\n      count[c - 'a'] += freq;\n    }\n\n    for (char c = 'a'; c <= 'z'; ++c)\n      if (count[c - 'a'] > 0)\n        ans += c + to_string(count[c - 'a']);\n\n    return ans;\n  }\n};"
+      "counting": "class Solution {\n    public String betterCompression(String compressed) {\n        int[] count = new int[26];\n        int i = 0;\n        while (i < compressed.length()) {\n            char c = compressed.charAt(i++);\n            int freq = 0;\n            while (i < compressed.length() && Character.isDigit(compressed.charAt(i))) {\n                freq = freq * 10 + (compressed.charAt(i++) - '0');\n            }\n            count[c - 'a'] += freq;\n        }\n\n        StringBuilder ans = new StringBuilder();\n        for (char c = 'a'; c <= 'z'; c++) {\n            if (count[c - 'a'] > 0) {\n                ans.append(c).append(count[c - 'a']);\n            }\n        }\n\n        return ans.toString();\n    }\n}"
     }
   },
   "3168": {
@@ -15462,7 +15462,7 @@
   },
   "3174": {
     "solution": {
-      "string": "class Solution {\npublic:\n    string clearDigits(string s) {\n        string ans;\n\n        for (const char c : s)\n            if (isdigit(c))\n                ans.pop_back();\n            else\n                ans += c;\n\n        return ans;\n    }\n};"
+      "string": "class Solution {\n    public String clearDigits(String s) {\n        StringBuilder ans = new StringBuilder();\n\n        for (char c : s.toCharArray()) {\n            if (Character.isDigit(c)) {\n                if (ans.length() > 0) {\n                    ans.deleteCharAt(ans.length() - 1);\n                }\n            } else {\n                ans.append(c);\n            }\n        }\n\n        return ans.toString();\n    }\n}"
     }
   },
   "3175": {
@@ -15512,7 +15512,7 @@
   },
   "3184": {
     "solution": {
-      "counting": "class Solution {\npublic:\n  int countCompleteDayPairs(vector<int>& hours) {\n    int ans = 0;\n    vector<int> count(24);\n\n    for (const int hour : hours) {\n      ans += count[(24 - hour % 24) % 24];\n      ++count[hour % 24];\n    }\n\n    return ans;\n  }\n};"
+      "counting": "class Solution {\n    public int countCompleteDayPairs(int[] hours) {\n        int[] count = new int[24];\n        int res = 0;\n        for (int hour : hours) {\n            int rem = hour % 24;\n            int complement = (24 - rem) % 24;\n            res += count[complement];\n            count[rem]++;\n        }\n        return res;\n    }\n}"
     }
   },
   "3185": {
@@ -15542,7 +15542,7 @@
   },
   "3190": {
     "solution": {
-      "array": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int minimumOperations(vector<int>& nums) {\n        int operations = 0;\n\n        for (int num : nums) {\n            int remainder = num % 3;\n\n            if (remainder == 1) {\n                operations += 1;  \n            } else if (remainder == 2) {\n                operations += 1;  \n            }\n        }\n\n        return operations;\n    }\n};\n"
+      "array": "class Solution {\n    public int minimumOperations(int[] nums) {\n        int operations = 0;\n        for (int num : nums) {\n            int rem = num % 3;\n            if (rem == 1 || rem == 2) operations++;\n        }\n        return operations;\n    }\n}"
     }
   },
   "3191": {
