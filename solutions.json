@@ -8962,12 +8962,12 @@
   },
   "1790": {
     "solution": {
-      "counting": "class Solution {\npublic:\n    bool areAlmostEqual(string s1, string s2) {\n        vector<int> diffIndices; \n        \n        for (int i = 0; i < s1.size(); ++i) {\n            if (s1[i] != s2[i]) {\n                diffIndices.push_back(i);\n            }\n        }\n\n        // If there are no mismatches, strings are already equal\n        if (diffIndices.empty()) {\n            return true;\n        }\n\n        // If there are exactly two mismatches, check if swapping fixes the issue\n        if (diffIndices.size() == 2) {\n            int i = diffIndices[0], j = diffIndices[1];\n            return s1[i] == s2[j] && s1[j] == s2[i];\n        }\n\n        // If there are more than two mismatches, we cannot fix with one swap\n        return false;\n    }\n};\n"
+      "counting": "class Solution {\n    public boolean areAlmostEqual(String s1, String s2) {\n        List<Integer> diffIndices = new ArrayList<>();\n        for (int i = 0; i < s1.length(); i++) {\n            if (s1.charAt(i) != s2.charAt(i)) {\n                diffIndices.add(i);\n            }\n        }\n        if (diffIndices.isEmpty()) {\n            return true;\n        }\n        if (diffIndices.size() == 2) {\n            int i = diffIndices.get(0), j = diffIndices.get(1);\n            return s1.charAt(i) == s2.charAt(j) && s1.charAt(j) == s2.charAt(i);\n        }\n        return false;\n    }\n}"
     }
   },
   "1791": {
     "solution": {
-      "graph": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int findCenter(vector<vector<int>>& edges) {\n        if (edges[0][0] == edges[1][0] || edges[0][0] == edges[1][1]) {\n            return edges[0][0];\n        }\n        return edges[0][1];\n    }\n};"
+      "graph": "class Solution {\n    public int findCenter(int[][] edges) {\n        if (edges[0][0] == edges[1][0] || edges[0][0] == edges[1][1]) {\n            return edges[0][0];\n        }\n        return edges[0][1];\n    }\n}"
     }
   },
   "1792": {
