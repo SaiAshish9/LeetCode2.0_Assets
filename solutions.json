@@ -9122,7 +9122,7 @@
   },
   "1822": {
     "solution": {
-      "math": "class Solution {\npublic:\n    int arraySign(vector<int>& nums) {\n        int sign = 1; \n        \n        for (int num : nums) {\n            if (num == 0) {\n                return 0; // If any number is 0, the product is 0\n            }\n            if (num < 0) {\n                sign *= -1; // Flip the sign for negative numbers\n            }\n        }\n        \n        return sign;\n    }\n};\n"
+      "math": "class Solution {\n    public int arraySign(int[] nums) {\n        int sign = 1;\n        for (int num : nums) {\n            if (num == 0) {\n                return 0; // Product is zero if any number is zero\n            }\n            if (num < 0) {\n                sign = -sign; // Flip sign for negative numbers\n            }\n        }\n        return sign;\n    }\n}"
     }
   },
   "1823": {
@@ -9252,7 +9252,7 @@
   },
   "1848": {
     "solution": {
-      "array": "#include <vector>\n#include <cmath>\n#include <climits>\nusing namespace std;\n\nclass Solution {\npublic:\n    int getMinDistance(vector<int>& nums, int target, int start) {\n        int minDistance = INT_MAX; \n        \n        for (int i = 0; i < nums.size(); ++i) {\n            if (nums[i] == target) { \n                minDistance = min(minDistance, abs(i - start)); \n            }\n        }\n        \n        return minDistance;\n    }\n};\n"
+      "array": "class Solution {\n    public int getMinDistance(int[] nums, int target, int start) {\n        int minDistance = Integer.MAX_VALUE;\n        for (int i = 0; i < nums.length; i++) {\n            if (nums[i] == target) {\n                minDistance = Math.min(minDistance, Math.abs(i - start));\n            }\n        }\n        return minDistance;\n    }\n}"
     }
   },
   "1849": {
