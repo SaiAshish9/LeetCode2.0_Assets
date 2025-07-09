@@ -14901,7 +14901,7 @@
   },
   "3062": {
     "solution": {
-      "linked-list": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    string gameResult(ListNode* head) {\n        int odd = 0, even = 0;\n        for (; head != nullptr; head = head->next->next) {\n            int a = head->val;\n            int b = head->next->val;\n            odd += a < b;\n            even += a > b;\n        }\n        if (odd > even) {\n            return \"Odd\";\n        }\n        if (odd < even) {\n            return \"Even\";\n        }\n        return \"Tie\";\n    }\n};"
+      "linked-list": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public String gameResult(ListNode head) {\n        int odd = 0, even = 0;\n        while (head != null && head.next != null) {\n            int a = head.val;\n            int b = head.next.val;\n            if (a < b) odd++;\n            if (a > b) even++;\n            head = head.next.next;\n        }\n        if (odd > even) return \"Odd\";\n        if (odd < even) return \"Even\";\n        return \"Tie\";\n    }\n}"
     }
   },
   "3063": {
