@@ -8057,7 +8057,7 @@
   },
   "1609": {
     "solution": {
-      "breadth-first-search": "class Solution {\npublic:\n    bool isEvenOddTree(TreeNode* root) {\n        if (!root) return true;\n        \n        queue<TreeNode*> q;\n        q.push(root);\n        int level = 0; \n        \n        while (!q.empty()) {\n            int size = q.size();\n            int prevVal = (level % 2 == 0) ? INT_MIN : INT_MAX; // Initial value based on level\n            \n            for (int i = 0; i < size; ++i) {\n                TreeNode* node = q.front();\n                q.pop();\n                \n                int val = node->val;\n                \n                if (level % 2 == 0) {\n                    if (val % 2 == 0 || val <= prevVal) return false; // Odd values, strictly increasing\n                } \n                else {\n                    if (val % 2 != 0 || val >= prevVal) return false; // Even values, strictly decreasing\n                }\n                \n                prevVal = val; \n\n                if (node->left) q.push(node->left);\n                if (node->right) q.push(node->right);\n            }\n            \n            level++;\n        }\n        \n        return true;\n    }\n};\n"
+      "breadth-first-search": "import java.util.*;\n\nclass Solution {\n    public boolean isEvenOddTree(TreeNode root) {\n        if (root == null) return true;\n\n        Queue<TreeNode> queue = new LinkedList<>();\n        queue.offer(root);\n        int level = 0;\n\n        while (!queue.isEmpty()) {\n            int size = queue.size();\n            int prevVal = (level % 2 == 0) ? Integer.MIN_VALUE : Integer.MAX_VALUE;\n\n            for (int i = 0; i < size; i++) {\n                TreeNode node = queue.poll();\n                int val = node.val;\n\n                if (level % 2 == 0) {\n                    if (val % 2 == 0 || val <= prevVal) return false;\n                } else {\n                    if (val % 2 != 0 || val >= prevVal) return false;\n                }\n\n                prevVal = val;\n\n                if (node.left != null) queue.offer(node.left);\n                if (node.right != null) queue.offer(node.right);\n            }\n\n            level++;\n        }\n\n        return true;\n    }\n}\n\n// Definition for a binary tree node.\nclass TreeNode {\n    int val;\n    TreeNode left;\n    TreeNode right;\n    TreeNode() {}\n    TreeNode(int val) { this.val = val; }\n    TreeNode(int val, TreeNode left, TreeNode right) {\n        this.val = val;\n        this.left = left;\n        this.right = right;\n    }\n}"
     }
   },
   "1610": {
@@ -8067,7 +8067,7 @@
   },
   "1611": {
     "solution": {
-      "bit-manipulation": "class Solution {\npublic:\n    int minimumOneBitOperations(int n) {\n        if (n == 0)\n            return 0;\n        int x = 1;\n        while (x * 2 <= n)\n            x <<= 1;\n        return minimumOneBitOperations(n ^ (x | x >> 1)) + 1 + x - 1;\n    }\n};"
+      "bit-manipulation": "class Solution {\n    public int minimumOneBitOperations(int n) {\n        if (n == 0)\n            return 0;\n\n        int x = 1;\n        while ((x << 1) <= n)\n            x <<= 1;\n\n        return minimumOneBitOperations(n ^ (x | (x >> 1))) + x;\n    }\n}"
     }
   },
   "1612": {
@@ -8082,7 +8082,7 @@
   },
   "1614": {
     "solution": {
-      "string": "class Solution {\npublic:\n    int maxDepth(string s) {\n        int currentDepth = 0;\n        int maxDepth = 0;\n\n        for (char c : s) {\n            if (c == '(') {\n                currentDepth++;\n                maxDepth = max(maxDepth, currentDepth);\n            } else if (c == ')') {\n                currentDepth--;\n            }\n        }\n\n        return maxDepth;\n    }\n};\n"
+      "string": "class Solution {\n    public int maxDepth(String s) {\n        int currentDepth = 0;\n        int maxDepth = 0;\n\n        for (char c : s.toCharArray()) {\n            if (c == '(') {\n                currentDepth++;\n                maxDepth = Math.max(maxDepth, currentDepth);\n            } else if (c == ')') {\n                currentDepth--;\n            }\n        }\n\n        return maxDepth;\n    }\n}"
     }
   },
   "1615": {
