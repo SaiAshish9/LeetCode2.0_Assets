@@ -5962,7 +5962,7 @@
   },
   "1191": {
     "solution": {
-      "dynamic-programming": "class Solution {\npublic:\n    int kConcatenationMaxSum(vector<int>& arr, int k) {\n        constexpr int kMod = 1'000'000'007;\n        const int sz = arr.size() * (k == 1 ? 1 : 2);\n        const int sum = accumulate(arr.begin(), arr.end(), 0);\n        return (sum > 0 && k > 2\n                    ? kadane(arr, sz) + sum * static_cast<long>(k - 2)\n                    : kadane(arr, sz)) %\n               kMod;\n    }\n\nprivate:\n    int kadane(const vector<int>& A, int sz) {\n        int ans = 0;\n        int sum = 0;\n        for (int i = 0; i < sz; ++i) {\n            const int a = A[i % A.size()];\n            sum = max(a, sum + a);\n            ans = max(ans, sum);\n        }\n        return ans;\n    }\n};"
+      "dynamic-programming": "class Solution {\n    private static final int MOD = 1_000_000_007;\n\n    public int kConcatenationMaxSum(int[] arr, int k) {\n        int n = arr.length;\n        long arrSum = 0;\n        for (int num : arr) arrSum += num;\n\n        long maxKadane = kadane(arr, k == 1 ? n : 2 * n);\n\n        if (arrSum > 0 && k > 2) {\n            maxKadane = maxKadane + arrSum * (k - 2);\n        }\n\n        return (int)(maxKadane % MOD);\n    }\n\n    private long kadane(int[] arr, int length) {\n        long maxEndingHere = 0, maxSoFar = 0;\n        for (int i = 0; i < length; i++) {\n            int val = arr[i % arr.length];\n            maxEndingHere = Math.max(val, maxEndingHere + val);\n            maxSoFar = Math.max(maxSoFar, maxEndingHere);\n        }\n        return maxSoFar;\n    }\n}"
     }
   },
   "1192": {
