@@ -6626,7 +6626,7 @@
   },
   "1323": {
     "solution": {
-      "math": "class Solution {\npublic:\n    int maximum69Number (int num) {\n        string str = to_string(num);\n        \n        for (char &ch : str) {\n            if (ch == '6') {\n                ch = '9';\n                break;\n            }\n        }\n        \n        return stoi(str); \n    }\n};\n"
+      "math": "class Solution {\n    public int maximum69Number(int num) {\n        char[] chars = String.valueOf(num).toCharArray();\n        for (int i = 0; i < chars.length; i++) {\n            if (chars[i] == '6') {\n                chars[i] = '9';\n                break;\n            }\n        }\n        return Integer.parseInt(new String(chars));\n    }\n}"
     }
   },
   "1324": {
@@ -6636,7 +6636,7 @@
   },
   "1325": {
     "solution": {
-      "depth-first-search": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x, left, right) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* removeLeafNodes(TreeNode* root, int target) {\n        if (!root) return nullptr;\n\n        root->left = removeLeafNodes(root->left, target);\n        root->right = removeLeafNodes(root->right, target);\n\n        if (!root->left && !root->right && root->val == target) {\n            return nullptr;\n        }\n\n        return root;\n    }\n};\n"
+      "depth-first-search": "class TreeNode {\n    int val;\n    TreeNode left;\n    TreeNode right;\n    TreeNode() {}\n    TreeNode(int val) { this.val = val; }\n    TreeNode(int val, TreeNode left, TreeNode right) {\n        this.val = val;\n        this.left = left;\n        this.right = right;\n    }\n}\n\nclass Solution {\n    public TreeNode removeLeafNodes(TreeNode root, int target) {\n        if (root == null) return null;\n\n        root.left = removeLeafNodes(root.left, target);\n        root.right = removeLeafNodes(root.right, target);\n\n        if (root.left == null && root.right == null && root.val == target) {\n            return null;\n        }\n\n        return root;\n    }\n}"
     }
   },
   "1326": {
